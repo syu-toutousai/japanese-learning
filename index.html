@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本語文法课件集</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+header{background:linear-gradient(135deg,#33418f,#7a4ff7);color:#fff;padding:44px 20px 56px;text-align:center}
+header h1{font-size:30px;letter-spacing:2px}
+header p{opacity:.92;font-size:14.5px;margin-top:10px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);
+border-radius:99px;padding:3px 12px;font-size:12px;margin:14px 5px 0}
+main{max-width:960px;width:100%;margin:-32px auto 0;padding:0 16px 40px;flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.course{background:var(--card);border-radius:20px;padding:26px 24px;cursor:pointer;
+box-shadow:0 6px 24px rgba(30,40,90,.12);transition:.2s;border:2px solid transparent;
+display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.course:hover{transform:translateY(-4px);border-color:var(--c)}
+.course .em{font-size:46px;line-height:1}
+.course h2{font-size:21px;margin:14px 0 2px}
+.course .jp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;color:var(--c);font-size:13.5px;font-weight:700}
+.course .desc{font-size:13.5px;color:var(--sub);line-height:1.8;margin:12px 0 16px;flex:1}
+.chips span{display:inline-block;background:var(--acc2);color:var(--acc);
+border-radius:99px;padding:3px 11px;font-size:11.5px;margin:0 5px 6px 0;font-weight:600}
+.go{display:block;text-align:center;background:var(--c);color:#fff;border-radius:12px;
+padding:11px 0;font-size:15px;font-weight:700;margin-top:6px}
+footer{text-align:center;font-size:12px;color:var(--sub);padding:18px;line-height:1.8}
+footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>日本語文法 ・ 课件集</h1>
+  <p>交互式单文件课件 · 内嵌原声发音 · 全部离线可用</p>
+  <div class="tags"><span>N4–N3</span><span>文法体系</span><span>音声つき例句</span><span>クイズ付き</span></div>
+</header>
+
+<main>
+  <div class="grid">
+    <a class="course" href="keishiku-courseware/" style="--c:#7a4ff7">
+      <div class="em">📦</div>
+      <h2>形式名詞・十三杰完全图鉴</h2>
+      <div class="jp">けいしきめいし ／ 13個の「空心名词」</div>
+      <div class="desc">こと・もの・の・はず・わけ・ところ…13 个形式名词按功能分
+        5 组，每词一个「核心意象」；最小对立句対比辨析，四层题库（认识→辨析→听解→运用）
+        ＋错题本，按人脑习得机制编排。</div>
+      <div class="chips"><span>13 词 × 53 发音</span><span>5 页签</span><span>47+ 题 · 错题本</span><span>TTS 双声</span></div>
+      <div class="go">打开课件 →</div>
+    </a>
+
+    <a class="course" href="shidai-courseware/" style="--c:#e8590c">
+      <div class="em">🎏</div>
+      <h2>「次第」完全掌握</h2>
+      <div class="jp">しだい ／ ひとつの形・四つの用法</div>
+      <div class="desc">一个形态、四种用法：程序经过／全凭取决于／一…就（★N2 商务高频）／
+        渐渐地。四种用法讲解 + 例句原声 + クイズ双题库（基礎 15 問 / 挑戦 10 問 / 混合 25 問）。</div>
+      <div class="chips"><span>4 用法 × 18 原声</span><span>N2 高频</span><span>双题库 50 問</span><span>MOJi 音声</span></div>
+      <div class="go">打开课件 →</div>
+    </a>
+  </div>
+</main>
+
+<footer>
+  本页为索引 · 各课件均为自包含 HTML，可直接离线打开<br>
+  重新构建：<code>python3 &lt;课件目录&gt;/build.py</code>　·　姊妹目录见仓库 README
+</footer>
+</body>
+</html>
