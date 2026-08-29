@@ -61,7 +61,7 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
   "contrast": [ { "word": "趣　おもむき", "d": "...", "ex": "...", "cn": "..." } ],
   "anchor": "...",
   "nadeshiko": [ { "sid": "yPTUz7SbyTR7", "sense": 4, "media": "乙女ゲー…/Trapped…", "ep": 6, "at": "7:49",
-                   "jp": "勘違(かんちが)いしないでよね 平民(へいみん)風情(ふぜい)が!",
+                   "jp": "勘違いしないでよね 平民風情が!",
                    "en": "...", "cn": "..." } ],
   "quizzes": [ { "bank": "custom|recog|generate|listen|discrim", "type": "choice|judge|listen|type",
                  "q": "...", "opts": [...], "ans": 0, "ansTxt": [...] , "aid": "fuzei:s2", "exp": "..." } ]
@@ -70,7 +70,7 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
 
 - `examples[].moji` 指向 `audio-moji/` 里的 MOJi 原声（`"s1"`→`fuzei:s1`）；留 `null` 则自动用 edge-tts 合成
 - `type: "type"` 的题要靠 `ansTxt` 接受答案（build.py 会自动给“输入读音”类的题生成假名/片假名/罗马音全套答案池）
-- `nadeshiko[]`：把真实番剧台词语料放进课件——`jp` 写振假名（`風情(ふぜい)`），`sense` 挂钩某个义项（页内标签点它跳语义网络），`media/ep/at` 标注出处时间；音频与画面由 **Nadeshiko CLI** 取回后放进 `scenes/`：`scenes/xxx.mp3`＋`scenes/xxx.webp`（`sid` 为 Nadeshiko 片段 id）
+- `nadeshiko[]`：把真实番剧台词语料放进课件——`jp` 写纯日文原文（无注音，靠原声音频记忆），`sense` 挂钩某个义项（页内标签点它跳语义网络），`media/ep/at` 标注出处时间；音频与画面由 **Nadeshiko CLI** 取回后放进 `scenes/`：`scenes/xxx.mp3`＋`scenes/xxx.webp`（`sid` 为 Nadeshiko 片段 id）
 - 启动自动生成：每词自动长「詞義認識 1 問・産出填空 2 問・聴解判別 1 問」，其余靠上面 `quizzes[]` 手写补足
 
 ## 增长闭环（新增一个词）
