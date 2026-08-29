@@ -907,6 +907,8 @@ def main():
     audio, n_moji = gen_audio(meta, words)
     qs = build_questions(words, audio)
     clips = build_clips(words)
+    for lid, c in clips.items():
+        audio[lid] = c["mp3"]
     words_out = words  # 原样嵌入（含 encounter/core/senses/contrast/...）
 
     print("[2/4] generating quiz banks...")
