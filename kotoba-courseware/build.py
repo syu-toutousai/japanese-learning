@@ -19,8 +19,10 @@ import base64
 import hashlib
 import json
 import random
+import shutil
 import subprocess
 import sys
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -28,6 +30,7 @@ ROOT = Path(__file__).parent
 DATA = ROOT / "kotoba.json"
 AUDIO_DIR = ROOT / "audio"
 MOJI_DIR = ROOT / "audio-moji"
+SCENES_DIR = ROOT / "scenes"
 OUT = ROOT / "index.html"
 
 RATE = "-4%"
@@ -108,6 +111,14 @@ def load_data():
                     errors.append(f"「{label}」自作题#{n+1} 需要 opts 和范围内的 ans")
             elif qt == "type" and not q.get("ansTxt"):
                 errors.append(f"「{label}」自作题#{n+1} 需要 ansTxt（可接受的答案列表）")
+        for k, cl in enumerate(w.get("nadeshiko") or []):
+            if not cl.get("sid"):
+                errors.append(f"「{label}」nadeshiko 片段#{k+1} 缺 sid")
+            if not cl.get("jp") or not cl.get("en") or not cl.get("cn"):
+                errors.append(f"「{label}」nadeshiko 片段#{k+1} 缺 jp/en/cn")
+            sense_n = cl.get("sense")
+            if not isinstance(sense_n, int) or not any(s.get("n") == sense_n for s in w.get("senses") or []):
+                errors.append(f"「{label}」nadeshiko 片段#{k+1} sense 必须指向某个义项 n")
     if errors:
         print("[!] kotoba.json 有问题，先修好再构建：")
         for e in errors:
@@ -228,6 +239,31 @@ def build_sents(words):
             if c.get("ex"):
                 sents[f"{wid}:c{i}"] = {"jp": c["ex"], "cn": c.get("cn", "")}
     return sents
+
+
+# ---------------------------------------------------------------- nadeshiko real-film clips
+
+def build_clips(words):
+    SCENES_DIR.mkdir(exist_ok=True)
+    clips = {}
+    for w in words:
+        wid = w["id"]
+        for i, cl in enumerate(w.get("nadeshiko") or []):
+            lid = f"{wid}:nade{i}"
+            sid = cl["sid"]
+            mp3 = SCENES_DIR / f"{sid}.mp3"
+            webp = SCENES_DIR / f"{sid}.webp"
+            if not mp3.exists() or not webp.exists():
+                print(f"   [!] 片段 {sid} 缺素材，需在 scenes/ 放 {sid}.mp3 和 {sid}.webp")
+                continue
+            clips[lid] = {
+                "sid": sid, "sense": cl.get("sense"), "media": cl.get("media"),
+                "ep": cl.get("ep"), "at": cl.get("at"), "jp": cl.get("jp"),
+                "en": cl.get("en"), "cn": cl.get("cn"),
+                "mp3": "data:audio/mpeg;base64," + base64.b64encode(mp3.read_bytes()).decode(),
+                "img": "data:image/webp;base64," + base64.b64encode(webp.read_bytes()).decode(),
+            }
+    return clips
 
 
 # ---------- kana <-> romaji (用于生成填空的通用答案池) ----------
@@ -448,6 +484,21 @@ padding:12px 14px;line-height:1.85;border:2px dashed var(--gold)}
 .ccard h4 .g{color:var(--sub);font-size:12px;font-weight:600}
 .ccard p{font-size:13.5px;line-height:1.75;color:var(--ink)}
 .ccard .rw{margin-top:8px}
+/* nadeshiko real-film clips */
+.clip{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid var(--line);
+border-radius:14px;padding:12px;box-shadow:0 1px 6px rgba(30,40,90,.06)}
+.clip+.clip{margin-top:12px}
+.clip .shot{flex:none;width:128px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--line);
+background:#eef0f5}
+.clip .cjp{font-size:16px;line-height:1.65;font-weight:600}
+.clip .cen{font-size:13px;color:var(--sub);font-style:italic;margin-top:4px;line-height:1.6}
+.clip .ccn{font-size:13px;color:var(--sub);margin-top:4px;line-height:1.7}
+.clip .clabel{margin-top:6px}
+.clip .clabel span{display:inline-block;border-radius:99px;padding:3px 10px;font-size:11.5px;font-weight:700;
+margin:2px 5px 2px 0}
+.clip .clabel .mep{background:#eef1ff;color:#33418f}
+.clip .clabel .sense{background:#e6fbf3;color:#0b7285}
+.clip .clabel .tim{background:#fff4d6;color:#7a4f00}
 /* quiz */
 .q{font-size:16.5px;line-height:1.75;margin-bottom:14px}
 .opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:8px 0;font-size:15.5px;
@@ -514,6 +565,7 @@ const AUDIO=__AUDIO__;
 const META=__META__;
 const WORDS=__WORDS__;
 const SENTS=__SENTS__;
+const CLIPS=__CLIPS__;
 const BANKS=__BANKS__;
 const SCHED=__SCHED__;
 let QS=__QS__;
@@ -537,7 +589,7 @@ function pill(text,cls){return `<span class="pill ${cls||''}">${text}</span>`;}
 const W=WORDS[0];
 
 /* ---------- tabs ---------- */
-const TABS=[["enc","🧊 初见"],["web","🌐 语义网络"],["cmp","🧂 辨析场"],["quiz","🎯 提取"],["spc","🔁 间隔"]];
+const TABS=[["enc","🧊 初见"],["nade","🎬 台词·画面"],["web","🌐 语义网络"],["cmp","🧂 辨析场"],["quiz","🎯 提取"],["spc","🔁 间隔"]];
 let tab="enc";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -606,6 +658,33 @@ function renderWeb(){
 }
 function shortD(d){return (d||"").replace(/<[^>]+>/g,"").split(/[，。]/)[0];}
 function goSense(n){goTab('web');setTimeout(()=>{const el=document.getElementById('sense-'+n);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},60);}
+
+/* ---------- 🎬 台词·画面（Nadeshiko 真实番剧原声） ---------- */
+function renderNade(){
+  const keys=Object.keys(CLIPS).sort();
+  if(!keys.length){$("#main").innerHTML=`<div class="card"><div class="hint">还没有纳进台词片段——往 kotoba.json 的 nadeshiko 里填，把音频和画面放进 scenes/。</div></div>`;return;}
+  let h=`<h3 class="sec">🎬 这句话出现在真实番剧哪一集，配的是哪一帧画面 —— 原声+原画，一次性钉进脑子里</h3>
+  <div class="hint">片段来自 Nadeshiko 语料库（有版权仅作学习）。点 ▶ 听原声，反复听——真实语速、真实语气。</div>`;
+  keys.forEach(k=>{
+    const c=CLIPS[k];
+    const sense=(W.senses||[]).find(s=>s.n===c.sense)||{};
+    h+=`<div class="clip">
+      <img class="shot" src="${c.img}" alt="scene">
+      <div style="flex:1;min-width:0">
+        <div class="cjp">${c.jp}</div>
+        <div class="cen">${esc(c.en)}</div>
+        <div class="ccn">${c.cn}</div>
+        <div class="clabel">
+          <span class="mep">📺 ${esc(c.media)}</span>
+          <span class="tim">EP${c.ep} · ${esc(c.at||"")}</span>
+          <span class="sense" onclick="goSense(${c.sense})">义项 ${c.sense} · ${esc(sense.label||"")}</span>
+        </div>
+        <button class="btn" style="margin-top:8px" onclick="play('${k}',this)">🔊 原声</button>
+      </div>
+    </div>`;
+  });
+  $("#main").innerHTML=h;
+}
 
 /* ---------- 辨析场 ---------- */
 function renderCmp(){
@@ -806,6 +885,7 @@ function markDay(d,btn){
 function render(){
   if(tab!=="quiz")showNext(false);
   if(tab==="enc")renderEnc();
+  else if(tab==="nade")renderNade();
   else if(tab==="web")renderWeb();
   else if(tab==="cmp")renderCmp();
   else if(tab==="quiz")renderQuiz();
@@ -826,6 +906,7 @@ def main():
     sents = build_sents(words)
     audio, n_moji = gen_audio(meta, words)
     qs = build_questions(words, audio)
+    clips = build_clips(words)
     words_out = words  # 原样嵌入（含 encounter/core/senses/contrast/...）
 
     print("[2/4] generating quiz banks...")
@@ -834,6 +915,7 @@ def main():
         print(f"      {l}: {counts[k]} 問")
 
     tags = (f"<span>{len(words)} 個新詞</span><span>初遇情景</span>"
+            f"<span>{len(clips)} 段番剧原声</span>"
             f"<span>{n_moji} MOJi 原声</span><span>间隔复习</span>")
     sched = [[d, lab, task] for d, lab, task in SCHED]
 
@@ -844,6 +926,7 @@ def main():
             .replace("__META__", j(meta))
             .replace("__WORDS__", j(words_out))
             .replace("__SENTS__", j(sents))
+            .replace("__CLIPS__", j(clips))
             .replace("__BANKS__", j(BANK_META))
             .replace("__SCHED__", j(sched))
             .replace("__QS__", j(qs)))

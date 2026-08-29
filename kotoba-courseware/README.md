@@ -5,11 +5,12 @@
 
 ```
 初见 → 语义网络 → 辨析 → 提取（闯关） → 间隔复习
+              └ 台词·画面（Nadeshiko 番剧原声+原画）
 ```
 
 当前词条：**風情（ふぜい）** —— 你在沉浸素材里听到「風情がないな。」时收进来的。
 
-成品是单文件 `index.html`（约 530KB，内嵌全部发音，离线可用），数据在 `kotoba.json`。
+成品是单文件 `index.html`（约 1.2MB，内嵌全部发音 + 番剧台词原声与画面，离线可用），数据在 `kotoba.json`。
 
 ## 打开
 
@@ -26,6 +27,7 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
 | 🧊 **初遇场景卡** | **情景记忆**（episodic memory）——把生词钉在「你在哪、听见什么、对方什么反应」上，是最强的记忆钩子；先给“我当时遇见的原句”，再给核心意象 |
 | 🌬️ **核心意象（一个原型+拆字）** | **原型义 / core-image**——一句话讲透多义：風情＝「风土把情捎给你，心头一动」。四个义项都由它长出来，不死记硬背 |
 | 🌐 **语义网络（义项星图）** | **语义网络 / concept map + 双重编码**——义项从核心辐射、共用读音字形，视觉+文字双通道 |
+| 🎬 **台词·画面** | **真实语料锚定（authentic contexts）**——Nadeshiko 番剧原声台词一句 + 当时画面一帧，真实语速・真实语气，直接听、看着画面记；每片段都用义项标签（点它跳回语义网络）**和单词义项挂钩** |
 | 🔤 **字源・连浊卡** | **精细加工（elaboration）**——風＋情、ふ＋せい→ふぜい（连浊）、《方丈記》用例：用“为什么这样读/写”加深编码 |
 | 🧂 **近义辨析场** | **对比学习 / discrimination**——風情↔趣↔情緒↔風流↔風味 + 対義「殺風景」成组呈现，近义词“成对”才记得牢 |
 | 🎯 **五关提取** | **提取练习 engineering**：📘認識（识别）→ ✍️**産出填空**（自己敲出读音/汉字，**生成效应**，最强）→ 🎧听解（音形绑定）→ 🧩辨析 → ⭐综合；全部随机打乱+**交错** |
@@ -37,7 +39,8 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
 - **風情（ふぜい）**：初见原句「風情がないな。」（桜・「まあ 春だから。」的吐槽现场）
   - 核心意象 1 个 ＋ 义项 4 个（情趣・雅趣 / 模样・样子 / 款待（古典谦辞）/ 接尾・……之流）
   - 语源・连浊卡 1 张 ＋ 近义辨析 5 词 ＋ 记忆锚 1 条
-- **发音 18 段**：单词・MOJi 原声例句 8 段、自写例句/初遇场景 10 段（edge-tts：Nanami 女生 / Keita 男生）
+- **发音 18 段**：单词・MOJi 原声例句 8 段、自写例句/初遇场景 10 段（edge-tts：Nanami 女生 / Keita 男生）＋
+  **Nadeshiko 台词・画面 6 段** 原声 MP3＋960×540 原画帧，见「🎬 台词·画面」页（义项 1 雅趣 2 段 / 义项 4 接尾 4 段）
 - **题库**：詞義認識 4 ・産出填空 2・聴解判別 1・辨析判別 4・自作 5 ＝ 16 問 ＋ 混合交错 ＋ 错题本
 - **间隔复习**：初见锚点 + 6 个复习日清单（localStorage 记录进度）
 
@@ -57,6 +60,9 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
   "etymology": { "title": "...", "text": "...", "key": "..." },
   "contrast": [ { "word": "趣　おもむき", "d": "...", "ex": "...", "cn": "..." } ],
   "anchor": "...",
+  "nadeshiko": [ { "sid": "yPTUz7SbyTR7", "sense": 4, "media": "乙女ゲー…/Trapped…", "ep": 6, "at": "7:49",
+                   "jp": "勘違(かんちが)いしないでよね 平民(へいみん)風情(ふぜい)が!",
+                   "en": "...", "cn": "..." } ],
   "quizzes": [ { "bank": "custom|recog|generate|listen|discrim", "type": "choice|judge|listen|type",
                  "q": "...", "opts": [...], "ans": 0, "ansTxt": [...] , "aid": "fuzei:s2", "exp": "..." } ]
 }
@@ -64,18 +70,24 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/kotoba-course
 
 - `examples[].moji` 指向 `audio-moji/` 里的 MOJi 原声（`"s1"`→`fuzei:s1`）；留 `null` 则自动用 edge-tts 合成
 - `type: "type"` 的题要靠 `ansTxt` 接受答案（build.py 会自动给“输入读音”类的题生成假名/片假名/罗马音全套答案池）
+- `nadeshiko[]`：把真实番剧台词语料放进课件——`jp` 写振假名（`風情(ふぜい)`），`sense` 挂钩某个义项（页内标签点它跳语义网络），`media/ep/at` 标注出处时间；音频与画面由 **Nadeshiko CLI** 取回后放进 `scenes/`：`scenes/xxx.mp3`＋`scenes/xxx.webp`（`sid` 为 Nadeshiko 片段 id）
 - 启动自动生成：每词自动长「詞義認識 1 問・産出填空 2 問・聴解判別 1 問」，其余靠上面 `quizzes[]` 手写补足
 
 ## 增长闭环（新增一个词）
 
 ```bash
+nadeshiko search 風情 --once     # Nadeshiko 技能：找真实番剧台词（带 Ruby・EN・媒体/EP/时间）
+nadeshiko segment <sid> --json   # 取片段，确认 CDN 音频/画面地址（若 q 有图）
+curl -sO https://cdn.nadeshiko.co/media/<mediaId>/<ep>/<hash>.mp3      # → scenes/<sid>.mp3
+curl -sO https://cdn.nadeshiko.co/media/<mediaId>/<ep>/<hash>.webp     # → scenes/<sid>.webp
 moji 新词 --once            # 查释义与例句（MOJi 技能）
 moji 新词 -a --out kotoba-courseware/audio-moji   # 把该词原声拉进 audio-moji/
 ```
 
 - 把截图下来的释义、例句抄成一条 `words[]` 条目（core / senses / contrast / anchor / quizzes）
-- MOJi 原声文件名以「想用的逻辑id」写进 build.py 的 `MOJI` 表，或让例句 `moji` 字段留 `null` 全用 edge-tts
-- `python3 build.py` → 刷新 —— 卡片・语义网络・题库・间隔复习自动长出来
+- 选了哪几句真实台词 → 填进 `nadeshiko[]`，音频/画面放进 `scenes/`（CDN 直链不受 API 配额限制）
+- MOJi 原声文件名以「想用的逻辑id」写进 build.py 的 `MOJi` 表，或让例句 `moji` 字段留 `null` 全用 edge-tts
+- `python3 build.py` → 刷新 —— 卡片・语义网络・台词·画面・题库・间隔复习自动长出来
 
 同系列姊妹篇：`../keishiku-courseware/`（形式名詞）・`../shidai-courseware/`（次第）
 ・`../keiji-courseware/`（接辞口袋）・`../houi-courseware/`（方角・认知罗盘）。
@@ -84,4 +96,5 @@ moji 新词 -a --out kotoba-courseware/audio-moji   # 把该词原声拉进 audi
 
 - **風情**词条释义、例句及中文译文取自 **MOJi辞書**（mojidict.com），系通过其
   免登录接口以个人学习目的少量获取，著作权归 MOJi辞書 所有，仅供个人复习引用；
-- 自写例句与初遇场景发音由本地 edge-tts（ja-JP-Nanami / ja-JP-Keita）合成。
+- 自写例句与初遇场景发音由本地 edge-tts（ja-JP-Nanami / ja-JP-Keita）合成；
+- 「🎬 台词·画面」片段来自 **Nadeshiko**（nadeshiko.co）语料库，台词摘自相应动画（安達としまむら / 氷剣の魔術師が世界を統べる / ギルドの受付嬢… / 乙女ゲー世界はモブに厳しい世界です），原声与原画仅作个人语言学习引用，著作权归各版权方与 Nadeshiko 所有。

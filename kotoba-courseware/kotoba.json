@@ -91,6 +91,68 @@
         {"word": "殺風景　さっぷうけい", "d": "〈対義〉没有風情、光秃秃、缺味道。", "ex": "殺風景な部屋", "cn": "空荡荡的房子"}
       ],
       "anchor": "🌬️ 一阵风把樱花的香与色捎到面前，心里一动——这股“气”，就是<b>風情</b>。连浊记法：ふ＋せい → ふぜい，嘴顺意厚。",
+      "nadeshiko": [
+        {
+          "sid": "l-WpuQPM_58s",
+          "sense": 1,
+          "media": "安達としまむら / Adachi and Shimamura",
+          "ep": 2,
+          "at": "6:26",
+          "jp": "しまむらには風情(ふぜい)が足(た)りないかも",
+          "en": "I think you lack elegance, Shimamura.",
+          "cn": "（对しまうむ说）你这个人，缺点風情、缺点雅致。"
+        },
+        {
+          "sid": "GXSPDdxkoo8t",
+          "sense": 1,
+          "media": "安達としまむら / Adachi and Shimamura",
+          "ep": 2,
+          "at": "6:29",
+          "jp": "風情(ふぜい)…うーん 風情(ふぜい)ねえ",
+          "en": "Elegance… Hm… Elegance, eh?",
+          "cn": "在嘴里咂摸“風情”这俩字——这个词值不值得，自己先品一品。"
+        },
+        {
+          "sid": "TxaH4XVUr3cP",
+          "sense": 4,
+          "media": "氷剣の魔術師が世界を統べる / The Iceblade Sorcerer Shall Rule the World",
+          "ep": 1,
+          "at": "4:08",
+          "jp": "オ…オーディナリー風情(ふぜい)が!",
+          "en": "You worthless ordinary!",
+          "cn": "接尾用法：オーディナリー＋風情＝“区区一个普通货色”——正眼都不瞧你。"
+        },
+        {
+          "sid": "p4f1S3MdF53R",
+          "sense": 4,
+          "media": "ギルドの受付嬢ですが残業は嫌なのでボスをソロ討伐しようとします / I May Be a Guild Receptionist…",
+          "ep": 4,
+          "at": "19:11",
+          "jp": "おのれ 人間(にんげん)風情(ふぜい)が…",
+          "en": "You lowly human…",
+          "cn": "人间＋風情＝“区区人类”——异种族的居高临下，接尾贬义的信手拈来。"
+        },
+        {
+          "sid": "yPTUz7SbyTR7",
+          "sense": 4,
+          "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim",
+          "ep": 6,
+          "at": "7:49",
+          "jp": "勘違(かんちが)いしないでよね 平民(へいみん)風情(ふぜい)が!",
+          "en": "Get rid of that misconception right now, commoner.",
+          "cn": "平民＋風情＝“区区平民”──贵族小姐的自负。接尾贬义的教科书例句。"
+        },
+        {
+          "sid": "JbTRaJ89-Qhq",
+          "sense": 4,
+          "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim",
+          "ep": 7,
+          "at": "13:43",
+          "jp": "割(わ)り込(こ)むんじゃないわよ! 平民(へいみん)風情(ふぜい)が!",
+          "en": "Stay out of this, commoner!",
+          "cn": "同一角色的第二连击：平民風情が——贬起人来一套又一套。"
+        }
+      ],
       "quizzes": [
         {"bank": "recog", "type": "choice",
          "q": "「風情」现在的标准读法是？",
