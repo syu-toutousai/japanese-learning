@@ -59,6 +59,12 @@ MOJI = {
     "aku:s2":    "開く_28899_e3_f003.mp3",
     "aku:s3":    "開く_28900_e1_f003.mp3",
     "aku:s4":    "開く_28901_e4_f003.mp3",
+    "takumashi:w":  "逞しい_R4yT2UJA1A_w_f003.mp3",
+    "takumashi:s1": "逞しい_hv0peErrLn_e0_f003.mp3",
+    "takumashi:s1b":"逞しい_JnuMbnX8CL_e3_f003.mp3",
+    "takumashi:s1c":"逞しい_8Iv4cCmR78_e4_f003.mp3",
+    "takumashi:s2": "逞しい_h8DKDAo99D_e1_f003.mp3",
+    "takumashi:s3": "逞しい_YPYnlErFUW_e2_f003.mp3",
 }
 
 
