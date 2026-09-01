@@ -54,6 +54,11 @@ MOJI = {
     "fuzei:s3":  "風情_86981_e2_f003.mp3",
     "fuzei:s4":  "風情_86975_e3_f003.mp3",
     "fuzei:s4b": "風情_86976_e5_f003.mp3",
+    "aku:w":     "開く_198938426_w_f003.mp3",
+    "aku:s1":    "開く_28898_e0_f003.mp3",
+    "aku:s2":    "開く_28899_e3_f003.mp3",
+    "aku:s3":    "開く_28900_e1_f003.mp3",
+    "aku:s4":    "開く_28901_e4_f003.mp3",
 }
 
 
@@ -344,15 +349,16 @@ def build_questions(words, audio):
         # ✍️ 自動：生成填空（type 输入读音 / 汉字）
         if ex0.get("jp"):
             blanked = ex0["jp"].replace(w["word"], "（　　　）", 1)
+            first_def = (sens[0].get("def") or "").split("。")[0] if sens else ""
             add("generate", f"{wid}:auto-kana", type="type",
-                q=f'「{blanked}」<br><span class="hint">（　　　）＝雅致・韵味 —— 请输入读音假名</span>',
+                q=f'「{blanked}」<br><span class="hint">（　　　）—— 请输入读音假名</span>',
                 ansTxt=reading_pool(w),
-                exp=f'完整句子：{ex0["jp"]}<br>{ex0.get("cn","")}<br>風情 读作<b>{w["read"]}</b>'
-                    f'（ふ＋せい 连浊）。现代标准读 <b>{w["read"]}</b>。')
+                exp=f'完整句子：{ex0["jp"]}<br>{ex0.get("cn","")}<br>'
+                    f'{w["word"]} 读作<b>{w["read"]}</b>。')
             add("generate", f"{wid}:auto-kanji", type="type",
-                q="接尾用法：学生（　　　）には、ぜいたくだ。——（　　）里请<b>输入汉字</b>。",
+                q=f'假名：{w["read"]} → 请输入对应的<b>汉字写法</b>。',
                 ansTxt=[w["word"]],
-                exp="〜風情 接在人・身分词后＝“区区一个～”（贬/自谦）。输入汉字：風情。")
+                exp=f'{w["read"]} 的汉字写法：<b>{w["word"]}</b>。')
 
         # 🎧 自動：听解（优先用该词 MOJi 原声例句）
         for i, s in enumerate(sens):
@@ -362,11 +368,12 @@ def build_questions(words, audio):
                     add("listen", f"{wid}:auto-listen-{i+1}{k}", type="listen", aid=aid,
                         q="🎧 听音频，选出你听到的句子。",
                         opts=[ex["jp"],
-                              ex["jp"].replace(w["word"], "風味", 1),
-                              ex["jp"].replace(w["word"], "殺風景", 1)],
+                              ex["jp"][::-1][:len(ex["jp"])],
+                              ex["jp"][:len(ex["jp"])//2]+"..."],
                         ans=0,
                         exp=f'原句：{ex["jp"]}<br>{ex.get("cn","")}')
                     break
+            break
             break
 
         # ⭐ 自作題
@@ -382,15 +389,21 @@ def build_questions(words, audio):
 
 
 
-# ---------------------------------------------------------------- spacing
-SCHED = [
-    (0,  "初習", "初见五件套：通读列表卡 → 点开发音(ふぜい) → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"),
-    (1,  "隔日闪回", "听到「ふぜい」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"),
-    (3,  "搭配加固", "不看卡默写搭配：風情が（ある）・風情を（添える）・〜（風情）。做一轮【🎧 聴解判別】。"),
-    (7,  "产出练习", "造两句「○○には風情がある」写下来。做一轮【🧩 辨析判別】。"),
-    (14, "教给别人", "把 風情 与 趣・情緒 的区别讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"),
-    (30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"),
-]
+# ---------------------------------------------------------------- spacing (per word)
+
+def build_schedule(w):
+    """每词一条间隔复习计划；不同词配不同的回想提示。"""
+    rd = w.get("read", "")
+    wd = w.get("word", "")
+    tasks = [
+        (0, "初習", f"初见五件套：通读列表卡 → 点开发音({rd}) → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"),
+        (1, "隔日闪回", f"听到「{rd}」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"),
+        (3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"),
+        (7, "产出练习", f"用「{wd}」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"),
+        (14, "教给别人", f"把「{wd}」的意象与近义区分讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"),
+        (30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"),
+    ]
+    return [[d, lab, t] for d, lab, t in tasks]
 
 # ---------------------------------------------------------------- html template
 
@@ -399,7 +412,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>言葉・新詞 記憶の種 ― 風情</title>
+<title>言葉・新詞 記憶の種</title>
 <style>
 :root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
 --acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;
@@ -416,6 +429,12 @@ nav{display:flex;gap:8px;margin:-18px 0 16px;position:relative;z-index:2;flex-wr
 nav button{flex:1;min-width:96px;border:none;border-radius:12px;padding:12px 2px;font-size:14px;cursor:pointer;
 background:var(--card);box-shadow:0 2px 10px rgba(30,40,90,.08);color:var(--sub);font-weight:600}
 nav button.on{background:var(--ink);color:#fff}
+nav .wordtab{background:var(--card);border-radius:12px;padding:8px 14px;text-align:center;
+cursor:pointer;font-weight:700;color:var(--sub);box-shadow:0 2px 10px rgba(30,40,90,.08);
+font-size:15px;display:flex;flex-direction:column;line-height:1.2}
+nav .wordtab small{font-size:11px;font-weight:600;color:var(--sub);opacity:.85}
+nav .wordtab.on{background:linear-gradient(135deg,#0f7a5f,#12a37f);color:#fff}
+nav .wordtab.on small{color:#d8f5ea}
 .card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;
 box-shadow:0 2px 10px rgba(30,40,90,.06)}
 .jp{font-size:16.5px;line-height:1.7;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
@@ -586,14 +605,23 @@ function rowHTML(sid){
 }
 function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
 function pill(text,cls){return `<span class="pill ${cls||''}">${text}</span>`;}
-const W=WORDS[0];
+let W=WORDS[0];
 
 /* ---------- tabs ---------- */
 const TABS=[["enc","🧊 初见"],["nade","🎬 台词·画面"],["web","🌐 语义网络"],["cmp","🧂 辨析场"],["quiz","🎯 提取"],["spc","🔁 间隔"]];
 let tab="enc";
 function renderNav(){
-  $("#nav").innerHTML=TABS.map(([k,l])=>
-    `<button class="${k===tab?'on':''}" onclick="goTab('${k}')">${l}</button>`).join("");
+  let sel=WORDS.map(w=>`<button class="${w.id===W.id?'on':''}" onclick="selectWord('${w.id}')">${esc(w.word)}</button>`).join("");
+  $("#nav").innerHTML=`
+    <div style="flex:0 0 100%;display:flex;gap:8px;flex-wrap:wrap;background:transparent;box-shadow:none">
+      ${WORDS.map(w=>`<span class="wordtab ${w.id===W.id?'on':''}" onclick="selectWord('${w.id}')">${esc(w.word)}<small>${esc(w.read)}</small></span>`).join("")}
+    </div>
+    ${TABS.map(([k,l])=>`<button class="${k===tab?'on':''}" onclick="goTab('${k}')">${l}</button>`).join("")}`;
+}
+function selectWord(id){
+  W=WORDS.find(w=>w.id===id)||WORDS[0];
+  mode=null;pool=[];order=[];qi=0;correct=0;answered=false;
+  renderNav();render();window.scrollTo(0,0);
 }
 function goTab(k){tab=k;renderNav();render();window.scrollTo(0,0);}
 
@@ -661,7 +689,8 @@ function goSense(n){goTab('web');setTimeout(()=>{const el=document.getElementByI
 
 /* ---------- 🎬 台词·画面（Nadeshiko 真实番剧原声） ---------- */
 function renderNade(){
-  const keys=Object.keys(CLIPS).sort();
+  const prefix=W.id+":nade";
+  const keys=Object.keys(CLIPS).filter(k=>k.startsWith(prefix)).sort();
   if(!keys.length){$("#main").innerHTML=`<div class="card"><div class="hint">还没有纳进台词片段——往 kotoba.json 的 nadeshiko 里填，把音频和画面放进 scenes/。</div></div>`;return;}
   let h=`<h3 class="sec">🎬 这句话出现在真实番剧哪一集，配的是哪一帧画面 —— 原声+原画，一次性钉进脑子里</h3>
   <div class="hint">片段来自 Nadeshiko 语料库（有版权仅作学习）。点 ▶ 听原声，反复听——真实语速、真实语气。</div>`;
@@ -691,9 +720,9 @@ function renderCmp(){
   let h=`<h3 class="sec">近义词只靠「比较」才分得清 —— 一组一对照，记忆成对长</h3>
   <div class="contrast">`;
   (W.contrast||[]).forEach((c,i)=>{
-    const warm=c.d.indexOf("対義")>=0||c.d.indexOf("対")>=0;
+    const warm=c.d.indexOf("対義")>=0;
     h+=`<div class="ccard ${warm?'warming':''}">
-      <h4>${esc(c.word)}${c.word.indexOf("風情")<0&&c.word.indexOf("殺風景")>=0?' <span class="g">· 対義</span>':' <span class="g"></span>'}</h4>
+      <h4>${esc(c.word)}${warm?' <span class="g">· 対義</span>':' <span class="g"></span>'}</h4>
       <p>${esc(c.d)}</p>
       ${c.ex?`<div class="rw">${rowHTML(`${W.id}:c${i}`)}</div>`:""}
     </div>`;
@@ -701,8 +730,7 @@ function renderCmp(){
   h+=`</div>
   <div class="card corebox" style="margin-top:14px">
     <h4>一句话切分的刀</h4>
-    <div class="kv">風情＝<b>景里自带的“气”</b>（先有它，你才心动）　·　情緒＝<b>你心里被带起的“气”</b>（心动了）<br>
-    風流＝<b>人为作出来的雅</b>　·　趣＝<b>更宽的“值得品”</b>　·　風味＝<b>吃出来的味</b></div>
+    <div class="kv">${W.javaKnife||""}</div>
   </div>
   <div class="anchor" style="margin-top:14px">🧠 记忆锚　${W.anchor||""}</div>`;
   $("#main").innerHTML=h;
@@ -719,7 +747,8 @@ function delWrong(ref){const w=wrongBook();delete w[ref];lsSet(lsKey("wrong"),w)
 function wrongCount(){return Object.keys(wrongBook()).length;}
 
 let mode=null,pool=[],order=[],qi=0,correct=0,answered=false;
-function countBank(key){return QS.filter(q=>q.bank===key).length;}
+const wqs=()=>QS.filter(q=>q.ref.startsWith(W.id+":"));
+function countBank(key){return wqs().filter(q=>q.bank===key).length;}
 function renderQuiz(){
   if(!mode){
     showNext(false);$("#score").textContent="";
@@ -739,12 +768,13 @@ function renderQuiz(){
   }
   startQuiz(mode);
 }
-const bankTip={recog:"认出词义与读音，先混个脸熟",generate:"自己把词“生成”出来，记忆最牢固",listen:"耳朵和字绑在一起",discrim:"近义辨析，一次分清",custom:"场景・文化・语感的综合题"};
+const bankTip={recog:"认出词义与读音，先混个脸熟",generate:"自己把词「生成」出来，记忆最牢固",listen:"耳朵和字绑在一起",discrim:"近义辨析，一次分清",custom:"场景・文化・语感的综合题"};
 function startQuiz(m){
   mode=m;
-  if(m==="mix")pool=QS.slice();
-  else if(m==="wrong"){const w=wrongBook();pool=QS.filter(q=>w[q.ref]);}
-  else pool=QS.filter(q=>q.bank===m);
+  const qs=wqs();
+  if(m==="mix")pool=qs.slice();
+  else if(m==="wrong"){const w=wrongBook();pool=qs.filter(q=>w[q.ref]);}
+  else pool=qs.filter(q=>q.bank===m);
   order=shuffle(pool.map((_,x)=>x));
   qi=0;correct=0;answered=false;
   renderQ();
@@ -843,15 +873,15 @@ function todayOff(){
 function renderSpc(){
   const off=todayOff();const sm=schedMap();
   const a=anchorDate();
-  let tl=SCHED.map(([d,label,task])=>{
+  const sch=SCHED[W.id]||SCHED[WORDS[0].id];
+  let tl=sch.map(([d,label,task])=>{
     const done=!!sm[d];
-    const isNow=off>=d&&!done;
     const cls=done?"done":(off>=d?"now":"day-lock");
     return `<div class="day ${cls}">
       <b>${done?"✓":label}</b><div class="off">+${d} 天 · ${addDays(new Date(a),d).toISOString().slice(0,10)}</div>
       <button onclick="markDay(${d},this)">${done?"重做":(off>=d?"完成 ✓":"未到期")}</button></div>`;
   }).join("");
-  const cur=SCHED.filter(([d])=>off>=d);
+  const cur=sch.filter(([d])=>off>=d);
   const due=cur[cur.length-1];
   const hasDue=due&&!sm[due[0]];
   let h=`<h3 class="sec">间隔复习 —— 反遗忘曲线，不靠拼命先靠定时</h3>
@@ -867,7 +897,7 @@ function renderSpc(){
       <div class="taskc">${due[2]}<br><br>完成后回来点上面的「完成 ✓」，进度存本机。</div>
     </div>`;
   }else{
-    h+=`<div class="card due"><div style="text-align:center;font-size:16px;font-weight:700">🎉 今日任务已清 — 到下一个 +${(SCHED.find(([d])=>off<d)||["∞"])[0]} 天再来</div></div>`;
+    h+=`<div class="card due"><div style="text-align:center;font-size:16px;font-weight:700">🎉 今日任务已清 — 到下一个 +${(sch.find(([d])=>off<d)||["∞"])[0]} 天再来</div></div>`;
   }
   h+=`<div class="card" style="text-align:center">
     <div class="hint" style="text-align:center">间隔复习的底牌是「提取」：到点先凭记忆回想，想不出再看卡。</div>
@@ -919,7 +949,7 @@ def main():
     tags = (f"<span>{len(words)} 個新詞</span><span>初遇情景</span>"
             f"<span>{len(clips)} 段番剧原声</span>"
             f"<span>{n_moji} MOJi 原声</span><span>间隔复习</span>")
-    sched = [[d, lab, task] for d, lab, task in SCHED]
+    sched = {w["id"]: build_schedule(w) for w in words}
 
     print("[3/4] rendering template...")
     html = (TEMPLATE
