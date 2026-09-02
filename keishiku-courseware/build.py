@@ -490,45 +490,254 @@ BANKS = {"basic": ("📘 基礎認識", QA), "cmp": ("⚖️ 対比辨析", QB),
 
 # ---------------------------------------------------------------- nadeshiko real-scene clips （きり）
 SCENES_DIR = ROOT / "scenes"
-# きり 专属的番剧/日剧原声例句：音频与画面取自 Nadeshiko 语料，
-# 文件放在 scenes/{sid}.mp3 / scenes/{sid}.webp（CDN 直链下载，见 kotoba 课件 README）。
+# 14 个形式名词的番剧/日剧原声例句（含きり）：音频与画面取自 Nadeshiko 语料，
+# 文件放在 scenes/{sid}.mp3 / scenes/{sid}.webp（CDN 直链下载，见课件内 README）。
 NADE = [
-    {"id": "nk1", "sid": "ml-bk_rUNzv_", "impl": "Ｖた＋きり",
+    # ---- こと ----
+    {"id": "nk9", "sid": "9L9gk4E06I98", "word": "koto", "impl": "ことができる",
+     "media": "転生王女と天才令嬢の魔法革命", "ep": 5, "at": "14:18",
+     "jp": "あなたを<ruby>支える<rt>ささえる</rt></ruby>ことができます",
+     "en": "I can be your support!",
+     "cn": "我可以成为你的支柱。（できる＝能力）"},
+    {"id": "nk10", "sid": "v9lEZaJoSTND", "word": "koto", "impl": "〜ことにする",
+     "media": "おじさん、異世界で買いものする（原：Online Shopper）", "ep": 8, "at": "13:59",
+     "jp": "早速　思い思いに<ruby>探索<rt>たんさく</rt></ruby>することに",
+     "en": "Soon enough, we were all searching for different things.",
+     "cn": "那就马上分头各自去找吧。（ことにする＝就此决定去做）"},
+    {"id": "nk11", "sid": "wJXmEmXEOUg7", "word": "koto", "impl": "〜ことになる",
+     "media": "転生したらスライムだった件", "ep": 13, "at": "4:19",
+     "jp": "<ruby>滅亡<rt>めつぼう</rt></ruby>することになりましょう",
+     "en": "If we take no action, the Lizardmen will surely be exterminated.",
+     "cn": "照此下去，就会落得灭亡的下场。（ことになる＝客观必定走向）"},
+    # ---- の ----
+    {"id": "nk12", "sid": "hnGwAjdqAZG4", "word": "no", "impl": "〜のを待つ",
+     "media": "Tassin Shima", "ep": 10, "at": "23:30",
+     "jp": "ヨーグルトが<ruby>煮詰まる<rt>につまる</rt></ruby>のを<ruby>待つ<rt>まつ</rt></ruby>",
+     "en": "Wait for the yogurt to thicken.",
+     "cn": "等着酸奶煮浓稠。（の＝把动作名词化，作待つ的宾语）"},
+    {"id": "nk13", "sid": "0FLFeDP3j2_4", "word": "no", "impl": "〜のが〜",
+     "media": "Re:ZERO -Starting Life in Another World-", "ep": 11, "at": "1:53",
+     "jp": "それを<ruby>待つ<rt>まつ</rt></ruby>のがベティーの<ruby>役割<rt>やくわり</rt></ruby>",
+     "en": "My job was to wait for that day.",
+     "cn": "等待那一刻才是贝蒂的职责。（のが＝动作名词化当主语）"},
+    {"id": "nk14", "sid": "C2Yvl5wXbZWT", "word": "no", "impl": "〜のを迷う",
+     "media": "デモンハート 2099", "ep": 1, "at": "21:43",
+     "jp": "マルキュスの<ruby>謀反<rt>むほん</rt></ruby>を<ruby>告げる<rt>つげる</rt></ruby>のを<ruby>迷い<rt>まよ</rt></ruby>",
+     "en": "I hesitated to inform you of Marcus' betrayal.",
+     "cn": "我在犹豫要不要禀报马尔库斯的谋反。（のを迷う＝对…迟疑）"},
+    # ---- もの ----
+    {"id": "nk15", "sid": "mTrqANnGSV8v", "word": "mono", "impl": "もの（物）",
+     "media": "はじめの一歩", "ep": 60, "at": "17:52",
+     "jp": "<ruby>お前<rt>まえ</rt></ruby>のものは<ruby>俺<rt>おれ</rt></ruby>のもの　<ruby>俺<rt>おれ</rt></ruby>のものは<ruby>俺<rt>おれ</rt></ruby>のものだ",
+     "en": "What's yours is mine. What's mine is mine!",
+     "cn": "你的东西就是我的东西，我的东西还是我的东西。（もの＝东西）"},
+    {"id": "nk16", "sid": "isTWYTGhB8Jn", "word": "mono", "impl": "ものだ（道理）",
+     "media": "天元突破グレンラガン", "ep": 27, "at": "18:51",
+     "jp": "<ruby>死んだ<rt>しんだ</rt></ruby>ものは<ruby>死んだ<rt>しんだ</rt></ruby>ものだ",
+     "en": "Those who are dead are dead.",
+     "cn": "死了的就是死了的。（ものだ＝理应如此、认命道理）"},
+    {"id": "nk17", "sid": "CVZo6R_UScho", "word": "mono", "impl": "ものだから（理由）",
+     "media": "オッドタクシー", "ep": 10, "at": "21:40",
+     "jp": "もともとなかったものだから",
+     "en": "It's not something I had before all this.",
+     "cn": "因为本来就是没有的东西。（ものだから＝给出理由）"},
+    # ---- はず ----
+    {"id": "nk18", "sid": "jl-U9ql7HqZT", "word": "hazu", "impl": "はずがない",
+     "media": "mono", "ep": 9, "at": "9:10",
+     "jp": "<ruby>飽きる<rt>あきる</rt></ruby>はずがないじゃない！",
+     "en": "You're never supposed to get tired of it!",
+     "cn": "怎么可能会腻嘛！（はずがない＝绝不可能）"},
+    {"id": "nk19", "sid": "raaHFFMblYwh", "word": "hazu", "impl": "い形＋はずがない",
+     "media": "Fate/stay night [Unlimited Blade Works]", "ep": 4, "at": "10:09",
+     "jp": "うれしくないはずがない",
+     "en": "How could I not be happy?",
+     "cn": "不可能不开心。（感情的否定＋はずがない＝双重否定）"},
+    {"id": "nk20", "sid": "A_9sc-nl2qGA", "word": "hazu", "impl": "はずが〜（落空）",
+     "media": "STEINS;GATE", "ep": 8, "at": "4:04",
+     "jp": "ダルが<ruby>優勝<rt>ゆうしょう</rt></ruby>するはずが…",
+     "en": "So he could win the Feyris Cup.",
+     "cn": "照理该由达鲁夺冠的，可是…（はずが＋省略＝本应的落空）"},
+    # ---- わけ ----
+    {"id": "nk21", "sid": "gJ_CJzS3GXL7", "word": "wake", "impl": "わけだ",
+     "media": "ソードアート・オンライン", "ep": 7, "at": "13:22",
+     "jp": "ハハッ　<ruby>見つからない<rt>みつからない</rt></ruby>わけだ",
+     "en": "That's why no one received any.",
+     "cn": "哈哈哈，所以才找不到啊。（わけだ＝难怪、这才说得通）"},
+    {"id": "nk22", "sid": "HVtOZpjIDmaZ", "word": "wake", "impl": "わけではない",
+     "media": "NARUTO -ナルト-", "ep": 119, "at": "1:55",
+     "jp": "すべてを<ruby>失う<rt>うしなう</rt></ruby>わけではない",
+     "en": "It's not like you'll lose everything.",
+     "cn": "并不是要失去一切。（わけではない＝并非如此）"},
+    {"id": "nk23", "sid": "ywMsgoW2ui-2", "word": "wake", "impl": "わけない（不可能）",
+     "media": "ヒナまつり", "ep": 11, "at": "16:35",
+     "jp": "いるわけない",
+     "en": "There's no such kid.",
+     "cn": "不可能在的。（わけない＝哪会有这回事）"},
+    # ---- ところ ----
+    {"id": "nk24", "sid": "IENH1fF5vYx7", "word": "tokoro", "impl": "Ｖる＋ところ（差点）",
+     "media": "葬送のフリーレン", "ep": 2, "at": "24:05",
+     "jp": "あっ…　<ruby>忘れる<rt>わすれる</rt></ruby>ところだった",
+     "en": "Oh, I nearly forgot.",
+     "cn": "啊…差点忘了。（Ｖる＋ところだった＝正要/差点）"},
+    {"id": "nk25", "sid": "4G7XBjY2H-Bw", "word": "tokoro", "impl": "ているところ",
+     "media": "８６―エイティシックス―", "ep": 1, "at": "20:41",
+     "jp": "ごめんね　<ruby>疲れている<rt>つかれている</rt></ruby>ところ",
+     "en": "Sorry, I know you're tired.",
+     "cn": "抱歉，在你正累着的时候…。（ているところ＝正处于某刻）"},
+    {"id": "nk26", "sid": "9POxzRITbEf8", "word": "tokoro", "impl": "ているところ",
+     "media": "葬送のフリーレン", "ep": 18, "at": "21:43",
+     "jp": "<ruby>隠れて<rt>かくれて</rt></ruby>たくさん<ruby>努力<rt>どりょく</rt></ruby>しているところ",
+     "en": "You work really hard in secret.",
+     "cn": "你一直在悄悄努力着呢。（しているところ＝进行中的时点）"},
+    # ---- うち ----
+    {"id": "nk27", "sid": "Cj1ERZpl8cE1", "word": "uchi", "impl": "ないうちに",
+     "media": "ひぐらしのなく頃に 業", "ep": 13, "at": "18:58",
+     "jp": "みんなに<ruby>見つからない<rt>みつからない</rt></ruby>うちに",
+     "en": "Let's go before they know we're gone!",
+     "cn": "趁还没被大家发现…。（ないうちに＝趁还没…）"},
+    {"id": "nk28", "sid": "xXjD3-FrdNEG", "word": "uchi", "impl": "Ｖる＋うちに",
+     "media": "テラスハウス TOKYO 2019-2020", "ep": 22, "at": "43:48",
+     "jp": "とりあえず　いるうちに　あの…",
+     "en": "While you're still here...",
+     "cn": "趁你还在的时候，那个…。（いるうちに＝趁还在的期间）"},
+    {"id": "nk29", "sid": "9ltvjxiwMueL", "word": "uchi", "impl": "ないうちに",
+     "media": "斉木楠雄のΨ難", "ep": 18, "at": "8:39",
+     "jp": "<ruby>冷めない<rt>さめない</rt></ruby>うちに…　アポート！",
+     "en": "It's still hot. Apport!",
+     "cn": "趁还没凉…【召】回来！（热的时候＝たべる的绝佳窗口）"},
+    # ---- たび ----
+    {"id": "nk30", "sid": "Sq4QvacFYDjO", "word": "tabi", "impl": "死ぬたびに",
+     "media": "Re:ZERO -Starting Life in Another World-", "ep": 2, "at": "4:55",
+     "jp": "しかも　<ruby>死ぬ<rt>しぬ</rt></ruby>たびに<ruby>初期<rt>しょき</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>に<ruby>戻る<rt>もどる</rt></ruby>",
+     "en": "And each time, I return to my initial state.",
+     "cn": "而且每次死掉都会回到初始状态。（死ぬたびに＝每死一次）"},
+    {"id": "nk31", "sid": "iZO4neHPvgTN", "word": "tabi", "impl": "〜たびに",
+     "media": "STEINS;GATE ゼロ", "ep": 21, "at": "5:48",
+     "jp": "タイムリープするたびに",
+     "en": "Every time you time leap...",
+     "cn": "每一次时间跳跃…。（たびに＝每当…时）"},
+    {"id": "nk32", "sid": "tD5xnu3jXTNf", "word": "tabi", "impl": "〜たびに",
+     "media": "ReLIFE", "ep": 5, "at": "16:11",
+     "jp": "<ruby>目が合う<rt>めがあう</rt></ruby>たびに　<ruby>話す<rt>はなす</rt></ruby>たびに",
+     "en": "Every time our eyes meet, every time we speak!",
+     "cn": "每次四目相对、每次开口说话…（たびに反复发生）"},
+    # ---- よう ----
+    {"id": "nk33", "sid": "LOBY2dcVGggY", "word": "you", "impl": "ようになった＋ようだ",
+     "media": "キルラキル", "ep": 12, "at": "22:42",
+     "jp": "<ruby>歩ける<rt>あるける</rt></ruby>ようになったようだな",
+     "en": "I see you're on your feet again.",
+     "cn": "看来已经变得能走路了呢。（ようになった＝能力转变＋ようだ＝推测）"},
+    {"id": "nk34", "sid": "Wnte5O-1FOSo", "word": "you", "impl": "ようだ（比喻）",
+     "media": "負けヒロインが多すぎる！", "ep": 9, "at": "0:11",
+     "jp": "さながらハロウィンのようだ",
+     "en": "It's not unlike Halloween.",
+     "cn": "简直像万圣节一样。（ようだ＝宛若、比喻）"},
+    {"id": "nk35", "sid": "00rZtqzqD12E", "word": "you", "impl": "ようになった",
+     "media": "声優ラジオのウラオモテ", "ep": 4, "at": "8:51",
+     "jp": "もう<ruby>話せる<rt>はなせる</rt></ruby>ようになった？",
+     "en": "But can you talk about it now?",
+     "cn": "已经变得能说出口了吗？（ようになった＝从做不到到做得到）"},
+    # ---- まま ----
+    {"id": "nk36", "sid": "hUHs2qRIgKzo", "word": "mama", "impl": "Ｖたまま＋になる",
+     "media": "カードキャプターさくら", "ep": 69, "at": "14:54",
+     "jp": "このままじゃ　みんな　<ruby>眠った<rt>ねむった</rt></ruby>ままになっちゃう",
+     "en": "At this rate, everyone will stay asleep!",
+     "cn": "这样下去大家会一直睡着不醒的。（眠ったまま＝睡着状态原样持续）"},
+    {"id": "nk37", "sid": "BLWZlKJM0TV4", "word": "mama", "impl": "Ｖたまま",
+     "media": "モブサイコ100", "ep": 1, "at": "19:26",
+     "jp": "ぬれぎぬ<ruby>着せられた<rt>きせられた</rt></ruby>まま<ruby>消されちゃ<rt>けされちゃ</rt></ruby>",
+     "en": "If I disappeared while being falsely accused...",
+     "cn": "要顶着莫须有的罪名就这么消失…（Ｖたまま＝被保留着当下状态）"},
+    {"id": "nk38", "sid": "owoYxniw1Lfz", "word": "mama", "impl": "そのまま",
+     "media": "風が強く吹いている", "ep": 9, "at": "16:12",
+     "jp": "アオタケ　そのまま　そのまま",
+     "en": "Aotake! Stay right there!",
+     "cn": "青竹！就那样、别动！（そのまま＝维持原样不动）"},
+    # ---- とおり ----
+    {"id": "nk39", "sid": "2u366bZJKLs_", "word": "toori", "impl": "思ったとおり",
+     "media": "Ｄｒ．ＳＴＯＮＥ", "ep": 22, "at": "13:16",
+     "jp": "クフフッ　<ruby>思った<rt>おもった</rt></ruby>とおりだ",
+     "en": "I was right!",
+     "cn": "嘿嘿，果然如我所料。（思ったとおり＝与实际预想完全一致）"},
+    {"id": "nk40", "sid": "Ci_Ftqvz1fIO", "word": "toori", "impl": "Ｖる＋とおり",
+     "media": "お隣の天使様にいつの間にか駄目な人間になっていた件", "ep": 1, "at": "17:49",
+     "jp": "くっ…　おっしゃるとおりです",
+     "en": "'Tis as you say.",
+     "cn": "唔…正如您所说。（〜るとおり＝照着某人的话/方式）"},
+    {"id": "nk41", "sid": "uWkyo1iAhwqx", "word": "toori", "impl": "思ったとおり",
+     "media": "NARUTO -ナルト-", "ep": 103, "at": "11:15",
+     "jp": "やっぱり　<ruby>思った<rt>おもった</rt></ruby>とおりだった",
+     "en": "Looks like I was right.",
+     "cn": "果然和想的一样。（思ったとおりだった＝猜想被验证）"},
+    # ---- ため ----
+    {"id": "nk42", "sid": "i8732wBzqLfc", "word": "tame", "impl": "ために（目的）",
+     "media": "光が死んだ夏", "ep": 3, "at": "13:55",
+     "jp": "<ruby>前に進む<rt>まえにすすむ</rt></ruby>ために　<ruby>前に進む<rt>まえにすすむ</rt></ruby>ために…",
+     "en": "Move on from this. Move on from this...",
+     "cn": "为了向前走、为了向前走…（ために＝为了达成）"},
+    {"id": "nk43", "sid": "geFiFb3CRpsP", "word": "tame", "impl": "ために（目的）",
+     "media": "ひそねとまそたん", "ep": 11, "at": "13:36",
+     "jp": "あなたに<ruby>捧げる<rt>ささげる</rt></ruby>ため　あなたと<ruby>飛ぶ<rt>とぶ</rt></ruby>ために",
+     "en": "To support you, to fly with you!",
+     "cn": "为了献给你、为了与你齐飞。（ために＝带强烈心意）"},
+    {"id": "nk44", "sid": "LQ1Am6A8TMkf", "word": "tame", "impl": "のために",
+     "media": "アキバ冥途戦争", "ep": 3, "at": "14:27",
+     "jp": "<ruby>店<rt>みせ</rt></ruby>のために<ruby>負ける<rt>まける</rt></ruby>",
+     "en": "Lose for the cafe.",
+     "cn": "为了店里而输。（のために＝名詞＋ため＝为了某人事物）"},
+    # ---- つもり ----
+    {"id": "nk45", "sid": "XJaHFxzexkyO", "word": "tsumori", "impl": "どういうつもり",
+     "media": "Fate/strange Fake", "ep": 7, "at": "19:06",
+     "jp": "どういうつもりだ　キャスター",
+     "en": "What's the meaning of this, Caster?",
+     "cn": "你到底打的什么算盘，Caster？（つもり＝意图盘算）"},
+    {"id": "nk46", "sid": "sSpU6XrYlTOQ", "word": "tsumori", "impl": "つもりだ",
+     "media": "約束のネバーランド", "ep": 9, "at": "20:19",
+     "jp": "てめえ！　どういうつもりだ！？",
+     "en": "You bastard, what the hell?!",
+     "cn": "你这混蛋！什么意思！（つもりだ＝质问对方意图）"},
+    {"id": "nk47", "sid": "Md8WthwdUh9S", "word": "tsumori", "impl": "つもりだ",
+     "media": "幽☆遊☆白書", "ep": 87, "at": "14:27",
+     "jp": "<ruby>浦飯<rt>うらめし</rt></ruby>！　どういうつもりだ？",
+     "en": "Urameshi! What do you think you're doing?",
+     "cn": "浦饭！你打算干什么？（どういうつもり＝恶劣意图）"},
+    # ---- きり ----
+    {"id": "nk1", "sid": "ml-bk_rUNzv_", "word": "kiri", "impl": "Ｖた＋きり",
      "media": "mono", "ep": 8, "at": "19:58",
      "jp": "朝方　メッセージが来たきり　音沙汰なし",
      "en": "There's nothing since her morning messages.",
      "cn": "早上发来消息之后，就再没有下文了。"},
-    {"id": "nk2", "sid": "DMcc020UXtXm", "impl": "Ｖた＋きり",
+    {"id": "nk2", "sid": "DMcc020UXtXm", "word": "kiri", "impl": "Ｖた＋きり",
      "media": "プロメア", "ep": 0, "at": "1:06:22",
      "jp": "バカと飛んでったきり　連絡がつかない",
      "en": "Can't reach her since she went with the dummy.",
      "cn": "跟着那位大小姐跑了以后，就再也联系不上了。"},
-    {"id": "nk3", "sid": "U-Zr1pHdEdDX", "impl": "Ｖた＋きり",
+    {"id": "nk3", "sid": "U-Zr1pHdEdDX", "word": "kiri", "impl": "Ｖた＋きり",
      "media": "DEATH NOTE", "ep": 34, "at": "9:00",
      "jp": "あの死神　ノート渡したきり　現れやしない",
      "en": "That Shinigami. Ever since he handed me the notebook, he hasn't reappeared.",
      "cn": "那个死神，把笔记递给我之后就再没露过面了。"},
-    {"id": "nk4", "sid": "uc_mcMibkj0p", "impl": "Ｖた＋きり",
+    {"id": "nk4", "sid": "uc_mcMibkj0p", "word": "kiri", "impl": "Ｖた＋きり",
      "media": "ドラゴンボールDAIMA", "ep": 10, "at": "14:45",
      "jp": "ナメック人たちが出ていったきりだ",
      "en": "Nothing's changed since the Nameks left.",
      "cn": "那美克星人走了之后，这边就再没动静了。"},
-    {"id": "nk5", "sid": "MgAkXGD--vaR", "impl": "名＋きり",
+    {"id": "nk5", "sid": "MgAkXGD--vaR", "word": "kiri", "impl": "名＋きり",
      "media": "からかい上手の高木さん", "ep": 2, "at": "18:39",
      "jp": "今頃２人きりで…",
      "en": "I bet they're up there now, just the two of them.",
      "cn": "这会儿恐怕正两人独处呢……"},
-    {"id": "nk6", "sid": "2vqCHqSORxfc", "impl": "名＋きり",
+    {"id": "nk6", "sid": "2vqCHqSORxfc", "word": "kiri", "impl": "名＋きり",
      "media": "わたしが恋なんて、ありえない！", "ep": 3, "at": "12:49",
      "jp": "ほう　二人きりでか？　えっ？　うん。",
      "en": "Just the two of you, huh? Huh? Yeah.",
      "cn": "哦？就你们俩人？（嗯？）对。"},
-    {"id": "nk7", "sid": "2TvaeY5Agmdv", "impl": "名＋きり",
+    {"id": "nk7", "sid": "2TvaeY5Agmdv", "word": "kiri", "impl": "名＋きり",
      "media": "コードギアス 反逆のルルーシュ", "ep": 22, "at": "10:12",
      "jp": "はい　あなたと２人きりで",
      "en": "Yes! With you alone!",
      "cn": "嗯，就和你两个人。"},
-    {"id": "nk8", "sid": "KUAFUA-EF7Qf", "impl": "名＋きり（唯一）",
+    {"id": "nk8", "sid": "KUAFUA-EF7Qf", "word": "kiri", "impl": "名＋きり（唯一）",
      "media": "約束のネバーランド", "ep": 11, "at": "8:49",
      "jp": "いいか　エマ　チャンスは一度きりだ。",
      "en": "Listen, Emma. You only have one chance.",
@@ -711,7 +920,7 @@ z-index:99;cursor:zoom-out}
 <header><div class="wrap">
 <h1>形式名詞 ・ 十四杰完全图鉴</h1>
 <div class="kana">14 个「空心名词/準助詞」＝把句子打包成名词的语法胶水</div>
-<div class="tags"><span>N4–N3</span><span>文法体系</span><span>14词×57音声例句</span><span>きり×8段台词原声</span><span>TTS×MOJi×Nadeshiko</span></div>
+<div class="tags"><span>N4–N3</span><span>文法体系</span><span>14词×57音声例句</span><span>14词×47段台词原声</span><span>TTS×MOJi×Nadeshiko</span></div>
 </div></header>
 
 <nav class="wrap" id="nav"></nav>
@@ -759,6 +968,14 @@ function clipHTML(cid){
     <div class="cen">${c.en}</div><div class="ccn">${c.cn}</div>
     <div class="clabel"><span class="mep">🎬 ${c.media} EP${c.ep}</span><span class="impl">${c.impl}</span><span class="tim">${c.at}</span></div></div>
     <button class="btn" onclick="play('${cid}',this)">▶</button></div>`;
+}
+function clipsHTML(nid){
+  return NADE.filter(c=>c.word===nid).map(c=>clipHTML(c.id)).join("");
+}
+function clipsBlock(nid,intro){
+  var cards=clipsHTML(nid);
+  if(!cards)return "";
+  return '<div class="imgbox" style="margin-top:14px">🎬 <b>番剧/日剧原声语境</b>　'+intro+'（台词与画面取自 Nadeshiko 语料，点缩略图看画面，点▶听原声）</div>'+cards;
 }
 function openShot(src){
   let v=document.querySelector('.shotview');
@@ -818,8 +1035,7 @@ function renderStudy(){
         <div class="attach">${n.attach.map(a=>`<code>${a}</code>`).join("")}</div>
         <table class="ptab">${n.patterns.map(p=>`<tr><td>${p[0]}</td><td>${p[1]}</td></tr>`).join("")}</table>
         ${n.sents.map(rowHTML).join("")}
-        ${nid==="kiri"?`<div class="imgbox" style="margin-top:14px">🎬 <b>番剧/日剧原声语境</b>　把抽象的「きり」放回真实台词里——点缩略图看画面，点▶听原声。台词与画面取自 Nadeshiko 语料库。</div>
-        ${NADE.map(c=>clipHTML(c.id)).join("")}`:""}
+        ${clipsBlock(nid, '把抽象的「'+n.name+'」放回真实台词里')}
         <div class="note">💡 ${n.note}</div>
       </div>`;
     });
@@ -854,7 +1070,7 @@ function renderSent(){
       const n=NOUNS[nid];
       h+=`<h3 class="sec">${n.emoji} ${n.name} — ${n.img.split("：")[0]}</h3>
       <div class="card">${n.sents.map(rowHTML).join("")}
-      ${nid==="kiri"?"<div class=\\"imgbox\\" style=\\"margin-top:12px\\">🎬 番剧/日剧原声：きり（Nadeshiko 语料，点图看画面，▶听原声）</div>"+NADE.map(c=>clipHTML(c.id)).join(""):""}</div>`;
+      ${clipsBlock(nid,n.name)}</div>`;
     });
   });
   $("#main").innerHTML=h;
