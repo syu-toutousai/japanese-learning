@@ -7,7 +7,7 @@
 | 内容 | 说明 |
 |---|---|
 | [`index.html`](./index.html) | 🏠 课件集索引页：三套课件入口（本地 serve 后即为主页） |
-| [`keishiku-courseware/`](./keishiku-courseware/) | 形式名词・十三杰完全图鉴：13 词按功能分 5 组 + 核心意象 + 最小对立句対比 + 四层题库与错题本，53 段 TTS 发音，单文件 HTML 离线可用 |
+| [`keishiku-courseware/`](./keishiku-courseware/) | 形式名词・十四杰完全图鉴：14 词按功能分 5 组 + 核心意象 + 最小对立句対比 + 四层题库与错题本，57 段 TTS 发音，单文件 HTML 离线可用 |
 | [`shidai-courseware/`](./shidai-courseware/) | 「次第」完全掌握：四种用法讲解 + 例句原声 + クイズ双题库（基礎15問 / 挑戦10問），单文件 HTML 离线可用 |
 | [`keiji-courseware/`](./keiji-courseware/) | 接头接尾词・口袋图鉴：词条存 `pocket.json` 随手增删，重建即自动生成卡片、TTS 发音与三层题库（詞義認識 / 運用填空 / 聴解判別）＋错题本，单文件 HTML 离线可用 |
 | [`houi-courseware/`](./houi-courseware/) | 方角・方位・认知罗盘：按人脑空间认知规律掌握「东南西北・左右上下」及派生词——视觉罗盘＋身体坐标＋对立结伴＋心理旋转，五层题库（含空間判斷）＋错题本，单文件 HTML 离线可用 |
