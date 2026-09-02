@@ -1,7 +1,7 @@
 # 「形式名词」十四杰完全图鉴 · 交互式课件
 
 基于 edge-tts 日语原声（Nanami/Keita）与 MOJi辞書 释义校对的**单文件课件**
-（`index.html`，约 1.8MB，离线可用）。
+（`index.html`，离线可用）。
 
 ## 打开
 
@@ -20,6 +20,10 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/index.html
   - 状态的样子：よう・まま・とおり
   - 因果与心意：ため(+おかげ/せい)・つもり
 - **57 段内嵌发音**例句，全部可点击播放
+- **きり × 8 段番剧/日剧原声**（Nadeshiko 语料）：mono・プロメア・DEATH NOTE・
+  ドラゴンボールDAIMA・からかい上手の高木さん・約束のネバーランド 等，
+  带**画面缩略图**（点击看大图）＋▶原声音频＋作品/话数/时间锚点，
+  两种构式标签（Ｖた＋きり／名＋きり）一眼分清。
 
 ## 设计依据（人脑语言习得机制）
 
@@ -40,6 +44,9 @@ python3 build.py
 ```
 
 - 音频由 edge-tts 在首次构建时生成并缓存于 `audio/*.mp3`；删除某条 mp3 即可重新生成。
-- 扩充内容：改 `build.py` 里的 `SENTS / GROUPS / NOUNS / CONTRASTS / QA-QD` 后重跑即可。
+- 扩充内容：改 `build.py` 里的 `SENTS / GROUPS / NOUNS / CONTRASTS / QA-QD / NADE` 后重跑即可。
+- **きり 的 Nadeshiko 原声扩充**：`nadeshiko search たきり --exact --once`（或
+  `nadeshiko search きりで --exact`）找台词 → 记下 `sid` → CDN 直链下载
+  `scenes/<sid>.mp3` 和 `scenes/<sid>.webp` → 在 `build.py` 的 `NADE[]` 里加一条 → 重跑即可。
 
 同系列姊妹篇：「次第」课件见 `../shidai-courseware/index.html`。

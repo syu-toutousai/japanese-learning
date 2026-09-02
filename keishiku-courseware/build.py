@@ -456,6 +456,9 @@ QC = [
     {"type": "listen", "aid": "kiri1", "q": "听音频：说话人担心什么？",
      "opts": ["儿子出门后到现在还没回来", "儿子今天不打算出门", "儿子回来得太早"], "ans": 0,
      "exp": "出かけたきり、まだ帰ってこない＝出门那个时点之后、再无下文（牵挂）。"},
+    {"type": "listen", "aid": "nk3", "q": "听音频（Death Note 原声）：死神把笔记本交给主角之后，发生了什么？",
+     "opts": ["之后再没露过面（渡したきり、現れやしない）", "每天都来催还笔记", "又派了另一个死神过来"], "ans": 0,
+     "exp": "ノート<b>渡したきり</b>現れやしない＝把东西交出去那一刻之后、再没出现。きり＋否定语气＝定格的遗憾。"},
 ]
 
 QD = [
@@ -484,6 +487,69 @@ QD = [
 ]
 
 BANKS = {"basic": ("📘 基礎認識", QA), "cmp": ("⚖️ 対比辨析", QB), "listen": ("🎧 聴解", QC), "prod": ("✍️ 运用填空", QD)}
+
+# ---------------------------------------------------------------- nadeshiko real-scene clips （きり）
+SCENES_DIR = ROOT / "scenes"
+# きり 专属的番剧/日剧原声例句：音频与画面取自 Nadeshiko 语料，
+# 文件放在 scenes/{sid}.mp3 / scenes/{sid}.webp（CDN 直链下载，见 kotoba 课件 README）。
+NADE = [
+    {"id": "nk1", "sid": "ml-bk_rUNzv_", "impl": "Ｖた＋きり",
+     "media": "mono", "ep": 8, "at": "19:58",
+     "jp": "朝方　メッセージが来たきり　音沙汰なし",
+     "en": "There's nothing since her morning messages.",
+     "cn": "早上发来消息之后，就再没有下文了。"},
+    {"id": "nk2", "sid": "DMcc020UXtXm", "impl": "Ｖた＋きり",
+     "media": "プロメア", "ep": 0, "at": "1:06:22",
+     "jp": "バカと飛んでったきり　連絡がつかない",
+     "en": "Can't reach her since she went with the dummy.",
+     "cn": "跟着那位大小姐跑了以后，就再也联系不上了。"},
+    {"id": "nk3", "sid": "U-Zr1pHdEdDX", "impl": "Ｖた＋きり",
+     "media": "DEATH NOTE", "ep": 34, "at": "9:00",
+     "jp": "あの死神　ノート渡したきり　現れやしない",
+     "en": "That Shinigami. Ever since he handed me the notebook, he hasn't reappeared.",
+     "cn": "那个死神，把笔记递给我之后就再没露过面了。"},
+    {"id": "nk4", "sid": "uc_mcMibkj0p", "impl": "Ｖた＋きり",
+     "media": "ドラゴンボールDAIMA", "ep": 10, "at": "14:45",
+     "jp": "ナメック人たちが出ていったきりだ",
+     "en": "Nothing's changed since the Nameks left.",
+     "cn": "那美克星人走了之后，这边就再没动静了。"},
+    {"id": "nk5", "sid": "MgAkXGD--vaR", "impl": "名＋きり",
+     "media": "からかい上手の高木さん", "ep": 2, "at": "18:39",
+     "jp": "今頃２人きりで…",
+     "en": "I bet they're up there now, just the two of them.",
+     "cn": "这会儿恐怕正两人独处呢……"},
+    {"id": "nk6", "sid": "2vqCHqSORxfc", "impl": "名＋きり",
+     "media": "わたしが恋なんて、ありえない！", "ep": 3, "at": "12:49",
+     "jp": "ほう　二人きりでか？　えっ？　うん。",
+     "en": "Just the two of you, huh? Huh? Yeah.",
+     "cn": "哦？就你们俩人？（嗯？）对。"},
+    {"id": "nk7", "sid": "2TvaeY5Agmdv", "impl": "名＋きり",
+     "media": "コードギアス 反逆のルルーシュ", "ep": 22, "at": "10:12",
+     "jp": "はい　あなたと２人きりで",
+     "en": "Yes! With you alone!",
+     "cn": "嗯，就和你两个人。"},
+    {"id": "nk8", "sid": "KUAFUA-EF7Qf", "impl": "名＋きり（唯一）",
+     "media": "約束のネバーランド", "ep": 11, "at": "8:49",
+     "jp": "いいか　エマ　チャンスは一度きりだ。",
+     "en": "Listen, Emma. You only have one chance.",
+     "cn": "听好了，艾玛。机会只有一次。"},
+]
+
+
+def scenes_map():
+    """embed scenes/{sid}.mp3 + .webp as base64, keyed by clip id."""
+    m = {}
+    for c in NADE:
+        mp3 = SCENES_DIR / f"{c['sid']}.mp3"
+        webp = SCENES_DIR / f"{c['sid']}.webp"
+        if not (mp3.exists() and webp.exists()):
+            print(f"  [!] 缺 scene 素材 {c['sid']}（需要 mp3 + webp）")
+            continue
+        m[c["id"]] = {
+            "img": "data:image/webp;base64," + base64.b64encode(webp.read_bytes()).decode(),
+            "mp3": "data:audio/mpeg;base64," + base64.b64encode(mp3.read_bytes()).decode(),
+        }
+    return m
 
 # ---------------------------------------------------------------- audio generation
 
@@ -620,13 +686,32 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 .fin .big{font-size:44px;font-weight:800;color:var(--acc)}
 .hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
 .linky{color:var(--acc);cursor:pointer;text-decoration:underline}
+/* nadeshiko real-scene clips (きり) */
+.clip{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid var(--line);
+border-radius:14px;padding:12px;box-shadow:0 1px 6px rgba(30,40,90,.06)}
+.clip+.clip{margin-top:12px}
+.clip .shot{flex:none;width:128px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--line);
+background:#eef0f5;cursor:zoom-in;transition:.15s}
+.clip .shot:hover{transform:scale(1.05)}
+.clip .cjp{font-size:16px;line-height:1.65;font-weight:600;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.clip .cen{font-size:13px;color:var(--sub);font-style:italic;margin-top:4px;line-height:1.6}
+.clip .ccn{font-size:13px;color:var(--sub);margin-top:4px;line-height:1.7}
+.clip .clabel{margin-top:6px}
+.clip .clabel span{display:inline-block;border-radius:99px;padding:3px 10px;font-size:11.5px;font-weight:700;
+margin:2px 5px 2px 0}
+.clip .clabel .mep{background:#eef1ff;color:#33418f}
+.clip .clabel .impl{background:#e6fbf3;color:#0b7285}
+.clip .clabel .tim{background:#fff4d6;color:#7a4f00}
+.shotview{position:fixed;inset:0;background:rgba(10,15,30,.85);display:flex;align-items:center;justify-content:center;
+z-index:99;cursor:zoom-out}
+.shotview img{max-width:90vw;max-height:88vh;border-radius:10px}
 </style>
 </head>
 <body>
 <header><div class="wrap">
 <h1>形式名詞 ・ 十四杰完全图鉴</h1>
 <div class="kana">14 个「空心名词/準助詞」＝把句子打包成名词的语法胶水</div>
-<div class="tags"><span>N4–N3</span><span>文法体系</span><span>14词×57音声例句</span><span>TTS×MOJi</span></div>
+<div class="tags"><span>N4–N3</span><span>文法体系</span><span>14词×57音声例句</span><span>きり×8段台词原声</span><span>TTS×MOJi×Nadeshiko</span></div>
 </div></header>
 
 <nav class="wrap" id="nav"></nav>
@@ -645,19 +730,42 @@ const GROUPS=__GROUPS__;
 const NOUNS=__NOUNS__;
 const CONTRASTS=__CONTRASTS__;
 const BANKS=__BANKS__;
+const NADE=__NADE__;
+const SCENES=__SCENES__;
 const $=s=>document.querySelector(s);
 let curAudio=null,curBtn=null;
-function play(id,btn){
+function playSrc(url,btn){
   if(curAudio){curAudio.pause();curAudio.currentTime=0;}
   document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
-  curAudio=new Audio(AUDIO[id]);curBtn=btn||null;
+  curAudio=new Audio(url);curBtn=btn||null;
   if(curBtn){curBtn.classList.add('playing');curAudio.onended=()=>curBtn.classList.remove('playing');}
   curAudio.play();
+}
+function play(id,btn){
+  if(SCENES[id])return playSrc(SCENES[id].mp3,btn);
+  playSrc(AUDIO[id],btn);
 }
 function rowHTML(id){
   const s=SENTS[id];
   return `<div class="row"><button class="btn" onclick="play('${id}',this)">▶</button>
   <div><div class="jp">${s.jp}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function clipHTML(cid){
+  const c=NADE.find(x=>x.id===cid),s=SCENES[cid];
+  if(!s)return "";
+  return `<div class="clip">
+    <img class="shot" src="${s.img}" alt="scene" onclick="openShot(this.src)" title="点击看大图">
+    <div style="flex:1;min-width:0"><div class="cjp">${c.jp}</div>
+    <div class="cen">${c.en}</div><div class="ccn">${c.cn}</div>
+    <div class="clabel"><span class="mep">🎬 ${c.media} EP${c.ep}</span><span class="impl">${c.impl}</span><span class="tim">${c.at}</span></div></div>
+    <button class="btn" onclick="play('${cid}',this)">▶</button></div>`;
+}
+function openShot(src){
+  let v=document.querySelector('.shotview');
+  if(v){document.body.removeChild(v);return;}
+  v=document.createElement('div');v.className='shotview';v.onclick=()=>document.body.removeChild(v);
+  const im=document.createElement('img');im.src=src;v.appendChild(im);
+  document.body.appendChild(v);
 }
 
 /* ---------- tabs ---------- */
@@ -710,6 +818,8 @@ function renderStudy(){
         <div class="attach">${n.attach.map(a=>`<code>${a}</code>`).join("")}</div>
         <table class="ptab">${n.patterns.map(p=>`<tr><td>${p[0]}</td><td>${p[1]}</td></tr>`).join("")}</table>
         ${n.sents.map(rowHTML).join("")}
+        ${nid==="kiri"?`<div class="imgbox" style="margin-top:14px">🎬 <b>番剧/日剧原声语境</b>　把抽象的「きり」放回真实台词里——点缩略图看画面，点▶听原声。台词与画面取自 Nadeshiko 语料库。</div>
+        ${NADE.map(c=>clipHTML(c.id)).join("")}`:""}
         <div class="note">💡 ${n.note}</div>
       </div>`;
     });
@@ -743,7 +853,8 @@ function renderSent(){
     g.nouns.forEach(nid=>{
       const n=NOUNS[nid];
       h+=`<h3 class="sec">${n.emoji} ${n.name} — ${n.img.split("：")[0]}</h3>
-      <div class="card">${n.sents.map(rowHTML).join("")}</div>`;
+      <div class="card">${n.sents.map(rowHTML).join("")}
+      ${nid==="kiri"?"<div class=\\"imgbox\\" style=\\"margin-top:12px\\">🎬 番剧/日剧原声：きり（Nadeshiko 语料，点图看画面，▶听原声）</div>"+NADE.map(c=>clipHTML(c.id)).join(""):""}</div>`;
     });
   });
   $("#main").innerHTML=h;
@@ -871,6 +982,8 @@ def main():
             .replace("__GROUPS__", json.dumps(GROUPS, ensure_ascii=False))
             .replace("__NOUNS__", json.dumps(NOUNS, ensure_ascii=False))
             .replace("__CONTRASTS__", json.dumps(CONTRASTS, ensure_ascii=False))
+            .replace("__NADE__", json.dumps(NADE, ensure_ascii=False))
+            .replace("__SCENES__", json.dumps(scenes_map(), ensure_ascii=False))
             .replace("__BANKS__", json.dumps(
                 {k: (label, qs) for k, (label, qs) in BANKS.items()}, ensure_ascii=False)))
     OUT.write_text(html, encoding="utf-8")
