@@ -305,10 +305,12 @@ def build_questions(groups, items, audio):
             "情報源を断定（断定信息源）",
             "対象をピン留め（锁定目标）",
             "変化のパラメータを固定（固定变化参数）",
+            "語幹を副詞化（将词干副词化）",
         ]
         # pick the right one based on group
         engine_map = {
-            "suru": 0, "yoru": 1, "vector": 0, "relate": 2, "progress": 3
+            "suru": 0, "yoru": 1, "vector": 0, "relate": 2, "progress": 3,
+            "renyou": 4,
         }
         correct_engine = engine_map.get(it["group"], 0)
         add("engine", f"{iid}:engine", type="choice",
@@ -703,12 +705,12 @@ function renderHistory(){
 
 /* ---------- map (hub-spoke) ---------- */
 function renderMap(){
-  let h=`<div class="card intro"><h2>Hub-and-Spoke：一個引擎，五條輻線</h2>
-  <p>70%以上の中学級日語接続語法，都是斷定の「に」在做不同風格的力學支撐。
+let h=`<div class="card intro"><h2>Hub-and-Spoke：一個引擎，六條輻線</h2>
+  <p>70%以上の中学級日語接續語法，都是斷定の「に」在做不同風格的力學支撐。
   <b>Hub（軸心）</b>就是斷定の「に」，<b>Spokes（輻線）</b>是描述你對該現實的認知動作的動詞。</p>
   <div class="steps">
     <div><b>Master Formula</b><br>[名詞短語] + [（斷定）に] + [語法化動詞] + [可選助詞]</div>
-    <div><b>核心洞察</b><br>N5→N1 不是五座獨立的山，而是同一棵wheel的不同spoke。</div>
+    <div><b>核心洞察</b><br>N5→N1 不是六座獨立的山，而是同一棵wheel的不同spoke。</div>
   </div></div>`;
   h+=`<div class="card"><div class="hub-map">
     <div class="hub-center">に</div>
@@ -766,7 +768,7 @@ function renderDetail(){
 
 /* ---------- contrast ---------- */
 function renderContrast(){
-  let h=`<div class="card intro"><h2>Group級対比：五條Lineage的力學差異</h2>
+  let h=`<div class="card intro"><h2>Group級対比：六條Lineage的力學差異</h2>
   <p>同一個「に」，搭配不同的動詞，認知力學完全不同。下面按group逐一对比。</p></div>`;
   const contrasts=[
     {c:"#e74c3c",title:"する系 vs 他系",items:[
@@ -794,6 +796,10 @@ function renderContrast(){
       ["に従って (N2)","遵循軌道 → 服從規則","核心：按照 / 隨著（遵從）"],
       ["にともなって (N2)","捆綁同行 → 因果套餐","核心：伴隨（因果捆綁）"],
       ["に反して (N2)","預期基線 → 方向相反","核心：與…相反（預期反差）"],
+    ]},
+    {c:"#16a085",title:"連用系：裸「に」的直系遺產（副词化）",items:[
+      ["［語幹］＋に (N5)","不加動詞 → 直接副詞化","核心：名詞/形動語幹＋に＝連用修飾語（静かに・実際に）"],
+      [" vs 〜にする (N5)","同源但派生 → 接動詞","核心：にする＝「に＋する」變成了語法動詞绑定的衍生"],
     ]},
   ];
   contrasts.forEach(sec=>{
