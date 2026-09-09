@@ -11,14 +11,23 @@ Nadeshiko 音频：从 CDN 下载并嵌入 base64，实现离线播放。
 """
 
 import base64
+import copy
 import hashlib
 import json
 import random
+import re
 import subprocess
 import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+try:
+    import pykakasi
+    _kks = pykakasi.kakasi()
+    HAS_KAKASI = True
+except ImportError:
+    HAS_KAKASI = False
 
 ROOT = Path(__file__).parent
 DATA = ROOT / "ni.json"
@@ -33,6 +42,72 @@ MIN_MP3 = 300
 
 def j(obj):
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+# ────────────────────────────────────────────── furigana (ruby)
+
+_KANJI = r"\u4e00-\u9fff\u3007\u303b\u3400-\u4dbf"
+_INLINE = re.compile(rf"([{_KANJI}]{{1,8}})\s*\(([ぁ-んァ-ンのー]{{1,10}})\)")
+_KANJI_RE = re.compile(rf"[{_KANJI}]")
+
+# phrase overrides for context-sensitive readings pykakasi gets wrong
+_READING_OVERRIDES = [
+    ("時間が経つ", "じかんがたつ"),
+    ("年を取る", "としをとる"),
+    ("人によって", "ひとによって"),
+    ("多くの人が", "おおくのひとが"),
+    ("最も", "もっとも"),
+]
+
+
+def _furi(text):
+    """Wrap kanji in <ruby>…<rt>reading</rt></ruby> using pykakasi."""
+    if not HAS_KAKASI:
+        return text
+    out = []
+    for tok in _kks.convert(text):
+        orig, hira = tok["orig"], tok["hira"]
+        if orig == hira or not hira:
+            out.append(orig)
+            continue
+        if _KANJI_RE.search(orig) and not _KANJI_RE.search(hira):
+            out.append(f"<ruby>{orig}<rt>{hira}</rt></ruby>")
+        else:
+            out.append(orig)
+    return "".join(out)
+
+
+def add_furigana(text):
+    """Convert nadeshiko-style 漢字(かな) to ruby, then add readings to
+    remaining kanji via pykakasi. Falls back to plain text if unavailable."""
+    if not HAS_KAKASI:
+        return text
+    if not _KANJI_RE.search(text):
+        return text
+
+    # collect all override-phrase / inline-annotation matches
+    matches = []
+    for phrase, reading in _READING_OVERRIDES:
+        for m in re.finditer(re.escape(phrase), text):
+            matches.append((m.start(), m.end(), "override", phrase, reading))
+    for m in _INLINE.finditer(text):
+        matches.append((m.start(), m.end(), "inline", m.group(1), m.group(2)))
+    matches.sort(key=lambda x: (x[0], -(x[1] - x[0])))
+
+    # drop overlapping (keep earliest start, longest on tie)
+    clean = []
+    for m in matches:
+        if not clean or m[0] >= clean[-1][1]:
+            clean.append(m)
+
+    out = []
+    pos = 0
+    for start, end, kind, kanji, reading in clean:
+        out.append(_furi(text[pos:start]))
+        out.append(f"<ruby>{kanji}<rt>{reading}</rt></ruby>")
+        pos = end
+    out.append(_furi(text[pos:]))
+    return "".join(out)
 
 
 # ────────────────────────────────────────────── load & validate
@@ -325,7 +400,8 @@ background:var(--card);box-shadow:0 2px 10px rgba(30,40,90,.08);color:var(--sub)
 nav button.on{background:var(--ink);color:#fff}
 .card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;
 box-shadow:0 2px 10px rgba(30,40,90,.06)}
-.jp{font-size:16.5px;line-height:1.7;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.jp{font-size:16.5px;line-height:2;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.jp ruby rt{font-size:.52em;color:var(--sub)}
 .cn{font-size:13.5px;color:var(--sub);margin-top:3px}
 .row{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line)}
 .row:last-child{border-bottom:none}
@@ -413,7 +489,8 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 .nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .nade-card .nade-media{font-weight:700;color:#5e35b1;font-size:13px}
 .nade-card .nade-ep{font-size:11.5px;color:var(--sub)}
-.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:15px;line-height:1.7}
+.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:15px;line-height:2}
+.nade-card .nade-jp ruby rt{font-size:.52em;color:var(--sub)}
 .nade-card .nade-en{font-size:12.5px;color:var(--sub);margin-top:3px;font-style:italic}
 .nade-card .nade-cn{font-size:13px;color:var(--ink);margin-top:2px}
 .nade-card .nade-row{display:flex;gap:10px;align-items:flex-start}
@@ -919,13 +996,23 @@ def main():
     raw = json.loads(DATA.read_text(encoding="utf-8"))
     etymology = raw.get("etymology", {})
 
+    # display copy with furigana ruby (TTS audio keeps plain text)
+    display = copy.deepcopy(items)
+    if HAS_KAKASI:
+        for it in display:
+            for ex in it.get("examples", []):
+                ex["jp"] = add_furigana(ex["jp"])
+            for sc in it.get("nadeshiko", []):
+                sc["jp"] = add_furigana(sc["jp"])
+        print(f"      furigana: applied to {sum(len(it.get('examples', [])) + len(it.get('nadeshiko', [])) for it in display)} sentences")
+
     print("[4/4] rendering template...")
     html = (TEMPLATE
             .replace("__TAGS__", tags)
             .replace("__AUDIO__", j(audio))
             .replace("__NADE_AUDIO__", j(nade_audio))
             .replace("__GROUPS__", j(groups))
-            .replace("__ITEMS__", j(items))
+            .replace("__ITEMS__", j(display))
             .replace("__BANKS__", j(banks_meta))
             .replace("__QS__", j(qs))
             .replace("__ETYMOLOGY__", j(etymology)))
