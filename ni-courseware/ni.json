@@ -8,41 +8,11 @@
     "voiceMale": "ja-JP-KeitaNeural"
   },
   "groups": [
-    {
-      "id": "suru",
-      "name": "する系 · 处理/认定",
-      "color": "#e74c3c",
-      "emoji": "⚙️",
-      "note": "に locks reality into place, する handles or evaluates that reality."
-    },
-    {
-      "id": "yoru",
-      "name": "よる系 · 来源/依据",
-      "color": "#3498db",
-      "emoji": "🧭",
-      "note": "に establishes the source, よる traces the logical pathway out of it."
-    },
-    {
-      "id": "vector",
-      "name": "時空向量系 · 时间/空间定位",
-      "color": "#2ecc71",
-      "emoji": "📍",
-      "note": "に anchors a heavy situational milestone, verb orients time or spatial posture."
-    },
-    {
-      "id": "relate",
-      "name": "関連系 · 对象/关系",
-      "color": "#9b59b6",
-      "emoji": "🔗",
-      "note": "に pins down the object, verb establishes the vector of attention toward it."
-    },
-    {
-      "id": "progress",
-      "name": "推移系 · 进展/对比",
-      "color": "#f39c12",
-      "emoji": "↔️",
-      "note": "に fixes a fluid parameter or expected baseline, verb coordinates the reaction."
-    }
+    { "id": "suru", "name": "する系 · 处理/认定", "color": "#e74c3c", "emoji": "⚙️", "note": "に locks reality into place, する handles or evaluates that reality." },
+    { "id": "yoru", "name": "よる系 · 来源/依据", "color": "#3498db", "emoji": "🧭", "note": "に establishes the source, よる traces the logical pathway out of it." },
+    { "id": "vector", "name": "時空向量系 · 时间/空间定位", "color": "#2ecc71", "emoji": "📍", "note": "に anchors a heavy situational milestone, verb orients time or spatial posture." },
+    { "id": "relate", "name": "関連系 · 对象/关系", "color": "#9b59b6", "emoji": "🔗", "note": "に pins down the object, verb establishes the vector of attention toward it." },
+    { "id": "progress", "name": "推移系 · 进展/对比", "color": "#f39c12", "emoji": "↔️", "note": "に fixes a fluid parameter or expected baseline, verb coordinates the reaction." }
   ],
   "items": [
     {
@@ -56,8 +26,13 @@
       "blueprint": "将一个选项锁定为已选定的现实",
       "meaning": "决定做…；选择…",
       "examples": [
-        { "jp": "これにする。", "cn": "就选这个了。" },
-        { "jp": "blacklist ではなく白にする。", "cn": "不选黑色，选白色。" }
+        { "jp": "これにする。", "cn": "就选这个了。", "src": "moji" },
+        { "jp": "blacklist ではなく白にする。", "cn": "不选黑色，选白色。", "src": "moji" },
+        { "jp": "午餐にカレーにする。", "cn": "午饭选咖喱。", "src": "moji" },
+        { "jp": "来年の目標に日本語の勉強にする。", "cn": "明年的目标定为学日语。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "さあ きつねにする? 天ぷらにする?", "en": "So, which do you want with the udon, fried tofu or tempura?", "cn": "选狐狸还是天妇罗？", "media": "March comes in like a lion Season 2", "ep": "EP20", "at": "17:20", "url": "https://nadeshiko.co/en/sentence/hfVfNMG2Mp2P", "audio": "https://cdn.nadeshiko.co/media/98478/20/96c7378f37.mp3", "thumb": "https://cdn.nadeshiko.co/media/98478/20/96c7378f37.webp" }
       ],
       "note": "最基础的「に＋する」组合，表示主观决定。に把选项固化为事实，する执行「敲定」。",
       "quizzes": []
@@ -73,8 +48,13 @@
       "blueprint": "设定一个不可动摇的事实基线，但引入一个完全违反该基线预期的分句",
       "meaning": "就…而言却…；虽然说是…但是…",
       "examples": [
-        { "jp": "初めて作ったにしては上手だ。", "cn": "就第一次做来说，做得挺好了。" },
-        { "jp": "子供にしてはよく考えてるね。", "cn": "就一个孩子来说，想得挺周到的。" }
+        { "jp": "初めて作ったにしては上手だ。", "cn": "就第一次做来说，做得挺好了。", "src": "moji" },
+        { "jp": "子供にしてはよく考えてるね。", "cn": "就一个孩子来说，想得挺周到的。", "src": "moji" },
+        { "jp": "彼は初心者にしてはプロ並みだ。", "cn": "他虽然是初学者，却有专业水准。", "src": "moji" },
+        { "jp": "この料理は安いにしては美味しい。", "cn": "这道菜虽然便宜却很好吃。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "にしては オシャすぎるキューティクル", "en": "But your cuticles are way too glam.", "cn": "你的指甲角质层也太讲究了。", "media": "BLUE LOCK", "ep": "EP20", "at": "2:48", "url": "https://nadeshiko.co/en/sentence/FCxBYWTTGOLn", "audio": "https://cdn.nadeshiko.co/media/137822/20/3a602aaaa2.mp3", "thumb": "https://cdn.nadeshiko.co/media/137822/20/3a602aaaa2.webp" }
       ],
       "note": "は标记对比：事实基线已锁定（に＋して），后半句出现「意料之外」的评价。",
       "quizzes": []
@@ -90,8 +70,13 @@
       "blueprint": "完全承认一个事实为真，但声明结论不变",
       "meaning": "即使就算…也…；退一步说…也…",
       "examples": [
-        { "jp": "冗談にしても、ほどがある。", "cn": "就算是开玩笑，也该有个限度。" },
-        { "jp": "仮に失败にしたところで、やるしかない。", "cn": "即使失败了，也只能做。" }
+        { "jp": "冗談にしても、ほどがある。", "cn": "就算是开玩笑，也该有个限度。", "src": "moji" },
+        { "jp": "仮に失败にしたところで、やるしかない。", "cn": "即使失败了，也只能做。", "src": "moji" },
+        { "jp": " criminal にしても、kinson にしても、同じだ。", "cn": "不管是犯罪还是过失，都一样。", "src": "moji" },
+        { "jp": "高いにしても、品質が良ければ買う。", "cn": "即使贵，如果质量好也会买。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "働くにしても 暮らすにしても", "en": "Either to work, or to live in.", "cn": "不管是工作还是生活。", "media": "Eureka Seven", "ep": "EP26", "at": "3:31", "url": "https://nadeshiko.co/en/sentence/ZEJogPQ_GgnB", "audio": "https://cdn.nadeshiko.co/media/237/26/b6a0545373.mp3", "thumb": "https://cdn.nadeshiko.co/media/237/26/b6a0545373.webp" }
       ],
       "note": "にしろ/にせよ是古典命令形，语气更强硬，常见于书面语和正式场合。",
       "quizzes": []
@@ -107,8 +92,13 @@
       "blueprint": "将依赖关系追溯到一个确定的信息来源",
       "meaning": "根据…；据…说",
       "examples": [
-        { "jp": "天気予報によると雨だ。", "cn": "据天气预报说会下雨。" },
-        { "jp": "友達によれば、あの店は安いらしい。", "cn": "据朋友说那家店很便宜。" }
+        { "jp": "天気予報によると雨だ。", "cn": "据天气预报说会下雨。", "src": "moji" },
+        { "jp": "友達によれば、あの店は安いらしい。", "cn": "据朋友说那家店很便宜。", "src": "moji" },
+        { "jp": "新聞によると、来年値上げするそうだ。", "cn": "据报纸说明年要涨价。", "src": "moji" },
+        { "jp": "先生によれば、この試験は易しいとのことだ。", "cn": "据老师说这个考试很简单。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "このレポートによると...", "en": "According to this report...", "cn": "据这份报告……", "media": "Grand Blue Dreaming Season 2", "ep": "EP7", "at": "5:31", "url": "https://nadeshiko.co/en/sentence/u-Q41aUrM5kv", "audio": "https://cdn.nadeshiko.co/media/182309/7/a2103e602a.mp3", "thumb": "https://cdn.nadeshiko.co/media/182309/7/a2103e602a.webp" }
       ],
       "note": "によると比によれば更口语。信息来源必须是名词短语。",
       "quizzes": []
@@ -124,8 +114,13 @@
       "blueprint": "将一个确定的参数或施事者声明为方法、原因或变化的通用引擎",
       "meaning": "因…而异；通过…；由于…",
       "examples": [
-        { "jp": "人によって考えが違う。", "cn": "因人而异，想法不同。" },
-        { "jp": "この本は翻訳によって意味が変わる。", "cn": "这本书因翻译不同，意思也会变。" }
+        { "jp": "人によって考えが違う。", "cn": "因人而异，想法不同。", "src": "moji" },
+        { "jp": "この本は翻訳によって意味が変わる。", "cn": "这本书因翻译不同，意思也会变。", "src": "moji" },
+        { "jp": "国によって文化が違う。", "cn": "因国家不同，文化也不同。", "src": "moji" },
+        { "jp": "薬によって副作用が出る場合がある。", "cn": "有些药物会产生副作用。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "環境によって そして出会いによって 人は無限に変わってゆく。", "en": "People change all the time, shaped by those around them and where they are.", "cn": "人会因环境和相遇而不断改变。", "media": "There's No Freaking Way I'll Be Your Lover!", "ep": "EP12", "at": "18:24", "url": "https://nadeshiko.co/en/sentence/nNuATlLkS79U", "audio": "https://cdn.nadeshiko.co/media/184591/12/55139609d3.mp3", "thumb": "https://cdn.nadeshiko.co/media/184591/12/55139609d3.webp" }
       ],
       "note": "によって有三大义：①因…而异 ②通过…手段 ③由…所做。需根据语境区分。",
       "quizzes": []
@@ -141,8 +136,13 @@
       "blueprint": "将一个正式的、预定的场合设立为即时的临界点",
       "meaning": "在…之际；当…之时",
       "examples": [
-        { "jp": "受験に際しての注意点。", "cn": "参加考试时的注意事项。" },
-        { "jp": "ご入学に際して、お祝い申し上げます。", "cn": "值此入学之际，谨致祝贺。" }
+        { "jp": "受験に際しての注意点。", "cn": "参加考试时的注意事项。", "src": "moji" },
+        { "jp": "ご入学に際して、お祝い申し上げます。", "cn": "值此入学之际，谨致祝贺。", "src": "moji" },
+        { "jp": "卒業に際して、先生方に感謝する。", "cn": "在毕业之际，感谢老师们。", "src": "moji" },
+        { "jp": "出国に際して、検査を受けなければならない。", "cn": "出境时必须接受检查。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "その作戦に際して...", "en": "Regarding the plan...", "cn": "关于那个作战计划……", "media": "Solo Leveling Season 2", "ep": "EP8", "at": "17:47", "url": "https://nadeshiko.co/en/sentence/-Sb0U9Kqj6Wh", "audio": "https://cdn.nadeshiko.co/media/176496/8/0c81e03337.mp3", "thumb": "https://cdn.nadeshiko.co/media/176496/8/0c81e03337.webp" }
       ],
       "note": "比「時」更正式书面。强调「正值那个节点」的临场感。常用于公告、致辞。",
       "quizzes": []
@@ -158,8 +158,13 @@
       "blueprint": "正面迎上一个重大的、已实现的人生里程碑",
       "meaning": "在…的时候；在…之际（强调主动面对）",
       "examples": [
-        { "jp": "新生活を始めるにあたって…", "cn": "在开始新生活之际…" },
-        { "jp": "留学にあたって必要な手続き。", "cn": "留学时需要的手续。" }
+        { "jp": "新生活を始めるにあたって…", "cn": "在开始新生活之际…", "src": "moji" },
+        { "jp": "留学にあたって必要な手続き。", "cn": "留学时需要的手续。", "src": "moji" },
+        { "jp": "この企画にあたって、_team で相談した。", "cn": "在启动这个计划时，和团队商量了。", "src": "moji" },
+        { "jp": "結婚にあたって、双方の父母に挨拶した。", "cn": "在结婚之际，向双方父母打了招呼。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "メディアミックスをするにあたって", "en": "When it comes to media franchising,", "cn": "在进行媒体联动的时候，", "media": "Oshi no Ko Season 2", "ep": "EP2", "at": "13:24", "url": "https://nadeshiko.co/en/sentence/AM2GUq4XfBGi", "audio": "https://cdn.nadeshiko.co/media/166531/2/a1483a3e6d.mp3", "thumb": "https://cdn.nadeshiko.co/media/166531/2/a1483a3e6d.webp" }
       ],
       "note": "比に際して更强调主观能动性——「我要正面迎上这件事」。常搭配准备、决心。",
       "quizzes": []
@@ -175,8 +180,13 @@
       "blueprint": "将一个动作在时间上精确定位于一个已锁定事件的正前方",
       "meaning": "在…之前；先于…",
       "examples": [
-        { "jp": "開店に先立ってセレモニーを行う。", "cn": "在开店之前举行典礼。" },
-        { "jp": "本番に先立ってリハーサルを行う。", "cn": "在正式开始之前进行彩排。" }
+        { "jp": "開店に先立ってセレモニーを行う。", "cn": "在开店之前举行典礼。", "src": "moji" },
+        { "jp": "本番に先立ってリハーサルを行う。", "cn": "在正式开始之前进行彩排。", "src": "moji" },
+        { "jp": "会議に先立って資料を配った。", "cn": "在会议之前分发了资料。", "src": "moji" },
+        { "jp": "発売に先立って試作品を作成した。", "cn": "在发售之前制作了试制品。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "再測定に先立って", "en": "Before we begin the reassessment,", "cn": "在重新测定之前，", "media": "Solo Leveling Season 2", "ep": "EP7", "at": "5:44", "url": "https://nadeshiko.co/en/sentence/dCHpVRg1RaL9", "audio": "https://cdn.nadeshiko.co/media/176496/7/9d47589dc4.mp3", "thumb": "https://cdn.nadeshiko.co/media/176496/7/9d47589dc4.webp" }
       ],
       "note": "强调时间上的先行性。正式用语，常见于新闻、公告。",
       "quizzes": []
@@ -192,8 +202,13 @@
       "blueprint": "宣告一个人或事物完全处于一个已确立的、强烈现实或时代的重压之下",
       "meaning": "身处…之中；处于…的情况下",
       "examples": [
-        { "jp": "不況のさなかにあって、その企業は成長した。", "cn": "身处严重经济衰退之中，那家企业却实现了增长。" },
-        { "jp": "戦時下にあっても、研究は続いた。", "cn": "即使身处战时，研究仍在继续。" }
+        { "jp": "不況のさなかにあって、その企業は成長した。", "cn": "身处严重经济衰退之中，那家企业却实现了增长。", "src": "moji" },
+        { "jp": "戦時下にあっても、研究は続いた。", "cn": "即使身处战时，研究仍在继续。", "src": "moji" },
+        { "jp": "困難な状況にあっても、諦めない。", "cn": "即使身处困境，也不放弃。", "src": "moji" },
+        { "jp": "変化の時代にあって、企業は柔軟であるべきだ。", "cn": "身处变革时代，企业应当灵活应对。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "どれだけ遠くにあっても どんな場所にあっても", "en": "No matter how far away it was... No matter where it was...", "cn": "不管有多远……不管在什么地方……", "media": "The Girl Who Leapt Through Time", "ep": "EP1", "at": "1:08:38", "url": "https://nadeshiko.co/en/sentence/YfTP1S3LVrry", "audio": "https://cdn.nadeshiko.co/media/2236/1/87edf312ca.mp3", "thumb": "https://cdn.nadeshiko.co/media/2236/1/87edf312ca.webp" }
       ],
       "note": "古典あり的te形。比にいて更书面、更沉重。强调「被裹挟在巨大洪流中」。",
       "quizzes": []
@@ -209,8 +224,13 @@
       "blueprint": "锁定一个目标并紧贴不放，注意力不游移",
       "meaning": "关于…；就…",
       "examples": [
-        { "jp": "日本の経済について調べる。", "cn": "调查关于日本经济的情况。" },
-        { "jp": "この件について説明してください。", "cn": "请就这件事进行说明。" }
+        { "jp": "日本の経済について調べる。", "cn": "调查关于日本经济的情况。", "src": "moji" },
+        { "jp": "この件について説明してください。", "cn": "请就这件事进行说明。", "src": "moji" },
+        { "jp": "日本語の敬語について学んだ。", "cn": "学习了关于日语敬语的知识。", "src": "moji" },
+        { "jp": "環境問題について考えなければならない。", "cn": "必须思考环境问题。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "レガリアについて話を聞きに来た", "en": "I came to ask you about the regalia.", "cn": "我来打听关于王权之力的事。", "media": "DEMON LORD 2099", "ep": "EP10", "at": "14:30", "url": "https://nadeshiko.co/en/sentence/zYS23xL8xFK0", "audio": "https://cdn.nadeshiko.co/media/163135/10/c1ef16200c.mp3", "thumb": "https://cdn.nadeshiko.co/media/163135/10/c1ef16200c.webp" }
       ],
       "note": "最常见的「关于」表达。关于的对象用に标记，动作用其他动词执行。",
       "quizzes": []
@@ -226,8 +246,13 @@
       "blueprint": "陈述一个事实并追溯从它辐射出去的关系网络",
       "meaning": "关于…；与…相关",
       "examples": [
-        { "jp": "この件に関して質問はありますか。", "cn": "关于这件事有什么问题吗？" },
-        { "jp": "環境問題に関して積極的に取り組んでいる。", "cn": "在环境问题方面积极推进。" }
+        { "jp": "この件に関して質問はありますか。", "cn": "关于这件事有什么问题吗？", "src": "moji" },
+        { "jp": "環境問題に関して積極的に取り組んでいる。", "cn": "在环境问题方面积极推进。", "src": "moji" },
+        { "jp": "健康に関して、最近ちょっと気をつけてる。", "cn": "关于健康，最近稍微注意了一下。", "src": "moji" },
+        { "jp": "この件に関して、まだ決まっていない。", "cn": "关于这件事，还没有决定。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "デザートに関しては見習いです", "en": "I'm still an intern when it comes to desserts.", "cn": "在甜点方面我还只是个学徒。", "media": "Fermat Kitchen", "ep": "EP10", "at": "6:38", "url": "https://nadeshiko.co/en/sentence/BaGn2zqapdez", "audio": "https://cdn.nadeshiko.co/media/186003/10/fdc110b857.mp3", "thumb": "https://cdn.nadeshiko.co/media/186003/10/fdc110b857.webp" }
       ],
       "note": "比について更正式。可做连词（名词＋に関して）也可做副词。",
       "quizzes": []
@@ -243,8 +268,13 @@
       "blueprint": "设立一个具体的接收者或对比墙，将动作直接投射向它",
       "meaning": "对…；向…；与…相反",
       "examples": [
-        { "jp": "お客様に対して失礼だ。", "cn": "对顾客失礼了。" },
-        { "jp": "兄は穏やかだが、弟に対しては厳しい。", "cn": "哥哥性格温和，但对弟弟很严格。" }
+        { "jp": "お客様に対して失礼だ。", "cn": "对顾客失礼了。", "src": "moji" },
+        { "jp": "兄は穏やかだが、弟に対しては厳しい。", "cn": "哥哥性格温和，但对弟弟很严格。", "src": "moji" },
+        { "jp": "外国人に対して丁寧に話す。", "cn": "对外国人礼貌地说话。", "src": "moji" },
+        { "jp": "親に対して感謝の気持ちを伝えた。", "cn": "向父母传达了感恩之情。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "あかねくんに対して なれなれしい!", "en": "You are behaving too familiarly with Akane.", "cn": "你对茜太放肆了！", "media": "Ranma1/2 (2024)", "ep": "EP2", "at": "7:35", "url": "https://nadeshiko.co/en/sentence/ijh1SXvuXIAz", "audio": "https://cdn.nadeshiko.co/media/178533/2/29bf7d6874.mp3", "thumb": "https://cdn.nadeshiko.co/media/178533/2/29bf7d6874.webp" }
       ],
       "note": "两大义：①动作的承受对象（向…）②对比/相反（与…相对）。需区分。",
       "quizzes": []
@@ -260,8 +290,13 @@
       "blueprint": "将B分句绑在已确立的、正在运动的A事实的尾流上",
       "meaning": "随着…；跟着…",
       "examples": [
-        { "jp": "時間が経つにつれて忘れる。", "cn": "随着时间流逝，渐渐忘记了。" },
-        { "jp": "人口が増えるにつれて、問題も増えた。", "cn": "随着人口增加，问题也增多了。" }
+        { "jp": "時間が経つにつれて忘れる。", "cn": "随着时间流逝，渐渐忘记了。", "src": "moji" },
+        { "jp": "人口が増えるにつれて、問題も増えた。", "cn": "随着人口增加，问题也增多了。", "src": "moji" },
+        { "jp": "技術が進歩するにつれて、生活が便利になった。", "cn": "随着技术进步，生活变得便利了。", "src": "moji" },
+        { "jp": "季節が移るにつれて、景色が変わる。", "cn": "随着季节变换，景色也在变化。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "時代が下るにつれて", "en": "But as more time passed,", "cn": "但随着时间推移，", "media": "T・P BON", "ep": "EP16", "at": "24:15", "url": "https://nadeshiko.co/en/sentence/shES2intv97m", "audio": "https://cdn.nadeshiko.co/media/169930/16/8baf3a1688.mp3", "thumb": "https://cdn.nadeshiko.co/media/169930/16/8baf3a1688.webp" }
       ],
       "note": "强调渐进的、同步的变化。A和B的变化方向一致。",
       "quizzes": []
@@ -277,8 +312,13 @@
       "blueprint": "将一个发展中的事实或明确指令视为必须严格遵循的轨道",
       "meaning": "按照…；随着…（遵从规则）",
       "examples": [
-        { "jp": "命令に従って行動する。", "cn": "按照命令行动。" },
-        { "jp": "高度が上がるにつれて（＝に従って）、気温が下がる。", "cn": "随着高度上升，气温下降。" }
+        { "jp": "命令に従って行動する。", "cn": "按照命令行动。", "src": "moji" },
+        { "jp": "高度が上がるにつれて（＝に従って）、気温が下がる。", "cn": "随着高度上升，气温下降。", "src": "moji" },
+        { "jp": "説明に従って、器具を組み立てた。", "cn": "按照说明组装了器具。", "src": "moji" },
+        { "jp": "年龄に従って、責任も重くなる。", "cn": "随着年龄增长，责任也变重了。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "ルールに従ってください!", "en": "Then please follow the school rules!", "cn": "请遵守校规！", "media": "Mobile Suit Gundam: The Witch from Mercury Season 2", "ep": "EP1", "at": "20:37", "url": "https://nadeshiko.co/en/sentence/_KQTiAlnOlGg", "audio": "https://cdn.nadeshiko.co/media/155158/1/71e654e2c8.mp3", "thumb": "https://cdn.nadeshiko.co/media/155158/1/71e654e2c8.webp" }
       ],
       "note": "双重含义：①遵从规则/命令 ②随着变化（比につれて更强调「遵循规律」）。",
       "quizzes": []
@@ -294,8 +334,13 @@
       "blueprint": "两个巨大的社会或自然事实手挽手作为已确立的打包套餐同行",
       "meaning": "随着…；伴随…",
       "examples": [
-        { "jp": "人口減少に伴って、労働力が不足する。", "cn": "随着人口减少，劳动力不足。" },
-        { "jp": "技術の進歩にともなって、生活が便利になった。", "cn": "随着技术进步，生活变得便利了。" }
+        { "jp": "人口減少に伴って、労働力が不足する。", "cn": "随着人口减少，劳动力不足。", "src": "moji" },
+        { "jp": "技術の進歩にともなって、生活が便利になった。", "cn": "随着技术进步，生活变得便利了。", "src": "moji" },
+        { "jp": "経済の成長にともなって、環境問題も深刻化した。", "cn": "随着经济增长，环境问题也日益严重。", "src": "moji" },
+        { "jp": "laws の改正に伴って、制度が変わった。", "cn": "随着法律修订，制度也变了。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "訓練内容の一新に伴って", "en": "With your new training regimen,", "cn": "随着训练内容的更新，", "media": "Assassination Classroom", "ep": "EP13", "at": "6:01", "url": "https://nadeshiko.co/en/sentence/qJz578YOWApH", "audio": "https://cdn.nadeshiko.co/media/20755/13/64f0ec4952.mp3", "thumb": "https://cdn.nadeshiko.co/media/20755/13/64f0ec4952.webp" }
       ],
       "note": "比につれて更书面、更强调因果关联。两件事「捆绑」在一起发生。",
       "quizzes": []
@@ -311,8 +356,13 @@
       "blueprint": "设立一个确定的预测或愿望，然后向完全相反的方向射出一支箭",
       "meaning": "与…相反；出乎…",
       "examples": [
-        { "jp": "予想に反してテストは簡単だった。", "cn": "与预想相反，考试很简单。" },
-        { "jp": "親の期待に反して、彼は芸術家になった。", "cn": "违背父母期望，他成了艺术家。" }
+        { "jp": "予想に反してテストは簡単だった。", "cn": "与预想相反，考试很简单。", "src": "moji" },
+        { "jp": "親の期待に反して、彼は芸術家になった。", "cn": "违背父母期望，他成了艺术家。", "src": "moji" },
+        { "jp": "天気予報に反して、今日は晴れた。", "cn": "和天气预报相反，今天放晴了。", "src": "moji" },
+        { "jp": "彼女の态度に反して、実は優しい。", "cn": "和她的态度相反，其实她很温柔。", "src": "moji" }
+      ],
+      "nadeshiko": [
+        { "jp": "職業倫理に反しているんですが", "en": "Well, it's against the ethics of the profession,", "cn": "这违反了职业伦理……", "media": "The Irregular at Magic High School", "ep": "EP18", "at": "2:29", "url": "https://nadeshiko.co/en/sentence/KyBrKC43SqVN", "audio": "https://cdn.nadeshiko.co/media/20458/18/9891bd94af.mp3", "thumb": "https://cdn.nadeshiko.co/media/20458/18/9891bd94af.webp" }
       ],
       "note": "反する的te形。预期 vs 现实形成强烈反差。常搭配期待、予想。",
       "quizzes": []

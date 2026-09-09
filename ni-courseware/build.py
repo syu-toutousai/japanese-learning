@@ -355,6 +355,22 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 .fin .big{font-size:44px;font-weight:800;color:var(--acc)}
 .hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
 code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em}
+/* source chips */
+.src{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;margin-left:6px;vertical-align:middle}
+.src-moji{background:#e8f5e9;color:#2e7d32}
+.src-nade{background:#ede7f6;color:#5e35b1}
+/* nadeshiko scene */
+.nade-card{background:#faf5ff;border:1px solid #e0d0f0;border-radius:12px;padding:12px;margin:10px 0}
+.nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.nade-card .nade-media{font-weight:700;color:#5e35b1;font-size:13px}
+.nade-card .nade-ep{font-size:11.5px;color:var(--sub)}
+.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:15px;line-height:1.7}
+.nade-card .nade-en{font-size:12.5px;color:var(--sub);margin-top:3px;font-style:italic}
+.nade-card .nade-cn{font-size:13px;color:var(--ink);margin-top:2px}
+.nade-card .nade-row{display:flex;gap:10px;align-items:flex-start}
+.nade-card .nade-thumb{width:80px;height:50px;border-radius:8px;object-fit:cover;flex:none}
+.nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
+.nade-card a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -391,7 +407,22 @@ function play(id,btn){
 }
 function rowHTML(sid,s){
   const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
-  return `<div class="row">${b}<div><div class="jp">${s.jp}</div><div class="cn">${s.cn}</div></div></div>`;
+  const chip=s.src==="nadeshiko"?`<span class="src src-nade">Nadeshiko</span>`:`<span class="src src-moji">MOJi</span>`;
+  return `<div class="row">${b}<div><div class="jp">${s.jp}${chip}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function nadeHTML(sc){
+  return `<div class="nade-card">
+    <div class="nade-hdr"><span class="src src-nade">Nadeshiko</span>
+      <span class="nade-media">${sc.media}</span><span class="nade-ep">${sc.ep} @ ${sc.at}</span></div>
+    <div class="nade-row">
+      <img class="nade-thumb" src="${sc.thumb}" alt="" onerror="this.style.display='none'">
+      <div>
+        <div class="nade-jp">${sc.jp}</div>
+        <div class="nade-en">${sc.en}</div>
+        <div class="nade-cn">${sc.cn}</div>
+        <a href="${sc.url}" target="_blank">nadeshiko.co ↗</a>
+      </div>
+    </div></div>`;
 }
 
 /* ---------- tabs ---------- */
@@ -459,6 +490,7 @@ function renderDetail(){
         <div class="meanbox">📌 <b>意思</b>　${n.meaning}</div>
         <h3 class="sec">例句</h3>
         ${(n.examples||[]).map((ex,i)=>rowHTML(`${iid}-e${i}`,ex)).join("")}
+        ${(n.nadeshiko||[]).map(sc=>nadeHTML(sc)).join("")}
         ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
       </div>`;
     });
@@ -521,8 +553,9 @@ function renderContrast(){
 
 /* ---------- sentences ---------- */
 function renderSentences(){
-  let h=`<div class="card intro"><h2>例文集 · 全部配有TTS发音</h2>
-  <p>点击 ▶ 听发音。每个语法点的例句来自不同场景，帮助理解实际用法。</p></div>`;
+  let h=`<div class="card intro"><h2>例文集 · MOJi + Nadeshiko 双源</h2>
+  <p>点击 ▶ 听TTS发音。<span class="src src-moji">MOJi</span> = 教科书例句，
+  <span class="src src-nade">Nadeshiko</span> = 真实动漫/日剧台词。</p></div>`;
   GROUPS.forEach(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
     if(!members.length)return;
@@ -533,6 +566,9 @@ function renderSentences(){
         <div style="font-weight:700;color:${g.color};margin-bottom:6px">${n.emoji} ${n.word} <small style="color:var(--sub)">${n.level}</small></div>`;
       (n.examples||[]).forEach((ex,i)=>{
         h+=rowHTML(`${iid}-e${i}`,ex);
+      });
+      (n.nadeshiko||[]).forEach(sc=>{
+        h+=nadeHTML(sc);
       });
       h+=`</div>`;
     });
@@ -667,8 +703,10 @@ def main():
     audio = gen_audio(items)
     qs = build_questions(groups, items, audio)
 
+    n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
+    n_ex = sum(len(it.get("examples", [])) for it in items)
     tags = (f"<span>{n_total} 语法点</span><span>{level_str}</span>"
-            f"<span>{len(audio)} 音声</span><span>5 Group Hub-and-Spoke</span>")
+            f"<span>{n_ex} 例句 + {n_nade} 原声</span><span>MOJi + Nadeshiko</span>")
     banks_meta = [[k, l] for k, l in meta.get("quizBanks", [
         ["recog", "📘 语法认识"], ["engine", "🔧 Engine拆解"],
         ["fill", "✍️ 运用填空"], ["listen", "🎧 聴解判别"],
