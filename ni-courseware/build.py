@@ -6,6 +6,8 @@
 
 音频：edge-tts 日语神经网络语音（ja-JP-Nanami），按文本哈希缓存到 audio/，
 改了句子会自动重录；某条合成失败只跳过该条发音，不影响整体构建。
+
+Nadeshiko 音频：从 CDN 下载并嵌入 base64，实现离线播放。
 """
 
 import base64
@@ -14,6 +16,7 @@ import json
 import random
 import subprocess
 import sys
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -148,6 +151,52 @@ def gen_audio(items):
     return audio
 
 
+# ────────────────────────────────────────────── nadeshiko audio
+
+NADE_CACHE = ROOT / "nade_audio"
+
+def download_nade_audio(url, logical_id):
+    """Download a Nadeshiko CDN mp3 and return base64 data URI."""
+    NADE_CACHE.mkdir(exist_ok=True)
+    h = hashlib.sha1(url.encode()).hexdigest()[:10]
+    path = NADE_CACHE / f"{logical_id}-{h}.mp3"
+    if path.exists() and path.stat().st_size > 500:
+        return "data:audio/mpeg;base64," + base64.b64encode(path.read_bytes()).decode()
+    for _ in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = resp.read()
+            if len(data) > 500:
+                path.write_bytes(data)
+                return "data:audio/mpeg;base64," + base64.b64encode(data).decode()
+        except Exception:
+            pass
+    return None
+
+
+def gen_nade_audio(items):
+    tasks = []
+    for it in items:
+        for i, sc in enumerate(it.get("nadeshiko") or []):
+            if sc.get("audio"):
+                tasks.append((f"{it['id']}-n{i}", sc["audio"]))
+
+    print(f"  nade: {len(tasks)} clips to download...")
+    nade_audio = {}
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        results = {}
+        for lid, url in tasks:
+            results[lid] = ex.submit(download_nade_audio, url, lid)
+        for lid, fut in results.items():
+            data = fut.result()
+            if data:
+                nade_audio[lid] = data
+    downloaded = len(nade_audio)
+    print(f"  nade: {downloaded}/{len(tasks)} clips cached")
+    return nade_audio
+
+
 # ────────────────────────────────────────────── auto quizzes
 
 def build_questions(groups, items, audio):
@@ -219,30 +268,30 @@ def build_questions(groups, items, audio):
                 opts=opts, ans=0,
                 exp=f'原句：{exs[0]["jp"]}<br>{exs[0]["cn"]}')
 
-        # ⭕ 判断正误
+        # ⭕ 判断正誤
         add("judge", f"{iid}:judge-jp", type="judge",
-            q=f"「{it['word']}」的 engine 是：{it['engine']}",
+            q=f"「{it['word']}」の engine は：{it['engine']}",
             ans=True,
-            exp=f'正确！{it["blueprint"]}')
+            exp=f'正解！{it["blueprint"]}')
 
     # 额外的判断题
     extra_judges = [
-        ('「〜にしては」表示「即使…也…」。', False,
-         '错误。にしては = 「就…而言却…」。表示「即使…也…」的是にしても。'),
-        ('「〜によって」可以表示「因…而异」。', True,
-         '正确。によって三大义之一就是「因人而异」。'),
-        ('「〜に先立って」比「〜に際して」更正式书面。', False,
-         '错误。に際して更正式书面，常用于公告致辞。'),
-        ('「〜に反して」常搭配期待、予想。', True,
-         '正确。反して = 预期 vs 现实形成反差。'),
-        ('「〜につれて」和「〜にともなって」完全相同。', False,
-         '错误。にともなって更书面，更强调因果捆绑。'),
-        ('「〜に対して」既有「对…」也有「与…相反」的含义。', True,
-         '正确。两大义：①动作承受对象 ②对比/相反。'),
-        ('「〜にあって」的「あって」来自古典动词「ある」。', True,
-         '正确。あって = あり（存在）的te形。'),
-        ('「〜にあたって」比「〜に際して」更强调客观描述。', False,
-         '错误。にあたって更强调主观能动性。'),
+        ('「〜にしては」は「即使…也…」の意味。', False,
+         '間違い。にしては＝「就…而言却…」。表示「即使…也…」的是にしても。'),
+        ('「〜によって」は「因…而異」の意味がある。', True,
+         '正解。によって三大义之一就是「因人而异」。'),
+        ('「〜に先立って」は「〜に際して」より硬い。', False,
+         '間違い。に際して更正式书面，常用于公告致辞。'),
+        ('「〜に反して」は期待・予想をよく使う。', True,
+         '正解。反して＝预期 vs 现实形成反差。'),
+        ('「〜につれて」と「〜にともなって」は完全に同じ。', False,
+         '間違い。にともなって更书面，更强调因果捆绑。'),
+        ('「〜に対して」は「対…」と「…と反対」の両方の意味がある。', True,
+         '正解。两大义：①动作承受对象 ②对比/相反。'),
+        ('「〜にあって」の「あって」は古典の「ある」から来ている。', True,
+         '正解。あって＝あり（存在）のて形。'),
+        ('「〜にあたって」は「〜に際して」より主観的。', True,
+         '正解。にあたって强调主观能动性。'),
     ]
     for i, (q, ans, exp) in enumerate(extra_judges):
         add("judge", f"extra-judge-{i}", type="judge", q=q, ans=ans, exp=exp)
@@ -371,6 +420,48 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 .nade-card .nade-thumb{width:80px;height:50px;border-radius:8px;object-fit:cover;flex:none}
 .nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
 .nade-card a:hover{text-decoration:underline}
+/* etymology */
+.ety-timeline{position:relative;padding:10px 0 10px 28px;margin:12px 0}
+.ety-timeline::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:3px;
+background:linear-gradient(180deg,#2c3e8f,#6a3de8,#b8860b);border-radius:2px}
+.ety-era{position:relative;margin-bottom:14px}
+.ety-era::before{content:'';position:absolute;left:-22px;top:6px;width:12px;height:12px;
+background:var(--acc);border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.ety-era .era-date{font-size:11.5px;color:var(--acc);font-weight:700}
+.ety-era .era-form{font-size:16px;font-weight:800;color:var(--ink);margin:2px 0}
+.ety-era .era-note{font-size:12.5px;color:var(--sub);line-height:1.55}
+.ety-formula{background:linear-gradient(135deg,#fff8e6,#fff3d0);border:1px solid #f0d060;
+border-radius:12px;padding:12px 16px;font-size:16px;font-weight:800;color:#b8860b;
+text-align:center;margin:10px 0;letter-spacing:1px}
+.ety-section{margin:14px 0}
+.ety-section h4{font-size:14.5px;color:var(--acc);margin-bottom:6px}
+.ety-section p{font-size:13.5px;line-height:1.75}
+.ety-inflection{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;margin:8px 0}
+.ety-inflection th{background:var(--acc);color:#fff;padding:8px 10px;text-align:left;font-weight:700}
+.ety-inflection th:first-child{border-radius:10px 0 0 0}
+.ety-inflection th:last-child{border-radius:0 10px 0 0}
+.ety-inflection td{padding:8px 10px;border-bottom:1px solid var(--line)}
+.ety-inflection tr:last-child td:first-child{border-radius:0 0 0 10px}
+.ety-inflection tr:last-child td:last-child{border-radius:0 0 10px 0}
+.ety-inflection .form-col{font-weight:700;color:var(--acc)}
+.ety-inflection .kana-col{font-size:15px;font-weight:800;color:var(--ink)}
+.ety-path{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:10px 0}
+.ety-path-card{background:#f8f9fc;border-radius:12px;padding:12px;border:1px solid var(--line)}
+.ety-path-card .path-from{font-size:12px;color:var(--sub);margin-bottom:4px}
+.ety-path-card .path-via{font-size:11px;color:var(--gold);font-weight:700;margin-bottom:4px}
+.ety-path-card .path-to{font-size:14px;font-weight:800;color:var(--acc);margin-bottom:6px}
+.ety-path-card .path-desc{font-size:12.5px;color:var(--sub);line-height:1.55}
+.ety-diffusion{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:10px 0}
+.ety-diff-item{background:#f8f9fc;border-radius:10px;padding:10px;text-align:center;border:1px solid var(--line)}
+.ety-diff-item .diff-sense{font-weight:700;color:var(--ink);font-size:13px;margin-bottom:4px}
+.ety-diff-item .diff-example{font-size:14px;color:var(--acc);margin-bottom:2px}
+.ety-diff-item .diff-desc{font-size:11.5px;color:var(--sub)}
+.ety-diag{margin:10px 0}
+.ety-diag-row{display:flex;gap:8px;align-items:flex-start;margin:6px 0;padding:8px 10px;
+background:#f8f9fc;border-radius:10px;border-left:3px solid var(--acc)}
+.ety-diag-row .diag-test{font-size:13px;color:var(--ink);flex:1}
+.ety-diag-row .diag-result{font-size:12px;color:var(--acc);font-weight:700;white-space:nowrap}
+.ety-diag-row .diag-example{font-size:12px;color:var(--sub);font-style:italic}
 </style>
 </head>
 <body>
@@ -391,14 +482,16 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 
 <script>
 const AUDIO=__AUDIO__;
+const NADE_AUDIO=__NADE_AUDIO__;
 const GROUPS=__GROUPS__;
 const ITEMS=__ITEMS__;
 const BANKS=__BANKS__;
+const ETYMOLOGY=__ETYMOLOGY__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
 let curAudio=null,curBtn=null;
 function play(id,btn){
-  const src=AUDIO[id];if(!src)return;
+  const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;
   if(curAudio){curAudio.pause();curAudio.currentTime=0;}
   document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
   curAudio=new Audio(src);curBtn=btn||null;
@@ -410,9 +503,13 @@ function rowHTML(sid,s){
   const chip=s.src==="nadeshiko"?`<span class="src src-nade">Nadeshiko</span>`:`<span class="src src-moji">MOJi</span>`;
   return `<div class="row">${b}<div><div class="jp">${s.jp}${chip}</div><div class="cn">${s.cn}</div></div></div>`;
 }
-function nadeHTML(sc){
+function nadeHTML(sc,iid,idx){
+  const nid=`${iid}-n${idx}`;
+  const hasAudio=!!NADE_AUDIO[nid];
+  const playBtn=hasAudio?`<button class="btn" style="width:30px;height:30px;font-size:13px" onclick="play('${nid}',this)">▶</button>`:"";
   return `<div class="nade-card">
     <div class="nade-hdr"><span class="src src-nade">Nadeshiko</span>
+      ${playBtn}
       <span class="nade-media">${sc.media}</span><span class="nade-ep">${sc.ep} @ ${sc.at}</span></div>
     <div class="nade-row">
       <img class="nade-thumb" src="${sc.thumb}" alt="" onerror="this.style.display='none'">
@@ -426,7 +523,7 @@ function nadeHTML(sc){
 }
 
 /* ---------- tabs ---------- */
-const TABS=[["map","🗺️ 体系図"],["detail","📖 詳解"],["contrast","🔍 対比"],["sentences","📝 例文"],["quiz","🎯 クイズ"]];
+const TABS=[["map","🗺️ 体系図"],["history","📜 歴史"],["detail","📖 詳解"],["contrast","🔍 対比"],["sentences","📝 例文"],["quiz","🎯 クイズ"]];
 let tab="map";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -435,14 +532,106 @@ function renderNav(){
 function goTab(k){tab=k;renderNav();render();window.scrollTo(0,0);}
 function goDetail(iid){goTab('detail');setTimeout(()=>{const el=document.getElementById('n-'+iid);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},60);}
 
+/* ---------- etymology / history ---------- */
+function renderHistory(){
+  const E=ETYMOLOGY;
+  let h=`<div class="card intro"><h2>${E.title}</h2>
+  <p style="font-size:13px;color:var(--sub);margin-bottom:4px">${E.subtitle}</p>
+  <p>${E.intro}</p></div>`;
+
+  // Timeline
+  h+=`<div class="card"><h3 style="margin-bottom:8px">📜 時間軸</h3><div class="ety-timeline">`;
+  E.timeline.forEach(t=>{
+    h+=`<div class="ety-era">
+      <div class="era-date">${t.era}</div>
+      <div class="era-form">${t.form}</div>
+      <div class="era-note">${t.note}</div>
+    </div>`;
+  });
+  h+=`</div></div>`;
+
+  // Sections
+  E.sections.forEach(sec=>{
+    h+=`<div class="card"><h3 style="margin-bottom:8px">${sec.title}</h3>`;
+    if(sec.content) h+=`<p>${sec.content}</p>`;
+    if(sec.formula) h+=`<div class="ety-formula">${sec.formula}</div>`;
+
+    // Inflection table
+    if(sec.inflection){
+      h+=`<table class="ety-inflection"><thead><tr>
+        <th>活用形</th><th>形</th><th>接続</th><th>例文</th></tr></thead><tbody>`;
+      sec.inflection.forEach(r=>{
+        h+=`<tr><td class="form-col">${r.form}</td><td class="kana-col">${r.kana}</td>
+          <td>${r.usage}</td><td style="font-family:serif">${r.example}</td></tr>`;
+      });
+      h+=`</tbody></table>`;
+    }
+
+    // Paths
+    if(sec.paths){
+      h+=`<div class="ety-path">`;
+      sec.paths.forEach(p=>{
+        h+=`<div class="ety-path-card">
+          <div class="path-from">${p.from}</div>
+          <div class="path-via">→ ${p.via} →</div>
+          <div class="path-to">${p.to}</div>
+          <div class="path-desc">${p.desc}</div>
+        </div>`;
+      });
+      h+=`</div>`;
+    }
+
+    // Diffusion
+    if(sec.diffusion){
+      h+=`<div class="ety-diffusion">`;
+      sec.diffusion.forEach(d=>{
+        h+=`<div class="ety-diff-item">
+          <div class="diff-sense">${d.sense}</div>
+          <div class="diff-example">${d.example}</div>
+          <div class="diff-desc">${d.desc}</div>
+        </div>`;
+      });
+      h+=`</div>`;
+    }
+
+    // Diagnostic
+    if(sec.diagnostic){
+      h+=`<div class="ety-diag">`;
+      sec.diagnostic.forEach(d=>{
+        h+=`<div class="ety-diag-row">
+          <div class="diag-test">${d.test}</div>
+          <div class="diag-result">${d.result}</div>
+        </div>
+        <div style="font-size:12px;color:var(--sub);margin:-2px 0 6px 18px;font-style:italic">例：${d.example}</div>`;
+      });
+      h+=`</div>`;
+    }
+
+    h+=`</div>`;
+  });
+
+  // Final insight
+  h+=`<div class="card" style="background:linear-gradient(135deg,#f5f0ff,#fff8e6);border:1px solid #d0c8f0">
+    <h3 style="color:#5b3cc4;margin-bottom:8px">⚡ The Ultimate Insight</h3>
+    <p style="font-size:14px;line-height:1.8">現代日語中的「に」不是一個單純的格助詞——它是一條從古典斷定助動詞「なり」分化出來的河流。
+    にあり → なり → に，這條河流的三段旅程，解釋了為什麼「に」能同時擔任：
+    <b>格助詞</b>（所在・方向・対象・時間・結果），
+    <b>複合助詞的核心</b>（について・によって・に対して…），
+    以及<b>な形容詞的詞尾</b>（静かな ← 静かなる）。
+    70%以上的中高級接続語法，都是這個引擎在做力學支撐。</p>
+  </div>`;
+
+  $("#main").innerHTML=h;
+}
+
 /* ---------- map (hub-spoke) ---------- */
 function renderMap(){
-  let h=`<div class="card intro"><h2>Hub-and-Spoke：一个引擎，五条辐线</h2>
-  <p>70%以上的中高级日语接续语法，都是断定の「に」在做不同风格的力学支撑。
-  <b>Hub（轴心）</b>就是断定の「に」，<b>Spokes（辐线）</b>是描述你对该现实的认知动作的动词。</p>
+  let h=`<div class="card intro"><h2>Hub-and-Spoke：一個引擎，五條輻線</h2>
+  <p>70%以上の中学級日語接続語法，都是斷定の「に」在做不同風格的力學支撐。
+  <b>Hub（軸心）</b>就是斷定の「に」，<b>Spokes（輻線）</b>是描述你對該現實的認知動作的動詞。</p>
   <div class="steps">
-    <div><b>Master Formula</b><br>[名词短语] + [（断定）に] + [语法化动词] + [可选助词]</div>
-    <div><b>核心洞察</b><br>N5→N1 不是五座独立的山，而是同一棵wheel的不同spoke。</div>
+    <div><b>Master Formula</b><br>[名詞短語] + [（斷定）に] + [語法化動詞] + [可選助詞]</div>
+    <div><b>核心洞察</b><br>N5→N1 不是五座獨立的山，而是同一棵wheel的不同spoke。</div>
   </div></div>`;
   h+=`<div class="card"><div class="hub-map">
     <div class="hub-center">に</div>
@@ -453,7 +642,7 @@ function renderMap(){
       <div class="em">${g.emoji}</div>
       <div class="nm">${g.name.split('·')[0].trim()}</div>
       <div class="desc">${g.note}</div>
-      <div class="count">${members.length} 个语法点</div>
+      <div class="count">${members.length} 個語法點</div>
     </div>`;
   });
   h+=`</div></div></div>`;
@@ -461,7 +650,7 @@ function renderMap(){
   GROUPS.forEach(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
     if(!members.length)return;
-    h+=`<div class="grp"><div class="grp-h" style="background:${g.color}"><h3>${g.name}</h3><span>${members.length} 点</span></div>
+    h+=`<div class="grp"><div class="grp-h" style="background:${g.color}"><h3>${g.name}</h3><span>${members.length} 點</span></div>
     <div class="mini-wrap">${members.map(n=>`
       <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
         <div class="em">${n.emoji}</div>
@@ -482,15 +671,15 @@ function renderDetail(){
       const iid=n.id;
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
         <h2>${n.emoji} ${n.word}<span class="jl">${n.level}</span></h2>
-        <div class="meta"><code>读作 ${n.read}</code>
-          ${AUDIO[`${iid}-e0`]?`<button class="btn mini-btn" title="听例句发音" onclick="play('${iid}-e0',this)">▶</button>`:""}
+        <div class="meta"><code>読作 ${n.read}</code>
+          ${AUDIO[`${iid}-e0`]?`<button class="btn mini-btn" title="聴例句発音" onclick="play('${iid}-e0',this)">▶</button>`:""}
         </div>
         <div class="engine-box"><b>🔧 Engine</b>　${n.engine}</div>
         <div class="blueprint-box"><b>📐 Blueprint</b>　${n.blueprint}</div>
         <div class="meanbox">📌 <b>意思</b>　${n.meaning}</div>
         <h3 class="sec">例句</h3>
         ${(n.examples||[]).map((ex,i)=>rowHTML(`${iid}-e${i}`,ex)).join("")}
-        ${(n.nadeshiko||[]).map(sc=>nadeHTML(sc)).join("")}
+        ${(n.nadeshiko||[]).map((sc,i)=>nadeHTML(sc,iid,i)).join("")}
         ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
       </div>`;
     });
@@ -500,34 +689,34 @@ function renderDetail(){
 
 /* ---------- contrast ---------- */
 function renderContrast(){
-  let h=`<div class="card intro"><h2>Group级対比：五条Lineage的力学差异</h2>
-  <p>同一个「に」，搭配不同的动词，认知力学完全不同。下面按group逐一对比。</p></div>`;
+  let h=`<div class="card intro"><h2>Group級対比：五條Lineage的力學差異</h2>
+  <p>同一個「に」，搭配不同的動詞，認知力學完全不同。下面按group逐一对比。</p></div>`;
   const contrasts=[
     {c:"#e74c3c",title:"する系 vs 他系",items:[
-      ["にする (N5)","锁定选项 → 敲定","核心：主观决定"],
-      ["にしては (N3)","锁定事实 → 但出现意外","核心：事实基线 vs 预期反差"],
-      ["にしても (N2)","完全承认 → 结论不变","核心：退让让步"],
+      ["にする (N5)","鎖定選項 → 敲定","核心：主觀決定"],
+      ["にしては (N3)","鎖定事實 → 但出現意外","核心：事實基線 vs 預期反差"],
+      ["にしても (N2)","完全承認 → 結論不變","核心：退讓讓步"],
     ]},
     {c:"#3498db",title:"よる系：信息源 vs 方法",items:[
-      ["によると (N4)","追溯依赖 → 到信息源","核心：据…说（传闻来源）"],
-      ["によって (N3)","锁定参数 → 声明为通用引擎","核心：因…而异 / 通过…手段"],
+      ["によると (N4)","追溯依賴 → 到信息源","核心：據…說（傳聞來源）"],
+      ["によって (N3)","鎖定參數 → 聲明為通用引擎","核心：因…而異 / 通過…手段"],
     ]},
-    {c:"#2ecc71",title:"時空向量系：时间定位的微妙差异",items:[
-      ["に際して (N2)","正式场合 → 临界点","核心：正值…之际（客观）"],
-      ["にあたって (N2)","重大事件 → 正面迎上","核心：在…之际（主观能动）"],
-      ["に先立って (N2)","事件前方 → 时间先行","核心：在…之前（先行准备）"],
-      ["にあって (N1)","重压处境 → 存在其中","核心：身处…之中（沉重书面）"],
+    {c:"#2ecc71",title:"時空向量系：時間定位的微妙差異",items:[
+      ["に際して (N2)","正式場合 → 臨界點","核心：正值…之際（客觀）"],
+      ["にあたって (N2)","重大事件 → 正面迎上","核心：在…之際（主觀能動）"],
+      ["に先立って (N2)","事件前方 → 時間先行","核心：在…之前（先行準備）"],
+      ["にあって (N1)","重壓處境 → 存在其中","核心：身處…之中（沉重書面）"],
     ]},
-    {c:"#9b59b6",title:"関連系：三种「关于」的微妙差异",items:[
-      ["について (N4)","紧贴目标 → 不游移","核心：关于（最常用）"],
-      ["に関して (N3)","追溯关系 → 辐射网络","核心：关于（更正式书面）"],
-      ["に対して (N3)","正面对准 → 投射动作","核心：对… / 与…相反"],
+    {c:"#9b59b6",title:"関連系：三種「關於」的微妙差異",items:[
+      ["について (N4)","緊貼目標 → 不遊移","核心：關於（最常用）"],
+      ["に関して (N3)","追溯關係 → 輻射網絡","核心：關於（更正式書面）"],
+      ["に対して (N3)","正面對準 → 投射動作","核心：對… / 與…相反"],
     ]},
-    {c:"#f39c12",title:"推移系：四种变化表达",items:[
-      ["につれて (N3)","绑定尾流 → 渐进同步","核心：随着（渐进变化）"],
-      ["に従って (N2)","遵循轨道 → 服从规则","核心：按照 / 随着（遵从）"],
-      ["にともなって (N2)","捆绑同行 → 因果套餐","核心：伴随（因果捆绑）"],
-      ["に反して (N2)","预期基线 → 方向相反","核心：与…相反（预期反差）"],
+    {c:"#f39c12",title:"推移系：四種變化表達",items:[
+      ["につれて (N3)","綁定尾流 → 漸進同步","核心：隨著（漸進變化）"],
+      ["に従って (N2)","遵循軌道 → 服從規則","核心：按照 / 隨著（遵從）"],
+      ["にともなって (N2)","捆綁同行 → 因果套餐","核心：伴隨（因果捆綁）"],
+      ["に反して (N2)","預期基線 → 方向相反","核心：與…相反（預期反差）"],
     ]},
   ];
   contrasts.forEach(sec=>{
@@ -535,7 +724,7 @@ function renderContrast(){
     sec.items.forEach(([name,mech,core])=>{
       h+=`<div style="margin:8px 0;padding:8px 12px;background:#f8f9fc;border-radius:10px">
         <div style="font-weight:700;color:${sec.c}">${name}</div>
-        <div style="font-size:13px;color:var(--sub);margin:3px 0">力学：${mech}</div>
+        <div style="font-size:13px;color:var(--sub);margin:3px 0">力學：${mech}</div>
         <div style="font-size:12.5px;color:var(--gold)">${core}</div>
       </div>`;
     });
@@ -544,18 +733,18 @@ function renderContrast(){
   // master formula card
   h+=`<div class="card" style="background:linear-gradient(135deg,#f5f0ff,#eef6ff);border:1px solid #d0c8f0">
     <h3 style="color:#5b3cc4;margin-bottom:8px">⚡ The Ultimate Epiphany</h3>
-    <p style="font-size:14px;line-height:1.8">把 N5→N1 看成一座山是错的。它们是同一个 <b>Hub-and-Spoke Wheel</b> 的不同辐线。
-    Hub 是断定の「に」，Spoke 是描述你认知动作的动词。
-    70%以上的中高级接续语法，都是这个引擎在做力学支撑。</p>
+    <p style="font-size:14px;line-height:1.8">把 N5→N1 看成一座山是錯的。它們是同一個 <b>Hub-and-Spoke Wheel</b> 的不同輻線。
+    Hub 是斷定の「に」，Spoke 是描述你認知動作的動詞。
+    70%以上的中高級接續語法，都是這個引擎在做力學支撐。</p>
   </div>`;
   $("#main").innerHTML=h;
 }
 
 /* ---------- sentences ---------- */
 function renderSentences(){
-  let h=`<div class="card intro"><h2>例文集 · MOJi + Nadeshiko 双源</h2>
-  <p>点击 ▶ 听TTS发音。<span class="src src-moji">MOJi</span> = 教科书例句，
-  <span class="src src-nade">Nadeshiko</span> = 真实动漫/日剧台词。</p></div>`;
+  let h=`<div class="card intro"><h2>例文集 · MOJi + Nadeshiko 雙源</h2>
+  <p>點擊 ▶ 聴TTS発音。<span class="src src-moji">MOJi</span> = 教科書例句，
+  <span class="src src-nade">Nadeshiko</span> = 真實動漫/日劇台詞（▶ 播放原聲）。</p></div>`;
   GROUPS.forEach(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
     if(!members.length)return;
@@ -567,8 +756,8 @@ function renderSentences(){
       (n.examples||[]).forEach((ex,i)=>{
         h+=rowHTML(`${iid}-e${i}`,ex);
       });
-      (n.nadeshiko||[]).forEach(sc=>{
-        h+=nadeHTML(sc);
+      (n.nadeshiko||[]).forEach((sc,i)=>{
+        h+=nadeHTML(sc,iid,i);
       });
       h+=`</div>`;
     });
@@ -594,14 +783,14 @@ function renderQuizTab(){
     const rows=BANKS.filter(([k])=>countBank(k)>0).map(([k,label])=>
       `<button class="opt" style="max-width:400px;margin:0 auto 10px" onclick="startQuiz('${k}')">${label} · ${countBank(k)}問</button>`).join("");
     const wc=wrongCount();
-    const wrongRow=wc?`<button class="opt" style="max-width:400px;margin:0 auto 10px;border-color:var(--gold)" onclick="startQuiz('wrong')">📕 错题重练 · ${wc}問<br><span style="font-size:12px;color:var(--gold)">做对即移出错题本</span></button>`:
-      `<div class="hint" style="margin-bottom:10px">错题本是空的——答错的题会自动收进来 📕</div>`;
+    const wrongRow=wc?`<button class="opt" style="max-width:400px;margin:0 auto 10px;border-color:var(--gold)" onclick="startQuiz('wrong')">📕 錯題重練 · ${wc}問<br><span style="font-size:12px;color:var(--gold)">做対即移出錯題本</span></button>`:
+      `<div class="hint" style="margin-bottom:10px">錯題本是空的——答錯的題會自動收進來 📕</div>`;
     $("#main").innerHTML=`<div class="card" style="text-align:center;padding:28px 16px">
-      <div style="font-size:19px;font-weight:700;margin-bottom:4px">选择训练关卡</div>
-      <div class="hint" style="margin-bottom:18px">题目由 ni.json 自动生成 · 全部随机打乱</div>
+      <div style="font-size:19px;font-weight:700;margin-bottom:4px">選擇訓練關卡</div>
+      <div class="hint" style="margin-bottom:18px">題目由 ni.json 自動生成 · 全部隨機打亂</div>
       ${rows}${wrongRow}
-      <button class="opt" style="max-width:400px;margin:0 auto 10px" onclick="startQuiz('mix')">🎲 混合交错 · 全量随机<br><span style="font-size:12px;color:var(--sub)">跨语法点交错练习，记忆更牢固</span></button>
-      ${wc?`<button class="opt" style="max-width:220px;margin:14px auto 0;font-size:13px;padding:8px" onclick="if(confirm('清空错题本？')){localStorage.removeItem('ni-wrong');renderQuizTab();}">🗑️ 清空错题本</button>`:""}
+      <button class="opt" style="max-width:400px;margin:0 auto 10px" onclick="startQuiz('mix')">🎲 混合交錯 · 全量隨機<br><span style="font-size:12px;color:var(--sub)">跨語法點交錯練習，記憶更牢固</span></button>
+      ${wc?`<button class="opt" style="max-width:220px;margin:14px auto 0;font-size:13px;padding:8px" onclick="if(confirm('清空錯題本？')){localStorage.removeItem('ni-wrong');renderQuizTab();}">🗑️ 清空錯題本</button>`:""}
     </div>`;
     return;
   }
@@ -623,8 +812,8 @@ function renderQ(){
   if(q.type==="listen"){
     body=AUDIO[q.aid]?`<div style="text-align:center;margin:6px 0 14px">
       <button class="btn" style="width:56px;height:56px;font-size:24px;margin:auto" onclick="play('${q.aid}',this)">🔊</button>
-      <div class="hint">可反复点击重听</div></div>`
-      :`<div class="hint" style="text-align:center;margin-bottom:10px">（这条发音还没生成）</div>`;
+      <div class="hint">可反復點擊重聽</div></div>`
+      :`<div class="hint" style="text-align:center;margin-bottom:10px">（這條發音還沒生成）</div>`;
   }
   let optHTML="";
   if(q.opts){
@@ -637,7 +826,7 @@ function renderQ(){
       <button class="opt" data-ok="${truthy?0:1}" onclick="pick(this)">❌ 間違い</button></div>`;
   }
   showNext(false);
-  const label=mode==="mix"?"混合":mode==="wrong"?"错题本":(BANKS.find(([k])=>k===mode)||["",""])[1];
+  const label=mode==="mix"?"混合":mode==="wrong"?"錯題本":(BANKS.find(([k])=>k===mode)||["",""])[1];
   $("#main").innerHTML=`<div class="card">
     <div class="hint">第 ${qi+1} 题 / 共 ${order.length} 题 · ${label}</div>
     <div class="q">${q.q}</div>${body}${optHTML}
@@ -663,13 +852,13 @@ function nextQ(){
 function finish(){
   showNext(false);
   const total=order.length,pct=Math.round(correct/total*100);
-  const msg=pct===100?"🏆 完璧！断定の「に」已完全掌握！":pct>=70?"👍 かなりいい！错题趁热打铁":"📖 詳解タブで復習してから再挑戦";
+  const msg=pct===100?"🏆 完璧！断定の「に」已完全掌握！":pct>=70?"👍 かなりいい！錯題趁熱打鐵":"📖 詳解タブで復習してから再挑戦";
   $("#main").innerHTML=`<div class="card fin">
     <div class="big">${correct} / ${total}</div>
     <div style="font-size:20px;margin:12px 0">${msg}</div>
     <button class="next" style="display:inline-block;margin:4px" onclick="startQuiz('${mode}')">もう一度挑戦</button><br>
-    <button class="opt" style="max-width:280px;margin:14px auto 0" onclick="backToBanks()">别的关卡选一选</button></div>`;
-  $("#score").textContent="";$("#barinfo").textContent=`正确率 ${pct}%`;
+    <button class="opt" style="max-width:280px;margin:14px auto 0" onclick="backToBanks()">別的關卡選一選</button></div>`;
+  $("#score").textContent="";$("#barinfo").textContent=`正確率 ${pct}%`;
   window.scrollTo(0,0);
 }
 function backToBanks(){mode=null;render();}
@@ -679,6 +868,7 @@ function updateScore(){$("#score").textContent=`✔ ${correct} / ${order.length}
 function render(){
   if(tab!=="quiz")showNext(false);
   if(tab==="map")renderMap();
+  else if(tab==="history")renderHistory();
   else if(tab==="detail")renderDetail();
   else if(tab==="contrast")renderContrast();
   else if(tab==="sentences")renderSentences();
@@ -700,37 +890,47 @@ def main():
         level_counts[lv] = level_counts.get(lv, 0) + 1
     level_str = "・".join(f"{k}×{v}" for k, v in sorted(level_counts.items()))
 
+    print(f"[1/4] audio: TTS for {n_total} grammar points...")
     audio = gen_audio(items)
-    qs = build_questions(groups, items, audio)
 
-    n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
-    n_ex = sum(len(it.get("examples", [])) for it in items)
-    tags = (f"<span>{n_total} 语法点</span><span>{level_str}</span>"
-            f"<span>{n_ex} 例句 + {n_nade} 原声</span><span>MOJi + Nadeshiko</span>")
+    print(f"[2/4] nadeshiko: downloading CDN audio...")
+    nade_audio = gen_nade_audio(items)
+
+    print(f"[3/4] generating quiz banks for {n_total} grammar points...")
+    qs = build_questions(groups, items, audio)
     banks_meta = [[k, l] for k, l in meta.get("quizBanks", [
         ["recog", "📘 语法认识"], ["engine", "🔧 Engine拆解"],
         ["fill", "✍️ 运用填空"], ["listen", "🎧 聴解判别"],
         ["judge", "⭕ 判断正误"]
     ])]
 
-    print(f"[2/4] generating quiz banks for {n_total} grammar points...")
     all_banks = set(q["bank"] for q in qs)
     counts = {k: sum(1 for q in qs if q["bank"] == k) for k in all_banks}
     total_q = sum(counts.values())
     for k, l in banks_meta:
-        print(f"      {l}: {counts.get(k, 0)} 問")
-    print(f"      合計: {total_q} 問")
+        print(f"      {l}: {counts.get(k, 0)} 问")
+    print(f"      合计: {total_q} 问")
 
-    print("[3/4] rendering template...")
+    n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
+    n_ex = sum(len(it.get("examples", [])) for it in items)
+    tags = (f"<span>{n_total} 语法点</span><span>{level_str}</span>"
+            f"<span>{n_ex} 例句 + {n_nade} 原声</span><span>MOJi + Nadeshiko</span>")
+
+    raw = json.loads(DATA.read_text(encoding="utf-8"))
+    etymology = raw.get("etymology", {})
+
+    print("[4/4] rendering template...")
     html = (TEMPLATE
             .replace("__TAGS__", tags)
             .replace("__AUDIO__", j(audio))
+            .replace("__NADE_AUDIO__", j(nade_audio))
             .replace("__GROUPS__", j(groups))
             .replace("__ITEMS__", j(items))
             .replace("__BANKS__", j(banks_meta))
-            .replace("__QS__", j(qs)))
+            .replace("__QS__", j(qs))
+            .replace("__ETYMOLOGY__", j(etymology)))
     OUT.write_text(html, encoding="utf-8")
-    print(f"[4/4] wrote {OUT} ({OUT.stat().st_size//1024} KB)")
+    print(f"      wrote {OUT} ({OUT.stat().st_size//1024} KB)")
 
 
 if __name__ == "__main__":
