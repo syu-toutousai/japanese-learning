@@ -13,7 +13,7 @@
 | [`keiji-courseware/`](./keiji-courseware/) | 接头接尾词・口袋图鉴：词条存 `pocket.json` 随手增删，重建即自动生成卡片、TTS 发音与三层题库（詞義認識 / 運用填空 / 聴解判別）＋错题本，单文件 HTML 离线可用 |
 | [`houi-courseware/`](./houi-courseware/) | 方角・方位・认知罗盘：按人脑空间认知规律掌握「东南西北・左右上下」及派生词——视觉罗盘＋身体坐标＋对立结伴＋心理旋转，五层题库（含空間判斷）＋错题本，单文件 HTML 离线可用 |
 | [`kotoba-courseware/`](./kotoba-courseware/) | 言葉・新詞・记忆的种子：新词收集器——把刚碰到的词按人脑习得规律铺成「初遇情景→核心意象→语义网络→近义辨析→提取闯关→间隔复习」；已收「風情」「開く・あく（穴あくまでパンツはくなよ）」「はしゃぐ（子どものはしゃぐ声）」「逞しい・たくましい（たくましいですね～）」，顶部可切换，后续新词照 `kotoba.json` 往集子里丢，课件自动长 |
-| [`ni-courseware/`](./ni-courseware/) | 「に」完全体系・三本柱：にの全用法を**断定（Assertive）・格助詞（Case Particle）・状態接続（Adverbial Bridge）**の三本柱で統一。32 语法点 × 8 Lineage × 3 本柱（第三本柱含 〜ずに・〜ながらに・〜ままに・〜ゆえに・〜ことに… 等），128 句 TTS + 64 段番剧/日剧原声（含缩略图），七层 Tab（含 🏛️ 三本柱総覧）＋五层题库与错题本，单文件 HTML 离线可用 |
+| [`ni-courseware/`](./ni-courseware/) | 「に」完全体系・三本柱：にの全用法を**断定（Assertive）・格助詞（Case Particle）・状態接続（Adverbial Bridge）**の三本柱で統一。31 语法点 × 8 Lineage × 3 本柱（第三本柱含 〜ずに・〜ながらに・〜ままに・〜ゆえに・〜ことに… 等），123 句 TTS + 64 段番剧/日剧原声（含缩略图），七层 Tab（含 🏛️ 三本柱総覧）＋五层题库与错题本，单文件 HTML 离线可用 |
 
 ## 来源与版权说明（重要）
 
@@ -27,9 +27,10 @@
   初遇情景（素材字幕）与自写例句的发音由本地 edge-tts 合成；
   形式名词课件、接辞口袋课件与方位罗盘课件的发音由本地 edge-tts（微软 Azure 神经语音
   ja-JP-Nanami）合成生成，非录音素材；
-- **「に」完全体系（三本柱）课件**中的例句释义/译文基于 JLPT 语法体系整理，发音由本地
-  edge-tts 合成；格助詞系与状態接続系的 Nadeshiko 原声台词/画面缩略图来自
-  **Nadeshiko**（nadeshiko.co），仅作个人语言学习之非商业性引用。
+- **「に」完全体系（三本柱）课件**中的例句与中文译文经 **moji-dict 技能**（`moji` CLI）
+  取自 **MOJi辞書**（[mojidict.com](https://www.mojidict.com)），发音由本地 edge-tts 合成；
+  格助詞系与状態接続系的 Nadeshiko 原声台词/画面缩略图来自 **Nadeshiko**（nadeshiko.co），
+  仅作个人语言学习之非商业性引用。
 - **形式名词课件中的 Nadeshiko 播片原声例句**（14 词 × 47 段台词 + 画面缩略图）
   来自 **Nadeshiko**（nadeshiko.co，BrigadaSOS，AGPL-3.0）语料库：台词摘自 mono / プロメア /
   DEATH NOTE / ドラゴンボールDAIMA / からかい上手の高木さん / わたしが恋なんて、ありえない！ /

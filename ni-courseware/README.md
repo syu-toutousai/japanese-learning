@@ -18,13 +18,14 @@ N5→N1 は独立した山ではなく、同じ「に」エンジンの三つの
 
 ### 第三本柱（状態接続）の収録語法
 
-`〜ずに` / `〜ながらに` / `〜ままに` / `〜がまま（に）` / `〜ゆえに` / `〜ことに` /
+`〜ずに` / `〜ながらに` / `〜ままに（〜がまま）` / `〜ゆえに` / `〜ことに` /
 `〜うちに` / `〜わりに` / `〜かわりに` / `〜ために`
 
 ## 内容
 
-- **32 个语法点** × 8 个 Group × 3 本柱
-- **128 例句** 配 TTS 发音（edge-tts 日语神经网络语音）+ **64 段** Nadeshiko 原声（含画面缩略图）
+- **31 个语法点** × 8 个 Group × 3 本柱
+- **123 例句** 配 TTS 发音（edge-tts 日语神经网络语音）+ **64 段** Nadeshiko 原声（含画面缩略图）
+  —— 例句取自 **MOJi辞書**（`moji` CLI 采集），原声取自 **Nadeshiko**
 - **七层 Tab**：🏛️ 三本柱 / 🗺️ 体系図 / 📜 歴史 / 📖 詳解 / 🔍 対比 / 📝 例文 / 🎯 クイズ
 - **五层题库**：语法认识 / Engine 拆解 / 运用填空 / 聴解判别 / 判断正误 + 错题本
 
@@ -54,5 +55,6 @@ python3 build.py
 
 ## 来源
 
-释义、例句、译文基于 JLPT 语法体系整理。发音音频使用 edge-tts（Microsoft Azure 神经网络语音，ja-JP-NanamiNeural）合成，按文本哈希缓存。
-Nadeshiko 原声台词/缩略图来自 [nadeshiko.co](https://nadeshiko.co) 语料库，仅作个人学习之非商业性引用。
+- **例句与中文译文**：经 **moji-dict 技能**（`moji <语法点> --once`）从 **MOJi辞書**（[mojidict.com](https://www.mojidict.com)）采集，仅作个人复习之用的非商业性引用；
+- **发音音频**：edge-tts（Microsoft Azure 神经网络语音，ja-JP-NanamiNeural）合成，按文本哈希缓存；
+- **Nadeshiko 原声台词/缩略图**：来自 [nadeshiko.co](https://nadeshiko.co) 语料库，仅作个人学习之非商业性引用。
