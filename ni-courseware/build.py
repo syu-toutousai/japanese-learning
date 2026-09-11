@@ -57,6 +57,14 @@ _READING_OVERRIDES = [
     ("人によって", "ひとによって"),
     ("多くの人が", "おおくのひとが"),
     ("最も", "もっとも"),
+    ("六時に", "ろくじに"),
+    ("厳しく", "きびしく"),
+    ("損を", "そんを"),
+    ("小さい", "ちいさい"),
+    ("今日は", "きょうは"),
+    ("書き綴った", "かきつづった"),
+    ("絵を描く", "えをかく"),
+    ("描いた", "かいた"),
 ]
 
 
@@ -306,11 +314,14 @@ def build_questions(groups, items, audio):
             "対象をピン留め（锁定目标）",
             "変化のパラメータを固定（固定变化参数）",
             "語幹を連用修飾（将词干变成连用修饰语）",
+            "現実の座標に固定（钉入现实坐标）",
+            "事態を述語に架橋（把整个事态变成状语）",
+            "時間軸上の里程標を指定（锚定时间节点）",
         ]
         # pick the right one based on group
         engine_map = {
-            "suru": 0, "yoru": 1, "vector": 0, "relate": 2, "progress": 3,
-            "renyou": 4,
+            "suru": 0, "yoru": 1, "vector": 7, "relate": 2, "progress": 3,
+            "renyou": 4, "case": 5, "state": 6,
         }
         correct_engine = engine_map.get(it["group"], 0)
         add("engine", f"{iid}:engine", type="choice",
@@ -318,11 +329,11 @@ def build_questions(groups, items, audio):
             opts=engine_opts, ans=correct_engine,
             exp=f'🔧 {it["engine"]}<br>💡 {it["blueprint"]}')
 
-        # ✍️ 运用填空：例句挖空选回
+        # ✍️ 运用填空：例句挖空选回（裸の格助詞「に」はどこにでも出るので除外）
         for i, ex in enumerate(it.get("examples") or []):
             # try to find the pattern in the sentence
             pattern = it["read"].replace("〜", "")
-            if pattern and pattern in ex["jp"]:
+            if it["group"] != "case" and pattern and pattern in ex["jp"]:
                 blanked = ex["jp"].replace(pattern, "（　）", 1)
                 distractor_words = [x["word"] for x in items
                                     if x["id"] != it["id"]]
@@ -383,7 +394,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>断定の「に」完全体系</title>
+<title>「に」完全体系 · 三本柱</title>
 <style>
 :root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
 --acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;
@@ -499,6 +510,19 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 .nade-card .nade-thumb{width:80px;height:50px;border-radius:8px;object-fit:cover;flex:none}
 .nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
 .nade-card a:hover{text-decoration:underline}
+/* three pillars */
+.pillar-card{border-left:5px solid var(--c,#6a3de8)}
+.pillar-head{display:flex;align-items:center;gap:12px;border-radius:12px;padding:12px 16px;color:#fff;margin-bottom:12px}
+.pillar-em{font-size:30px}
+.pillar-name{font-size:16.5px;font-weight:800}
+.pillar-sub{font-size:12px;opacity:.9}
+.pillar-syntax{background:#f2f4fa;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:13.5px;line-height:1.7;margin:8px 0}
+.pillar-syntax b{color:var(--c)}
+.pillar-mech{font-size:14px;line-height:1.75;margin:6px 0}
+.pillar-ex{font-size:13px;line-height:2;margin:8px 0;color:var(--sub)}
+.pillar-grp{border-left:3px solid;border-radius:10px;background:#fafbfe;padding:10px 12px;margin:10px 0}
+.pillar-grp-h{font-weight:700;font-size:14px;margin-bottom:2px}
+.pillar-grp-h span{font-size:11.5px;color:var(--sub);font-weight:400}
 /* etymology */
 .ety-timeline{position:relative;padding:10px 0 10px 28px;margin:12px 0}
 .ety-timeline::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:3px;
@@ -545,8 +569,8 @@ background:#f8f9fc;border-radius:10px;border-left:3px solid var(--acc)}
 </head>
 <body>
 <header><div class="wrap">
-<h1>断定の「に」完全体系</h1>
-<div class="kana">だんていの「に」 —— 从 N5 到 N1 的统一语法引擎 ⚡</div>
+<h1>「に」完全体系 · 三本柱</h1>
+<div class="kana">だんてい・かくじょし・じょうたいせつぞく —— にの全用法を貫く統一建築図 ⚡</div>
 <div class="tags">__TAGS__</div>
 </div></header>
 
@@ -563,6 +587,7 @@ background:#f8f9fc;border-radius:10px;border-left:3px solid var(--acc)}
 const AUDIO=__AUDIO__;
 const NADE_AUDIO=__NADE_AUDIO__;
 const GROUPS=__GROUPS__;
+const LINES=__LINES__;
 const ITEMS=__ITEMS__;
 const BANKS=__BANKS__;
 const ETYMOLOGY=__ETYMOLOGY__;
@@ -602,7 +627,7 @@ function nadeHTML(sc,iid,idx){
 }
 
 /* ---------- tabs ---------- */
-const TABS=[["map","🗺️ 体系図"],["history","📜 歴史"],["detail","📖 詳解"],["contrast","🔍 対比"],["sentences","📝 例文"],["quiz","🎯 クイズ"]];
+const TABS=[["pillars","🏛️ 三本柱"],["map","🗺️ 体系図"],["history","📜 歴史"],["detail","📖 詳解"],["contrast","🔍 対比"],["sentences","📝 例文"],["quiz","🎯 クイズ"]];
 let tab="map";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -703,14 +728,56 @@ function renderHistory(){
   $("#main").innerHTML=h;
 }
 
+/* ---------- three pillars ---------- */
+function renderPillars(){
+  let h=`<div class="card intro"><h2>「に」の三本柱 · Grand Unified Theory</h2>
+    <p>テキスト中のどんな「に」も、この三本の柱のどれかにきれいに収まる。
+    断定（第一）・格助詞（第二）・状態接続（第三）——「に」の全用法を貫く建築図。</p>
+    <div class="steps">
+      <div><b>Line 1 断定</b><br>名詞/形動語幹＋に＋なる・する —— 状態・身分を断言する。</div>
+      <div><b>Line 2 格助詞</b><br>名詞＋に＋用言 —— 現実の座標にピン留めする GPS。</div>
+      <div><b>Line 3 状態接続</b><br>節/条件名詞＋に＋用言 —— 事態を丸ごと様態副詞に変える。</div>
+    </div></div>`;
+  LINES.forEach(ln=>{
+    const gs=GROUPS.filter(g=>g.line===ln.id);
+    h+=`<div class="card pillar-card" style="--c:${ln.color}">
+      <div class="pillar-head" style="background:${ln.color}">
+        <div class="pillar-em">${ln.emoji}</div>
+        <div><div class="pillar-name">${ln.name}</div><div class="pillar-sub">${ln.sub}</div></div>
+      </div>
+      <div class="pillar-syntax"><b>Syntax</b>　${ln.syntax}</div>
+      <div class="pillar-mech">${ln.mechanic}</div>
+      <div class="pillar-ex">${ln.examples.map(e=>`<code class="inline">${e}</code>`).join("　")}</div>
+      ${gs.map(g=>{
+        const members=ITEMS.filter(it=>it.group===g.id);
+        return `<div class="pillar-grp" style="border-color:${g.color}">
+          <div class="pillar-grp-h" style="color:${g.color}">${g.emoji} ${g.name} <span>${members.length} 点</span></div>
+          <div class="mini-wrap">${members.map(n=>`
+            <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
+              <div class="em">${n.emoji}</div>
+              <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
+              <div class="im">${n.meaning.split('；')[0].split('…')[0]}</div></button>`).join("")}</div>
+        </div>`;
+      }).join("")}
+    </div>`;
+  });
+  h+=`<div class="card" style="background:linear-gradient(135deg,#f5f0ff,#fff8e6);border:1px solid #d0c8f0">
+    <h3 style="color:#5b3cc4;margin-bottom:8px">⚡ The Ultimate Takeaway</h3>
+    <p style="font-size:14px;line-height:1.8">古文でも現代小説でも J-POP の歌詞でも、出会ったどんな「に」も、この三本の柱のどれかにきれいに収まる。
+    <b>断定</b>は「何であるか」を言い、<b>格助詞</b>は「どこ・いつ・誰に」を指し、<b>状態接続</b>は「どんな状態で」を敷く。——これが「に」の Grand Unified Theory である。</p>
+  </div>`;
+  $("#main").innerHTML=h;
+}
+
 /* ---------- map (hub-spoke) ---------- */
 function renderMap(){
-let h=`<div class="card intro"><h2>Hub-and-Spoke：一個引擎，六條輻線</h2>
-  <p>70%以上の中学級日語接續語法，都是斷定の「に」在做不同風格的力學支撐。
-  <b>Hub（軸心）</b>就是斷定の「に」，<b>Spokes（輻線）</b>是描述你對該現實的認知動作的動詞。</p>
+let h=`<div class="card intro"><h2>Hub-and-Spoke：一個引擎，八條輻線</h2>
+  <p>70%以上の中学級日語接續語法，都是「に」在做不同風格的力學支撐。
+  <b>Hub（軸心）</b>就是「に」，<b>Spokes（輻線）</b>是描述你對該現實的認知動作的動詞。
+  全體は三本柱（🏛️ 三本柱タブ）に収まる——断定・格助詞・状態接続。</p>
   <div class="steps">
     <div><b>Master Formula</b><br>[名詞短語] + [（斷定）に] + [語法化動詞] + [可選助詞]</div>
-    <div><b>核心洞察</b><br>N5→N1 不是六座獨立的山，而是同一棵wheel的不同spoke。</div>
+    <div><b>核心洞察</b><br>N5→N1 不是八座獨立的山，而是同一棵wheel的不同spoke。</div>
   </div></div>`;
   h+=`<div class="card"><div class="hub-map">
     <div class="hub-center">に</div>
@@ -768,8 +835,9 @@ function renderDetail(){
 
 /* ---------- contrast ---------- */
 function renderContrast(){
-  let h=`<div class="card intro"><h2>Group級対比：六條Lineage的力學差異</h2>
-  <p>同一個「に」，搭配不同的動詞，認知力學完全不同。下面按group逐一对比。</p></div>`;
+  let h=`<div class="card intro"><h2>Group級対比：八條Lineage的力學差異</h2>
+  <p>同一個「に」，搭配不同的動詞或名詞，認知力學完全不同。下面按group逐一对比。
+  全体は三本柱（🏛️ 三本柱タブ）に収まる。</p></div>`;
   const contrasts=[
     {c:"#e74c3c",title:"する系 vs 他系",items:[
       ["にする (N5)","鎖定選項 → 敲定","核心：主觀決定"],
@@ -801,6 +869,17 @@ function renderContrast(){
       ["語幹＋に (N5)","不加動詞 → 直接連用修飾","核心：名詞/形動語幹＋に＝連用修飾語（静かに・実際に），修饰用言"],
       ["語幹＋な ← 同根（連体）","なる→な → 連体修飾","核心：静かな・確かだ系——同一个なり，連体形修飾体言"],
       [" vs 〜にする (N5)","同源但派生 → 接動詞","核心：にする＝「に＋する」變成了語法動詞绑定的衍生"],
+    ]},
+    {c:"#b8860b",title:"状態接続系：事態を丸ごと副詞に変える架橋（第三本柱）",items:[
+      ["ずに (N3)","未然形＋ず → 打消の状態","核心：不…就…（＝ないで）"],
+      ["ながらに (N2)","名詞＋ながら → 状態の継続","核心：〜の状態のままで（涙ながらに）"],
+      ["ままに／がまま (N2/N1)","状態を保持 → 成り行きに委ねる","核心：按照…／任凭…（意のまま・望むがまま）"],
+      ["ゆえに (N2)","原因を前置 → 理由の副詞","核心：因为…（＝だから）"],
+      ["ことに (N2)","感情評価を前置 → 文全体を覆う","核心：令人…的是（嬉しいことに）"],
+      ["うちに (N3)","期間の窓 → 状態が変わる前","核心：趁着…（若いうちに）"],
+      ["わりに (N2)","予想ベースとの対比 → 釣り合わない","核心：虽然…却…（値段のわりに）"],
+      ["かわりに (N3)","代替 → 動作の前提に置く","核心：代替…／作为交换…"],
+      ["ために (N3)","目的・原因を前置","核心：为了…／因为…"],
     ]},
   ];
   contrasts.forEach(sec=>{
@@ -951,7 +1030,8 @@ function updateScore(){$("#score").textContent=`✔ ${correct} / ${order.length}
 /* ---------- init ---------- */
 function render(){
   if(tab!=="quiz")showNext(false);
-  if(tab==="map")renderMap();
+  if(tab==="pillars")renderPillars();
+  else if(tab==="map")renderMap();
   else if(tab==="history")renderHistory();
   else if(tab==="detail")renderDetail();
   else if(tab==="contrast")renderContrast();
@@ -1002,6 +1082,7 @@ def main():
 
     raw = json.loads(DATA.read_text(encoding="utf-8"))
     etymology = raw.get("etymology", {})
+    lines = raw.get("lines", [])
 
     # display copy with furigana ruby (TTS audio keeps plain text)
     display = copy.deepcopy(items)
@@ -1019,6 +1100,7 @@ def main():
             .replace("__AUDIO__", j(audio))
             .replace("__NADE_AUDIO__", j(nade_audio))
             .replace("__GROUPS__", j(groups))
+            .replace("__LINES__", j(lines))
             .replace("__ITEMS__", j(display))
             .replace("__BANKS__", j(banks_meta))
             .replace("__QS__", j(qs))

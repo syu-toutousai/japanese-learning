@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "断定の「に」完全体系",
-    "titleCn": "断定の「に」语法家族 · 从N5到N1的统一引擎",
+    "title": "「に」完全体系 · 三本柱",
+    "titleCn": "にの全用法 · 断定×格助詞×状態接続の統一建築図（N5→N1）",
     "jp": "だんていの「に」",
     "tags": [
       "N5",
@@ -10,53 +10,120 @@
       "N2",
       "N1",
       "文法体系",
+      "三本柱",
       "Hub-and-Spoke"
     ],
     "voiceFemale": "ja-JP-NanamiNeural",
     "voiceMale": "ja-JP-KeitaNeural"
   },
+  "lines": [
+    {
+      "id": "line1",
+      "name": "第一本柱 · 断定の「に」",
+      "sub": "Assertive に（なり連用形）",
+      "color": "#6a3de8",
+      "emoji": "🏛️",
+      "syntax": "名詞／形容動詞語幹 ＋ に ＋（なる・する 等）",
+      "mechanic": "「何であるか」を断言し、その状態・身分を現実として確定する。",
+      "examples": [
+        "医者になる",
+        "静かにする",
+        "実際にやってみる"
+      ]
+    },
+    {
+      "id": "line2",
+      "name": "第二本柱 · 格助詞の「に」",
+      "sub": "Case Particle に（GPS 定位）",
+      "color": "#2563a8",
+      "emoji": "📍",
+      "syntax": "名詞 ＋ に ＋ 用言",
+      "mechanic": "名詞を物理・時間・関係の現実座標（位置/方向/相手/時点）にピン留めする。",
+      "examples": [
+        "東京に行く",
+        "三時に始まる",
+        "友達に本をあげる"
+      ]
+    },
+    {
+      "id": "line3",
+      "name": "第三本柱 · 状態接続の「に」",
+      "sub": "Adverbial Bridge に（事態を述語へ架橋）",
+      "color": "#b8860b",
+      "emoji": "🌉",
+      "syntax": "節（未然形＋ず 等）／条件名詞 ＋ に ＋ 用言",
+      "mechanic": "事態・状態を丸ごと「様態の副詞」に変え、主動作の下に敷く。",
+      "examples": [
+        "知らずに恋に落ちた",
+        "涙ながらに語った",
+        "思うがままに描く"
+      ]
+    }
+  ],
   "groups": [
     {
       "id": "suru",
       "name": "する系 · 处理/认定",
       "color": "#e74c3c",
       "emoji": "⚙️",
-      "note": "に locks reality into place, する handles or evaluates that reality."
-    },
-    {
-      "id": "yoru",
-      "name": "よる系 · 来源/依据",
-      "color": "#3498db",
-      "emoji": "🧭",
-      "note": "に establishes the source, よる traces the logical pathway out of it."
-    },
-    {
-      "id": "vector",
-      "name": "時空向量系 · 时间/空间定位",
-      "color": "#2ecc71",
-      "emoji": "📍",
-      "note": "に anchors a heavy situational milestone, verb orients time or spatial posture."
-    },
-    {
-      "id": "relate",
-      "name": "関連系 · 对象/关系",
-      "color": "#9b59b6",
-      "emoji": "🔗",
-      "note": "に pins down the object, verb establishes the vector of attention toward it."
-    },
-    {
-      "id": "progress",
-      "name": "推移系 · 进展/对比",
-      "color": "#f39c12",
-      "emoji": "↔️",
-      "note": "に fixes a fluid parameter or expected baseline, verb coordinates the reaction."
+      "note": "に locks reality into place, する handles or evaluates that reality.",
+      "line": "line1"
     },
     {
       "id": "renyou",
       "name": "連用系 · 連用修飾語（なり連用形の直系）",
       "color": "#16a085",
       "emoji": "🧩",
-      "note": "名詞/形容動詞語幹＋に＝連用修飾語（修饰用言）。断定的な・に 是一对平价词：連体形「な」修饰体言，連用形「に」修饰用言。"
+      "note": "名詞/形容動詞語幹＋に＝連用修飾語（修饰用言）。断定的な・に 是一对平价词：連体形「な」修饰体言，連用形「に」修饰用言。",
+      "line": "line1"
+    },
+    {
+      "id": "case",
+      "line": "line2",
+      "name": "格助詞系 · 所在/方向/対象/時点",
+      "color": "#2563a8",
+      "emoji": "📍",
+      "note": "裸の格助詞「に」＝GPSピン。名詞を物理・時間・関係の現実座標に固定する。"
+    },
+    {
+      "id": "yoru",
+      "name": "よる系 · 来源/依据",
+      "color": "#3498db",
+      "emoji": "🧭",
+      "note": "に establishes the source, よる traces the logical pathway out of it.",
+      "line": "line2"
+    },
+    {
+      "id": "vector",
+      "name": "時空向量系 · 时间/空间定位",
+      "color": "#2ecc71",
+      "emoji": "📍",
+      "note": "に anchors a heavy situational milestone, verb orients time or spatial posture.",
+      "line": "line2"
+    },
+    {
+      "id": "relate",
+      "name": "関連系 · 对象/关系",
+      "color": "#9b59b6",
+      "emoji": "🔗",
+      "note": "に pins down the object, verb establishes the vector of attention toward it.",
+      "line": "line2"
+    },
+    {
+      "id": "progress",
+      "name": "推移系 · 进展/对比",
+      "color": "#f39c12",
+      "emoji": "↔️",
+      "note": "に fixes a fluid parameter or expected baseline, verb coordinates the reaction.",
+      "line": "line2"
+    },
+    {
+      "id": "state",
+      "line": "line3",
+      "name": "状態接続系 · 事態を述語へ架橋",
+      "color": "#b8860b",
+      "emoji": "🌉",
+      "note": "節（未然形＋ず 等）や条件名詞に「に」を付けて、事態・状態を丸ごと述語の様態副詞に変える。"
     }
   ],
   "items": [
@@ -1061,6 +1128,891 @@
         }
       ],
       "note": "连用修饰语（に）与连体修饰语（な）是同一条血脉的两张面孔：静かに歩く vs 静かな部屋。遮两个都源自断定のなり——连用形に、连体形なる→な。"
+    },
+    {
+      "id": "niBasho",
+      "word": "〜に（所在）",
+      "read": "に",
+      "group": "case",
+      "level": "N5",
+      "emoji": "🏠",
+      "engine": "に（存在の座標）＋ ある／いる（存在動詞）",
+      "blueprint": "主体を一つの空間座標に釘付けし、「そこに在る」と宣告する",
+      "meaning": "在…（存在的场所）",
+      "examples": [
+        {
+          "jp": "東京に住んでいます。",
+          "cn": "住在东京。",
+          "src": "moji"
+        },
+        {
+          "jp": "部屋に誰かいますか。",
+          "cn": "房间里有人吗？",
+          "src": "moji"
+        },
+        {
+          "jp": "机の上に本がある。",
+          "cn": "桌上有一本书。",
+          "src": "moji"
+        },
+        {
+          "jp": "公園に子供がたくさんいる。",
+          "cn": "公园里有很多孩子。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "一応(いちおう) ここに 住(す)んでますけど...",
+          "en": "I know I live here.",
+          "cn": "我好歹是住在这里的……",
+          "media": "Higurashi: When They Cry - GOU",
+          "ep": "EP22",
+          "at": "16:27",
+          "url": "https://nadeshiko.co/en/sentence/2HBdbXET3TI3",
+          "audio": "https://cdn.nadeshiko.co/media/114446/22/31c2925cae.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/114446/22/31c2925cae.webp"
+        },
+        {
+          "jp": "見(み)れないけど... ここにいます",
+          "en": "I can't watch, but I'll stay.",
+          "cn": "虽然看不见……但我在这里。",
+          "media": "Turkey! Time to Strike",
+          "ep": "EP10",
+          "at": "19:32",
+          "url": "https://nadeshiko.co/en/sentence/p90-b-WxxXIP",
+          "audio": "https://cdn.nadeshiko.co/media/159483/10/0020ab3f65.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/159483/10/0020ab3f65.webp"
+        }
+      ],
+      "note": "存在動詞（ある・いる）と組めば「所在」のに。移動動詞と組めば「方向」になる。",
+      "quizzes": []
+    },
+    {
+      "id": "niHoukou",
+      "word": "〜に（方向・目的地）",
+      "read": "に",
+      "group": "case",
+      "level": "N5",
+      "emoji": "➡️",
+      "engine": "に（到達点）＋ 移動動詞（行く・来る・帰る）",
+      "blueprint": "移動ベクトルの終点を一つの目的地に固定する",
+      "meaning": "往…；到…（移动的目的地）",
+      "examples": [
+        {
+          "jp": "明日、学校に行きます。",
+          "cn": "明天去学校。",
+          "src": "moji"
+        },
+        {
+          "jp": "来年、日本に来るつもりだ。",
+          "cn": "打算明年来日本。",
+          "src": "moji"
+        },
+        {
+          "jp": "父は毎日七時に家に帰る。",
+          "cn": "父亲每天七点回家。",
+          "src": "moji"
+        },
+        {
+          "jp": "夏休みに海に行きたい。",
+          "cn": "暑假想去海边。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "今(いま)から発掘(はっくつ)現場(げんば)に行(い)くけどー　一緒(いっしょ)に行(い)く?",
+          "en": "I'm going into the dig site right now. Will you come with me?",
+          "cn": "我现在要去发掘现场，一起走吗？",
+          "media": "Eureka Seven",
+          "ep": "EP18",
+          "at": "14:57",
+          "url": "https://nadeshiko.co/en/sentence/vTYmXhQXYumS",
+          "audio": "https://cdn.nadeshiko.co/media/237/18/d566503a8d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/237/18/d566503a8d.webp"
+        },
+        {
+          "jp": "えっ? 「宇宙(うちゅう)に行(い)く」?",
+          "en": "Huh? You're going to space?",
+          "cn": "咦？「要去宇宙」？",
+          "media": "DARLING in the FRANXX",
+          "ep": "EP22",
+          "at": "16:22",
+          "url": "https://nadeshiko.co/en/sentence/tZUmz26M7F-2",
+          "audio": "https://cdn.nadeshiko.co/media/99423/22/82030b292d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99423/22/82030b292d.webp"
+        }
+      ],
+      "note": "行く・来る・帰る・向かう など移動動詞と組む「到達点」のに。",
+      "quizzes": []
+    },
+    {
+      "id": "niAite",
+      "word": "〜に（相手・対象）",
+      "read": "に",
+      "group": "case",
+      "level": "N5",
+      "emoji": "🎁",
+      "engine": "に（受け手の座標）＋ 授受動詞（あげる・教える・聞く）",
+      "blueprint": "動作の終点を、モノや情報を受け取る相手に固定する",
+      "meaning": "给…；向…（动作的接受者）",
+      "examples": [
+        {
+          "jp": "友達にプレゼントをあげる。",
+          "cn": "给朋友礼物。",
+          "src": "moji"
+        },
+        {
+          "jp": "先生に質問してもいいですか。",
+          "cn": "可以问老师吗？",
+          "src": "moji"
+        },
+        {
+          "jp": "母に手紙を書いた。",
+          "cn": "给母亲写了信。",
+          "src": "moji"
+        },
+        {
+          "jp": "彼に道を教えてあげた。",
+          "cn": "告诉他路了。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "エプシロンにあげる!",
+          "en": "You can have it, Epsilon!",
+          "cn": "送给艾普西隆！",
+          "media": "PLUTO",
+          "ep": "EP6",
+          "at": "21:29",
+          "url": "https://nadeshiko.co/en/sentence/teoWUtteH8ST",
+          "audio": "https://cdn.nadeshiko.co/media/99088/6/e6f83a4501.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99088/6/e6f83a4501.webp"
+        },
+        {
+          "jp": "これ、鈴芽(すずめ)ちゃんにあげる",
+          "en": "Here, this is for you.",
+          "cn": "这个，送给铃芽。",
+          "media": "Suzume",
+          "ep": "EP1",
+          "at": "56:09",
+          "url": "https://nadeshiko.co/en/sentence/3XH4opgEeIPO",
+          "audio": "https://cdn.nadeshiko.co/media/142770/1/f0bc377a0b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/142770/1/f0bc377a0b.webp"
+        }
+      ],
+      "note": "あげる・もらう・教える・聞く など授受/伝達動詞と組む「相手」のに。",
+      "quizzes": []
+    },
+    {
+      "id": "niJikoku",
+      "word": "〜に（時点・時間）",
+      "read": "に",
+      "group": "case",
+      "level": "N5",
+      "emoji": "🕒",
+      "engine": "に（時間軸の一点）＋ 動詞（出来事の発生）",
+      "blueprint": "出来事の発生を、時間軸上の正確な目盛りに固定する",
+      "meaning": "在…（具体时刻/日期）",
+      "examples": [
+        {
+          "jp": "会議は三時に始まる。",
+          "cn": "会议三点开始。",
+          "src": "moji"
+        },
+        {
+          "jp": "日曜日に友達と会う。",
+          "cn": "星期天和朋友见面。",
+          "src": "moji"
+        },
+        {
+          "jp": "毎朝六時に起きます。",
+          "cn": "每天早上六点起床。",
+          "src": "moji"
+        },
+        {
+          "jp": "誕生日にパーティーを開く。",
+          "cn": "生日那天办派对。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "3時(じ)に出(で)るくらい 3時(じ)に出(で)る?",
+          "en": "I need to leave around 3:00 p.m. -3:00 p.m.?",
+          "cn": "大概三点出门，三点出门？",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP17",
+          "at": "26:56",
+          "url": "https://nadeshiko.co/en/sentence/RifbddDJEiw7",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/17/5ca4f9bd80.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/17/5ca4f9bd80.webp"
+        },
+        {
+          "jp": "6時(じ)に起(お)きたのにぃぃ!",
+          "en": "I even woke up at 6!",
+          "cn": "明明六点就起来了！",
+          "media": "March comes in like a lion",
+          "ep": "EP4",
+          "at": "7:50",
+          "url": "https://nadeshiko.co/en/sentence/cUHkkRkqeTvP",
+          "audio": "https://cdn.nadeshiko.co/media/21366/4/a3c86397c5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21366/4/a3c86397c5.webp"
+        }
+      ],
+      "note": "具体的な時刻・日付に付く「時点」のに。今日・明日 など相対語には付かない。",
+      "quizzes": []
+    },
+    {
+      "id": "niMokuteki",
+      "word": "〜に（目的）",
+      "read": "に",
+      "group": "case",
+      "level": "N4",
+      "emoji": "🛒",
+      "engine": "に（目的の座標）＋ 移動動詞（行く・来る）",
+      "blueprint": "移動の終点を「ある行為」に設定する——そこへ、それをしに行く",
+      "meaning": "去…（做某事）",
+      "examples": [
+        {
+          "jp": "買い物に行く。",
+          "cn": "去买东西。",
+          "src": "moji"
+        },
+        {
+          "jp": "映画を見に行こう。",
+          "cn": "去看电影吧。",
+          "src": "moji"
+        },
+        {
+          "jp": "母を迎えに行った。",
+          "cn": "去接了母亲。",
+          "src": "moji"
+        },
+        {
+          "jp": "明日、友達と食事に行きます。",
+          "cn": "明天和朋友去吃饭。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "やりに行(い)く! やりに行(い)く!",
+          "en": "Let me come over and play!",
+          "cn": "去玩！去玩！",
+          "media": "Hi Score Girl",
+          "ep": "EP7",
+          "at": "0:19",
+          "url": "https://nadeshiko.co/en/sentence/pp6Fjr9bW6jt",
+          "audio": "https://cdn.nadeshiko.co/media/20574/7/64e5e138ce.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20574/7/64e5e138ce.webp"
+        },
+        {
+          "jp": "しかし 何(なん)かと対決(たいけつ)が好(す)きだなー　見(み)に行こうぜ",
+          "en": "Let's go watch.",
+          "cn": "不过你还真是喜欢各种对决啊——去看吧。",
+          "media": "Ranma1/2 (2024) Season 2",
+          "ep": "EP8",
+          "at": "10:05",
+          "url": "https://nadeshiko.co/en/sentence/3p3W--SGug_U",
+          "audio": "https://cdn.nadeshiko.co/media/185731/8/a21683d4c2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185731/8/a21683d4c2.webp"
+        }
+      ],
+      "note": "動詞ます形＋に＋行く/来る で「去做某事」。目的の座標を指す。",
+      "quizzes": []
+    },
+    {
+      "id": "niZuni",
+      "word": "〜ずに",
+      "read": "ずに",
+      "group": "state",
+      "level": "N3",
+      "emoji": "🚫",
+      "engine": "未然形＋ず（打消の状態）＋ に（連用の架橋）",
+      "blueprint": "「その動作をしなかった」という状態を、主動作の背景として敷く",
+      "meaning": "不…就…；没…而…（＝ないで）",
+      "examples": [
+        {
+          "jp": "朝食を食べずに出かけた。",
+          "cn": "没吃早饭就出门了。",
+          "src": "moji"
+        },
+        {
+          "jp": "彼は何も言わずに去った。",
+          "cn": "他什么也没说就走了。",
+          "src": "moji"
+        },
+        {
+          "jp": "傘を持たずに外出して濡れた。",
+          "cn": "没带伞出门被淋湿了。",
+          "src": "moji"
+        },
+        {
+          "jp": "昨夜は眠らずに勉強した。",
+          "cn": "昨晚没睡就学习了。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "そんなこと言(い)わずに! 言(い)わずに!",
+          "en": "Don't be so stubborn! Don't be stubborn!",
+          "cn": "别那样说啦！别那样说！",
+          "media": "Catch Me at the Ballpark!",
+          "ep": "EP6",
+          "at": "9:04",
+          "url": "https://nadeshiko.co/en/sentence/j0zJaSIBWTU_",
+          "audio": "https://cdn.nadeshiko.co/media/184279/6/a284be267b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/184279/6/a284be267b.webp"
+        },
+        {
+          "jp": "今度(こんど)こそ迷(まよ)わずに 逃(に)げも隠(かく)れもせずに-",
+          "en": "I'll come to you without hesitation, without fear...",
+          "cn": "这次一定要毫不犹豫，不逃不藏地——",
+          "media": "Ranma ½",
+          "ep": "EP71",
+          "at": "18:17",
+          "url": "https://nadeshiko.co/en/sentence/_L0mlI3Gy1tK",
+          "audio": "https://cdn.nadeshiko.co/media/210/71/185a7e0453.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/210/71/185a7e0453.webp"
+        }
+      ],
+      "note": "ずに＝ないで。未然形＋ずにで「不…就…」。する は せずに になる点に注意。",
+      "quizzes": []
+    },
+    {
+      "id": "niNagarani",
+      "word": "〜ながらに（〜ながらの）",
+      "read": "ながらに",
+      "group": "state",
+      "level": "N2",
+      "emoji": "🌊",
+      "engine": "名詞＋ながら（状態の継続）＋ に（連用の架橋）",
+      "blueprint": "「ある状態・身分のままでいる」ことを、そのまま動作の様態にする",
+      "meaning": "在…的状态下；尽管是…（涙ながらに・昔ながらの・子供ながらに）",
+      "examples": [
+        {
+          "jp": "涙ながらに語った。",
+          "cn": "流着泪诉说。",
+          "src": "moji"
+        },
+        {
+          "jp": "昔ながらの町並みが残っている。",
+          "cn": "保留着昔日风貌的街道。",
+          "src": "moji"
+        },
+        {
+          "jp": "子供ながらに事情を悟っていた。",
+          "cn": "虽然是孩子却已明白其中缘由。",
+          "src": "moji"
+        },
+        {
+          "jp": "生まれながらに才能がある。",
+          "cn": "与生俱来就有才能。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "人(ひと)は 生(う)まれながらに平等(びょうどう)じゃない",
+          "en": "People are not created equal.",
+          "cn": "人并非生而平等。",
+          "media": "My Hero Academia",
+          "ep": "EP7",
+          "at": "3:51",
+          "url": "https://nadeshiko.co/en/sentence/RC70khx5SsPG",
+          "audio": "https://cdn.nadeshiko.co/media/21459/7/ef3d07c6f5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21459/7/ef3d07c6f5.webp"
+        },
+        {
+          "jp": "それでも 姫(ひめ)は うれしくて 涙(なみだ)ながらに笑(わら)いました",
+          "en": "Even so, she smiled happily, with tears of joy streaming down her face.",
+          "cn": "即便如此，公主仍喜极而泣地笑了。",
+          "media": "DARLING in the FRANXX",
+          "ep": "EP16",
+          "at": "0:44",
+          "url": "https://nadeshiko.co/en/sentence/uY-BvuU7AeOH",
+          "audio": "https://cdn.nadeshiko.co/media/99423/16/179d129e22.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99423/16/179d129e22.webp"
+        }
+      ],
+      "note": "名詞＋ながらに は「〜の状態のまま」。動詞ます形＋ながら（同時進行）とは別物。",
+      "quizzes": []
+    },
+    {
+      "id": "niMamani",
+      "word": "〜ままに",
+      "read": "ままに",
+      "group": "state",
+      "level": "N2",
+      "emoji": "🧭",
+      "engine": "連体形／名詞の＋まま（状態の維持）＋ に（連用の架橋）",
+      "blueprint": "ある状態を変えずに保持し、動作をその状態に沿わせて起こす",
+      "meaning": "按照…；任凭…（仰せのままに・意のままに）",
+      "examples": [
+        {
+          "jp": "足の向くままに歩いた。",
+          "cn": "信步而行。",
+          "src": "moji"
+        },
+        {
+          "jp": "上司の言われるままに働いた。",
+          "cn": "按上司说的照做。",
+          "src": "moji"
+        },
+        {
+          "jp": "気の向くままに絵を描く。",
+          "cn": "随心所欲地画画。",
+          "src": "moji"
+        },
+        {
+          "jp": "思うままに書き綴った。",
+          "cn": "随心所欲地写下来。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "はっ! 我(わ)が主(ぬし) 仰(おお)せのままに!",
+          "en": "Yes, master! As you wish!",
+          "cn": "是！吾主，谨遵吩咐！",
+          "media": "That Time I Got Reincarnated as a Slime",
+          "ep": "EP15",
+          "at": "12:29",
+          "url": "https://nadeshiko.co/en/sentence/1azg8wKiFxFC",
+          "audio": "https://cdn.nadeshiko.co/media/101280/15/606b57a972.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101280/15/606b57a972.webp"
+        },
+        {
+          "jp": "いや 意(い)のままに動(うご)かせる",
+          "en": "In fact, they'll likely do whatever he asks.",
+          "cn": "不，能随心所欲地操控。",
+          "media": "Death Note",
+          "ep": "EP33",
+          "at": "20:32",
+          "url": "https://nadeshiko.co/en/sentence/gkcmJDwxPWT-",
+          "audio": "https://cdn.nadeshiko.co/media/1535/33/ef7862bdab.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1535/33/ef7862bdab.webp"
+        }
+      ],
+      "note": "ままに は状態の維持。「言われるまま・足の向くまま・意のまま」が典型。",
+      "quizzes": []
+    },
+    {
+      "id": "niGamamani",
+      "word": "〜がまま（に）",
+      "read": "がまま",
+      "group": "state",
+      "level": "N1",
+      "emoji": "🎨",
+      "engine": "連体形＋が＋まま（あるがまま）＋（に）",
+      "blueprint": "事物が自然にそうなっている姿を、そのまま動作の様態として受け入れる",
+      "meaning": "任凭…；按照…的样子（思うがまま・望むがまま）",
+      "examples": [
+        {
+          "jp": "思うがままに描いた。",
+          "cn": "随心所欲地画。",
+          "src": "moji"
+        },
+        {
+          "jp": "彼女は自分の望むがままに生きた。",
+          "cn": "她按自己的愿望生活。",
+          "src": "moji"
+        },
+        {
+          "jp": "足の向くがままに旅を続けた。",
+          "cn": "任凭脚步继续旅行。",
+          "src": "moji"
+        },
+        {
+          "jp": "風に吹かれるがままに立っていた。",
+          "cn": "任凭风吹地站着。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "彼女(かのじょ)が望(のぞ)むがままに...",
+          "en": "I did as she had wished.",
+          "cn": "就如她所愿……",
+          "media": "Eureka Seven",
+          "ep": "EP44",
+          "at": "17:57",
+          "url": "https://nadeshiko.co/en/sentence/AxE9w78n7wCy",
+          "audio": "https://cdn.nadeshiko.co/media/237/44/becab8c7cc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/237/44/becab8c7cc.webp"
+        },
+        {
+          "jp": "なんというか　起(お)こるがまま なされるがまま",
+          "en": "It's like he takes in stride whatever comes up, or whatever happens to him,",
+          "cn": "怎么说呢，随事态发生，任人摆布。",
+          "media": "Blood Blockade Battlefront & Beyond",
+          "ep": "EP5",
+          "at": "5:50",
+          "url": "https://nadeshiko.co/en/sentence/k21ppFrVC4z4",
+          "audio": "https://cdn.nadeshiko.co/media/97886/5/28aefebb43.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/97886/5/28aefebb43.webp"
+        }
+      ],
+      "note": "がまま は ままに の強調。成り行きに身を委ねる含みが強い。",
+      "quizzes": []
+    },
+    {
+      "id": "niYueni",
+      "word": "〜ゆえに（〜がゆえに）",
+      "read": "ゆえに",
+      "group": "state",
+      "level": "N2",
+      "emoji": "⚖️",
+      "engine": "名詞／用言＋ゆえ（理由・原因）＋ に（連用の架橋）",
+      "blueprint": "「原因」という事態を、結論を導く理由の副詞として前置する",
+      "meaning": "因为…；由于…（＝だから）",
+      "examples": [
+        {
+          "jp": "貧しさゆえに進学を諦めた。",
+          "cn": "因贫穷放弃了升学。",
+          "src": "moji"
+        },
+        {
+          "jp": "愛ゆえに厳しく叱ることもある。",
+          "cn": "有时正因为爱才严厉斥责。",
+          "src": "moji"
+        },
+        {
+          "jp": "彼は若さゆえに失敗した。",
+          "cn": "他因年轻而失败。",
+          "src": "moji"
+        },
+        {
+          "jp": "真面目ゆえに損をすることもある。",
+          "cn": "正因为认真有时会吃亏。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "愛(あい)ゆえに オッホホ... うあっ",
+          "en": "Because of love.",
+          "cn": "因爱之故……",
+          "media": "Your lie in April",
+          "ep": "EP20",
+          "at": "2:44",
+          "url": "https://nadeshiko.co/en/sentence/Jw8Aud7IXKId",
+          "audio": "https://cdn.nadeshiko.co/media/20665/20/9df94d0dd7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20665/20/9df94d0dd7.webp"
+        },
+        {
+          "jp": "真面目(まじめ)に 課題(かだい)に向(む)かい過(す)ぎるがゆえに",
+          "en": "He faces his issues so diligently",
+          "cn": "正因为太认真地面对课题。",
+          "media": "Blue Box",
+          "ep": "EP17",
+          "at": "18:53",
+          "url": "https://nadeshiko.co/en/sentence/ykI-DrGg0flq",
+          "audio": "https://cdn.nadeshiko.co/media/170942/17/497025fec7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170942/17/497025fec7.webp"
+        }
+      ],
+      "note": "ゆえに＝だから。名詞＋ゆえに／用言＋がゆえに。硬い書き言葉。",
+      "quizzes": []
+    },
+    {
+      "id": "niKotoni",
+      "word": "〜ことに",
+      "read": "ことに",
+      "group": "state",
+      "level": "N2",
+      "emoji": "💬",
+      "engine": "感情形容詞／名詞＋こと（事柄）＋ に（連用の架橋）",
+      "blueprint": "話し手の感情評価を、文全体を覆う副詞として文頭に置く",
+      "meaning": "令人…的是；…的是（嬉しいことに・残念なことに）",
+      "examples": [
+        {
+          "jp": "嬉しいことに、試験に合格した。",
+          "cn": "令人高兴的是，考试合格了。",
+          "src": "moji"
+        },
+        {
+          "jp": "残念なことに、彼は来なかった。",
+          "cn": "遗憾的是，他没来。",
+          "src": "moji"
+        },
+        {
+          "jp": "ありがたいことに、雨が止んだ。",
+          "cn": "值得庆幸的是，雨停了。",
+          "src": "moji"
+        },
+        {
+          "jp": "不思議なことに、誰も気づかなかった。",
+          "cn": "奇怪的是，谁都没注意到。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ただ 残念(ざんねん)なことに...",
+          "en": "However, and this is most unfortunate,",
+          "cn": "只是，遗憾的是……",
+          "media": "Hajime no Ippo: The Fighting!",
+          "ep": "EP46",
+          "at": "16:33",
+          "url": "https://nadeshiko.co/en/sentence/aAgwtW17abav",
+          "audio": "https://cdn.nadeshiko.co/media/263/46/d45c039a75.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/263/46/d45c039a75.webp"
+        },
+        {
+          "jp": "残念(ざんねん)なことにちょうど道(みち)の駅(えき) 閉(し)まっちゃいました",
+          "en": "Unfortunately, the roadside station just closed.",
+          "cn": "遗憾的是，道之驿刚刚关门了。",
+          "media": "Kupio lives in his car",
+          "ep": "EP6",
+          "at": "7:50",
+          "url": "https://nadeshiko.co/en/sentence/S813ekbdtBg0",
+          "audio": "https://cdn.nadeshiko.co/media/yt/UC9s5obQcNlZzuBTKqmRqHag/jnfv3G7y_qk/3c1d1b39a1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/yt/UC9s5obQcNlZzuBTKqmRqHag/jnfv3G7y_qk/3c1d1b39a1.webp"
+        }
+      ],
+      "note": "感情を表す語＋ことに で、話し手の評価を文頭に前置する。",
+      "quizzes": []
+    },
+    {
+      "id": "niUchini",
+      "word": "〜うちに",
+      "read": "うちに",
+      "group": "state",
+      "level": "N3",
+      "emoji": "⏳",
+      "engine": "連体形／名詞の＋うち（期間の内）＋ に（連用の架橋）",
+      "blueprint": "動作を「ある状態がまだ変わらない時間の窓」の中に収める",
+      "meaning": "趁着…；在…期间（不知不觉）",
+      "examples": [
+        {
+          "jp": "若いうちに挑戦したほうがいい。",
+          "cn": "最好趁年轻挑战。",
+          "src": "moji"
+        },
+        {
+          "jp": "忘れないうちにメモしておく。",
+          "cn": "趁没忘先记下来。",
+          "src": "moji"
+        },
+        {
+          "jp": "温かいうちに食べてください。",
+          "cn": "请趁热吃。",
+          "src": "moji"
+        },
+        {
+          "jp": "本を読んでいるうちに眠くなった。",
+          "cn": "读着读着就困了。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "とりあえず いるうちに あの...",
+          "en": "while you're still here...",
+          "cn": "趁你还在的时候，那个……",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP22",
+          "at": "43:48",
+          "url": "https://nadeshiko.co/en/sentence/xXjD3-FrdNEG",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/22/0f21143ab4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/22/0f21143ab4.webp"
+        },
+        {
+          "jp": "若(わか)いうちに健康的(けんこうてき)な生活(せいかつ)を 体(からだ)に覚(おぼ)えさせとけよ",
+          "en": "So get your body used to a healthy sleep schedule while you're still young.",
+          "cn": "趁年轻让身体记住健康的生活习惯吧。",
+          "media": "Call of the Night",
+          "ep": "EP4",
+          "at": "0:40",
+          "url": "https://nadeshiko.co/en/sentence/nqPwDUqxyzQG",
+          "audio": "https://cdn.nadeshiko.co/media/141391/4/a3ab8ec8c2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/141391/4/a3ab8ec8c2.webp"
+        }
+      ],
+      "note": "うちに は「状態が変わる前の窓」。〜しているうちに で「いつのまにか」の含み。",
+      "quizzes": []
+    },
+    {
+      "id": "niWarini",
+      "word": "〜わりに（は）",
+      "read": "わりに",
+      "group": "state",
+      "level": "N2",
+      "emoji": "📐",
+      "engine": "連体形／名詞の＋わり（割合・比較）＋ に（連用の架橋）",
+      "blueprint": "一つの予想ベースラインを置き、実際がそれに釣り合わないと指摘する",
+      "meaning": "虽然…却…；比起…来（出乎预料）",
+      "examples": [
+        {
+          "jp": "値段のわりに美味しい。",
+          "cn": "相对价格来说很好吃。",
+          "src": "moji"
+        },
+        {
+          "jp": "彼は年齢のわりに老けて見える。",
+          "cn": "他看起来比年龄老。",
+          "src": "moji"
+        },
+        {
+          "jp": "頑張ったわりに結果が出なかった。",
+          "cn": "虽然努力了却没出结果。",
+          "src": "moji"
+        },
+        {
+          "jp": "小さいわりに力が強い。",
+          "cn": "个子小力气却很大。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あの禿(はげ) 小(ちい)さいわりに恐(おそ)ろしい",
+          "en": "That servant girl is scarier than she looks.",
+          "cn": "那个秃子，个子小却很可怕。",
+          "media": "The Apothecary Diaries",
+          "ep": "EP8",
+          "at": "10:18",
+          "url": "https://nadeshiko.co/en/sentence/2NK7x-gLGr5h",
+          "audio": "https://cdn.nadeshiko.co/media/161645/8/9668534966.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161645/8/9668534966.webp"
+        },
+        {
+          "jp": "負(ま)けたわりに楽(たの)しそうね 沙弥香(さやか)",
+          "en": "You seem pretty happy to have lost, Sayaka.",
+          "cn": "输了却看起来很开心呢，沙弥香。",
+          "media": "Bloom Into You",
+          "ep": "EP7",
+          "at": "22:35",
+          "url": "https://nadeshiko.co/en/sentence/Qq8PLIrHykpJ",
+          "audio": "https://cdn.nadeshiko.co/media/101573/7/774e8fe2b2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101573/7/774e8fe2b2.webp"
+        }
+      ],
+      "note": "わりに は「釣り合わない/予想外」の対比。名詞＋の＋わりに／連体形＋わりに。",
+      "quizzes": []
+    },
+    {
+      "id": "niKawarini",
+      "word": "〜かわりに",
+      "read": "かわりに",
+      "group": "state",
+      "level": "N3",
+      "emoji": "🔄",
+      "engine": "名詞の／連体形＋かわり（代替）＋ に（連用の架橋）",
+      "blueprint": "一方を他方の代替・埋め合わせとして、動作の前提に置く",
+      "meaning": "代替…；作为交换…",
+      "examples": [
+        {
+          "jp": "母のかわりに夕食を作った。",
+          "cn": "代替母亲做了晚饭。",
+          "src": "moji"
+        },
+        {
+          "jp": "英語を教えてもらうかわりに、日本語を教えてあげる。",
+          "cn": "他教我英语，作为交换我教他日语。",
+          "src": "moji"
+        },
+        {
+          "jp": "今日は車のかわりに自転車で行く。",
+          "cn": "今天不坐车改骑自行车去。",
+          "src": "moji"
+        },
+        {
+          "jp": "家事を手伝うかわりに、お小遣いをもらう。",
+          "cn": "帮忙做家务，作为交换拿到零花钱。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "かわりに アーニャがおしえる!",
+          "en": "Anya will train you instead.",
+          "cn": "作为交换，由阿尼亚来教你！",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP9",
+          "at": "19:25",
+          "url": "https://nadeshiko.co/en/sentence/5ihHUiiTE9ut",
+          "audio": "https://cdn.nadeshiko.co/media/177937/9/cfb1dafd00.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/9/cfb1dafd00.webp"
+        },
+        {
+          "jp": "そのかわりに ゆーくんを頂戴(ちょうだい)。",
+          "en": "So give me Yu-kun in return.",
+          "cn": "作为交换，把悠君给我。",
+          "media": "Can a Boy-Girl Friendship Survive?",
+          "ep": "EP12",
+          "at": "10:48",
+          "url": "https://nadeshiko.co/en/sentence/rqG1JZnqqdIv",
+          "audio": "https://cdn.nadeshiko.co/media/153554/12/29d047a12c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153554/12/29d047a12c.webp"
+        }
+      ],
+      "note": "かわりに は代替。「A のかわりに B」＝A の代わりに B。",
+      "quizzes": []
+    },
+    {
+      "id": "niTameni",
+      "word": "〜ために",
+      "read": "ために",
+      "group": "state",
+      "level": "N3",
+      "emoji": "🎯",
+      "engine": "名詞の／連体形＋ため（目的・原因）＋ に（連用の架橋）",
+      "blueprint": "目的または原因という事態を、主動作を方向づける副詞にする",
+      "meaning": "为了…；因为…",
+      "examples": [
+        {
+          "jp": "夢を叶えるために努力する。",
+          "cn": "为了实现梦想而努力。",
+          "src": "moji"
+        },
+        {
+          "jp": "家族のために働いている。",
+          "cn": "为了家人而工作。",
+          "src": "moji"
+        },
+        {
+          "jp": "台風のために電車が止まった。",
+          "cn": "因为台风电车停运了。",
+          "src": "moji"
+        },
+        {
+          "jp": "健康のために毎日運動している。",
+          "cn": "为了健康每天运动。",
+          "src": "moji"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "きっと 弔(とむら)いをするために...",
+          "en": "He has gone to perform a proper burial.",
+          "cn": "一定是去为他做法事……",
+          "media": "The Eminence in Shadow Season 2",
+          "ep": "EP7",
+          "at": "18:09",
+          "url": "https://nadeshiko.co/en/sentence/4X7Cc5JSHs9Z",
+          "audio": "https://cdn.nadeshiko.co/media/161964/7/829e11e589.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161964/7/829e11e589.webp"
+        },
+        {
+          "jp": "たくさんリスニングをするために",
+          "en": "To do lots of listening",
+          "cn": "为了做大量的听力练习。",
+          "media": "Japanese Podcast with Hana",
+          "ep": "EP17",
+          "at": "27:25",
+          "url": "https://nadeshiko.co/en/sentence/VnDkMIQvgchA",
+          "audio": "https://cdn.nadeshiko.co/media/yt/UCqRoGBcr5fESDTUf5n8kw4Q/kXTKHaS__GM/5d7d604a7c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/yt/UCqRoGBcr5fESDTUf5n8kw4Q/kXTKHaS__GM/5d7d604a7c.webp"
+        }
+      ],
+      "note": "ために は目的と原因の両義。名詞＋の＋ために／連体形＋ために。",
+      "quizzes": []
     }
   ],
   "etymology": {
@@ -1196,6 +2148,10 @@
             "example": "京都にぞある → 断定"
           }
         ]
+      },
+      {
+        "title": "第六幕：三本柱——現代「に」の全体設計図",
+        "content": "古典「にあり」から分化した現代の「に」は、機能のうえで三本の柱にきれいに分かれる。①断定の「に」（医者になる・静かにする）＝なり連用形の直系。②格助詞の「に」（東京に行く・三時に始まる・友達にあげる）＝名詞を現実座標にピン留めする GPS。③状態接続の「に」（知らずに・涙ながらに・思うがままに）＝事態や状態を丸ごと述語の様態副詞に変える架橋。複合語法（について・によって・につれて…）は、②の格助詞が動詞と複合した拡張である。"
       }
     ],
     "timeline": [
