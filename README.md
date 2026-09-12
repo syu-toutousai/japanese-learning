@@ -7,7 +7,7 @@
 | 内容 | 说明 |
 |---|---|
 | [`AGENTS.md`](./AGENTS.md) | 📕 课件制作守则：如何新建/增补课件的规则、约定与坑（数据格式 → TTS → 振假名 → Nadeshiko → 题库 → 模板注入） |
-| [`index.html`](./index.html) | 🏠 课件集索引页：三套课件入口（本地 serve 后即为主页） |
+| [`index.html`](./index.html) | 🏠 课件集索引页：六套课件入口（本地 serve 后即为主页） |
 | [`keishiku-courseware/`](./keishiku-courseware/) | 形式名词・十四杰完全图鉴：14 词按功能分 5 组 + 核心意象 + 最小对立句対比 + 四层题库与错题本，57 段 TTS 发音 + 14 词×47 段番剧/日剧原声（含画面缩略图），单文件 HTML 离线可用 |
 | [`shidai-courseware/`](./shidai-courseware/) | 「次第」完全掌握：四种用法讲解 + 例句原声 + クイズ双题库（基礎15問 / 挑戦10問），单文件 HTML 离线可用 |
 | [`keiji-courseware/`](./keiji-courseware/) | 接头接尾词・口袋图鉴：词条存 `pocket.json` 随手增删，重建即自动生成卡片、TTS 发音与三层题库（詞義認識 / 運用填空 / 聴解判別）＋错题本，单文件 HTML 离线可用 |
