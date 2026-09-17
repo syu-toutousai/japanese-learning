@@ -1,0 +1,675 @@
+{
+  "meta": {
+    "title": "見えない助詞",
+    "titleCn": "句法の省略と中止形",
+    "jp": "格助詞の省略 ・ 中止形 ・ 係り切れ目 ・ 言い切り",
+    "tags": ["N4", "N3", "N2", "文法體系", "口语", "零助詞", "中止形"],
+    "voiceFemale": "ja-JP-NanamiNeural"
+  },
+  "groups": [
+    { "id": "zero",    "name": "零助詞 · 省略的助词", "color": "#0f766e", "emoji": "◌",    "note": "语序扛住格角色，助词可以退场" },
+    { "id": "chuushi", "name": "中止形 · 连用中止",     "color": "#7c3aed", "emoji": "🔀",  "note": "接续力在活用形，逗号只是显示边界" },
+    { "id": "kakari",  "name": "係り切れ目 · 修饰归属", "color": "#d97706", "emoji": "✂️",  "note": "逗号改变修饰/对比/情绪的落点" },
+    { "id": "iikiri",  "name": "言い切り · 断句语气",   "color": "#b91c1c", "emoji": "〰️", "note": "没有句尾动词，句子用语调截停" }
+  ],
+  "items": [
+
+    {
+      "id": "wo",
+      "word": "ご飯食べる？",
+      "read": "ごはんたべる？",
+      "tag": "格助詞ゼロ（目的語）",
+      "drop": "を",
+      "standard": "ご飯を食べる？",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🍚",
+      "meaning": "口语里 を（动作对象）被吞掉：名词直接贴动词，语序照样把对象关系表明。",
+      "examples": [
+        { "jp": "ご飯食べた？", "cn": "吃饭了吗？" },
+        { "jp": "宿題やった？", "cn": "作业做了吗？" },
+        { "jp": "ちょっとスーパー寄ってくる。", "cn": "我去趟超市。" }
+      ],
+      "nadeshiko": [
+        { "jp": "ロボットって ご飯 食べるの？",
+          "en": "Robots eat food?",
+          "cn": "机器人也会吃饭吗？",
+          "media": "ATRI -My Dear Moments-", "ep": "EP4", "at": "6:17",
+          "url": "https://nadeshiko.co/en/sentence/17Tg8UJpgePa",
+          "audio": "https://cdn.nadeshiko.co/media/154963/4/12a749c2f2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154963/4/12a749c2f2.webp" },
+        { "jp": "起きろ アーニャ! 宿題やったのか!",
+          "en": "Get up, Anya! Did you do your homework?!",
+          "cn": "快起床，阿尼亚！作业做了吗！",
+          "media": "SPY x FAMILY Season 3", "ep": "EP2", "at": "2:34",
+          "url": "https://nadeshiko.co/en/sentence/L2am9DudPoGm",
+          "audio": "https://cdn.nadeshiko.co/media/177937/2/b02ed0df06.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/2/b02ed0df06.webp" }
+      ],
+      "note": "复原很容易：「ロボットって（ご飯を）食べるの？」。日语的省略是思维习惯不是偷懒——翻译成中文时照样把「了/吗」补全即可。"
+    },
+
+    {
+      "id": "ga",
+      "word": "天気いいね",
+      "read": "てんきいいね",
+      "tag": "格助詞ゼロ（主語）",
+      "drop": "が",
+      "standard": "天気がいいね",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "☀️",
+      "meaning": "描述天气/状态的 主语 が 常连同 は 一起消失：今日は天気がいい→天気いいね。信息靠语境补足。",
+      "examples": [
+        { "jp": "今日天気いいね。", "cn": "今天天气真不错啊。" },
+        { "jp": "みんな集まった？", "cn": "大家都到齐了吗？" },
+        { "jp": "昨日来た人、誰？", "cn": "昨天来的那个人，是谁？" }
+      ],
+      "nadeshiko": [
+        { "jp": "いいね 天気いいし ねっ!",
+          "en": "Good idea. The weather's great too.",
+          "cn": "好主意。天气也不错呢！",
+          "media": "17.3 about a sex", "ep": "EP7", "at": "8:45",
+          "url": "https://nadeshiko.co/en/sentence/hfYKEv4n2jcF",
+          "audio": "https://cdn.nadeshiko.co/media/mv/109590/7/caa1e4bb37.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/109590/7/caa1e4bb37.webp" },
+        { "jp": "めっちゃ天気いい",
+          "en": "The weather is perfect.",
+          "cn": "天气超好。",
+          "media": "Terrace House: Tokyo 2019-2020", "ep": "EP23", "at": "24:36",
+          "url": "https://nadeshiko.co/en/sentence/RhpiLQLBqvM6",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/23/719a73b0bc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/23/719a73b0bc.webp" }
+      ],
+      "note": "连体修饰节里的 主語 の/が 也能消失：「昨日来た人」＝「昨日来た（=が/の）人」。日本語の手抜きは連体節にも及ぶ。"
+    },
+
+    {
+      "id": "wa",
+      "word": "お前、遅いぞ。",
+      "read": "おまえ、おそいぞ。",
+      "tag": "助詞ゼロ（主題）",
+      "drop": "は",
+      "standard": "お前は遅いぞ。",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "⏰",
+      "meaning": "主题/评价的 は 在口语常消失，尤其第一、二人称：主语是你我他，听者心里自带。",
+      "examples": [
+        { "jp": "お前、遅いぞ！", "cn": "你来得也太慢了！" },
+        { "jp": "俺、そう思うよ。", "cn": "我是这么觉得的。" },
+        { "jp": "ご飯、おかわり！", "cn": "再来一碗饭！" }
+      ],
+      "nadeshiko": [
+        { "jp": "お... 遅いぞ 温水。",
+          "en": "Y-You're late, Nukumizu.",
+          "cn": "唔……你迟到了，温水。",
+          "media": "Makeine: Too Many Losing Heroines!", "ep": "EP10", "at": "3:34",
+          "url": "https://nadeshiko.co/en/sentence/cifQHDzy_wj5",
+          "audio": "https://cdn.nadeshiko.co/media/171457/10/551bcc5f7a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/171457/10/551bcc5f7a.webp" }
+      ],
+      "note": "はゼロ最频繁出现在第一、二人称的评价句。第三人称话题仍常保留 は——新话题要重新引入，舍得省是亲昵。"
+    },
+
+    {
+      "id": "ni",
+      "word": "東京行くんだ",
+      "read": "とうきょういくんだ",
+      "tag": "格助詞ゼロ（移動先）",
+      "drop": "に",
+      "standard": "東京に行くんだ",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🚃",
+      "meaning": "移動動詞（行く/来る/帰る/戻る）前的 に・へ 口语高频省略：方向和迁移靠动词词义直接带出。",
+      "examples": [
+        { "jp": "明日、東京行くんだ。", "cn": "明天要去东京。" },
+        { "jp": "学校行ってくる。", "cn": "我去上学了。" },
+        { "jp": "今、部屋戻る。", "cn": "现在回房间。" }
+      ],
+      "nadeshiko": [
+        { "jp": "勝手に東京行くとか...",
+          "en": "Now you're going to Tokyo?",
+          "cn": "擅自要去东京什么的……",
+          "media": "Can a Boy-Girl Friendship Survive?", "ep": "EP4", "at": "5:18",
+          "url": "https://nadeshiko.co/en/sentence/r-uCsqlumqYg",
+          "audio": "https://cdn.nadeshiko.co/media/153554/4/96429530fd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153554/4/96429530fd.webp" }
+      ],
+      "note": "場所の「に」和方向の「へ」都可省。只有「移動動詞の意味が目的地を明示できる」时才放心省。"
+    },
+
+    {
+      "id": "de",
+      "word": "ここ待ってて。",
+      "read": "ここまってて。",
+      "tag": "格助詞ゼロ（場所）",
+      "drop": "で",
+      "standard": "ここで待ってて。",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "📍",
+      "meaning": "动作场所的 で 口语中常被吞掉，尤其「这里/这里等一下」这类即时短指令。",
+      "examples": [
+        { "jp": "ここ待ってて。", "cn": "在这里等着。" },
+        { "jp": "部屋待ってるよ。", "cn": "在屋里等着呢。" },
+        { "jp": "電車帰り。", "cn": "坐电车回。" }
+      ],
+      "nadeshiko": [
+        { "jp": "待っててね レントン　待ってて!",
+          "en": "Wait for me, Renton! Wait for me!",
+          "cn": "等着我呀，伦顿。等着我！",
+          "media": "Eureka Seven", "ep": "EP26", "at": "10:04",
+          "url": "https://nadeshiko.co/en/sentence/TEv7rfgNWxQH",
+          "audio": "https://cdn.nadeshiko.co/media/237/26/07e723784e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/237/26/07e723784e.webp" }
+      ],
+      "note": "でゼロ没有 をゼロ 那么普通，但並不生硬。正式书面请保留 で——省是口语的专利（这里「ここで待ってて」对比「電車で帰る」都是口语）。"
+    },
+
+    {
+      "id": "basho",
+      "word": "今、どこいる？",
+      "read": "いま、どこいる？",
+      "tag": "格助詞ゼロ（存在場所）",
+      "drop": "に",
+      "standard": "今、どこにいる？",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🧭",
+      "meaning": "存在動詞いる/ある 前的 に 特别能省略：どこにいる→どこいる、家にいる→家いる。問句靠上昇調補足。",
+      "examples": [
+        { "jp": "今、どこいる？", "cn": "你现在在哪？" },
+        { "jp": "お母さん、家いる？", "cn": "妈妈在家吗？" },
+        { "jp": "まだ会社いるの？", "cn": "还在公司吗？" }
+      ],
+      "nadeshiko": [
+        { "jp": "急に電話 切れるし どこいるんだろう",
+          "en": "After hanging up like that, I wonder where he went.",
+          "cn": "突然挂掉电话，人在哪儿呢。",
+          "media": "You and I Are Polar Opposites", "ep": "EP6", "at": "11:41",
+          "url": "https://nadeshiko.co/en/sentence/jB_tZDDIr_Jz",
+          "audio": "https://cdn.nadeshiko.co/media/184951/6/01c50cf007.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/184951/6/01c50cf007.webp" }
+      ],
+      "note": "存在句的 に 在所有格助词里省略率最高——「どこいる」比「どこにいる」更像原生口语。"
+    },
+
+    {
+      "id": "jikan",
+      "word": "明日来てね。",
+      "read": "あしたきてね。",
+      "tag": "格助詞ゼロ（時間）",
+      "drop": "に",
+      "standard": "明日に来てね。",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🗓️",
+      "meaning": "时间点的 に 也是省略明星：明日（に）来てね。相对「九時」仍常保留 に。",
+      "examples": [
+        { "jp": "明日、来てね。", "cn": "明天来哦。" },
+        { "jp": "あさって、また電話する。", "cn": "后天再打电话。" },
+        { "jp": "夕方、集合ね。", "cn": "傍晚集合哦。" }
+      ],
+      "nadeshiko": [
+        { "jp": "ごめんなさい また明日 来てね",
+          "en": "I'm sorry. Please come back tomorrow.",
+          "cn": "对不起。明天再来哦。",
+          "media": "Cardcaptor Sakura", "ep": "EP28", "at": "7:46",
+          "url": "https://nadeshiko.co/en/sentence/MUdQGgARbEIj",
+          "audio": "https://cdn.nadeshiko.co/media/232/28/56406e0000.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/232/28/56406e0000.webp" }
+      ],
+      "note": "「〇〇曜日」「〇〇時」之後 に 更常保留；「昨日/今日/明日/あさって」這種詞彙自帶時間感，に 幾乎必省。"
+    },
+
+    {
+      "id": "ka",
+      "word": "本気？",
+      "read": "ほんき？",
+      "tag": "終助詞ゼロ（疑問）",
+      "drop": "か",
+      "standard": "本気か？",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "❓",
+      "meaning": "疑问的 か 在口头由「上昇調」承担：本気か？→本気？……か 退居文章/正式发问。",
+      "examples": [
+        { "jp": "それ、本気？", "cn": "你是认真的吗？" },
+        { "jp": "もう帰る？", "cn": "要回去了吗？" },
+        { "jp": "今日、忙しい？", "cn": "今天忙吗？" }
+      ],
+      "nadeshiko": [
+        { "jp": "ほんと? ほんとにほんと?",
+          "en": "Really? Are you really sure?",
+          "cn": "真的？真的是真的吗？",
+          "media": "Toradora!", "ep": "EP14", "at": "19:22",
+          "url": "https://nadeshiko.co/en/sentence/puWic1NW6mMB",
+          "audio": "https://cdn.nadeshiko.co/media/4224/14/ed35bb9ab0.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4224/14/ed35bb9ab0.webp" }
+      ],
+      "note": "かゼロ之後常用 の/ね 補語気：「本気なの？」「良いでしょ？」——语调負責詢問，助詞悶着水。"
+    },
+
+    {
+      "id": "negai",
+      "word": "水、飲みたい。",
+      "read": "みず、のみたい。",
+      "tag": "格助詞ゼロ（願望句）",
+      "drop": "が",
+      "standard": "水が飲みたい。",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "💭",
+      "meaning": "「たい/ほしい」願望句的 が/を 常省略：對象詞頂置後接願望動詞，頓号提示取願。",
+      "examples": [
+        { "jp": "水、飲みたい。", "cn": "想喝水。" },
+        { "jp": "ラーメン食べたい。", "cn": "想吃拉面。" },
+        { "jp": "一緒に行きたい。", "cn": "想一起去。" }
+      ],
+      "nadeshiko": [
+        { "jp": "食べたい! 食べたい!　食べたい! 食べたい! 食べたい! 食べたい!",
+          "en": "I want chocolate! I want chocolate! I want chocolate!",
+          "cn": "想吃！想吃！想吃！想吃！",
+          "media": "Dragon Ball DAIMA", "ep": "EP12", "at": "5:03",
+          "url": "https://nadeshiko.co/en/sentence/D59Pxhe6b5yH",
+          "audio": "https://cdn.nadeshiko.co/media/170083/12/10826a82ff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170083/12/10826a82ff.webp" }
+      ],
+      "note": "願望句常同时省 が：水（が）飲みたい。DP那幕是「チョコ（が）食べたい！」的无限循环——願望强，助词弱。"
+    },
+
+    {
+      "id": "zu",
+      "word": "俺、来週から東京行く。",
+      "read": "おれ、らいしゅうからとうきょういく。",
+      "tag": "重合ゼロ（は＋に）",
+      "drop": "に",
+      "standard": "俺は来週から東京に行く。",
+      "group": "zero",
+      "level": "N3",
+      "emoji": "🧩",
+      "meaning": "现实句子往往一次省好几个助词：俺(は)＋東京(に)——多颗助词一起退场，靠语序与节奏托底。",
+      "examples": [
+        { "jp": "俺、来週から東京行く。", "cn": "我下周开始去东京。" },
+        { "jp": "今日、学校行く？", "cn": "今天去学校吗？" },
+        { "jp": "あの先生、明日来るの？", "cn": "那位老师明天来吗？" }
+      ],
+      "nadeshiko": [
+        { "jp": "俺 来週から東京行く",
+          "en": "I'm heading to Tokyo next week.",
+          "cn": "我下周开始要去东京。",
+          "media": "Cosmic Princess Kaguya!", "ep": "EP1", "at": "64:51",
+          "url": "https://nadeshiko.co/en/sentence/qELnhQmZxpf1",
+          "audio": "https://cdn.nadeshiko.co/media/201903/1/8e60a47751.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/201903/1/8e60a47751.webp" }
+      ],
+      "note": "复数助词一起消失是ギャグ或亲昵語气的招牌。学习时请先练「单层省略」再叠层——拆开重建的能力。"
+    },
+
+    {
+      "id": "da",
+      "word": "まだ学生。",
+      "read": "まだがくせい。",
+      "tag": "コピュラゼロ（だ）",
+      "drop": "だ",
+      "standard": "まだ学生だ。",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🏷️",
+      "meaning": "句尾断定 だ/です 被「断句」替代：句号+語気承擔断定。新聞/会話/看板都慣用。",
+      "examples": [
+        { "jp": "えっ、嘘。", "cn": "哎，骗人的吧。" },
+        { "jp": "明日、日曜日。", "cn": "明天是星期天。" },
+        { "jp": "これ、俺のスマホ。", "cn": "这是我的手机。" }
+      ],
+      "nadeshiko": [
+        { "jp": "名前も嘘 経歴も嘘 嘘ばっかりだ-",
+          "en": "My name, too, a lie... My personal history, a lie...",
+          "cn": "名字是假的，经历也是假的，全是假的。",
+          "media": "Code Geass: Lelouch of the Rebellion", "ep": "EP1", "at": "22:29",
+          "url": "https://nadeshiko.co/en/sentence/ajAFiXPXuJqC",
+          "audio": "https://cdn.nadeshiko.co/media/1575/1/9809992159.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1575/1/9809992159.webp" }
+      ],
+      "note": "だゼロ後（嘘。／学生。）不会有任何语气的丢失——斷定由句子边界承担。与「体言止め」「広告見出し」是親戚。"
+    },
+
+    {
+      "id": "hukugen",
+      "word": "復元できればOK。",
+      "read": "ふくげんできればおっけー。",
+      "tag": "ルール（最上位）",
+      "group": "zero",
+      "level": "N4",
+      "emoji": "🔍",
+      "meaning": "省略成立的最高法则：听者能在一秒内把助词「装回去」。装得回去就自然，装不回去就是歧义。",
+      "examples": [
+        { "jp": "ご飯食べた？", "cn": "吃饭了吗？（を 一瞬復元）" },
+        { "jp": "昨日、新宿行ったよ。", "cn": "昨天去了新宿。（に/へ 復元容易）" },
+        { "jp": "彼の顔、見た？", "cn": "看到他的脸了吗？（顔を 見た）" }
+      ],
+      "quizzes": [
+        { "type": "judge", "q": "省略は、聞き手が助詞を復元できなければ不自然になる。", "ans": true, "exp": "✓ 復元容易性＝省略的通行证。装不回去的省略（歧义）应该用还不省。" }
+      ],
+      "note": "这是全屋子的「题芯」：判断一句省略是否地道＝当场復元试试。復元零成本，省略就满分。"
+    },
+
+    {
+      "id": "kinshi",
+      "word": "省略しないとき",
+      "read": "しょうりゃくしないとき",
+      "tag": "ルール（禁区）",
+      "group": "zero",
+      "level": "N3",
+      "emoji": "⛔",
+      "meaning": "哪些场合反而要保留助词：①对比焦点 ②正式/书面 ③可能产生歧义。省略是「安心时的特权」。",
+      "examples": [
+        { "jp": "私は行きますが、彼は行きません。", "cn": "我去，但他不去。（对比焦点 は 不可省）" },
+        { "jp": "コーヒーは飲みます。", "cn": "咖啡我是喝的。（对比的 は）" },
+        { "jp": "報告書は明日提出します。", "cn": "报告书明天提交。（书面保留格助词）" }
+      ],
+      "quizzes": [
+        { "type": "judge", "q": "対比の焦点（私は行くが彼は…）では は を残すべきだ。", "ans": true, "exp": "✓ は 是对比焦点唯一合法的存在位置。省了會聽錯主語。" }
+      ],
+      "note": "和「復元容易性」配对背：復元出来＝能省；对比焦点/正式度＝不省。"
+    },
+
+    {
+      "id": "junjo",
+      "word": "脱ぎ、入った。",
+      "read": "ぬぎ、はいった。",
+      "tag": "中止形（順序）",
+      "role": "next",
+      "standard": "脱いで、部屋に入った。",
+      "group": "chuushi",
+      "level": "N3",
+      "emoji": "⏱️",
+      "meaning": "連用形中止（＋、）表示先后顺序：脱ぎ、入った＝脱いでから入った。書面/叙述腔的 て 替代。",
+      "examples": [
+        { "jp": "彼は帽子を脱ぎ、部屋に入った。", "cn": "他脱下帽子，走进了房间。" },
+        { "jp": "本を閉じ、立ち上がった。", "cn": "合上书，站了起来。" },
+        { "jp": "手を挙げ、発言を求めた。", "cn": "举手，请求发言。" }
+      ],
+      "note": "中止形 vs て形：て形更口语（顺而随意），中止形像叙述/书面的加速带。接续力是活用形本身——逗号只是显示边界。（真話）"
+    },
+
+    {
+      "id": "gen",
+      "word": "混み、遅れた。",
+      "read": "こみ、おくれた。",
+      "tag": "中止形（因果）",
+      "role": "cause",
+      "standard": "道が混んだので、遅れてしまった。",
+      "group": "chuushi",
+      "level": "N3",
+      "emoji": "🌧️",
+      "meaning": "前段中止形把因果压进一句：混み、遅れた＝混んでいたから遅れた。原因与结果同款逗号连接。",
+      "examples": [
+        { "jp": "道が混み、約束の時間に遅れてしまった。", "cn": "路上太堵，结果误了约定的时间。" },
+        { "jp": "雨が降り、試合は中止になった。", "cn": "因为下雨，比赛取消了。" },
+        { "jp": "風邪を引き、学校を休んだ。", "cn": "感冒了，没去上学。" }
+      ],
+      "note": "直译成中文「堵车，迟到了」也自然——日语离中文的「意合」比想象近。是因果就用逗号，等于中文里的白话因果。"
+    },
+
+    {
+      "id": "taihi",
+      "word": "春は美しく、夏は暑い。",
+      "read": "はるはうつくしく、なつはあつい。",
+      "tag": "中止形（対比）",
+      "role": "contrast",
+      "standard": "春は美しいが、夏は暑い。",
+      "group": "chuushi",
+      "level": "N3",
+      "emoji": "⚖️",
+      "meaning": "中止形把対比压进一句：Aであり、B。用 が/けど 以外的「形」表达对立感。",
+      "examples": [
+        { "jp": "兄は外交的で、弟は内向的だ。", "cn": "哥哥外向，弟弟内向。" },
+        { "jp": "春は美しく、夏は暑い。", "cn": "春天美丽，夏天炎热。" },
+        { "jp": "彼は賢く、それでいて謙虚だ。", "cn": "他聪明，而且很谦虚。" }
+      ],
+      "note": "「〜であり」中止＝文語对比腔；「〜て」对比更口语（嘘つきで、すぐ逃げる）。判定可以看逗号两旁的主语是否成对。"
+    },
+
+    {
+      "id": "heiretsu",
+      "word": "起き、食べ、行く。",
+      "read": "おき、たべ、いく。",
+      "tag": "中止形（並列）",
+      "role": "parallel",
+      "standard": "起きて、食べて、行く。",
+      "group": "chuushi",
+      "level": "N3",
+      "emoji": "🔗",
+      "meaning": "三个以上动作用中止形排比，像翻清单一样推进：起き、食べ、行く。段数不受限。",
+      "examples": [
+        { "jp": "早く起き、ご飯を食べ、学校へ行く。", "cn": "早起、吃饭、上学。" },
+        { "jp": "走り、跳び、笑う。", "cn": "奔跑、跳跃、欢笑。" },
+        { "jp": "調べ、考え、決める。", "cn": "查证、思考、决断。" }
+      ],
+      "note": "并列中止不需要连接词——活用形依次列队，标点只是报数。（真話）"
+    },
+
+    {
+      "id": "masu",
+      "word": "訪問し、面談した。",
+      "read": "ほうもんし、めんだんした。",
+      "tag": "中止形（書面丁寧）",
+      "role": "polite",
+      "standard": "訪問し、担当者と面談した。",
+      "group": "chuushi",
+      "level": "N3",
+      "emoji": "📎",
+      "meaning": "する动词的「〜し」中止在商务/邮件里顺滑连接多个动作：訪問し、面談した。読みやすい公式フレーズ。",
+      "examples": [
+        { "jp": "会社を訪問し、担当者と面談した。", "cn": "拜访了公司，与负责人面谈。" },
+        { "jp": "資料を確認し、報告書にまとめた。", "cn": "确认资料，汇总成报告。" },
+        { "jp": "失敗の原因を究明し、再発防止に努める。", "cn": "查明失败原因，致力于防止再发。" }
+      ],
+      "note": "「〜し」的中止比 動詞の連用形 更常出现在正式书写。口头上同样成立：ちょっと寄り道し、帰ろう。"
+    },
+
+    {
+      "id": "kakari-shushoku",
+      "word": "泣きながら、走る彼を追いかけた。",
+      "read": "なきながら、はしるかれをおいかけた。",
+      "tag": "切れ目（修饰最寄掛か）",
+      "group": "kakari",
+      "level": "N2",
+      "emoji": "✂️",
+      "meaning": "逗号把状语「截」在句首，让它跳过被修饰的动词去管更后面的谓语：泣きながら（掛か）走る彼を追いかけた。",
+      "examples": [
+        { "jp": "泣きながら、走る彼を追いかけた。", "cn": "我一边哭，一边追着跑开的他。" },
+        { "jp": "怒りながら、彼の話に耳を傾けた。", "cn": "我一边生着气，一边听他说。" },
+        { "jp": "嬉しそうに、彼女は荷物を開けた。", "cn": "她满脸高兴地打开了行李。" }
+      ],
+      "note": "没有逗号就变成「追着边跑边哭的他」——刻画的修饰挂在 走る 上。逗号＝切换修饰轨道的扳道闸。"
+    },
+
+    {
+      "id": "kakari-nagai",
+      "word": "昨日、駅で買った、あの本。",
+      "read": "きのう、えきでかった、あのほん。",
+      "tag": "切れ目（長い修饰）",
+      "group": "kakari",
+      "level": "N2",
+      "emoji": "📦",
+      "meaning": "长的连体修饰节在名词前逗号提醒停顿：先把修饰裝进来，再放被修饰的主体。重心后移。",
+      "examples": [
+        { "jp": "先月、東京で撮った、その写真を現像した。", "cn": "把上个月在东京拍的那张照片洗了出来。" },
+        { "jp": "彼女が長い間、探していた辞書を、ようやく手に入れた。", "cn": "终于弄到了她找了很久的那本词典。" },
+        { "jp": "昨日買った、あの本、まだ読んでない。", "cn": "昨天买的那本书，还没读。" }
+      ],
+      "note": "中文靠「的」字连成長定语，日语靠逗号把修饰「打包」——自己的节奏器。"
+    },
+
+    {
+      "id": "kakari-taihi",
+      "word": "説明より、実践。",
+      "read": "せつめいより、じっせん。",
+      "tag": "切れ目（対比基準）",
+      "group": "kakari",
+      "level": "N3",
+      "emoji": "⚖️",
+      "meaning": "「A より、B」对比基准后的逗号＝先拋掉A、再放主句B。切れ目把对比两端钉紧绷直。",
+      "examples": [
+        { "jp": "説明を聞くより、実際にやってみよう。", "cn": "与其听讲解，不如实际试一试。" },
+        { "jp": "空回りを続けるより、方向を確かめよう。", "cn": "与其继续空转，不如先确认方向。" },
+        { "jp": "他人の真似をするより、自分らしくいたい。", "cn": "与其模仿别人，不如做我自己。" }
+      ],
+      "note": "「〜より」本身已标记基准，逗号用来缓冲——真正的日本語は読点と語順で「気」を切る。"
+    },
+
+    {
+      "id": "kakari-touchi",
+      "word": "いいよ、それ。",
+      "read": "いいよ、それ。",
+      "tag": "切れ目（後置・倒置）",
+      "group": "kakari",
+      "level": "N3",
+      "emoji": "🔄",
+      "meaning": "把补语/宾语移到句号后——先给评价结论，再用逗号后的「补刀」交代对象。口语质感拉满。",
+      "examples": [
+        { "jp": "いいよ、それ。", "cn": "那个，挺好的。" },
+        { "jp": "大丈夫だよ、心配しなくて。", "cn": "没事的，别担心。" },
+        { "jp": "行けるよ、きっと。", "cn": "能行的，一定。" }
+      ],
+      "note": "倒置＝先开枪（结论）再报靶（对象）。翻译成中文照搬语序最自然——这也是日语口语的「気分語法」。"
+    },
+
+    {
+      "id": "taigen",
+      "word": "降り続く雨。",
+      "read": "ふりつづくあめ。",
+      "tag": "言い切り（体言止め）",
+      "group": "iikiri",
+      "level": "N2",
+      "emoji": "🍂",
+      "meaning": "名词收尾＝画面定格：雨、樱花、夜——物語終止感。現代詩/歌詞/散文最爱。",
+      "examples": [
+        { "jp": "降り続く雨。", "cn": "连绵不断的雨。" },
+        { "jp": "二匹の猫。", "cn": "两只猫。" },
+        { "jp": "雨のち晴れ。", "cn": "雨转晴。" }
+      ],
+      "quizzes": [
+        { "type": "judge", "q": "体言止めは名詞で文を終える言い切りである。", "ans": true, "exp": "✓ 雨。猫。夜。——名词字面甚至看不到动词，句子用句号踩刹车。" }
+      ],
+      "note": "体言止め与「だゼロ」同源血脉：不靠语法而靠句号让画面停格。现代诗感=日本人心中「文学的收尾」。"
+    },
+
+    {
+      "id": "houdou",
+      "word": "円、記録的安値。",
+      "read": "えん、きろくてきやすね。",
+      "tag": "言い切り（見出し体）",
+      "group": "iikiri",
+      "level": "N3",
+      "emoji": "📰",
+      "meaning": "新闻标题高频用体言止＋助词省略：円（が）記録的安値（をつける）——骨架句子砍到只剩名词＋评价。",
+      "examples": [
+        { "jp": "円、記録的安値。", "cn": "日元创纪录新低。" },
+        { "jp": "大雨、交通に乱れ。", "cn": "大雨致交通混乱。" },
+        { "jp": "全米注目、新作発表。", "cn": "全美关注，新作发布。" }
+      ],
+      "note": "标题语体＝先在心上复原（記録的安値をつける），再享受字面被砍到最省的快感。"
+    },
+
+    {
+      "id": "keredo",
+      "word": "行きたいんですけど。",
+      "read": "いきたいんですけど。",
+      "tag": "言い切り（言いさし）",
+      "group": "iikiri",
+      "level": "N4",
+      "emoji": "🌫️",
+      "meaning": "句尾 けど・けれど 把後件省略：婉转拒绝、铺垫、撒娇——後件是「しかし我不能/但请您…」。",
+      "examples": [
+        { "jp": "行きたいんですけど…", "cn": "我是想去啦……（但去不了）" },
+        { "jp": "ちょっと聞きたいんですけど。", "cn": "想请教一下……（可以吗？）" },
+        { "jp": "お願いしたいことがあるんですけど。", "cn": "有件事想拜托你……" }
+      ],
+      "nadeshiko": [
+        { "jp": "嫌なんですけど 避けたいんですけど",
+          "en": "I don't want to do it, in fact, I'd rather have nothing to do with it.",
+          "cn": "我不想做的，真的很想躲开……",
+          "media": "Junjo Romantica", "ep": "EP12", "at": "22:46",
+          "url": "https://nadeshiko.co/en/sentence/c3lAIb8qmu6r",
+          "audio": "https://cdn.nadeshiko.co/media/3092/12/24783a75ae.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/3092/12/24783a75ae.webp" },
+        { "jp": "恥ずかしいんですけど...",
+          "en": "It's a little embarrassing though.",
+          "cn": "虽然有点难为情……",
+          "media": "WITCH WATCH", "ep": "EP14", "at": "14:45",
+          "url": "https://nadeshiko.co/en/sentence/WmXY0Pz_tDPP",
+          "audio": "https://cdn.nadeshiko.co/media/180367/14/cac76f076d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/180367/14/cac76f076d.webp" }
+      ],
+      "note": "言いさし不是「话没说完」，它是完整表达——因为礼貌的「不敢说完」。关键是体会句尾那条往下掉的音调。"
+    },
+
+    {
+      "id": "dane",
+      "word": "絶対ダメ。",
+      "read": "ぜったいだめ。",
+      "tag": "言い切り（語気断ち）",
+      "group": "iikiri",
+      "level": "N4",
+      "emoji": "🔴",
+      "meaning": "副词＋名词直接砸向句号：絶対ダメ！＝禁止的最高声量。断句＝命令腔/禁止腔。",
+      "examples": [
+        { "jp": "絶対ダメ。", "cn": "绝对不行。" },
+        { "jp": "それは、やめて。", "cn": "那个，别这样。" },
+        { "jp": "触るな。", "cn": "别碰！" }
+      ],
+      "nadeshiko": [
+        { "jp": "ダメ... そんなの 絶対ダメ!",
+          "en": "No! I can't accept that!",
+          "cn": "不行……那种事绝对不行！",
+          "media": "Rent-a-Girlfriend Season 2", "ep": "EP7", "at": "13:03",
+          "url": "https://nadeshiko.co/en/sentence/mleFsZzlgUry",
+          "audio": "https://cdn.nadeshiko.co/media/124410/7/6940a07303.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/124410/7/6940a07303.webp" }
+      ],
+      "quizzes": [
+        { "type": "judge", "q": "「絶対ダメ！」は「絶対にダメだ！」の だ が省略された形としてOK。", "ans": true, "exp": "✓ 語気断ち＝だ ゼロの变身：ダメ！本身就是「禁止する」的姿态。" }
+      ],
+      "note": "語気断ち用句子边界当动词用：ダメ！＝禁止、行こう。＝提议、絶対ダメ。＝封杀。中文嘴硬时也是「不！不行！」"
+    },
+
+    {
+      "id": "dezirou",
+      "word": "大丈夫でしょう。",
+      "read": "だいじょうぶでしょう。",
+      "tag": "言い切り（推量語尾）",
+      "group": "iikiri",
+      "level": "N4",
+      "emoji": "🌤️",
+      "meaning": "でしょう/だろう 单独收尾＝推测断句：有把握但留一口。口语里 でしょ/だろ 更常见。",
+      "examples": [
+        { "jp": "大丈夫でしょう。", "cn": "应该没问题的吧。" },
+        { "jp": "彼も来るでしょう。", "cn": "他也会来吧。" },
+        { "jp": "明日は晴れるでしょう。", "cn": "明天会晴吧。" }
+      ],
+      "note": "でしょう 是「見えない語気」的一份子：它代替句尾结构表达推测——再縮成でしょ。语气挂在句尾，界定了全句姿态。"
+    },
+
+    {
+      "id": "siri",
+      "word": "それは……ちょっと。",
+      "read": "それはちょっと。",
+      "tag": "言い切り（しり消し）",
+      "group": "iikiri",
+      "level": "N4",
+      "emoji": "🕳️",
+      "meaning": "省略号＋断句＝把拒绝、犹豫、余韵收进两点：不把话说尽，话尾本身就是心态。",
+      "examples": [
+        { "jp": "それは……ちょっと。", "cn": "那个……有点……" },
+        { "jp": "実は、明日……。", "cn": "其实，明天……" },
+        { "jp": "うーん、難しいな。", "cn": "唔……有点难办啊。" }
+      ],
+      "note": "しり消し跟言いさし（けど）合起来是「日本人不把话说满」的语法双环。中文的「……」也是这种留白。"
+    }
+  ]
+}
