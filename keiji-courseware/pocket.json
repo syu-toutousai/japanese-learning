@@ -45,6 +45,37 @@
       "note": "近年也有公司用来称呼女性下属，但传统上以男性为主。"
     },
     {
+      "id": "kyun", "type": "suffix", "word": "〜きゅん", "read": "きゅん",
+      "group": "honor", "level": "N2", "emoji": "🥰",
+      "meaning": "亲昵·卖萌称呼：对心动的对象（推し·角色·恋人·宠物）用「〜くん」的可爱版，带萌系撒娇语感",
+      "examples": [
+        {"jp": "スバルきゅん、今日もありがとう！", "cn": "斯巴鲁酱，今天也谢谢啦！"},
+        {"jp": "推しきゅんの新曲が今日から配信開始だ。", "cn": "推的宝贝酱的新歌今天开始上线了。"},
+        {"jp": "うちの猫きゅんが膝の上で寝てる。かわいすぎる。", "cn": "我家的猫酱正睡在膝盖上，可爱爆了。"}
+      ],
+      "note": "动漫偶像圈・网络文化高频：把名字加 きゅん 表示「心動・可愛い」，由 くん 萌化而来（くん→きゅん）。只用于私下对推し・恋人・宠物撒娇，正式场合禁。",
+      "nadeshiko": [
+        {"jp": "やっほー スバルきゅん",
+         "en": "Hiya, Subaru-kyun!",
+         "cn": "呀嚯—斯巴鲁酱！",
+         "media": "Re:ZERO -Starting Life in Another World-", "ep": "EP7", "at": "22:07",
+         "url": "https://nadeshiko.co/en/sentence/3pvphtoIfADd",
+         "audio": "https://cdn.nadeshiko.co/media/21355/7/c8fda5a485.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/21355/7/c8fda5a485.webp"},
+        {"jp": "あ... あ... スバルきゅん?",
+         "en": "Subaru-kyun?",
+         "cn": "啊…啊…斯巴鲁酱？",
+         "media": "Re:ZERO -Starting Life in Another World-", "ep": "EP12", "at": "43:57",
+         "url": "https://nadeshiko.co/en/sentence/gn0B4FcQUmX2",
+         "audio": "https://cdn.nadeshiko.co/media/21355/12/7afe8c45b8.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/21355/12/7afe8c45b8.webp"}
+      ],
+      "quizzes": [
+        {"type": "judge", "q": "在正式商务邮件里用「佐藤きゅん」称呼客户也很可爱。", "ans": false,
+         "exp": "✗ きゅん是萌系亲昵称呼，商务场合对客户要用「佐藤様」。"}
+      ]
+    },
+    {
       "id": "sama", "type": "suffix", "word": "〜様", "read": "さま",
       "group": "honor", "level": "N4", "emoji": "🙇",
       "meaning": "比さん更郑重的敬称：商务文书、称呼客户时使用",
@@ -421,6 +452,38 @@
         {"jp": "彼は遊び過ぎて、試験に落ちてしまった。", "cn": "他玩过头，考试挂了。"}
       ],
       "note": "构成本质：ます形去ます＋過ぎ＝「过度～」。动词：食べ過ぎ・飲み過ぎ・働き過ぎ；い-形容词：暑過ぎ・強過ぎ・大きい過ぎ。书面语可用「〜過ぎる」（動詞形）。"
+    },
+    {
+      "id": "chirasu", "type": "suffix", "word": "〜散らす", "read": "ちらす",
+      "group": "derive", "level": "N2", "emoji": "😤",
+      "meaning": "动词连用形＋散らす：①把东西乱丢、撒得到处都是（脱ぎ散らす·書き散らす）；②不分场合/对象地没完没了地做（怒鳴り散らす·威張り散らす）",
+      "examples": [
+        {"jp": "上司が部下に向かって怒鳴り散らす。", "cn": "主管对着部下疯狂咆哮。"},
+        {"jp": "彼は機嫌が悪いと、誰彼構わず怒鳴り散らす。", "cn": "他心情不好的时候，就不分对象地到处乱骂人。"},
+        {"jp": "リビングに服を脱ぎ散らしたまま出かけた。", "cn": "把衣服乱扔在客厅里就出门了。"},
+        {"jp": "彼の噂を町中に言い散らすなんて、ひどい。", "cn": "把他的传闻在全城到处乱讲，太过分了。"}
+      ],
+      "note": "构成本质：动词ます形去ます＋散らす＝「失控地、四处地做」或「散落一地」。行为类：怒鳴り散らす·威張り散らす·自慢し散らす；散乱类：脱ぎ散らす·書き散らす·買い散らす。两者都带「失控・凌乱」的不快语感。",
+      "nadeshiko": [
+        {"jp": "いっつも威張(いば)り散(ち)らしてるくせに 何(なん)やってんだ 本部(ほんぶ)は",
+         "en": "What the hell is HQ doing, other than acting all high-and-mighty?",
+         "cn": "明明平时总是颐指气使、架子摆得老大，总部到底在干什么啊。",
+         "media": "SPY x FAMILY Season 3", "ep": "EP11", "at": "12:48",
+         "url": "https://nadeshiko.co/en/sentence/ovFUBg_vJ1jF",
+         "audio": "https://cdn.nadeshiko.co/media/177937/11/06755aab64.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/177937/11/06755aab64.webp"},
+        {"jp": "麻美(あさみ)ちゃんに どなり散(ち)らしたりとか",
+         "en": "and the way she snapped at Mami-chan...",
+         "cn": "还有对麻美酱又是大吼大叫什么的……",
+         "media": "Rent-a-Girlfriend Season 2", "ep": "EP10", "at": "4:57",
+         "url": "https://nadeshiko.co/en/sentence/d17Q-60Q3ueH",
+         "audio": "https://cdn.nadeshiko.co/media/124410/10/4da4770d66.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/124410/10/4da4770d66.webp"}
+      ],
+      "quizzes": [
+        {"type": "choice", "q": "部長は朝から部下に怒鳴り（　　）ばかりで、みんなビクビクしている。", "opts": ["散らす", "散らかす", "騒ぐ"], "ans": 0,
+         "exp": "怒鳴り散らす＝疯狂咆哮。散らかす是「把房间弄乱」，騒ぐ是「吵闹」的意思，都不合。"}
+      ]
     },
     {
       "id": "buru", "type": "suffix", "word": "〜ぶる", "read": "ぶる",
