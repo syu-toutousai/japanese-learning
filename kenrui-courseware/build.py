@@ -219,6 +219,44 @@ def download_nade_audio(url, logical_id):
     return None
 
 
+def embed_nade_thumbs(items):
+    """下载 Nadeshiko 缩略图 webp 并 base64 内嵌到 scene.thumb（离线）。"""
+    NADE_CACHE.mkdir(exist_ok=True)
+    tasks = []
+    for it in items:
+        for i, sc in enumerate(it.get("nadeshiko") or []):
+            if sc.get("thumb") and not sc["thumb"].startswith("data:"):
+                tasks.append((f"{it['id']}-n{i}", sc))
+    if not tasks:
+        return
+    ok = 0
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        def dl(lid, sc):
+            url = sc["thumb"]
+            h = hashlib.sha1(url.encode()).hexdigest()[:10]
+            path = NADE_CACHE / f"{lid}-{h}.webp"
+            if path.exists() and path.stat().st_size > 200:
+                return "data:image/webp;base64," + base64.b64encode(path.read_bytes()).decode()
+            for _ in range(3):
+                try:
+                    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                    with urllib.request.urlopen(req, timeout=15) as resp:
+                        data = resp.read()
+                    if len(data) > 200:
+                        path.write_bytes(data)
+                        return "data:image/webp;base64," + base64.b64encode(data).decode()
+                except Exception:
+                    pass
+            return None
+        futures = {ex.submit(dl, lid, sc): (lid, sc) for lid, sc in tasks}
+        for fut in futures:
+            data = fut.result()
+            if data:
+                futures[fut][1]["thumb"] = data
+                ok += 1
+    print(f"      thumb: {ok}/{len(tasks)} embedded")
+
+
 def gen_nade_audio(items):
     tasks = []
     for it in items:
@@ -675,6 +713,7 @@ def main():
 
     print("[2/4] nadeshiko: downloading CDN audio...")
     nade_audio = gen_nade_audio(items)
+    embed_nade_thumbs(items)
 
     qs = build_questions(groups, items, audio)
 
