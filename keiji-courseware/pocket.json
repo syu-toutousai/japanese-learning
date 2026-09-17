@@ -507,6 +507,41 @@
         {"type": "choice", "q": "時間がないので、前置き（　　）で結論から話します。", "opts": ["抜き", "まみれ", "がち"], "ans": 0,
          "exp": "前置き抜きで＝省去开场白。まみれ是「沾满」，がち是「动不动就」，都不合。"}
       ]
+    },
+    {
+      "id": "gai", "type": "suffix", "word": "〜がい", "read": "がい",
+      "group": "derive", "level": "N2", "emoji": "💪",
+      "meaning": "值得～、有～价值：接在动词ます形后，表示做某事有意义、有价值感",
+      "readAudio": "moji_audio/やり甲斐_19895343_w_f003.mp3",
+      "examples": [
+        {"jp": "働きがいのある仕事を探す。", "cn": "找有意义（值得做）的工作。", "src": "moji", "audio": "moji_audio/働き_78969_e5_f003.mp3"},
+        {"jp": "やり甲斐を失う。", "cn": "失去了干劲。", "src": "moji", "audio": "moji_audio/やり甲斐_8734_e0_f003.mp3"},
+        {"jp": "この仕事には働きがいがある。", "cn": "这份工作有干劲（值得去做）。"},
+        {"jp": "この小説は読みがいがある。", "cn": "这部小说值得一读。"},
+        {"jp": "彼は毎日走りがいを感じてトレーニングを続けている。", "cn": "他每天都感受到跑步的价值，坚持训练。"},
+        {"jp": "子供と一緒に遊びがいを感じた。", "cn": "和孩子一起玩，感受到了玩的价值。"}
+      ],
+      "note": "构成本质：ます形去ます＋がい＝「有…的价值」。找工作→働きがい（干的价值）；好书→読みがい（读的价值）。比〜たい更客观（不是「想做」而是「做了有价值」）。另外「やりがい」是最高频搭配（やりがいのある仕事＝值得做的工作）。",
+      "nadeshiko": [
+        {"jp": "やりがいがあっていいだろう",
+         "en": "It wouldn't be worthwhile otherwise.",
+         "cn": "正因为有做头，才带劲嘛。",
+         "media": "Fullmetal Alchemist: Brotherhood", "ep": "EP21", "at": "5:57",
+         "url": "https://nadeshiko.co/en/sentence/Nu8cD9xj0fS5",
+         "audio": "https://cdn.nadeshiko.co/media/5114/21/24c9ebd411.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/5114/21/24c9ebd411.webp"},
+        {"jp": "簡単(かんたん)すぎて やりがいに欠(か)けるか?",
+         "en": "You think simple tasks aren't worth doing?",
+         "cn": "你是觉得太简单、不够有干头吗？",
+         "media": "Witch Hat Atelier", "ep": "EP7", "at": "4:37",
+         "url": "https://nadeshiko.co/en/sentence/m8d5daXQ8Pfx",
+         "audio": "https://cdn.nadeshiko.co/media/147105/7/77682e91bc.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/147105/7/77682e91bc.webp"}
+      ],
+      "quizzes": [
+        {"type": "choice", "q": "生活のためじゃなくて、やり（　　）を求めて仕事をする人もいる。", "opts": ["がい", "がち", "すぎ"], "ans": 0,
+         "exp": "やりがい＝值得去做、做起来的价值感（やりがいのある仕事＝值得做的工作）。がち是「动不动就」，すぎ是「过度」，都不合。"}
+      ]
     }
   ]
 }

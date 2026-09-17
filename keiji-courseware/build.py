@@ -9,17 +9,21 @@
 """
 
 import base64
+import copy
 import hashlib
 import json
 import random
+import re
 import subprocess
 import sys
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 POCKET = ROOT / "pocket.json"
 AUDIO_DIR = ROOT / "audio"
+NADE_CACHE = ROOT / "nade_audio"
 OUT = ROOT / "index.html"
 
 VOICE = "ja-JP-NanamiNeural"
@@ -137,9 +141,13 @@ def gen_audio(items, sents):
     AUDIO_DIR.mkdir(exist_ok=True)
     tasks = []                       # (logical_id, text)
     for it in items:
-        tasks.append((it["id"], it["read"]))
+        native_read = it.get("readAudio")
+        if not (native_read and (ROOT / native_read).exists()):
+            tasks.append((it["id"], it["read"]))
         for i, ex in enumerate(it.get("examples") or []):
-            tasks.append((f"{it['id']}-e{i}", ex["jp"]))
+            native_ex = ex.get("audio")
+            if not (native_ex and (ROOT / native_ex).exists()):
+                tasks.append((f"{it['id']}-e{i}", ex["jp"]))
 
     todo = [(lid, txt) for lid, txt in tasks
             if not cache_path(lid, txt).exists()]
@@ -168,7 +176,69 @@ def gen_audio(items, sents):
         p = cache_path(lid, txt)
         if p.exists() and p.stat().st_size > MIN_MP3:
             audio[lid] = "data:audio/mpeg;base64," + base64.b64encode(p.read_bytes()).decode()
+    mount_native_audio(audio, items)
     return audio
+
+
+def mount_native_audio(audio, items):
+    """用 MOJi 原生 mp3 覆盖 TTS：item.readAudio 作词缀读音，example.audio 作例句读音。"""
+    for it in items:
+        rel = it.get("readAudio")
+        if rel and (ROOT / rel).exists():
+            audio[it["id"]] = "data:audio/mpeg;base64," + base64.b64encode((ROOT / rel).read_bytes()).decode()
+        for i, ex in enumerate(it.get("examples") or []):
+            rel = ex.get("audio")
+            if rel and (ROOT / rel).exists():
+                audio[f"{it['id']}-e{i}"] = "data:audio/mpeg;base64," + base64.b64encode((ROOT / rel).read_bytes()).decode()
+
+
+# ---------------------------------------------------------------- nadeshiko audio & ruby
+
+_RUBY_RE = re.compile(r"([一-龯〆〇々]+)\(([ぁ-ゖァ-ヶー·・]+)\)")
+
+
+def njk_ruby(s):
+    """Convert nadeshiko inline 漢字(かな) to <ruby>. 只作用于展示副本。"""
+    return _RUBY_RE.sub(lambda m: f"<ruby>{m.group(1)}<rt>{m.group(2)}</rt></ruby>", s)
+
+
+def download_nade_audio(url, logical_id):
+    """Download a Nadeshiko CDN mp3 and return base64 data URI."""
+    NADE_CACHE.mkdir(exist_ok=True)
+    h = hashlib.sha1(url.encode()).hexdigest()[:10]
+    path = NADE_CACHE / f"{logical_id}-{h}.mp3"
+    if path.exists() and path.stat().st_size > 500:
+        return "data:audio/mpeg;base64," + base64.b64encode(path.read_bytes()).decode()
+    for _ in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = resp.read()
+            if len(data) > 500:
+                path.write_bytes(data)
+                return "data:audio/mpeg;base64," + base64.b64encode(data).decode()
+        except Exception:
+            pass
+    return None
+
+
+def gen_nade_audio(items):
+    tasks = []
+    for it in items:
+        for i, sc in enumerate(it.get("nadeshiko") or []):
+            if sc.get("audio"):
+                tasks.append((f"{it['id']}-n{i}", sc["audio"]))
+    if not tasks:
+        return {}
+    nade_audio = {}
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        futures = {ex.submit(download_nade_audio, url, lid): lid for lid, url in tasks}
+        for fut in futures:
+            data = fut.result()
+            if data:
+                nade_audio[futures[fut]] = data
+    print(f"      nade: {len(nade_audio)}/{len(tasks)} clips cached")
+    return nade_audio
 
 
 # ---------------------------------------------------------------- auto quizzes
@@ -337,6 +407,25 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 .fin .big{font-size:44px;font-weight:800;color:var(--acc)}
 .hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
 code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em}
+/* source badges */
+.src{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;
+margin-left:6px;vertical-align:1px}
+.src-moji{background:var(--okbg);color:var(--ok)}
+.src-nade{background:#ede7f6;color:#5e35b1}
+/* nadeshiko scene */
+.nade-card{background:#faf5ff;border:1px solid #e0d0f0;border-radius:12px;padding:12px;margin:10px 0}
+.nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.nade-card .nade-media{font-weight:700;color:#5e35b1;font-size:13px}
+.nade-card .nade-ep{font-size:11.5px;color:var(--sub)}
+.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
+font-size:15.5px;line-height:2}
+.nade-card .nade-jp ruby rt{font-size:.52em;color:var(--sub)}
+.nade-card .nade-en{font-size:12.5px;color:var(--sub);margin-top:3px;font-style:italic}
+.nade-card .nade-cn{font-size:13px;color:var(--ink);margin-top:2px}
+.nade-card .nade-row{display:flex;gap:10px;align-items:flex-start}
+.nade-card .nade-thumb{width:84px;height:52px;border-radius:8px;object-fit:cover;flex:none}
+.nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
+.nade-card a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -357,6 +446,7 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 
 <script>
 const AUDIO=__AUDIO__;
+const NADE_AUDIO=__NADE_AUDIO__;
 const GROUPS=__GROUPS__;
 const ITEMS=__ITEMS__;
 const SENTS=__SENTS__;
@@ -365,7 +455,7 @@ let QS=__QS__;
 const $=s=>document.querySelector(s);
 let curAudio=null,curBtn=null;
 function play(id,btn){
-  const src=AUDIO[id];if(!src)return;
+  const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;
   if(curAudio){curAudio.pause();curAudio.currentTime=0;}
   document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
   curAudio=new Audio(src);curBtn=btn||null;
@@ -375,7 +465,26 @@ function play(id,btn){
 function rowHTML(sid){
   const s=SENTS[sid];
   const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
-  return `<div class="row">${b}<div><div class="jp">${s.jp}</div><div class="cn">${s.cn}</div></div></div>`;
+  const chip=s.src==="moji"?`<span class="src src-moji">MOJi</span>`:"";
+  return `<div class="row">${b}<div><div class="jp">${s.jp}${chip}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function nadeHTML(sc,iid,idx){
+  const nid=`${iid}-n${idx}`;
+  const hasAudio=!!NADE_AUDIO[nid];
+  const playBtn=hasAudio?`<button class="btn" style="width:30px;height:30px;font-size:13px" onclick="play('${nid}',this)">▶</button>`:"";
+  return `<div class="nade-card">
+    <div class="nade-hdr"><span class="src src-nade">Nadeshiko</span>
+      ${playBtn}
+      <span class="nade-media">${sc.media}</span><span class="nade-ep">${sc.ep} @ ${sc.at}</span></div>
+    <div class="nade-row">
+      <img class="nade-thumb" src="${sc.thumb}" alt="" onerror="this.style.display='none'">
+      <div>
+        <div class="nade-jp">${sc.jp}</div>
+        <div class="nade-en">${sc.en}</div>
+        <div class="nade-cn">${sc.cn}</div>
+        <a href="${sc.url}" target="_blank">nadeshiko.co ↗</a>
+      </div>
+    </div></div>`;
 }
 
 /* ---------- tabs ---------- */
@@ -430,6 +539,8 @@ function renderDetail(){
         </div>
         <div class="meanbox">📌 <b>意思</b>　${n.meaning}</div>
         ${(n.examples||[]).map((_,i)=>rowHTML(`${iid}-e${i}`)).join("")}
+        ${(n.nadeshiko&&n.nadeshiko.length)?`<h3 class="sec">🎬 原声台词</h3>`:""}
+        ${(n.nadeshiko||[]).map((sc,i)=>nadeHTML(sc,iid,i)).join("")}
         ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
       </div>`;
     });
@@ -554,36 +665,51 @@ def main():
     groups, items = load_pocket()
     n_pfx = sum(1 for i in items if i["type"] == "prefix")
     n_sfx = len(items) - n_pfx
+    n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
 
     # 平铺例句表（给前端渲染用）
     sents = {}
     for it in items:
         for i, ex in enumerate(it.get("examples") or []):
-            sents[f"{it['id']}-e{i}"] = {"jp": ex["jp"], "cn": ex.get("cn", "")}
+            sents[f"{it['id']}-e{i}"] = {"jp": ex["jp"], "cn": ex.get("cn", ""), "src": ex.get("src", "")}
 
     audio = gen_audio(items, sents)
+
+    print(f"[1/4] audio: {len(audio)} clips ready")
+
+    print("[2/4] nadeshiko: downloading CDN audio...")
+    nade_audio = gen_nade_audio(items)
+
     qs = build_questions(groups, items, audio)
 
     tags = (f"<span>{len(items)} 词在袋</span><span>接頭 {n_pfx}・接尾 {n_sfx}</span>"
-            f"<span>{len(audio)} 音声</span><span>pocket.json 随手加</span>")
+            f"<span>{len(audio)} 音声{' + ' + str(n_nade) + ' 原声' if n_nade else ''}</span>"
+            f"<span>pocket.json 随手加</span>")
     banks_meta = [[k, l] for k, l in BANK_META]
 
-    print("[2/4] generating quiz banks...")
+    print("[3/4] generating quiz banks...")
     counts = {k: sum(1 for q in qs if q["bank"] == k) for k, _ in BANK_META}
     for k, l in BANK_META:
         print(f"      {l}: {counts[k]} 問")
 
-    print("[3/4] rendering template...")
+    # display 副本：Nadeshiko 行内注音 漢字(かな) → <ruby>（只作用展示，不动素文/出题/音频）
+    display = copy.deepcopy(items)
+    for it in display:
+        for sc in it.get("nadeshiko") or []:
+            sc["jp"] = njk_ruby(sc["jp"])
+
+    print("[4/4] rendering template...")
     html = (TEMPLATE
             .replace("__TAGS__", tags)
             .replace("__AUDIO__", j(audio))
+            .replace("__NADE_AUDIO__", j(nade_audio))
             .replace("__GROUPS__", j(groups))
-            .replace("__ITEMS__", j(items))
+            .replace("__ITEMS__", j(display))
             .replace("__SENTS__", j(sents))
             .replace("__BANKS__", j(banks_meta))
             .replace("__QS__", j(qs)))
     OUT.write_text(html, encoding="utf-8")
-    print(f"[4/4] wrote {OUT} ({OUT.stat().st_size//1024} KB)")
+    print(f"[5/4] wrote {OUT} ({OUT.stat().st_size//1024} KB)")
 
 
 if __name__ == "__main__":
