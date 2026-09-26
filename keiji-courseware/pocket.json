@@ -641,6 +641,71 @@
         {"type": "choice", "q": "生活のためじゃなくて、やり（　　）を求めて仕事をする人もいる。", "opts": ["がい", "がち", "すぎ"], "ans": 0,
          "exp": "やりがい＝值得去做、做起来的价值感（やりがいのある仕事＝值得做的工作）。がち是「动不动就」，すぎ是「过度」，都不合。"}
       ]
+    },
+    {
+      "id": "shinogi", "type": "suffix", "word": "〜しのぎ", "read": "しのぎ",
+      "group": "derive", "level": "N2", "emoji": "⏳",
+      "meaning": "接名词后：①打发、消磨（退屈しのぎ・暇しのぎ・暑さしのぎ）；②敷衍一时、权宜之计（その場しのぎ・一時しのぎ）",
+      "examples": [
+        {"jp": "退屈しのぎに、近所の公園を散歩した。", "cn": "为了打发无聊，去附近的公园散了散步。"},
+        {"jp": "その場しのぎの返事ばかりしていると、信用を失う。", "cn": "老是敷衍一时地回答问题，会失去信用。"},
+        {"jp": "一時しのぎの対策では、根本的な解決にはならない。", "cn": "权宜之计的对策无法从根本上解决问题。"},
+        {"jp": "暑さしのぎに、冷たい麦茶を飲んだ。", "cn": "为了消暑，喝了冰麦茶。"}
+      ],
+      "note": "构成本质：动词「凌ぐ（しのぐ）」的连用形名词化后作接尾语，接名词＝「靠它熬过、顶一阵」。大辞林注明〔接尾語的に用いる〕：「その場―」「退屈―」。①消磨型：退屈しのぎ・暇しのぎ・暑さしのぎ（中性偏积极）；②敷衍型：その場しのぎ・一時しのぎ・当座しのぎ（贬义，只顾眼前）。",
+      "nadeshiko": [
+        {"jp": "退屈(たいくつ)しのぎにはちょうどいい",
+         "en": "It'll be perfect to stave the boredom.",
+         "cn": "正好用来打发无聊。",
+         "media": "Akudama Drive", "ep": "EP11", "at": "16:56",
+         "url": "https://nadeshiko.co/en/sentence/qVoUaU_nz_pd",
+         "audio": "https://cdn.nadeshiko.co/media/116566/11/0120c40464.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/116566/11/0120c40464.webp"},
+        {"jp": "その場(ば)しのぎの慰(なぐさ)めなんか 現実(げんじつ)を変(か)えやしない",
+         "en": "Temporary relief from pain will never change reality.",
+         "cn": "敷衍一时的安慰什么的，根本改变不了现实。",
+         "media": "Orb: On the Movements of the Earth", "ep": "EP4", "at": "20:24",
+         "url": "https://nadeshiko.co/en/sentence/oHJODgudDiq1",
+         "audio": "https://cdn.nadeshiko.co/media/151514/4/885b27982c.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/151514/4/885b27982c.webp"}
+      ],
+      "quizzes": [
+        {"type": "choice", "q": "その場（　　）の言い訳ばかりでは、誰にも信用されない。", "opts": ["しのぎ", "まぎれ", "すぎ"], "ans": 0,
+         "exp": "その場しのぎ＝敷衍一时、权宜之计。まぎれ是「趁着混乱」，すぎ是「过度」，都不合。"}
+      ]
+    },
+    {
+      "id": "magire", "type": "suffix", "word": "〜まぎれ", "read": "まぎれ",
+      "group": "derive", "level": "N1", "emoji": "🌫️",
+      "meaning": "接名词或心情词后：①趁着…的混乱、顺便（どさくさ紛れ・買い物まぎれ）；②因情绪冲昏头、…之余（苦し紛れ・悔し紛れ）",
+      "readAudio": "moji_audio/紛れ_1989101833_w_f003.mp3",
+      "examples": [
+        {"jp": "どさくさ紛れにうまいことをする。", "cn": "趁着混乱钻空子，浑水摸鱼。", "src": "moji", "audio": "moji_audio/紛れ_87910_e0_f003.mp3"},
+        {"jp": "くやし紛れに当たり散らす。", "cn": "因懊悔而乱发脾气。", "src": "moji", "audio": "moji_audio/紛れ_87914_e4_f003.mp3"},
+        {"jp": "買い物まぎれに、つい映画の前売り券を買ってしまった。", "cn": "趁着买东西，顺手买了电影预售票。"},
+        {"jp": "苦し紛れに、彼は適当な言い訳をしてしまった。", "cn": "走投无路之下，他随口找了个借口。"}
+      ],
+      "note": "构成本质：动词「紛れる」的连用形名词化后作接尾语，多与「に」搭配作副词。①名词＋まぎれ（に）＝趁着…的混乱/顺便：どさくさ紛れに・買い物まぎれに・人混みまぎれに；②心情词（形容词词干・动词连用形）＋まぎれ（に）＝被情绪冲昏头、…之余：苦し紛れ・悔し紛れ・腹立ちまぎれ。福武国語辞典标注为「名／接尾」。",
+      "nadeshiko": [
+        {"jp": "ちょ... ちょっと どさくさまぎれにどこ触(さわ)ってんのよ",
+         "en": "H-H-Hold it! I never said you could touch me there!",
+         "cn": "等、等一下，你趁乱摸哪儿呢！",
+         "media": "Summer Pockets", "ep": "EP2", "at": "15:12",
+         "url": "https://nadeshiko.co/en/sentence/-uRHovXpLl0R",
+         "audio": "https://cdn.nadeshiko.co/media/143200/2/a687f8630e.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/143200/2/a687f8630e.webp"},
+        {"jp": "苦(くる)し紛(まぎ)れのウソかもしれない",
+         "en": "Maybe he lied out of desperation.",
+         "cn": "也许那是走投无路时的谎言。",
+         "media": "ODDTAXI", "ep": "EP9", "at": "1:38",
+         "url": "https://nadeshiko.co/en/sentence/z9NMPGt5EbBE",
+         "audio": "https://cdn.nadeshiko.co/media/128547/9/962b290666.mp3",
+         "thumb": "https://cdn.nadeshiko.co/media/128547/9/962b290666.webp"}
+      ],
+      "quizzes": [
+        {"type": "choice", "q": "犯人は人混み（　　）に、姿を消した。", "opts": ["まぎれ", "しのぎ", "だらけ"], "ans": 0,
+         "exp": "人混みまぎれに＝趁着人群拥挤混进去。しのぎ是「熬过、打发」，だらけ是「满是」，都不合。"}
+      ]
     }
   ]
 }
