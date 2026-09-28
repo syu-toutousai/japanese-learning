@@ -525,6 +525,39 @@
         }
       ],
       "note": "すがすがしい（清々しい）＝神清气爽、清爽畅快，只用于积极语感（N1 形容词）；「気分になる」＝感觉变得…。剧中不少「すがすがしいほど◯◯」是反讽用法，注意语境。"
+    },
+    {
+      "id": "s17",
+      "jp": "その話を聞いて、爽やかな気分になった。",
+      "cn": "听了那番话，心情变得清爽舒畅。",
+      "words": [
+        { "w": "爽やか", "read": "さわやか", "pos": "形动", "mean": "清爽；爽朗；清新", "form": "爽やかな" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "今日(きょう) 爽(さわ)やかだね　今日(きょう) 爽(さわ)やか",
+          "en": "Your look is breezy today. -I'm feeling breezy.",
+          "cn": "今天真清爽呢。——嗯，很清爽。",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP6",
+          "at": "14:29",
+          "url": "https://nadeshiko.co/en/sentence/BKig-e-npll6",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/6/2afb3823eb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/6/2afb3823eb.webp"
+        },
+        {
+          "jp": "爽(さわ)やかなやつって すごーい",
+          "en": "Yeah, what a friendly boy!",
+          "cn": "清爽系的人真好啊。",
+          "media": "Kimi ni Todoke: From Me to You",
+          "ep": "EP1",
+          "at": "14:34",
+          "url": "https://nadeshiko.co/en/sentence/469B5cMwGa2c",
+          "audio": "https://cdn.nadeshiko.co/media/6045/1/938f27fb3b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/6045/1/938f27fb3b.webp"
+        }
+      ],
+      "note": "爽やか（さわやか・形动）＝清爽、爽朗：可形容天气与心情（爽やかな朝・気分），也可形容人的气质、声音、问候。与 s16 的「すがすがしい」近义——すがすがしい更书面、只用于积极语感；爽やか更日常、用法更广。对照记忆：すがすがしい気分／爽やかな気分。"
     }
   ]
 }
