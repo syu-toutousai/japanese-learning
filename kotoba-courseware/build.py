@@ -16,9 +16,11 @@
 """
 
 import base64
+import copy
 import hashlib
 import json
 import random
+import re
 import shutil
 import subprocess
 import sys
@@ -70,6 +72,39 @@ MOJI = {
 
 def j(obj):
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+# ---------------------------------------------------------------- furigana
+# 展示字段里的行内注音「漢字(かな)」统一转成 <ruby>（只转注音，不追加 pykakasi）
+
+_KANJI = r"\u4e00-\u9fff\u3005\u3007\u303b\u3400-\u4dbf"
+_INLINE = re.compile(rf"([{_KANJI}][{_KANJI}ぁ-んァ-ンー]{{0,7}})\s*\(([ぁ-んァ-ンのー]{{1,12}})\)")
+_HIRA_TAIL = re.compile(r"[ぁ-んー]+$")
+
+
+def _split_ruby(phrase, reading):
+    m = _HIRA_TAIL.search(phrase)
+    if not m:
+        return phrase, reading, ""
+    tail = m.group(0)
+    if reading.endswith(tail) and len(reading) > len(tail):
+        return phrase[:m.start()], reading[:len(reading) - len(tail)], tail
+    return phrase, reading, ""
+
+
+def inline_to_ruby(text):
+    if not text or not isinstance(text, str):
+        return text
+    out, pos = [], 0
+    for m in _INLINE.finditer(text):
+        if m.start() < pos:
+            continue
+        out.append(text[pos:m.start()])
+        base, rt, tail = _split_ruby(m.group(1), m.group(2))
+        out.append(f"<ruby>{base}<rt>{rt}</rt></ruby>{tail}")
+        pos = m.end()
+    out.append(text[pos:])
+    return "".join(out)
 
 
 # ---------------------------------------------------------------- load & validate
@@ -402,7 +437,7 @@ def build_schedule(w):
     rd = w.get("read", "")
     wd = w.get("word", "")
     tasks = [
-        (0, "初習", f"初见五件套：通读列表卡 → 点开发音({rd}) → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"),
+        (0, "初習", f"初见五件套：通读列表卡 → 点开发音（{rd}） → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"),
         (1, "隔日闪回", f"听到「{rd}」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"),
         (3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"),
         (7, "产出练习", f"用「{wd}」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"),
@@ -728,7 +763,7 @@ function renderCmp(){
   (W.contrast||[]).forEach((c,i)=>{
     const warm=c.d.indexOf("対義")>=0;
     h+=`<div class="ccard ${warm?'warming':''}">
-      <h4>${esc(c.word)}${warm?' <span class="g">· 対義</span>':' <span class="g"></span>'}</h4>
+      <h4>${c.word}${warm?' <span class="g">· 対義</span>':' <span class="g"></span>'}</h4>
       <p>${esc(c.d)}</p>
       ${c.ex?`<div class="rw">${rowHTML(`${W.id}:c${i}`)}</div>`:""}
     </div>`;
@@ -945,7 +980,11 @@ def main():
     clips = build_clips(words)
     for lid, c in clips.items():
         audio[lid] = c["mp3"]
-    words_out = words  # 原样嵌入（含 encounter/core/senses/contrast/...）
+    words_out = copy.deepcopy(words)  # 展示副本：contrast 词的行内注音转 ruby
+    for w in words_out:
+        for c in w.get("contrast") or []:
+            if c.get("word"):
+                c["word"] = inline_to_ruby(c["word"])
 
     print("[2/4] generating quiz banks...")
     counts = {k: sum(1 for q in qs if q["bank"] == k) for k, _ in BANK_META}

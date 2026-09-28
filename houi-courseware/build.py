@@ -9,9 +9,11 @@
 """
 
 import base64
+import copy
 import hashlib
 import json
 import random
+import re
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -47,6 +49,62 @@ KIND_LABEL = {"compass": "绝对坐标", "axis": "自身坐标", "derived": "派
 def j(obj):
     """json for embedding inside <script>."""
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+# ---------------------------------------------------------------- furigana
+# 数据里的行内注音「漢字(かな)」统一转成 <ruby>（只转注音，不追加 pykakasi 注音）
+
+_KANJI = r"\u4e00-\u9fff\u3005\u3007\u303b\u3400-\u4dbf"
+_INLINE = re.compile(rf"([{_KANJI}][{_KANJI}ぁ-んァ-ンー]{{0,7}})\s*\(([ぁ-んァ-ンのー]{{1,12}})\)")
+_HIRA_TAIL = re.compile(r"[ぁ-んー]+$")
+
+
+def _split_ruby(phrase, reading):
+    m = _HIRA_TAIL.search(phrase)
+    if not m:
+        return phrase, reading, ""
+    tail = m.group(0)
+    if reading.endswith(tail) and len(reading) > len(tail):
+        return phrase[:m.start()], reading[:len(reading) - len(tail)], tail
+    return phrase, reading, ""
+
+
+def inline_to_ruby(text):
+    if not text or not isinstance(text, str):
+        return text
+    out, pos = [], 0
+    for m in _INLINE.finditer(text):
+        if m.start() < pos:
+            continue
+        out.append(text[pos:m.start()])
+        base, rt, tail = _split_ruby(m.group(1), m.group(2))
+        out.append(f"<ruby>{base}<rt>{rt}</rt></ruby>{tail}")
+        pos = m.end()
+    out.append(text[pos:])
+    return "".join(out)
+
+
+def _conv_quiz(q):
+    if not isinstance(q, dict):
+        return
+    if q.get("q"):
+        q["q"] = inline_to_ruby(q["q"])
+    if q.get("exp"):
+        q["exp"] = inline_to_ruby(q["exp"])
+    if q.get("opts"):
+        q["opts"] = [inline_to_ruby(o) for o in q["opts"]]
+
+
+def to_display(items, special):
+    """深拷贝并把展示字段的注音转 ruby（不改动 TTS/出题用的原始数据）。"""
+    disp_items = copy.deepcopy(items)
+    disp_special = copy.deepcopy(special)
+    for it in disp_items + disp_special:
+        if it.get("anchor"):
+            it["anchor"] = inline_to_ruby(it["anchor"])
+        for q in it.get("quizzes") or []:
+            _conv_quiz(q)
+    return disp_items, disp_special
 
 
 # ---------------------------------------------------------------- load & validate
@@ -683,13 +741,16 @@ def main():
         print(f"      {l}: {counts[k]} 問")
 
     print("[3/4] rendering template...")
+    disp_items, disp_special = to_display(items, special)
+    for q in qs:
+        _conv_quiz(q)
     html = (TEMPLATE
             .replace("__TAGS__", tags)
             .replace("__META__", j(meta))
             .replace("__AUDIO__", j(audio))
             .replace("__GROUPS__", j(groups))
-            .replace("__ITEMS__", j(items))
-            .replace("__SPECIAL__", j(special))
+            .replace("__ITEMS__", j(disp_items))
+            .replace("__SPECIAL__", j(disp_special))
             .replace("__SENTS__", j(sents))
             .replace("__BANKS__", j(banks_meta))
             .replace("__ANGLES__", j(angles))

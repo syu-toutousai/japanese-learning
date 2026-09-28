@@ -47,9 +47,21 @@ def j(obj):
 
 
 # ────────────────────────────────────────────── furigana (ruby)
-_KANJI = r"\u4e00-\u9fff\u3007\u303b\u3400-\u4dbf"
-_INLINE = re.compile(rf"([{_KANJI}]{{1,8}})\s*\(([ぁ-んァ-ンのー]{{1,10}})\)")
+_KANJI = r"\u4e00-\u9fff\u3005\u3007\u303b\u3400-\u4dbf"
+_INLINE = re.compile(rf"([{_KANJI}][{_KANJI}ぁ-んァ-ンー]{{0,7}})\s*\(([ぁ-んァ-ンのー]{{1,12}})\)")
 _KANJI_RE = re.compile(rf"[{_KANJI}]")
+_HIRA_TAIL = re.compile(r"[ぁ-んー]+$")
+
+
+def _split_ruby(phrase, reading):
+    """只给汉字核心加注音：危うく/あやうく → (危, あや, うく)。"""
+    m = _HIRA_TAIL.search(phrase)
+    if not m:
+        return phrase, reading, ""
+    tail = m.group(0)
+    if reading.endswith(tail) and len(reading) > len(tail):
+        return phrase[:m.start()], reading[:len(reading) - len(tail)], tail
+    return phrase, reading, ""
 
 _READING_OVERRIDES = [
     ("時間が経つ", "じかんがたつ"), ("年を取る", "としをとる"),
@@ -108,7 +120,8 @@ def add_furigana(text):
     out, pos = [], 0
     for start, end, kind, kanji, reading in clean:
         out.append(_furi(text[pos:start]))
-        out.append(f"<ruby>{kanji}<rt>{reading}</rt></ruby>")
+        base, rt, tail = _split_ruby(kanji, reading)
+        out.append(f"<ruby>{base}<rt>{rt}</rt></ruby>{tail}")
         pos = end
     out.append(_furi(text[pos:]))
     return "".join(out)
@@ -841,6 +854,12 @@ def main():
                 sc["jp"] = add_furigana(sc["jp"])
         for e in exams:
             e["stem"] = add_furigana(e["stem"])
+        for q in qs:
+            for k in ("q", "exp"):
+                if q.get(k):
+                    q[k] = add_furigana(q[k])
+            if q.get("opts"):
+                q["opts"] = [add_furigana(o) for o in q["opts"]]
         print(f"      furigana applied")
 
     n_ex = sum(len(it.get("examples", [])) for it in items)
