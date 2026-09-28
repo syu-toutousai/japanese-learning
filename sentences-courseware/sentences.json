@@ -384,6 +384,39 @@
         }
       ],
       "note": "委託（いたく）＝把事情托付给他人或他家公司办理：「A社に委託する」＝委托给A公司；句尾「〜ことにした」＝（自己）决定…。"
+    },
+    {
+      "id": "s15",
+      "jp": "これはA社に任せることにした。",
+      "cn": "决定把这件事交给A公司去办。",
+      "words": [
+        { "w": "任せる", "read": "まかせる", "pos": "他动·一段", "mean": "委托；交给；任凭", "form": "任せる" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "オルガ ウルル ここは任(まか)せる。",
+          "en": "Orga, Ururu. We'll leave things here to you.",
+          "cn": "奥尔加、乌鲁鲁，这里就交给你们了。",
+          "media": "The Wrong Way to Use Healing Magic",
+          "ep": "EP10",
+          "at": "10:54",
+          "url": "https://nadeshiko.co/en/sentence/1EOkCA8pnazo",
+          "audio": "https://cdn.nadeshiko.co/media/137908/10/856b3fdee3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/137908/10/856b3fdee3.webp"
+        },
+        {
+          "jp": "お前(まえ)に任(まか)せるべきことは任(まか)せる",
+          "en": "I'll leave what you should do to you.",
+          "cn": "该交给你的事就交给你。",
+          "media": "My Happy Marriage Season 2",
+          "ep": "EP3",
+          "at": "14:20",
+          "url": "https://nadeshiko.co/en/sentence/JocHr6DGbkCA",
+          "audio": "https://cdn.nadeshiko.co/media/169441/3/fa507e47ec.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/169441/3/fa507e47ec.webp"
+        }
+      ],
+      "note": "任せる（まかせる）＝把某事交给别人去办/去决定，比「委託」更日常；「委託」偏商务、法律上的正式委托。与 s14 只差一个动词，对照记忆：A社に委託する／A社に任せる。"
     }
   ]
 }
