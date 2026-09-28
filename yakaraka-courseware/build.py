@@ -51,6 +51,41 @@ _READING_OVERRIDES = [
     ("静か", "しずか"),
     ("確か", "たしか"),
     ("豊か", "ゆたか"),
+    ("緩やか", "ゆるやか"),
+    ("冷ややか", "ひややか"),
+    ("淑やか", "しとやか"),
+    ("煌びやか", "きらびやか"),
+    ("伸びやか", "のびやか"),
+    ("晴れやか", "はれやか"),
+    ("密やか", "ひそやか"),
+    ("涼やか", "すずやか"),
+    ("誇らか", "ほこらか"),
+    ("大らか", "おおらか"),
+    ("滑らか", "なめらか"),
+    ("詳らか", "つまびらか"),
+    ("暖か", "あたたか"),
+    ("細か", "こまか"),
+    ("密か", "ひそか"),
+    ("愚か", "おろか"),
+    ("疎か", "おろそか"),
+    ("俄か", "にわか"),
+    ("仄か", "ほのか"),
+    ("大まか", "おおまか"),
+    ("清か", "さやか"),
+    ("軽々しい", "かるがるしい"),
+    ("疎ましい", "うとましい"),
+    ("誇らしい", "ほこらしい"),
+    ("愚かしい", "おろかしい"),
+    ("晴れがましい", "はれがましい"),
+    ("艶めかしい", "なまめかしい"),
+    ("荒々しい", "あらあらしい"),
+    ("麗しい", "うるわしい"),
+    ("入って", "はいって"),
+    ("抱い", "いだい"),
+    ("麗しく", "うるわしく"),
+    ("晴れがましく", "はれがましく"),
+    ("疎ましく", "うとましく"),
+    ("軽々しく", "かるがるしく"),
     ("日ざし", "ひざし"),
     ("心地よい", "ここちよい"),
     ("口当たり", "くちあたり"),
@@ -167,6 +202,7 @@ def load_data():
     items = data.get("items", [])
     contrasts = data.get("contrasts", [])
     kanji_families = data.get("kanji_families", [])
+    shi_frames = data.get("shi_frames", [])
     errors = []
 
     gids = set()
@@ -209,13 +245,16 @@ def load_data():
             ref = it.get(ref_key)
             if ref and ref not in ids:
                 errors.append(f"「{it['id']}」{ref_key} 引用了未知 id：{ref}")
+        fr = it.get("frame")
+        if fr and fr not in {f.get("id") for f in shi_frames}:
+            errors.append(f"「{it['id']}」frame 引用了未知 id：{fr}")
 
     if errors:
         print("[!] yakaraka.json 有问题，先修好再构建：")
         for e in errors:
             print("   -", e)
         sys.exit(1)
-    return meta, groups, items, contrasts, kanji_families
+    return meta, groups, items, contrasts, kanji_families, shi_frames
 
 
 # ────────────────────────────────────────────── tts
@@ -494,6 +533,7 @@ const GROUPS=__GROUPS__;
 const ITEMS=__ITEMS__;
 const CONTRASTS=__CONTRASTS__;
 const KANJI_FAMILIES=__KANJI_FAMILIES__;
+const SHI_FRAMES=__SHI_FRAMES__;
 const BANKS=__BANKS__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
@@ -567,6 +607,15 @@ function renderMap(){
   <div class="krow">`+KANJI_FAMILIES.map(k=>
     `<div class="kchip"><span class="kc">${k.c}</span><span class="kr">${k.read}</span>
      <span class="km">${k.mean}｜${k.family}</span></div>`).join("")+`</div></div>`;
+
+  h+=`<div class="card"><h3 class="sec" style="margin-top:0">🔗 同源対応の四つの型——ナ形 ↔ 〜しい</h3>
+  <p class="hint">只有「同一词根＋不同接尾辞」才算形态同源；同汉字≠同词源（如 厳か／厳しい）。下面四种接尾辞，
+  是把 〜やか／らか／か 与 〜しい 家族串起来的真正框架。</p>
+  <div class="steps" style="flex-wrap:wrap">`+SHI_FRAMES.map(f=>
+    `<div style="border-left:4px solid ${f.color};min-width:210px">
+      <b style="color:${f.color}">${f.name}</b><br>${f.desc}
+      <div style="margin-top:6px">`+f.pairs.map(p=>`<span class="rchip" style="margin:2px 4px 2px 0">${p}</span>`).join("")+`</div>
+    </div>`).join("")+`</div></div>`;
   $("#main").innerHTML=h;
 }
 
@@ -579,6 +628,7 @@ function renderZukan(){
     h+=`<h3 class="sec" style="border-left:4px solid ${g.color};padding-left:8px;color:${g.color}">${g.emoji} ${g.name} <span style="color:var(--sub);font-weight:400">— ${g.semantics}</span></h3>`;
     members.forEach(n=>{
       const iid=n.id;
+      const fr=n.frame?SHI_FRAMES.find(f=>f.id===n.frame):null;
       let links="";
       if(n.shi){const s=ITEMS.find(x=>x.id===n.shi);
         if(s)links+=`<span class="linkchip" onclick="goItem('${s.id}')">同根の〜しい形 → ${s.emoji} ${s.word}（${s.read}）</span>`;}
@@ -589,6 +639,7 @@ function renderZukan(){
         <div class="meta"><code>読 ${n.read}</code>
           ${AUDIO[`${iid}-w`]?`<button class="btn mini-btn" title="单词发音" onclick="play('${iid}-w',this)">▶</button>`:""}
           <span class="rchip" style="background:${g.color}22;color:${g.color}">${g.name}</span>
+          ${fr?`<span class="rchip" style="background:${fr.color}22;color:${fr.color}">${fr.name}</span>`:""}
         </div>
         <div class="core-box"><b>🧭 核心意象</b>　${n.core}</div>
         <div class="krow">`+(n.kanji||[]).map(k=>
@@ -731,7 +782,7 @@ renderNav();render();
 
 
 def main():
-    meta, groups, items, contrasts, kanji_families = load_data()
+    meta, groups, items, contrasts, kanji_families, shi_frames = load_data()
     n = len(items)
     n_kanji = len({k["c"] for it in items for k in (it.get("kanji") or [])})
     n_ex = sum(len(it.get("examples") or []) for it in items)
@@ -774,10 +825,12 @@ def main():
             .replace("__ITEMS__", j(display))
             .replace("__CONTRASTS__", j(contrasts))
             .replace("__KANJI_FAMILIES__", j(kanji_families))
+            .replace("__SHI_FRAMES__", j(shi_frames))
             .replace("__BANKS__", j(BANKS))
             .replace("__QS__", j(qs)))
     left = [m for m in ("__TAGS__", "__AUDIO__", "__GROUPS__", "__ITEMS__",
-                        "__CONTRASTS__", "__KANJI_FAMILIES__", "__BANKS__", "__QS__")
+                        "__CONTRASTS__", "__KANJI_FAMILIES__", "__SHI_FRAMES__",
+                        "__BANKS__", "__QS__")
             if m in html]
     if left:
         sys.exit(f"[!] 模板占位符未替换：{left}")
