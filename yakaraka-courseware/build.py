@@ -16,6 +16,7 @@ import random
 import re
 import subprocess
 import sys
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -29,6 +30,7 @@ except ImportError:
 ROOT = Path(__file__).parent
 DATA = ROOT / "yakaraka.json"
 AUDIO_DIR = ROOT / "audio"
+NADE_DIR = ROOT / "nade_audio"
 OUT = ROOT / "index.html"
 
 VOICE = "ja-JP-NanamiNeural"
@@ -43,7 +45,8 @@ def j(obj):
 
 # ────────────────────────────────────────────── furigana (ruby)
 
-_KANJI = r"\u4e00-\u9fff\u3007\u303b\u3400-\u4dbf"
+_KANJI = r"\u4e00-\u9fff\u3005\u3007\u303b\u3400-\u4dbf"
+_INLINE = re.compile(rf"([{_KANJI}]{{1,8}})\s*\(([ぁ-んァ-ンのー]{{1,10}})\)")
 _KANJI_RE = re.compile(rf"[{_KANJI}]")
 
 _READING_OVERRIDES = [
@@ -173,6 +176,8 @@ def add_furigana(text):
     for phrase, reading in _READING_OVERRIDES:
         for m in re.finditer(re.escape(phrase), text):
             matches.append((m.start(), m.end(), phrase, reading))
+    for m in _INLINE.finditer(text):
+        matches.append((m.start(), m.end(), m.group(1), m.group(2)))
     matches.sort(key=lambda x: (x[0], -(x[1] - x[0])))
     clean = []
     for m in matches:
@@ -315,6 +320,58 @@ def gen_audio(items):
         if p.exists() and p.stat().st_size > MIN_MP3:
             audio[lid] = "data:audio/mpeg;base64," + base64.b64encode(p.read_bytes()).decode()
     return audio
+
+
+# ────────────────────────────────────────────── nadeshiko media
+
+def fetch_media(url, logical_id, ext, min_size):
+    NADE_DIR.mkdir(exist_ok=True)
+    path = NADE_DIR / f"{logical_id}-{hashlib.sha1(url.encode()).hexdigest()[:10]}.{ext}"
+    if path.exists() and path.stat().st_size > min_size:
+        return path.read_bytes()
+    for _ in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                data = resp.read()
+            if len(data) > min_size:
+                path.write_bytes(data)
+                return data
+        except Exception:
+            pass
+    return None
+
+
+def gen_nade_media(items):
+    tasks = []
+    for it in items:
+        for i, sc in enumerate(it.get("nadeshiko") or []):
+            nid = f"{it['id']}-n{i}"
+            if sc.get("audio"):
+                tasks.append((nid, "a", sc["audio"], "mp3", 500))
+            if sc.get("thumb"):
+                tasks.append((nid, "t", sc["thumb"], "webp", 200))
+
+    print(f"[2/4] nadeshiko: {len(tasks)} media files to fetch...")
+    nade_audio, scenes = {}, {}
+    failed = []
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        futs = {ex.submit(fetch_media, url, f"{nid}-{kind}", ext, minsize): (nid, kind)
+                for nid, kind, url, ext, minsize in tasks}
+        for fut in futs:
+            nid, kind = futs[fut]
+            data = fut.result()
+            if data is None:
+                failed.append(f"{nid}({'audio' if kind=='a' else 'thumb'})")
+                continue
+            if kind == "a":
+                nade_audio[nid] = "data:audio/mpeg;base64," + base64.b64encode(data).decode()
+            else:
+                scenes[nid] = "data:image/webp;base64," + base64.b64encode(data).decode()
+    if failed:
+        print(f"  nade: {len(failed)} failed: {', '.join(failed)}")
+    print(f"  nade: audio {len(nade_audio)}, thumbs {len(scenes)}")
+    return nade_audio, scenes
 
 
 # ────────────────────────────────────────────── auto quizzes
@@ -509,6 +566,21 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 .hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
 .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .legend span{font-size:12px;border-radius:99px;padding:3px 10px;background:#f1f3f8;color:var(--sub);font-weight:600}
+/* nadeshiko scene */
+.nade-card{background:#faf5ff;border:1px solid #e0d0f0;border-radius:12px;padding:12px;margin:12px 0}
+.nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.nade-card .nade-media{font-weight:700;color:#5e35b1;font-size:13px}
+.nade-card .nade-ep{font-size:11.5px;color:var(--sub)}
+.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:15px;line-height:2}
+.nade-card .nade-jp ruby rt{font-size:.52em;color:var(--sub)}
+.nade-card .nade-en{font-size:12.5px;color:var(--sub);margin-top:3px;font-style:italic}
+.nade-card .nade-cn{font-size:13px;color:var(--ink);margin-top:2px}
+.nade-card .nade-row{display:flex;gap:10px;align-items:flex-start}
+.nade-card .nade-thumb{width:80px;height:50px;border-radius:8px;object-fit:cover;flex:none}
+.nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
+.nade-card a:hover{text-decoration:underline}
+.src{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;margin-left:6px;vertical-align:middle}
+.src-nade{background:#ede7f6;color:#5e35b1}
 </style>
 </head>
 <body>
@@ -529,6 +601,8 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 
 <script>
 const AUDIO=__AUDIO__;
+const NADE_AUDIO=__NADE_AUDIO__;
+const SCENES=__SCENES__;
 const GROUPS=__GROUPS__;
 const ITEMS=__ITEMS__;
 const CONTRASTS=__CONTRASTS__;
@@ -539,7 +613,7 @@ let QS=__QS__;
 const $=s=>document.querySelector(s);
 let curAudio=null,curBtn=null;
 function play(id,btn){
-  const src=AUDIO[id];if(!src)return;
+  const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;
   if(curAudio){curAudio.pause();curAudio.currentTime=0;}
   document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
   curAudio=new Audio(src);curBtn=btn||null;
@@ -549,6 +623,25 @@ function play(id,btn){
 function rowHTML(sid,s){
   const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
   return `<div class="row">${b}<div><div class="jp">${s.jp}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function nadeHTML(sc,iid,idx){
+  const nid=`${iid}-n${idx}`;
+  const hasAudio=!!NADE_AUDIO[nid];
+  const playBtn=hasAudio?`<button class="btn" style="width:30px;height:30px;font-size:13px" onclick="play('${nid}',this)">▶</button>`:"";
+  const thumb=SCENES[nid]
+    ?`<img class="nade-thumb" src="${SCENES[nid]}" alt="">`
+    :(sc.thumb?`<img class="nade-thumb" src="${sc.thumb}" alt="" onerror="this.style.display='none'">`:"");
+  return `<div class="nade-card">
+    <div class="nade-hdr"><span class="src src-nade">Nadeshiko</span>${playBtn}
+      <span class="nade-media">${sc.media}</span><span class="nade-ep">${sc.ep} @ ${sc.at}</span></div>
+    <div class="nade-row">${thumb}
+      <div>
+        <div class="nade-jp">${sc.jp}</div>
+        <div class="nade-en">${sc.en}</div>
+        ${sc.cn?`<div class="nade-cn">${sc.cn}</div>`:""}
+        <a href="${sc.url}" target="_blank">nadeshiko.co ↗</a>
+      </div>
+    </div></div>`;
 }
 
 /* ---------- tabs ---------- */
@@ -649,6 +742,7 @@ function renderZukan(){
         ${links}
         <h3 class="sec">例文</h3>
         ${(n.examples||[]).map((ex,i)=>rowHTML(`${iid}-e${i}`,ex)).join("")}
+        ${(n.nadeshiko||[]).map((sc,j)=>nadeHTML(sc,iid,j)).join("")}
         ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
       </div>`;
     });
@@ -786,6 +880,7 @@ def main():
     n = len(items)
     n_kanji = len({k["c"] for it in items for k in (it.get("kanji") or [])})
     n_ex = sum(len(it.get("examples") or []) for it in items)
+    n_nade = sum(len(it.get("nadeshiko") or []) for it in items)
     level_counts = {}
     for it in items:
         level_counts[it["level"]] = level_counts.get(it["level"], 0) + 1
@@ -794,7 +889,9 @@ def main():
     print(f"[1/4] audio: TTS for {n} words + {n_ex} examples...")
     audio = gen_audio(items)
 
-    print("[2/4] generating quiz banks...")
+    nade_audio, scenes = gen_nade_media(items)
+
+    print("[3/4] generating quiz banks...")
     qs = build_questions(items, audio)
     counts = {k: sum(1 for q in qs if q["bank"] == k) for k in dict.fromkeys(q["bank"] for q in qs)}
     for k, label in BANKS:
@@ -815,12 +912,15 @@ def main():
     tags = (f"<span>{n} 語（4 語族）</span>"
             f"<span>{n_kanji} 漢字</span>"
             f"<span>{level_str}</span>"
-            f"<span>{sum(counts.values())} 問 5 層題庫</span>")
+            f"<span>{sum(counts.values())} 問 5 層題庫</span>"
+            f"<span>{n_nade} Nadeshiko 原声</span>")
 
-    print("[3/4] rendering template...")
+    print("[4/4] rendering template...")
     html = (TEMPLATE
             .replace("__TAGS__", tags)
             .replace("__AUDIO__", j(audio))
+            .replace("__NADE_AUDIO__", j(nade_audio))
+            .replace("__SCENES__", j(scenes))
             .replace("__GROUPS__", j(groups))
             .replace("__ITEMS__", j(display))
             .replace("__CONTRASTS__", j(contrasts))
@@ -828,14 +928,14 @@ def main():
             .replace("__SHI_FRAMES__", j(shi_frames))
             .replace("__BANKS__", j(BANKS))
             .replace("__QS__", j(qs)))
-    left = [m for m in ("__TAGS__", "__AUDIO__", "__GROUPS__", "__ITEMS__",
-                        "__CONTRASTS__", "__KANJI_FAMILIES__", "__SHI_FRAMES__",
-                        "__BANKS__", "__QS__")
+    left = [m for m in ("__TAGS__", "__AUDIO__", "__NADE_AUDIO__", "__SCENES__",
+                        "__GROUPS__", "__ITEMS__", "__CONTRASTS__", "__KANJI_FAMILIES__",
+                        "__SHI_FRAMES__", "__BANKS__", "__QS__")
             if m in html]
     if left:
         sys.exit(f"[!] 模板占位符未替换：{left}")
     OUT.write_text(html, encoding="utf-8")
-    print(f"[4/4] wrote {OUT} ({OUT.stat().st_size//1024} KB)")
+    print(f"      wrote {OUT} ({OUT.stat().st_size//1024} KB)")
 
 
 if __name__ == "__main__":

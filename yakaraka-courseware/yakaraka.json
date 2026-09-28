@@ -305,7 +305,21 @@
         }
       ],
       "form": "賑やかな",
-      "note": "「賑」从「貝」——财货聚集故繁荣。作连体时「賑やかな」，作谓语「賑やかだ」。"
+      "note": "「賑」从「貝」——财货聚集故繁荣。作连体时「賑やかな」，作谓语「賑やかだ」。",
+      "nadeshiko": [
+        {
+          "jp": "ええ 賑(にぎ)やかでいいですね",
+          "en": "Yes, so merry and lively.",
+          "cn": "嗯，热闹点挺好的。",
+          "media": "PLUTO",
+          "ep": "EP2",
+          "at": "27:23",
+          "url": "https://nadeshiko.co/en/sentence/721vnfOMijUS",
+          "audio": "https://cdn.nadeshiko.co/media/99088/2/6b2f1f3616.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99088/2/6b2f1f3616.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "sawayaka",
@@ -341,7 +355,21 @@
         }
       ],
       "form": "爽やかな",
-      "note": "爽やか＝最日常；「すがすがしい（清々しい）」更书面、文语性更强。"
+      "note": "爽やか＝最日常；「すがすがしい（清々しい）」更书面、文语性更强。",
+      "nadeshiko": [
+        {
+          "jp": "今日(きょう) 爽(さわ)やかだね　今日(きょう) 爽(さわ)やか",
+          "en": "Your look is breezy today. -I'm feeling breezy.",
+          "cn": "今天真清爽呢。——嗯，很清爽。",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP6",
+          "at": "14:29",
+          "url": "https://nadeshiko.co/en/sentence/BKig-e-npll6",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/6/2afb3823eb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/6/2afb3823eb.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hanayaka",
@@ -378,7 +406,21 @@
         }
       ],
       "form": "華やかな",
-      "note": "華やか＝外观・气氛的华丽；華々しい＝经历、成绩的辉煌（華々しい活躍）。"
+      "note": "華やか＝外观・气氛的华丽；華々しい＝经历、成绩的辉煌（華々しい活躍）。",
+      "nadeshiko": [
+        {
+          "jp": "ご覧(らん)ください この華(はな)やかなイルミネーション",
+          "en": "Look at these stunning winter lights!",
+          "cn": "请看，这华丽的彩灯。",
+          "media": "ONIMAI: I'm Now Your Sister!",
+          "ep": "EP9",
+          "at": "0:00",
+          "url": "https://nadeshiko.co/en/sentence/2DWtUYekdlWe",
+          "audio": "https://cdn.nadeshiko.co/media/147864/9/6d5edeb146.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/147864/9/6d5edeb146.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "odayaka",
@@ -414,7 +456,21 @@
         }
       ],
       "form": "穏やかだ",
-      "note": "天气・海・局势用「穏やか」；人际气氛融洽用「和やか」（和やかな雰囲気）。"
+      "note": "天气・海・局势用「穏やか」；人际气氛融洽用「和やか」（和やかな雰囲気）。",
+      "nadeshiko": [
+        {
+          "jp": "穏(おだ)やか... ですね",
+          "en": "They are quite calm.",
+          "cn": "真……平静呢。",
+          "media": "CITY THE ANIMATION",
+          "ep": "EP11",
+          "at": "15:58",
+          "url": "https://nadeshiko.co/en/sentence/_XBNTz4sSm4o",
+          "audio": "https://cdn.nadeshiko.co/media/181841/11/f15c82a46c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/181841/11/f15c82a46c.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "azayaka",
@@ -450,7 +506,21 @@
         }
       ],
       "form": "鮮やかな",
-      "note": "既有「鲜艳」也有「（技术）漂亮、精湛」的比喻义：鮮やかなプレー。"
+      "note": "既有「鲜艳」也有「（技术）漂亮、精湛」的比喻义：鮮やかなプレー。",
+      "nadeshiko": [
+        {
+          "jp": "鮮(あざ)やかな空(そら)。みずみずしい緑(みどり)。",
+          "en": "A sky of vivid blue... Lush vegetation...",
+          "cn": "鲜艳的天空，水灵的绿意。",
+          "media": "Mobile Suit Gundam: The Witch from Mercury Season 2",
+          "ep": "EP1",
+          "at": "16:04",
+          "url": "https://nadeshiko.co/en/sentence/i-w1KWAzsv5y",
+          "audio": "https://cdn.nadeshiko.co/media/155158/1/97e4f56c1e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/155158/1/97e4f56c1e.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "sukoyaka",
@@ -486,7 +556,21 @@
         }
       ],
       "form": "健やかに",
-      "note": "「健やかに育つ／育む」是固定搭配，多用于育儿、祝愿语境。"
+      "note": "「健やかに育つ／育む」是固定搭配，多用于育儿、祝愿语境。",
+      "nadeshiko": [
+        {
+          "jp": "お健(すこ)やかに 殿下(でんか)...",
+          "en": "Live well, Your Highness.",
+          "cn": "祝您安康，殿下……",
+          "media": "Vinland Saga",
+          "ep": "EP18",
+          "at": "8:04",
+          "url": "https://nadeshiko.co/en/sentence/CP9NNVP--K-R",
+          "audio": "https://cdn.nadeshiko.co/media/101348/18/bc7c283e3a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101348/18/bc7c283e3a.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "sumiyaka",
@@ -522,7 +606,21 @@
         }
       ],
       "form": "速やかに",
-      "note": "「速やかに処理／対応／行動」是公文与商务的高频搭配，比「早く」正式。"
+      "note": "「速やかに処理／対応／行動」是公文与商务的高频搭配，比「早く」正式。",
+      "nadeshiko": [
+        {
+          "jp": "速(すみ)やかに合流(ごうりゅう)ポイントへ!",
+          "en": "Get to the rendezvous point quickly!",
+          "cn": "迅速前往会合点！",
+          "media": "Dragon Pilot: Hisone & Masotan",
+          "ep": "EP12",
+          "at": "11:57",
+          "url": "https://nadeshiko.co/en/sentence/VDWY9k8ytiX7",
+          "audio": "https://cdn.nadeshiko.co/media/100673/12/c140e5d65c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100673/12/c140e5d65c.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "komayaka",
@@ -559,7 +657,21 @@
         }
       ],
       "form": "細やかな",
-      "note": "細やか（こまやか）＝褒义「细腻周到」；細々しい（こまごましい）＝贬义「琐碎繁琐」。"
+      "note": "細やか（こまやか）＝褒义「细腻周到」；細々しい（こまごましい）＝贬义「琐碎繁琐」。",
+      "nadeshiko": [
+        {
+          "jp": "見(み)てくれ 経年劣化(けいねんれっか)や 細(こま)やかな傷(きず)まで再現(さいげん)してる",
+          "en": "Even the wear and tear and tiny scratches are being recreated.",
+          "cn": "你看，连经年劣化和细微的伤痕都还原出来了。",
+          "media": "Delicious in Dungeon",
+          "ep": "EP16",
+          "at": "5:06",
+          "url": "https://nadeshiko.co/en/sentence/wi-gDYJNgarf",
+          "audio": "https://cdn.nadeshiko.co/media/153518/16/c98c8c58f1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/16/c98c8c58f1.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "karoyaka",
@@ -596,7 +708,21 @@
       ],
       "form": "軽やかな",
       "note": "軽やか＝动作・节奏的轻盈；「軽い」是基本形容词，同根。",
-      "shi": "karugarushii"
+      "shi": "karugarushii",
+      "nadeshiko": [
+        {
+          "jp": "この軽(かろ)やかで優雅(ゆうが)な胡蝶(こちょう)を",
+          "en": "this light-footed, elegant butterfly",
+          "cn": "这只轻盈优雅的蝴蝶。",
+          "media": "Though I Am an Inept Villainess",
+          "ep": "EP11",
+          "at": "21:23",
+          "url": "https://nadeshiko.co/en/sentence/doPsV5Q5E3-f",
+          "audio": "https://cdn.nadeshiko.co/media/188139/11/ba86bc2089.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/188139/11/ba86bc2089.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "adeyaka",
@@ -633,7 +759,21 @@
         }
       ],
       "form": "艶やかな",
-      "note": "「あでやか」＝妆容服饰的艳丽；「つややか」＝皮肤、头发的光润——同一个词的两种读法。"
+      "note": "「あでやか」＝妆容服饰的艳丽；「つややか」＝皮肤、头发的光润——同一个词的两种读法。",
+      "nadeshiko": [
+        {
+          "jp": "艶(あで)やかな褐色(かっしょく)の女子(じょし)も おるそうじゃ",
+          "en": "and some have gorgeous tanned skin.",
+          "cn": "听说也有肤色艳丽的小麦色女子。",
+          "media": "Jin (Final)",
+          "ep": "EP9",
+          "at": "17:22",
+          "url": "https://nadeshiko.co/en/sentence/fpH9GJeUdayR",
+          "audio": "https://cdn.nadeshiko.co/media/mv/46198_2/9/ebff68b4ac.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/46198_2/9/ebff68b4ac.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "nagoyaka",
@@ -669,7 +809,21 @@
         }
       ],
       "form": "和やかな",
-      "note": "和やか＝人与人之间的气氛；穏やか＝天气・局势・性情的平稳。"
+      "note": "和やか＝人与人之间的气氛；穏やか＝天气・局势・性情的平稳。",
+      "nadeshiko": [
+        {
+          "jp": "さっきまで 和(なご)やかだったのに...",
+          "en": "They were friendly up until a minute ago.",
+          "cn": "刚才明明还很和睦……",
+          "media": "Chained Soldier",
+          "ep": "EP9",
+          "at": "16:14",
+          "url": "https://nadeshiko.co/en/sentence/53MMhLZkbWDc",
+          "audio": "https://cdn.nadeshiko.co/media/141821/9/857611e4ce.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/141821/9/857611e4ce.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "miyabiyaka",
@@ -741,7 +895,21 @@
         }
       ],
       "form": "しなやかな",
-      "note": "常写假名；汉字「撓やか」较罕见。柔中带韧、动作流畅是核心。"
+      "note": "常写假名；汉字「撓やか」较罕见。柔中带韧、动作流畅是核心。",
+      "nadeshiko": [
+        {
+          "jp": "めっちゃ しなやか... あんたの体(からだ)",
+          "en": "What a graceful body.",
+          "cn": "你的身体……真柔韧。",
+          "media": "Summer Time Rendering",
+          "ep": "EP15",
+          "at": "13:18",
+          "url": "https://nadeshiko.co/en/sentence/udcWlJiSZreI",
+          "audio": "https://cdn.nadeshiko.co/media/129201/15/a61a4c46ce.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/129201/15/a61a4c46ce.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "taoyaka",
@@ -777,7 +945,21 @@
         }
       ],
       "form": "たおやかな",
-      "note": "雅语色彩浓，多写假名「たおやか」；与「しなやか」同源，但更偏「柔美端庄」。"
+      "note": "雅语色彩浓，多写假名「たおやか」；与「しなやか」同源，但更偏「柔美端庄」。",
+      "nadeshiko": [
+        {
+          "jp": "百合(ゆり)の如(ごと)く嫋(たお)やかな立(た)ち姿(すがた)",
+          "en": "Her standing figure, as graceful as a lily...",
+          "cn": "如百合般婀娜的站姿。",
+          "media": "Bungo Stray Dogs 3",
+          "ep": "EP5",
+          "at": "11:50",
+          "url": "https://nadeshiko.co/en/sentence/DmfAOlo_hRMy",
+          "audio": "https://cdn.nadeshiko.co/media/103223/5/5dc496136c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/103223/5/5dc496136c.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "maroyaka",
@@ -813,7 +995,21 @@
         }
       ],
       "form": "まろやかだ",
-      "note": "多写假名；汉字可写「円やか」「醇やか」，专用于味道、口感、嗓音的圆润。"
+      "note": "多写假名；汉字可写「円やか」「醇やか」，专用于味道、口感、嗓音的圆润。",
+      "nadeshiko": [
+        {
+          "jp": "舌触(したざわ)りが まろやかでいいね",
+          "en": "I love how smooth the texture is.",
+          "cn": "口感醇厚，真不错。",
+          "media": "Delicious in Dungeon",
+          "ep": "EP5",
+          "at": "22:14",
+          "url": "https://nadeshiko.co/en/sentence/JZqsIkYg_o77",
+          "audio": "https://cdn.nadeshiko.co/media/153518/5/9bb49c51fd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/5/9bb49c51fd.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "akiraka",
@@ -849,7 +1045,21 @@
         }
       ],
       "form": "明らかに",
-      "note": "「明らかにする」＝查明、明确；「明らかになる」＝水落石出——两个惯用搭配必记。"
+      "note": "「明らかにする」＝查明、明确；「明らかになる」＝水落石出——两个惯用搭配必记。",
+      "nadeshiko": [
+        {
+          "jp": "明(あき)らかに おかしい。ぐっ...",
+          "en": "Something was clearly off.",
+          "cn": "明显不对劲。唔……",
+          "media": "Rent-a-Girlfriend Season 3",
+          "ep": "EP4",
+          "at": "4:08",
+          "url": "https://nadeshiko.co/en/sentence/m7nOEuW4YTe9",
+          "audio": "https://cdn.nadeshiko.co/media/154745/4/ec9d32d8b8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154745/4/ec9d32d8b8.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "kiyoraka",
@@ -886,7 +1096,21 @@
         }
       ],
       "form": "清らかな",
-      "note": "偏文学表达；「清らかな愛／心」＝纯洁的爱与心。"
+      "note": "偏文学表达；「清らかな愛／心」＝纯洁的爱与心。",
+      "nadeshiko": [
+        {
+          "jp": "うそ偽(いつわ)りのない 清(きよ)らかなにおいがする",
+          "en": "The scent she's giving off is pure and devoid of deception.",
+          "cn": "她散发出毫无虚假的纯净气息。",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP8",
+          "at": "16:42",
+          "url": "https://nadeshiko.co/en/sentence/d2L-kZ_Zlp0I",
+          "audio": "https://cdn.nadeshiko.co/media/101922/8/ce4549a915.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/8/ce4549a915.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "yasuraka",
@@ -922,7 +1146,21 @@
         }
       ],
       "form": "安らかになる",
-      "note": "「安らかに眠る」也是悼念逝者的固定表达；日常多指心情安宁。"
+      "note": "「安らかに眠る」也是悼念逝者的固定表达；日常多指心情安宁。",
+      "nadeshiko": [
+        {
+          "jp": "‎安(やす)らかに おやすみください",
+          "en": "May you finally rest in peace.",
+          "cn": "请安息吧。",
+          "media": "Ranma1/2 (2024) Season 2",
+          "ep": "EP6",
+          "at": "4:55",
+          "url": "https://nadeshiko.co/en/sentence/cwqIGTNcu2i3",
+          "audio": "https://cdn.nadeshiko.co/media/185731/6/7b8d4268d5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185731/6/7b8d4268d5.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "tairaka",
@@ -994,7 +1232,21 @@
         }
       ],
       "form": "柔らかな",
-      "note": "口语多用イ形「柔らかい」；「柔らか」常见于书面与惯用语「お手柔らかに」（手下留情）。"
+      "note": "口语多用イ形「柔らかい」；「柔らか」常见于书面与惯用语「お手柔らかに」（手下留情）。",
+      "nadeshiko": [
+        {
+          "jp": "ちょっと柔(やわ)らかすぎた。",
+          "en": "It was a little too soft.",
+          "cn": "有点太软了。",
+          "media": "Tassin Shima",
+          "ep": "EP5",
+          "at": "9:12",
+          "url": "https://nadeshiko.co/en/sentence/gVnnFE98jxZG",
+          "audio": "https://cdn.nadeshiko.co/media/yt/UCUUxKULnB5rfH-sRXH6I7QQ/FatfknTvIok/ef1eefe2f1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/yt/UCUUxKULnB5rfH-sRXH6I7QQ/FatfknTvIok/ef1eefe2f1.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hogaraka",
@@ -1030,7 +1282,21 @@
         }
       ],
       "form": "朗らかに",
-      "note": "人（性格・表情・笑声）与天空都可形容，核心是「没有阴云」。"
+      "note": "人（性格・表情・笑声）与天空都可形容，核心是「没有阴云」。",
+      "nadeshiko": [
+        {
+          "jp": "明(あか)るく 楽(たの)しく 朗(ほが)らかに",
+          "en": "Beautiful, joyous, proud!",
+          "cn": "明朗、快乐、开朗。",
+          "media": "Sound! Euphonium 2",
+          "ep": "EP8",
+          "at": "9:05",
+          "url": "https://nadeshiko.co/en/sentence/7S1v_hBHUxMl",
+          "audio": "https://cdn.nadeshiko.co/media/21460/8/155263a4c8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21460/8/155263a4c8.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "uraraka",
@@ -1067,7 +1333,21 @@
       ],
       "form": "うららかな",
       "note": "几乎写假名；季节感极强，基本只用于春日与舒畅心境。",
-      "shi": "uruwashii"
+      "shi": "uruwashii",
+      "nadeshiko": [
+        {
+          "jp": "この麗(うら)らかな春(はる)の佳日(かじつ)",
+          "en": "on this fine, beautiful spring day.",
+          "cn": "在这明媚的春日佳日。",
+          "media": "The Irregular at Magic High School",
+          "ep": "EP1",
+          "at": "7:27",
+          "url": "https://nadeshiko.co/en/sentence/HcdlGEQN8rlZ",
+          "audio": "https://cdn.nadeshiko.co/media/20458/1/4095797878.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20458/1/4095797878.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "takaraka",
@@ -1103,7 +1383,21 @@
         }
       ],
       "form": "高らかに",
-      "note": "以「声高らかに」「高らかに歌う／笑う」为固定搭配，专写声音。"
+      "note": "以「声高らかに」「高らかに歌う／笑う」为固定搭配，专写声音。",
+      "nadeshiko": [
+        {
+          "jp": "そんな高(たか)らかに言(い)われても...",
+          "en": "You don't have to yell.",
+          "cn": "就算你那么大声说……",
+          "media": "Blue Box",
+          "ep": "EP4",
+          "at": "17:26",
+          "url": "https://nadeshiko.co/en/sentence/SF3KcY09D-Um",
+          "audio": "https://cdn.nadeshiko.co/media/170942/4/c20a446b37.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170942/4/c20a446b37.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "shizuka",
@@ -1139,7 +1433,21 @@
         }
       ],
       "form": "静かで",
-      "note": "连体「静かな」、连用「静かに」——最基本的ナ形。"
+      "note": "连体「静かな」、连用「静かに」——最基本的ナ形。",
+      "nadeshiko": [
+        {
+          "jp": "静(しず)かに...　静(しず)かにしてください",
+          "en": "Quiet, please! Can we please have some quiet?",
+          "cn": "安静……请安静。",
+          "media": "Bottom-Tier Character Tomozaki",
+          "ep": "EP7",
+          "at": "4:29",
+          "url": "https://nadeshiko.co/en/sentence/KJekkNh2q5P7",
+          "audio": "https://cdn.nadeshiko.co/media/112443/7/961ec2c4ff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/112443/7/961ec2c4ff.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "tashika",
@@ -1175,7 +1483,21 @@
         }
       ],
       "form": "確かな",
-      "note": "两种用法：形容动词「確かな証拠」与副词「確か、〜だったと思う」。不要混淆。"
+      "note": "两种用法：形容动词「確かな証拠」与副词「確か、〜だったと思う」。不要混淆。",
+      "nadeshiko": [
+        {
+          "jp": "確(たし)かに確(たし)かに... ああっ!",
+          "en": "True, true.",
+          "cn": "确实，确实……啊！",
+          "media": "Dragon Pilot: Hisone & Masotan",
+          "ep": "EP4",
+          "at": "21:20",
+          "url": "https://nadeshiko.co/en/sentence/RJiwRaONtTIT",
+          "audio": "https://cdn.nadeshiko.co/media/100673/4/cfd4fc8fae.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100673/4/cfd4fc8fae.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "yutaka",
@@ -1211,7 +1533,21 @@
         }
       ],
       "form": "豊かだ",
-      "note": "物质（豊かな生活）与精神（豊かな心・想像力豊か）都可形容。"
+      "note": "物质（豊かな生活）与精神（豊かな心・想像力豊か）都可形容。",
+      "nadeshiko": [
+        {
+          "jp": "チョコレートの風味(ふうみ)豊(ゆた)かなケーキ",
+          "en": "The cake is rich in chocolate flavor,",
+          "cn": "巧克力风味浓郁的蛋糕。",
+          "media": "I'm in Love with the Villainess",
+          "ep": "EP6",
+          "at": "9:03",
+          "url": "https://nadeshiko.co/en/sentence/3eMiGNWX9Bwo",
+          "audio": "https://cdn.nadeshiko.co/media/158704/6/087f88c054.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/158704/6/087f88c054.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "nodoka",
@@ -1252,7 +1588,21 @@
         }
       ],
       "form": "長閑な",
-      "note": "常写假名「のどか」；「長＋閑」两字合一——时间感是它的特色（与「忙しい」相对）。"
+      "note": "常写假名「のどか」；「長＋閑」两字合一——时间感是它的特色（与「忙しい」相对）。",
+      "nadeshiko": [
+        {
+          "jp": "のどか 長閑(のどか)な村(むら)ですね",
+          "en": "What a peaceful village.",
+          "cn": "真是个悠闲宁静的村子啊。",
+          "media": "Wandering Witch: The Journey of Elaina",
+          "ep": "EP3",
+          "at": "11:30",
+          "url": "https://nadeshiko.co/en/sentence/Mj6zBRezVyGF",
+          "audio": "https://cdn.nadeshiko.co/media/112609/3/399586be1b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/112609/3/399586be1b.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "ogosoka",
@@ -1288,7 +1638,21 @@
         }
       ],
       "form": "厳かな",
-      "note": "「厳か」＝气氛仪式的庄严（训读 おごそか）；「厳しい」＝严厉（きびしい）——同字异词必分清。"
+      "note": "「厳か」＝气氛仪式的庄严（训读 おごそか）；「厳しい」＝严厉（きびしい）——同字异词必分清。",
+      "nadeshiko": [
+        {
+          "jp": "神聖(しんせい)な私(わたし)の講義(こうぎ)は 準備(じゅんび)時間(じかん)も厳(おごそ)かに過(す)ごしたまえ",
+          "en": "My lectures are sacred. Prepare for them in silence.",
+          "cn": "我神圣的讲义，连准备时间也要庄严度过。",
+          "media": "Grand Blue Dreaming Season 3",
+          "ep": "EP8",
+          "at": "2:58",
+          "url": "https://nadeshiko.co/en/sentence/zjP_jBE73NvM",
+          "audio": "https://cdn.nadeshiko.co/media/199111/8/17a0392180.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/199111/8/17a0392180.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "kasuka",
@@ -1324,7 +1688,21 @@
         }
       ],
       "form": "微かに",
-      "note": "写「かすか」而不写「びか」；多修饰光、声、香、记忆、希望等细微之物。"
+      "note": "写「かすか」而不写「びか」；多修饰光、声、香、记忆、希望等细微之物。",
+      "nadeshiko": [
+        {
+          "jp": "微(かす)かな希望(きぼう)に縋(すが)り付(つ)き",
+          "en": "You cling to the faintest slivers of hope,",
+          "cn": "紧紧抓住一线微弱的希望。",
+          "media": "Gurren Lagann",
+          "ep": "EP24",
+          "at": "6:06",
+          "url": "https://nadeshiko.co/en/sentence/Tve6PORxoAvi",
+          "audio": "https://cdn.nadeshiko.co/media/2001/24/8e066e2f19.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/2001/24/8e066e2f19.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "haruka",
@@ -1360,7 +1738,21 @@
         }
       ],
       "form": "遥かな",
-      "note": "副词「遥かに」表程度悬殊：彼のほうが遥かに強い（他强得多）。"
+      "note": "副词「遥かに」表程度悬殊：彼のほうが遥かに強い（他强得多）。",
+      "nadeshiko": [
+        {
+          "jp": "行(い)け 遥(はる)か彼方(かなた)まで",
+          "en": "Go. Follow it far, far away.",
+          "cn": "去吧，到遥远的彼方。",
+          "media": "Run with the Wind",
+          "ep": "EP19",
+          "at": "18:56",
+          "url": "https://nadeshiko.co/en/sentence/gGmJcoXE1Gfn",
+          "audio": "https://cdn.nadeshiko.co/media/101903/19/41613b3cde.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101903/19/41613b3cde.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "wazuka",
@@ -1396,7 +1788,21 @@
         }
       ],
       "form": "僅か",
-      "note": "「僅か10分」「僅かに違う」——表数量之少或程度之微，常与数字搭配。"
+      "note": "「僅か10分」「僅かに違う」——表数量之少或程度之微，常与数字搭配。",
+      "nadeshiko": [
+        {
+          "jp": "ほう... ほんの僅(わず)かの間(あいだ)に",
+          "en": "In such a short time,",
+          "cn": "嚯……在短短的一瞬间。",
+          "media": "Vinland Saga",
+          "ep": "EP20",
+          "at": "9:49",
+          "url": "https://nadeshiko.co/en/sentence/azZTtR8NS0BI",
+          "audio": "https://cdn.nadeshiko.co/media/101348/20/1c3ecd6021.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101348/20/1c3ecd6021.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "niginigishii",
@@ -1432,7 +1838,21 @@
         }
       ],
       "form": "賑々しく",
-      "note": "与「賑やか」同根、程度更甚；-々しい 型常带书面、文语色彩。"
+      "note": "与「賑やか」同根、程度更甚；-々しい 型常带书面、文语色彩。",
+      "nadeshiko": [
+        {
+          "jp": "かつて 孟獲(もうかく)率(ひき)いる象兵(ぞうへい)部隊(ぶたい)も　にぎにぎしく 飾(かざ)りたてられておりました",
+          "en": "Long ago, the Meng Huo-led war-elephant unit was also showily decorated.",
+          "cn": "从前孟获率领的象兵部队也装饰得热闹非凡……",
+          "media": "Ya Boy Kongming!",
+          "ep": "EP4",
+          "at": "16:24",
+          "url": "https://nadeshiko.co/en/sentence/xdVafmKWj-BI",
+          "audio": "https://cdn.nadeshiko.co/media/141774/4/6266f3ff53.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/141774/4/6266f3ff53.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hanabanashii",
@@ -1468,7 +1888,21 @@
         }
       ],
       "form": "華々しい",
-      "note": "華やか＝外观；華々しい＝经历・成就的辉煌。也可写「花々しい」。"
+      "note": "華やか＝外观；華々しい＝经历・成就的辉煌。也可写「花々しい」。",
+      "nadeshiko": [
+        {
+          "jp": "一見(いっけん)すれば 華々(はなばな)しい業界(ぎょうかい)に見(み)えるが",
+          "en": "It's a glamorous industry at a glance...",
+          "cn": "乍一看像是光鲜辉煌的行业。",
+          "media": "【OSHI NO KO】Season 3",
+          "ep": "EP2",
+          "at": "18:28",
+          "url": "https://nadeshiko.co/en/sentence/uDEUg3Ty3Ciy",
+          "audio": "https://cdn.nadeshiko.co/media/182587/2/18dcb343ef.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/182587/2/18dcb343ef.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "tsuyatsuyashii",
@@ -1542,7 +1976,21 @@
         }
       ],
       "form": "清々しい",
-      "note": "与「爽やか」近义：すがすがしい更书面、文语性更强；注意剧中「すがすがしいほど◯◯」多为反讽。"
+      "note": "与「爽やか」近义：すがすがしい更书面、文语性更强；注意剧中「すがすがしいほど◯◯」多为反讽。",
+      "nadeshiko": [
+        {
+          "jp": "清々(すがすが)しいね むしろ",
+          "en": "Actually, I find that attitude refreshing.",
+          "cn": "倒不如说，很清爽呢。",
+          "media": "Run with the Wind",
+          "ep": "EP4",
+          "at": "18:01",
+          "url": "https://nadeshiko.co/en/sentence/i-ZrehoOteHX",
+          "audio": "https://cdn.nadeshiko.co/media/101903/4/da9f3fc75a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101903/4/da9f3fc75a.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "komagomashii",
@@ -1615,7 +2063,21 @@
         }
       ],
       "form": "若々しく",
-      "note": "「若い」＋「〜しい」——不是「年轻」的事实，而是「看起来充满年轻感」的印象。"
+      "note": "「若い」＋「〜しい」——不是「年轻」的事实，而是「看起来充满年轻感」的印象。",
+      "nadeshiko": [
+        {
+          "jp": "ずいぶん若々(わかわか)しいですね",
+          "en": "She seems very youthful.",
+          "cn": "看起来真年轻啊。",
+          "media": "The Apothecary Diaries",
+          "ep": "EP6",
+          "at": "2:54",
+          "url": "https://nadeshiko.co/en/sentence/S3D_ZCzhNfNG",
+          "audio": "https://cdn.nadeshiko.co/media/161645/6/67f7eecaca.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161645/6/67f7eecaca.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "yowayowashii",
@@ -1651,7 +2113,21 @@
         }
       ],
       "form": "弱々しい",
-      "note": "与「弱い」相比，弱々しい是外观印象；叠字「々」常带「看上去就很…」的语气。"
+      "note": "与「弱い」相比，弱々しい是外观印象；叠字「々」常带「看上去就很…」的语气。",
+      "nadeshiko": [
+        {
+          "jp": "なんか... 弱々(よわよわ)しいな",
+          "en": "They look... so frail.",
+          "cn": "总觉得……好虚弱啊。",
+          "media": "Vinland Saga Season 2",
+          "ep": "EP7",
+          "at": "5:23",
+          "url": "https://nadeshiko.co/en/sentence/ZuKgj204jZBD",
+          "audio": "https://cdn.nadeshiko.co/media/136430/7/99a1e36e37.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/136430/7/99a1e36e37.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "yuruyaka",
@@ -1687,7 +2163,21 @@
         }
       ],
       "form": "緩やかで",
-      "note": "坡度・曲线・变化・规则都能用；与「急（きゅう）」「厳しい」相对。"
+      "note": "坡度・曲线・变化・规则都能用；与「急（きゅう）」「厳しい」相对。",
+      "nadeshiko": [
+        {
+          "jp": "でも階段(かいだん)けっこう緩(ゆる)やかですね",
+          "en": "But these stairs are actually pretty gentle.",
+          "cn": "不过楼梯还挺平缓的。",
+          "media": "Yuka",
+          "ep": "EP2",
+          "at": "2:55",
+          "url": "https://nadeshiko.co/en/sentence/RLeMigf9i-pD",
+          "audio": "https://cdn.nadeshiko.co/media/yt/UCkex1wLTvYFnF0hfLXGE1kQ/CkrZDJyWDpg/97cdd44ce8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/yt/UCkex1wLTvYFnF0hfLXGE1kQ/CkrZDJyWDpg/97cdd44ce8.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hiyayaka",
@@ -1758,7 +2248,21 @@
         }
       ],
       "form": "お淑やかな",
-      "note": "常加「お」：お淑やか。只用于女性的举止教养，非外貌词。"
+      "note": "常加「お」：お淑やか。只用于女性的举止教养，非外貌词。",
+      "nadeshiko": [
+        {
+          "jp": "花園(はなぞの)さんは 可憐(かれん)でお淑(しと)やかで品行方正(ひんこうほうせい)",
+          "en": "\\\"Hanazono-san.\\\" \\\"conducts herself in an elegant and graceful manner.\\\"",
+          "cn": "花园同学既可爱又端庄，品行方正。",
+          "media": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
+          "ep": "EP4",
+          "at": "13:55",
+          "url": "https://nadeshiko.co/en/sentence/U6YUig-NecKF",
+          "audio": "https://cdn.nadeshiko.co/media/162694/4/0f84f88814.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/162694/4/0f84f88814.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "kirabiyaka",
@@ -1794,7 +2298,21 @@
         }
       ],
       "form": "煌びやかな",
-      "note": "多写假名「きらびやか」；比「華やか」更强调闪耀、绚烂。"
+      "note": "多写假名「きらびやか」；比「華やか」更强调闪耀、绚烂。",
+      "nadeshiko": [
+        {
+          "jp": "きらびやかな外観(がいかん)とは裏腹(うらはら)に-",
+          "en": "Its glittering exterior belies the fact that",
+          "cn": "与那华丽的外观相反。",
+          "media": "Hi Score Girl: Extra Stage",
+          "ep": "EP1",
+          "at": "0:55",
+          "url": "https://nadeshiko.co/en/sentence/TBxPbeIDzWfY",
+          "audio": "https://cdn.nadeshiko.co/media/104307/1/c46a1a60b3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/104307/1/c46a1a60b3.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "nobiyaka",
@@ -1829,7 +2347,21 @@
         }
       ],
       "form": "伸びやかに",
-      "note": "与「伸び伸び（のびのび）」同族，核心是「无拘无束」。"
+      "note": "与「伸び伸び（のびのび）」同族，核心是「无拘无束」。",
+      "nadeshiko": [
+        {
+          "jp": "その音(おと)は 柔(やわ)らかく　どこまでも 伸(の)びやかに広(ひろ)がっていく音(おと)だった",
+          "en": "The sound was soft and endlessly free.",
+          "cn": "那声音柔和，无边无际、舒展地蔓延开去。",
+          "media": "Sound! Euphonium 3",
+          "ep": "EP1",
+          "at": "12:48",
+          "url": "https://nadeshiko.co/en/sentence/AEv8iJxb3JKw",
+          "audio": "https://cdn.nadeshiko.co/media/109731/1/db434492bd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/109731/1/db434492bd.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hareyaka",
@@ -1866,7 +2398,21 @@
         }
       ],
       "form": "晴れやかな",
-      "note": "心の曇りがない状態；「晴れがましい」（过于郑重、惶恐）是另一词，注意区别。"
+      "note": "心の曇りがない状態；「晴れがましい」（过于郑重、惶恐）是另一词，注意区别。",
+      "nadeshiko": [
+        {
+          "jp": "しかし 何(なん)だか すごく晴(は)れやかな気分(きぶん)だ。",
+          "en": "You know, I suddenly feel like a weight's off my chest.",
+          "cn": "不过，总觉得心情非常明朗。",
+          "media": "Call of the Night Season 2",
+          "ep": "EP8",
+          "at": "12:30",
+          "url": "https://nadeshiko.co/en/sentence/TLVAbQBPKZaX",
+          "audio": "https://cdn.nadeshiko.co/media/175914/8/3256ce4849.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/175914/8/3256ce4849.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hisoyaka",
@@ -1901,7 +2447,21 @@
         }
       ],
       "form": "密やかな",
-      "note": "「密やか」偏状态描写（寂静而隐秘）；「密か」偏副词用法「密かに」。"
+      "note": "「密やか」偏状态描写（寂静而隐秘）；「密か」偏副词用法「密かに」。",
+      "nadeshiko": [
+        {
+          "jp": "その ひそやかな悪意(あくい)に 気(き)が付(つ)かないまま　かりそめの平和(へいわ)は続(つづ)く",
+          "en": "Unaware of that quiet malice, we continued on through that fleeting peace.",
+          "cn": "未察觉那份隐秘的恶意，短暂的和平仍在继续。",
+          "media": "My Hero Academia: Vigilantes",
+          "ep": "EP3",
+          "at": "21:45",
+          "url": "https://nadeshiko.co/en/sentence/A4YOhpBy19Tq",
+          "audio": "https://cdn.nadeshiko.co/media/185736/3/3bbc2d0468.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185736/3/3bbc2d0468.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "suzuyaka",
@@ -1936,7 +2496,21 @@
         }
       ],
       "form": "涼やかな",
-      "note": "与「涼しい」相比更局部、更雅：涼やかな風・声・目つき。"
+      "note": "与「涼しい」相比更局部、更雅：涼やかな風・声・目つき。",
+      "nadeshiko": [
+        {
+          "jp": "今日(きょう)は夜風(よかぜ)が涼(すず)やかでいい",
+          "en": "The breeze is pleasantly cool tonight.",
+          "cn": "今晚的夜风清凉宜人。",
+          "media": "Re:ZERO -Starting Life in Another World-",
+          "ep": "EP8",
+          "at": "8:24",
+          "url": "https://nadeshiko.co/en/sentence/wZFPNGY9jLvx",
+          "audio": "https://cdn.nadeshiko.co/media/21355/8/b49ab077ce.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21355/8/b49ab077ce.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hokoraka",
@@ -2009,7 +2583,21 @@
         }
       ],
       "form": "大らかな",
-      "note": "褒义；与「大まか（粗略）」同字不同义——大らか＝气量大，大まか＝不精细。"
+      "note": "褒义；与「大まか（粗略）」同字不同义——大らか＝气量大，大まか＝不精细。",
+      "nadeshiko": [
+        {
+          "jp": "お前(まえ)も 秋子(あきこ)さんも　なんでそう大(おお)らかなんだ?",
+          "en": "How can you and Akiko-san be so easygoing?",
+          "cn": "你和秋子，怎么都这么豁达？",
+          "media": "Kanon (2006)",
+          "ep": "EP3",
+          "at": "7:32",
+          "url": "https://nadeshiko.co/en/sentence/82WQ4JhSLfl2",
+          "audio": "https://cdn.nadeshiko.co/media/1530/3/579bd629ac.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1530/3/579bd629ac.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "nameraka",
@@ -2044,7 +2632,21 @@
         }
       ],
       "form": "滑らかだ",
-      "note": "触感、口感、语言、进展都可形容；「滑らかに話す／進む」是高频搭配。"
+      "note": "触感、口感、语言、进展都可形容；「滑らかに話す／進む」是高频搭配。",
+      "nadeshiko": [
+        {
+          "jp": "表面(ひょうめん)は滑(なめ)らか　...が 硬(かた)く",
+          "en": "The surface is smooth but hard.",
+          "cn": "表面光滑……却很硬。",
+          "media": "Jin (Final)",
+          "ep": "EP4",
+          "at": "24:10",
+          "url": "https://nadeshiko.co/en/sentence/-3uBqrmKTal9",
+          "audio": "https://cdn.nadeshiko.co/media/mv/46198_2/4/ee76fac6be.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/46198_2/4/ee76fac6be.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "tsumabiraka",
@@ -2079,7 +2681,21 @@
         }
       ],
       "form": "詳らかに",
-      "note": "几乎只用于书面与惯用「詳らかにする／詳らかでない」；日常说「詳しい」。"
+      "note": "几乎只用于书面与惯用「詳らかにする／詳らかでない」；日常说「詳しい」。",
+      "nadeshiko": [
+        {
+          "jp": "けど先刻(せんこく)は推理(すいり)根拠(こんきょ)を詳(つまび)らかに説明(せつめい)してたじゃないか",
+          "en": "You were laying out all of your reasoning just now.",
+          "cn": "可你刚才不是把推理依据都详细说明了吗？",
+          "media": "Bungo Stray Dogs 2",
+          "ep": "EP10",
+          "at": "13:24",
+          "url": "https://nadeshiko.co/en/sentence/jcJSkzHjc9OX",
+          "audio": "https://cdn.nadeshiko.co/media/21679/10/42fc9b9911.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21679/10/42fc9b9911.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "atataka",
@@ -2120,7 +2736,21 @@
         }
       ],
       "form": "暖かな",
-      "note": "天气用「暖か」、物体与人情用「温か」的分工倾向；口语多用イ形「暖かい／温かい」。"
+      "note": "天气用「暖か」、物体与人情用「温か」的分工倾向；口语多用イ形「暖かい／温かい」。",
+      "nadeshiko": [
+        {
+          "jp": "とても暖(あたた)かな居心地(いごこち)のいい旅館(りょかん)だった",
+          "en": "You keep a heartwarming inn.",
+          "cn": "是家非常温暖舒适的旅馆。",
+          "media": "Hanasaku Iroha ~Blossoms for Tomorrow~",
+          "ep": "EP13",
+          "at": "20:34",
+          "url": "https://nadeshiko.co/en/sentence/GRAMXbuO303A",
+          "audio": "https://cdn.nadeshiko.co/media/9289/13/70eabac3f2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/9289/13/70eabac3f2.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "komaka",
@@ -2156,7 +2786,21 @@
         }
       ],
       "form": "細かな",
-      "note": "常用イ形「細かい」；ナ形「細か」多用于书面「細かな／細かに」。"
+      "note": "常用イ形「細かい」；ナ形「細か」多用于书面「細かな／細かに」。",
+      "nadeshiko": [
+        {
+          "jp": "それ ちょっと細(こま)かすぎない?",
+          "en": "Now that's just nitpicking!",
+          "cn": "那是不是太琐碎（太较真）了？",
+          "media": "Miss Kobayashi's Dragon Maid",
+          "ep": "EP3",
+          "at": "4:37",
+          "url": "https://nadeshiko.co/en/sentence/jax_ynzAG1x0",
+          "audio": "https://cdn.nadeshiko.co/media/21776/3/11fd75001b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21776/3/11fd75001b.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hisoka",
@@ -2191,7 +2835,21 @@
         }
       ],
       "form": "密かに",
-      "note": "最常以「密かに」作副词；「密かな〜」偏书面。"
+      "note": "最常以「密かに」作副词；「密かな〜」偏书面。",
+      "nadeshiko": [
+        {
+          "jp": "密(ひそ)かに 探(さが)し求(もと)めてごらん",
+          "en": "And secretly Keep seeking what you seek",
+          "cn": "悄悄地，去寻找吧。",
+          "media": "The Summer Hikaru Died",
+          "ep": "EP7",
+          "at": "9:00",
+          "url": "https://nadeshiko.co/en/sentence/A3e229T3OnGM",
+          "audio": "https://cdn.nadeshiko.co/media/177689/7/ef5cf4b5af.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177689/7/ef5cf4b5af.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "oroka",
@@ -2227,7 +2885,21 @@
         }
       ],
       "form": "愚かだ",
-      "note": "别与「AはおろかBも（不用说A，连B都）」的「おろか」混淆——那是「疎か」的另一个读法。"
+      "note": "别与「AはおろかBも（不用说A，连B都）」的「おろか」混淆——那是「疎か」的另一个读法。",
+      "nadeshiko": [
+        {
+          "jp": "かわいい かわいい 愚(おろ)かな娘(むすめ)だ",
+          "en": "My dear, sweet, foolish girl.",
+          "cn": "我可爱又愚蠢的姑娘。",
+          "media": "The Eminence in Shadow",
+          "ep": "EP9",
+          "at": "13:36",
+          "url": "https://nadeshiko.co/en/sentence/IlJr5W_w5AgS",
+          "audio": "https://cdn.nadeshiko.co/media/130298/9/610bb01241.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/130298/9/610bb01241.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "orosoka",
@@ -2263,7 +2935,21 @@
         }
       ],
       "form": "疎かに",
-      "note": "「おろそか」＝马虎（本词条）；「おろか」＝轻视，常用于「AはおろかBも」。"
+      "note": "「おろそか」＝马虎（本词条）；「おろか」＝轻视，常用于「AはおろかBも」。",
+      "nadeshiko": [
+        {
+          "jp": "だからといって クローゼットを疎(おろ)かにはしないように",
+          "en": "but don't neglect your duties as my closet.",
+          "cn": "虽如此，也别怠慢了你作为衣柜的职责。",
+          "media": "Please Put Them On, Takamine-san",
+          "ep": "EP5",
+          "at": "1:27",
+          "url": "https://nadeshiko.co/en/sentence/7_3EZ2vkQc_h",
+          "audio": "https://cdn.nadeshiko.co/media/179965/5/701caf0c00.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179965/5/701caf0c00.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "niwaka",
@@ -2299,7 +2985,21 @@
         }
       ],
       "form": "俄かな",
-      "note": "惯用「俄かには〜ない」＝一时难以…；「俄か雨」「俄か仕込」是常用复合词。"
+      "note": "惯用「俄かには〜ない」＝一时难以…；「俄か雨」「俄か仕込」是常用复合词。",
+      "nadeshiko": [
+        {
+          "jp": "に にわかには信(しん)じられないけど...",
+          "en": "I-I find it hard to believe, but...",
+          "cn": "虽……虽然一时难以相信……",
+          "media": "Steins;Gate 0",
+          "ep": "EP21",
+          "at": "4:33",
+          "url": "https://nadeshiko.co/en/sentence/SOpAVooVCrbs",
+          "audio": "https://cdn.nadeshiko.co/media/21127/21/19396c6c69.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21127/21/19396c6c69.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "honoka",
@@ -2370,7 +3070,21 @@
         }
       ],
       "form": "大まかな",
-      "note": "中性词（粗略）；「大らか」是褒义（豁达）——汉字相同、语感不同。"
+      "note": "中性词（粗略）；「大らか」是褒义（豁达）——汉字相同、语感不同。",
+      "nadeshiko": [
+        {
+          "jp": "大(おお)まかに いくつかに　分(わ)けることができるんですが。",
+          "en": "We can separate them into a few main categories.",
+          "cn": "大致可以分为几类。",
+          "media": "Wash It All Away",
+          "ep": "EP10",
+          "at": "5:06",
+          "url": "https://nadeshiko.co/en/sentence/z4ykQvM47Mr8",
+          "audio": "https://cdn.nadeshiko.co/media/194028/10/b3267f7a88.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/194028/10/b3267f7a88.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "sayaka",
@@ -2443,7 +3157,21 @@
         }
       ],
       "form": "軽々しい",
-      "note": "与褒义的「軽やか」同根反语感：軽やか＝轻快（褒）；軽々しい＝轻浮（贬）。"
+      "note": "与褒义的「軽やか」同根反语感：軽やか＝轻快（褒）；軽々しい＝轻浮（贬）。",
+      "nadeshiko": [
+        {
+          "jp": "後先(あとさき)も考(かんが)えず 勢(いきお)いで軽々(かるがる)しいことを申(もう)し上(あ)げ",
+          "en": "I rashly said some things that I shouldn't have.",
+          "cn": "我不假思索、一时冲动说了轻率的话。",
+          "media": "Jin",
+          "ep": "EP11",
+          "at": "30:42",
+          "url": "https://nadeshiko.co/en/sentence/wcC43IudB4Xr",
+          "audio": "https://cdn.nadeshiko.co/media/mv/46198_1/11/11dd635fed.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/46198_1/11/11dd635fed.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "utomashii",
@@ -2481,7 +3209,21 @@
         }
       ],
       "form": "疎ましく",
-      "note": "从「疎（うと）し」来——因心理距离产生的厌烦，比「嫌い」更书面。"
+      "note": "从「疎（うと）し」来——因心理距离产生的厌烦，比「嫌い」更书面。",
+      "nadeshiko": [
+        {
+          "jp": "≪ああー もう 自分(じぶん)の この性格(せいかく)が疎(うと)ましい≫",
+          "en": "God, I hate myself sometimes.",
+          "cn": "啊啊，真讨厌自己这种性格。",
+          "media": "Rent-a-Girlfriend Season 3",
+          "ep": "EP10",
+          "at": "18:14",
+          "url": "https://nadeshiko.co/en/sentence/uPA9KcWZN4Au",
+          "audio": "https://cdn.nadeshiko.co/media/154745/10/9ce51084bb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154745/10/9ce51084bb.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "hokorashii",
@@ -2519,7 +3261,21 @@
         }
       ],
       "form": "誇らしい",
-      "note": "现代常用イ形；「誇らしげ（に）」也是高频搭配。"
+      "note": "现代常用イ形；「誇らしげ（に）」也是高频搭配。",
+      "nadeshiko": [
+        {
+          "jp": "それは誇(ほこ)らしいね エヘ",
+          "en": "That's something to be proud of.",
+          "cn": "那真是值得骄傲呢，嘿嘿。",
+          "media": "Blood Blockade Battlefront",
+          "ep": "EP8",
+          "at": "1:42",
+          "url": "https://nadeshiko.co/en/sentence/oLTEaT6fgkdE",
+          "audio": "https://cdn.nadeshiko.co/media/20727/8/140e140a58.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20727/8/140e140a58.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "orokashii",
@@ -2556,7 +3312,21 @@
         }
       ],
       "form": "愚かしい",
-      "note": "与「愚か」同根：愚か多作名词性/形动；愚かしい带「蠢到可笑」的语气。"
+      "note": "与「愚か」同根：愚か多作名词性/形动；愚かしい带「蠢到可笑」的语气。",
+      "nadeshiko": [
+        {
+          "jp": "魔獣王(まじゅうおう)に挑(いど)むなど愚(おろ)かしいと。",
+          "en": "I thought he was a fool to challenge a Lord of Dark Beasts.",
+          "cn": "竟觉得挑战魔兽王是愚蠢之举。",
+          "media": "Clevatess",
+          "ep": "EP10",
+          "at": "13:07",
+          "url": "https://nadeshiko.co/en/sentence/VnLJA6o1dqNu",
+          "audio": "https://cdn.nadeshiko.co/media/178869/10/8054165bb3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/178869/10/8054165bb3.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "haregamashii",
@@ -2632,7 +3402,21 @@
         }
       ],
       "form": "艶めかしい",
-      "note": "「〜めかしい」＝带有某种风情/样子（色めかしい・艶めかしい）；也可写「艶かしい」。"
+      "note": "「〜めかしい」＝带有某种风情/样子（色めかしい・艶めかしい）；也可写「艶かしい」。",
+      "nadeshiko": [
+        {
+          "jp": "いや これはこれで なまめかしい格好(かっこう)だなあと",
+          "en": "I don't know. I think I can look sexy just fine over here.",
+          "cn": "不，这样也有这样的妩媚之处啊。",
+          "media": "86 EIGHTY-SIX",
+          "ep": "EP3",
+          "at": "3:16",
+          "url": "https://nadeshiko.co/en/sentence/TT8OY44FD19M",
+          "audio": "https://cdn.nadeshiko.co/media/116589/3/70964d2d9d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/116589/3/70964d2d9d.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "araarashii",
@@ -2669,7 +3453,21 @@
         }
       ],
       "form": "荒々しい",
-      "note": "文语形「荒らか」几乎不用——现代只记「荒々しい」。同字族：荒い・手荒い。"
+      "note": "文语形「荒らか」几乎不用——现代只记「荒々しい」。同字族：荒い・手荒い。",
+      "nadeshiko": [
+        {
+          "jp": "プレーが荒々(あらあら)しいというか",
+          "en": "He's playing kind of rough.",
+          "cn": "该说他打法很粗野吧。",
+          "media": "Blue Box",
+          "ep": "EP18",
+          "at": "8:33",
+          "url": "https://nadeshiko.co/en/sentence/r8oYSRxmAge3",
+          "audio": "https://cdn.nadeshiko.co/media/170942/18/280b5a78a1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170942/18/280b5a78a1.webp",
+          "machine": false
+        }
+      ]
     },
     {
       "id": "uruwashii",
@@ -2706,7 +3504,21 @@
         }
       ],
       "form": "麗しい",
-      "note": "现代多用于「見目麗しい」与书信惯用「ご機嫌麗しく」；与「麗らか（うららか）」同字不同词。"
+      "note": "现代多用于「見目麗しい」与书信惯用「ご機嫌麗しく」；与「麗らか（うららか）」同字不同词。",
+      "nadeshiko": [
+        {
+          "jp": "ごきげんよう 麗(うるわ)しいお嬢(じょう)さん達(たち)",
+          "en": "Greetings to you, my lovely young ladies.",
+          "cn": "各位美丽的小姐，日安。",
+          "media": "Wistoria: Wand and Sword",
+          "ep": "EP10",
+          "at": "20:14",
+          "url": "https://nadeshiko.co/en/sentence/4RaGqXqJmodZ",
+          "audio": "https://cdn.nadeshiko.co/media/174576/10/e27865ca37.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/174576/10/e27865ca37.webp",
+          "machine": false
+        }
+      ]
     }
   ],
   "shi_frames": [
