@@ -83,6 +83,7 @@ _READING_OVERRIDES = [
     ("期待", "きたい"),
     ("人々", "ひとびと"),
     ("落ち着", "おちつ"),
+    ("断った", "ことわった"),
 ]
 
 
@@ -728,7 +729,7 @@ function renderBar(){
       info.textContent=`連続再生中 ${i+1}/${ITEMS.length}${seqPaused?"（一時停止）":""} · ${voice==="m"?"👨 ケイタ":"👩 ナナミ"}`;
     }else{
       $("#seqbtn").textContent="▶ 連続再生";
-      info.textContent="点击各句 ▶ 跟読訓練，或 ▶ 連続再生 全 10 句通し";
+      info.textContent=`点击各句 ▶ 跟読訓練，或 ▶ 連続再生 全 ${ITEMS.length} 句通し`;
     }
   }else{
     sb.style.display="none";

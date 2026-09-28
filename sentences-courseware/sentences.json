@@ -259,6 +259,98 @@
         }
       ],
       "note": "交錯（こうさく）＝两种以上的事物或感情交织在一起；常与「期待と不安」这类成对名词搭配。"
+    },
+    {
+      "id": "s11",
+      "jp": "トンネル工事が始まって１年になるが、地盤の弱い箇所があり、工事は難航している。",
+      "cn": "隧道工程开工至今已有一年，但因存在地基脆弱的地段，工程进展艰难。",
+      "words": [
+        { "w": "地盤", "read": "じばん", "pos": "名", "mean": "地基；地盘；基础", "form": "地盤" },
+        { "w": "難航", "read": "なんこう", "pos": "名·サ变", "mean": "进展困难；航行困难", "form": "難航" },
+        { "w": "箇所", "read": "かしょ", "pos": "名·接尾", "mean": "地方；处；点", "form": "箇所" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "なかなか難航(なんこう)しているらしいな",
+          "en": "but it sounds like she's having trouble.",
+          "cn": "好像进展相当不顺呢。",
+          "media": "Alya Sometimes Hides Her Feelings in Russian",
+          "ep": "EP4",
+          "at": "7:08",
+          "url": "https://nadeshiko.co/en/sentence/uK7tszVp3Dmh",
+          "audio": "https://cdn.nadeshiko.co/media/162804/4/eab6fcb4f6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/162804/4/eab6fcb4f6.webp"
+        },
+        {
+          "jp": "月(つき)接近(せっきん)の影響(えいきょう)で地盤(じばん)が緩(ゆる)んでる",
+          "en": "The ground was distorted by the approach of the moon.",
+          "cn": "受月球接近的影响，地基松动了。",
+          "media": "Gurren Lagann",
+          "ep": "EP23",
+          "at": "9:54",
+          "url": "https://nadeshiko.co/en/sentence/r2MgHmndNeOC",
+          "audio": "https://cdn.nadeshiko.co/media/2001/23/d8866fca30.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/2001/23/d8866fca30.webp"
+        }
+      ],
+      "note": "「難航」＝（工程・交渉・捜査など）迟迟无进展；「箇所」＝（特定的）地方、处，常用来数处数：弱い箇所が数箇所ある。"
+    },
+    {
+      "id": "s12",
+      "jp": "会場は、人々の話し声でがやがやと騒がしく、アナウンサーがよく聞こえなかった。",
+      "cn": "会场里人们的说话声嘈杂喧闹，播音员的声音听不太清楚。",
+      "words": [
+        { "w": "がやがや", "read": "がやがや", "pos": "副·自动", "mean": "喧闹；嘈杂", "form": "がやがや" },
+        { "w": "騒がしい", "read": "さわがしい", "pos": "イ形", "mean": "吵闹；喧嚣；嘈杂", "form": "騒がしく" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "大勢(おおぜい)の人(ひと)のガヤガヤした声(こえ)を 収録(しゅうろく)するのに呼(よ)ばれたの",
+          "en": "That's what they call voices used for crowd noise.",
+          "cn": "我是被叫来收录一大群人的嘈杂人声的。",
+          "media": "SHIROBAKO",
+          "ep": "EP9",
+          "at": "7:52",
+          "url": "https://nadeshiko.co/en/sentence/-cbvQmGOQ_Xw",
+          "audio": "https://cdn.nadeshiko.co/media/20812/9/1046f3eb4d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20812/9/1046f3eb4d.webp"
+        },
+        {
+          "jp": "朝(あさ)から バタバタ騒(さわ)がしいな",
+          "en": "but it's been a chaotic morning because of him.",
+          "cn": "一大早就吵吵闹闹的。",
+          "media": "The Disastrous Life of Saiki K.",
+          "ep": "EP11",
+          "at": "5:47",
+          "url": "https://nadeshiko.co/en/sentence/4bxoQHAo-8st",
+          "audio": "https://cdn.nadeshiko.co/media/21804/11/1f04deaf4f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21804/11/1f04deaf4f.webp"
+        }
+      ],
+      "note": "「がやがや」＝许多人说话声混杂的拟态词，常以「がやがやと騒がしい」搭配出现；「騒がしい」＝吵闹、嘈杂。"
+    },
+    {
+      "id": "s13",
+      "jp": "登山に誘われたが、あまり経験がないので、みんなの足手まといになると思い、断った。",
+      "cn": "有人邀我去登山，但我没什么经验，觉得会成为大家的累赘，便拒绝了。",
+      "words": [
+        { "w": "足手まとい", "read": "あしでまとい", "pos": "名", "mean": "累赘；拖后腿；碍手碍脚", "form": "足手まとい" },
+        { "w": "断る", "read": "ことわる", "pos": "他动·五段", "mean": "拒绝；谢绝；事先通知", "form": "断った" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "どうせ足手(あしで)まといに なるだけだ",
+          "en": "She's just going to keep slowing everyone else down.",
+          "cn": "反正只会成为累赘。",
+          "media": "Sonny Boy",
+          "ep": "EP9",
+          "at": "16:52",
+          "url": "https://nadeshiko.co/en/sentence/MhBlvGKWLqT9",
+          "audio": "https://cdn.nadeshiko.co/media/132126/9/5b8801af3d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/132126/9/5b8801af3d.webp"
+        }
+      ],
+      "note": "「足手まといになる」＝成为累赘、拖大家后腿；「断る」＝拒绝、谢绝（另有「事先打招呼」之义）。"
     }
   ]
 }
