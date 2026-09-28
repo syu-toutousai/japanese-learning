@@ -9,6 +9,81 @@
     "rates": { "slow": "-40%", "med": "-18%", "norm": "+0%" },
     "note": "句子清单以 sentences.md 为准（往那里丢新句子，重建自动长出音声与卡片）；本文件负责翻译、重点词与 Nadeshiko 台词。"
   },
+  "songs": {
+    "intro": "三首脍炙人口的名曲，歌词中自然复现了本课的重点词与语法（只标注命中项，不转载歌词）。",
+    "main": [
+      {
+        "title": "ミックスナッツ",
+        "artist": "Official髭男dism",
+        "year": "2022",
+        "tie": "アニメ「SPY×FAMILY」オープニングテーマ",
+        "utaten": "https://utaten.com/lyric/mi22033031/",
+        "words": [
+          { "w": "騒がしい", "sid": "s12" },
+          { "w": "任せる", "sid": "s15", "note": "成り行き任せ・アドリブ任せ —— 以「〜任せ」复合形式出现，词族相同、句法不同" }
+        ],
+        "grammar": [
+          { "name": "〜ように", "sids": ["s02", "s07"] },
+          { "name": "〜とき（時に）", "sids": ["s06"] },
+          { "name": "〜ている", "sids": ["s08", "s11"] },
+          { "name": "〜になる", "sids": ["s07", "s13"] },
+          { "name": "受身（弾かれて）", "sids": ["s13"] }
+        ],
+        "sids": ["s02", "s06", "s07", "s08", "s11", "s12", "s13", "s15"]
+      },
+      {
+        "title": "賜物",
+        "artist": "RADWIMPS",
+        "year": "2025",
+        "tie": "NHK連続テレビ小説「あんぱん」主題歌",
+        "utaten": "https://utaten.com/lyric/tt25021201/",
+        "words": [
+          { "w": "交錯", "sid": "s10" }
+        ],
+        "grammar": [
+          { "name": "〜によって／による", "sids": ["s04"] },
+          { "name": "〜ような", "sids": ["s02"] },
+          { "name": "〜とき（時が来れば）", "sids": ["s06"] },
+          { "name": "〜ている", "sids": ["s08", "s11"] },
+          { "name": "受身（記された）", "sids": ["s13"] }
+        ],
+        "sids": ["s02", "s04", "s06", "s08", "s10", "s11", "s13"]
+      },
+      {
+        "title": "ずうっといっしょ!",
+        "artist": "キタニタツヤ",
+        "year": "2024",
+        "tie": "2024 シングル",
+        "utaten": "https://utaten.com/lyric/hw24051509/",
+        "words": [
+          { "w": "期待", "sid": "s10" },
+          { "w": "委託", "sid": "s14", "note": "感情委託して —— 正好是「委託する」的动词用法" }
+        ],
+        "grammar": [
+          { "name": "〜ように（期待しないように）", "sids": ["s02", "s07"] },
+          { "name": "〜とき（ときも）", "sids": ["s06"] },
+          { "name": "〜てください", "sids": ["s09"] },
+          { "name": "〜ている", "sids": ["s08", "s11"] },
+          { "name": "〜と思う（と思いたかった）", "sids": ["s13"] },
+          { "name": "受身（壊された）", "sids": ["s13"] }
+        ],
+        "sids": ["s02", "s06", "s07", "s08", "s09", "s10", "s11", "s13", "s14"]
+      }
+    ],
+    "bonus": [
+      { "w": "腐敗", "title": "月光", "artist": "鬼束ちひろ", "utaten": "https://utaten.com/lyric/ja00008962/" },
+      { "w": "寿命", "title": "ライラック", "artist": "Mrs. GREEN APPLE", "utaten": "https://utaten.com/lyric/mi24041201/" },
+      { "w": "進歩", "title": "実況中継", "artist": "RADWIMPS", "utaten": "https://utaten.com/lyric/jb51401002/" },
+      { "w": "防止・寿命", "title": "ディアブロ", "artist": "水曜日のカンパネラ", "utaten": "https://utaten.com/lyric/mo15040201/" },
+      { "w": "断る", "title": "恋だろ", "artist": "wacci", "utaten": "https://utaten.com/lyric/hw22040691/" },
+      { "w": "覆す", "title": "Subtitle", "artist": "Official髭男dism", "utaten": "https://utaten.com/lyric/ma22101113/" },
+      { "w": "戒める", "title": "恋時雨", "artist": "湘南乃風", "utaten": "https://utaten.com/lyric/jb10808129/" },
+      { "w": "保護", "title": "十戒 (1984)", "artist": "中森明菜", "utaten": "https://utaten.com/lyric/ja00004049/" },
+      { "w": "遺跡", "title": "ピラミッド", "artist": "在日ファンク", "utaten": "https://utaten.com/lyric/yb15043024/" },
+      { "w": "粗い", "title": "Committed RED", "artist": "T.M.Revolution", "utaten": "https://utaten.com/lyric/iz16033105/" },
+      { "w": "返上・時期", "title": "ビューティー殺シアム", "artist": "マキシマム ザ ホルモン", "utaten": "https://utaten.com/lyric/mo15020223/" }
+    ]
+  },
   "items": [
     {
       "id": "s01",

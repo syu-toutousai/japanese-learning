@@ -214,7 +214,28 @@ def load_data():
         for e in errors:
             print("   -", e)
         sys.exit(1)
-    return meta, items
+
+    songs = raw.get("songs", {})
+    if not isinstance(songs, dict):
+        songs = {}
+    ids = {it.get("id") for it in items}
+    for s in songs.get("main", []):
+        tag = f"歌「{s.get('title', '?')}」"
+        for key in ("title", "artist", "utaten"):
+            if not s.get(key):
+                print(f"[!] {tag}缺少 {key}")
+        for w in s.get("words", []):
+            if w.get("sid") not in ids:
+                print(f"[!] {tag}的词「{w.get('w')}」引用了未知句子 id：{w.get('sid')}")
+        for g in s.get("grammar", []):
+            for sid in g.get("sids", []):
+                if sid not in ids:
+                    print(f"[!] {tag}语法「{g.get('name')}」引用了未知句子 id：{sid}")
+    for b in songs.get("bonus", []):
+        for key in ("w", "title", "artist", "utaten"):
+            if not b.get(key):
+                print(f"[!] bonus 单曲缺 {key}：{b}")
+    return meta, items, songs
 
 
 # ────────────────────────────────────────────── tts + ffmpeg mixing
@@ -556,6 +577,34 @@ font-size:13.5px;font-weight:700;cursor:pointer;color:var(--sub)}
 /* blind mode */
 body.blind .blurable{filter:blur(8px);cursor:pointer;user-select:none;transition:filter .18s}
 body.blind .card.revealed .blurable{filter:none;cursor:text;user-select:auto}
+/* songs tab */
+.songhead{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.songem{font-size:34px;line-height:1}
+.songtitle{font-size:19px;font-weight:800}
+.songsub{font-size:12.5px;color:var(--sub);margin-top:2px}
+.hitrow{display:flex;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);
+font-size:14px;align-items:baseline;line-height:1.9}
+.hitrow:last-child{border-bottom:none}
+.hitlabel{flex:none;width:36px;color:var(--sub);font-size:12px;font-weight:700}
+.wtag{display:inline-block;background:#f1f3f8;color:var(--ink);border-radius:99px;
+padding:1px 9px;font-size:12.5px;font-weight:700;margin:1px 6px 1px 0}
+.sreflink{display:inline-block;background:var(--acc2);color:var(--acc);border-radius:99px;
+padding:1px 9px;font-size:12px;margin:1px 6px 1px 0;cursor:pointer;font-weight:600;
+text-decoration:none;white-space:nowrap}
+.sreflink:hover{background:var(--acc);color:#fff}
+.songnote{font-size:12px;color:var(--gold);margin-top:2px;line-height:1.55}
+.songlinks{margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+.songlinks a{font-size:13.5px;color:var(--acc);text-decoration:none;font-weight:700}
+.songlinks a:hover{text-decoration:underline}
+.sbonus{display:flex;gap:8px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.sbonus:last-child{border-bottom:none}
+.sbonus code{background:var(--acc2);color:var(--acc);border-radius:6px;padding:1px 8px;
+font-size:12.5px;font-weight:700;flex:none}
+.sbonus a{color:var(--acc);text-decoration:none}
+.sbonus a:hover{text-decoration:underline}
+.flash{animation:flashcard 1.7s}
+@keyframes flashcard{0%,100%{box-shadow:0 2px 10px rgba(30,40,90,.06)}
+30%{box-shadow:0 0 0 3px var(--acc),0 2px 10px rgba(30,40,90,.12)}}
 /* source chips */
 .src{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;
 margin-left:6px;vertical-align:middle}
@@ -628,6 +677,7 @@ const ITEMS=__ITEMS__;
 const TRAIN_META=__TRAIN_META__;
 const BANKS=__BANKS__;
 const META=__META__;
+const SONGS=__SONGS__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
 const SPEED_LABEL={slow:"🐢 慢",med:"🚶 中",norm:"🏃 常"};
@@ -733,7 +783,8 @@ function renderBar(){
     }
   }else{
     sb.style.display="none";
-    if(tab!=="quiz")info.textContent="离线可用 · 全部音声内嵌";
+    if(tab==="songs")info.textContent="🎵 名曲で語彙・文法を復習 · リンクから試聴";
+    else if(tab!=="quiz")info.textContent="离线可用 · 全部音声内嵌";
   }
 }
 
@@ -765,7 +816,7 @@ function wordsHTML(it){
 }
 
 /* ---------- tabs ---------- */
-const TABS=[["train","🎧 跟読訓練"],["list","📝 例文一覧"],["quiz","🎯 クイズ"]];
+const TABS=[["train","🎧 跟読訓練"],["list","📝 例文一覧"],["songs","🎵 歌で復習"],["quiz","🎯 クイズ"]];
 let tab="train";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -838,6 +889,57 @@ function renderList(){
         <button class="btn" onclick="play('${it.id}-${voice}-train',this)">▶</button>
       </div></div>`;
   });
+  $("#main").innerHTML=h;
+}
+
+/* ---------- songs ---------- */
+function srefHTML(sid){
+  const i=ITEMS.findIndex(x=>x.id===sid);
+  const n=i>=0?String(i+1).padStart(2,"0"):sid;
+  return `<a class="sreflink" onclick="goSent('${sid}')">第${n}句</a>`;
+}
+function goSent(sid){
+  goTab("train");
+  setTimeout(()=>{
+    const el=document.getElementById("c-"+sid);
+    if(el){
+      el.scrollIntoView({behavior:"smooth",block:"center"});
+      el.classList.add("flash");
+      setTimeout(()=>el.classList.remove("flash"),1800);
+    }
+  },80);
+}
+function renderSongs(){
+  const S=SONGS||{main:[],bonus:[]};
+  let h=`<div class="card intro"><h2>🎵 歌で復習</h2>
+    <p>${S.intro||""} 点击「第XX句」可跳回对应例句；链接去听原曲、看歌词
+    ——本页只标注命中词与语法，不转载歌词。</p></div>`;
+  (S.main||[]).forEach(s=>{
+    h+=`<div class="card songcard">
+      <div class="songhead"><span class="songem">🎧</span>
+        <div><div class="songtitle">${s.title}</div>
+        <div class="songsub">${s.artist} · ${s.year}${s.tie?` · ${s.tie}`:""}</div></div></div>`;
+    h+=`<div class="hitrow"><span class="hitlabel">词汇</span><span>${
+      (s.words||[]).map(w=>`<span class="wtag">${w.w}</span>${w.sid?srefHTML(w.sid):""}`).join(" ")
+    }</span></div>`;
+    const notes=(s.words||[]).filter(w=>w.note);
+    if(notes.length){h+=`<div class="songnote">💡 ${notes.map(w=>`${w.w}：${w.note}`).join("<br>💡 ")}</div>`;}
+    h+=`<div class="hitrow"><span class="hitlabel">语法</span><span>${
+      (s.grammar||[]).map(g=>`<span class="wtag">${g.name}</span>${(g.sids||[]).map(srefHTML).join("")}`).join("　")
+    }</span></div>`;
+    h+=`<div class="songlinks">
+      <a href="${s.utaten}" target="_blank">歌詞ページ ↗</a>
+      <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(s.title+" "+s.artist)}" target="_blank">YouTube で聴く ↗</a>
+    </div></div>`;
+  });
+  const bonus=S.bonus||[];
+  if(bonus.length){
+    h+=`<div class="card"><h3 class="sec" style="margin-top:0">补充：一词一曲</h3>
+      <p class="hint" style="margin-bottom:8px">其他重点词的著名歌词命中（已核对上下文；点歌名去歌词页）：</p>`;
+    h+=bonus.map(b=>`<div class="sbonus"><code>${b.w}</code>
+      <a href="${b.utaten}" target="_blank">${b.title} / ${b.artist} ↗</a></div>`).join("");
+    h+=`<div class="hint" style="margin-top:10px">※ 粘膜・誓約書・取り次ぐ・地盤・難航・箇所・用件・がやがや・足手まとい・根底等未在著名歌词中出现——用跟読訓練与 Nadeshiko 场景卡巩固。</div></div>`;
+  }
   $("#main").innerHTML=h;
 }
 
@@ -936,6 +1038,7 @@ function updateScore(){$("#score").textContent=`✔ ${correct} / ${order.length}
 function render(){
   if(tab==="train")renderTrain();
   else if(tab==="list")renderList();
+  else if(tab==="songs")renderSongs();
   else renderQuizTab();
   renderBar();
 }
@@ -953,7 +1056,7 @@ renderNav();render();
 
 
 def main():
-    meta, items = load_data()
+    meta, items, songs = load_data()
     n = len(items)
     n_words = sum(len(it.get("words") or []) for it in items)
     n_nade = sum(len(it.get("nadeshiko") or []) for it in items)
@@ -987,7 +1090,8 @@ def main():
             f"<span>慢/中/常 ×2 + 跟読留白</span>"
             f"<span>👩 Nanami + 👨 Keita</span>"
             f"<span>{n_words} 語彙カード</span>"
-            f"<span>{n_nade} Nadeshiko 原声</span>")
+            f"<span>{n_nade} Nadeshiko 原声</span>"
+            f"<span>🎵 歌で復習 {len(songs.get('main', []))}曲</span>")
 
     print("[4/4] rendering template...")
     html = (TEMPLATE
@@ -999,10 +1103,12 @@ def main():
             .replace("__TRAIN_META__", j(train_meta))
             .replace("__BANKS__", j(banks_meta))
             .replace("__QS__", j(qs))
+            .replace("__SONGS__", j(songs))
             .replace("__META__", j(meta)))
     OUT.write_text(html, encoding="utf-8")
     left = [m for m in ("__TAGS__", "__AUDIO__", "__NADE_AUDIO__", "__SCENES__",
-                        "__ITEMS__", "__TRAIN_META__", "__BANKS__", "__QS__", "__META__")
+                        "__ITEMS__", "__TRAIN_META__", "__BANKS__", "__QS__",
+                        "__SONGS__", "__META__")
             if m in html]
     if left:
         sys.exit(f"[!] 模板占位符未替换：{left}")
