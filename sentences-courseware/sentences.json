@@ -351,6 +351,39 @@
         }
       ],
       "note": "「足手まといになる」＝成为累赘、拖大家后腿；「断る」＝拒绝、谢绝（另有「事先打招呼」之义）。"
+    },
+    {
+      "id": "s14",
+      "jp": "これはA社に委託することにした。",
+      "cn": "决定把这件事委托给A公司。",
+      "words": [
+        { "w": "委託", "read": "いたく", "pos": "名·サ变", "mean": "委托；信托", "form": "委託" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "その銀行(ぎんこう)は 宝(たから)くじの委託(いたく)を受(う)けている",
+          "en": "The bank in question exchanges lottery tickets for money.",
+          "cn": "那家银行承接了彩票的委托业务。",
+          "media": "ODDTAXI",
+          "ep": "EP8",
+          "at": "19:29",
+          "url": "https://nadeshiko.co/en/sentence/-Ptng6MdRjiy",
+          "audio": "https://cdn.nadeshiko.co/media/128547/8/4da2f6ff93.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128547/8/4da2f6ff93.webp"
+        },
+        {
+          "jp": "今(いま)は同(おな)じ会社(かいしゃ)に 業務委託(ぎょうむいたく)で入(はい)ってる。",
+          "en": "Now I'm working for them as a contractor.",
+          "cn": "现在以业务委托的形式进了同一家公司。",
+          "media": "Botan Kamiina Fully Blossoms When Drunk",
+          "ep": "EP9",
+          "at": "6:27",
+          "url": "https://nadeshiko.co/en/sentence/cPuoah2LxiNM",
+          "audio": "https://cdn.nadeshiko.co/media/187869/9/b21783c7fd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/187869/9/b21783c7fd.webp"
+        }
+      ],
+      "note": "委託（いたく）＝把事情托付给他人或他家公司办理：「A社に委託する」＝委托给A公司；句尾「〜ことにした」＝（自己）决定…。"
     }
   ]
 }
