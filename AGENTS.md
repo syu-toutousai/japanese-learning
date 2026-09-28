@@ -20,6 +20,7 @@
 | `houi-courseware/` | 方位罗盘 | `houi.json` |
 | `kotoba-courseware/` | 新词记忆种子 | `kotoba.json` |
 | `ni-courseware/` | 断定の「に」统一引擎（**最新范式**） | `ni.json` |
+| `sentences-courseware/` | 例文跟读训练 2×2×2（慢中常×2+留白，双声双源） | `sentences.md` + `sentences.json` |
 
 `ni-courseware/` 是最新、最完整的范式：**数据外置 JSON → pykakasi 振假名 → TTS 音声 →
 Nadeshiko 原声 → 题库 → 单文件 HTML**。新课件照它抄。
