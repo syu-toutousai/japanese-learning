@@ -46,7 +46,7 @@ def j(obj):
 # ────────────────────────────────────────────── furigana (ruby)
 
 _KANJI = r"\u4e00-\u9fff\u3005\u3007\u303b\u3400-\u4dbf"
-_INLINE = re.compile(rf"([{_KANJI}]{{1,8}})\s*\(([ぁ-んァ-ンのー]{{1,10}})\)")
+_INLINE = re.compile(rf"([{_KANJI}][{_KANJI}ぁ-んァ-ンー]{{0,7}})\s*\(([ぁ-んァ-ンのー]{{1,12}})\)")
 _KANJI_RE = re.compile(rf"[{_KANJI}]")
 
 _READING_OVERRIDES = [
@@ -906,6 +906,9 @@ def main():
             furi += 1
             for ex in it.get("examples") or []:
                 ex["jp"] = add_furigana(ex["jp"])
+                furi += 1
+            for sc in it.get("nadeshiko") or []:
+                sc["jp"] = add_furigana(sc["jp"])
                 furi += 1
         print(f"      furigana: applied to {furi} strings")
 
