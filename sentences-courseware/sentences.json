@@ -492,6 +492,39 @@
         }
       ],
       "note": "任せる（まかせる）＝把某事交给别人去办/去决定，比「委託」更日常；「委託」偏商务、法律上的正式委托。与 s14 只差一个动词，对照记忆：A社に委託する／A社に任せる。"
+    },
+    {
+      "id": "s16",
+      "jp": "その話を聞いて、すがすがしい気分になった。",
+      "cn": "听了那番话，心情变得十分清爽。",
+      "words": [
+        { "w": "すがすがしい", "read": "すがすがしい", "pos": "イ形", "mean": "清爽；清新；爽快（汉字写作「清々しい」）", "form": "すがすがしい" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "やけに清々(すがすが)しい表情(ひょうじょう)だね 甘粕(あまかす)くん",
+          "en": "You've got quite a refreshing look on your face, Amakasu.",
+          "cn": "甘粕，你的表情可真清爽啊。",
+          "media": "Dragon Pilot: Hisone & Masotan",
+          "ep": "EP10",
+          "at": "22:25",
+          "url": "https://nadeshiko.co/en/sentence/bJd1wJtXVz5F",
+          "audio": "https://cdn.nadeshiko.co/media/100673/10/36528eb735.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100673/10/36528eb735.webp"
+        },
+        {
+          "jp": "すがすがしいね 早乙女(さおとめ)君(くん)",
+          "en": "Isn't this a fresh feeling?",
+          "cn": "真让人神清气爽啊，早乙女。",
+          "media": "Ranma ½",
+          "ep": "EP33",
+          "at": "1:27",
+          "url": "https://nadeshiko.co/en/sentence/uDR4GImtvEuf",
+          "audio": "https://cdn.nadeshiko.co/media/210/33/d930045410.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/210/33/d930045410.webp"
+        }
+      ],
+      "note": "すがすがしい（清々しい）＝神清气爽、清爽畅快，只用于积极语感（N1 形容词）；「気分になる」＝感觉变得…。剧中不少「すがすがしいほど◯◯」是反讽用法，注意语境。"
     }
   ]
 }
