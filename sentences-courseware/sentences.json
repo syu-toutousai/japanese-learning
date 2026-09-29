@@ -558,6 +558,194 @@
         }
       ],
       "note": "爽やか（さわやか・形动）＝清爽、爽朗：可形容天气与心情（爽やかな朝・気分），也可形容人的气质、声音、问候。与 s16 的「すがすがしい」近义——すがすがしい更书面、只用于积极语感；爽やか更日常、用法更广。对照记忆：すがすがしい気分／爽やかな気分。"
+    },
+    {
+      "id": "s18",
+      "jp": "リフォームの費用を工面する必要がある。",
+      "cn": "需要筹措装修的费用。",
+      "words": [
+        { "w": "工面", "read": "くめん", "pos": "名·他动·サ变", "mean": "筹措；设法（筹钱）", "form": "工面" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "お金(かね)なら私(わたくし)が工面(くめん)する",
+          "en": "I'll find a way to gather the funds!",
+          "cn": "钱的话我来想办法筹。",
+          "media": "Delicious in Dungeon",
+          "ep": "EP9",
+          "at": "15:16",
+          "url": "https://nadeshiko.co/en/sentence/uykmPttotGSn",
+          "audio": "https://cdn.nadeshiko.co/media/153518/9/f6d07c0746.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/9/f6d07c0746.webp"
+        },
+        {
+          "jp": "今(いま)でも 必死(ひっし)に お金(かね)を工面(くめん)してくれてる父(ちち)に　なんて言(い)えばいいんですか",
+          "en": "What will I tell my dad who's working so hard to raise money for my tuition?",
+          "cn": "直到现在还在拼命为我筹钱的父亲，我该对他说什么呢？",
+          "media": "Fermat Kitchen",
+          "ep": "EP1",
+          "at": "13:21",
+          "url": "https://nadeshiko.co/en/sentence/Soan4AQ9_xt4",
+          "audio": "https://cdn.nadeshiko.co/media/186003/1/645f808ded.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/186003/1/645f808ded.webp"
+        }
+      ],
+      "note": "工面（くめん）＝想方设法筹到钱或物品，隐含「费尽周折」的语感；「リフォーム」＝房屋装修、翻新。与 s19「用意する」对照记忆：工面＝筹措（费力弄到），用意＝准备（提前备好）。"
+    },
+    {
+      "id": "s19",
+      "jp": "リフォームの費用を用意する必要がある。",
+      "cn": "需要准备装修的费用。",
+      "words": [
+        { "w": "用意", "read": "ようい", "pos": "名·自他动·サ变", "mean": "准备；预备", "form": "用意" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "もちろん用意(ようい)してございます",
+          "en": "We have the funds, of course.",
+          "cn": "当然已经准备好了。",
+          "media": "Great Pretender",
+          "ep": "EP9",
+          "at": "7:46",
+          "url": "https://nadeshiko.co/en/sentence/sjX3HoyqFIiS",
+          "audio": "https://cdn.nadeshiko.co/media/110349/9/a244de42ef.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/110349/9/a244de42ef.webp"
+        },
+        {
+          "jp": "ほら キョン! カメラ用意(ようい)して",
+          "en": "Come on, Kyon! Get the camera ready!",
+          "cn": "喂，阿虚！把相机准备好。",
+          "media": "The Melancholy of Haruhi Suzumiya (2009)",
+          "ep": "EP21",
+          "at": "11:08",
+          "url": "https://nadeshiko.co/en/sentence/k4yQHT-AuLpS",
+          "audio": "https://cdn.nadeshiko.co/media/4382/21/b1b58a3cc0.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4382/21/b1b58a3cc0.webp"
+        }
+      ],
+      "note": "用意する＝把需要的东西提前备好；「費用を用意する」＝备好费用。对照 s18「工面する」：工面 是「想方设法弄到（钱）」、侧重筹资的过程与难度；用意 只是「准备好」，语感更中性。"
+    },
+    {
+      "id": "s20",
+      "jp": "それは仕事の道具なんだから、ぞんざいな扱いをされては困るよ。",
+      "cn": "那是工作用的工具，被粗鲁地对待可不行啊。",
+      "words": [
+        { "w": "ぞんざい", "read": "ぞんざい", "pos": "形动", "mean": "粗鲁；草率；马虎", "form": "ぞんざいな" },
+        { "w": "扱い", "read": "あつかい", "pos": "名", "mean": "对待；处理；操作", "form": "扱い" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "甘(あま)えて 突(つ)き放(はな)して ぞんざいに扱(あつか)ってー",
+          "en": "We took advantage, pushed him away, treated him shoddily,",
+          "cn": "撒娇、推开他、还粗鲁地对待他——",
+          "media": "March comes in like a lion Season 2",
+          "ep": "EP22",
+          "at": "6:04",
+          "url": "https://nadeshiko.co/en/sentence/TQjRyzokhRHx",
+          "audio": "https://cdn.nadeshiko.co/media/98478/22/523eef8b06.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98478/22/523eef8b06.webp"
+        },
+        {
+          "jp": "さすがに ウェスタリスエース諜報員君(ちょうほういんくん)の命(いのち)は　ぞんざいにはできないか",
+          "en": "I guess you can't let the life of Westalis's ace spy go to waste that easily.",
+          "cn": "再怎么说，西国王牌间谍的命也不能随便浪费掉吗。",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP12",
+          "at": "20:30",
+          "url": "https://nadeshiko.co/en/sentence/CAR4nWwjVKhT",
+          "audio": "https://cdn.nadeshiko.co/media/177937/12/a6a770ec87.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/12/a6a770ec87.webp"
+        }
+      ],
+      "note": "ぞんざい（形动）＝对人、对物无礼、草率、敷衍；「ぞんざいな扱い」＝粗鲁、不当回事的对待（也可说「ぞんざいに扱う」）。与 s21「雑な」对照：ぞんざい 侧重态度上的无礼、不尊重，雑 侧重做法上的粗糙、不细致。"
+    },
+    {
+      "id": "s21",
+      "jp": "それは仕事の道具なんだから、雑な扱いをされては困るよ。",
+      "cn": "那是工作用的工具，被随随便便地对待可不行啊。",
+      "words": [
+        { "w": "雑", "read": "ざつ", "pos": "名·形动", "mean": "粗糙；杂乱；随便；不细致", "form": "雑な" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "そんな雑(ざつ)な計画(けいかく)ありますか?",
+          "en": "Would someone really make such a sloppy plan?",
+          "cn": "怎么会有这么粗糙的计划？",
+          "media": "Wandering Witch: The Journey of Elaina",
+          "ep": "EP11",
+          "at": "14:15",
+          "url": "https://nadeshiko.co/en/sentence/SKUnnHBc1hj4",
+          "audio": "https://cdn.nadeshiko.co/media/112609/11/532168bf20.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/112609/11/532168bf20.webp"
+        },
+        {
+          "jp": "なに その雑(ざつ)な追(お)っ払(ぱら)い方(かた)",
+          "en": "That's a rude way to shoo me out.",
+          "cn": "什么啊，那种随便把人赶走的方式。",
+          "media": "Extremely Inappropriate!",
+          "ep": "EP4",
+          "at": "9:33",
+          "url": "https://nadeshiko.co/en/sentence/YDZUve-S1oOM",
+          "audio": "https://cdn.nadeshiko.co/media/mv/241795/4/fd0365a798.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/241795/4/fd0365a798.webp"
+        }
+      ],
+      "note": "雑（ざつ）＝粗糙、不细致、马马虎虎；「雑な扱い」＝粗手粗脚、漫不经心的对待。对照 s20「ぞんざい」：ぞんざい 是待人接物上的无礼、敷衍；雑 是做事或对待物品上的粗糙、不讲究。"
+    },
+    {
+      "id": "s22",
+      "jp": "男の子は父親の話をうなだれて聞いていた。",
+      "cn": "男孩垂着头听着父亲的话。",
+      "words": [
+        { "w": "うなだれる", "read": "うなだれる", "pos": "自动·一段", "mean": "（因失望、沮丧、羞愧等）垂头；低头", "form": "うなだれて" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "流佳(はるか) まだいるんだ?　朝一(あさいち)で行(い)った うなだれながら行(い)ってた",
+          "en": "Ruka's still here? -No, he left... First thing this morning. He was still upset when he left.",
+          "cn": "——流佳还在吗？——一大早就走了。垂头丧气地走的。",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP9",
+          "at": "25:52",
+          "url": "https://nadeshiko.co/en/sentence/3CspphtA1zwq",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/9/7cb5998102.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/9/7cb5998102.webp"
+        }
+      ],
+      "note": "うなだれる（＝項垂れる）＝因失望、沮丧、羞愧等而无力地垂下头，带情绪色彩；「うなだれて聞く」＝垂着头听。对照 s23「下を向いて」：うなだれる 暗示垂头丧气，下を向く 只是中性描述「朝下看」的动作。"
+    },
+    {
+      "id": "s23",
+      "jp": "男の子は父親の話を下を向いて聞いていた。",
+      "cn": "男孩低着头听着父亲的话。",
+      "words": [
+        { "w": "下を向く", "read": "したをむく", "pos": "惯用", "mean": "低头；向下看；垂头", "form": "下を向いて" }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "そうやって下(した)を向(む)いて また 時(とき)が過(す)ぎるのを待(ま)つのかい?",
+          "en": "Wasting even more of your time? - Or were you planning to stare at the floor all day?",
+          "cn": "你打算就一直那样低着头，继续等着时间流逝吗？",
+          "media": "My Happy Marriage",
+          "ep": "EP5",
+          "at": "20:26",
+          "url": "https://nadeshiko.co/en/sentence/r6O6WAnOYlSr",
+          "audio": "https://cdn.nadeshiko.co/media/147103/5/1b88e06044.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/147103/5/1b88e06044.webp"
+        },
+        {
+          "jp": "下(した)を向(む)いて行(おこな)う者(もの)に どれほどのことができる?",
+          "en": "what can you do by looking downward?",
+          "cn": "低着头做事的人，又能成就什么？",
+          "media": "Re:ZERO -Starting Life in Another World-",
+          "ep": "EP8",
+          "at": "10:44",
+          "url": "https://nadeshiko.co/en/sentence/L3nhEsoH_ooP",
+          "audio": "https://cdn.nadeshiko.co/media/21355/8/3e20de80d2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21355/8/3e20de80d2.webp"
+        }
+      ],
+      "note": "「下を向く」＝低下头、朝下看，只描述姿势，是中性的动作表达。与 s22「うなだれる」对照：两者在句中动作相近，但 うなだれる 带有「因沮丧、羞愧而垂头」的情绪色彩，下を向く 没有这层含义。"
     }
   ]
 }
