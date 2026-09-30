@@ -17,14 +17,22 @@
 | `keishiku-courseware/` | 形式名词十四杰 | 硬编码 Python |
 | `shidai-courseware/` | 「次第」 | 硬编码 Python |
 | `keiji-courseware/` | 接头接尾词口袋图鉴 | `pocket.json` |
+| `kenrui-courseware/` | 兼类词（名词・形容动词）両刀口袋 | `kenrui.json` |
+| `mienai-courseware/` | 見えない助詞・句法省略与中止形 | `mienai.json` |
+| `kurikaeshi-courseware/` | 反復強調の「に」・Vます形＋に＋同動詞 | `kurikaeshi.json` |
 | `houi-courseware/` | 方位罗盘 | `houi.json` |
 | `kotoba-courseware/` | 新词记忆种子 | `kotoba.json` |
-| `ni-courseware/` | 断定の「に」统一引擎（**最新范式**） | `ni.json` |
+| `ni-courseware/` | 断定の「に」统一引擎 | `ni.json` |
+| `koou-courseware/` | 呼応・搭配 完全体系（JLPT N1 真题） | `koou.json` |
 | `sentences-courseware/` | 例文跟读训练 2×2×2（慢中常×2+留白，双声双源，🎵 歌で復習） | `sentences.md` + `sentences.json` |
 | `yakaraka-courseware/` | 〜やか・らか 形容動詞构词群図鑑（含同根〜しい） | `yakaraka.json` |
+| `hasami-courseware/` | はさまれた自動詞・を＋V自て＋V他（付帯状況） | `hasami.json` |
+| `karada-courseware/` | からだの慣用句・体の部位ポケット（慣用句＋身体動作） | `karada.json` |
 
-`ni-courseware/` 是最新、最完整的范式：**数据外置 JSON → pykakasi 振假名 → TTS 音声 →
-Nadeshiko 原声 → 题库 → 单文件 HTML**。新课件照它抄。
+范式演进：`ni-courseware/` 确立了**数据外置 JSON → pykakasi 振假名 → TTS 音声 →
+Nadeshiko 原声 → 题库 → 单文件 HTML** 的完整管道；`mienai`/`kurikaeshi`/`yakaraka`/
+`hasami`/`karada` 等口袋型课件沿用同一管道，但比 `ni` 少一层 Tab、build.py 更轻
+（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），新口袋课件可直接抄它们。
 
 ---
 
