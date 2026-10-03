@@ -1610,7 +1610,29 @@
           "src": "moji"
         }
       ],
-      "note": "理解力＝文章や説明を正しく理解する力。"
+      "note": "理解力＝文章や説明を正しく理解する力。",
+      "nadeshiko": [
+        {
+          "jp": "犬並みの理解力だと思われてるな",
+          "cn": "他好像觉得我理解力和狗差不多啊。",
+          "media": "JUJUTSU KAISEN",
+          "ep": "EP24",
+          "at": "17:40",
+          "url": "https://nadeshiko.co/en/sentence/CmQ2KfYyt3c2",
+          "audio": "https://cdn.nadeshiko.co/media/113415/24/a791599849.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/113415/24/a791599849.webp"
+        },
+        {
+          "jp": "理解力なっ とにかく見んな",
+          "cn": "脑子不够用啊！总之别看。",
+          "media": "The Summer Hikaru Died",
+          "ep": "EP2",
+          "at": "12:45",
+          "url": "https://nadeshiko.co/en/sentence/qV_XLO2hL9Hx",
+          "audio": "https://cdn.nadeshiko.co/media/177689/2/6a832a878d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177689/2/6a832a878d.webp"
+        }
+      ]
     },
     {
       "id": "sufKiokuryoku",
@@ -1709,7 +1731,19 @@
           "src": "moji"
         }
       ],
-      "note": "判断力＝状況を正しく判断する力。"
+      "note": "判断力＝状況を正しく判断する力。",
+      "nadeshiko": [
+        {
+          "jp": "とっさの判断力、マジですげえな",
+          "cn": "你的临场判断力，真的很厉害啊。",
+          "media": "Tengoku Daimakyo",
+          "ep": "EP6",
+          "at": "5:14",
+          "url": "https://nadeshiko.co/en/sentence/mcGZ-QumdxbB",
+          "audio": "https://cdn.nadeshiko.co/media/155783/6/c952d53d9e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/155783/6/c952d53d9e.webp"
+        }
+      ]
     },
     {
       "id": "sufShuchuryoku",
@@ -1742,7 +1776,19 @@
           "src": "moji"
         }
       ],
-      "note": "集中力＝注意を一つに向ける力。"
+      "note": "集中力＝注意を一つに向ける力。",
+      "nadeshiko": [
+        {
+          "jp": "集中力が切れたな",
+          "cn": "注意力不集中了啊。",
+          "media": "Common",
+          "ep": "-",
+          "at": "-",
+          "url": "https://nadeshiko.co/",
+          "audio": null,
+          "thumb": null
+        }
+      ]
     },
     {
       "id": "sufSouzouryoku",
