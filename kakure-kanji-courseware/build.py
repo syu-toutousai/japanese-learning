@@ -91,8 +91,8 @@ def load_pocket():
         for key in ("word", "kanji", "read", "level", "meaning", "origin"):
             if not it.get(key):
                 errors.append(f"「{label}」缺少 {key}")
-        if it.get("sourceType") not in ("真語源", "当て字", "熟字訓", "漢語変遷", "諸説あり"):
-            errors.append(f"「{label}」sourceType 必须是 真語源/当て字/熟字訓/漢語変遷/諸説あり")
+        if it.get("sourceType") not in ("真語源", "当て字", "熟字訓", "漢語変遷", "諸説あり", "未詳"):
+            errors.append(f"「{label}」sourceType 必须是 真語源/当て字/熟字訓/漢語変遷/諸説あり/未詳")
         exs = it.get("examples") or []
         if not exs:
             errors.append(f"「{label}」至少需要一条 examples 例句")
@@ -531,7 +531,8 @@ const BANKS=__BANKS__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
 const SBADGE={"真語源":["#e9f7ef","#188a52"],"当て字":["#fff0e6","#e8590c"],
-"熟字訓":["#fff0f6","#e64980"],"漢語変遷":["#f8f0fc","#9c36b5"],"諸説あり":["#f1f3f8","#5b6478"]};
+"熟字訓":["#fff0f6","#e64980"],"漢語変遷":["#f8f0fc","#9c36b5"],"諸説あり":["#f1f3f8","#5b6478"],
+"未詳":["#f0e6d2","#8a6d3b"]};
 let curAudio=null,curBtn=null;
 function play(id,btn){
   const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;

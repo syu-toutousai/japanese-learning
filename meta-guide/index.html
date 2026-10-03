@@ -57,6 +57,7 @@ margin-right:6px;vertical-align:1px}
 .b-kango{background:#f8f0fc;color:#9c36b5}
 .b-juku{background:#fff0f6;color:#e64980}
 .b-var{background:#f1f3f8;color:#5b6478}
+.b-misc{background:#f0e6d2;color:#8a6d3b}
 .srcrow{padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
 .srcrow:last-child{border-bottom:none}
 .srcrow .exjp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:14.5px}
@@ -191,7 +192,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px}
 </div>
 
 <div class="card">
-<h2><span class="em">🗂️</span>源流五分類</h2>
+<h2><span class="em">🗂️</span>源流六分類</h2>
 <div class="srcrow"><span class="badge b-true">真語源</span>
 <span class="exjp">済む→すいません／当たる→〜あたり／沿う→〜沿い</span><br>
 词的形态素演变与汉字逻辑一致。拆解它，等于直接触到母语者的隐性语感。<b>可信、可依赖。</b></div>
@@ -207,6 +208,9 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px}
 <div class="srcrow"><span class="badge b-var">諸説あり</span>
 <span class="exjp">やっぱり（矢張り）・ばか（馬鹿）</span><br>
 语源本身有争议。可以听故事，但不要单方面坚信某一种拆解——<b>这正是当て字与真语源的边界地带</b>。</div>
+<div class="srcrow"><span class="badge b-misc">未詳</span>
+<span class="exjp">けが（怪我）</span><br>
+连语源本身都不明。材料不足时承认不知道——<b>这是最诚实、也最容易被省略的一档</b>。常与当て字重叠（けが＝语源未詳＋表记当て字）。</div>
 <div class="warn">💡 仓库对照：<a href="../kakure-kanji-courseware/">隠れ漢字ポケット</a> 的 45 词每条都带这枚「源流」徽标；
 <a href="../renyo-courseware/">連用形の化身</a> 收的全是<b>真語源</b>的形态素演变。</div>
 </div>
@@ -254,7 +258,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px}
 
 <div class="card qbox">
 <h2><span class="em">🎯</span>分類小測——這表記、哪一源流？</h2>
-<div class="hint lead">共 12 問 · 選完即時解說 · スコア：<span class="score" id="score">0 / 0</span></div>
+<div class="hint lead">共 13 問 · 選完即時解說 · スコア：<span class="score" id="score">0 / 0</span></div>
 <div id="quiz" style="margin-top:12px"></div>
 </div>
 
@@ -285,7 +289,8 @@ const QS=[
  ["あいにく【生憎】","漢語変遷","漢語「生憎」が日本語の副詞として定着。意味変化を楽しめる。"],
  ["めちゃくちゃ【滅茶苦茶】","当て字","茶具を滅する様から作られた和製の当て字。語源は口語。"],
  ["きょう【今日】","熟字訓","「此の日（けふ）」の音変化。漢字は意味を表す熟字訓。"],
- ["ひいき【贔屓】","漢語変遷","龍生九子の贔屓が「重きを負う」姿から、上から目線の偏愛へ。"]
+ ["ひいき【贔屓】","漢語変遷","龍生九子の贔屓が「重きを負う」姿から、上から目線の偏愛へ。"],
+ ["けが【怪我】","未詳","語源そのものが不明。表記は当て字だが、語源未詳——「わからない」を認める最も誠実なラベル。"]
 ];
 let qi=0, ok=0;
 function render(){
@@ -299,7 +304,7 @@ function render(){
   }
   const q=QS[qi];
   box.innerHTML="<div class='q'>「"+q[0]+"」</div>"+
-    ["真語源","当て字","漢語変遷","熟字訓","諸説あり"].map(t=>
+    ["真語源","当て字","漢語変遷","熟字訓","諸説あり","未詳"].map(t=>
       "<button class='opt' data-t='"+t+"' onclick='pick(this)'>"+t+"</button>").join("")+
     "<div class='fb' id='fb'></div>";
   document.getElementById("score").textContent=ok+" / "+QS.length;
