@@ -91,6 +91,8 @@ def load_pocket():
         for key in ("word", "kanji", "read", "level", "meaning", "origin"):
             if not it.get(key):
                 errors.append(f"「{label}」缺少 {key}")
+        if it.get("sourceType") not in ("真語源", "当て字", "熟字訓", "漢語変遷", "諸説あり"):
+            errors.append(f"「{label}」sourceType 必须是 真語源/当て字/熟字訓/漢語変遷/諸説あり")
         exs = it.get("examples") or []
         if not exs:
             errors.append(f"「{label}」至少需要一条 examples 例句")
@@ -456,6 +458,8 @@ border-radius:8px;padding:2px 9px;font-size:12px}
 .origin{background:#fffaf0;border-left:4px solid var(--gold);border-radius:10px;padding:10px 13px;
 font-size:13.5px;line-height:1.7;margin:2px 0 10px}
 .mini .kn{font-size:12px;color:#b8860b;font-weight:700;margin-bottom:2px}
+.sbadge{border-radius:99px;padding:0 6px;font-size:10px;font-weight:700;vertical-align:1px}
+.srcnote{font-size:11.5px;color:var(--sub)}
 .note{font-size:13px;color:var(--gold);margin-top:10px;border-top:1px dashed var(--line);padding-top:9px;line-height:1.65}
 h3.sec{font-size:15px;color:var(--sub);margin:16px 0 8px;font-weight:600}
 /* quiz */
@@ -526,6 +530,8 @@ const SENTS=__SENTS__;
 const BANKS=__BANKS__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
+const SBADGE={"真語源":["#e9f7ef","#188a52"],"当て字":["#fff0e6","#e8590c"],
+"熟字訓":["#fff0f6","#e64980"],"漢語変遷":["#f8f0fc","#9c36b5"],"諸説あり":["#f1f3f8","#5b6478"]};
 let curAudio=null,curBtn=null;
 function play(id,btn){
   const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;
@@ -590,7 +596,7 @@ function renderList(){
       <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
         <div class="em">${n.emoji||"📌"}</div>
         <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
-        <div class="kn">${n.kanji}</div>
+        <div class="kn">${n.kanji} <span class="sbadge" style="background:${SBADGE[n.sourceType][0]};color:${SBADGE[n.sourceType][1]}">${n.sourceType}</span></div>
         <div class="im">${shortMean(n.meaning)}</div></button>`).join("")}</div></div>`;
   }).join("");
   $("#main").innerHTML=h;
@@ -608,6 +614,8 @@ function renderDetail(){
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
         <h2>${n.emoji||"📌"} ${n.word}<span class="jl">${n.level}</span></h2>
         <div class="meta"><span class="chip" style="background:${g.color}22;color:${g.color}">${n.type}</span>
+          <span class="chip" style="background:${SBADGE[n.sourceType][0]};color:${SBADGE[n.sourceType][1]}">${n.sourceType}</span>
+          <span class="srcnote">${n.sourceNote||""}</span>
           <code>本源漢字 ${n.kanji}</code>
           <code>读作 ${n.read}</code>
           ${AUDIO[iid]?`<button class="btn mini-btn" title="听读音" onclick="play('${iid}',this)">▶</button>`:""}

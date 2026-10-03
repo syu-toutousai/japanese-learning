@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本語の二重構造 ・ メタ認知ガイド</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;--gold:#b8860b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);padding-bottom:60px;line-height:1.75}
+header{background:linear-gradient(135deg,#312e81,#4f6ef7);color:#fff;padding:30px 20px 24px}
+header h1{font-size:25px}
+header .kana{opacity:.92;font-size:14px;margin-top:6px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);border-radius:99px;
+padding:2px 10px;font-size:12px;margin:10px 6px 0 0}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+main{margin-top:-16px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin:14px 0;
+box-shadow:0 2px 10px rgba(30,40,90,.06)}
+.card h2{font-size:18px;margin-bottom:12px}
+.card h2 .em{margin-right:6px}
+p{font-size:14px}
+.lead{font-size:14px;color:var(--sub)}
+.layer{border-radius:14px;padding:14px 16px;margin:10px 0}
+.layer h3{font-size:15.5px;margin-bottom:6px}
+.layer.l1{background:#e9f7ef;border-left:5px solid var(--ok)}
+.layer.l2{background:#eef1ff;border-left:5px solid var(--acc)}
+.layer .ex{font-size:13px;color:var(--sub);margin-top:6px}
+.arrow{text-align:center;font-size:20px;color:var(--sub);margin:2px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f7f8fc;font-weight:700}
+.badge{display:inline-block;border-radius:99px;padding:1px 9px;font-size:11.5px;font-weight:700;
+margin-right:6px;vertical-align:1px}
+.b-true{background:#e9f7ef;color:#188a52}
+.b-ateji{background:#fff0e6;color:#e8590c}
+.b-kango{background:#f8f0fc;color:#9c36b5}
+.b-juku{background:#fff0f6;color:#e64980}
+.b-var{background:#f1f3f8;color:#5b6478}
+.srcrow{padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.srcrow:last-child{border-bottom:none}
+.srcrow .exjp{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:14.5px}
+ol.check{margin:8px 0 0 20px;font-size:14px}
+ol.check li{margin:8px 0}
+ol.check b{color:var(--acc)}
+.qbox .q{font-size:17px;margin:10px 0;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.opt{display:inline-block;margin:4px 8px 4px 0;padding:9px 16px;border-radius:12px;border:2px solid var(--line);
+background:#fff;cursor:pointer;font-size:14px;font-weight:600}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--ng);background:var(--ngbg)}
+.opt:disabled{cursor:default;opacity:.92}
+.fb{margin-top:10px;padding:11px 13px;border-radius:10px;font-size:13.5px;display:none}
+.fb.ok{background:var(--okbg);color:var(--ok);display:block}
+.fb.ng{background:var(--ngbg);color:var(--ng);display:block}
+.score{font-weight:700;color:var(--acc)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:8px}
+.links a{display:block;background:#fafbff;border:1px solid var(--line);border-radius:12px;
+padding:12px 14px;text-decoration:none;color:var(--ink);transition:.15s}
+.links a:hover{border-color:var(--acc);transform:translateY(-2px)}
+.links b{display:block;font-size:14.5px}
+.links span{font-size:12.5px;color:var(--sub)}
+.warn{background:#fffaf0;border-left:5px solid var(--gold);border-radius:12px;padding:12px 14px;
+font-size:13.5px;margin-top:10px}
+footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>🧭 日本語の二重構造 ・ メタ認知ガイド</h1>
+<div class="kana">にじゅうこうぞう —— ことばの地層を読む／双层结构：读懂语言的岩层</div>
+<div class="tags"><span>メタ認知</span><span>真語源 vs 当て字</span><span>源流判定</span><span>学習戦略</span></div>
+</div></header>
+
+<main class="wrap">
+
+<div class="card">
+<h2><span class="em">👁️</span>このガイドの読み方</h2>
+<p>「汉字溯源」「连用形溯源」是中文母语者独享的<strong>认知红利</strong>——但它有一个前提：
+<b>必须区分「真正的语源」与「后天附会的汉字」</b>。</p>
+<p class="lead" style="margin-top:6px">真语源对应母语者的隐性语感；当て字只是后世的文字外衣，是学习者的记忆脚手架。
+本页给出一套判定标准，并把仓库里的三套课件串联成体系。</p>
+</div>
+
+<div class="card">
+<h2><span class="em">🏔️</span>二重構造モデル</h2>
+<div class="layer l1">
+<h3>第 1 層：原生日語コア（和語）</h3>
+<p>接触汉字之前就存在的内核：语音、黏着语法、感官与心理的基本词。</p>
+<div class="ex">あめ・かぜ・こころ・ある・する・やはり……　認知：<b>音声 ↔ 情境 直接绑定</b>（母语者的第一直觉）</div>
+</div>
+<div class="arrow">↕ 数千年的相互渗透 ↕</div>
+<div class="layer l2">
+<h3>第 2 層：外源マッピング層（映射层）</h3>
+<p>用外部语言的符号与概念，对自身口语重新编码：</p>
+<div class="ex">漢字の訓読（みず→水）／当て字（やっぱり→矢張り）／漢語（挨拶・面倒）／
+和製漢語（社会・哲学）／外来語・和製英語（パソコン・サラリーマン）</div>
+</div>
+<p style="margin-top:10px">对母语者：第 1 层＝直觉，第 2 层＝知识；<br>
+对中文母语者：<b>用第 2 层的汉字去逆向捕获第 1 层的语感</b>——这就是「降维解构」。</p>
+</div>
+
+<div class="card">
+<h2><span class="em">🧠</span>認知経路の対比</h2>
+<table>
+<tr><th></th><th>日本母語者</th><th>中文母語学習者</th></tr>
+<tr><td><b>やっぱり</b></td><td>声音 ↔「预期兑现」的情绪，直连</td><td>矢＋張 → 借意象建记忆钩子</td></tr>
+<tr><td><b>すいません</b></td><td>声音 ↔「事情还没了结」的欠疚感</td><td>済む → 击中真实的隐性语感</td></tr>
+<tr><td><b>中文类比</b></td><td colspan="2">「东西」不会想东西方向、「马上」不会想骑马、「马虎」不会想两种动物——
+母语者用的是凝固的整体感知。</td></tr>
+</table>
+<p class="lead" style="margin-top:8px">结论：<b>真语源的拆解＝命中本质；当て字的拆解＝高效脚手架。</b>两者都有用，但不能混为一谈。</p>
+</div>
+
+<div class="card">
+<h2><span class="em">🗂️</span>源流五分類</h2>
+<div class="srcrow"><span class="badge b-true">真語源</span>
+<span class="exjp">済む→すいません／当たる→〜あたり／沿う→〜沿い</span><br>
+词的形态素演变与汉字逻辑一致。拆解它，等于直接触到母语者的隐性语感。<b>可信、可依赖。</b></div>
+<div class="srcrow"><span class="badge b-ateji">当て字</span>
+<span class="exjp">出鱈目・滅茶苦茶・素敵・真逆</span><br>
+先有口语、后有汉字。汉字是按音或联想后配的外衣，<b>不在口语基因里</b>。可当记忆钩子，别当语源。</div>
+<div class="srcrow"><span class="badge b-kango">漢語変遷</span>
+<span class="exjp">挨拶（禅宗语）・生憎・是非・面倒・贔屓・真面目</span><br>
+本身来自汉语，在岛国拐了弯。拆解中文原义＝看它如何变形，同样能命中语感来源。</div>
+<div class="srcrow"><span class="badge b-juku">熟字訓</span>
+<span class="exjp">大人（おとな）・今日（きょう）・風邪（かぜ）</span><br>
+汉字不借音、只借概念。读法与词源要走另一条线（音無し説・此の日・中医の風邪）。</div>
+<div class="srcrow"><span class="badge b-var">諸説あり</span>
+<span class="exjp">やっぱり（矢張り）・ばか（馬鹿）</span><br>
+语源本身有争议。可以听故事，但不要单方面坚信某一种拆解——<b>这正是当て字与真语源的边界地带</b>。</div>
+<div class="warn">💡 仓库对照：<a href="../kakure-kanji-courseware/">隠れ漢字ポケット</a> 的 45 词每条都带这枚「源流」徽标；
+<a href="../renyo-courseware/">連用形の化身</a> 收的全是<b>真語源</b>的形态素演变。</div>
+</div>
+
+<div class="card">
+<h2><span class="em">🔍</span>判定四問（真語源 or 当て字？）</h2>
+<ol class="check">
+<li><b>語源辞典に載っているか。</b>「日本国語大辞典」「語源由来辞典」等に語源の記述があるか。無ければ当て字の疑い。</li>
+<li><b>その漢字表記はいつからか。</b>江戸期以降に突然現れた表記は、後付けの当て字である可能性が高い。</li>
+<li><b>読みは音か訓か。</b>音読みなのに意味が合わない・訓読みが不自然——なら借字（しゃくじ）。</li>
+<li><b>親戚の語がいるか。</b>同じ語源の動詞・古語・複合語がいるなら本物の語源（例：沿い←沿う、あたり←当たる）。</li>
+</ol>
+<p class="lead" style="margin-top:10px">判定结果是「諸説あり」也完全没问题——<b>知道边界在哪，本身就是元认知。</b></p>
+</div>
+
+<div class="card qbox">
+<h2><span class="em">🎯</span>分類小測——這表記、哪一源流？</h2>
+<div class="hint lead">共 12 問 · 選完即時解說 · スコア：<span class="score" id="score">0 / 0</span></div>
+<div id="quiz" style="margin-top:12px"></div>
+</div>
+
+<div class="card">
+<h2><span class="em">🔗</span>連動課件</h2>
+<div class="links">
+<a href="../renyo-courseware/"><b>⛓️ 連用形の化身</b><span>真語源の形態素証拠：当たる→あたり、沿う→沿い…（22 詞）</span></a>
+<a href="../kakure-kanji-courseware/"><b>🈶 隠れ漢字ポケット</b><span>45 詞五分類＋源流バッジ：真語源/当て字/熟字訓/漢語変遷/諸説あり</span></a>
+<a href="../keiji-courseware/"><b>👝 接頭・接尾詞 口袋図鑑</b><span>接尾語の意味辞典（52 詞）：意味ネットワークから引く</span></a>
+</div>
+<div class="warn">学習戦略まとめ：<b>真語源は語感の本体として信頼し、当て字は記憶のフックとして割り切る。</b>
+どちらも使う。ただしラベルを貼り間違えない。</div>
+</div>
+
+<footer>日本語学習メタ認知ガイド · 手書き単ファイル · オフライン利用可</footer>
+</main>
+
+<script>
+const QS=[
+ ["ありがとう【有難う】","真語源","「有り難し」＝めったに無い。語の成り立ちと漢字の意味が一致している。"],
+ ["やっぱり【矢張り】","諸説あり","当て字説が有力だが、「や＋張り」説もあり決着していない。境界地帯の代表例。"],
+ ["でたらめ【出鱈目】","当て字","先に口語があり、後から漢字を当てた純粋な当て字。語源は別。"],
+ ["あいさつ【挨拶】","漢語変遷","禅宗語「挨一挨、拶一拶」から。漢語が日本語で意味を変えた例。"],
+ ["おとな【大人】","熟字訓","読みは固有語。漢字は概念だけ借りた熟字訓（音無し説など）。"],
+ ["まさか【真逆】","当て字","真逆は後起の当て字。語源には真坂説など別の系統がある。"],
+ ["すみません【済みません】","真語源","「済む＝かたがつく」の否定形。事が済んでいない心の状態を表す。"],
+ ["ばか【馬鹿】","諸説あり","指鹿為馬説が有名だが、梵語 moha 説などもあり確定していない。"],
+ ["あいにく【生憎】","漢語変遷","漢語「生憎」が日本語の副詞として定着。意味変化を楽しめる。"],
+ ["めちゃくちゃ【滅茶苦茶】","当て字","茶具を滅する様から作られた和製の当て字。語源は口語。"],
+ ["きょう【今日】","熟字訓","「此の日（けふ）」の音変化。漢字は意味を表す熟字訓。"],
+ ["ひいき【贔屓】","漢語変遷","龍生九子の贔屓が「重きを負う」姿から、上から目線の偏愛へ。"]
+];
+let qi=0, ok=0;
+function render(){
+  const box=document.getElementById("quiz");
+  if(qi>=QS.length){
+    box.innerHTML="<div style='font-size:18px;font-weight:700'>🏆 "+ok+" / "+QS.length+
+      "　"+(ok===QS.length?"完璧！源流の目ができました":ok>=9?"かなり良い！境界線も見えています":"もう一度判定四問を読んでから再挑戦")+"</div>"+
+      "<button class='opt' style='margin-top:12px' onclick='qi=0;ok=0;render()'>もう一度</button>";
+    document.getElementById("score").textContent=ok+" / "+QS.length;
+    return;
+  }
+  const q=QS[qi];
+  box.innerHTML="<div class='q'>「"+q[0]+"」</div>"+
+    ["真語源","当て字","漢語変遷","熟字訓","諸説あり"].map(t=>
+      "<button class='opt' data-t='"+t+"' onclick='pick(this)'>"+t+"</button>").join("")+
+    "<div class='fb' id='fb'></div>";
+  document.getElementById("score").textContent=ok+" / "+QS.length;
+}
+function pick(btn){
+  const q=QS[qi]; const chosen=btn.dataset.t;
+  document.querySelectorAll(".opt").forEach(b=>{b.disabled=true;if(b.dataset.t===q[1])b.classList.add("right");});
+  if(chosen!==q[1])btn.classList.add("wrong"); else ok++;
+  const fb=document.getElementById("fb");
+  fb.className="fb "+(chosen===q[1]?"ok":"ng");
+  fb.innerHTML=(chosen===q[1]?"⭕ 正解！":"❌ 正解は「"+q[1]+"」")+"　"+q[2];
+  document.getElementById("score").textContent=ok+" / "+(qi+1);
+  qi++;
+  const nb=document.createElement("button");
+  nb.className="opt"; nb.style.display="block"; nb.style.marginTop="10px";
+  nb.textContent=qi>=QS.length?"結果を見る →":"次の問題 →";
+  nb.onclick=render;
+  fb.after(nb);
+}
+render();
+</script>
+</body>
+</html>

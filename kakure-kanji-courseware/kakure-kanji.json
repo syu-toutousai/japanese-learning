@@ -104,7 +104,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "有り難し＝めったに無い"
     },
     {
       "id": "sumimasen",
@@ -141,7 +143,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "済む＝かたがつく"
     },
     {
       "id": "gomen",
@@ -178,7 +182,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "御免＝罪を免れる"
     },
     {
       "id": "sayounara",
@@ -215,7 +221,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "左様なら＝そうであるなら"
     },
     {
       "id": "naruhodo",
@@ -252,7 +260,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "成る＋程＝成立する程度"
     },
     {
       "id": "somosomo",
@@ -302,7 +312,9 @@
           "ans": 0,
           "exp": "「抑」在古汉语中常作发语词（如“抑或”），「抑々」叠用强调“话又说回来、从根本上说”。"
         }
-      ]
+      ],
+      "sourceType": "真語源",
+      "sourceNote": "漢文の抑＝発語の詞"
     },
     {
       "id": "tabun",
@@ -339,7 +351,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "多い部分＝概率の大半"
     },
     {
       "id": "yappari",
@@ -376,7 +390,9 @@
         }
       ],
       "note": "口语常作「やっぱり」，书面作「やはり」，汉字同为「矢張り」。",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "諸説あり",
+      "sourceNote": "当て字説・や＋張り説"
     },
     {
       "id": "sekkaku",
@@ -413,7 +429,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "後漢書の折角＝苦労"
     },
     {
       "id": "toriaezu",
@@ -450,7 +468,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "取る＋敢えず＝手が回らず"
     },
     {
       "id": "masaka",
@@ -494,7 +514,9 @@
           "ans": false,
           "exp": "「真逆」是后起的当て字，能帮助记忆；词源另有「真坂」等说，不宜当作定论。"
         }
-      ]
+      ],
+      "sourceType": "当て字",
+      "sourceNote": "後起の真逆（語源は別）"
     },
     {
       "id": "marude",
@@ -531,7 +553,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "丸＝完全な円"
     },
     {
       "id": "chinamini",
@@ -568,7 +592,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "因む＝つながり"
     },
     {
       "id": "iwayuru",
@@ -605,7 +631,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "漢文の所謂＝いわく"
     },
     {
       "id": "toutei",
@@ -642,7 +670,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "到底＝底まで"
     },
     {
       "id": "atakamo",
@@ -679,7 +709,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "恰＝ちょうど"
     },
     {
       "id": "tachimachi",
@@ -716,7 +748,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "忽は意味の借用、語源は諸説"
     },
     {
       "id": "tamatama",
@@ -753,7 +787,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "偶は意味の借用"
     },
     {
       "id": "kawaii",
@@ -790,7 +826,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "可愛は後付けの表記"
     },
     {
       "id": "kawaisou",
@@ -827,7 +865,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "可哀想は後付けの表記"
     },
     {
       "id": "suteki",
@@ -864,7 +904,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "素敵は和製の当て字"
     },
     {
       "id": "mazui",
@@ -901,7 +943,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "不味は後付けの表記"
     },
     {
       "id": "oshare",
@@ -938,7 +982,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "洒落は意味の借用"
     },
     {
       "id": "darui",
@@ -975,7 +1021,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "怠は意味の借用"
     },
     {
       "id": "mendokusai",
@@ -1012,7 +1060,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "面倒＋臭い＝イヤな気配"
     },
     {
       "id": "wagamama",
@@ -1049,7 +1099,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "我＋儘＝意のまま"
     },
     {
       "id": "hiiki",
@@ -1086,7 +1138,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "贔屓＝龍の子の故事から"
     },
     {
       "id": "baka",
@@ -1136,7 +1190,9 @@
           "ans": 0,
           "exp": "赵高指鹿为马，混淆马与鹿——连马鹿都分不清的人，被戏称为「馬鹿」。"
         }
-      ]
+      ],
+      "sourceType": "諸説あり",
+      "sourceNote": "指鹿為馬説・梵語説など"
     },
     {
       "id": "takusan",
@@ -1173,7 +1229,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "沢＋山＝山のように集まる"
     },
     {
       "id": "majime",
@@ -1210,7 +1268,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "真面目しんめんもく→まじめ"
     },
     {
       "id": "oyatsu",
@@ -1260,7 +1320,9 @@
           "ans": 0,
           "exp": "江户时代把下午两点到四点称为「八つ時」，是吃点心休息的时间，后来「御八つ」就成了零食的代称。"
         }
-      ]
+      ],
+      "sourceType": "真語源",
+      "sourceNote": "八つ時＝午後2-4時"
     },
     {
       "id": "kega",
@@ -1297,7 +1359,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "語源未詳の当て字"
     },
     {
       "id": "kizu",
@@ -1334,7 +1398,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "傷そのもの"
     },
     {
       "id": "yue",
@@ -1371,7 +1437,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "真語源",
+      "sourceNote": "漢文の故＝ゆえん"
     },
     {
       "id": "otona",
@@ -1408,7 +1476,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "熟字訓",
+      "sourceNote": "音無し説など、読みは固有"
     },
     {
       "id": "kyou",
@@ -1445,7 +1515,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "熟字訓",
+      "sourceNote": "此の日→けふ→きょう"
     },
     {
       "id": "kaze",
@@ -1482,7 +1554,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "熟字訓",
+      "sourceNote": "中医の風邪概念を借用"
     },
     {
       "id": "mechakucha",
@@ -1519,7 +1593,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "滅茶苦茶は和製の当て字"
     },
     {
       "id": "mucha",
@@ -1556,7 +1632,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "無茶は和製の当て字"
     },
     {
       "id": "detarame",
@@ -1593,7 +1671,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "当て字",
+      "sourceNote": "出鱈目は和製の当て字"
     },
     {
       "id": "sasuga",
@@ -1643,7 +1723,9 @@
           "ans": 0,
           "exp": "「流石」源自《世说新语》中孙子荆误说“漱石枕流”却机智自圆其说的典故，后表“不愧是”。"
         }
-      ]
+      ],
+      "sourceType": "当て字",
+      "sourceNote": "漱石枕流の故事から"
     },
     {
       "id": "ainiku",
@@ -1680,7 +1762,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "生憎＝あやにくの漢語"
     },
     {
       "id": "zehi",
@@ -1717,7 +1801,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "是非→如何是非＝どうしても"
     },
     {
       "id": "aisatsu",
@@ -1754,7 +1840,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "禅宗の挨拶＝推し量る"
     },
     {
       "id": "mendou",
@@ -1791,7 +1879,9 @@
         }
       ],
       "note": "",
-      "quizzes": []
+      "quizzes": [],
+      "sourceType": "漢語変遷",
+      "sourceNote": "面倒＝漢語系の語"
     }
   ]
 }
