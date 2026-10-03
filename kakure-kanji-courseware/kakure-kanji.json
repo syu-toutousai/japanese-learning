@@ -1,0 +1,1797 @@
+{
+  "meta": {
+    "title": "隠れ漢字",
+    "titleCn": "隐藏汉字口袋",
+    "jp": "かくれかんじ ／ 仮名の裏に漢字あり",
+    "tags": [
+      "N5",
+      "N4",
+      "N3",
+      "N2",
+      "N1",
+      "語彙",
+      "漢字",
+      "語源",
+      "当て字"
+    ],
+    "voiceFemale": "ja-JP-NanamiNeural",
+    "note": "往 items 里丢一条「假名常用词＋本源汉字」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
+  },
+  "groups": [
+    {
+      "id": "greet",
+      "name": "あいさつ・口語",
+      "color": "#e8590c",
+      "emoji": "🙇",
+      "note": "天天挂在嘴边却从没想过汉字——ありがとう、ごめん、なるほど…"
+    },
+    {
+      "id": "adv",
+      "name": "副詞",
+      "color": "#7048e8",
+      "emoji": "🌀",
+      "note": "假名时像乱码，还原汉字瞬间有画面——やっぱり、せっかく、ちなみに…"
+    },
+    {
+      "id": "adj",
+      "name": "形容詞・状態",
+      "color": "#0ca678",
+      "emoji": "🍀",
+      "note": "かわいい、すてき、めんどくさい……汉字一出手，语感立现。"
+    },
+    {
+      "id": "noun",
+      "name": "名詞・概念",
+      "color": "#1971c2",
+      "emoji": "📦",
+      "note": "ばか、たくさん、おやつ、けが……词义都藏在本源汉字里。"
+    },
+    {
+      "id": "jukuji",
+      "name": "熟字訓",
+      "color": "#e64980",
+      "emoji": "🧩",
+      "note": "只借概念不借音：大人（おとな）、今日（きょう）、風邪（かぜ）。"
+    },
+    {
+      "id": "ateji",
+      "name": "当て字・和語",
+      "color": "#b8860b",
+      "emoji": "🎭",
+      "note": "和语本无字，古人硬凑出来的汉字反而画面感爆棚——出鱈目、流石…"
+    },
+    {
+      "id": "kango",
+      "name": "漢語の変遷",
+      "color": "#9c36b5",
+      "emoji": "📜",
+      "note": "源自古汉语，词义在岛国拐了个弯——挨拶、生憎、是非、面倒。"
+    }
+  ],
+  "items": [
+    {
+      "id": "arigatou",
+      "word": "ありがとう",
+      "kanji": "有難う",
+      "read": "ありがとう",
+      "group": "greet",
+      "level": "N5",
+      "emoji": "🙏",
+      "type": "口語",
+      "meaning": "谢谢——对“难得之恩”的珍视",
+      "origin": "「有り難し」＝很难拥有、极其难得。普通的道谢由此升华为：感谢这份来之不易的恩惠。",
+      "examples": [
+        {
+          "jp": "手伝ってくれて、本当にありがとう。",
+          "cn": "谢谢你帮我，真的感谢。"
+        },
+        {
+          "jp": "わざわざ来てくれてありがとう。",
+          "cn": "谢谢你特意跑一趟。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ありがとう ありがとう ありがとう!",
+          "en": "Thank you, thank you, thank you!",
+          "cn": "谢谢，谢谢，谢谢！",
+          "media": "Scott Pilgrim Takes Off",
+          "ep": "EP8",
+          "at": "19:22",
+          "url": "https://nadeshiko.co/en/sentence/h8E2aPM5bff8",
+          "audio": "https://cdn.nadeshiko.co/media/170206/8/cd0c32df90.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170206/8/cd0c32df90.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "sumimasen",
+      "word": "すみません",
+      "kanji": "済みません",
+      "read": "すみません",
+      "group": "greet",
+      "level": "N5",
+      "emoji": "🙇",
+      "type": "口語",
+      "meaning": "抱歉；劳驾——事情尚未“了结”",
+      "origin": "「済む」＝完结、了结。「済みません」＝还没了结，心里这道坎过不去：既用来道歉，也用来道谢或搭话。",
+      "examples": [
+        {
+          "jp": "遅れてすみません。",
+          "cn": "对不起，我迟到了。"
+        },
+        {
+          "jp": "すみません、少し道を教えてください。",
+          "cn": "劳驾，请问一下路。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "すみません すみません すみません",
+          "en": "I'm sorry! I'm sorry! I'm sorry!!",
+          "cn": "对不起！对不起！对不起！",
+          "media": "Junjo Romantica 2",
+          "ep": "EP11",
+          "at": "23:20",
+          "url": "https://nadeshiko.co/en/sentence/xK3va-p4fyty",
+          "audio": "https://cdn.nadeshiko.co/media/4814/11/8d7151ae81.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4814/11/8d7151ae81.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "gomen",
+      "word": "ごめん",
+      "kanji": "御免",
+      "read": "ごめん",
+      "group": "greet",
+      "level": "N5",
+      "emoji": "🙏",
+      "type": "口語",
+      "meaning": "对不起——请“免除”我的过失",
+      "origin": "「御免」＝请对方开恩，免除罪责、允许自己。本是郑重语，后口语化为轻松的道歉。",
+      "examples": [
+        {
+          "jp": "ごめん、すぐ返すから。",
+          "cn": "抱歉，我马上还你。"
+        },
+        {
+          "jp": "遅くなってごめんね。",
+          "cn": "来晚了，对不起啊。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ごめん ちょっとごめん ごめん ごめん",
+          "en": "Sorry, sorry! My bad!",
+          "cn": "抱歉、借过一下，抱歉抱歉！",
+          "media": "The Fragrant Flower Blooms With Dignity",
+          "ep": "EP2",
+          "at": "12:47",
+          "url": "https://nadeshiko.co/en/sentence/mwKcU4HOZGbg",
+          "audio": "https://cdn.nadeshiko.co/media/181444/2/d4f9a32d41.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/181444/2/d4f9a32d41.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "sayounara",
+      "word": "さようなら",
+      "kanji": "左様なら",
+      "read": "さようなら",
+      "group": "greet",
+      "level": "N5",
+      "emoji": "👋",
+      "type": "口語",
+      "meaning": "再见——既然如此，就此别过",
+      "origin": "「左様」＝那样，「なら」＝若是。本意是“既然事情已经那样了（那就暂此别过吧）”，后成为郑重告别语。",
+      "examples": [
+        {
+          "jp": "それじゃ、さようなら。",
+          "cn": "那么，再见了。"
+        },
+        {
+          "jp": "卒業しても、さようならは言いたくない。",
+          "cn": "就算毕业了，我也不想说再见。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "お姉(ねえ)ちゃん さようなら さようなら",
+          "en": "Bye, Onee-chan! Bye.",
+          "cn": "姐姐，再见，再见。",
+          "media": "LAID-BACK CAMP SEASON2",
+          "ep": "EP8",
+          "at": "16:39",
+          "url": "https://nadeshiko.co/en/sentence/n0ME9Bg5UV_Y",
+          "audio": "https://cdn.nadeshiko.co/media/104459/8/91c9d60b43.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/104459/8/91c9d60b43.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "naruhodo",
+      "word": "なるほど",
+      "kanji": "成る程",
+      "read": "なるほど",
+      "group": "greet",
+      "level": "N5",
+      "emoji": "💡",
+      "type": "口語",
+      "meaning": "原来如此——事情到了“可以成立的程度”",
+      "origin": "「成る」＝成立、达到，「程」＝程度。听到解释后觉得“达到了能成立的程度”，即“确实如此、有道理”。",
+      "examples": [
+        {
+          "jp": "なるほど、そういう仕組みか。",
+          "cn": "原来如此，是这么个机制啊。"
+        },
+        {
+          "jp": "なるほど、君の言う通りだ。",
+          "cn": "有道理，你说得对。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "なるほど なるほど なるほど",
+          "en": "I see, I see, I see.",
+          "cn": "原来如此，原来如此，原来如此。",
+          "media": "CITY THE ANIMATION",
+          "ep": "EP8",
+          "at": "11:28",
+          "url": "https://nadeshiko.co/en/sentence/XEgNfTfHPvc4",
+          "audio": "https://cdn.nadeshiko.co/media/181841/8/6afd3233a6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/181841/8/6afd3233a6.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "somosomo",
+      "word": "そもそも",
+      "kanji": "抑々",
+      "read": "そもそも",
+      "group": "greet",
+      "level": "N3",
+      "emoji": "🔙",
+      "type": "口語",
+      "meaning": "说起来、原本——追溯本源",
+      "origin": "「抑」在汉文中常作发语词（如“抑或”），表示退一步、从头说起。「抑々」叠用强调：话又说回来、从根本上讲。",
+      "examples": [
+        {
+          "jp": "そもそも、なぜここに来たんだっけ。",
+          "cn": "说起来，我们到底为什么来这儿来着？"
+        },
+        {
+          "jp": "そもそも計画に無理があった。",
+          "cn": "这个计划从一开始就不合理。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "そもそも そもそも...",
+          "en": "Maybe it's an illusion.",
+          "cn": "说到底……说到底……",
+          "media": "Godzilla Minus One",
+          "ep": "EP1",
+          "at": "50:28",
+          "url": "https://nadeshiko.co/en/sentence/CCdFOxhROTWk",
+          "audio": "https://cdn.nadeshiko.co/media/mv/940721/1/f7ada9e752.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/940721/1/f7ada9e752.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「そもそも【抑々】」中的「抑」原本是什么词？",
+          "opts": [
+            "汉文发语词，表示退一步、从头说起",
+            "压抑、压制",
+            "或者、也许",
+            "抑扬顿挫"
+          ],
+          "ans": 0,
+          "exp": "「抑」在古汉语中常作发语词（如“抑或”），「抑々」叠用强调“话又说回来、从根本上说”。"
+        }
+      ]
+    },
+    {
+      "id": "tabun",
+      "word": "たぶん",
+      "kanji": "多分",
+      "read": "たぶん",
+      "group": "adv",
+      "level": "N5",
+      "emoji": "🎲",
+      "type": "副詞",
+      "meaning": "大概、也许——占了很“多”的“部分”",
+      "origin": "「多分」＝概率上占了很大一部分。汉语“多分”是分开的意思，日语借形表示“大概率”。",
+      "examples": [
+        {
+          "jp": "明日はたぶん雨が降る。",
+          "cn": "明天大概会下雨。"
+        },
+        {
+          "jp": "彼はたぶん来ないと思う。",
+          "cn": "我想他多半不会来。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "な... 何(なん)でもない　たぶん関係(かんけい)ない たぶん",
+          "en": "N-Nothing. It's not related. Probably.",
+          "cn": "没、没什么。大概没关系，大概。",
+          "media": "The Apothecary Diaries",
+          "ep": "EP5",
+          "at": "4:29",
+          "url": "https://nadeshiko.co/en/sentence/SUT5k9uvWTeP",
+          "audio": "https://cdn.nadeshiko.co/media/161645/5/b1f5344417.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161645/5/b1f5344417.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "yappari",
+      "word": "やっぱり",
+      "kanji": "矢張り",
+      "read": "やっぱり",
+      "group": "adv",
+      "level": "N4",
+      "emoji": "🏹",
+      "type": "副詞",
+      "meaning": "果然、还是——像射出的箭，不偏不倚",
+      "origin": "「矢張り」＝箭射出后绷直不变。事态与预想分毫不差、仍旧如此，即“果然、还是”。",
+      "examples": [
+        {
+          "jp": "やっぱり君が来ると思っていた。",
+          "cn": "果然，我就知道你会来。"
+        },
+        {
+          "jp": "何度考えても、やっぱり彼が正しい。",
+          "cn": "怎么想都还是他对。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "やっぱり... やっぱり そうだ!",
+          "en": "Yes... Yes, it's gotta be!",
+          "cn": "果然……果然是这样！",
+          "media": "Catch Me at the Ballpark!",
+          "ep": "EP12",
+          "at": "16:13",
+          "url": "https://nadeshiko.co/en/sentence/OdEQOADzP9Uc",
+          "audio": "https://cdn.nadeshiko.co/media/184279/12/b7b77d8054.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/184279/12/b7b77d8054.webp"
+        }
+      ],
+      "note": "口语常作「やっぱり」，书面作「やはり」，汉字同为「矢張り」。",
+      "quizzes": []
+    },
+    {
+      "id": "sekkaku",
+      "word": "せっかく",
+      "kanji": "折角",
+      "read": "せっかく",
+      "group": "adv",
+      "level": "N3",
+      "emoji": "🦌",
+      "type": "副詞",
+      "meaning": "特意、好不容易——费尽周折",
+      "origin": "典出《后汉书》：为劝谏不惜「折角」（折断额角）力争，后引申为不辞辛劳、特意。",
+      "examples": [
+        {
+          "jp": "せっかく来たのに、店が閉まっていた。",
+          "cn": "好不容易来了，店却关门了。"
+        },
+        {
+          "jp": "せっかくの休みだから、ゆっくり寝よう。",
+          "cn": "难得休息，好好睡一觉吧。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "せっかくのおもてなし せっかくの準備(じゅんび)",
+          "en": "You went to so much trouble preparing a warm welcome...",
+          "cn": "难得你特意招待、特意准备……",
+          "media": "Re:ZERO -Starting Life in Another World- Season 3",
+          "ep": "EP15",
+          "at": "8:16",
+          "url": "https://nadeshiko.co/en/sentence/YnxW1z1prdvJ",
+          "audio": "https://cdn.nadeshiko.co/media/163134/15/843886fdf1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/163134/15/843886fdf1.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "toriaezu",
+      "word": "とりあえず",
+      "kanji": "取り敢えず",
+      "read": "とりあえず",
+      "group": "adv",
+      "level": "N3",
+      "emoji": "🏃",
+      "type": "副詞",
+      "meaning": "暂且、首先——连“拿取”都顾不上",
+      "origin": "「取る（拿取）」＋「敢えず（来不及、顾不上）」。突发状况下先做手边的事，引申为“暂且先…”。",
+      "examples": [
+        {
+          "jp": "とりあえず、座って話しましょう。",
+          "cn": "先坐下聊吧。"
+        },
+        {
+          "jp": "とりあえずビールで乾杯！",
+          "cn": "先来杯啤酒干杯！"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "えっと... とりあえず お疲(つか)れさま。",
+          "en": "Anyway, welcome. Wear this.",
+          "cn": "那个……总之先辛苦了。",
+          "media": "Makeine: Too Many Losing Heroines!",
+          "ep": "EP2",
+          "at": "19:06",
+          "url": "https://nadeshiko.co/en/sentence/uPtjgCgU-Ir3",
+          "audio": "https://cdn.nadeshiko.co/media/171457/2/3d198c71fa.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/171457/2/3d198c71fa.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "masaka",
+      "word": "まさか",
+      "kanji": "真逆",
+      "read": "まさか",
+      "group": "adv",
+      "level": "N3",
+      "emoji": "😱",
+      "type": "副詞",
+      "meaning": "怎么可能、万万没想到",
+      "origin": "常写作「真逆」：与预想完全相反。此系后起当て字，词源另有「真坂（真正的坡道→界限）」等说。",
+      "examples": [
+        {
+          "jp": "まさか彼が犯人だなんて。",
+          "cn": "万万没想到他竟是犯人。"
+        },
+        {
+          "jp": "まさか、鍵をかけ忘れた？",
+          "cn": "不会吧，我忘了锁门？"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "まさか まさか まさか まさか! まさか まさか まさか まさか",
+          "en": "To think, to think, to think, to think!",
+          "cn": "不会吧、不会吧、不会吧！",
+          "media": "Re:ZERO -Starting Life in Another World-",
+          "ep": "EP12",
+          "at": "37:27",
+          "url": "https://nadeshiko.co/en/sentence/CGuud6rXQ29Y",
+          "audio": "https://cdn.nadeshiko.co/media/21355/12/8be529b860.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21355/12/8be529b860.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「まさか」的词源已经确定就是「真逆」，没有别的说法。",
+          "ans": false,
+          "exp": "「真逆」是后起的当て字，能帮助记忆；词源另有「真坂」等说，不宜当作定论。"
+        }
+      ]
+    },
+    {
+      "id": "marude",
+      "word": "まるで",
+      "kanji": "丸で",
+      "read": "まるで",
+      "group": "adv",
+      "level": "N3",
+      "emoji": "⭕",
+      "type": "副詞",
+      "meaning": "简直、完全——像一个完整的圆",
+      "origin": "「丸」＝完整无缺的圆。后接「〜のようだ」＝完全就像…；也可直接表“完全（不）”。",
+      "examples": [
+        {
+          "jp": "まるで夢を見ているようだ。",
+          "cn": "简直像在做梦一样。"
+        },
+        {
+          "jp": "彼はまるで別人のようになった。",
+          "cn": "他完全像变了个人。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "これじゃ まるで まるで...",
+          "en": "It's like... like...",
+          "cn": "这样简直……简直……",
+          "media": "FLCL Progressive",
+          "ep": "EP3",
+          "at": "21:12",
+          "url": "https://nadeshiko.co/en/sentence/9wedtHCIQaPm",
+          "audio": "https://cdn.nadeshiko.co/media/21746/3/854da58f79.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21746/3/854da58f79.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "chinamini",
+      "word": "ちなみに",
+      "kanji": "因みに",
+      "read": "ちなみに",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "🔗",
+      "type": "副詞",
+      "meaning": "顺便一提——顺着前因附带提及",
+      "origin": "「因み」＝因缘、关联。顺着前面的内容“附带地”说一句，即“顺便一提”。",
+      "examples": [
+        {
+          "jp": "ちなみに、締め切りは明日です。",
+          "cn": "顺便一提，截止日期是明天。"
+        },
+        {
+          "jp": "ちなみに私は辛いものが苦手だ。",
+          "cn": "顺带说一句，我不太能吃辣。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ちなみに〝めんそーれ〞は ようこそ",
+          "en": "By the way, men sore means welcome.",
+          "cn": "顺便一提，「めんそーれ」是欢迎的意思。",
+          "media": "The Disastrous Life of Saiki K.",
+          "ep": "EP12",
+          "at": "14:49",
+          "url": "https://nadeshiko.co/en/sentence/OLbdxeHxNQ2-",
+          "audio": "https://cdn.nadeshiko.co/media/21804/12/be07845fd8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21804/12/be07845fd8.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "iwayuru",
+      "word": "いわゆる",
+      "kanji": "所謂",
+      "read": "いわゆる",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "📖",
+      "type": "副詞",
+      "meaning": "所谓——文言“所说的”",
+      "origin": "「所謂」＝文言“所说的那个”。用来引出通行的称呼或概念。",
+      "examples": [
+        {
+          "jp": "彼はいわゆる天才タイプだ。",
+          "cn": "他就是所谓的“天才型”。"
+        },
+        {
+          "jp": "いわゆる健康ブームはまだ続いている。",
+          "cn": "所谓的健康热潮仍在持续。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ナイトキャップ? いわゆる寝酒(ねざけ)。",
+          "en": "Nightcap? A drink to help you sleep.",
+          "cn": "夜帽？也就是所谓的睡前酒。",
+          "media": "Botan Kamiina Fully Blossoms When Drunk",
+          "ep": "EP3",
+          "at": "4:34",
+          "url": "https://nadeshiko.co/en/sentence/2DYOTq2qFOlL",
+          "audio": "https://cdn.nadeshiko.co/media/187869/3/df5a9d3c7c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/187869/3/df5a9d3c7c.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "toutei",
+      "word": "とうてい",
+      "kanji": "到底",
+      "read": "とうてい",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "🕳️",
+      "type": "副詞",
+      "meaning": "无论如何也（不）——落到“底”",
+      "origin": "「到底」＝到最底部，引申为“彻头彻尾、无论如何”。多与否定呼应：とうてい〜ない。",
+      "examples": [
+        {
+          "jp": "自力ではとうてい無理だ。",
+          "cn": "单靠自己是无论如何做不到的。"
+        },
+        {
+          "jp": "その速さにはとうてい追いつけない。",
+          "cn": "那速度我根本追不上。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "俺(おれ)ではとうてい追(お)いつけない",
+          "en": "I could never catch up.",
+          "cn": "我无论如何也追不上。",
+          "media": "Run with the Wind",
+          "ep": "EP23",
+          "at": "1:04",
+          "url": "https://nadeshiko.co/en/sentence/7ck7L4cQT57N",
+          "audio": "https://cdn.nadeshiko.co/media/101903/23/2c4fb05567.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101903/23/2c4fb05567.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "atakamo",
+      "word": "あたかも",
+      "kanji": "恰も",
+      "read": "あたかも",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "🎭",
+      "type": "副詞",
+      "meaning": "恰如、宛如——文言“恰”字的分身",
+      "origin": "「恰」＝恰好、正如。书面语，多与「〜のようだ／ごとく」搭配，像文言文一样精准。",
+      "examples": [
+        {
+          "jp": "あたかも春が来たかのような暖かさだ。",
+          "cn": "暖得宛如春天已经来了。"
+        },
+        {
+          "jp": "その顔はあたかも全てを知っているかのようだった。",
+          "cn": "那表情仿佛知道一切。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あたかも 体(からだ)が透(す)けているように見(み)せる。",
+          "en": "to make it seem like your body is invisible.",
+          "cn": "让身体看起来仿佛透明一般。",
+          "media": "DAN DA DAN Season 2",
+          "ep": "EP10",
+          "at": "19:58",
+          "url": "https://nadeshiko.co/en/sentence/ekOHjTqJUp4Z",
+          "audio": "https://cdn.nadeshiko.co/media/185660/10/3d49651965.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185660/10/3d49651965.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "tachimachi",
+      "word": "たちまち",
+      "kanji": "忽ち",
+      "read": "たちまち",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "⚡",
+      "type": "副詞",
+      "meaning": "转眼之间、立时",
+      "origin": "「忽」＝忽而、迅速。汉字一出，瞬间感立刻可见。多用于书面叙事。",
+      "examples": [
+        {
+          "jp": "空はたちまち暗くなった。",
+          "cn": "天空转眼间暗了下来。"
+        },
+        {
+          "jp": "噂はたちまち町中に広まった。",
+          "cn": "传闻转眼传遍了全镇。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "たちまち おまんまは食(く)い上(あ)げ",
+          "en": "So they lose their means of living.",
+          "cn": "转眼间就没了饭碗。",
+          "media": "Jin",
+          "ep": "EP5",
+          "at": "5:04",
+          "url": "https://nadeshiko.co/en/sentence/8TttsfobPNOh",
+          "audio": "https://cdn.nadeshiko.co/media/mv/46198_1/5/e92aa9f573.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/46198_1/5/e92aa9f573.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "tamatama",
+      "word": "たまたま",
+      "kanji": "偶々",
+      "read": "たまたま",
+      "group": "adv",
+      "level": "N2",
+      "emoji": "🎯",
+      "type": "副詞",
+      "meaning": "偶然、碰巧——“偶然”的叠用",
+      "origin": "「偶」＝偶然。并非“两个球”，而是从“偶然”化用而来，叠字加强随意感。",
+      "examples": [
+        {
+          "jp": "駅でたまたま昔の友達に会った。",
+          "cn": "在车站偶然遇到了老朋友。"
+        },
+        {
+          "jp": "たまたまその日は休みだった。",
+          "cn": "碰巧那天休息。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "それが今回(こんかい)はたまたま 本っ当(ほんとう)にたまたま",
+          "en": "And this time, purely by chanceー and I assure you it was just chanceー",
+          "cn": "这次只是碰巧，真的只是碰巧。",
+          "media": "Nisemonogatari",
+          "ep": "EP4",
+          "at": "12:44",
+          "url": "https://nadeshiko.co/en/sentence/CZsAp0Y0uLNw",
+          "audio": "https://cdn.nadeshiko.co/media/11597/4/e46c5751ec.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/11597/4/e46c5751ec.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "kawaii",
+      "word": "かわいい",
+      "kanji": "可愛い",
+      "read": "かわいい",
+      "group": "adj",
+      "level": "N5",
+      "emoji": "🥰",
+      "type": "形容",
+      "meaning": "可爱——值得让人去爱",
+      "origin": "「可」＝值得，「愛」＝爱。值得被爱、招人喜爱。原义偏“可怜可爱”，现代语感偏“萌”。",
+      "examples": [
+        {
+          "jp": "この子犬、本当にかわいい。",
+          "cn": "这只小狗真可爱。"
+        },
+        {
+          "jp": "かわいい服を見つけた。",
+          "cn": "找到了一件可爱的衣服。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "かわいい かわいい かわいい かわいい かわいい かわいい!",
+          "en": "So cute! So cute! So cute! So cute! So cute! So cute!",
+          "cn": "好可爱好可爱好可爱！",
+          "media": "Akebi’s Sailor Uniform",
+          "ep": "EP2",
+          "at": "0:35",
+          "url": "https://nadeshiko.co/en/sentence/j6vcbasl6Bqv",
+          "audio": "https://cdn.nadeshiko.co/media/131548/2/de168a0e4f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/131548/2/de168a0e4f.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "kawaisou",
+      "word": "かわいそう",
+      "kanji": "可哀想",
+      "read": "かわいそう",
+      "group": "adj",
+      "level": "N4",
+      "emoji": "🥺",
+      "type": "形容",
+      "meaning": "可怜——看到对方的处境，激起自己的哀伤",
+      "origin": "「可哀」＝值得哀怜，「想（相）」＝看到的样子、处境。见其境而心生哀，即“可怜”。",
+      "examples": [
+        {
+          "jp": "雨の中を歩いているなんて、かわいそうだ。",
+          "cn": "在雨里走，真可怜。"
+        },
+        {
+          "jp": "捨てられた子猫がかわいそうでならない。",
+          "cn": "被丢弃的小猫让人心疼得不行。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "うう... かわいそうに かわいそうに",
+          "en": "Poor things. Those poor, poor things.",
+          "cn": "呜呜……可怜，太可怜了。",
+          "media": "SAKAMOTO DAYS",
+          "ep": "EP8",
+          "at": "16:55",
+          "url": "https://nadeshiko.co/en/sentence/t5AkkuedenTx",
+          "audio": "https://cdn.nadeshiko.co/media/177709/8/4ece95e636.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177709/8/4ece95e636.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "suteki",
+      "word": "すてき",
+      "kanji": "素敵",
+      "read": "すてき",
+      "group": "adj",
+      "level": "N4",
+      "emoji": "✨",
+      "type": "形容",
+      "meaning": "极好、漂亮——无人能“匹敌”",
+      "origin": "「素」＝原本、程度极，「敵」＝匹敌。好到无人能敌，即“极好、迷人”。",
+      "examples": [
+        {
+          "jp": "すてきなプレゼントをありがとう。",
+          "cn": "谢谢你送这么棒的礼物。"
+        },
+        {
+          "jp": "今日の服、すてきだね。",
+          "cn": "今天这身衣服很漂亮啊。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "いや、本当(ほんとう)素敵(すてき)。お色(いろ)も素敵(すてき)です。",
+          "en": "No, it's really lovely. The color is lovely too.",
+          "cn": "不，真的很棒。颜色也很漂亮。",
+          "media": "HIRO BEAUTY CHANNEL",
+          "ep": "EP1",
+          "at": "5:40",
+          "url": "https://nadeshiko.co/en/sentence/H87RgRSoPdkC",
+          "audio": "https://cdn.nadeshiko.co/media/yt/UC8oF7jmQsKbMVrCv5LrP32w/A4nbh-L8LeY/c6a0b69d60.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/yt/UC8oF7jmQsKbMVrCv5LrP32w/A4nbh-L8LeY/c6a0b69d60.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "mazui",
+      "word": "まずい",
+      "kanji": "不味い",
+      "read": "まずい",
+      "group": "adj",
+      "level": "N4",
+      "emoji": "🤢",
+      "type": "形容",
+      "meaning": "难吃；糟糕——没有味道／滋味不对",
+      "origin": "「不味」＝没有味道。食物难吃；引申为事情“不妙、糟糕”。",
+      "examples": [
+        {
+          "jp": "この店の料理はまずい。",
+          "cn": "这家店的菜很难吃。"
+        },
+        {
+          "jp": "まずい、財布を忘れた。",
+          "cn": "糟了，忘带钱包了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "まずい まずい まずい まずい まずい まずい まずい",
+          "en": "Nasty! Nasty! Nasty! Nasty! Nasty! Nasty! Nasty!",
+          "cn": "难吃难吃难吃！",
+          "media": "Nichijou - My Ordinary Life",
+          "ep": "EP23",
+          "at": "3:43",
+          "url": "https://nadeshiko.co/en/sentence/Yuenyqg-w6sN",
+          "audio": "https://cdn.nadeshiko.co/media/10165/23/d4694d6d43.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/10165/23/d4694d6d43.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "oshare",
+      "word": "おしゃれ",
+      "kanji": "御洒落",
+      "read": "おしゃれ",
+      "group": "adj",
+      "level": "N4",
+      "emoji": "👗",
+      "type": "形容",
+      "meaning": "时髦、爱打扮——借“洒脱”之魂",
+      "origin": "「御洒落」借汉语“洒脱、脱俗”的意境，指打扮得体、有品味。",
+      "examples": [
+        {
+          "jp": "おしゃれなカフェでランチをした。",
+          "cn": "在时髦的咖啡馆吃了午饭。"
+        },
+        {
+          "jp": "彼女はいつもおしゃれだ。",
+          "cn": "她总是很会打扮。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ほら おしゃれなキッチンカーで　おしゃれなランチ買(か)って",
+          "en": "Well, I thought we'd find a fancy food truck, buy something fancy for lunch,",
+          "cn": "看，坐时髦的餐车，买时髦的午餐。",
+          "media": "Makeine: Too Many Losing Heroines!",
+          "ep": "EP12",
+          "at": "12:42",
+          "url": "https://nadeshiko.co/en/sentence/p883YZElN3MU",
+          "audio": "https://cdn.nadeshiko.co/media/171457/12/8e327de091.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/171457/12/8e327de091.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "darui",
+      "word": "だるい",
+      "kanji": "怠い",
+      "read": "だるい",
+      "group": "adj",
+      "level": "N3",
+      "emoji": "😩",
+      "type": "形容",
+      "meaning": "浑身无力、慵懒——身体处于“倦怠”中",
+      "origin": "「怠」＝怠惰、倦怠。身体沉重、提不起劲的状态。",
+      "examples": [
+        {
+          "jp": "熱があって、体がだるい。",
+          "cn": "发烧了，浑身没劲。"
+        },
+        {
+          "jp": "午後はいつもだるくて眠い。",
+          "cn": "下午总是又困又乏。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "まぶしいし すごくだるい。",
+          "en": "The sun's so bright it's wearing me down.",
+          "cn": "又刺眼，又累得不行。",
+          "media": "Call of the Night Season 2",
+          "ep": "EP8",
+          "at": "8:43",
+          "url": "https://nadeshiko.co/en/sentence/rFfZBz1gCrsI",
+          "audio": "https://cdn.nadeshiko.co/media/175914/8/4aceb586b2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/175914/8/4aceb586b2.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "mendokusai",
+      "word": "めんどくさい",
+      "kanji": "面倒臭い",
+      "read": "めんどくさい",
+      "group": "adj",
+      "level": "N3",
+      "emoji": "😒",
+      "type": "形容",
+      "meaning": "极其麻烦——散发着“麻烦”的气味",
+      "origin": "「面倒」＋接尾「臭い」（带有…气味）。麻烦到“一股麻烦味”，即极其费事。",
+      "examples": [
+        {
+          "jp": "書類の整理はめんどくさい。",
+          "cn": "整理文件好麻烦。"
+        },
+        {
+          "jp": "めんどくさいけど、やるしかない。",
+          "cn": "虽然麻烦，但只能做。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "やれやれ めんどくさい 本当(ほんとう)に めんどくさい",
+          "en": "Good grief, what a total pain.",
+          "cn": "唉，真麻烦，真是太麻烦了。",
+          "media": "The Disastrous Life of Saiki K. Season 2",
+          "ep": "EP7",
+          "at": "13:52",
+          "url": "https://nadeshiko.co/en/sentence/79RNFk3SIHt5",
+          "audio": "https://cdn.nadeshiko.co/media/98034/7/0360ae3103.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98034/7/0360ae3103.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "wagamama",
+      "word": "わがまま",
+      "kanji": "我儘",
+      "read": "わがまま",
+      "group": "adj",
+      "level": "N3",
+      "emoji": "👑",
+      "type": "形容",
+      "meaning": "任性——尽随我的心意",
+      "origin": "「我」＋「儘（随心所欲）」。字面“尽随我意”，生动刻画任性、自我中心的姿态。",
+      "examples": [
+        {
+          "jp": "わがままを言ってすみません。",
+          "cn": "抱歉，我太任性了。"
+        },
+        {
+          "jp": "小さい頃はとてもわがままだった。",
+          "cn": "小时候非常任性。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "天才(てんさい)って やっぱ わがまま!",
+          "en": "Geniuses really are selfish!",
+          "cn": "天才果然都很任性！",
+          "media": "BLUE LOCK",
+          "ep": "EP16",
+          "at": "7:38",
+          "url": "https://nadeshiko.co/en/sentence/S-YPWfGAp5yv",
+          "audio": "https://cdn.nadeshiko.co/media/137822/16/1dc9327aa8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/137822/16/1dc9327aa8.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "hiiki",
+      "word": "ひいき",
+      "kanji": "贔屓",
+      "read": "ひいき",
+      "group": "noun",
+      "level": "N2",
+      "emoji": "🐉",
+      "type": "名詞",
+      "meaning": "偏爱、照顾——龙之子替你扛着重压",
+      "origin": "「贔屓」是龙生九子之一，力大能负重。借它“承受重压”的形象，表上对下的偏爱、关照。",
+      "examples": [
+        {
+          "jp": "あの先生は特定の生徒をひいきする。",
+          "cn": "那位老师偏爱特定的学生。"
+        },
+        {
+          "jp": "ひいきの店がつぶれてしまった。",
+          "cn": "常照顾的那家店倒闭了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "えこひいきだ! えこひいきだー!",
+          "en": "I sense favouritism! Favouritism, I say!",
+          "cn": "偏心！太偏心了！",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP24",
+          "at": "3:02",
+          "url": "https://nadeshiko.co/en/sentence/UmwfOshPBvYM",
+          "audio": "https://cdn.nadeshiko.co/media/101922/24/d137e97ec3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/24/d137e97ec3.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "baka",
+      "word": "ばか",
+      "kanji": "馬鹿",
+      "read": "ばか",
+      "group": "noun",
+      "level": "N4",
+      "emoji": "🤪",
+      "type": "名詞",
+      "meaning": "笨蛋——连马和鹿都分不清",
+      "origin": "典出《史记》赵高「指鹿为马」：连马和鹿都分不清的人，即“蠢货”。",
+      "examples": [
+        {
+          "jp": "そんなことも分からないなんて、ばかだな。",
+          "cn": "连这都不懂，真笨。"
+        },
+        {
+          "jp": "ばかを言わないで、真面目に話して。",
+          "cn": "别说傻话，认真点。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ばかっていうやつが ばかだし",
+          "en": "You're the moron for calling me a moron, you moron!",
+          "cn": "说别人笨蛋的人才是笨蛋。",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP9",
+          "at": "21:47",
+          "url": "https://nadeshiko.co/en/sentence/UujjdK4wUoPx",
+          "audio": "https://cdn.nadeshiko.co/media/177937/9/750a6c3704.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/9/750a6c3704.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「ばか【馬鹿】」的典故常追溯到哪个故事？",
+          "opts": [
+            "《史记》赵高「指鹿为马」",
+            "《世说新语》「漱石枕流」",
+            "《后汉书》「折角」",
+            "《论语》「温故知新」"
+          ],
+          "ans": 0,
+          "exp": "赵高指鹿为马，混淆马与鹿——连马鹿都分不清的人，被戏称为「馬鹿」。"
+        }
+      ]
+    },
+    {
+      "id": "takusan",
+      "word": "たくさん",
+      "kanji": "沢山",
+      "read": "たくさん",
+      "group": "noun",
+      "level": "N5",
+      "emoji": "⛰️",
+      "type": "名詞",
+      "meaning": "很多——山一样地聚集",
+      "origin": "「沢」＝聚集，「山」＝堆成山。多到堆成山，即“许多”。",
+      "examples": [
+        {
+          "jp": "机の上に本がたくさんある。",
+          "cn": "桌上有很多书。"
+        },
+        {
+          "jp": "たくさん食べてくださいね。",
+          "cn": "请多吃一点。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "もっと たくさん たくさん たくさん",
+          "en": "More... More,",
+          "cn": "再多、再多、再多。",
+          "media": "The Ancient Magus' Bride",
+          "ep": "EP5",
+          "at": "15:22",
+          "url": "https://nadeshiko.co/en/sentence/xdKpZh3U7Ri3",
+          "audio": "https://cdn.nadeshiko.co/media/98436/5/9d965f4020.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98436/5/9d965f4020.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "majime",
+      "word": "まじめ",
+      "kanji": "真面目",
+      "read": "まじめ",
+      "group": "adj",
+      "level": "N4",
+      "emoji": "🧑‍💼",
+      "type": "形容",
+      "meaning": "认真——亮出真实的本来面目",
+      "origin": "「真面目（まじめ）」＝不开玩笑，展露真实的自己；由汉语词「真面目（しんめんもく）」转来。",
+      "examples": [
+        {
+          "jp": "彼はとてもまじめな学生だ。",
+          "cn": "他是个非常认真的学生。"
+        },
+        {
+          "jp": "まじめな顔をして冗談を言う。",
+          "cn": "一本正经地开玩笑。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "根(ね)は真面目(まじめ)すぎるほど真面目(まじめ)で-",
+          "en": "But always so kind and honest.",
+          "cn": "本质上认真得不能再认真——",
+          "media": "Steins;Gate",
+          "ep": "EP22",
+          "at": "11:21",
+          "url": "https://nadeshiko.co/en/sentence/p0IlOm1dMyQ-",
+          "audio": "https://cdn.nadeshiko.co/media/9253/22/1cb31acc2a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/9253/22/1cb31acc2a.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "oyatsu",
+      "word": "おやつ",
+      "kanji": "御八つ",
+      "read": "おやつ",
+      "group": "noun",
+      "level": "N5",
+      "emoji": "🍪",
+      "type": "名詞",
+      "meaning": "零食、下午茶——江户的“八つ时”",
+      "origin": "江户时代把下午两点到四点叫「八つ時」，正是吃点心休息的时间，后沿用为“零食”。",
+      "examples": [
+        {
+          "jp": "三時のおやつにクッキーを食べた。",
+          "cn": "下午三点吃了饼干当点心。"
+        },
+        {
+          "jp": "おやつを持ってピクニックへ行こう。",
+          "cn": "带上零食去野餐吧。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "とりあえず... おやつ 食(た)べる",
+          "en": "For starters... Why don't we have some snacks?",
+          "cn": "总之……先吃点零食吧。",
+          "media": "Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway",
+          "ep": "EP5",
+          "at": "1:00",
+          "url": "https://nadeshiko.co/en/sentence/unqyp-BIWQ_p",
+          "audio": "https://cdn.nadeshiko.co/media/114232/5/6f747db477.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/114232/5/6f747db477.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「おやつ【御八つ】」的「八つ」指什么？",
+          "opts": [
+            "江户时代的「八つ時」（下午两点到四点）",
+            "八种点心",
+            "第八顿饭",
+            "八月"
+          ],
+          "ans": 0,
+          "exp": "江户时代把下午两点到四点称为「八つ時」，是吃点心休息的时间，后来「御八つ」就成了零食的代称。"
+        }
+      ]
+    },
+    {
+      "id": "kega",
+      "word": "けが",
+      "kanji": "怪我",
+      "read": "けが",
+      "group": "noun",
+      "level": "N4",
+      "emoji": "🤕",
+      "type": "名詞",
+      "meaning": "受伤——出了意外只能怪自己",
+      "origin": "「怪我」＝意外之失，古人认为只能怪自己。一说与「穢（けがれ）」相关。",
+      "examples": [
+        {
+          "jp": "転んで足にけがをした。",
+          "cn": "摔倒伤了脚。"
+        },
+        {
+          "jp": "けがはないですか。",
+          "cn": "没有受伤吧？"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あなた 大丈夫(だいじょうぶ)? けがはない?",
+          "en": "Are you all right? You're not hurt, are you?",
+          "cn": "你没事吧？有没有受伤？",
+          "media": "Code Geass: Lelouch of the Rebellion",
+          "ep": "EP8",
+          "at": "15:50",
+          "url": "https://nadeshiko.co/en/sentence/AOSTVJfbw1Qj",
+          "audio": "https://cdn.nadeshiko.co/media/1575/8/9dd1e1f7bb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1575/8/9dd1e1f7bb.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "kizu",
+      "word": "きず",
+      "kanji": "傷",
+      "read": "きず",
+      "group": "noun",
+      "level": "N4",
+      "emoji": "🩹",
+      "type": "名詞",
+      "meaning": "伤口、伤痕、瑕疵",
+      "origin": "「傷」直接对应汉字：伤口，也指器物、心灵的裂痕。",
+      "examples": [
+        {
+          "jp": "心に深いきずが残った。",
+          "cn": "心里留下了深深的伤痕。"
+        },
+        {
+          "jp": "この器には小さなきずがある。",
+          "cn": "这个器皿有个小瑕疵。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "奥(おく)さんの傷(きず)は致命傷(ちめいしょう)じゃない",
+          "en": "Her wound isn't fatal!",
+          "cn": "夫人的伤不是致命伤。",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP8",
+          "at": "2:30",
+          "url": "https://nadeshiko.co/en/sentence/7nF_uTbEUQlH",
+          "audio": "https://cdn.nadeshiko.co/media/101922/8/6f38a95218.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/8/6f38a95218.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "yue",
+      "word": "ゆえ",
+      "kanji": "故",
+      "read": "ゆえ",
+      "group": "noun",
+      "level": "N1",
+      "emoji": "🔗",
+      "type": "名詞",
+      "meaning": "缘故、因此——文言“故”",
+      "origin": "「故」＝缘故、所以。书面语，常以「ゆえに」「ゆえの」出现。",
+      "examples": [
+        {
+          "jp": "ゆえあって、しばらく休業します。",
+          "cn": "因故暂停营业一段时间。"
+        },
+        {
+          "jp": "彼は若いゆえに、失敗も多い。",
+          "cn": "他因为年轻，失败也很多。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ゆえに ディルムッドよ",
+          "en": "Therefore, Diarmuid...",
+          "cn": "因此，迪卢木多啊。",
+          "media": "Fate/Zero",
+          "ep": "EP16",
+          "at": "11:31",
+          "url": "https://nadeshiko.co/en/sentence/NSp-PKYzTfuA",
+          "audio": "https://cdn.nadeshiko.co/media/10087/16/61d66bd3e9.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/10087/16/61d66bd3e9.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "otona",
+      "word": "おとな",
+      "kanji": "大人",
+      "read": "おとな",
+      "group": "jukuji",
+      "level": "N4",
+      "emoji": "🧑",
+      "type": "熟字訓",
+      "meaning": "成年人——安静稳重的人",
+      "origin": "「大人」不读たいじん，而读おとな。一说源自「音無（おとなし）」：不再像孩子那样吵闹，安静稳重。",
+      "examples": [
+        {
+          "jp": "おとなになれば分かるよ。",
+          "cn": "等你长大了就明白了。"
+        },
+        {
+          "jp": "大人は黙って見守るものだ。",
+          "cn": "大人应该默默守护。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ハン... もう... 大人(おとな)になれ 大人(おとな)に",
+          "en": "Geez, act like an adult already.",
+          "cn": "唉……差不多该像个大人了。",
+          "media": "March comes in like a lion Season 2",
+          "ep": "EP2",
+          "at": "7:37",
+          "url": "https://nadeshiko.co/en/sentence/f9vORH0nCL3Q",
+          "audio": "https://cdn.nadeshiko.co/media/98478/2/0443c057fd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98478/2/0443c057fd.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "kyou",
+      "word": "きょう",
+      "kanji": "今日",
+      "read": "きょう",
+      "group": "jukuji",
+      "level": "N5",
+      "emoji": "📅",
+      "type": "熟字訓",
+      "meaning": "今天——此之“日”",
+      "origin": "「今日」读きょう，源自「此の日（けひ）」的音变：这个日子。写成“今日”后字面秒懂。",
+      "examples": [
+        {
+          "jp": "きょうはいい天気だ。",
+          "cn": "今天天气真好。"
+        },
+        {
+          "jp": "きょう中に返事をください。",
+          "cn": "请在今天之内答复。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "《今日(きょう)だ! 今日(きょう)! 今日(きょう) 水原(すいばら)に告白(こくはく)を!》",
+          "en": "Today... Today's the day! I've gotta ask her out today!",
+          "cn": "就是今天！今天！今天要向水原告白！",
+          "media": "Rent-a-Girlfriend Season 4",
+          "ep": "EP11",
+          "at": "4:35",
+          "url": "https://nadeshiko.co/en/sentence/z5GNTVQOeg-K",
+          "audio": "https://cdn.nadeshiko.co/media/179344/11/200ac2414f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179344/11/200ac2414f.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "kaze",
+      "word": "かぜ",
+      "kanji": "風邪",
+      "read": "かぜ",
+      "group": "jukuji",
+      "level": "N5",
+      "emoji": "🤧",
+      "type": "熟字訓",
+      "meaning": "感冒——风邪入体",
+      "origin": "「風邪」借用中医概念：风邪侵入体内致病。读音仍用和语かぜ（与“风”同音）。",
+      "examples": [
+        {
+          "jp": "かぜをひいて学校を休んだ。",
+          "cn": "感冒了，请假没去学校。"
+        },
+        {
+          "jp": "風邪が流行っているから気をつけて。",
+          "cn": "感冒流行，注意身体。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "風邪(かぜ)?風邪(かぜ)じゃないです",
+          "en": "Sick? She's not sick.",
+          "cn": "感冒？不是感冒。",
+          "media": "Kanon (2006)",
+          "ep": "EP12",
+          "at": "9:22",
+          "url": "https://nadeshiko.co/en/sentence/36Ib0ATPmeTD",
+          "audio": "https://cdn.nadeshiko.co/media/1530/12/65421c1d70.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1530/12/65421c1d70.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "mechakucha",
+      "word": "めちゃくちゃ",
+      "kanji": "滅茶苦茶",
+      "read": "めちゃくちゃ",
+      "group": "ateji",
+      "level": "N3",
+      "emoji": "🌪️",
+      "type": "当て字",
+      "meaning": "乱七八糟；极其——茶都被你砸了",
+      "origin": "「滅茶苦茶」＝像把茶具全毁了一样混乱。也可作程度副词：めちゃくちゃ〜＝超级…。",
+      "examples": [
+        {
+          "jp": "部屋がめちゃくちゃだ。",
+          "cn": "房间乱七八糟。"
+        },
+        {
+          "jp": "このケーキ、めちゃくちゃうまい。",
+          "cn": "这蛋糕超级好吃。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "めちゃくちゃ いい... ツァーヴ!",
+          "en": "Tsav.",
+          "cn": "超级棒……察夫！",
+          "media": "Sentenced to Be a Hero",
+          "ep": "EP5",
+          "at": "5:32",
+          "url": "https://nadeshiko.co/en/sentence/wXLywHTvq24h",
+          "audio": "https://cdn.nadeshiko.co/media/167152/5/b3264da60c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/167152/5/b3264da60c.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "mucha",
+      "word": "むちゃ",
+      "kanji": "無茶",
+      "read": "むちゃ",
+      "group": "ateji",
+      "level": "N3",
+      "emoji": "🚫",
+      "type": "当て字",
+      "meaning": "乱来、勉强——没有茶（没余地）",
+      "origin": "「無茶」＝不按茶道礼法来，引申为胡来、勉强、不讲道理。",
+      "examples": [
+        {
+          "jp": "むちゃを言わないでくれ。",
+          "cn": "别强人所难。"
+        },
+        {
+          "jp": "一日で千ページはむちゃだ。",
+          "cn": "一天看一千页太勉强了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "《無茶(むちゃ)... かな》 《無茶(むちゃ)だね》",
+          "en": "Do you think it's reckless? It is.",
+          "cn": "「乱来……吗？」「确实乱来。」",
+          "media": "The Promised Neverland",
+          "ep": "EP11",
+          "at": "18:43",
+          "url": "https://nadeshiko.co/en/sentence/Rh8LP96dxaNg",
+          "audio": "https://cdn.nadeshiko.co/media/101759/11/d789f97b7e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101759/11/d789f97b7e.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "detarame",
+      "word": "でたらめ",
+      "kanji": "出鱈目",
+      "read": "でたらめ",
+      "group": "ateji",
+      "level": "N2",
+      "emoji": "🎲",
+      "type": "当て字",
+      "meaning": "胡说八道——掷骰子随便出一个数",
+      "origin": "「出」「鱈」「目」＝掷“目”（骰子）随便出来的——胡编乱造、荒诞无稽。",
+      "examples": [
+        {
+          "jp": "彼の話はでたらめだ。",
+          "cn": "他的话是胡说八道。"
+        },
+        {
+          "jp": "でたらめを言うな。",
+          "cn": "别瞎说。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ふんっ でたらめ抜(ぬ)かすな!",
+          "en": "Stop blabbering nonsense.",
+          "cn": "哼，别胡说八道！",
+          "media": "Ranma1/2 (2024)",
+          "ep": "EP9",
+          "at": "14:59",
+          "url": "https://nadeshiko.co/en/sentence/84KdLsrEqXK7",
+          "audio": "https://cdn.nadeshiko.co/media/178533/9/f17ebd06da.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/178533/9/f17ebd06da.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "sasuga",
+      "word": "さすが",
+      "kanji": "流石",
+      "read": "さすが",
+      "group": "ateji",
+      "level": "N3",
+      "emoji": "👏",
+      "type": "当て字",
+      "meaning": "不愧是——传说源自“漱石枕流”",
+      "origin": "「流石」源自《世说新语》“漱石枕流”的机智典故。后转表“不愧是、果然名不虚传”。",
+      "examples": [
+        {
+          "jp": "さすがプロだ、仕事が早い。",
+          "cn": "不愧是专业人士，干活真快。"
+        },
+        {
+          "jp": "さすがですね、よくご存じで。",
+          "cn": "真厉害，您竟然知道。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "さすがエルフ さすがイグノール様(さま)!",
+          "en": "We'd expect nothing less from the elves! That's Master Wignall for you!",
+          "cn": "不愧是精灵，不愧是伊格诺尔大人！",
+          "media": "Wistoria: Wand and Sword",
+          "ep": "EP6",
+          "at": "10:47",
+          "url": "https://nadeshiko.co/en/sentence/JDyyGhEK4D1s",
+          "audio": "https://cdn.nadeshiko.co/media/174576/6/3676a6bab7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/174576/6/3676a6bab7.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「さすが【流石】」的典故出自哪里？",
+          "opts": [
+            "《世说新语》「漱石枕流」",
+            "《史记》「指鹿为马」",
+            "《后汉书》「折角」",
+            "禅宗语录「挨拶」"
+          ],
+          "ans": 0,
+          "exp": "「流石」源自《世说新语》中孙子荆误说“漱石枕流”却机智自圆其说的典故，后表“不愧是”。"
+        }
+      ]
+    },
+    {
+      "id": "ainiku",
+      "word": "あいにく",
+      "kanji": "生憎",
+      "read": "あいにく",
+      "group": "kango",
+      "level": "N2",
+      "emoji": "🌧️",
+      "type": "漢語",
+      "meaning": "不凑巧、偏偏——遇上令人憎恶的遗憾",
+      "origin": "「生憎」＝偏偏遇上令人厌恶、遗憾的情况。由汉文用法转入日常，表“不巧”。",
+      "examples": [
+        {
+          "jp": "あいにく、その日は予定がある。",
+          "cn": "不凑巧，那天我有安排。"
+        },
+        {
+          "jp": "あいにくの雨で、試合は中止になった。",
+          "cn": "天公不作美，比赛取消了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あいにく ピンポイントで狙(ねら)える",
+          "en": "Unfortunately for you, I can pinpoint.",
+          "cn": "不凑巧，我能精准狙击。",
+          "media": "Fullmetal Alchemist: Brotherhood",
+          "ep": "EP53",
+          "at": "20:47",
+          "url": "https://nadeshiko.co/en/sentence/W06C9W8gmWkJ",
+          "audio": "https://cdn.nadeshiko.co/media/5114/53/dc5ebcf575.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/5114/53/dc5ebcf575.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "zehi",
+      "word": "ぜひ",
+      "kanji": "是非",
+      "read": "ぜひ",
+      "group": "kango",
+      "level": "N4",
+      "emoji": "🙇",
+      "type": "漢語",
+      "meaning": "务必、无论如何——不管对错都要",
+      "origin": "本义是“对与错”（是非）。引申为“无论是非如何→无论如何”，用于强烈请求、期盼。",
+      "examples": [
+        {
+          "jp": "ぜひ遊びに来てください。",
+          "cn": "请务必来玩。"
+        },
+        {
+          "jp": "ぜひ一度試してみてください。",
+          "cn": "请一定试一次。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あ... わあー ぜひぜひー",
+          "en": "Sure! Please do!",
+          "cn": "啊……哇——一定一定！",
+          "media": "You and I Are Polar Opposites",
+          "ep": "EP1",
+          "at": "7:53",
+          "url": "https://nadeshiko.co/en/sentence/LjofQeMJ4ZqZ",
+          "audio": "https://cdn.nadeshiko.co/media/184951/1/536040758d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/184951/1/536040758d.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "aisatsu",
+      "word": "あいさつ",
+      "kanji": "挨拶",
+      "read": "あいさつ",
+      "group": "kango",
+      "level": "N4",
+      "emoji": "🤝",
+      "type": "漢語",
+      "meaning": "寒暄、打招呼——禅宗的推挤试探",
+      "origin": "原为禅宗用语「挨一挨，拶一拶」：互相推挤、试探深浅。后指见面时的问候、应酬。",
+      "examples": [
+        {
+          "jp": "朝は元気にあいさつしよう。",
+          "cn": "早上要精神地打招呼。"
+        },
+        {
+          "jp": "あいさつもそこそこに、彼は出かけた。",
+          "cn": "寒暄了几句，他就出门了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "挨拶(あいさつ)がまだでしょ 挨拶(あいさつ)が",
+          "en": "We haven't even kicked it off yet!",
+          "cn": "还没打招呼呢，先打招呼！",
+          "media": "Girls Band Cry",
+          "ep": "EP12",
+          "at": "7:17",
+          "url": "https://nadeshiko.co/en/sentence/jSWUc0TQCtBi",
+          "audio": "https://cdn.nadeshiko.co/media/164212/12/e2540d63c1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/164212/12/e2540d63c1.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    },
+    {
+      "id": "mendou",
+      "word": "めんどう",
+      "kanji": "面倒",
+      "read": "めんどう",
+      "group": "kango",
+      "level": "N3",
+      "emoji": "🫠",
+      "type": "漢語",
+      "meaning": "麻烦、费事——倒在面前挡住去路",
+      "origin": "一说「面倒」＝倒在眼前、碍事；也指“照顾、照看”（面倒を見る）。",
+      "examples": [
+        {
+          "jp": "手続きがめんどうだ。",
+          "cn": "手续很麻烦。"
+        },
+        {
+          "jp": "弟の面倒を見なければならない。",
+          "cn": "必须照顾弟弟。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "マジ? めんどくさ。そうですね。面倒(めんどう)といえば面倒(めんどう)ですが...",
+          "en": "Serious? How annoying! Yes, it is. But as annoying as it can be,",
+          "cn": "真的？好麻烦。……说麻烦也确实麻烦。",
+          "media": "Wash It All Away",
+          "ep": "EP5",
+          "at": "4:05",
+          "url": "https://nadeshiko.co/en/sentence/n9fraUf5y2tf",
+          "audio": "https://cdn.nadeshiko.co/media/194028/5/2ae767517a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/194028/5/2ae767517a.webp"
+        }
+      ],
+      "note": "",
+      "quizzes": []
+    }
+  ]
+}
