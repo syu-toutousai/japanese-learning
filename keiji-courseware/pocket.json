@@ -1664,6 +1664,93 @@
           "exp": "作接尾语构成能力名词时固定读「りょく」；单字「力」才读「ちから」。理解力＝りかいりょく、行動力＝こうどうりょく。"
         }
       ]
+    },
+    {
+      "id": "nami",
+      "type": "suffix",
+      "word": "〜並み",
+      "read": "なみ",
+      "group": "state",
+      "level": "N2",
+      "emoji": "📏",
+      "meaning": "接名词后表示与该事物同等程度：与～相当、～的水平",
+      "examples": [
+        {
+          "jp": "人並みにおしゃれをする。",
+          "cn": "打扮得和普通人一样。",
+          "src": "moji",
+          "audio": "moji_audio/人並み_61938_e2_f003.mp3"
+        },
+        {
+          "jp": "年は若いが、もう人並みの仕事をする。",
+          "cn": "虽然年纪轻，但已经能顶一个人干活了。",
+          "src": "moji",
+          "audio": "moji_audio/人並み_61939_e3_f003.mp3"
+        },
+        {
+          "jp": "あの人たちは人並み以上の努力をしたからこそ、成功したのだ。",
+          "cn": "正因为他们付出了超乎常人的努力，才取得了成功。",
+          "src": "moji",
+          "audio": "moji_audio/人並み_61940_e4_f003.mp3"
+        },
+        {
+          "jp": "彼の運転技術はプロ並みだ。",
+          "cn": "他的驾驶技术是专业级的。"
+        },
+        {
+          "jp": "今年の夏は例年並みの暑さだそうだ。",
+          "cn": "听说今年夏天跟往年一样热。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "人並(ひとな)みに生(い)きて人並(ひとな)みに努力(どりょく)して",
+          "en": "If I live and try as hard as everyone else,",
+          "cn": "像普通人一样活着，像普通人一样努力——",
+          "media": "Mushoku Tensei: Jobless Reincarnation",
+          "ep": "EP1",
+          "at": "21:44",
+          "url": "https://nadeshiko.co/en/sentence/bKioHGGWDbiN",
+          "audio": "https://cdn.nadeshiko.co/media/108465/1/e24006d28d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/108465/1/e24006d28d.webp"
+        },
+        {
+          "jp": "軍用犬(ぐんようけん)などの特殊(とくしゅ)訓練(くんれん)にはー　1頭(いちとう)あたり 小型(こがた)ミサイル並(な)みの コストがかかります",
+          "en": "Giving a war dog proper special training costs just about as much as a small missile per dog.",
+          "cn": "给军用犬等做特殊训练，每只狗的花费相当于一枚小型导弹。",
+          "media": "SPY×FAMILY Cour 2",
+          "ep": "EP1",
+          "at": "8:47",
+          "url": "https://nadeshiko.co/en/sentence/v-bzIZjXj5JI",
+          "audio": "https://cdn.nadeshiko.co/media/142838/1/620628fb98.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/142838/1/620628fb98.webp"
+        },
+        {
+          "jp": "僕(ぼく)のネビルレーザーは 派手(はで)さも強(つよ)さもプロ並(な)み",
+          "en": "My Navel Laser is pro-level in looks and strength.",
+          "cn": "我的肚脐激光，外观和威力都是专业级的。",
+          "media": "My Hero Academia",
+          "ep": "EP9",
+          "at": "17:38",
+          "url": "https://nadeshiko.co/en/sentence/GmfEjKk4Yu3F",
+          "audio": "https://cdn.nadeshiko.co/media/21459/9/e62058b4fd.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21459/9/e62058b4fd.webp"
+        }
+      ],
+      "note": "「〜並み」主要有两支：①程度・同等（人並み・世間並み・例年並み・プロ並み・犬並み）②排列（歯並み・家並み・軒並み，意思不同）。另有「月並み」＝平凡・老套（由「每月」引申）。本卡收①。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「歯並みがいい」的「〜並み」与「人並み」的「〜並み」，意思一样吗？",
+          "opts": [
+            "不一样：歯並み＝排列，人並み＝同等程度",
+            "一样，都是同等程度",
+            "一样，都是排列"
+          ],
+          "ans": 0,
+          "exp": "「〜並み」有两支：①程度・同等（人並み・例年並み・プロ並み）②排列（歯並み・家並み・軒並み）。本卡收的是①。"
+        }
+      ]
     }
   ]
 }
