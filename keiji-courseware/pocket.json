@@ -1751,6 +1751,72 @@
           "exp": "「〜並み」有两支：①程度・同等（人並み・例年並み・プロ並み）②排列（歯並み・家並み・軒並み）。本卡收的是①。"
         }
       ]
+    },
+    {
+      "id": "atari",
+      "type": "suffix",
+      "word": "〜あたり",
+      "read": "あたり",
+      "group": "order",
+      "level": "N3",
+      "emoji": "⚖️",
+      "meaning": "每～、平均每～（表示分配・计算的基准）",
+      "examples": [
+        {
+          "jp": "1人あたり3000円で計算しよう。",
+          "cn": "按每人3000日元来算吧。"
+        },
+        {
+          "jp": "1日あたり8時間働く。",
+          "cn": "平均每天工作8小时。"
+        },
+        {
+          "jp": "この農家は1ヘクタールあたり5トンの米を収穫する。",
+          "cn": "这家农户每公顷收获5吨大米。"
+        },
+        {
+          "jp": "会費は1か月あたり2000円です。",
+          "cn": "会费是每月2000日元。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "それって 一人当(ひとりあ)たり1時間(じかん)ちょっとじゃねえか",
+          "en": "That's just over an hour per person.",
+          "cn": "那不就是每人一个多小时嘛。",
+          "media": "Run with the Wind",
+          "ep": "EP15",
+          "at": "14:48",
+          "url": "https://nadeshiko.co/en/sentence/SOTDpdUEUwxq",
+          "audio": "https://cdn.nadeshiko.co/media/101903/15/fbb68b06c4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101903/15/fbb68b06c4.webp"
+        },
+        {
+          "jp": "1人当(ひとりあ)たり1皿(さら)を 完食(かんしょく)しなければならない",
+          "en": "of having to eat one giant serving per person instead of per group.",
+          "cn": "必须每人吃完一盘。",
+          "media": "mono",
+          "ep": "EP4",
+          "at": "16:34",
+          "url": "https://nadeshiko.co/en/sentence/TDmDxcrTX-Wg",
+          "audio": "https://cdn.nadeshiko.co/media/176246/4/62a72dd1f5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/176246/4/62a72dd1f5.webp"
+        }
+      ],
+      "note": "源自「当たる」（分配、摊到）的连用形「当たり」，接数量词/单位名词后表 per＝每～。注意同音「辺り」＝附近（駅の辺り），汉字与意思都不同。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「1人あたり3000円」和「駅のあたり」中的「あたり」意思一样吗？",
+          "opts": [
+            "不一样：前者是「每/平均分配」，后者是「附近」",
+            "一样，都是附近",
+            "一样，都是每"
+          ],
+          "ans": 0,
+          "exp": "「〜あたり（当たり）」源自动词当たる的连用形，表分配基准＝每～；「辺り」表附近。读音相同，汉字不同。"
+        }
+      ]
     }
   ]
 }
