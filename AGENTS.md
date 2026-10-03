@@ -29,10 +29,11 @@
 | `hasami-courseware/` | はさまれた自動詞・を＋V自て＋V他（付帯状況） | `hasami.json` |
 | `karada-courseware/` | からだの慣用句・体の部位ポケット（慣用句＋身体動作） | `karada.json` |
 | `kakure-kanji-courseware/` | 隠れ漢字ポケット・假名背后的本源汉字（7 分类 45 词） | `kakure-kanji.json` |
+| `renyo-courseware/` | 連用形の化身・動詞が接尾語になるとき（源動詞→連用形→接尾語化，5 分类 22 词） | `renyo.json` |
 
 范式演进：`ni-courseware/` 确立了**数据外置 JSON → pykakasi 振假名 → TTS 音声 →
 Nadeshiko 原声 → 题库 → 单文件 HTML** 的完整管道；`mienai`/`kurikaeshi`/`yakaraka`/
-`hasami`/`karada`/`kakure-kanji` 等口袋型课件沿用同一管道，但比 `ni` 少一层 Tab、
+`hasami`/`karada`/`kakure-kanji`/`renyo` 等口袋型课件沿用同一管道，但比 `ni` 少一层 Tab、
 build.py 更轻（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），新口袋课件可直接抄它们。
 
 ---

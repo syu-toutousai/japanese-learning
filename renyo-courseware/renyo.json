@@ -1,0 +1,954 @@
+{
+  "meta": {
+    "title": "連用形の化身",
+    "titleCn": "连用形化身",
+    "jp": "れんようけい ／ 動詞が接尾語になるとき",
+    "tags": [
+      "N3",
+      "N2",
+      "N1",
+      "文法化",
+      "連用形",
+      "接尾語",
+      "語彙"
+    ],
+    "voiceFemale": "ja-JP-NanamiNeural",
+    "note": "往 items 里丢一条「源動詞 → 連用形 → 接尾語」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
+  },
+  "groups": [
+    {
+      "id": "basis",
+      "name": "基準・間隔",
+      "color": "#e8590c",
+      "emoji": "⚖️",
+      "note": "当たる・置く・振る——分摊与间隔的计算基准。"
+    },
+    {
+      "id": "path",
+      "name": "沿接・経由",
+      "color": "#0b7285",
+      "emoji": "🛣️",
+      "note": "沿う・伝う・越す——沿着、贴着、穿过某物。"
+    },
+    {
+      "id": "aim",
+      "name": "方向・対象",
+      "color": "#1971c2",
+      "emoji": "🎯",
+      "note": "向ける・向く・掛ける・掛かる——朝向谁、为谁而做。"
+    },
+    {
+      "id": "cont",
+      "name": "継続・完了",
+      "color": "#0ca678",
+      "emoji": "⏳",
+      "note": "続く・掛ける・放す・立てる・済む・切る——进行到哪一步。"
+    },
+    {
+      "id": "state",
+      "name": "状態・傾向",
+      "color": "#9c36b5",
+      "emoji": "🌀",
+      "note": "勝つ・塗れる・尽くす・包む・絡む・揃う——偏向与浸染。"
+    }
+  ],
+  "items": [
+    {
+      "id": "atari",
+      "word": "〜あたり",
+      "read": "あたり",
+      "verb": "当たる",
+      "verbRead": "あたる",
+      "renyo": "当たり",
+      "group": "basis",
+      "level": "N3",
+      "emoji": "⚖️",
+      "type": "接尾語",
+      "meaning": "每～、平均每～（分配基准）",
+      "chain": "「1頭に当たる」＝摊到每一头 → 中顿「当たり、」→「に」脱落，固化为「1頭あたり」。",
+      "examples": [
+        {
+          "jp": "1人あたり3000円で計算しよう。",
+          "cn": "按每人3000日元来算吧。"
+        },
+        {
+          "jp": "1日あたり8時間働く。",
+          "cn": "平均每天工作8小时。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "それって 一人当(ひとりあ)たり1時間(じかん)ちょっとじゃねえか",
+          "en": "That's just over an hour per person.",
+          "cn": "那不就是每人一个多小时嘛。",
+          "media": "Run with the Wind",
+          "ep": "EP15",
+          "at": "14:48",
+          "url": "https://nadeshiko.co/en/sentence/SOTDpdUEUwxq",
+          "audio": "https://cdn.nadeshiko.co/media/101903/15/fbb68b06c4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101903/15/fbb68b06c4.webp"
+        }
+      ],
+      "note": "同音「辺り」＝附近，汉字与意思都不同：駅のあたり（附近）／1人あたり（每）。",
+      "quizzes": []
+    },
+    {
+      "id": "oki",
+      "word": "〜おき",
+      "read": "おき",
+      "verb": "置く",
+      "verbRead": "おく",
+      "renyo": "置き",
+      "group": "basis",
+      "level": "N3",
+      "emoji": "⏳",
+      "type": "接尾語",
+      "meaning": "每隔～（时间・距离）",
+      "chain": "「1日置く」＝中间隔一天放 →「1日置きに」＝每隔一天。",
+      "examples": [
+        {
+          "jp": "この薬は1日おきに飲んでください。",
+          "cn": "这个药请每隔一天服用。"
+        },
+        {
+          "jp": "バスは1時間おきに出ている。",
+          "cn": "公交车每隔一小时发一班。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "このホテルは 1日(いちにち)おきに男女(だんじょ)を入(い)れ替(か)えるタイプ",
+          "en": "They swap the men's and women's baths daily.",
+          "cn": "这家旅馆是每隔一天交换男女浴场的类型。",
+          "media": "The Disastrous Life of Saiki K.",
+          "ep": "EP12",
+          "at": "19:17",
+          "url": "https://nadeshiko.co/en/sentence/JexYIsTREQu0",
+          "audio": "https://cdn.nadeshiko.co/media/21804/12/ead60e608b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21804/12/ead60e608b.webp"
+        }
+      ],
+      "note": "注意与「〜置き（放置）」同形：読みは同じでも「何日おき」は间隔，「置き忘れ」是放置。",
+      "quizzes": []
+    },
+    {
+      "id": "buri",
+      "word": "〜ぶり",
+      "read": "ぶり",
+      "verb": "振る",
+      "verbRead": "ふる",
+      "renyo": "振り",
+      "group": "basis",
+      "level": "N3",
+      "emoji": "🕰️",
+      "type": "接尾語",
+      "meaning": "时隔～（再次做某事）；～的样子",
+      "chain": "「振り」＝样子、状态 →「3年振り」＝呈现时隔3年的状态。「久しぶり」也是这个振り。",
+      "examples": [
+        {
+          "jp": "3年ぶりに故郷へ帰った。",
+          "cn": "时隔3年回到了故乡。"
+        },
+        {
+          "jp": "何年ぶりだろう、こんなに笑ったのは。",
+          "cn": "不知多少年没这样笑过了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "アロママッサージ 何年(なんねん)ぶりだろう",
+          "en": "I don't know how many years it's been.",
+          "cn": "芳香按摩，不知道时隔多少年了。",
+          "media": "The aquatope on white sand",
+          "ep": "EP17",
+          "at": "11:57",
+          "url": "https://nadeshiko.co/en/sentence/iXgJDImZBcAh",
+          "audio": "https://cdn.nadeshiko.co/media/128545/17/a1b575fed1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128545/17/a1b575fed1.webp"
+        }
+      ],
+      "note": "「久しぶり」＝久し＋振り；「話しぶり」「食べっぷり」的ぶり则表“样子、做派”。",
+      "quizzes": []
+    },
+    {
+      "id": "zoi",
+      "word": "〜沿い",
+      "read": "ぞい",
+      "verb": "沿う",
+      "verbRead": "そう",
+      "renyo": "沿い",
+      "group": "path",
+      "level": "N3",
+      "emoji": "🛣️",
+      "type": "接尾語",
+      "meaning": "沿着～（道路・河流等线状物）",
+      "chain": "「川に沿う」→ 中顿「川に沿い、歩く」→「に」脱落，「川沿いを歩く」。",
+      "examples": [
+        {
+          "jp": "川沿いを散歩する。",
+          "cn": "沿着河边散步。"
+        },
+        {
+          "jp": "線路沿いに古い家が並んでいる。",
+          "cn": "铁路沿线排列着老房子。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "いや すまん 水辺沿(みずべそ)いに進(すす)もう",
+          "en": "Nothing, sorry. Let's proceed along the waterfront.",
+          "cn": "不，抱歉。我们沿着水边前进吧。",
+          "media": "Sword Art Online Alternative: Gun Gale Online",
+          "ep": "EP4",
+          "at": "4:36",
+          "url": "https://nadeshiko.co/en/sentence/GLP3bf_aLvRH",
+          "audio": "https://cdn.nadeshiko.co/media/100183/4/956e0ebfa5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100183/4/956e0ebfa5.webp"
+        }
+      ],
+      "note": "常发生连浊：川ぞい・水辺ぞい；单独作名词时读「そい」。",
+      "quizzes": []
+    },
+    {
+      "id": "zutai",
+      "word": "〜伝い",
+      "read": "づたい",
+      "verb": "伝う",
+      "verbRead": "つたう",
+      "renyo": "伝い",
+      "group": "path",
+      "level": "N2",
+      "emoji": "🧗",
+      "type": "接尾語",
+      "meaning": "沿着～（贴着表面移动）",
+      "chain": "「壁を伝う」＝贴着墙移动 → 中顿「伝い、進む」→「壁伝いに進む」。",
+      "examples": [
+        {
+          "jp": "壁伝いに歩く。",
+          "cn": "贴着墙走。"
+        },
+        {
+          "jp": "屋根伝いに逃げていった。",
+          "cn": "沿着屋顶逃走了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "よし 壁伝(かべづた)いに歩(ある)こ!",
+          "en": "I know. We'll walk along the walls.",
+          "cn": "好，我们贴着墙走过去！",
+          "media": "Chainsmoker Cat",
+          "ep": "EP11",
+          "at": "10:40",
+          "url": "https://nadeshiko.co/en/sentence/n0gYyjD81xRd",
+          "audio": "https://cdn.nadeshiko.co/media/207141/11/bc7acb4544.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/207141/11/bc7acb4544.webp"
+        }
+      ],
+      "note": "几乎总是连浊为「づたい」；后接「に」作状语，如「尾根伝いに」。",
+      "quizzes": []
+    },
+    {
+      "id": "goshi",
+      "word": "〜越し",
+      "read": "ごし",
+      "verb": "越す",
+      "verbRead": "こす",
+      "renyo": "越し",
+      "group": "path",
+      "level": "N2",
+      "emoji": "🪟",
+      "type": "接尾語",
+      "meaning": "隔着～；历经～（时间跨度）",
+      "chain": "「窓を越す」＝越过窗户 →「窓越しに見る」；时间上「3年越しの計画」。",
+      "examples": [
+        {
+          "jp": "窓越しに海が見える。",
+          "cn": "隔着窗户能看见大海。"
+        },
+        {
+          "jp": "3年越しの計画がついに実現した。",
+          "cn": "历经3年的计划终于实现了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "だが 窓越(まどご)しでは どうしても精度(せいど)が...",
+          "en": "But I can't count on accuracy if I'm throwing through the window...",
+          "cn": "但是隔着窗户的话，精度无论如何都……",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP1",
+          "at": "7:40",
+          "url": "https://nadeshiko.co/en/sentence/2hyNKmQ7uROv",
+          "audio": "https://cdn.nadeshiko.co/media/177937/1/da4ac9b572.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/1/da4ac9b572.webp"
+        }
+      ],
+      "note": "连浊为「ごし」：窓越し・傘越し・十年越し。",
+      "quizzes": []
+    },
+    {
+      "id": "muke",
+      "word": "〜向け",
+      "read": "むけ",
+      "verb": "向ける",
+      "verbRead": "むける",
+      "renyo": "向け",
+      "group": "aim",
+      "level": "N3",
+      "emoji": "🎯",
+      "type": "接尾語",
+      "meaning": "面向～、以～为对象",
+      "chain": "「子供に向ける」→ 中顿「向け、作る」→「子供向けに作る」＝朝着孩子做。",
+      "examples": [
+        {
+          "jp": "子供向けの番組を作る。",
+          "cn": "制作面向儿童的节目。"
+        },
+        {
+          "jp": "初心者向けの説明を書く。",
+          "cn": "写面向初学者的说明。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "子供向(こどもむ)けのフィギュアですか?",
+          "en": "Are those action figures, like for kids?",
+          "cn": "是面向小孩的手办吗？",
+          "media": "My Hero Academia: Vigilantes",
+          "ep": "EP1",
+          "at": "21:14",
+          "url": "https://nadeshiko.co/en/sentence/l10hlHR0kUyz",
+          "audio": "https://cdn.nadeshiko.co/media/185736/1/8e3ebcd4ce.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185736/1/8e3ebcd4ce.webp"
+        }
+      ],
+      "note": "对比「〜向き」：向け＝为对方而做（意图），向き＝适合对方（属性）。",
+      "quizzes": []
+    },
+    {
+      "id": "muki",
+      "word": "〜向き",
+      "read": "むき",
+      "verb": "向く",
+      "verbRead": "むく",
+      "renyo": "向き",
+      "group": "aim",
+      "level": "N3",
+      "emoji": "🧭",
+      "type": "接尾語",
+      "meaning": "适合～、朝～方向",
+      "chain": "「上を向く」→ 名词化「向き」＝朝向；「子供向き」＝朝孩子那一侧＝适合孩子。",
+      "examples": [
+        {
+          "jp": "この本は大人向きだ。",
+          "cn": "这本书适合大人读。"
+        },
+        {
+          "jp": "上向きの矢印を描く。",
+          "cn": "画一个向上的箭头。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ほら ほら 前向(まえむ)きに 前向(まえむ)きに",
+          "en": "Come on, now. Think positive! Think positive!",
+          "cn": "来，来，积极一点、向前看！",
+          "media": "Nichijou - My Ordinary Life",
+          "ep": "EP22",
+          "at": "12:24",
+          "url": "https://nadeshiko.co/en/sentence/3Ja9-4KsYrHA",
+          "audio": "https://cdn.nadeshiko.co/media/10165/22/82a49e4bff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/10165/22/82a49e4bff.webp"
+        }
+      ],
+      "note": "前向き＝面朝前方→积极；横向き・上向き・下向き。",
+      "quizzes": []
+    },
+    {
+      "id": "gake",
+      "word": "〜がけ",
+      "read": "がけ",
+      "verb": "掛ける",
+      "verbRead": "かける",
+      "renyo": "掛け",
+      "group": "aim",
+      "level": "N2",
+      "emoji": "🚶",
+      "type": "接尾語",
+      "meaning": "～的途中、顺便（做另一件事）",
+      "chain": "「帰りに掛ける」＝搭在归途上 →「帰り掛け」＝回家路上顺便。",
+      "examples": [
+        {
+          "jp": "帰りがけに本屋に寄った。",
+          "cn": "回家路上顺便去了书店。"
+        },
+        {
+          "jp": "出がけに傘を持って出た。",
+          "cn": "出门时顺手带了伞。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "昨日(きのう) 帰(かえ)りがけに勇君(ゆうくん)から聞(き)きました",
+          "en": "I heard from Yu-kun yesterday.",
+          "cn": "昨天回家路上从勇君那里听说的。",
+          "media": "Clannad: After Story",
+          "ep": "EP7",
+          "at": "18:30",
+          "url": "https://nadeshiko.co/en/sentence/Vls4xBxYpn_G",
+          "audio": "https://cdn.nadeshiko.co/media/4181/7/0bb4f6a5c6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4181/7/0bb4f6a5c6.webp"
+        }
+      ],
+      "note": "帰りがけ・出がけ・上がりがけ……都是“做某事的途中顺便”；同音的「崖（がけ）」无关。",
+      "quizzes": []
+    },
+    {
+      "id": "gakari",
+      "word": "〜がかり",
+      "read": "がかり",
+      "verb": "掛かる",
+      "verbRead": "かかる",
+      "renyo": "掛かり",
+      "group": "aim",
+      "level": "N2",
+      "emoji": "⏱️",
+      "type": "接尾語",
+      "meaning": "花费～（时间・人手）",
+      "chain": "「3日掛かる」→「3日掛かり」＝花费3天；「人手が掛かる」→「人手がかり」。",
+      "examples": [
+        {
+          "jp": "一日がかりの作業だった。",
+          "cn": "是花了整整一天的工作。"
+        },
+        {
+          "jp": "その結論は3か月がかりの調査で分かった。",
+          "cn": "那个结论是耗时3个月的调查才弄清的。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "今(いま)だと アンシェネから 3日(みっか)がかりかしら?",
+          "en": "Doesn't it take around three days from Enchaine now?",
+          "cn": "现在的话，从安谢纳出发要花3天吧？",
+          "media": "Violet Evergarden",
+          "ep": "EP1",
+          "at": "9:16",
+          "url": "https://nadeshiko.co/en/sentence/f1IggHBsqvif",
+          "audio": "https://cdn.nadeshiko.co/media/21827/1/27c79b1c15.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21827/1/27c79b1c15.webp"
+        }
+      ],
+      "note": "元の動詞は「掛かる」；连浊成「がかり」：日がかり・人手がかり・時間がかり。",
+      "quizzes": []
+    },
+    {
+      "id": "tsuzuki",
+      "word": "〜続き",
+      "read": "つづき",
+      "verb": "続く",
+      "verbRead": "つづく",
+      "renyo": "続き",
+      "group": "cont",
+      "level": "N3",
+      "emoji": "🌧️",
+      "type": "接尾語",
+      "meaning": "连续～、一直～（多含过量・消极）",
+      "chain": "「雨が続く」→ 名词化「続き」→「雨続き」＝雨一直下。",
+      "examples": [
+        {
+          "jp": "このところ雨続きだ。",
+          "cn": "最近连日下雨。"
+        },
+        {
+          "jp": "残業続きで疲れた。",
+          "cn": "连续加班，累坏了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "もう 赤字(あかじ)続(つづ)きでねえ",
+          "en": "We've been in the red for a while...",
+          "cn": "已经连续亏损好一阵子了。",
+          "media": "Keep Your Hands Off Eizouken!",
+          "ep": "EP9",
+          "at": "14:56",
+          "url": "https://nadeshiko.co/en/sentence/iR7Sj9LjaP6l",
+          "audio": "https://cdn.nadeshiko.co/media/109298/9/300044505e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/109298/9/300044505e.webp"
+        }
+      ],
+      "note": "与「続き（后续）」不同：本条的〜続き表反复持续，常带“没完没了”的语感。",
+      "quizzes": []
+    },
+    {
+      "id": "kake",
+      "word": "〜かけ",
+      "read": "かけ",
+      "verb": "掛ける",
+      "verbRead": "かける",
+      "renyo": "掛け",
+      "group": "cont",
+      "level": "N3",
+      "emoji": "🍞",
+      "type": "接尾語",
+      "meaning": "做到一半的～（动作未完成）",
+      "chain": "「食べるのを掛ける」→「食べ掛け」＝吃到一半搁下。",
+      "examples": [
+        {
+          "jp": "食べかけのみかんが机に置いてある。",
+          "cn": "吃了一半的橘子放在桌上。"
+        },
+        {
+          "jp": "読みかけの本を閉じた。",
+          "cn": "合上了读到一半的书。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "じゃあ 食(た)べかけのパン あげる",
+          "en": "Also, hey. You wanna finish this Danish?",
+          "cn": "那，这个吃了一半的面包给你。",
+          "media": "Medalist Season 2",
+          "ep": "EP1",
+          "at": "21:04",
+          "url": "https://nadeshiko.co/en/sentence/YW_nVQ1zv1Jq",
+          "audio": "https://cdn.nadeshiko.co/media/189275/1/bbef5bd115.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/189275/1/bbef5bd115.webp"
+        }
+      ],
+      "note": "「〜かけ」＝未完成；接続助動詞「〜かける」也是同一来源：言いかけてやめる。",
+      "quizzes": []
+    },
+    {
+      "id": "ppanashi",
+      "word": "〜っぱなし",
+      "read": "っぱなし",
+      "verb": "放す",
+      "verbRead": "はなす",
+      "renyo": "放し",
+      "group": "cont",
+      "level": "N2",
+      "emoji": "🚪",
+      "type": "接尾語",
+      "meaning": "一直保持～的状态（放着不管，多含责难）",
+      "chain": "「開け放す」→「放し」→「開けっぱなし」＝打开后放着不管。",
+      "examples": [
+        {
+          "jp": "テレビをつけっぱなしにしないで。",
+          "cn": "别开着电视不管。"
+        },
+        {
+          "jp": "窓を開けっぱなしで出かけた。",
+          "cn": "开着窗户就出门了。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "電気(でんき) つけっぱなし 鍵(かぎ)も開(あ)けっぱなしで?",
+          "en": "Leaving the lights on, and the door unlocked?",
+          "cn": "灯一直开着，门也开着不管？",
+          "media": "Rent-a-Girlfriend Season 2",
+          "ep": "EP3",
+          "at": "10:41",
+          "url": "https://nadeshiko.co/en/sentence/do_rk4I_Tk_f",
+          "audio": "https://cdn.nadeshiko.co/media/124410/3/6bfe114816.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/124410/3/6bfe114816.webp"
+        }
+      ],
+      "note": "由「放し（はなす→放す）」促音化而来；不限于责难：「立ちっぱなし」也可中性叙述。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「窓を開けっぱなしで出かけた」的「っぱなし」是什么感觉？",
+          "opts": [
+            "开着不管（动作结果一直保留）",
+            "刚刚打开",
+            "打不开",
+            "全部打开"
+          ],
+          "ans": 0,
+          "exp": "〜っぱなし＝动作完成后结果状态一直放着不管，常含责难。"
+        }
+      ]
+    },
+    {
+      "id": "tate",
+      "word": "〜たて",
+      "read": "たて",
+      "verb": "立てる",
+      "verbRead": "たてる",
+      "renyo": "立て",
+      "group": "cont",
+      "level": "N3",
+      "emoji": "🍳",
+      "type": "接尾語",
+      "meaning": "刚做好的～（新鲜出炉）",
+      "chain": "「立てる」＝立起时间点 →「焼き立て」＝刚烤好；「出来立て」「取れたて」同类。",
+      "examples": [
+        {
+          "jp": "焼きたてのパンを食べる。",
+          "cn": "吃刚烤好的面包。"
+        },
+        {
+          "jp": "できたての料理はおいしい。",
+          "cn": "刚做好的菜很好吃。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "こちら焼(や)きたてで おいしいですよ",
+          "en": "These are all freshly baked and they are all tasty.",
+          "cn": "这些是刚烤好的，很好吃哦。",
+          "media": "Hajime no Ippo: The Fighting!",
+          "ep": "EP16",
+          "at": "16:59",
+          "url": "https://nadeshiko.co/en/sentence/ptUnp6viC1xQ",
+          "audio": "https://cdn.nadeshiko.co/media/263/16/ce1b202845.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/263/16/ce1b202845.webp"
+        }
+      ],
+      "note": "接动词连用形：焼きたて・作りたて・摘みたて；不要与「〜立て（ふりがな：たて）＝强调」混淆。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「焼きたてのパン」是什么意思？",
+          "opts": [
+            "刚烤好的面包",
+            "烤过头的面包",
+            "烤坏了的面包",
+            "烤了一半的面包"
+          ],
+          "ans": 0,
+          "exp": "〜たて＝动作刚刚完成，强调新鲜：焼きたて・できたて・取れたて。"
+        }
+      ]
+    },
+    {
+      "id": "zumi",
+      "word": "〜ずみ",
+      "read": "ずみ",
+      "verb": "済む",
+      "verbRead": "すむ",
+      "renyo": "済み",
+      "group": "cont",
+      "level": "N3",
+      "emoji": "✅",
+      "type": "接尾語",
+      "meaning": "已～（手续・事项完成）",
+      "chain": "「予約が済む」→「予約済み」＝已经订好了的状态。",
+      "examples": [
+        {
+          "jp": "予約済みの席に座る。",
+          "cn": "坐到已预订的座位上。"
+        },
+        {
+          "jp": "使用済みの電池は回収箱へ。",
+          "cn": "用过的电池请放进回收箱。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "チケットは すでに予約済(よやくず)みだ 変更(へんこう)はできない",
+          "en": "I already reserved the tickets, so I can't change the movie.",
+          "cn": "票已经预约好了，不能更改。",
+          "media": "WITCH WATCH",
+          "ep": "EP24",
+          "at": "15:44",
+          "url": "https://nadeshiko.co/en/sentence/bdFmFQ4QGll1",
+          "audio": "https://cdn.nadeshiko.co/media/180367/24/193c0d6371.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/180367/24/193c0d6371.webp"
+        }
+      ],
+      "note": "连浊：済み→ずみ（予約済み・使用済み・点検済み）。",
+      "quizzes": []
+    },
+    {
+      "id": "kiri",
+      "word": "〜きり",
+      "read": "きり",
+      "verb": "切る",
+      "verbRead": "きる",
+      "renyo": "切り",
+      "group": "cont",
+      "level": "N2",
+      "emoji": "👥",
+      "type": "接尾語",
+      "meaning": "只有～；从～之后（一直）",
+      "chain": "「切る」→「切り」＝切分点：二人きり＝切出来只有两人；出かけたきり＝从出门那点起再无下文。",
+      "examples": [
+        {
+          "jp": "二人きりで話したい。",
+          "cn": "想两个人单独谈谈。"
+        },
+        {
+          "jp": "彼は出かけたきり帰ってこない。",
+          "cn": "他一出门就再没回来。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ん?まあ 二人(ふたり)きりと言(い)えば二人(ふたり)きりだな",
+          "en": "Well, I guess it does mean that.",
+          "cn": "嗯？嘛，要说只有两个人的话，确实只有我们俩。",
+          "media": "Koyomimonogatari",
+          "ep": "EP5",
+          "at": "3:35",
+          "url": "https://nadeshiko.co/en/sentence/tmnK0DbCvoqr",
+          "audio": "https://cdn.nadeshiko.co/media/21520/5/e8af17e1ff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21520/5/e8af17e1ff.webp"
+        }
+      ],
+      "note": "两个意思都来自「切る」：①限定（二人きり）②时间起点（〜たきり〜ない）。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「彼は出かけたきり帰ってこない」的「きり」是哪个意思？",
+          "opts": [
+            "从…之后（一直）",
+            "只有",
+            "切开",
+            "结束"
+          ],
+          "ans": 0,
+          "exp": "〜たきり〜ない＝从某动作发生后一直没…；「二人きり」则是限定=只有。"
+        }
+      ]
+    },
+    {
+      "id": "gachi",
+      "word": "〜がち",
+      "read": "がち",
+      "verb": "勝つ",
+      "verbRead": "かつ",
+      "renyo": "勝ち",
+      "group": "state",
+      "level": "N3",
+      "emoji": "📉",
+      "type": "接尾語",
+      "meaning": "容易～、往往～（倾向，多消极）",
+      "chain": "「勝ち」＝倾向占上风的一方 →「遅れがち」＝迟到容易占上风。",
+      "examples": [
+        {
+          "jp": "冬は運動不足になりがちだ。",
+          "cn": "冬天容易缺乏运动。"
+        },
+        {
+          "jp": "彼は遅刻しがちだ。",
+          "cn": "他动辄迟到。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ありがちな話(はなし)でしょ?",
+          "en": "How cliché is that, right?",
+          "cn": "是常有的事吧？",
+          "media": "Your lie in April",
+          "ep": "EP3",
+          "at": "6:35",
+          "url": "https://nadeshiko.co/en/sentence/rNyny0OdZsoJ",
+          "audio": "https://cdn.nadeshiko.co/media/20665/3/c5e1ab3f4d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20665/3/c5e1ab3f4d.webp"
+        }
+      ],
+      "note": "元の動詞は「勝つ」：倾向于…的一方获胜→容易…。ありがち・なりがち・遅れがち。",
+      "quizzes": []
+    },
+    {
+      "id": "mamire",
+      "word": "〜まみれ",
+      "read": "まみれ",
+      "verb": "塗れる",
+      "verbRead": "まみれる",
+      "renyo": "塗れ",
+      "group": "state",
+      "level": "N1",
+      "emoji": "🩸",
+      "type": "接尾語",
+      "meaning": "沾满～（液体・粉末等）",
+      "chain": "「血に塗れる」＝浑身沾血 →「血まみれ」；涂れ（まみれ）本是下二段动词。",
+      "examples": [
+        {
+          "jp": "汗まみれになって働いた。",
+          "cn": "干得浑身是汗。"
+        },
+        {
+          "jp": "泥まみれの靴を洗う。",
+          "cn": "清洗沾满泥的鞋子。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "よだれまみれ...",
+          "en": "There's slobber all over this.",
+          "cn": "满是口水……",
+          "media": "You are Ms. Servant",
+          "ep": "EP7",
+          "at": "15:29",
+          "url": "https://nadeshiko.co/en/sentence/GXED26HNX4Cr",
+          "audio": "https://cdn.nadeshiko.co/media/172190/7/623698e93a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/172190/7/623698e93a.webp"
+        }
+      ],
+      "note": "限定于“沾满某种物质”：血まみれ・泥まみれ・汗まみれ，不用于抽象事物。",
+      "quizzes": []
+    },
+    {
+      "id": "zukume",
+      "word": "〜ずくめ",
+      "read": "ずくめ",
+      "verb": "尽くす",
+      "verbRead": "つくす",
+      "renyo": "尽くめ",
+      "group": "state",
+      "level": "N1",
+      "emoji": "🖤",
+      "type": "接尾語",
+      "meaning": "清一色～、全是～",
+      "chain": "「尽くす」→「尽くめ」＝全部都是同一种东西，没有例外。",
+      "examples": [
+        {
+          "jp": "今日はいいことずくめだ。",
+          "cn": "今天净是好事。"
+        },
+        {
+          "jp": "黒ずくめの服を着ている。",
+          "cn": "穿着清一色的黑衣服。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "いいことずくめじゃないか",
+          "en": "Good news all around, don't you think?",
+          "cn": "不全是好事嘛！",
+          "media": "DARLING in the FRANXX",
+          "ep": "EP7",
+          "at": "1:27",
+          "url": "https://nadeshiko.co/en/sentence/k7bTTyvPFY_j",
+          "audio": "https://cdn.nadeshiko.co/media/99423/7/0fb2ecb488.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99423/7/0fb2ecb488.webp"
+        }
+      ],
+      "note": "常用搭配：いいことずくめ・黒ずくめ・いいことずくめ。语感比「〜だらけ」正面。",
+      "quizzes": []
+    },
+    {
+      "id": "gurumi",
+      "word": "〜ぐるみ",
+      "read": "ぐるみ",
+      "verb": "包む",
+      "verbRead": "くるむ",
+      "renyo": "包み",
+      "group": "state",
+      "level": "N2",
+      "emoji": "👨‍👩‍👧",
+      "type": "接尾語",
+      "meaning": "举～、整个～（全体一起）",
+      "chain": "「くるむ」＝包裹 →「家族ぐるみ」＝把整个家庭包进来一起。",
+      "examples": [
+        {
+          "jp": "家族ぐるみの付き合いをしている。",
+          "cn": "两家人整体都在来往。"
+        },
+        {
+          "jp": "町ぐるみで祭りを開く。",
+          "cn": "全镇一起办祭典。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "アーニャちゃん ついに家族(かぞく)ぐるみの付(つ)き合(あ)いを...",
+          "en": "Anya, your relationship finally progressed to the point your families are getting along!",
+          "cn": "阿尼亚，终于发展到两家人整体来往了……",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP6",
+          "at": "3:01",
+          "url": "https://nadeshiko.co/en/sentence/tHD6gbntv5NJ",
+          "audio": "https://cdn.nadeshiko.co/media/177937/6/bf5ac5ca67.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/6/bf5ac5ca67.webp"
+        }
+      ],
+      "note": "接组织・集体名词：家族ぐるみ・町ぐるみ・会社ぐるみ。",
+      "quizzes": []
+    },
+    {
+      "id": "garami",
+      "word": "〜がらみ",
+      "read": "がらみ",
+      "verb": "絡む",
+      "verbRead": "からむ",
+      "renyo": "絡み",
+      "group": "state",
+      "level": "N2",
+      "emoji": "🔗",
+      "type": "接尾語",
+      "meaning": "与～有关、涉及～（多含纠纷）",
+      "chain": "「金銭が絡む」＝钱的问题缠上来 →「金銭がらみ」＝涉及钱的。",
+      "examples": [
+        {
+          "jp": "金銭がらみのトラブルに巻き込まれた。",
+          "cn": "被卷入了涉及金钱的纠纷。"
+        },
+        {
+          "jp": "この話は政治がらみだ。",
+          "cn": "这件事涉及政治。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "あっ 金銭(きんせん)がらみの いざこざ",
+          "en": "Oh, and trouble over money matters.",
+          "cn": "啊，是涉及金钱的纠纷。",
+          "media": "Delicious in Dungeon",
+          "ep": "EP5",
+          "at": "2:28",
+          "url": "https://nadeshiko.co/en/sentence/rD9o08gQQjBE",
+          "audio": "https://cdn.nadeshiko.co/media/153518/5/a1bb56b0af.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/5/a1bb56b0af.webp"
+        }
+      ],
+      "note": "常带负面语感：金銭がらみ・スキャンダルがらみ・権利がらみ。",
+      "quizzes": []
+    },
+    {
+      "id": "zoroi",
+      "word": "〜ぞろい",
+      "read": "ぞろい",
+      "verb": "揃う",
+      "verbRead": "そろう",
+      "renyo": "揃い",
+      "group": "state",
+      "level": "N2",
+      "emoji": "⭐",
+      "type": "接尾語",
+      "meaning": "清一色～、全是～（成员整齐）",
+      "chain": "「揃う」＝整齐齐备 →「大物揃い」＝大人物一应俱全。",
+      "examples": [
+        {
+          "jp": "大物ぞろいの試合だ。",
+          "cn": "是一场大牌云集的比赛。"
+        },
+        {
+          "jp": "新入社員ぞろいのチームだ。",
+          "cn": "是一支全是新员工的队伍。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "しかも 大物(おおもの)ぞろい!",
+          "en": "And they're all bigwigs!",
+          "cn": "而且全是大人物！",
+          "media": "March comes in like a lion Season 2",
+          "ep": "EP11",
+          "at": "21:55",
+          "url": "https://nadeshiko.co/en/sentence/BCtnkoyT17b2",
+          "audio": "https://cdn.nadeshiko.co/media/98478/11/bb22c6dd47.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98478/11/bb22c6dd47.webp"
+        }
+      ],
+      "note": "与人有关：美人ぞろい・実力者ぞろい・新顔ぞろい；「〜ずくめ」则不限人。",
+      "quizzes": []
+    }
+  ]
+}
