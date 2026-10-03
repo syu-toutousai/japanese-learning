@@ -32,6 +32,14 @@ p{font-size:14px}
 table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#f7f8fc;font-weight:700}
+.axes{background:#f7f8fc;border-radius:12px;padding:12px 14px;font-size:13.5px;margin:10px 0}
+.axes div{margin:4px 0}
+table.matrix td .mut{display:block;font-size:11.5px;color:var(--sub);font-weight:400;line-height:1.5}
+table.matrix td.hot{background:#fff8f0}
+.vector-note{background:#eef1ff;border-left:5px solid var(--acc);border-radius:12px;
+padding:12px 14px;font-size:13.5px;margin:12px 0}
+ul.punch{margin:8px 0 0 20px;font-size:13.5px}
+ul.punch li{margin:6px 0}
 .badge{display:inline-block;border-radius:99px;padding:1px 9px;font-size:11.5px;font-weight:700;
 margin-right:6px;vertical-align:1px}
 .b-true{background:#e9f7ef;color:#188a52}
@@ -100,6 +108,33 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px}
 </div>
 <p style="margin-top:10px">对母语者：第 1 层＝直觉，第 2 层＝知识；<br>
 对中文母语者：<b>用第 2 层的汉字去逆向捕获第 1 层的语感</b>——这就是「降维解构」。</p>
+</div>
+
+<div class="card">
+<h2><span class="em">🧮</span>ベクトルモデル——二つの軸で見る</h2>
+<p>「隠れ漢字」は一つの現象ではなく、<b>二つの独立した軸</b>の座標で決まる：</p>
+<div class="axes">
+<div><b>縦軸＝文法化度</b>：実語 → 連用形名詞 → 接尾辞 → 接語・助詞</div>
+<div><b>横軸＝表記</b>：漢字表記（顕）⇄ かな表記（隠れ）</div>
+</div>
+<table class="matrix">
+<tr><th></th><th>漢字表記（顕）</th><th>かな表記（隠れ）</th></tr>
+<tr><td><b>実語</b></td>
+<td>水・見事・約束<span class="mut">普通の語彙</span></td>
+<td>きれい・できる・とにかく<span class="mut">表記習慣で隠れただけ。文法化とは無関係</span></td></tr>
+<tr><td><b>機能語・接尾辞</b></td>
+<td>〜向け・〜越し・〜済み<span class="mut">文法化済みでも漢字が残る＝軸は独立</span></td>
+<td class="hot">〜っぱなし・〜がち・〜づたい・すいません<span class="mut">文法化 → かな化 → 隠れ、の矢印が可視化</span></td></tr>
+</table>
+<div class="vector-note">↘ <b>右下への矢印</b>＝「文法化 → かな化 → 漢字の隠れ」。隠れ漢字の「進行形」はこの一角。
+一方、逆向きの矢印（かな → 漢字）＝<b>当て字</b>も同時に走っている（出鱈目・素敵・滅茶苦茶）——
+これは直交する表記現象で、文法化とは無関係。</div>
+<ul class="punch">
+<li>文法化しても漢字が残る：<b>〜向け・〜越し・〜済み</b> → 二軸は独立</li>
+<li>漢字が隠れても文法化していない：<b>きれい・できる</b> → 隠れ≠文法化</li>
+<li>変化は口語で起きる。<b>漢字は化石証拠</b>——隠れは結果であり、起点ではない</li>
+<li>文法化は終点のある旅ではない：多くの接尾辞は途中で安定（層化 layering）し、<b>「完全な文法化」は必然ではない</b></li>
+</ul>
 </div>
 
 <div class="card">
