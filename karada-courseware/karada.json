@@ -2486,6 +2486,1582 @@
           "thumb": "https://cdn.nadeshiko.co/media/263/47/e55ddf7b91.webp" }
       ],
       "note": "与「仰向けになる」（仰卧）相对；护理、按摩、休息场景高频。"
+    },
+    {
+      "id": "otetsuage",
+      "word": "お手上げ",
+      "read": "おてあげ",
+      "part": "手",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🙌",
+      "type": "慣用句",
+      "literal": "把手举起来（投降的姿势）",
+      "meaning": "束手无策、毫无办法",
+      "pattern": "〜にはお手上げだ",
+      "examples": [
+        {
+          "jp": "ここまで値上げが続くと、もうお手上げだ。",
+          "cn": "涨价持续到这个地步，已经没辙了。"
+        },
+        {
+          "jp": "駅前に巨大スーパーができたらお手上げだ。",
+          "cn": "车站前要是开一家巨型超市，那就毫无办法了。",
+          "src": "jlpt"
+        }
+      ],
+      "note": "「手を上げる」＝举手投降；お手上げ＝举起手来→彻底没辙。",
+      "nadeshiko": [
+        {
+          "jp": "はぁ... お手上(てあ)げだな。",
+          "en": "I dunno.",
+          "cn": "唉……没辙了。",
+          "media": "Can a Boy-Girl Friendship Survive?",
+          "ep": "EP2",
+          "at": "6:54",
+          "url": "https://nadeshiko.co/en/sentence/axkfHL0_5JWZ",
+          "audio": "https://cdn.nadeshiko.co/media/153554/2/3e95eb4939.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153554/2/3e95eb4939.webp"
+        },
+        {
+          "jp": "参(まい)りました お手上(てあ)げです",
+          "en": "That's enough. We give up.",
+          "cn": "不行了，举手投降。",
+          "media": "Yu Yu Hakusho: Ghostfiles",
+          "ep": "EP103",
+          "at": "4:12",
+          "url": "https://nadeshiko.co/en/sentence/xbQF-vM7zMxk",
+          "audio": "https://cdn.nadeshiko.co/media/392/103/a1aaea450c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/392/103/a1aaea450c.webp"
+        }
+      ]
+    },
+    {
+      "id": "tewake",
+      "word": "手分け",
+      "read": "てわけ",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "🤝",
+      "type": "慣用句",
+      "literal": "把手分开来干活",
+      "meaning": "分头做、分工",
+      "pattern": "手分けして〜する",
+      "examples": [
+        {
+          "jp": "これは手分けしたほうがいい。",
+          "cn": "这个还是分头做比较好。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "みんなで手分けして資料を集めた。",
+          "cn": "大家分头收集了资料。"
+        }
+      ],
+      "note": "固定说法是「手分けして＋动词」＝分头去…；与「分担する」近义。",
+      "nadeshiko": [
+        {
+          "jp": "手分(てわ)けできるでしょう",
+          "en": "We can divide the workload this way.",
+          "cn": "可以分头行动吧。",
+          "media": "Kanon (2006)",
+          "ep": "EP21",
+          "at": "7:18",
+          "url": "https://nadeshiko.co/en/sentence/ExKv_9gqBGO6",
+          "audio": "https://cdn.nadeshiko.co/media/1530/21/da935d202f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1530/21/da935d202f.webp"
+        },
+        {
+          "jp": "て... 手分(てわ)けして探(さが)そうか。",
+          "en": "L-Let's split up and look for her.",
+          "cn": "我们分头找找吧。",
+          "media": "The Dangers in My Heart Season 2",
+          "ep": "EP7",
+          "at": "17:52",
+          "url": "https://nadeshiko.co/en/sentence/7jKaaJfL9vxO",
+          "audio": "https://cdn.nadeshiko.co/media/166216/7/df08d5e227.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166216/7/df08d5e227.webp"
+        }
+      ]
+    },
+    {
+      "id": "teitai",
+      "word": "手痛い",
+      "read": "ていたい",
+      "part": "手",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "💢",
+      "type": "慣用句",
+      "literal": "手被弄疼→疼到心里",
+      "meaning": "（打击）沉重、惨痛；令人难受",
+      "pattern": "手痛いミス／手痛い一撃",
+      "examples": [
+        {
+          "jp": "仕事で手痛いミスをして、周りに迷惑をかけた。",
+          "cn": "工作中犯下惨痛的失误，给周围人添了麻烦。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "今回は手痛い出費だった。",
+          "cn": "这次是一笔令人肉痛的开销。"
+        }
+      ],
+      "note": "多修饰ミス・失敗・出費，强调损失大、教训痛，不是「手が痛い」的字面义。",
+      "nadeshiko": [
+        {
+          "jp": "はい 手痛(ていた)い失態(しったい)でした",
+          "en": "Yes, it was a serious blunder.",
+          "cn": "是的，是一次惨痛的失误。",
+          "media": "Fate/Zero",
+          "ep": "EP5",
+          "at": "18:26",
+          "url": "https://nadeshiko.co/en/sentence/d7Le28Im7J3X",
+          "audio": "https://cdn.nadeshiko.co/media/10087/5/f691d4d1be.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/10087/5/f691d4d1be.webp"
+        },
+        {
+          "jp": "手痛(ていた)い失敗(しっぱい)を することもありました",
+          "en": "causing me to experience bitter failures.",
+          "cn": "也经历过惨痛的失败。",
+          "media": "Alya Sometimes Hides Her Feelings in Russian",
+          "ep": "EP12",
+          "at": "15:02",
+          "url": "https://nadeshiko.co/en/sentence/s41Q4JnqPe9s",
+          "audio": "https://cdn.nadeshiko.co/media/162804/12/f15d49954e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/162804/12/f15d49954e.webp"
+        }
+      ]
+    },
+    {
+      "id": "ashidematoi",
+      "word": "足手まとい",
+      "read": "あしでまとい",
+      "part": "足",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🦶",
+      "type": "慣用句",
+      "literal": "缠住手脚，让人迈不开步",
+      "meaning": "累赘、碍手碍脚、拖后腿",
+      "pattern": "〜の足手まといになる",
+      "examples": [
+        {
+          "jp": "登山に誘われたが、あまり経験がないので、みんなの足手まといになると思い、断った。",
+          "cn": "有人邀我登山，但自己没什么经验，怕拖大家后腿，就拒绝了。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "杖をついて歩くのは足手まといだ。",
+          "cn": "拄着拐杖走路很碍事。"
+        }
+      ],
+      "note": "「まとい」来自「まとう」＝缠住；写成「足手まとい」更常见。",
+      "nadeshiko": [
+        {
+          "jp": "どうせ足手(あしで)まといに なるだけだ",
+          "en": "She's just going to keep slowing everyone else down.",
+          "cn": "反正只会拖大家后腿。",
+          "media": "Sonny Boy",
+          "ep": "EP9",
+          "at": "16:52",
+          "url": "https://nadeshiko.co/en/sentence/MhBlvGKWLqT9",
+          "audio": "https://cdn.nadeshiko.co/media/132126/9/5b8801af3d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/132126/9/5b8801af3d.webp"
+        },
+        {
+          "jp": "足手(あしで)まといかと...",
+          "en": "so I'd only get in your way.",
+          "cn": "我怕只会碍事……",
+          "media": "My Love Story with Yamada-kun at Lv999",
+          "ep": "EP11",
+          "at": "5:50",
+          "url": "https://nadeshiko.co/en/sentence/sw3vLKUuy56l",
+          "audio": "https://cdn.nadeshiko.co/media/154965/11/42084bc41e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154965/11/42084bc41e.webp"
+        }
+      ]
+    },
+    {
+      "id": "ashidome",
+      "word": "足止め",
+      "read": "あしどめ",
+      "part": "足",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🚧",
+      "type": "慣用句",
+      "literal": "把脚钉住、不让走动",
+      "meaning": "①被困住、滞留 ②拖住、牵制",
+      "pattern": "足止めを食う／足止めされる",
+      "examples": [
+        {
+          "jp": "台風で電車の到着が大幅に遅れたため、駅でしばらく足止めされた。",
+          "cn": "因为台风列车大幅晚点，我在车站被困了好一阵。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "敵の足止めに回る。",
+          "cn": "去拖住敌人。"
+        }
+      ],
+      "note": "真题考的是「滞留」义；Nadeshiko 例句是「牵制」义——两义并记。",
+      "nadeshiko": [
+        {
+          "jp": "作戦(さくせん)どおり 足止(あしど)めに回(まわ)れ",
+          "en": "As planned, you keep them occupied!",
+          "cn": "按计划，你去拖住他们！",
+          "media": "Mobile Suit Gundam: The Witch from Mercury",
+          "ep": "EP12",
+          "at": "4:12",
+          "url": "https://nadeshiko.co/en/sentence/eb0LMLrMS5vP",
+          "audio": "https://cdn.nadeshiko.co/media/139274/12/aad91a9154.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/139274/12/aad91a9154.webp"
+        },
+        {
+          "jp": "俺(おれ)とナマリ シュローで足止(あしど)め",
+          "en": "Then, Namari, Shuro, and I work to slow it down.",
+          "cn": "我、娜玛莉和修洛去拖住它。",
+          "media": "Delicious in Dungeon",
+          "ep": "EP10",
+          "at": "16:55",
+          "url": "https://nadeshiko.co/en/sentence/WeR7wiZEL5Bk",
+          "audio": "https://cdn.nadeshiko.co/media/153518/10/0d33022be6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/10/0d33022be6.webp"
+        }
+      ]
+    },
+    {
+      "id": "tetate",
+      "word": "手立て",
+      "read": "てだて",
+      "part": "手",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🧰",
+      "type": "慣用句",
+      "literal": "下手的办法",
+      "meaning": "方法、手段、着落",
+      "pattern": "手立てがない／手立てを講じる",
+      "examples": [
+        {
+          "jp": "状況を改善する手立てがない。",
+          "cn": "没有改善状况的办法。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "問題を解決する手立てを考える。",
+          "cn": "思考解决问题的办法。"
+        }
+      ],
+      "note": "常与「ない」呼应＝无计可施；语感偏书面。",
+      "nadeshiko": [
+        {
+          "jp": "しかし 治(なお)す手立(てだ)てがない以上(いじょう)",
+          "en": "That said, given that there's no cure,",
+          "cn": "可是既然没有治愈的办法……",
+          "media": "T・P BON",
+          "ep": "EP21",
+          "at": "18:31",
+          "url": "https://nadeshiko.co/en/sentence/_T4mb9vLmEAX",
+          "audio": "https://cdn.nadeshiko.co/media/169930/21/c4ba473057.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/169930/21/c4ba473057.webp"
+        },
+        {
+          "jp": "しかし 呼(よ)びかけを止(と)める手立(てだ)てもない",
+          "en": "but I have no means of stopping the police from sending this message.",
+          "cn": "但是也没有办法阻止警方继续呼叫他。",
+          "media": "Death Note",
+          "ep": "EP13",
+          "at": "14:17",
+          "url": "https://nadeshiko.co/en/sentence/T8fxClQNd9jL",
+          "audio": "https://cdn.nadeshiko.co/media/1535/13/faa5745ce7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1535/13/faa5745ce7.webp"
+        }
+      ]
+    },
+    {
+      "id": "tesaki",
+      "word": "手先",
+      "read": "てさき",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "✋",
+      "type": "慣用句",
+      "literal": "手指尖",
+      "meaning": "①手指（灵巧）②爪牙、手下",
+      "pattern": "手先が器用だ／悪者の手先",
+      "examples": [
+        {
+          "jp": "中山さんは手先が器用で、子どもたちの洋服はすべて自分で作っているそうだ。",
+          "cn": "听说中山手很巧，孩子们的衣服全是自己做的。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼は悪者の手先にすぎない。",
+          "cn": "他不过是坏人的爪牙。"
+        }
+      ],
+      "note": "真题里与「手元・手芸・手際」四选一：手先が器用＝手巧；被操纵的人也叫「手先」。",
+      "nadeshiko": [
+        {
+          "jp": "手先(てさき)も器用(きよう)でさ...",
+          "en": "She was even good with her hands.",
+          "cn": "她手也很巧……",
+          "media": "Summer Pockets",
+          "ep": "EP13",
+          "at": "5:55",
+          "url": "https://nadeshiko.co/en/sentence/RrlBHKgRA3CL",
+          "audio": "https://cdn.nadeshiko.co/media/143200/13/eadfb4928b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143200/13/eadfb4928b.webp"
+        },
+        {
+          "jp": "わあ 海藤(かいとう)君(くん) すごい! 超(ちょう)上手(じょうず)! 手先(てさき) 器用(きよう)!",
+          "en": "Wow, Kaido! You're so skilled with your hands!",
+          "cn": "哇，海藤君，好厉害！超熟练！手真巧！",
+          "media": "The Disastrous Life of Saiki K. Season 2",
+          "ep": "EP6",
+          "at": "20:45",
+          "url": "https://nadeshiko.co/en/sentence/FtrSHH-VI_yQ",
+          "audio": "https://cdn.nadeshiko.co/media/98034/6/686d79659b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98034/6/686d79659b.webp"
+        }
+      ]
+    },
+    {
+      "id": "tekiva",
+      "word": "手際",
+      "read": "てぎわ",
+      "part": "手",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "⚙️",
+      "type": "慣用句",
+      "literal": "手上的步骤、手法",
+      "meaning": "（办事的）手法、效率、利落",
+      "pattern": "手際がいい／手際よく",
+      "examples": [
+        {
+          "jp": "彼女は手際よく料理をテーブルに並べた。",
+          "cn": "她麻利地把菜摆上了桌。"
+        },
+        {
+          "jp": "慣れてくると手際が良くなる。",
+          "cn": "熟练之后，做事就越来越利落。",
+          "src": "jlpt"
+        }
+      ],
+      "note": "「手際がいい／悪い」＝做事麻利/笨拙，关注流程与效率。",
+      "nadeshiko": [
+        {
+          "jp": "ホント! 喜多(きた)ちゃん 手際(てぎわ)いいねー",
+          "en": "Yeah, Kita-chan knows what she's doing!",
+          "cn": "真的！喜多酱做事真利落。",
+          "media": "BOCCHI THE ROCK!",
+          "ep": "EP3",
+          "at": "11:56",
+          "url": "https://nadeshiko.co/en/sentence/ALEtvruKg-3h",
+          "audio": "https://cdn.nadeshiko.co/media/130003/3/646c5c39e1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/130003/3/646c5c39e1.webp"
+        },
+        {
+          "jp": "手際(てぎわ)よく ハッキングユニットを装着(そうちゃく)",
+          "en": "deftly attached the hacking unit...",
+          "cn": "手法娴熟地装上了黑客装置。",
+          "media": "Cowboy Bebop",
+          "ep": "EP14",
+          "at": "5:28",
+          "url": "https://nadeshiko.co/en/sentence/Gg05lBW_VZcS",
+          "audio": "https://cdn.nadeshiko.co/media/1/14/8d37caf8fe.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1/14/8d37caf8fe.webp"
+        }
+      ]
+    },
+    {
+      "id": "temoto",
+      "word": "手元",
+      "read": "てもと",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "🤲",
+      "type": "慣用句",
+      "literal": "手边",
+      "meaning": "手边、手头；（操作时）手中",
+      "pattern": "手元にある／手元が狂う",
+      "examples": [
+        {
+          "jp": "必要な資料はすべて手元にある。",
+          "cn": "需要的资料都在手边。"
+        },
+        {
+          "jp": "手元が狂って、コップを落としてしまった。",
+          "cn": "手一抖，把杯子摔了。"
+        }
+      ],
+      "note": "「手元が狂う」＝手一抖、失手；「手元にある」＝在手头。",
+      "nadeshiko": [
+        {
+          "jp": "手元(てもと)だ 手元(てもと)",
+          "en": "Your hand. In your hand.",
+          "cn": "手边。就在你手边。",
+          "media": "Lycoris Recoil",
+          "ep": "EP4",
+          "at": "23:29",
+          "url": "https://nadeshiko.co/en/sentence/gidkFZNV4egU",
+          "audio": "https://cdn.nadeshiko.co/media/143270/4/8334d307d6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143270/4/8334d307d6.webp"
+        },
+        {
+          "jp": "て...手元(てもと)が...手元(てもと)が狂(くる)ってしまいました",
+          "en": "M-My hand... My hand just slipped!",
+          "cn": "手……我的手……手滑了。",
+          "media": "JoJo's Bizarre Adventure (TV)",
+          "ep": "EP11",
+          "at": "16:46",
+          "url": "https://nadeshiko.co/en/sentence/RHwUmwNplaAE",
+          "audio": "https://cdn.nadeshiko.co/media/14719/11/56f9a61537.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/14719/11/56f9a61537.webp"
+        }
+      ]
+    },
+    {
+      "id": "shuwan",
+      "word": "手腕",
+      "read": "しゅわん",
+      "part": "腕",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🎩",
+      "type": "慣用句",
+      "literal": "手腕（手和臂）",
+      "meaning": "才干、本领、手腕",
+      "pattern": "手腕を発揮する",
+      "examples": [
+        {
+          "jp": "社長は小林部長の手腕を高く評価しているようだ。",
+          "cn": "社长似乎高度评价小林部长的才干。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼は手腕を買われて社長に就任した。",
+          "cn": "他因才干受赏识而就任社长。"
+        }
+      ],
+      "note": "书面语，多指领导者、经营者的能力；「手腕を振るう／発揮する」。",
+      "nadeshiko": [
+        {
+          "jp": "公爵(こうしゃく)令嬢(れいじょう)の手腕(しゅわん)が疑(うたが)われるわね",
+          "en": "People will question the duke's daughter's competence.",
+          "cn": "公爵千金的才干会遭到质疑呢。",
+          "media": "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
+          "ep": "EP7",
+          "at": "9:11",
+          "url": "https://nadeshiko.co/en/sentence/2QZt_gA--idU",
+          "audio": "https://cdn.nadeshiko.co/media/142074/7/5d7b121be7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/142074/7/5d7b121be7.webp"
+        },
+        {
+          "jp": "その正義感(せいぎかん)と手腕(しゅわん)を信(しん)じて",
+          "en": "I'm impressed by your abilities and your sense of justice.",
+          "cn": "相信你的正义感和才干。",
+          "media": "Death Note",
+          "ep": "EP9",
+          "at": "14:23",
+          "url": "https://nadeshiko.co/en/sentence/Ggybjw80ws7u",
+          "audio": "https://cdn.nadeshiko.co/media/1535/9/799664db0e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1535/9/799664db0e.webp"
+        }
+      ]
+    },
+    {
+      "id": "te-ni-ireru",
+      "word": "手に入れる",
+      "read": "てにいれる",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "🛍️",
+      "type": "慣用句",
+      "literal": "弄到手里",
+      "meaning": "得到、获得、弄到手",
+      "pattern": "〜を手に入れる",
+      "examples": [
+        {
+          "jp": "一生懸命働いて、ついに念願のマイホームを手に入れた。",
+          "cn": "拼命工作，终于得到了梦寐以求的房子。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "長年の努力で、夢を手に入れた。",
+          "cn": "凭着多年的努力，实现了梦想。"
+        }
+      ],
+      "note": "口语常用；书面可用「入手する」。",
+      "nadeshiko": [
+        {
+          "jp": "お前(まえ)なら きっと手(て)に入(い)れる",
+          "en": "You, if anyone, will surely get",
+          "cn": "你的话，一定能得到。",
+          "media": "ONE PIECE",
+          "ep": "EP18",
+          "at": "22:50",
+          "url": "https://nadeshiko.co/en/sentence/MbE1wj7xNOAz",
+          "audio": "https://cdn.nadeshiko.co/media/21/18/b2d152a35f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21/18/b2d152a35f.webp"
+        },
+        {
+          "jp": "欲(ほ)しいものは必(かなら)ず手(て)に入(い)れる",
+          "en": "Always get what you want.",
+          "cn": "想要的东西一定要弄到手。",
+          "media": "Fullmetal Alchemist: Brotherhood",
+          "ep": "EP62",
+          "at": "14:00",
+          "url": "https://nadeshiko.co/en/sentence/FIu_h-nwGNHN",
+          "audio": "https://cdn.nadeshiko.co/media/5114/62/517150537d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/5114/62/517150537d.webp"
+        }
+      ]
+    },
+    {
+      "id": "te-ni-suru",
+      "word": "手にする",
+      "read": "てにする",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "📦",
+      "type": "慣用句",
+      "literal": "拿在手中",
+      "meaning": "①拿到手里 ②得到、获取",
+      "pattern": "〜を手にする",
+      "examples": [
+        {
+          "jp": "兄は手にした新聞の記事を凝視した。",
+          "cn": "哥哥凝视着拿在手里的报纸报道。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "苦労して手にした一等賞だった。",
+          "cn": "这是历经辛苦才拿到的一等奖。"
+        }
+      ],
+      "note": "字面＝拿在手里；引申＝获得。与「手に入れる」近义，语感稍书面。",
+      "nadeshiko": [
+        {
+          "jp": "残(のこ)すは 王冠(おうかん)をその手(て)にするだけ",
+          "en": "All that's left is to grab the crown!",
+          "cn": "剩下的只是把王冠拿到手。",
+          "media": "Wistoria: Wand and Sword",
+          "ep": "EP7",
+          "at": "19:53",
+          "url": "https://nadeshiko.co/en/sentence/1ZwK9jMxtoLh",
+          "audio": "https://cdn.nadeshiko.co/media/174576/7/1b296fa1ca.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/174576/7/1b296fa1ca.webp"
+        },
+        {
+          "jp": "世界(せかい)改変(かいへん)魔法(まほう)を手(て)にする義務(ぎむ)がある",
+          "en": "and that's to obtain the world-altering magic.",
+          "cn": "有义务将改写世界的魔法弄到手。",
+          "media": "Little Witch Academia (TV)",
+          "ep": "EP23",
+          "at": "7:34",
+          "url": "https://nadeshiko.co/en/sentence/M2BBl5onpinF",
+          "audio": "https://cdn.nadeshiko.co/media/21858/23/9163745b8d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21858/23/9163745b8d.webp"
+        }
+      ]
+    },
+    {
+      "id": "honeori",
+      "word": "骨折り",
+      "read": "ほねおり",
+      "part": "骨",
+      "group": "limbs",
+      "level": "N1",
+      "emoji": "🦴",
+      "type": "慣用句",
+      "literal": "骨头都要折断般的辛苦",
+      "meaning": "辛劳、费心、费力",
+      "pattern": "骨折り損のくたびれ儲け",
+      "examples": [
+        {
+          "jp": "手伝ったのに、結局骨折り損だった。",
+          "cn": "明明帮了忙，结果白费力气。"
+        },
+        {
+          "jp": "お骨折り、ありがとうございます。",
+          "cn": "多谢您费心。"
+        }
+      ],
+      "note": "「骨折り損のくたびれ儲け」＝费力不讨好、白忙一场；「お骨折り」＝劳驾、费心。",
+      "nadeshiko": [
+        {
+          "jp": "骨折(ほねお)り損(ぞん)ですね",
+          "en": "All our efforts were in vain.",
+          "cn": "真是白忙一场。",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP13",
+          "at": "6:55",
+          "url": "https://nadeshiko.co/en/sentence/sULJpMjXfbYH",
+          "audio": "https://cdn.nadeshiko.co/media/177937/13/9786097fa6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/13/9786097fa6.webp"
+        },
+        {
+          "jp": "勝(かち)先生(せんせい)のお骨折(ほねお)りで",
+          "en": "Thanks to Mr. Katsu's efforts,",
+          "cn": "多亏胜先生费心。",
+          "media": "Jin",
+          "ep": "EP3",
+          "at": "15:50",
+          "url": "https://nadeshiko.co/en/sentence/BWRhTctLhp3_",
+          "audio": "https://cdn.nadeshiko.co/media/mv/46198_1/3/f27654bebe.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/46198_1/3/f27654bebe.webp"
+        }
+      ]
+    },
+    {
+      "id": "hitode",
+      "word": "人手",
+      "read": "ひとで",
+      "part": "手",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "👷",
+      "type": "慣用句",
+      "literal": "别人的手→能干活的人",
+      "meaning": "人手、劳动力",
+      "pattern": "人手が足りない／人手不足",
+      "examples": [
+        {
+          "jp": "祭りの準備には人手が要るので、手伝ってくれる人を探している。",
+          "cn": "准备祭典需要人手，正在找人帮忙。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "忙しくて人手が足りない。",
+          "cn": "忙得人手不够。"
+        }
+      ],
+      "note": "高频搭配：「人手不足」「人手を増やす」「人手を借りる」。",
+      "nadeshiko": [
+        {
+          "jp": "人手(ひとで)が もう少(すこ)し欲(ほ)しいな...",
+          "en": "I wish we had more people helping.",
+          "cn": "真希望能再多点人手啊……",
+          "media": "The Disastrous Life of Saiki K. Season 2",
+          "ep": "EP6",
+          "at": "17:46",
+          "url": "https://nadeshiko.co/en/sentence/0ZaZ3uaWytfz",
+          "audio": "https://cdn.nadeshiko.co/media/98034/6/f905e9bc58.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98034/6/f905e9bc58.webp"
+        },
+        {
+          "jp": "うっ うう... 人手(ひとで)が足(た)りなくて",
+          "en": "We're so short-handed...",
+          "cn": "唔……人手不够。",
+          "media": "A Place Further Than the Universe",
+          "ep": "EP7",
+          "at": "7:48",
+          "url": "https://nadeshiko.co/en/sentence/ZqKuUeszFX1S",
+          "audio": "https://cdn.nadeshiko.co/media/99426/7/e86ee277d0.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/99426/7/e86ee277d0.webp"
+        }
+      ]
+    },
+    {
+      "id": "udemae",
+      "word": "腕前",
+      "read": "うでまえ",
+      "part": "腕",
+      "group": "limbs",
+      "level": "N2",
+      "emoji": "🥋",
+      "type": "慣用句",
+      "literal": "手腕的前端→手上的本事",
+      "meaning": "本领、手艺、本事",
+      "pattern": "腕前を披露する",
+      "examples": [
+        {
+          "jp": "パーティーでは林さんが料理を作って、みんなにその腕前を披露してくれた。",
+          "cn": "聚会上林先生做了菜，向大家展示了手艺。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼の運転の腕前はたいしたものだ。",
+          "cn": "他的驾驶技术相当了得。"
+        }
+      ],
+      "note": "常搭配「腕前を披露する／見せる／上げる」，关注技艺本身。",
+      "nadeshiko": [
+        {
+          "jp": "なんなら ここで腕前(うでまえ)を...",
+          "en": "I can show you my skill here-",
+          "cn": "如果需要，在这儿展示一下我的手艺……",
+          "media": "Vinland Saga Season 2",
+          "ep": "EP11",
+          "at": "20:25",
+          "url": "https://nadeshiko.co/en/sentence/ymivpkdUt0IM",
+          "audio": "https://cdn.nadeshiko.co/media/136430/11/5dab1af502.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/136430/11/5dab1af502.webp"
+        },
+        {
+          "jp": "さすがは ブラックランクを制(せい)した腕前(うでまえ)",
+          "en": "Just what you'd expect of one who bested a black rank.",
+          "cn": "不愧是击败黑级的本事。",
+          "media": "From Old Country Bumpkin to Master Swordsman",
+          "ep": "EP4",
+          "at": "8:46",
+          "url": "https://nadeshiko.co/en/sentence/qRq0DKL1Zd3z",
+          "audio": "https://cdn.nadeshiko.co/media/179955/4/6d5bda0d58.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179955/4/6d5bda0d58.webp"
+        }
+      ]
+    },
+    {
+      "id": "urahara",
+      "word": "裏腹",
+      "read": "うらはら",
+      "part": "腹",
+      "group": "torso",
+      "level": "N1",
+      "emoji": "🔄",
+      "type": "慣用句",
+      "literal": "背面与腹部→正好相反",
+      "meaning": "相反、表里不一、与…不符",
+      "pattern": "〜とは裏腹に",
+      "examples": [
+        {
+          "jp": "前向きな言葉とは裏腹に、課長の態度は消極的だった。",
+          "cn": "与积极的话语相反，课长的态度很消极。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "口では賛成と言いながら、心は裏腹だ。",
+          "cn": "嘴上说赞成，心里却相反。"
+        }
+      ],
+      "note": "几乎只以「〜とは裏腹に」出现＝与…相反、与…不相称。",
+      "nadeshiko": [
+        {
+          "jp": "きらびやかな外観(がいかん)とは裏腹(うらはら)に-",
+          "en": "Its glittering exterior belies the fact that",
+          "cn": "与它绚丽的外观相反——",
+          "media": "Hi Score Girl: Extra Stage",
+          "ep": "EP1",
+          "at": "0:55",
+          "url": "https://nadeshiko.co/en/sentence/TBxPbeIDzWfY",
+          "audio": "https://cdn.nadeshiko.co/media/104307/1/c46a1a60b3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/104307/1/c46a1a60b3.webp"
+        },
+        {
+          "jp": "《香穂(かほ)ちゃんの願(ねが)いとは裏腹(うらはら)に➨",
+          "en": "Kaho-chan's hopes",
+          "cn": "与香穗的愿望相反——",
+          "media": "There's No Freaking Way I'll Be Your Lover! Unless…",
+          "ep": "EP5",
+          "at": "5:36",
+          "url": "https://nadeshiko.co/en/sentence/81QTKJBYDbv0",
+          "audio": "https://cdn.nadeshiko.co/media/184591/5/bf8471a0ba.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/184591/5/bf8471a0ba.webp"
+        }
+      ]
+    },
+    {
+      "id": "kokoroatari",
+      "word": "心当たり",
+      "read": "こころあたり",
+      "part": "心",
+      "group": "torso",
+      "level": "N2",
+      "emoji": "🤔",
+      "type": "慣用句",
+      "literal": "心里碰得到→心中有数",
+      "meaning": "线索、头绪；猜想得到",
+      "pattern": "心当たりがある／ない",
+      "examples": [
+        {
+          "jp": "なぜ木村さんが私のことを嫌っているのか、私には心当たりがない。",
+          "cn": "木村为什么讨厌我，我毫无头绪。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "犯人の心当たりはある。",
+          "cn": "对犯人有点线索。"
+        }
+      ],
+      "note": "肯定「心当たりがある」＝有线索；否定「心当たりがない」＝毫无头绪。",
+      "nadeshiko": [
+        {
+          "jp": "豊浜(とよはま)さん 何(なに)か心当(こころあ)たりは? は? 心当(こころあ)たり?",
+          "en": "Any idea why, Toyohama-san? Any idea why what?",
+          "cn": "丰滨女士，你有什么头绪吗？",
+          "media": "Rascal Does Not Dream of Bunny Girl Senpai",
+          "ep": "EP9",
+          "at": "4:05",
+          "url": "https://nadeshiko.co/en/sentence/H9kHra4fAUuB",
+          "audio": "https://cdn.nadeshiko.co/media/101291/9/3dbecc77d9.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101291/9/3dbecc77d9.webp"
+        },
+        {
+          "jp": "心当(こころあ)たり...　めちゃくちゃ ある",
+          "en": "I actually do know someone who could do it.",
+          "cn": "头绪……我可是有一堆。",
+          "media": "Bloom Into You",
+          "ep": "EP6",
+          "at": "3:28",
+          "url": "https://nadeshiko.co/en/sentence/ZUf-9uhyARkS",
+          "audio": "https://cdn.nadeshiko.co/media/101573/6/caa08d15df.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101573/6/caa08d15df.webp"
+        }
+      ]
+    },
+    {
+      "id": "kokorogamae",
+      "word": "心構え",
+      "read": "こころがまえ",
+      "part": "心",
+      "group": "torso",
+      "level": "N2",
+      "emoji": "🧘",
+      "type": "慣用句",
+      "literal": "心里摆好的姿势",
+      "meaning": "心理准备、思想准备、应有的心态",
+      "pattern": "心構えをする／心構えができる",
+      "examples": [
+        {
+          "jp": "上司から海外赴任を打診されたが、なかなか心構えが決まらない。",
+          "cn": "上司试探性问我要不要去海外任职，我却迟迟做不好心理准备。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "試験に臨む心構えを教える。",
+          "cn": "教导应试应有的心态。"
+        }
+      ],
+      "note": "强调面对某事「之前」的心态准备，名词常用「心構えをする／ができる」。",
+      "nadeshiko": [
+        {
+          "jp": "すばらしい心構(こころがま)えです",
+          "en": "That's a wonderful mindset.",
+          "cn": "真是了不起的心态。",
+          "media": "【OSHI NO KO】Season 3",
+          "ep": "EP8",
+          "at": "20:10",
+          "url": "https://nadeshiko.co/en/sentence/r6PNY2CNBuOW",
+          "audio": "https://cdn.nadeshiko.co/media/182587/8/52f5e1978a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/182587/8/52f5e1978a.webp"
+        },
+        {
+          "jp": "心構(こころがま)えを... しておけ",
+          "en": "you should prepare yourself.",
+          "cn": "你最好做好心理准备。",
+          "media": "Vinland Saga",
+          "ep": "EP15",
+          "at": "20:12",
+          "url": "https://nadeshiko.co/en/sentence/EkZr1raZNrsB",
+          "audio": "https://cdn.nadeshiko.co/media/101348/15/bcc23ea2ea.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101348/15/bcc23ea2ea.webp"
+        }
+      ]
+    },
+    {
+      "id": "kokorozukai",
+      "word": "心遣い",
+      "read": "こころづかい",
+      "part": "心",
+      "group": "torso",
+      "level": "N1",
+      "emoji": "💝",
+      "type": "慣用句",
+      "literal": "用心的关照",
+      "meaning": "关心、体贴、费心",
+      "pattern": "細やかな心遣い／お心遣い",
+      "examples": [
+        {
+          "jp": "100年の伝統を誇るこの旅館のサービスは、老舗旅館ならではの細やかな心遣いが感じられる。",
+          "cn": "这家百年老店的服务让人感受到老字号特有的细致体贴。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "旅先で友人の心遣いがうれしかった。",
+          "cn": "旅途中朋友的体贴让我很开心。"
+        }
+      ],
+      "note": "敬语常用「お心遣い」，是感谢对方费心的固定表达。",
+      "nadeshiko": [
+        {
+          "jp": "ありがたき心遣(こころづか)い 感謝(かんしゃ)いたします",
+          "en": "I'm very grateful for your Lord's thoughtfulness.",
+          "cn": "感谢您这份可贵的心意。",
+          "media": "T・P BON",
+          "ep": "EP15",
+          "at": "18:10",
+          "url": "https://nadeshiko.co/en/sentence/t6MbSv_lCMZP",
+          "audio": "https://cdn.nadeshiko.co/media/169930/15/b5d418b9b1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/169930/15/b5d418b9b1.webp"
+        },
+        {
+          "jp": "お心遣(こころづか)い 感謝(かんしゃ)します",
+          "en": "Thank you very much for your consideration.",
+          "cn": "感谢您的体贴。",
+          "media": "Spice and Wolf: MERCHANT MEETS THE WISE WOLF",
+          "ep": "EP9",
+          "at": "19:16",
+          "url": "https://nadeshiko.co/en/sentence/Jyj0KjO16HIc",
+          "audio": "https://cdn.nadeshiko.co/media/145728/9/b34422fc3d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/145728/9/b34422fc3d.webp"
+        }
+      ]
+    },
+    {
+      "id": "ikinuki",
+      "word": "息抜き",
+      "read": "いきぬき",
+      "part": "息",
+      "group": "torso",
+      "level": "N2",
+      "emoji": "😮‍💨",
+      "type": "慣用句",
+      "literal": "抽出一口气",
+      "meaning": "歇口气、放松、散心",
+      "pattern": "息抜きをする／息抜きに〜",
+      "examples": [
+        {
+          "jp": "勉強の合間に、音楽を聴いて息抜きをする。",
+          "cn": "学习间隙听听音乐放松一下。"
+        },
+        {
+          "jp": "息抜きに散歩に出かけた。",
+          "cn": "出去散步换换气。"
+        }
+      ],
+      "note": "指紧张间隙的放松调剂；常用「息抜きに〜する」。",
+      "nadeshiko": [
+        {
+          "jp": "息抜(いきぬ)きもホドホドに...ね",
+          "en": "We should take our breaks in moderation, now...",
+          "cn": "休息也要适可而止……呢。",
+          "media": "Hi Score Girl",
+          "ep": "EP6",
+          "at": "13:01",
+          "url": "https://nadeshiko.co/en/sentence/mx2fPxx4Hg0d",
+          "audio": "https://cdn.nadeshiko.co/media/20574/6/688be7504c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20574/6/688be7504c.webp"
+        },
+        {
+          "jp": "息抜(いきぬ)きだ　仕事(しごと)しろ 仕事(しごと)!",
+          "en": "It'll be a change of pace! You two have work to do!",
+          "cn": "就当换换脑子。快干活！",
+          "media": "Keep Your Hands Off Eizouken!",
+          "ep": "EP11",
+          "at": "6:46",
+          "url": "https://nadeshiko.co/en/sentence/r3seDYUNZx6m",
+          "audio": "https://cdn.nadeshiko.co/media/109298/11/de629ae942.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/109298/11/de629ae942.webp"
+        }
+      ]
+    },
+    {
+      "id": "hitoiki",
+      "word": "一息",
+      "read": "ひといき",
+      "part": "息",
+      "group": "torso",
+      "level": "N2",
+      "emoji": "🌬️",
+      "type": "慣用句",
+      "literal": "一口气",
+      "meaning": "①歇一口气 ②（还差）一点、一口气的功夫",
+      "pattern": "一息つく／あと一息",
+      "examples": [
+        {
+          "jp": "ここで一息ついて、また出発しよう。",
+          "cn": "在这儿歇口气，再出发吧。"
+        },
+        {
+          "jp": "あと一息で完成だ。",
+          "cn": "还差一点就完成了。"
+        }
+      ],
+      "note": "「一息つく」＝歇口气；「もう一息／あと一息」＝还差一点。",
+      "nadeshiko": [
+        {
+          "jp": "フゥー... 一息(ひといき)　もう おなかいっぱい",
+          "en": "Whew, finally done. I'm so full.",
+          "cn": "呼——歇口气。已经吃不下了。",
+          "media": "The Shiunji Family Children",
+          "ep": "EP1",
+          "at": "15:07",
+          "url": "https://nadeshiko.co/en/sentence/cg7kAGo5VRJE",
+          "audio": "https://cdn.nadeshiko.co/media/174802/1/4ad69e3358.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/174802/1/4ad69e3358.webp"
+        },
+        {
+          "jp": "‎もう一息(ひといき)やで 頑張(がんば)りや",
+          "en": "Mm, you're almost there. Keep at it.",
+          "cn": "就差一点了，加油啊。",
+          "media": "The Makanai: Cooking for the Maiko House",
+          "ep": "EP1",
+          "at": "33:36",
+          "url": "https://nadeshiko.co/en/sentence/6u-ecm__KFsa",
+          "audio": "https://cdn.nadeshiko.co/media/mv/154916/1/6ef8d5cd33.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/154916/1/6ef8d5cd33.webp"
+        }
+      ]
+    },
+    {
+      "id": "oyogoshi",
+      "word": "および腰",
+      "read": "およびごし",
+      "part": "腰",
+      "group": "torso",
+      "level": "N1",
+      "emoji": "🐢",
+      "type": "慣用句",
+      "literal": "腰只及到一半（要起不起）",
+      "meaning": "迟疑不决、不积极、畏缩",
+      "pattern": "及び腰になる",
+      "examples": [
+        {
+          "jp": "彼は新しい計画に及び腰だ。",
+          "cn": "他对新计划态度迟疑。"
+        },
+        {
+          "jp": "値下げの要求に及び腰になる。",
+          "cn": "对降价的要求畏畏缩缩。"
+        }
+      ],
+      "note": "也写「及び腰」；形容想迈步又缩回去的迟疑姿态。",
+      "nadeshiko": [
+        {
+          "jp": "だが 墓所(ぼしょ)を無視(むし)するなんて やーぁけに及(およ)び腰(ごし)じゃないの",
+          "en": "But to forego the graveyard seems awfully cowardly.",
+          "cn": "可是无视墓地，未免也太畏首畏尾了吧。",
+          "media": "Re:ZERO -Starting Life in Another World- Season 2",
+          "ep": "EP13",
+          "at": "18:19",
+          "url": "https://nadeshiko.co/en/sentence/6DE3TVWoBwHk",
+          "audio": "https://cdn.nadeshiko.co/media/108632/13/9ce9abb1e8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/108632/13/9ce9abb1e8.webp"
+        }
+      ]
+    },
+    {
+      "id": "me-ga-saeru",
+      "word": "目がさえる",
+      "read": "めがさえる",
+      "part": "目",
+      "group": "eye",
+      "level": "N1",
+      "emoji": "👁️",
+      "type": "慣用句",
+      "literal": "眼睛清醒发亮",
+      "meaning": "眼睛清醒；亢奋得睡不着",
+      "pattern": "目がさえて眠れない",
+      "examples": [
+        {
+          "jp": "コーヒーを飲んだら、目がさえてしまって、眠れない。",
+          "cn": "喝了咖啡后眼睛太清醒，睡不着。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "昼寝をしたせいか、夜中に目がさえてしまった。",
+          "cn": "大概是午睡的缘故，半夜精神得睡不着。"
+        }
+      ],
+      "note": "与「目が覚める」（睡醒）不同：さえる＝神经清醒、亢奋。",
+      "nadeshiko": [
+        {
+          "jp": "いつになく目(め)がさえて眠(ねむ)れない",
+          "en": "I'm feeling far too awake to sleep.",
+          "cn": "难得地清醒得睡不着。",
+          "media": "KONOSUBA -An Explosion on This Wonderful World!",
+          "ep": "EP12",
+          "at": "3:57",
+          "url": "https://nadeshiko.co/en/sentence/dfUqw5Q6fWP-",
+          "audio": "https://cdn.nadeshiko.co/media/150075/12/418b76da85.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/150075/12/418b76da85.webp"
+        },
+        {
+          "jp": "目(め)がさえちゃって あんまり",
+          "en": "No, I had a hard time falling asleep.",
+          "cn": "眼睛太清醒了，怎么也……",
+          "media": "T・P BON",
+          "ep": "EP11",
+          "at": "9:47",
+          "url": "https://nadeshiko.co/en/sentence/aLUXOVpIUGD5",
+          "audio": "https://cdn.nadeshiko.co/media/169930/11/e0c1da1da7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/169930/11/e0c1da1da7.webp"
+        }
+      ]
+    },
+    {
+      "id": "urame",
+      "word": "裏目",
+      "read": "うらめ",
+      "part": "目",
+      "group": "eye",
+      "level": "N1",
+      "emoji": "🎲",
+      "type": "慣用句",
+      "literal": "骰子背面（与表面相反的一面）",
+      "meaning": "适得其反、事与愿违",
+      "pattern": "裏目に出る",
+      "examples": [
+        {
+          "jp": "親切のつもりが裏目に出た。",
+          "cn": "本是好意，结果适得其反。"
+        },
+        {
+          "jp": "薬を飲みすぎたら、裏目に出て体調が悪化した。",
+          "cn": "药吃多了反而坏事，身体状况恶化了。"
+        }
+      ],
+      "note": "来自骰子/赛马的「裏目」＝与预期相反的一面；常以「裏目に出る」出现。",
+      "nadeshiko": [
+        {
+          "jp": "潮(しお)... その成長(せいちょう)が裏目(うらめ)じゃ",
+          "en": "Ushioh... Your growth shall be your downfall.",
+          "cn": "汐……你的成长反而成了祸端啊。",
+          "media": "Summer Time Rendering",
+          "ep": "EP22",
+          "at": "2:54",
+          "url": "https://nadeshiko.co/en/sentence/IJZhO2ux9I7I",
+          "audio": "https://cdn.nadeshiko.co/media/129201/22/a89eb158f6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/129201/22/a89eb158f6.webp"
+        },
+        {
+          "jp": "どうやら 思(おも)いっ切(き)り裏目(うらめ)っちまったか",
+          "en": "Looks like it backfired big time.",
+          "cn": "看来彻底弄巧成拙了。",
+          "media": "Hajime no Ippo: The Fighting!",
+          "ep": "EP11",
+          "at": "14:22",
+          "url": "https://nadeshiko.co/en/sentence/1ttMjlk6SQ7J",
+          "audio": "https://cdn.nadeshiko.co/media/263/11/4be2bc22a7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/263/11/4be2bc22a7.webp"
+        }
+      ]
+    },
+    {
+      "id": "ome-ni-kakaru",
+      "word": "お目にかかる",
+      "read": "おめにかかる",
+      "part": "目",
+      "group": "eye",
+      "level": "N2",
+      "emoji": "🤵",
+      "type": "慣用句",
+      "literal": "（敬语）与您的目光相会",
+      "meaning": "拜见、见到（自谦敬语）",
+      "pattern": "お目にかかる／お目にかけたい",
+      "examples": [
+        {
+          "jp": "鈴木さんには、かねがねお目にかかりたいと思っておりました。",
+          "cn": "我一直想拜见铃木先生。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "その節はお目にかかれて光栄です。",
+          "cn": "那时能见到您，深感荣幸。"
+        }
+      ],
+      "note": "「会う」的自谦语；给对方看东西则说「お目にかける」。",
+      "nadeshiko": [
+        {
+          "jp": "LHOSにお目(め)にかかるのは...",
+          "en": "since we've had the pleasure of LHOS's company?",
+          "cn": "与LHOS见面……",
+          "media": "Blood Blockade Battlefront",
+          "ep": "EP10",
+          "at": "9:08",
+          "url": "https://nadeshiko.co/en/sentence/UvPK1OE_GwYK",
+          "audio": "https://cdn.nadeshiko.co/media/20727/10/ee42f57b7b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20727/10/ee42f57b7b.webp"
+        },
+        {
+          "jp": "へへへ 春雄(はるお)さんよ 初(はじ)めてお目(め)にかかるな",
+          "en": "Heh, heh, Haruo! First time laying eyes on you!",
+          "cn": "嘿嘿，春雄，初次拜见啊。",
+          "media": "Hi Score Girl",
+          "ep": "EP3",
+          "at": "17:41",
+          "url": "https://nadeshiko.co/en/sentence/Msuk-Nl2DZtM",
+          "audio": "https://cdn.nadeshiko.co/media/20574/3/0a6de0538d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20574/3/0a6de0538d.webp"
+        }
+      ]
+    },
+    {
+      "id": "kaina-kao",
+      "word": "怪訝な顔",
+      "read": "けげんなかお",
+      "part": "顔",
+      "group": "head",
+      "level": "N1",
+      "emoji": "🤨",
+      "type": "慣用句",
+      "literal": "觉得奇怪而疑惑的表情",
+      "meaning": "满脸狐疑、疑惑不解的表情",
+      "pattern": "怪訝な顔をする",
+      "examples": [
+        {
+          "jp": "話を聞いた大木さんは怪訝な顔をした。",
+          "cn": "听到这番话，大木一脸狐疑。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼は怪訝な顔をして私を見た。",
+          "cn": "他一脸疑惑地看着我。"
+        }
+      ],
+      "note": "「怪訝」＝觉得奇怪而疑惑；口语可换说「不思議そうな顔」。",
+      "nadeshiko": [
+        {
+          "jp": "最初(さいしょ)は思(おも)いきり怪訝(けげん)な顔(かお)されちゃった",
+          "en": "He looked really dissatisfied at first.",
+          "cn": "一开始他还一脸纳闷。",
+          "media": "The aquatope on white sand",
+          "ep": "EP22",
+          "at": "19:56",
+          "url": "https://nadeshiko.co/en/sentence/GmNiqbFp5ZFV",
+          "audio": "https://cdn.nadeshiko.co/media/128545/22/c0fa52a93c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128545/22/c0fa52a93c.webp"
+        }
+      ]
+    },
+    {
+      "id": "atama-ni-ukabu",
+      "word": "頭に浮かぶ",
+      "read": "あたまにうかぶ",
+      "part": "頭",
+      "group": "head",
+      "level": "N2",
+      "emoji": "💭",
+      "type": "慣用句",
+      "literal": "在脑海里浮起来",
+      "meaning": "浮现在脑海、想出来",
+      "pattern": "〜が頭に浮かぶ",
+      "examples": [
+        {
+          "jp": "リーダーに適した人として、真っ先に私の頭に浮かんだのは石川さんだった。",
+          "cn": "说到适合当领导的人，我脑海中第一个浮现的就是石川。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "いいアイデアが頭に浮かんだ。",
+          "cn": "脑海中冒出一个好主意。"
+        }
+      ],
+      "note": "想法浮现用「頭に浮かぶ」；视觉画面用「目に浮かぶ」；面容用「顔が浮かぶ」。",
+      "nadeshiko": [
+        {
+          "jp": "頭(あたま)に浮(う)かんだんです... 七(なな)つの海(うみ)って。",
+          "en": "That's what came to my mind. \\\"Seven seas.\\\"",
+          "cn": "我脑中浮现的……是七海。",
+          "media": "Summer Pockets",
+          "ep": "EP23",
+          "at": "6:27",
+          "url": "https://nadeshiko.co/en/sentence/slMfE4MIL-wf",
+          "audio": "https://cdn.nadeshiko.co/media/143200/23/06f44e2cbb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143200/23/06f44e2cbb.webp"
+        },
+        {
+          "jp": "なぜか頭(あたま)に浮(う)かんだのは...",
+          "en": "why was it that what popped into my head was...",
+          "cn": "不知为何，脑中浮现的竟是……",
+          "media": "The Fragrant Flower Blooms With Dignity",
+          "ep": "EP8",
+          "at": "9:35",
+          "url": "https://nadeshiko.co/en/sentence/lhBqjZZKACH4",
+          "audio": "https://cdn.nadeshiko.co/media/181444/8/d024bf309b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/181444/8/d024bf309b.webp"
+        }
+      ]
+    },
+    {
+      "id": "heikou",
+      "word": "閉口",
+      "read": "へいこう",
+      "part": "口",
+      "group": "mouth",
+      "level": "N1",
+      "emoji": "😩",
+      "type": "慣用句",
+      "literal": "闭上嘴、说不出话",
+      "meaning": "吃不消、为难、受不了",
+      "pattern": "〜には閉口する",
+      "examples": [
+        {
+          "jp": "彼の言動にはほとんどの人が閉口している。",
+          "cn": "大多数人对他的一言一行都感到吃不消。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "連日の猛暑には閉口した。",
+          "cn": "连日酷暑让人吃不消。"
+        }
+      ],
+      "note": "表示「应付不来、伤脑筋」，并不是字面的「闭口不言」。",
+      "nadeshiko": [
+        {
+          "jp": "あなたの推察力(すいさつりょく)の無(な)さには閉口(へいこう)するわ",
+          "en": "I'm at a loss for words over how unobservant you are.",
+          "cn": "你那毫无洞察力真让人吃不消。",
+          "media": "Please Put Them On, Takamine-san",
+          "ep": "EP5",
+          "at": "6:02",
+          "url": "https://nadeshiko.co/en/sentence/N1e7lfF_KZwD",
+          "audio": "https://cdn.nadeshiko.co/media/179965/5/6c478a8921.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179965/5/6c478a8921.webp"
+        }
+      ]
+    },
+    {
+      "id": "me-wo-sorasu",
+      "word": "目をそらす",
+      "read": "めをそらす",
+      "part": "目",
+      "group": "action",
+      "level": "N2",
+      "emoji": "👀",
+      "type": "動作",
+      "literal": "把视线移开",
+      "meaning": "移开视线、回避；不敢正视",
+      "pattern": "目をそらさずに",
+      "examples": [
+        {
+          "jp": "さて、よく吠えられても動じず、目をそらしつつ、手のひらに犬クッキーを載せて差し出します。",
+          "cn": "好，就算被凶也不慌，一边避开视线，一边把狗饼干放在手心递过去。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼は責任から目をそらしている。",
+          "cn": "他在回避责任。"
+        }
+      ],
+      "note": "「目をそらすな」＝别躲闪目光（多用于指责心虚）；「目をそらさず」＝直视。",
+      "nadeshiko": [
+        {
+          "jp": "みんな目(め)をそらすなよお...",
+          "en": "All right, chat, you better not look away.",
+          "cn": "大家可别移开视线啊。",
+          "media": "Chainsmoker Cat",
+          "ep": "EP8",
+          "at": "3:17",
+          "url": "https://nadeshiko.co/en/sentence/s-E0Lpo0nk44",
+          "audio": "https://cdn.nadeshiko.co/media/207141/8/3aa1353d73.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/207141/8/3aa1353d73.webp"
+        },
+        {
+          "jp": "目(め)をそらすな ごまかすな",
+          "en": "Do not avert your eyes. Do not deceive yourself.",
+          "cn": "别躲闪目光，别敷衍。",
+          "media": "Miss Kobayashi's Dragon Maid",
+          "ep": "EP13",
+          "at": "5:14",
+          "url": "https://nadeshiko.co/en/sentence/vKpHUEmrkKLP",
+          "audio": "https://cdn.nadeshiko.co/media/21776/13/0dcff17550.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21776/13/0dcff17550.webp"
+        }
+      ]
+    },
+    {
+      "id": "koe-wo-kakeru",
+      "word": "声をかける",
+      "read": "こえをかける",
+      "part": "声",
+      "group": "action",
+      "level": "N3",
+      "emoji": "🗣️",
+      "type": "動作",
+      "literal": "朝对方发出声音",
+      "meaning": "打招呼、搭话；约请、邀请",
+      "pattern": "〜に声をかける",
+      "examples": [
+        {
+          "jp": "気づいたなら声をかけてくれればよかったのに。",
+          "cn": "你发现了的话，跟我打个招呼就好了。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "通りかかった同僚に声をかけた。",
+          "cn": "跟路过的同事打了声招呼。"
+        }
+      ],
+      "note": "除了「搭话」，也指「约请、邀请」（先生が声をかけてくれた）。",
+      "nadeshiko": [
+        {
+          "jp": "ここが声(こえ)をかけるラストチャンス!",
+          "en": "This is my last chance to talk to her.",
+          "cn": "这是找她搭话的最后机会！",
+          "media": "The Quintessential Quintuplets",
+          "ep": "EP1",
+          "at": "11:14",
+          "url": "https://nadeshiko.co/en/sentence/nnJ-Pr0nLpCF",
+          "audio": "https://cdn.nadeshiko.co/media/103572/1/c3efff11c5.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/103572/1/c3efff11c5.webp"
+        },
+        {
+          "jp": "声(こえ)を かけるタイミングがなくてな",
+          "en": "Yeah, I could never find the right moment to mention it.",
+          "cn": "我一直没找到搭话的时机啊。",
+          "media": "Sonny Boy",
+          "ep": "EP9",
+          "at": "9:58",
+          "url": "https://nadeshiko.co/en/sentence/OsHvqZgqHr_h",
+          "audio": "https://cdn.nadeshiko.co/media/132126/9/a830f17a08.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/132126/9/a830f17a08.webp"
+        }
+      ]
+    },
+    {
+      "id": "mi-wo-tsutsumu",
+      "word": "身を包む",
+      "read": "みをつつむ",
+      "part": "身",
+      "group": "action",
+      "level": "N2",
+      "emoji": "🧥",
+      "type": "動作",
+      "literal": "把身体包起来",
+      "meaning": "裹着、穿着（衣服/布料）",
+      "pattern": "〜に身を包む",
+      "examples": [
+        {
+          "jp": "彼女は黒いドレスに身を包んで現れた。",
+          "cn": "她身穿黑色礼服出现了。"
+        },
+        {
+          "jp": "厚いコートに身を包んで出かけた。",
+          "cn": "裹着厚大衣出了门。"
+        }
+      ],
+      "note": "常与服装、布料、光、香气等名词＋「に」搭配。",
+      "nadeshiko": [
+        {
+          "jp": "かわいい制服(せいふく)に身(み)を包(つつ)み 笑顔(えがお)で冒険者(ぼうけんしゃ)をご案内(あんない)",
+          "en": "I wear a cute uniform and guide adventurers with a smile.",
+          "cn": "我穿着可爱的制服，微笑着为冒险者带路。",
+          "media": "I May Be a Guild Receptionist, but I’ll Solo Any Boss to Clock Out on Time",
+          "ep": "EP1",
+          "at": "0:53",
+          "url": "https://nadeshiko.co/en/sentence/jNTuwafUJ60R",
+          "audio": "https://cdn.nadeshiko.co/media/167143/1/9363ae3b9b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/167143/1/9363ae3b9b.webp"
+        },
+        {
+          "jp": "かわいい衣装(いしょう)に 身(み)を包(つつ)んだメイドさんに　お世話(せわ)してもらうという 夢(ゆめ)の値段(ねだん)が",
+          "en": "Fulfilling the dream of having a maid adorned in a cute outfit serving you hand and foot!",
+          "cn": "穿着可爱服装的女仆来服侍你，这种梦想的代价是……",
+          "media": "DEMON LORD 2099",
+          "ep": "EP9",
+          "at": "19:48",
+          "url": "https://nadeshiko.co/en/sentence/1RAWIVLF4m1h",
+          "audio": "https://cdn.nadeshiko.co/media/163135/9/7d9919e4c7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/163135/9/7d9919e4c7.webp"
+        }
+      ]
+    },
+    {
+      "id": "shigamitsuku",
+      "word": "しがみつく",
+      "read": "しがみつく",
+      "group": "action",
+      "level": "N1",
+      "emoji": "🤗",
+      "type": "動作",
+      "literal": "紧紧缠住、抓牢",
+      "meaning": "紧紧抱住、抓住不放；死抱着不放",
+      "pattern": "〜にしがみつく",
+      "examples": [
+        {
+          "jp": "子どもは泣きながら母親の足にしがみついて離れようとしなかった。",
+          "cn": "孩子哭着紧紧抱住母亲的腿不肯放开。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "彼は最後までその地位にしがみついた。",
+          "cn": "他死抱着那个地位不放，直到最后。"
+        }
+      ],
+      "note": "从「抓牢不放」引申为「死抱着（地位、想法）不放」。",
+      "nadeshiko": [
+        {
+          "jp": "なぜ お前(まえ)は ここにしがみつく!",
+          "en": "Why do you insist on dawdling here?",
+          "cn": "你为何死缠在这里！",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP17",
+          "at": "14:57",
+          "url": "https://nadeshiko.co/en/sentence/jzN8fHArwnu3",
+          "audio": "https://cdn.nadeshiko.co/media/101922/17/fae78989c4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/17/fae78989c4.webp"
+        },
+        {
+          "jp": "オカルン うちにしがみついて。",
+          "en": "Okarun, grab onto me!",
+          "cn": "奥卡伦，抱住我。",
+          "media": "DAN DA DAN Season 2",
+          "ep": "EP10",
+          "at": "16:30",
+          "url": "https://nadeshiko.co/en/sentence/4cTSVgxJvdkt",
+          "audio": "https://cdn.nadeshiko.co/media/185660/10/1a6997254c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185660/10/1a6997254c.webp"
+        }
+      ]
+    },
+    {
+      "id": "kao-ga-ukabu",
+      "word": "顔が浮かぶ",
+      "read": "かおがうかぶ",
+      "part": "顔",
+      "group": "head",
+      "level": "N2",
+      "emoji": "😊",
+      "type": "慣用句",
+      "literal": "面容浮现出来",
+      "meaning": "（某人的）面容浮现脑海",
+      "pattern": "〜の顔が浮かぶ",
+      "examples": [
+        {
+          "jp": "古い曲を聞いていたら、子どものころの友の顔が脳裏に浮かんだ。",
+          "cn": "听着老歌，童年朋友的面容浮现在脑海。",
+          "src": "jlpt"
+        },
+        {
+          "jp": "別れ際の彼女の顔が今も浮かぶ。",
+          "cn": "分别时她的面容至今仍会浮现眼前。"
+        }
+      ],
+      "note": "「頭に浮かぶ」（想法）、「目に浮かぶ」（画面）、「顔が浮かぶ」（面容）三兄弟。",
+      "nadeshiko": [
+        {
+          "jp": "その度(たび)に黒部(くろべ)ダムを作(つく)った人(ひと)たちの 顔(かお)が浮(う)かんで",
+          "en": "but every time I do, I think of those men building the dam.",
+          "cn": "每次我都会想起建造黑部大坝的人们。",
+          "media": "mono",
+          "ep": "EP9",
+          "at": "17:13",
+          "url": "https://nadeshiko.co/en/sentence/g_Vpzl_W1nf0",
+          "audio": "https://cdn.nadeshiko.co/media/176246/9/3c741463e9.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/176246/9/3c741463e9.webp"
+        },
+        {
+          "jp": "そのとき 最初(さいしょ)に浮(う)かんだのはラヘルの顔(かお)",
+          "en": "The first thing that came to mind was your face.",
+          "cn": "那时最先浮现的，是拉赫尔的脸。",
+          "media": "Tower of God",
+          "ep": "EP11",
+          "at": "18:11",
+          "url": "https://nadeshiko.co/en/sentence/y6KCXQtr6XQe",
+          "audio": "https://cdn.nadeshiko.co/media/115230/11/62f5ea5974.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/115230/11/62f5ea5974.webp"
+        }
+      ]
     }
   ]
 }

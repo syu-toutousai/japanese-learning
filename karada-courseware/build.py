@@ -24,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 POCKET = ROOT / "karada.json"
+JLPT = ROOT / "jlpt.json"
 AUDIO_DIR = ROOT / "audio"
 NADE_CACHE = ROOT / "nade_audio"
 OUT = ROOT / "index.html"
@@ -33,6 +34,7 @@ RATE = "-6%"
 SEED = 20260930          # 固定随机种子：干扰项抽样可复现，重复构建 diff 干净
 MIN_MP3 = 300            # 小于该字节数视为合成失败
 BANK_META = [
+    ["exam",    "📝 真題（原題）"],
     ["listen2", "🎧 聴解・意味理解"],
     ["listen3", "🎧 聴解・書き取り"],
     ["listen",  "🎧 聴解判別"],
@@ -143,6 +145,14 @@ _READING_OVERRIDES = [
     ("全力", "ぜんりょく"),
     ("進路", "しんろ"),
     ("食に", "しょくに"),
+    # からだ慣用句の誤読対策（pykakasi 文脈誤読）
+    ("お手上げ", "おてあげ"),
+    ("心当たり", "こころあたり"),
+    ("細やか", "こまやか"),
+    ("100年", "ひゃくねん"),
+    ("の人が", "のひとが"),
+    ("くれる人を", "くれるひとを"),
+    ("別れ際", "わかれぎわ"),
 ]
 
 
@@ -216,7 +226,7 @@ def gen_one(task):
     return False
 
 
-def gen_audio(items, sents):
+def gen_audio(items, exams):
     AUDIO_DIR.mkdir(exist_ok=True)
     tasks = []                       # (logical_id, text)
     for it in items:
@@ -227,6 +237,9 @@ def gen_audio(items, sents):
             native_ex = ex.get("audio")
             if not (native_ex and (ROOT / native_ex).exists()):
                 tasks.append((f"{it['id']}-e{i}", ex["jp"]))
+    for e in exams:
+        if e.get("answer_sentence"):
+            tasks.append((f"{e['id']}-a", e["answer_sentence"]))
 
     todo = [(lid, txt) for lid, txt in tasks
             if not (p := cache_path(lid, txt)).exists() or p.stat().st_size <= MIN_MP3]
@@ -351,7 +364,7 @@ def gen_nade_audio(items):
 
 # ---------------------------------------------------------------- auto quizzes
 
-def build_questions(groups, items, audio):
+def build_questions(groups, items, exams, audio):
     rng = random.Random(SEED)
     dup_words = {}
     for it in items:
@@ -470,6 +483,33 @@ def build_questions(groups, items, audio):
             q.setdefault("exp", "")
             add("custom", f"{iid}:custom-{n}", **q)
 
+    # 📝 真題（原題そのまま）：JLPT N1 過去問から選択肢をシャッフルして出題
+    for e in exams:
+        if e.get("answer") is None or len(e.get("options") or []) != 4:
+            continue
+        if e.get("type") in ("passage", "long"):
+            continue
+        opts = list(e["options"])
+        ans_text = e["answer_text"]
+        rng.shuffle(opts)
+        try:
+            ans = opts.index(ans_text)
+        except ValueError:
+            continue
+        if e.get("type") == "usage":
+            q_text = f"「{e['question']}」の使い方が最もよいのは？"
+        else:
+            q_text = e["question"]
+        parts = [f"正解：{ans_text}", f"出典：{e['source']}"]
+        if e.get("memo"):
+            parts.append(f"💡 {e['memo']}")
+        if e.get("answer_sentence") and f"{e['id']}-a" in audio:
+            parts.append(f"🔊 <button class=\"btn mini-btn\" onclick=\"play('{e['id']}-a',this)\">▶</button> {e['answer_sentence']}")
+        elif e.get("answer_sentence"):
+            parts.append(f"📖 {e['answer_sentence']}")
+        add("exam", f"{e['id']}:exam", type="choice", q=q_text,
+            opts=opts, ans=ans, exp="<br>".join(parts))
+
     return qs
 
 
@@ -568,6 +608,27 @@ code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em
 margin-left:6px;vertical-align:1px}
 .src-moji{background:var(--okbg);color:var(--ok)}
 .src-nade{background:#ede7f6;color:#5e35b1}
+.src-jlpt{background:var(--ngbg);color:var(--ng)}
+/* JLPT exam cards */
+.exam-card{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;
+box-shadow:0 2px 10px rgba(30,40,90,.06);border-left:4px solid var(--ng)}
+.exam-hdr{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.exam-kind{font-size:11.5px;font-weight:700;color:#9f1239}
+.exam-src{font-size:11.5px;color:var(--sub)}
+.exam-q{font-size:15.5px;line-height:1.85;margin-bottom:8px;
+font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.exam-q.long{max-height:300px;overflow:auto;font-size:13.5px;background:#fafbfe;border-radius:10px;
+padding:10px 12px;border:1px solid var(--line)}
+.exam-opts{display:grid;gap:6px;margin:8px 0}
+.exam-opt{font-size:14.5px;line-height:1.6;padding:7px 11px;border-radius:9px;background:#f7f8fc;color:var(--sub)}
+.exam-opt.on{background:var(--okbg);color:var(--ok);font-weight:700}
+.exam-opt ruby rt{font-size:.52em;color:var(--sub)}
+.corpus-card{background:#fff;border-radius:14px;padding:13px 16px;margin-bottom:10px;
+box-shadow:0 1px 8px rgba(30,40,90,.06);border-left:4px solid #9f1239}
+.corpus-card .jp{font-size:15px;line-height:2}
+.corpus-card .jp ruby rt{font-size:.52em;color:var(--sub)}
+a.jump{color:#9f1239;text-decoration:none;font-weight:700}
+a.jump:hover{text-decoration:underline}
 /* nadeshiko scene */
 .nade-card{background:#faf5ff;border:1px solid #e0d0f0;border-radius:12px;padding:12px;margin:10px 0}
 .nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
@@ -587,7 +648,7 @@ font-size:15.5px;line-height:2}
 <body>
 <header><div class="wrap">
 <h1>からだの慣用句</h1>
-<div class="kana">からだのかんようく ／ 体の部位で覚える慣用句と身体動作 —— 頭・顔・目・耳・口・首・肩・胸・腹・手・足…が動くと、意味も動く 🫀</div>
+<div class="kana">からだのかんようく ／ 体の部位で覚える慣用句と身体動作 —— 頭・顔・目・耳・口・首・肩・胸・腹・手・足…が動くと、意味も動く。JLPT N1 真題コーパス付き 🫀</div>
 <div class="tags">__TAGS__</div>
 </div></header>
 
@@ -606,6 +667,8 @@ const NADE_AUDIO=__NADE_AUDIO__;
 const GROUPS=__GROUPS__;
 const ITEMS=__ITEMS__;
 const SENTS=__SENTS__;
+const EXAMS=__EXAMS__;
+const CORPUS=__CORPUS__;
 const BANKS=__BANKS__;
 let QS=__QS__;
 const $=s=>document.querySelector(s);
@@ -621,7 +684,7 @@ function play(id,btn){
 function rowHTML(sid){
   const s=SENTS[sid];
   const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
-  const chip=s.src==="moji"?`<span class="src src-moji">MOJi</span>`:"";
+  const chip=s.src==="moji"?`<span class="src src-moji">MOJi</span>`:s.src==="jlpt"?`<span class="src src-jlpt">JLPT</span>`:"";
   return `<div class="row">${b}<div><div class="jp">${s.jp}${chip}</div><div class="cn">${s.cn}</div></div></div>`;
 }
 function nadeHTML(sc,iid,idx){
@@ -643,8 +706,37 @@ function nadeHTML(sc,iid,idx){
     </div></div>`;
 }
 
+/* ---------- JLPT exam / corpus cards ---------- */
+function itemLinks(ids){
+  if(!ids||!ids.length)return "";
+  return `<div class="hint">関連カード：${ids.map(id=>{const n=ITEMS.find(x=>x.id===id);
+    return n?`<a class="jump" href="javascript:goDetail('${id}')">${n.word}</a>`:id;}).join("、")}</div>`;
+}
+function examHTML(e){
+  const opts=(e.options||[]).map((o,i)=>
+    `<div class="exam-opt${i===e.answer?' on':''}">${i===e.answer?'✔':'　'}${o}</div>`).join("");
+  const play=(e.answer_sentence&&AUDIO[e.id+'-a'])?
+    `<button class="btn mini-btn" onclick="play('${e.id}-a',this)">▶</button> `:"";
+  const qcls=e.question.length>300?"exam-q long":"exam-q";
+  const answer=(e.answer_sentence||e.answer_text)?
+    `<div class="hint" style="margin-top:6px">${play}正解：${e.answer_text||""}
+      ${e.memo?`｜💡 ${e.memo}`:""}${e.answer_sentence?`<br>📖 ${e.answer_sentence}`:""}</div>`:"";
+  return `<div class="exam-card">
+    <div class="exam-hdr"><span class="src src-jlpt" style="margin-left:0">JLPT</span>
+      <span class="exam-kind">${e.kind}</span><span class="exam-src">${e.source}</span></div>
+    <div class="${qcls}">${e.type==="usage"?`「${e.question}」の使い方が最もよいのは？`:e.question}</div>
+    <div class="exam-opts">${opts}</div>
+    ${answer}${itemLinks(e.item_ids)}</div>`;
+}
+function corpusHTML(s){
+  const b=AUDIO[s.id]?`<button class="btn mini-btn" onclick="play('${s.id}',this)">▶</button>`:"";
+  return `<div class="corpus-card"><div class="jp">${b}${s.jp}</div>
+    <div class="hint"><span class="src src-jlpt" style="margin-left:0">JLPT</span> ${s.source}</div>
+    ${itemLinks(s.item_ids)}</div>`;
+}
+
 /* ---------- tabs ---------- */
-const TABS=[["list","🗺️ 一覧"],["detail","📖 詳細"],["quiz","🎯 クイズ"]];
+const TABS=[["list","🗺️ 一覧"],["detail","📖 詳細"],["exams","📝 真題"],["quiz","🎯 クイズ"]];
 let tab="list";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -666,7 +758,8 @@ function renderList(){
     <div><b>① 惯性：部位先行，含义随后</b><br>先认「哪个部位」，再看它做了什么（下がる・広い・張る…），含义自然浮现。</div>
     <div><b>② 两类分开记</b><br>慣用句（引申义）＝顔が広い；身体動作（字面）＝下を向く。卡片的 TYPE 徽标可区分。</div>
     <div><b>③ 部位填空</b><br>训练场会出「（　）が下がる」这样的题——部位与动词的固定搭配才是记忆的核心。</div>
-    <div><b>④ 与 Nadeshiko 原声对照</b><br>例句、台词场景卡、TTS 三种输入交叉，把「搭配」练成条件反射。</div>
+    <div><b>④ 真题对照</b><br>📝 真題 Tab 收录 JLPT N1 身体相关原题；词条页也直接挂出「考过哪几题」。</div>
+    <div><b>⑤ 与 Nadeshiko 原声对照</b><br>例句、台词场景卡、TTS、真題四种输入交叉，把「搭配」练成条件反射。</div>
   </div></div>`;
   h+=GROUPS.map(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
@@ -702,10 +795,32 @@ function renderDetail(){
         ${(n.examples||[]).map((_,i)=>rowHTML(`${iid}-e${i}`)).join("")}
         ${(n.nadeshiko&&n.nadeshiko.length)?`<h3 class="sec">🎬 原声台词</h3>`:""}
         ${(n.nadeshiko||[]).map((sc,i)=>nadeHTML(sc,iid,i)).join("")}
+        ${(n._sents&&n._sents.length)?`<h3 class="sec">🎯 真題例文（${n._sents.length}）</h3>`:""}
+        ${(n._sents||[]).map(s=>corpusHTML(s)).join("")}
+        ${(n._exams&&n._exams.length)?`<h3 class="sec">📝 JLPT 出題（${n._exams.length}）</h3>`:""}
+        ${(n._exams||[]).map(e=>examHTML(e)).join("")}
         ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
       </div>`;
     });
   });
+  $("#main").innerHTML=h;
+}
+
+/* ---------- JLPT exam tab ---------- */
+function renderExams(){
+  const examList=EXAMS.slice().sort((a,b)=>(b.year*100+b.month)-(a.year*100+a.month));
+  const nLinked=EXAMS.filter(e=>e.item_ids&&e.item_ids.length).length;
+  let h=`<div class="card intro"><h2>📝 JLPT N1 真題コーパス（${EXAMS.length} 問）</h2>
+  <p>2010-07 〜 2025-07 の JLPT N1 過去問から、<b>からだ関連の問題</b>だけを抜き出したコーパス。
+  語彙（漢字読み・文脈規定・言い換え・使い方）と文法（文法選択・並べ替え）の<b>原題・選択肢・正解・出典</b>をそのまま収録。
+  ${nLinked} 問は下の慣用句カードにリンク済み。</p>
+  <p class="hint">JLPT 官方不公开真题；题目来自考生回忆/学习站点整理，仅作个人学习之非商业性引用。</p></div>`;
+  if(CORPUS.length){
+    h+=`<h3 class="sec" style="border-left:4px solid #9f1239;padding-left:8px;color:#9f1239">🎯 真題例文（読解・文法篇章抜粋，${CORPUS.length} 句）</h3>`;
+    h+=CORPUS.map(s=>corpusHTML(s)).join("");
+  }
+  h+=`<h3 class="sec" style="border-left:4px solid var(--ng);padding-left:8px;color:var(--ng)">📝 出題問題（${examList.length} 問・新しい順）</h3>`;
+  h+=examList.map(e=>examHTML(e)).join("");
   $("#main").innerHTML=h;
 }
 
@@ -813,6 +928,7 @@ function render(){
   if(tab!=="quiz")showNext(false);
   if(tab==="list")renderList();
   else if(tab==="detail")renderDetail();
+  else if(tab==="exams")renderExams();
   else renderQuizTab();
 }
 renderNav();render();
@@ -827,7 +943,14 @@ def main():
     n_group = len(groups)
     n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
 
-    audio = gen_audio(items, None)
+    try:
+        jlpt = json.loads(JLPT.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        sys.exit("[!] 缺少 jlpt.json——先跑 python3 fetch_jlpt.py 生成真題コーパス")
+    exams = jlpt.get("exams", [])
+    corpus = jlpt.get("sents", [])
+
+    audio = gen_audio(items, exams)
 
     print(f"[1/4] audio: {len(audio)} clips ready")
 
@@ -835,9 +958,10 @@ def main():
     nade_audio = gen_nade_audio(items)
     embed_nade_thumbs(items)
 
-    qs = build_questions(groups, items, audio)
+    qs = build_questions(groups, items, exams, audio)
 
     tags = (f"<span>{len(items)} 条</span><span>{n_group} 大分類</span>"
+            f"<span>{len(exams)} 問 真題</span>"
             f"<span>{len(audio)} 音声{' + ' + str(n_nade) + ' 原声' if n_nade else ''}</span>"
             f"<span>karada.json 随手加</span>")
     banks_meta = [[k, l] for k, l in BANK_META]
@@ -847,8 +971,10 @@ def main():
     for k, l in BANK_META:
         print(f"      {l}: {counts[k]} 問")
 
-    # display 副本：给例句和 Nadeshiko 台词加 ruby 振假名（只作用展示，不动素文/出题/音频）
+    # display 副本：给例句、Nadeshiko 台词、真題与真题例句加 ruby（只作用展示）
     display = copy.deepcopy(items)
+    excopy = copy.deepcopy(exams)
+    corcopy = copy.deepcopy(corpus)
     sents = {}
     for it in display:
         for i, ex in enumerate(it.get("examples") or []):
@@ -856,6 +982,26 @@ def main():
             sents[f"{it['id']}-e{i}"] = {"jp": ex["jp"], "cn": ex.get("cn", ""), "src": ex.get("src", "")}
         for sc in it.get("nadeshiko") or []:
             sc["jp"] = add_furigana(sc["jp"])
+    for e in excopy:
+        e["question"] = add_furigana(e["question"])
+        e["options"] = [add_furigana(o) for o in e.get("options", [])]
+        for key in ("answer_text", "answer_sentence"):
+            if e.get(key):
+                e[key] = add_furigana(e[key])
+    for s in corcopy:
+        s["jp"] = add_furigana(s["jp"])
+
+    # 挂接：真題/真题例句 → 条目详情
+    ex_by_item, sent_by_item = {}, {}
+    for e in excopy:
+        for iid in e.get("item_ids", []):
+            ex_by_item.setdefault(iid, []).append(e)
+    for s in corcopy:
+        for iid in s.get("item_ids", []):
+            sent_by_item.setdefault(iid, []).append(s)
+    for it in display:
+        it["_exams"] = ex_by_item.get(it["id"], [])
+        it["_sents"] = sent_by_item.get(it["id"], [])
 
     print("[4/4] rendering template...")
     html = (TEMPLATE
@@ -865,6 +1011,8 @@ def main():
             .replace("__GROUPS__", j(groups))
             .replace("__ITEMS__", j(display))
             .replace("__SENTS__", j(sents))
+            .replace("__EXAMS__", j(excopy))
+            .replace("__CORPUS__", j(corcopy))
             .replace("__BANKS__", j(banks_meta))
             .replace("__QS__", j(qs)))
     OUT.write_text(html, encoding="utf-8")

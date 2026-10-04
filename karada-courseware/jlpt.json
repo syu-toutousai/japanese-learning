@@ -1,0 +1,1453 @@
+{
+  "meta": {
+    "title": "からだの JLPT N1 過去問コーパス",
+    "source": "JLPT N1 2010-07 ～ 2025-07（jlpt-n1-question-bank 収録分）",
+    "note": "JLPT 官方不公开真题；题目来自考生回忆/学习站点整理，仅作个人学习之非商业性引用。",
+    "exams": 52,
+    "sents": 25
+  },
+  "exams": [
+    {
+      "id": "2011-07-vocab-reading-06",
+      "year": 2011,
+      "month": 7,
+      "section": "vocab",
+      "type": "reading",
+      "number": 6,
+      "kind": "語彙・漢字読み",
+      "question": "何事も初めが肝心だ。",
+      "options": [
+        "たんしん",
+        "かんしん",
+        "たんじん",
+        "かんじん"
+      ],
+      "answer": 3,
+      "answer_text": "かんじん",
+      "answer_sentence": "",
+      "source": "JLPT N1 2011年7月 言語知識(文字・語彙) 問題1(6)",
+      "item_ids": [],
+      "memo": "肝心＝要紧、关键（肝）"
+    },
+    {
+      "id": "2012-12-vocab-context-13",
+      "year": 2012,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 13,
+      "kind": "語彙・文脈規定",
+      "question": "朝から頭痛がひどかったが、薬を飲んだら、だいぶ痛みが（   ）きた。",
+      "options": [
+        "弱って",
+        "和らいで",
+        "薄まって",
+        "安らいで"
+      ],
+      "answer": 1,
+      "answer_text": "和らいで",
+      "answer_sentence": "朝から頭痛がひどかったが、薬を飲んだら、だいぶ痛みが和らいできた。",
+      "source": "JLPT N1 2012年12月 言語知識(文字・語彙) 問題2(13)",
+      "item_ids": [],
+      "memo": "頭痛がひどい／痛みが和らぐ"
+    },
+    {
+      "id": "2013-12-vocab-context-09",
+      "year": 2013,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 9,
+      "kind": "語彙・文脈規定",
+      "question": "職場の環境に満足していたので、その当時は転職など全く（   ）になかった。",
+      "options": [
+        "内心",
+        "念願",
+        "念頭",
+        "本心"
+      ],
+      "answer": 2,
+      "answer_text": "念頭",
+      "answer_sentence": "職場の環境に満足していたので、その当時は転職など全く念頭になかった。",
+      "source": "JLPT N1 2013年12月 言語知識(文字・語彙) 問題2(9)",
+      "item_ids": [],
+      "memo": "念頭にない＝全然没想过（頭）"
+    },
+    {
+      "id": "2013-12-vocab-context-12",
+      "year": 2013,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 12,
+      "kind": "語彙・文脈規定",
+      "question": "パーティーでは林さんが料理を作って、みんなにその（   ）を披露してくれた。",
+      "options": [
+        "腕前",
+        "そぶり",
+        "しわざ",
+        "手間"
+      ],
+      "answer": 0,
+      "answer_text": "腕前",
+      "answer_sentence": "パーティーでは林さんが料理を作って、みんなにその腕前を披露してくれた。",
+      "source": "JLPT N1 2013年12月 言語知識(文字・語彙) 問題2(12)",
+      "item_ids": [
+        "udemae"
+      ],
+      "memo": "腕前を披露する"
+    },
+    {
+      "id": "2013-12-vocab-usage-22",
+      "year": 2013,
+      "month": 12,
+      "section": "vocab",
+      "type": "usage",
+      "number": 22,
+      "kind": "語彙・使い方",
+      "question": "口出し",
+      "options": [
+        "上司だからといって部下の私生活にまで口出し",
+        "今の意見に反論のある人は遠慮せず自由に口出し",
+        "店長は客に上手に口出し",
+        "この会社に就職できたのは、山田さんが口出し"
+      ],
+      "answer": 0,
+      "answer_text": "上司だからといって部下の私生活にまで口出し",
+      "answer_sentence": "上司だからといって部下の私生活にまで口出しするのはよくない。",
+      "source": "JLPT N1 2013年12月 言語知識(文字・語彙) 問題4(22)",
+      "item_ids": [
+        "kuchi-dasu"
+      ],
+      "memo": "口出し＝插嘴、多管闲事；与「口を出す」同源"
+    },
+    {
+      "id": "2014-07-vocab-usage-22",
+      "year": 2014,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 22,
+      "kind": "語彙・使い方",
+      "question": "心構え",
+      "options": [
+        "金銭トラブルに遭わないようにするには、日ごろの心構え",
+        "上司から海外赴任を打診されたが、なかなか心構え",
+        "今年中に家を買って引っ越す心構え",
+        "石川さんがこんなに親切にしてくれるのは、何か心構え"
+      ],
+      "answer": 1,
+      "answer_text": "上司から海外赴任を打診されたが、なかなか心構え",
+      "answer_sentence": "上司から海外赴任を打診されたが、なかなか心構えが決まらない。",
+      "source": "JLPT N1 2014年7月 言語知識(文字・語彙) 問題4(22)",
+      "item_ids": [
+        "kokorogamae"
+      ],
+      "memo": "心構えが決まらない"
+    },
+    {
+      "id": "2014-07-vocab-usage-24",
+      "year": 2014,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 24,
+      "kind": "語彙・使い方",
+      "question": "しがみつく",
+      "options": [
+        "子どもは泣きながら母親の足にしがみついて",
+        "汗のせいで、シャツが肌にしがみついて",
+        "ふたが瓶にしがみついで",
+        "今日の電車は隣の人に体がしがみつく"
+      ],
+      "answer": 0,
+      "answer_text": "子どもは泣きながら母親の足にしがみついて",
+      "answer_sentence": "子どもは泣きながら母親の足にしがみついて離れようとしなかった。",
+      "source": "JLPT N1 2014年7月 言語知識(文字・語彙) 問題4(24)",
+      "item_ids": [
+        "shigamitsuku"
+      ],
+      "memo": "足にしがみつく"
+    },
+    {
+      "id": "2014-12-vocab-usage-21",
+      "year": 2014,
+      "month": 12,
+      "section": "vocab",
+      "type": "usage",
+      "number": 21,
+      "kind": "語彙・使い方",
+      "question": "裏腹",
+      "options": [
+        "あの双子は外見はそっくりだが、全く裏腹",
+        "地図を見ると、商店街と住宅街は駅から裏腹",
+        "前向きな言葉とは裏腹",
+        "みんなが私を見るので変だと思ったら、セーターを裏腹"
+      ],
+      "answer": 2,
+      "answer_text": "前向きな言葉とは裏腹",
+      "answer_sentence": "前向きな言葉とは裏腹に課長の態度は消極的で、計画は一向に進まない。",
+      "source": "JLPT N1 2014年12月 言語知識(文字・語彙) 問題4(21)",
+      "item_ids": [
+        "urahara"
+      ],
+      "memo": "〜とは裏腹に"
+    },
+    {
+      "id": "2015-07-vocab-usage-21",
+      "year": 2015,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 21,
+      "kind": "語彙・使い方",
+      "question": "人手",
+      "options": [
+        "父は一家の人手",
+        "大手メーカーが突然倒産し、大量の人手",
+        "祭りの準備には人手",
+        "この会社では、年齢や性別を問わず、優秀な人手"
+      ],
+      "answer": 2,
+      "answer_text": "祭りの準備には人手",
+      "answer_sentence": "祭りの準備には人手が要るので、手伝ってくれる人を探している。",
+      "source": "JLPT N1 2015年7月 言語知識(文字・語彙) 問題4(21)",
+      "item_ids": [
+        "hitode"
+      ],
+      "memo": "人手が要る"
+    },
+    {
+      "id": "2015-12-vocab-reading-05",
+      "year": 2015,
+      "month": 12,
+      "section": "vocab",
+      "type": "reading",
+      "number": 5,
+      "kind": "語彙・漢字読み",
+      "question": "優勝を目指してこれからも練習に励んでいきます。",
+      "options": [
+        "はげんで",
+        "およんで",
+        "いどんで",
+        "しのんで"
+      ],
+      "answer": 0,
+      "answer_text": "はげんで",
+      "answer_sentence": "",
+      "source": "JLPT N1 2015年12月 言語知識(文字・語彙) 問題1(5)",
+      "item_ids": [],
+      "memo": "目指す（目）"
+    },
+    {
+      "id": "2016-07-vocab-usage-21",
+      "year": 2016,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 21,
+      "kind": "語彙・使い方",
+      "question": "入手",
+      "options": [
+        "A社は今回の不祥事に関して、世間から多くの批判を入手",
+        "社会人になって初めて入手",
+        "高橋氏は幼いころから音楽の才能を発揮し、数々の賞を入手",
+        "海外に留学する際には、現地の生活に役立つ情報を入手"
+      ],
+      "answer": 3,
+      "answer_text": "海外に留学する際には、現地の生活に役立つ情報を入手",
+      "answer_sentence": "海外に留学する際には、現地の生活に役立つ情報を入手しておくといい。",
+      "source": "JLPT N1 2016年7月 言語知識(文字・語彙) 問題4(21)",
+      "item_ids": [],
+      "memo": "入手＝到手（手）"
+    },
+    {
+      "id": "2016-12-vocab-reading-02",
+      "year": 2016,
+      "month": 12,
+      "section": "vocab",
+      "type": "reading",
+      "number": 2,
+      "kind": "語彙・漢字読み",
+      "question": "鈴木さんは指摘がいつも的確で、本当に賢い人だと思う。",
+      "options": [
+        "するどい",
+        "かしこい",
+        "すごい",
+        "えらい"
+      ],
+      "answer": 1,
+      "answer_text": "かしこい",
+      "answer_sentence": "",
+      "source": "JLPT N1 2016年12月 言語知識(文字・語彙) 問題1(2)",
+      "item_ids": [],
+      "memo": "指摘（指）"
+    },
+    {
+      "id": "2017-12-vocab-reading-05",
+      "year": 2017,
+      "month": 12,
+      "section": "vocab",
+      "type": "reading",
+      "number": 5,
+      "kind": "語彙・漢字読み",
+      "question": "あの人はいっもあれこれ指図をする。",
+      "options": [
+        "さしじ",
+        "さしず",
+        "しず",
+        "しじ"
+      ],
+      "answer": 1,
+      "answer_text": "さしず",
+      "answer_sentence": "",
+      "source": "JLPT N1 2017年12月 言語知識(文字・語彙) 問題1(5)",
+      "item_ids": [],
+      "memo": "指図＝指使、吩咐（指）"
+    },
+    {
+      "id": "2017-12-vocab-usage-22",
+      "year": 2017,
+      "month": 12,
+      "section": "vocab",
+      "type": "usage",
+      "number": 22,
+      "kind": "語彙・使い方",
+      "question": "真っ先",
+      "options": [
+        "リーダーに適した人として、真っ先に私の頭に浮かんだの石川さんだった。",
+        "次のテストではクラスで真っ先になれるように頑張って勉強しようと思う。",
+        "先ほどお配りした資料の真っ先にあるグラフをご覧ください。",
+        "目が悪いので、教室の真っ先に座らないと、黒板の字がよく読めない。"
+      ],
+      "answer": 0,
+      "answer_text": "リーダーに適した人として、真っ先に私の頭に浮かんだの石川さんだった。",
+      "answer_sentence": "真っ先に私の頭に浮かんだのは石川さんだった。",
+      "source": "JLPT N1 2017年12月 言語知識(文字・語彙) 問題4(22)",
+      "item_ids": [
+        "atama-ni-ukabu"
+      ],
+      "memo": "頭に浮かぶ；真っ先に＝最先"
+    },
+    {
+      "id": "2017-12-vocab-usage-25",
+      "year": 2017,
+      "month": 12,
+      "section": "vocab",
+      "type": "usage",
+      "number": 25,
+      "kind": "語彙・使い方",
+      "question": "うなだれる",
+      "options": [
+        "ビルの最上階の窓からうなだれると、あまりの高さに恐怖を感じた。",
+        "昨日の会議では、皆、部長の話に納得し力強くうなだれていた。",
+        "姉は知らせを聞いてがっかりしたのか、うなだれて顔を上げなかった。",
+        "何か踏んだような気がしたので、思わずうなだれて足元を見た。"
+      ],
+      "answer": 2,
+      "answer_text": "姉は知らせを聞いてがっかりしたのか、うなだれて顔を上げなかった。",
+      "answer_sentence": "姉は知らせを聞いてがっかりしたのか、うなだれて顔を上げなかった。",
+      "source": "JLPT N1 2017年12月 言語知識(文字・語彙) 問題4(25)",
+      "item_ids": [
+        "unadareru"
+      ],
+      "memo": "うなだれる＝垂下头"
+    },
+    {
+      "id": "2018-07-vocab-usage-25",
+      "year": 2018,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 25,
+      "kind": "語彙・使い方",
+      "question": "心当たり",
+      "options": [
+        "なぜ木村さんが私のことを嫌っているのか、私には心当たりがない。",
+        "このカメラを買ったのは10年も前なので、いくらで買ったか心当たりがない。",
+        "今日は仕事が忙しいので、何時ごろ帰れるか心当たりがない。",
+        "何かいい解決方法がないか考えているが、まだ心当たりがない。"
+      ],
+      "answer": 0,
+      "answer_text": "なぜ木村さんが私のことを嫌っているのか、私には心当たりがない。",
+      "answer_sentence": "なぜ木村さんが私のことを嫌っているのか、私には心当たりがない。",
+      "source": "JLPT N1 2018年7月 言語知識(文字・語彙) 問題4(25)",
+      "item_ids": [
+        "kokoroatari"
+      ],
+      "memo": "心当たりがない＝毫无头绪"
+    },
+    {
+      "id": "2018-12-vocab-paraphrase-17",
+      "year": 2018,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 17,
+      "kind": "語彙・言い換え",
+      "question": "状況を改善する手立てがない。",
+      "options": [
+        "方法",
+        "費用",
+        "時間",
+        "意志"
+      ],
+      "answer": 0,
+      "answer_text": "方法",
+      "answer_sentence": "",
+      "source": "JLPT N1 2018年12月 言語知識(文字・語彙) 問題3(17)",
+      "item_ids": [
+        "tetate"
+      ],
+      "memo": "手立て＝方法"
+    },
+    {
+      "id": "2019-07-vocab-paraphrase-17",
+      "year": 2019,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 17,
+      "kind": "語彙・言い換え",
+      "question": "目撃者の証言には不審な点があった。",
+      "options": [
+        "でたらめな",
+        "頼りない",
+        "怪しい",
+        "あいまいな"
+      ],
+      "answer": 2,
+      "answer_text": "怪しい",
+      "answer_sentence": "",
+      "source": "JLPT N1 2019年7月 言語知識(文字・語彙) 問題3(17)",
+      "item_ids": [],
+      "memo": "目撃者（目）"
+    },
+    {
+      "id": "2019-07-vocab-reading-01",
+      "year": 2019,
+      "month": 7,
+      "section": "vocab",
+      "type": "reading",
+      "number": 1,
+      "kind": "語彙・漢字読み",
+      "question": "あの態度には猛烈に腹が立った。",
+      "options": [
+        "もれつ",
+        "きょうれつ",
+        "きょれつ",
+        "もうれつ"
+      ],
+      "answer": 3,
+      "answer_text": "もうれつ",
+      "answer_sentence": "",
+      "source": "JLPT N1 2019年7月 言語知識(文字・語彙) 問題1(1)",
+      "item_ids": [
+        "hara-tateru"
+      ],
+      "memo": "腹が立つ"
+    },
+    {
+      "id": "2019-07-vocab-usage-23",
+      "year": 2019,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 23,
+      "kind": "語彙・使い方",
+      "question": "目安",
+      "options": [
+        "健康のために一日に 6 キロを目安に歩くことにしている。",
+        "いつも目安にしていた看板がなかったので、道に迷った。",
+        "古い住所を目安に、友人の引っ越し先を探した。",
+        "先生の書いた文字を目安にして、習字の練習をしている。"
+      ],
+      "answer": 0,
+      "answer_text": "健康のために一日に 6 キロを目安に歩くことにしている。",
+      "answer_sentence": "健康のために一日に 6 キロを目安に歩くことにしている。",
+      "source": "JLPT N1 2019年7月 言語知識(文字・語彙) 問題4(23)",
+      "item_ids": [],
+      "memo": "目安＝基准、大致目标（目）"
+    },
+    {
+      "id": "2020-12-vocab-paraphrase-15",
+      "year": 2020,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 15,
+      "kind": "語彙・言い換え",
+      "question": "兄は手にした新聞の記事を凝視した。",
+      "options": [
+        "ざっと見た",
+        "じっと見た",
+        "ちらっと見た",
+        "ぼうっと見た"
+      ],
+      "answer": 1,
+      "answer_text": "じっと見た",
+      "answer_sentence": "",
+      "source": "JLPT N1 2020年12月 言語知識(文字・語彙) 問題3(15)",
+      "item_ids": [
+        "te-ni-suru"
+      ],
+      "memo": "手にした新聞＝拿在手里的报纸"
+    },
+    {
+      "id": "2020-12-vocab-paraphrase-17",
+      "year": 2020,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 17,
+      "kind": "語彙・言い換え",
+      "question": "鈴木さんには、かねがねお目にかかりたいと思っておりました。",
+      "options": [
+        "できれば",
+        "以前から",
+        "ぜひ",
+        "早いうちに"
+      ],
+      "answer": 1,
+      "answer_text": "以前から",
+      "answer_sentence": "",
+      "source": "JLPT N1 2020年12月 言語知識(文字・語彙) 問題3(17)",
+      "item_ids": [
+        "ome-ni-kakaru"
+      ],
+      "memo": "お目にかかる＝拜见"
+    },
+    {
+      "id": "2020-12-vocab-reading-03",
+      "year": 2020,
+      "month": 12,
+      "section": "vocab",
+      "type": "reading",
+      "number": 3,
+      "kind": "語彙・漢字読み",
+      "question": "手品師の巧妙なテクニックに観客から拍手が起こった。",
+      "options": [
+        "こうびょう",
+        "こびょう",
+        "こうみょう",
+        "こみょう"
+      ],
+      "answer": 2,
+      "answer_text": "こうみょう",
+      "answer_sentence": "",
+      "source": "JLPT N1 2020年12月 言語知識(文字・語彙) 問題1(3)",
+      "item_ids": [],
+      "memo": "手品師（手）"
+    },
+    {
+      "id": "2021-12-vocab-paraphrase-19",
+      "year": 2021,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 19,
+      "kind": "語彙・言い換え",
+      "question": "駅前に巨大スーパーができたら(お手上げ)だ。",
+      "options": [
+        "大歓迎",
+        "どうしようもない",
+        "ぜひ働きたい",
+        "驚きだ"
+      ],
+      "answer": 1,
+      "answer_text": "どうしようもない",
+      "answer_sentence": "",
+      "source": "JLPT N1 2021年12月 言語知識(文字・語彙) 問題3(19)",
+      "item_ids": [
+        "otetsuage"
+      ],
+      "memo": "お手上げ＝束手无策"
+    },
+    {
+      "id": "2022-07-vocab-paraphrase-15",
+      "year": 2022,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 15,
+      "kind": "語彙・言い換え",
+      "question": "彼の言動にはほとんどの人が(閉口し)ている。",
+      "options": [
+        "慣れて",
+        "困って",
+        "がっかりして",
+        "ほっとして"
+      ],
+      "answer": 1,
+      "answer_text": "困って",
+      "answer_sentence": "",
+      "source": "JLPT N1 2022年7月 言語知識(文字・語彙) 問題3(15)",
+      "item_ids": [
+        "heikou"
+      ],
+      "memo": "閉口＝吃不消"
+    },
+    {
+      "id": "2022-07-vocab-paraphrase-18",
+      "year": 2022,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 18,
+      "kind": "語彙・言い換え",
+      "question": "これは(手分け)したほうがいい。",
+      "options": [
+        "分割",
+        "分別",
+        "分担",
+        "分類"
+      ],
+      "answer": 2,
+      "answer_text": "分担",
+      "answer_sentence": "",
+      "source": "JLPT N1 2022年7月 言語知識(文字・語彙) 問題3(18)",
+      "item_ids": [
+        "tewake"
+      ],
+      "memo": "手分け＝分工"
+    },
+    {
+      "id": "2022-12-vocab-context-10",
+      "year": 2022,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 10,
+      "kind": "語彙・文脈規定",
+      "question": "一生懸命働いて、ついに（　）のマイホームを手に入れた。",
+      "options": [
+        "志望",
+        "本意",
+        "欲求",
+        "念願"
+      ],
+      "answer": 3,
+      "answer_text": "念願",
+      "answer_sentence": "一生懸命働いて、ついに念願のマイホームを手に入れた。",
+      "source": "JLPT N1 2022年12月 言語知識(文字・語彙) 問題2(10)",
+      "item_ids": [
+        "te-ni-ireru"
+      ],
+      "memo": "念願のマイホームを手に入れる"
+    },
+    {
+      "id": "2022-12-vocab-usage-24",
+      "year": 2022,
+      "month": 12,
+      "section": "vocab",
+      "type": "usage",
+      "number": 24,
+      "kind": "語彙・使い方",
+      "question": "手痛い",
+      "options": [
+        "仕事で手痛いミスをして、周りに迷惑をかけた。",
+        "来週までは、手痛い運動をなるべく避けてください。",
+        "秋が終わって、とうとう手痛い冬がやってきた。",
+        "口川さんはほかの人より手痛いスピードで作業した。"
+      ],
+      "answer": 0,
+      "answer_text": "仕事で手痛いミスをして、周りに迷惑をかけた。",
+      "answer_sentence": "",
+      "source": "JLPT N1 2022年12月 言語知識(文字・語彙) 問題4(24)",
+      "item_ids": [
+        "teitai"
+      ],
+      "memo": "手痛いミス"
+    },
+    {
+      "id": "2023-07-vocab-paraphrase-19",
+      "year": 2023,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 19,
+      "kind": "語彙・言い換え",
+      "question": "若いころ私は、商品開発の仕事に (没頭して) いた。",
+      "options": [
+        "飽きて",
+        "憧れて",
+        "不満を持って",
+        "熱中して"
+      ],
+      "answer": 3,
+      "answer_text": "熱中して",
+      "answer_sentence": "",
+      "source": "JLPT N1 2023年7月 言語知識(文字・語彙) 問題3(19)",
+      "item_ids": [],
+      "memo": "没頭＝埋头、热衷（頭）"
+    },
+    {
+      "id": "2023-07-vocab-usage-22",
+      "year": 2023,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 22,
+      "kind": "語彙・使い方",
+      "question": "さえる",
+      "options": [
+        "友人は時間に (さえて) いて、遅刻したことは一度もない。",
+        "父は感情が (さえて) 顔に出るので、分かりやすい。",
+        "コーヒーを飲んだら、目が (さえて) しまって、眠れない。",
+        "彼の目標は (さえて) いて、一度も変わることはなかった。"
+      ],
+      "answer": 2,
+      "answer_text": "コーヒーを飲んだら、目が (さえて) しまって、眠れない。",
+      "answer_sentence": "",
+      "source": "JLPT N1 2023年7月 言語知識(文字・語彙) 問題4(22)",
+      "item_ids": [
+        "me-ga-saeru"
+      ],
+      "memo": "目がさえて眠れない"
+    },
+    {
+      "id": "2024-07-vocab-context-13",
+      "year": 2024,
+      "month": 7,
+      "section": "vocab",
+      "type": "context",
+      "number": 13,
+      "kind": "語彙・文脈規定",
+      "question": "登山に誘われたが、あまり経験がないので、みんなの(　　)になると思い、断った。",
+      "options": [
+        "骨折り",
+        "足手まとい",
+        "裏目",
+        "および腰"
+      ],
+      "answer": 1,
+      "answer_text": "足手まとい",
+      "answer_sentence": "登山に誘われたが、あまり経験がないので、みんなの足手まといになると思い、断った。",
+      "source": "JLPT N1 2024年7月 言語知識(文字・語彙) 問題2(13)",
+      "item_ids": [
+        "ashidematoi",
+        "honeori",
+        "urame",
+        "oyogoshi"
+      ],
+      "memo": "正解足手まとい；干扰项骨折り/裏目/および腰"
+    },
+    {
+      "id": "2024-07-vocab-paraphrase-18",
+      "year": 2024,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 18,
+      "kind": "語彙・言い換え",
+      "question": "男の子は父親の話をうなだれて聞いていた。",
+      "options": [
+        "ふざけた態度で",
+        "目を閉じて",
+        "まじめな表情で",
+        "下を向いて"
+      ],
+      "answer": 3,
+      "answer_text": "下を向いて",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年7月 言語知識(文字・語彙) 問題3(18)",
+      "item_ids": [
+        "unadareru",
+        "shitamuku"
+      ],
+      "memo": "うなだれて＝下を向いて"
+    },
+    {
+      "id": "2024-07-vocab-usage-20",
+      "year": 2024,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 20,
+      "kind": "語彙・使い方",
+      "question": "風潮",
+      "options": [
+        "本田さんはいつも風潮のファッションに身を包んでいる。",
+        "何事も経済的な効率で判断するのが今の社会の風潮だ。",
+        "地形の関係でこの辺りは夏に雨が降りやすい風潮がある。",
+        "京都の町を歩いて古都の風潮を楽しんだ。"
+      ],
+      "answer": 1,
+      "answer_text": "何事も経済的な効率で判断するのが今の社会の風潮だ。",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年7月 言語知識(文字・語彙) 問題4(20)",
+      "item_ids": [],
+      "memo": "本题考風潮，正解2；选项1的搭配有误"
+    },
+    {
+      "id": "2024-07-vocab-usage-23",
+      "year": 2024,
+      "month": 7,
+      "section": "vocab",
+      "type": "usage",
+      "number": 23,
+      "kind": "語彙・使い方",
+      "question": "補填",
+      "options": [
+        "書類をよく読んで空欄に必要事項を補填してください。",
+        "暑い中で運動して汗をかいたときは水分を補填することが大切だ。",
+        "新規事業で生じた赤字は別の事業の収益で補填することにした。",
+        "風邪で休んでいる間みんなが協力して私の仕事を補填してくれた。"
+      ],
+      "answer": 2,
+      "answer_text": "新規事業で生じた赤字は別の事業の収益で補填することにした。",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年7月 言語知識(文字・語彙) 問題4(23)",
+      "item_ids": [
+        "ase-kaku"
+      ],
+      "memo": "本题考補填，正解3；选项2含「汗をかく」的正确用法"
+    },
+    {
+      "id": "2024-12-vocab-context-10",
+      "year": 2024,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 10,
+      "kind": "語彙・文脈規定",
+      "question": "台風で電車の到着が大幅に遅れたため、駅でしばらく（　 ）された。",
+      "options": [
+        "息抜き",
+        "棚上げ",
+        "待ち伏せ",
+        "足止め"
+      ],
+      "answer": 3,
+      "answer_text": "足止め",
+      "answer_sentence": "台風で電車の到着が大幅に遅れたため、駅でしばらく足止めされた。",
+      "source": "JLPT N1 2024年12月 言語知識(文字・語彙) 問題2(10)",
+      "item_ids": [
+        "ashidome",
+        "ikinuki"
+      ],
+      "memo": "正解足止め；干扰项息抜き"
+    },
+    {
+      "id": "2024-12-vocab-context-13",
+      "year": 2024,
+      "month": 12,
+      "section": "vocab",
+      "type": "context",
+      "number": 13,
+      "kind": "語彙・文脈規定",
+      "question": "階段でつまずいて転びそうになったので、（　 ）隣にいた友人の腕をつかんだ。",
+      "options": [
+        "じきに",
+        "まさに",
+        "とっさに",
+        "とつぜん"
+      ],
+      "answer": 2,
+      "answer_text": "とっさに",
+      "answer_sentence": "階段でつまずいて転びそうになったので、とっさに隣にいた友人の腕をつかんだ。",
+      "source": "JLPT N1 2024年12月 言語知識(文字・語彙) 問題2(13)",
+      "item_ids": [],
+      "memo": "腕をつかむ（字面身体动作）"
+    },
+    {
+      "id": "2024-12-vocab-paraphrase-14",
+      "year": 2024,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 14,
+      "kind": "語彙・言い換え",
+      "question": "社長は小林部長の（手腕）を高く評価しているようだ。",
+      "options": [
+        "経験",
+        "能力",
+        "考え",
+        "人柄"
+      ],
+      "answer": 1,
+      "answer_text": "能力",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年12月 言語知識(文字・語彙) 問題3(14)",
+      "item_ids": [
+        "shuwan"
+      ],
+      "memo": "手腕＝才能、本领"
+    },
+    {
+      "id": "2024-12-vocab-paraphrase-17",
+      "year": 2024,
+      "month": 12,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 17,
+      "kind": "語彙・言い換え",
+      "question": "私たちのチームの（目下）の目標は、市の大会で優勝することだ。",
+      "options": [
+        "最大",
+        "将来",
+        "今",
+        "最低限"
+      ],
+      "answer": 2,
+      "answer_text": "今",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年12月 言語知識(文字・語彙) 問題3(17)",
+      "item_ids": [],
+      "memo": "目下＝当前、目前（目）"
+    },
+    {
+      "id": "2024-12-vocab-reading-02",
+      "year": 2024,
+      "month": 12,
+      "section": "vocab",
+      "type": "reading",
+      "number": 2,
+      "kind": "語彙・漢字読み",
+      "question": "（背後）から物音が聞こえた。",
+      "options": [
+        "はいご",
+        "はいこう",
+        "せいご",
+        "せいこう"
+      ],
+      "answer": 0,
+      "answer_text": "はいご",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年12月 言語知識(文字・語彙) 問題1(2)",
+      "item_ids": [],
+      "memo": "背後（背）"
+    },
+    {
+      "id": "2025-07-vocab-context-08",
+      "year": 2025,
+      "month": 7,
+      "section": "vocab",
+      "type": "context",
+      "number": 8,
+      "kind": "語彙・文脈規定",
+      "question": "中山さんは（ ）が器用で、子どもたちの洋服はすべて自分で作っているそうだ。",
+      "options": [
+        "手元",
+        "手芸",
+        "手先",
+        "手際"
+      ],
+      "answer": 2,
+      "answer_text": "手先",
+      "answer_sentence": "中山さんは手先が器用で、子どもたちの洋服はすべて自分で作っているそうだ。",
+      "source": "JLPT N1 2025年7月 言語知識(文字・語彙) 問題2(8)",
+      "item_ids": [
+        "tesaki",
+        "temoto",
+        "tekiva"
+      ],
+      "memo": "正解手先；手元/手芸/手際为干扰项"
+    },
+    {
+      "id": "2025-07-vocab-context-13",
+      "year": 2025,
+      "month": 7,
+      "section": "vocab",
+      "type": "context",
+      "number": 13,
+      "kind": "語彙・文脈規定",
+      "question": "古い曲を聞いていたら、子どものころの友の顔が（ ）に浮かんだ。",
+      "options": [
+        "内心",
+        "頭上",
+        "眼下",
+        "脳裏"
+      ],
+      "answer": 3,
+      "answer_text": "脳裏",
+      "answer_sentence": "古い曲を聞いていたら、子どものころの友の顔が脳裏に浮かんだ。",
+      "source": "JLPT N1 2025年7月 言語知識(文字・語彙) 問題2(13)",
+      "item_ids": [
+        "kao-ga-ukabu"
+      ],
+      "memo": "顔が脳裏に浮かぶ（正解：脳裏）"
+    },
+    {
+      "id": "2025-07-vocab-paraphrase-14",
+      "year": 2025,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 14,
+      "kind": "語彙・言い換え",
+      "question": "まだいくつか(着手)していない仕事がある。",
+      "options": [
+        "終わらせて",
+        "引き受けて",
+        "始めて",
+        "やり直して"
+      ],
+      "answer": 2,
+      "answer_text": "始めて",
+      "answer_sentence": "",
+      "source": "JLPT N1 2025年7月 言語知識(文字・語彙) 問題3(14)",
+      "item_ids": [],
+      "memo": "着手＝开始做（手）"
+    },
+    {
+      "id": "2025-07-vocab-paraphrase-18",
+      "year": 2025,
+      "month": 7,
+      "section": "vocab",
+      "type": "paraphrase",
+      "number": 18,
+      "kind": "語彙・言い換え",
+      "question": "話を聞いた大木さんは(怪訝な)顔をした。",
+      "options": [
+        "傷ついたような",
+        "あきれたような",
+        "不思議そうな",
+        "残念そうな"
+      ],
+      "answer": 2,
+      "answer_text": "不思議そうな",
+      "answer_sentence": "",
+      "source": "JLPT N1 2025年7月 言語知識(文字・語彙) 問題3(18)",
+      "item_ids": [
+        "kaina-kao"
+      ],
+      "memo": "怪訝な顔＝一脸狐疑"
+    },
+    {
+      "id": "2025-07-vocab-reading-06",
+      "year": 2025,
+      "month": 7,
+      "section": "vocab",
+      "type": "reading",
+      "number": 6,
+      "kind": "語彙・漢字読み",
+      "question": "親友に複雑な(胸中)を打ち明ける。",
+      "options": [
+        "きょうじゅう",
+        "きゅうじゅう",
+        "きょうちゅう",
+        "きゅうじゅう"
+      ],
+      "answer": 2,
+      "answer_text": "きょうちゅう",
+      "answer_sentence": "",
+      "source": "JLPT N1 2025年7月 言語知識(文字・語彙) 問題1(6)",
+      "item_ids": [],
+      "memo": "胸中＝内心（胸）"
+    },
+    {
+      "id": "2018-07-grammar-choice-35",
+      "year": 2018,
+      "month": 7,
+      "section": "grammar",
+      "type": "choice",
+      "number": 35,
+      "kind": "文法・文法選択",
+      "question": "A「ねえ、昨日、デパートにいたでしょう?見かけたよ。」B「ええ!気づいたなら声をかけて（ ）。」",
+      "options": [
+        "くれたと思ったんだね",
+        "もらったと思ったのに",
+        "くれればよかったのに",
+        "もらえばよかったんだね"
+      ],
+      "answer": 2,
+      "answer_text": "くれればよかったのに",
+      "answer_sentence": "A「ねえ、昨日、デパートにいたでしょう?見かけたよ。」B「ええ!気づいたなら声をかけてくれればよかったのに。」",
+      "source": "JLPT N1 2018年7月 言語知識(文法) 問題5(35)",
+      "item_ids": [
+        "koe-wo-kakeru"
+      ],
+      "memo": "声をかける＝打招呼"
+    },
+    {
+      "id": "2019-07-grammar-choice-34",
+      "year": 2019,
+      "month": 7,
+      "section": "grammar",
+      "type": "choice",
+      "number": 34,
+      "kind": "文法・文法選択",
+      "question": "昨日大学で声をかけられたサークルの勧誘には困った。強引に話を進められて、危うく入会（ ）。",
+      "options": [
+        "させられるところだった",
+        "されようがなかった",
+        "させなかったのかと思った",
+        "しなかったことにした"
+      ],
+      "answer": 0,
+      "answer_text": "させられるところだった",
+      "answer_sentence": "昨日大学で声をかけられたサークルの勧誘には困った。強引に話を進められて、危うく入会させられるところだった。",
+      "source": "JLPT N1 2019年7月 言語知識(文法) 問題5(34)",
+      "item_ids": [
+        "koe-wo-kakeru"
+      ],
+      "memo": "声をかけられた"
+    },
+    {
+      "id": "2025-07-grammar-choice-31",
+      "year": 2025,
+      "month": 7,
+      "section": "grammar",
+      "type": "choice",
+      "number": 31,
+      "kind": "文法・文法選択",
+      "question": "昨日、ジョギング中に足首を痛めてしまった。ちょっとひねっただけなので、病院で（）、今朝もまだ少し痛む。",
+      "options": [
+        "診てもらうほどではないものの",
+        "診てもらうほどではないどころか",
+        "診てもらわなくてはならないものの",
+        "診てもらわなくてはならないどころか"
+      ],
+      "answer": 0,
+      "answer_text": "診てもらうほどではないものの",
+      "answer_sentence": "昨日、ジョギング中に足首を痛めてしまった。ちょっとひねっただけなので、病院で診てもらうほどではないものの、今朝もまだ少し痛む。",
+      "source": "JLPT N1 2025年7月 言語知識(文法) 問題5(31)",
+      "item_ids": [],
+      "memo": "足首を痛める（足）"
+    },
+    {
+      "id": "2018-12-grammar-composition-38",
+      "year": 2018,
+      "month": 12,
+      "section": "grammar",
+      "type": "composition",
+      "number": 38,
+      "kind": "文法・文の並べ替え",
+      "question": "株式会社トモカワ。短期的な成果が重視されがちな ★ 工作機械メーカーである。",
+      "options": [
+        "時代にあって",
+        "目先の利益だけでなく",
+        "着実に成長を続けている",
+        "日本の将来を見据えながら"
+      ],
+      "answer": 3,
+      "answer_text": "日本の将来を見据えながら",
+      "answer_sentence": "",
+      "source": "JLPT N1 2018年12月 言語知識(文法) 問題6(38)",
+      "item_ids": [],
+      "memo": "目先の利益（目先）"
+    },
+    {
+      "id": "2020-12-grammar-choice-26",
+      "year": 2020,
+      "month": 12,
+      "section": "grammar",
+      "type": "choice",
+      "number": 26,
+      "kind": "文法・文法選択",
+      "question": "100年の伝統を誇るこの旅館のサービスは、老舗旅館（     ）細やかな心遣いが感じられる。",
+      "options": [
+        "ごときの",
+        "がらみの",
+        "ほとまでの",
+        "ならではの"
+      ],
+      "answer": 3,
+      "answer_text": "ならではの",
+      "answer_sentence": "100年の伝統を誇るこの旅館のサービスは、老舗旅館ならではの細やかな心遣いが感じられる。",
+      "source": "JLPT N1 2020年12月 言語知識(文法) 問題5(26)",
+      "item_ids": [
+        "kokorozukai"
+      ],
+      "memo": "細やかな心遣い"
+    },
+    {
+      "id": "2021-12-grammar-composition-40",
+      "year": 2021,
+      "month": 12,
+      "section": "grammar",
+      "type": "composition",
+      "number": 40,
+      "kind": "文法・文の並べ替え",
+      "question": "介護の現場における __ __ ★ __ そのうち必ず限界が来る。介護ロボットの普及が期待される。",
+      "options": [
+        "このまま",
+        "人の手のみ頼っていては",
+        "人手不足が深刻している",
+        "中で"
+      ],
+      "answer": 0,
+      "answer_text": "このまま",
+      "answer_sentence": "",
+      "source": "JLPT N1 2021年12月 言語知識(文法) 問題6(40)",
+      "item_ids": [
+        "hitode"
+      ],
+      "memo": "人手不足が深刻する"
+    },
+    {
+      "id": "2025-07-grammar-composition-37",
+      "year": 2025,
+      "month": 7,
+      "section": "grammar",
+      "type": "composition",
+      "number": 37,
+      "kind": "文法・文の並べ替え",
+      "question": "私たちの日常生活に欠かせない ___ ___ ★ ___ 店舗も出てきている。",
+      "options": [
+        "コンビニが",
+        "定休日を設ける",
+        "近年の人手不足などにより",
+        "存在である"
+      ],
+      "answer": 2,
+      "answer_text": "近年の人手不足などにより",
+      "answer_sentence": "",
+      "source": "JLPT N1 2025年7月 言語知識(文法) 問題6(37)",
+      "item_ids": [
+        "hitode"
+      ],
+      "memo": "近年の人手不足などにより"
+    },
+    {
+      "id": "2024-07-reading-long-57",
+      "year": 2024,
+      "month": 7,
+      "section": "reading",
+      "type": "long",
+      "number": 57,
+      "kind": "読解・長文",
+      "question": "以下は、ある数学者が書いた文章である。\n数学というものは、解き方がわかってしまったあとで、力がつくことはない。解き方を身につける前の、まだ解き方のわからない間だけが、力をつけるチャンスである。解けるようになるのは同じでも、それまでのあり方で、力が身につくかどうかが、きまってくる。\nそれに、おもしろいのも、本当は、まだ解けないで、いろいろと考えている間である。解けなきゃつまらないようだが、それは早く解こうとあせるからで、楽しみは解けるまでのほうにある。解けるようになったあとは、むしろむなしい。だいたい、「答えのわかっている謎」なんて、意味がない。解き方がわからないからこそ、問題の名にあたいするのだ。\nもちろん、まったく手がつかない（注１）のでは、おもしろくもないが、案外に、多少はわからないでも、うまく頭のなかに飼っておくと、そのうちに馴れてくれて、わかってきたりする。その、だんだん少しずつ、わかりかけというのも、オツな（注2）ものだ。そのためには、それを飼っておく、頭の牧場がゆたかでなければならない。本当のところは、数学の力というのは、いろいろとわかったことをためこむより、わからないのを飼っておける、その牧場のゆたかさのほうにあるのかもしれない。\nとくに、公式などをおぼえるのには、ぼくは反対である。それは簡単すぎて、少しもおもしろくないし、おぼえたものは忘れるものだ。とくに、急いでおぼえたものは、早く忘れる。同じおぼえるにしても、なるべくなら時間をかけたほうが、長持ちする。\n(中略)\nこのごろは、テストでおどされる（注3）ことが多いので、わかること、解けることを急ぐ傾向にある。たしかに、テストなどでは、時間がかぎられているので、急ぐのも多少は仕方がない。しかしながら、時間を制限されたときに急いでできるためには、時間の制限されていないときに、時間を気にしないでやっておいたほうがよい。テストで急ぐためには、テスト以外では急がないほうがよいのである。\nどんなやり方でも、わかって、問題が解けるようになる、という結果は同じかもしれない。しかし、ゆったりとやると、そのわかり方にコク（注4）が出てくるものだ。そして、その結果に達するまでの道筋を楽しむことで、力がつく。\n勉強を楽しむなんて、と思うかもしれないが、それは目的ばかり見てあせるからで、楽しむ気になれば、なんだって楽しめるものだ。\n(注1)手がつかない:ここでは、できない\n(注2)オツな：ここでは、おもしろい\n(注3)おどされる:ここでは、早く問題を解かされる\n(注4)コク:深み\n57. 数学の問題を解くことについて、筆者の考えに合うのはどれか。",
+      "options": [
+        "早く解けなくても、解き方を身につけることが大切だ。",
+        "解けても解けなくても、問題に取り組むことが大切だ。",
+        "解けなかった問題が解けるようになったらおもしろくなる。",
+        "解き方のわからない問題を解こうとすることに意味がある。"
+      ],
+      "answer": 3,
+      "answer_text": "解き方のわからない問題を解こうとすることに意味がある。",
+      "answer_sentence": "",
+      "source": "JLPT N1 2024年7月 読解 問題10(57)",
+      "item_ids": [],
+      "memo": "頭のなかに飼っておく＝把疑问留在脑中"
+    }
+  ],
+  "sents": [
+    {
+      "id": "2015-12-grammar-passage-45-s0",
+      "jp": "その「じゃあね」に頭にきたと。",
+      "qid": "2015-12-grammar-passage-45",
+      "source": "JLPT N1 2015年12月 言語知識(文法) 問題7(45)",
+      "item_ids": [
+        "atama-ni-kuru"
+      ]
+    },
+    {
+      "id": "2019-12-reading-mid-50-s1",
+      "jp": "つまり、その瞬間の頭に浮かんだものは、ばらばらな断片と大まかな展望に他ならない。",
+      "qid": "2019-12-reading-mid-50",
+      "source": "JLPT N1 2019年12月 読解 問題9(50)",
+      "item_ids": [
+        "atama-ni-ukabu"
+      ]
+    },
+    {
+      "id": "2013-07-reading-long-63-s2",
+      "jp": "この丁寧さのおかげで、客は喜んで買い物をして、何度も足を運ぶ客となっていく。",
+      "qid": "2013-07-reading-long-63",
+      "source": "JLPT N1 2013年7月 読解 問題11(63)",
+      "item_ids": [
+        "ashi-hakobu"
+      ]
+    },
+    {
+      "id": "2025-07-reading-long-57-s3",
+      "jp": "しかし、その逆に、子どもの頃から美術館に何度も足を運び、なじみのある場所になっていれば、芸術作品との距離はもっと近づくだろう。",
+      "qid": "2025-07-reading-long-57",
+      "source": "JLPT N1 2025年7月 読解 問題10(57)",
+      "item_ids": [
+        "ashi-hakobu"
+      ]
+    },
+    {
+      "id": "2013-07-grammar-passage-41-s4",
+      "jp": "それに落葉の光景も思わず息を呑むほどのものであるらしい。",
+      "qid": "2013-07-grammar-passage-41",
+      "source": "JLPT N1 2013年7月 言語知識(文法) 問題7(41)",
+      "item_ids": [
+        "iki-nomu"
+      ]
+    },
+    {
+      "id": "2013-12-reading-long-65-s5",
+      "jp": "パソコンから顔を上げて、まっすぐ目を見て話しましょう。",
+      "qid": "2013-12-reading-long-65",
+      "source": "JLPT N1 2013年12月 読解 問題12(65)",
+      "item_ids": [
+        "kao-wo-ageru"
+      ]
+    },
+    {
+      "id": "2012-12-grammar-passage-41-s6",
+      "jp": "今まで「さぁ、踊って踊って」と、恥ずかしがる子供たちを踊りの輪に入れていた大人たちが、子供に声をかけなくなる。",
+      "qid": "2012-12-grammar-passage-41",
+      "source": "JLPT N1 2012年12月 言語知識(文法) 問題7(41)",
+      "item_ids": [
+        "koe-wo-kakeru"
+      ]
+    },
+    {
+      "id": "2013-12-grammar-passage-41-s7",
+      "jp": "目を合わせない、それが礼儀作法です。",
+      "qid": "2013-12-grammar-passage-41",
+      "source": "JLPT N1 2013年12月 言語知識(文法) 問題7(41)",
+      "item_ids": [
+        "me-awaseru"
+      ]
+    },
+    {
+      "id": "2013-07-reading-short-49-s8",
+      "jp": "絶望と見える対象を嫌ったり恐れたりして目をつぶって、そこを去れば、もう希望とは決して会えない。",
+      "qid": "2013-07-reading-short-49",
+      "source": "JLPT N1 2013年7月 読解 問題8(49)",
+      "item_ids": [
+        "me-tsuburu"
+      ]
+    },
+    {
+      "id": "2013-12-grammar-passage-41-s9",
+      "jp": "さて、よく吠えられても動じず、目をそらしつつ、手のひらに犬クッキーを載せて差し出します。",
+      "qid": "2013-12-grammar-passage-41",
+      "source": "JLPT N1 2013年12月 言語知識(文法) 問題7(41)",
+      "item_ids": [
+        "me-wo-sorasu"
+      ]
+    },
+    {
+      "id": "2011-07-grammar-passage-43-s10",
+      "jp": "みんながテレビの前で身を乗り出している瞬間にCMを入れれば、見られる。",
+      "qid": "2011-07-grammar-passage-43",
+      "source": "JLPT N1 2011年7月 言語知識(文法) 問題7(43)",
+      "item_ids": [
+        "mi-noridasu"
+      ]
+    },
+    {
+      "id": "2013-12-reading-long-65-s11",
+      "jp": "そして下を向いていればいるほど、良くない事態が悪化します。",
+      "qid": "2013-12-reading-long-65",
+      "source": "JLPT N1 2013年12月 読解 問題12(65)",
+      "item_ids": [
+        "shitamuku"
+      ]
+    },
+    {
+      "id": "2025-07-reading-long-60-s12",
+      "jp": "人は不安な状態に陥ると、反射的に下を向いています。",
+      "qid": "2025-07-reading-long-60",
+      "source": "JLPT N1 2025年7月 読解 問題11(60)",
+      "item_ids": [
+        "shitamuku"
+      ]
+    },
+    {
+      "id": "2011-12-reading-long-63-s13",
+      "jp": "自分がお金を出して手に入れたものだからこそ、愛着も出てくるだろうし、身近において毎日みていることで、いろんな刺激を受けていくはずだ。",
+      "qid": "2011-12-reading-long-63",
+      "source": "JLPT N1 2011年12月 読解 問題11(63)",
+      "item_ids": [
+        "te-ni-ireru"
+      ]
+    },
+    {
+      "id": "2014-07-reading-long-63-s14",
+      "jp": "気軽に手にしたマンガをきっかけに、知的好奇心が刺激されたりすることもあるだろう。",
+      "qid": "2014-07-reading-long-63",
+      "source": "JLPT N1 2014年7月 読解 問題11(63)",
+      "item_ids": [
+        "te-ni-suru"
+      ]
+    },
+    {
+      "id": "2020-12-reading-long-61-s15",
+      "jp": "現代は、どれだけ多くの情報を手にしているかで決まると言っても過言ではない。",
+      "qid": "2020-12-reading-long-61",
+      "source": "JLPT N1 2020年12月 読解 問題11(61)",
+      "item_ids": [
+        "te-ni-suru"
+      ]
+    },
+    {
+      "id": "2019-12-reading-short-48-s16",
+      "jp": "例えば、自分自身の気持ちとは裏腹に、あえて「人とは異なる発言、あるいは行動をする」ことを学んでいく。",
+      "qid": "2019-12-reading-short-48",
+      "source": "JLPT N1 2019年12月 読解 問題8(48)",
+      "item_ids": [
+        "urahara"
+      ]
+    },
+    {
+      "id": "2022-07-reading-long-61-s17",
+      "jp": "人の話に耳を傾け、言葉と心のキャッチポールができる人は、間違いなく好印象を与えます。",
+      "qid": "2022-07-reading-long-61",
+      "source": "JLPT N1 2022年7月 読解 問題11(61)",
+      "item_ids": [
+        "mimi-katamukeru"
+      ]
+    },
+    {
+      "id": "2023-07-reading-short-48-s18",
+      "jp": "よくよく考えたうえで口にする他人の異なる思いや考えに、これまたよく耳を澄ますことで、じぶんの考えを再点検しはじめるからだ。",
+      "qid": "2023-07-reading-short-48",
+      "source": "JLPT N1 2023年7月 読解 問題8(48)",
+      "item_ids": [
+        "mimi-sumasu"
+      ]
+    },
+    {
+      "id": "2012-12-vocab-paraphrase-16-s19",
+      "jp": "友人はしきりにうなずきながら話を聞いていた。",
+      "qid": "2012-12-vocab-paraphrase-16",
+      "source": "JLPT N1 2012年12月 言語知識(文字・語彙) 問題3(16)",
+      "item_ids": [
+        "unazuku"
+      ]
+    },
+    {
+      "id": "2016-07-reading-long-65-s20",
+      "jp": "編集者の言うことは、一般の人に対する情報発信の心構えとして、現時点では適切と言うほかありません。",
+      "qid": "2016-07-reading-long-65",
+      "source": "JLPT N1 2016年7月 読解 問題12(65)",
+      "item_ids": [
+        "kokorogamae"
+      ]
+    },
+    {
+      "id": "2021-12-reading-long-62-s21",
+      "jp": "このたび、貴社のテナント募集にあたり、弊店にもお声をかけて頂きましてありがとうございます。",
+      "qid": "2021-12-reading-long-62",
+      "source": "JLPT N1 2021年12月 読解 問題11(62)",
+      "item_ids": [
+        "koe-wo-kakeru"
+      ]
+    },
+    {
+      "id": "2024-07-reading-mid-49-s22",
+      "jp": "毎朝、新聞を適当に開き、目をつぶって紙面を指す。",
+      "qid": "2024-07-reading-mid-49",
+      "source": "JLPT N1 2024年7月 読解 問題9(49)",
+      "item_ids": [
+        "me-tsuburu"
+      ]
+    },
+    {
+      "id": "2019-12-reading-long-64-s23",
+      "jp": "「欲しい物」というのは具体的な物であり、それを手に入れる方法は限られていた。",
+      "qid": "2019-12-reading-long-64",
+      "source": "JLPT N1 2019年12月 読解 問題12(64)",
+      "item_ids": [
+        "te-ni-ireru"
+      ]
+    },
+    {
+      "id": "2024-12-reading-long-57-s24",
+      "jp": "慣れてくると手際が良くなる。",
+      "qid": "2024-12-reading-long-57",
+      "source": "JLPT N1 2024年12月 読解 問題10(57)",
+      "item_ids": [
+        "tekiva"
+      ]
+    }
+  ]
+}
