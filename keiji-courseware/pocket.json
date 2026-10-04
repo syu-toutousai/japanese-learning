@@ -1631,9 +1631,54 @@
         {
           "jp": "その方法はとても効果的だった。",
           "cn": "那个方法非常有效。"
+        },
+        {
+          "jp": "彼の説明は具体的で分かりやすく、参加者全員が納得した。",
+          "cn": "他的说明具体易懂，全体参加者都信服了。"
+        },
+        {
+          "jp": "この方法は一見原始的だが、実は最も効率的だと専門家は指摘している。",
+          "cn": "专家指出，这方法看似原始，实际上效率最高。"
         }
       ],
-      "note": "生造词能力超强：見た目的、意味的に……日常口语里不断繁殖。"
+      "note": "生造词能力超强：見た目的、意味的に……日常口语里不断繁殖。",
+      "nadeshiko": [
+        {
+          "jp": "まあ 距離(きょり)を取(と)るには 効果的(こうかてき)だろう",
+          "en": "Well, we could put some distance between us.",
+          "cn": "嗯，就保持距离来说大概很有效。",
+          "media": "The Disastrous Life of Saiki K.",
+          "ep": "EP21",
+          "at": "14:52",
+          "url": "https://nadeshiko.co/en/sentence/EXvqZ3pjR9ez",
+          "audio": "https://cdn.nadeshiko.co/media/21804/21/b9405f5952.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21804/21/b9405f5952.webp"
+        },
+        {
+          "jp": "積極的(せっきょくてき)っぽくないですか? 次(つぎ)",
+          "en": "The new folks seem very proactive.",
+          "cn": "是不是显得很积极？下一个。",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP15",
+          "at": "2:31",
+          "url": "https://nadeshiko.co/en/sentence/aFY-BZUVJQvp",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/15/db1c402e0a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/15/db1c402e0a.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "IT化が進み、仕事のやり方は年々（　）になってきた。",
+          "opts": [
+            "効率的",
+            "効率",
+            "効率性"
+          ],
+          "ans": 0,
+          "exp": "〜的＋な／に＝形容动词：効率的な方法／効率的に進める。効率・効率性是名词。"
+        }
+      ]
     },
     {
       "id": "ka2",
@@ -1648,9 +1693,58 @@
         {
           "jp": "町では国際化が進んでいます。",
           "cn": "城市里的国际化在不断推进。"
+        },
+        {
+          "jp": "少子高齢化が進むにつれて、社会保障制度の見直しが急務となっている。",
+          "cn": "随着少子老龄化加剧，重新审视社会保障制度已成为当务之急。"
+        },
+        {
+          "jp": "業務の自動化を導入した結果、単純作業にかかる時間が半分以下になった。",
+          "cn": "引进业务自动化后，花在简单作业上的时间减少到一半以下。"
+        },
+        {
+          "jp": "過疎化が進む地域では、学校の統廃合が避けられない状況にある。",
+          "cn": "在人口过疏化加剧的地区，学校的撤并已不可避免。"
         }
       ],
-      "note": "新闻高频：少子化・高齢化・デジタル化。也可作动词：自動化する。"
+      "note": "新闻高频：少子化・高齢化・デジタル化。也可作动词：自動化する。",
+      "nadeshiko": [
+        {
+          "jp": "ニートの高齢化(こうれいか)が深刻(しんこく)な問題(もんだい)に なってるらしいんですよ",
+          "en": "The aging, unemployed singles are becoming a serious social problem.",
+          "cn": "听说啃老族老龄化正在成为严重的社会问题。",
+          "media": "Uncle from Another World",
+          "ep": "EP3",
+          "at": "12:49",
+          "url": "https://nadeshiko.co/en/sentence/DcxoFOByj7bS",
+          "audio": "https://cdn.nadeshiko.co/media/135806/3/2e8e3bc870.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/135806/3/2e8e3bc870.webp"
+        },
+        {
+          "jp": "これからの国際化(こくさいか)社会(しゃかい)の時代(じだい)-　英語力(えいごりょく)で対抗(たいこう)していく能力(のうりょく)を 身(み)に着(つ)けられたら-",
+          "en": "and gain the ability to use English in this age of globalization,",
+          "cn": "要是能掌握在未来的国际化社会里凭英语能力来抗衡的本领……",
+          "media": "The Naked Director",
+          "ep": "EP1",
+          "at": "20:28",
+          "url": "https://nadeshiko.co/en/sentence/8J9h2hk2Ub0d",
+          "audio": "https://cdn.nadeshiko.co/media/mv/90955/1/7756ac3da6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/90955/1/7756ac3da6.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この工場では、組立作業の（　）によって生産コストが大幅に下がった。",
+          "opts": [
+            "自動化",
+            "自動性",
+            "自動的"
+          ],
+          "ans": 0,
+          "exp": "〜化＝使其变成某种状态：自動化・国際化・高齢化。性・的接名词表性质或属性。"
+        }
+      ]
     },
     {
       "id": "yasui",
@@ -1669,9 +1763,54 @@
         {
           "jp": "佐藤先生は話しやすい人です。",
           "cn": "佐藤老师是个好相处（好说话）的人。"
+        },
+        {
+          "jp": "このアプリは操作が簡単で、年配の方にも使いやすいと評判だ。",
+          "cn": "这款应用操作简单，口碑是老年人也容易使用。"
+        },
+        {
+          "jp": "彼は気さくで話しやすいが、いざというときには厳しい一面ものぞかせる。",
+          "cn": "他为人随和好说话，但关键时刻也会露出严厉的一面。"
         }
       ],
-      "note": "接ます形去ます：食べる→食べやすい。反义搭档是〜にくい。"
+      "note": "接ます形去ます：食べる→食べやすい。反义搭档是〜にくい。",
+      "nadeshiko": [
+        {
+          "jp": "切(き)れ味(あじ)良(よ)くて なかなか使(つか)いやすいよ",
+          "en": "It's sharp and pretty easy to use.",
+          "cn": "锋利好用，相当顺手哦。",
+          "media": "Fate/Zero",
+          "ep": "EP18",
+          "at": "6:03",
+          "url": "https://nadeshiko.co/en/sentence/7nxdk8WgoseE",
+          "audio": "https://cdn.nadeshiko.co/media/10087/18/73335a6302.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/10087/18/73335a6302.webp"
+        },
+        {
+          "jp": "うん わかりやすいでしょ",
+          "en": "Yep! Pretty straightforward, huh?",
+          "cn": "嗯，很好懂吧。",
+          "media": "Kill la Kill",
+          "ep": "EP2",
+          "at": "9:36",
+          "url": "https://nadeshiko.co/en/sentence/OO582FhzRpAr",
+          "audio": "https://cdn.nadeshiko.co/media/18679/2/bb689df193.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/18679/2/bb689df193.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "佐藤先生の説明はとても（　）ので、初心者にもよく分かった。",
+          "opts": [
+            "分かりやすかった",
+            "分かりにくかった",
+            "分かりすぎた"
+          ],
+          "ans": 0,
+          "exp": "ます形去ます＋やすい＝容易～：分かりやすい→分かりやすかった。にくい＝难以～，すぎた＝过度。"
+        }
+      ]
     },
     {
       "id": "nikui",
@@ -1690,9 +1829,54 @@
         {
           "jp": "言いにくいことですが、少し誤解があるようです。",
           "cn": "话有点难开口，不过好像有些误会。"
+        },
+        {
+          "jp": "この説明書は専門用語が多く、初心者には分かりにくい。",
+          "cn": "这本说明书专业术语太多，新手很难看懂。"
+        },
+        {
+          "jp": "彼の話し方は早口で、外国人には聞き取りにくい。",
+          "cn": "他说话语速快，对外国人来说很难听懂。"
         }
       ],
-      "note": "≠不可能（できない）：にくい＝费力、不顺手。真正不可能要用〜がたい（书面）。"
+      "note": "≠不可能（できない）：にくい＝费力、不顺手。真正不可能要用〜がたい（书面）。",
+      "nadeshiko": [
+        {
+          "jp": "その本(ほん) めちゃめちゃ読(よ)みにくいから",
+          "en": "That book's super hard to read,",
+          "cn": "那本书超级难读。",
+          "media": "My Hero Academia: Vigilantes",
+          "ep": "EP7",
+          "at": "0:53",
+          "url": "https://nadeshiko.co/en/sentence/osgDHamq23Fh",
+          "audio": "https://cdn.nadeshiko.co/media/185736/7/f17cef7d8e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/185736/7/f17cef7d8e.webp"
+        },
+        {
+          "jp": "しかし カクテルの名前(なまえ)って わかりにくいのも多(おお)いな。",
+          "en": "A lot of cocktails have confusing names.",
+          "cn": "不过鸡尾酒的名字，难懂的也很多啊。",
+          "media": "Grand Blue Dreaming",
+          "ep": "EP8",
+          "at": "8:27",
+          "url": "https://nadeshiko.co/en/sentence/30iSo_oA8bvl",
+          "audio": "https://cdn.nadeshiko.co/media/100922/8/a93aa2ac6b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100922/8/a93aa2ac6b.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この字は小さすぎて、（　）。",
+          "opts": [
+            "読みにくい",
+            "読みやすい",
+            "読みがち"
+          ],
+          "ans": 0,
+          "exp": "ます形去ます＋にくい＝难以～。やすい是其反义，がち＝动不动就～。"
+        }
+      ]
     },
     {
       "id": "gachi",
@@ -1711,6 +1895,14 @@
         {
           "jp": "最近は天気が悪くて、曇りがちの日が続いている。",
           "cn": "最近天气不好，阴天接连不断。"
+        },
+        {
+          "jp": "忙しさに追われると、食事が不規則になりがちである。",
+          "cn": "一旦被忙碌追着跑，饮食就容易变得不规律。"
+        },
+        {
+          "jp": "彼は遠慮がちに口を開いたが、結局何も言わずに黙ってしまった。",
+          "cn": "他犹豫客气地开了口，结果什么也没说就沉默了。"
         }
       ],
       "note": "接ます形去ます或名词：忘れがち・遠慮がち・曇りがち。与〜やすい之别：やすい＝客观上好做；がち＝不知不觉倒向某状态，消极场合居多。",
@@ -1725,6 +1917,30 @@
           ],
           "ans": 0,
           "exp": "休みがち＝动不动就请假（不情愿地反复倾向）。やすい要说「休みやすい」得是环境允许才成立。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "元気(げんき)ですよ 仕事柄(しごとがら) 不規則(ふきそく)な生活(せいかつ)になりがちですけど",
+          "en": "Oh, he's well now. Though he does tend to keep an irregular schedule due to his work.",
+          "cn": "他挺好的，只是因为工作性质，生活容易不规律。",
+          "media": "Junjo Romantica 2",
+          "ep": "EP3",
+          "at": "10:39",
+          "url": "https://nadeshiko.co/en/sentence/PTm1sdymzDB5",
+          "audio": "https://cdn.nadeshiko.co/media/4814/3/e42ff6dcbc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4814/3/e42ff6dcbc.webp"
+        },
+        {
+          "jp": "ちほちゃんは 学校(がっこう)を休(やす)みがちになった",
+          "en": "Chiho had a lot of absences from school after that.",
+          "cn": "千穗变得经常请假不去学校。",
+          "media": "March comes in like a lion Season 2",
+          "ep": "EP4",
+          "at": "6:13",
+          "url": "https://nadeshiko.co/en/sentence/tUTqsmtyBESA",
+          "audio": "https://cdn.nadeshiko.co/media/98478/4/8c6ef3e018.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98478/4/8c6ef3e018.webp"
         }
       ]
     },
@@ -1988,9 +2204,50 @@
         {
           "jp": "試験中に緊張がりやになるのは自然なことだ。",
           "cn": "考试时容易紧张是很自然的事。"
+        },
+        {
+          "jp": "彼は怖がり屋のくせに、ホラー映画を見たがる。",
+          "cn": "他明明是个胆小鬼，却偏偏想看恐怖片。"
         }
       ],
-      "note": "构成：い-词干＋がり屋（暑い→暑がり屋＝怕热的人）；ます-词干＋がり屋（走る→走りがり屋＝爱跑步的人）。～がり屋は N2 级接尾辞，日常会话高频，用法活泼。"
+      "note": "构成：い-词干＋がり屋（暑い→暑がり屋＝怕热的人）；ます-词干＋がり屋（走る→走りがり屋＝爱跑步的人）。～がり屋は N2 级接尾辞，日常会话高频，用法活泼。",
+      "nadeshiko": [
+        {
+          "jp": "2人(ふたり)とも寂(さび)しがり屋(や)の 意地(いじ)っ張(ぱ)りだから",
+          "en": "You're both lonely, but too stubborn to admit it,",
+          "cn": "你们两个都是又怕寂寞又倔强。",
+          "media": "WITCH WATCH",
+          "ep": "EP4",
+          "at": "20:48",
+          "url": "https://nadeshiko.co/en/sentence/a2X-UCGFzhCl",
+          "audio": "https://cdn.nadeshiko.co/media/180367/4/307a274a0e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/180367/4/307a274a0e.webp"
+        },
+        {
+          "jp": "恥(は)ずかしがり屋(や)さんなんじゃから もう",
+          "en": "They must be shy. What a nuisance.",
+          "cn": "真是个害羞的家伙，真是的。",
+          "media": "Mushoku Tensei: Jobless Reincarnation",
+          "ep": "EP8",
+          "at": "19:34",
+          "url": "https://nadeshiko.co/en/sentence/ez0B0XNhpUuL",
+          "audio": "https://cdn.nadeshiko.co/media/108465/8/d40223dcbe.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/108465/8/d40223dcbe.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "弟は（　）で、一人で留守番ができない。",
+          "opts": [
+            "寂しがり屋",
+            "寂しい屋",
+            "寂し者"
+          ],
+          "ans": 0,
+          "exp": "い-词干＋がり屋＝爱…的人：寂しがり屋＝怕寂寞的人；恥ずかしがり屋＝害羞的人。"
+        }
+      ]
     },
     {
       "id": "ha",
