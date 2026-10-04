@@ -291,6 +291,11 @@ def gen_nade_audio(items):
 
 def build_questions(groups, items, audio):
     rng = random.Random(SEED)
+    sent_pool = []
+    for it in items:
+        exs = it.get("examples") or []
+        if exs and exs[0].get("jp") and exs[0].get("cn"):
+            sent_pool.append({"id": it["id"], "jp": exs[0]["jp"], "cn": exs[0]["cn"]})
 
     def distractors(it, field, n=3):
         own = it[field]
@@ -350,7 +355,6 @@ def build_questions(groups, items, audio):
                     q=f'{blanked}<br><span class="hint">（　）里填回哪个语法？</span>',
                     opts=opts, ans=0,
                     exp=f'完整句子：{ex["jp"]}<br>{ex["cn"]}')
-                break
 
         # 🎧 聴解判别：听例句判断用了哪个语法
         exs = it.get("examples") or []
@@ -362,6 +366,30 @@ def build_questions(groups, items, audio):
                 q="🎧 听音频：句子里用了哪个语法？",
                 opts=opts, ans=0,
                 exp=f'原句：{exs[0]["jp"]}<br>{exs[0]["cn"]}')
+
+        # 🎧 聴解・意味理解／書き取り（音声→意味・原文）
+        ex0 = (exs or [{}])[0]
+        if f"{iid}-e0" in audio and ex0.get("cn"):
+            cn_cands, jp_cands = [], []
+            for s in sent_pool:
+                if s["id"] == iid:
+                    continue
+                if s["cn"] != ex0["cn"] and s["cn"] not in cn_cands:
+                    cn_cands.append(s["cn"])
+                if s["jp"] != ex0["jp"] and s["jp"] not in jp_cands:
+                    jp_cands.append(s["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(cn_cands) >= 3:
+                add("listen2", f"{iid}:listen2", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[ex0["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{iid}:listen3", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[ex0["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
 
         # ⭕ 判断正誤
         add("judge", f"{iid}:judge-jp", type="judge",
@@ -1070,6 +1098,7 @@ def main():
     print(f"[3/4] generating quiz banks for {n_total} grammar points...")
     qs = build_questions(groups, items, audio)
     banks_meta = [[k, l] for k, l in meta.get("quizBanks", [
+        ["listen2", "🎧 聴解・意味理解"], ["listen3", "🎧 聴解・書き取り"],
         ["recog", "📘 语法认识"], ["engine", "🔧 Engine拆解"],
         ["fill", "✍️ 运用填空"], ["listen", "🎧 聴解判别"],
         ["judge", "⭕ 判断正误"]
