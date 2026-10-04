@@ -276,9 +276,54 @@
         {
           "jp": "熱いお茶を一杯いかがですか。",
           "cn": "来一杯热茶怎么样？"
+        },
+        {
+          "jp": "お忙しいところ恐れ入りますが、お手元の資料に目を通していただけますか。",
+          "cn": "百忙之中非常抱歉，能请您过目一下手头的资料吗？"
+        },
+        {
+          "jp": "駅前のお店で買ったお土産を、お世話になった先生にお渡しした。",
+          "cn": "我把在车站前那家店买的土特产，送给了关照过我的老师。"
         }
       ],
-      "note": "自己的东西原则上不加：说「お荷物」（对方的），说「荷物」（自己的）。"
+      "note": "自己的东西原则上不加：说「お荷物」（对方的），说「荷物」（自己的）。",
+      "nadeshiko": [
+        {
+          "jp": "えっと... お名前(なまえ)は?",
+          "en": "Let's see... What's your name?",
+          "cn": "那个……您怎么称呼？",
+          "media": "Summer Pockets",
+          "ep": "EP18",
+          "at": "1:26",
+          "url": "https://nadeshiko.co/en/sentence/3hblSfW0StyQ",
+          "audio": "https://cdn.nadeshiko.co/media/143200/18/d207dafdd3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143200/18/d207dafdd3.webp"
+        },
+        {
+          "jp": "お茶(ちゃ)がいいかも お茶(ちゃ)? オーケー",
+          "en": "Tea would be great. -Tea? Okay.",
+          "cn": "喝茶好像不错。——茶？好嘞。",
+          "media": "Terrace House: Tokyo 2019-2020",
+          "ep": "EP3",
+          "at": "21:34",
+          "url": "https://nadeshiko.co/en/sentence/wHevYYIadyb1",
+          "audio": "https://cdn.nadeshiko.co/media/mv/88850/3/5f63da2f4e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/88850/3/5f63da2f4e.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "（　）名前を伺ってもよろしいでしょうか。",
+          "opts": [
+            "お",
+            "ご",
+            "み"
+          ],
+          "ans": 0,
+          "exp": "名前是训读和语词，配前缀「お」；汉语词才配「ご」。伺う是「聞く」的谦让语。"
+        }
+      ]
     },
     {
       "id": "go",
@@ -297,9 +342,54 @@
         {
           "jp": "ご住所とお名前を書いてください。",
           "cn": "请写下您的住址和姓名。"
+        },
+        {
+          "jp": "ご多忙の折とは存じますが、ご都合のよろしい日時をお知らせいただければ幸いです。",
+          "cn": "深知您公务繁忙，若能告知您方便的日期时间，将不胜感激。"
+        },
+        {
+          "jp": "先生のご指導のおかげで、難しい論文を無事に書き上げることができました。",
+          "cn": "多亏老师的指导，我得以顺利完成了那篇难写的论文。"
         }
       ],
-      "note": "和语词配お、汉语词配置ご是基本分工（例外：お電話、ごゆっくり）。"
+      "note": "和语词配お、汉语词配置ご是基本分工（例外：お電話、ごゆっくり）。",
+      "nadeshiko": [
+        {
+          "jp": "貴重(きちょう)なご意見(いけん)ありがとうございました",
+          "en": "Thank you for your valuable feedback.",
+          "cn": "感谢您宝贵的意见。",
+          "media": "The aquatope on white sand",
+          "ep": "EP20",
+          "at": "19:02",
+          "url": "https://nadeshiko.co/en/sentence/5qRE5P3dqtp5",
+          "audio": "https://cdn.nadeshiko.co/media/128545/20/676316776b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128545/20/676316776b.webp"
+        },
+        {
+          "jp": "原因(げんいん)がわかりしだい ご連絡(れんらく)いたします",
+          "en": "In any event, once we know the cause of this, we'll be in touch.",
+          "cn": "一旦查明原因，我们会立刻与您联系。",
+          "media": "Yu Yu Hakusho: Ghostfiles",
+          "ep": "EP81",
+          "at": "6:06",
+          "url": "https://nadeshiko.co/en/sentence/jAqVf0VvH_M_",
+          "audio": "https://cdn.nadeshiko.co/media/392/81/1caee7344d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/392/81/1caee7344d.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この件について（　）説明いたします。",
+          "opts": [
+            "ご",
+            "お",
+            "み"
+          ],
+          "ans": 0,
+          "exp": "説明是汉语词，配前缀「ご」；和语词才配「お」。ご説明いたします＝由我来为您说明。"
+        }
+      ]
     },
     {
       "id": "dai",
@@ -318,9 +408,54 @@
         {
           "jp": "第一回のスピーチコンテストで優勝しました。",
           "cn": "在第一届演讲比赛中获了奖。"
+        },
+        {
+          "jp": "彼は入社三年目にして、ついに第一志望の部署へ異動することができた。",
+          "cn": "他进公司第三年，终于得以调到自己第一志愿的部门。"
+        },
+        {
+          "jp": "この研究は、第二次世界大戦後の復興を第三者の視点から描いたものである。",
+          "cn": "这项研究是从第三方的视角描绘二战后复兴历程的。"
         }
       ],
-      "note": "数字读法固定音读：第一（だいいち）、第二（だいに）。"
+      "note": "数字读法固定音读：第一（だいいち）、第二（だいに）。",
+      "nadeshiko": [
+        {
+          "jp": "《こういうのは 第一印象(だいいちいんしょう)が大事(だいじ)だし",
+          "en": "First impressions are important here.",
+          "cn": "这种事，第一印象很重要的。",
+          "media": "Frieren: Beyond Journey’s End",
+          "ep": "EP18",
+          "at": "12:57",
+          "url": "https://nadeshiko.co/en/sentence/BrvfM9vobX8X",
+          "audio": "https://cdn.nadeshiko.co/media/154587/18/30a7cb19f6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154587/18/30a7cb19f6.webp"
+        },
+        {
+          "jp": "よし ようやく第一歩(だいいっぽ)だ!",
+          "en": "Okay, I've finally taken the first step!",
+          "cn": "好，终于迈出第一步了！",
+          "media": "Kaiju No. 8",
+          "ep": "EP9",
+          "at": "1:02",
+          "url": "https://nadeshiko.co/en/sentence/cvBJMrjcKEsi",
+          "audio": "https://cdn.nadeshiko.co/media/153288/9/490d194c95.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153288/9/490d194c95.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼は（　）一志望の大学に合格した。",
+          "opts": [
+            "第",
+            "毎",
+            "本"
+          ],
+          "ans": 0,
+          "exp": "第〜接数词构成序数：第一志望＝第一志愿。毎〜表反复，本〜表当前，都不合。"
+        }
+      ]
     },
     {
       "id": "mai",
@@ -335,9 +470,58 @@
         {
           "jp": "毎朝六時に起きます。",
           "cn": "每天早晨六点起床。"
+        },
+        {
+          "jp": "毎晩のように残業が続き、体調を崩してしまった。",
+          "cn": "几乎每晚都加班，结果把身体搞垮了。"
+        },
+        {
+          "jp": "健康のために、毎朝三十分ほど散歩する習慣を身につけた。",
+          "cn": "为了健康，我养成了每天早上散步三十分钟左右的习惯。"
+        },
+        {
+          "jp": "彼女は毎回の会議で必ず鋭い質問をするので、誰も油断できない。",
+          "cn": "她每次开会都必定提出尖锐的问题，所以谁都不敢大意。"
         }
       ],
-      "note": "毎日・毎晩后面不加に；但「毎年末に」「毎年正月に」可加に。"
+      "note": "毎日・毎晩后面不加に；但「毎年末に」「毎年正月に」可加に。",
+      "nadeshiko": [
+        {
+          "jp": "もう 毎朝(まいあさ)毎朝(まいあさ)うっとうしい!",
+          "en": "Sheesh. They're so annoying, doing this every morning.",
+          "cn": "真是的，每天早上都这样，烦死了！",
+          "media": "Ranma1/2 (2024)",
+          "ep": "EP2",
+          "at": "6:57",
+          "url": "https://nadeshiko.co/en/sentence/o_mGn7YdxOrf",
+          "audio": "https://cdn.nadeshiko.co/media/178533/2/f5bef5a3b8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/178533/2/f5bef5a3b8.webp"
+        },
+        {
+          "jp": "毎晩(まいばん)毎晩(まいばん) 気味(きみ)が悪(わる)い",
+          "en": "It happens night after night... It's so creepy.",
+          "cn": "每天晚上都这样，真瘆人。",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP6",
+          "at": "6:43",
+          "url": "https://nadeshiko.co/en/sentence/09GWD3L1FtUn",
+          "audio": "https://cdn.nadeshiko.co/media/101922/6/11c360b637.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/6/11c360b637.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "（　）週末は家族と過ごすことにしている。",
+          "opts": [
+            "毎",
+            "第",
+            "各"
+          ],
+          "ans": 0,
+          "exp": "毎〜＝每个…：毎週末＝每个周末。第〜接序数，各〜多接「各国・各社」等名词。"
+        }
+      ]
     },
     {
       "id": "goto",
@@ -356,6 +540,14 @@
         {
           "jp": "りんごを洗って、皮ごと食べます。",
           "cn": "把苹果洗干净连皮吃。"
+        },
+        {
+          "jp": "会議のたびに議事録を取るよう言われているが、実際には担当者ごとにやり方が違う。",
+          "cn": "虽然要求每次开会都要做会议记录，但实际上每个负责人的做法都不一样。"
+        },
+        {
+          "jp": "この薬は八時間ごとに服用しなければならないので、夜中に起きる必要がある。",
+          "cn": "这种药必须每隔八小时服用一次，所以半夜也得起来。"
         }
       ],
       "note": "与毎〜分工：固定搭配「毎日・毎晩」用前缀毎；带数量间隔的「一週間ごとに（每隔一周）」「4時間ごとに」用ごとに。「皮ごと・箱ごと」是「连同」义。",
@@ -370,6 +562,30 @@
           ],
           "ans": 0,
           "exp": "带数量间隔的反复用〜ごとに：4時間ごとに＝每隔四小时。✗毎4時間。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "大会(たいかい)ごとに オーディションがある",
+          "en": "An audition for each competition.",
+          "cn": "每届大赛都有一次选拔。",
+          "media": "Sound! Euphonium 3",
+          "ep": "EP6",
+          "at": "17:36",
+          "url": "https://nadeshiko.co/en/sentence/S8l61orsPkAg",
+          "audio": "https://cdn.nadeshiko.co/media/109731/6/6417e7a3ba.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/109731/6/6417e7a3ba.webp"
+        },
+        {
+          "jp": "季節(きせつ)ごとに色(いろ)が変(か)わる峡谷(きょうこく)の景色(けしき)はまさに絶景(ぜっけい)",
+          "en": "The gorge's views, which change colors with each season, are a truly breathtaking sight.",
+          "cn": "随着季节变换色彩的峡谷风光，堪称绝景。",
+          "media": "ZatsuTabi -That's Journey-",
+          "ep": "EP3",
+          "at": "4:55",
+          "url": "https://nadeshiko.co/en/sentence/-73AQUTyE_oz",
+          "audio": "https://cdn.nadeshiko.co/media/165445/3/17513e3444.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/165445/3/17513e3444.webp"
         }
       ]
     },
@@ -532,6 +748,14 @@
         {
           "jp": "お久しぶりですね、元気でしたか。",
           "cn": "好久不见，还好吗？"
+        },
+        {
+          "jp": "十年ぶりに再会した旧友は、すっかり貫禄がついて、まるで別人のようだった。",
+          "cn": "时隔十年重逢的旧友，气度大不一样，简直像换了个人。"
+        },
+        {
+          "jp": "彼女は五年ぶりに舞台に復帰し、観客から大きな拍手を浴びた。",
+          "cn": "她时隔五年重返舞台，赢得了观众热烈的掌声。"
         }
       ],
       "note": "「数字＋ぶりに＋Ｖ」是高频句型；「お久しぶり」已固化为寒暄语。",
@@ -547,6 +771,30 @@
           ],
           "ans": 0,
           "exp": "三年ぶり＝时隔三年。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "20年(ねん)ぶりかしら フフフ",
+          "en": "It has been more than 20 years.",
+          "cn": "大概有二十年没见了吧，呵呵呵。",
+          "media": "The Disastrous Life of Saiki K.",
+          "ep": "EP19",
+          "at": "9:17",
+          "url": "https://nadeshiko.co/en/sentence/Q2hY6SNZTM04",
+          "audio": "https://cdn.nadeshiko.co/media/21804/19/d4e6dc6d5b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21804/19/d4e6dc6d5b.webp"
+        },
+        {
+          "jp": "こんにちは お久(ひさ)しぶりです!",
+          "en": "Hello! Long time no see!",
+          "cn": "你好！好久不见了！",
+          "media": "Spice and Wolf: MERCHANT MEETS THE WISE WOLF",
+          "ep": "EP1",
+          "at": "4:51",
+          "url": "https://nadeshiko.co/en/sentence/VjSTOmP-rR3M",
+          "audio": "https://cdn.nadeshiko.co/media/145728/1/4c923c0b49.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/145728/1/4c923c0b49.webp"
         }
       ]
     },
