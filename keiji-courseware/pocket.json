@@ -1103,9 +1103,54 @@
         {
           "jp": "夕食の材料を八百屋で買いました。",
           "cn": "在蔬菜店买了做晚饭的材料。"
+        },
+        {
+          "jp": "駅前の大手書店が撤退してから、近所の小さな本屋が貴重な存在になった。",
+          "cn": "自从车站前的大型书店撤走后，附近的小书店就变得可贵起来。"
+        },
+        {
+          "jp": "彼は昼間は銀行員として働きながら、夜は居酒屋で皿洗いのアルバイトをしている。",
+          "cn": "他白天当银行职员，晚上在居酒屋打零工洗盘子。"
         }
       ],
-      "note": "八百屋＝卖蔬果的店（不是只卖八百种东西！）。"
+      "note": "八百屋＝卖蔬果的店（不是只卖八百种东西！）。",
+      "nadeshiko": [
+        {
+          "jp": "しかし この本屋(ほんや) 久(ひさ)しぶりだなあ",
+          "en": "Still, I haven't been in this store in a while, huh?",
+          "cn": "不过，好久没来这家书店了呀。",
+          "media": "ONIMAI: I'm Now Your Sister!",
+          "ep": "EP10",
+          "at": "15:01",
+          "url": "https://nadeshiko.co/en/sentence/dKWyFdcJVit8",
+          "audio": "https://cdn.nadeshiko.co/media/147864/10/20939b80bc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/147864/10/20939b80bc.webp"
+        },
+        {
+          "jp": "放(はな)せ!よせ ここは居酒屋(いざかや)だ。",
+          "en": "Let go of me! - Don't! We're in a pub.",
+          "cn": "放开我！住手，这里可是居酒屋。",
+          "media": "Naruto",
+          "ep": "EP90",
+          "at": "17:50",
+          "url": "https://nadeshiko.co/en/sentence/hSp5OIdRk2yq",
+          "audio": "https://cdn.nadeshiko.co/media/20/90/e9ab64c1db.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20/90/e9ab64c1db.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "あの（　）は店主のこだわりが強くて、常連客が多い。",
+          "opts": [
+            "本屋",
+            "本家",
+            "本者"
+          ],
+          "ans": 0,
+          "exp": "〜屋＝卖…的店／从事该行当的人：本屋＝书店。家／者不能构成店名。"
+        }
+      ]
     },
     {
       "id": "ka",
@@ -1120,9 +1165,58 @@
         {
           "jp": "姉は小説家になる夢があります。",
           "cn": "姐姐梦想成为小说家。"
+        },
+        {
+          "jp": "その小説家は、若い頃の貧しい経験を素材に、人間の孤独を描き続けてきた。",
+          "cn": "那位小说家以年轻时的贫穷经历为素材，一直描绘着人的孤独。"
+        },
+        {
+          "jp": "彼女は一流の料理家として認められるまで、二十年にわたる修業を積んだ。",
+          "cn": "她经过了长达二十年的修行，才被公认为一流厨师。"
+        },
+        {
+          "jp": "政治家は、国民の信頼を失えば、どんなに優れた政策を掲げても実行できない。",
+          "cn": "政治家一旦失去国民的信任，无论提出多么优秀的政策都无法推行。"
         }
       ],
-      "note": "读か不读いえ：「家を建てる」的いえ是房子，作家・画家才是这个后缀。"
+      "note": "读か不读いえ：「家を建てる」的いえ是房子，作家・画家才是这个后缀。",
+      "nadeshiko": [
+        {
+          "jp": "やっぱり 構成(こうせい)作家(さっか)って 稼(かせ)げるのかしら。",
+          "en": "I guess series scriptwriters make good money.",
+          "cn": "果然，编剧这行当能赚钱吗？",
+          "media": "The Many Sides of Voice Actor Radio",
+          "ep": "EP8",
+          "at": "0:13",
+          "url": "https://nadeshiko.co/en/sentence/ChGibX7ohc8L",
+          "audio": "https://cdn.nadeshiko.co/media/159039/8/8c83d8e686.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/159039/8/8c83d8e686.webp"
+        },
+        {
+          "jp": "政治家(せいじか) 芸術家(げいじゅつか) アスリート 学者(がくしゃ) 技術者(ぎじゅつしゃ)　エトセトラ...",
+          "en": "Politicians, artists, athletes, scholars, engineers, et cetera.",
+          "cn": "政治家、艺术家、运动员、学者、技术人员等等……",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP4",
+          "at": "18:39",
+          "url": "https://nadeshiko.co/en/sentence/6PLyoNxHGF1_",
+          "audio": "https://cdn.nadeshiko.co/media/177937/4/aeb7420a29.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/4/aeb7420a29.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼は若いながらにして、すでに一流の小説（　）として認められている。",
+          "opts": [
+            "家",
+            "者",
+            "屋"
+          ],
+          "ans": 0,
+          "exp": "〜家＝在某领域有专业造诣的人：小説家。者＝从事…的人（医者・記者），屋＝店铺・行当。"
+        }
+      ]
     },
     {
       "id": "in",
@@ -1141,9 +1235,54 @@
         {
           "jp": "兄は自動車メーカーの社員です。",
           "cn": "哥哥是一家汽车公司的职员。"
+        },
+        {
+          "jp": "新人店員は、先輩の接客を見よう見まねで覚えていった。",
+          "cn": "新店员靠模仿前辈的接待方式逐渐学会了工作。"
+        },
+        {
+          "jp": "駅員の誘導に従って、乗客たちは落ち着いて避難を始めた。",
+          "cn": "乘客们按照站务员的引导，镇定地开始避难。"
         }
       ],
-      "note": "会社員＝公司职员（职业）；社員＝某公司的员工（所属）。"
+      "note": "会社員＝公司职员（职业）；社員＝某公司的员工（所属）。",
+      "nadeshiko": [
+        {
+          "jp": "あら? 女(おんな)の子(こ)の店員(てんいん)さんじゃ...",
+          "en": "O-oh? I thought a girl worked here...",
+          "cn": "咦？不是个女店员吗……",
+          "media": "Call of the Night",
+          "ep": "EP5",
+          "at": "19:01",
+          "url": "https://nadeshiko.co/en/sentence/PB_4b_QnzBFM",
+          "audio": "https://cdn.nadeshiko.co/media/141391/5/ff80137b3c.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/141391/5/ff80137b3c.webp"
+        },
+        {
+          "jp": "親鳥(おやどり)はカラスにやられたかもって 駅員(えきいん)のお兄(にい)さんが言(い)ってた",
+          "en": "The guy at the station said that he thought that maybe their mother had gotten killed by a crow.",
+          "cn": "车站的大哥哥说，母鸟也许被乌鸦袭击了。",
+          "media": "Sonny Boy",
+          "ep": "EP12",
+          "at": "21:06",
+          "url": "https://nadeshiko.co/en/sentence/q5Tdwwy4AJd9",
+          "audio": "https://cdn.nadeshiko.co/media/132126/12/3051cc578b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/132126/12/3051cc578b.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "銀行（　）として、窓口でお客様の対応にあたっている。",
+          "opts": [
+            "員",
+            "者",
+            "家"
+          ],
+          "ans": 0,
+          "exp": "〜員＝组织所属人员：銀行員・店員。者偏向职业身份（記者・医者），家指专业造诣者。"
+        }
+      ]
     },
     {
       "id": "sha",
@@ -1158,9 +1297,58 @@
         {
           "jp": "弟は新聞記者です。",
           "cn": "弟弟是报社记者。"
+        },
+        {
+          "jp": "その記者は、政府の不正を追及したために、長年取材先から締め出された。",
+          "cn": "那名记者因为追究政府的不正之风，长年被采访对象拒之门外。"
+        },
+        {
+          "jp": "医者の努力もむなしく、患者の容体は徐々に悪化していった。",
+          "cn": "医生的努力也落了空，患者的病情一点点恶化下去。"
+        },
+        {
+          "jp": "彼は一流の技術者として世界的に認められているが、決して謙虚さを失わない。",
+          "cn": "他作为一流的技术人员在世界上得到认可，却绝不失谦逊。"
         }
       ],
-      "note": "「者（もの）」单独用表谦逊的人（私は田中と申す者です）；接尾读しゃ。"
+      "note": "「者（もの）」单独用表谦逊的人（私は田中と申す者です）；接尾读しゃ。",
+      "nadeshiko": [
+        {
+          "jp": "えっ　週刊誌(しゅうかんし)の記者(きしゃ)... なんで?",
+          "en": "Huh? A tabloid reporter? Why?",
+          "cn": "诶，周刊杂志的记者……为什么？",
+          "media": "【OSHI NO KO】Season 3",
+          "ep": "EP6",
+          "at": "10:08",
+          "url": "https://nadeshiko.co/en/sentence/oLkMhlLW9CDC",
+          "audio": "https://cdn.nadeshiko.co/media/182587/6/23f38b3527.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/182587/6/23f38b3527.webp"
+        },
+        {
+          "jp": "おい 医者(いしゃ)ー! 医者(いしゃ) どこだ!?",
+          "en": "Doctor! Where's the doctor?!",
+          "cn": "喂，医生——！医生在哪！？",
+          "media": "ONE PIECE",
+          "ep": "EP81",
+          "at": "23:25",
+          "url": "https://nadeshiko.co/en/sentence/Qwe3jdkZv-tf",
+          "audio": "https://cdn.nadeshiko.co/media/21/81/e61526d7a2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21/81/e61526d7a2.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼は長年、新聞（　）として事件を追い続けてきた。",
+          "opts": [
+            "記者",
+            "記家",
+            "記員"
+          ],
+          "ans": 0,
+          "exp": "〜者＝从事～的人（稍正式）：記者・医者・学者。家指专业造诣，員指组织成员。"
+        }
+      ]
     },
     {
       "id": "ryou",
@@ -1175,9 +1363,58 @@
         {
           "jp": "この美術館の入場料は五百円です。",
           "cn": "这座美术馆的门票是五百日元。"
+        },
+        {
+          "jp": "大学の授業料が年々上がる一方で、奨学金を受ける学生の割合も増えている。",
+          "cn": "大学学费逐年上涨，与此同时领取奖学金的学生比例也在增加。"
+        },
+        {
+          "jp": "あの美術館は入場料が高いにもかかわらず、週末ともなると長い行列ができる。",
+          "cn": "那家美术馆门票虽贵，一到周末却还是排起长队。"
+        },
+        {
+          "jp": "インターネットの普及に伴い、通信料をめぐる消費者からの苦情も急増した。",
+          "cn": "随着互联网普及，围绕通信费的消费者投诉也急剧增加。"
         }
       ],
-      "note": "服务/资格类收费多用料：手数料、送料、授業料。"
+      "note": "服务/资格类收费多用料：手数料、送料、授業料。",
+      "nadeshiko": [
+        {
+          "jp": "授業料(じゅぎょうりょう)だと思(おも)えばいい",
+          "en": "Think of it as tuition.",
+          "cn": "就当是交学费好了。",
+          "media": "HINAMATSURI",
+          "ep": "EP3",
+          "at": "4:57",
+          "url": "https://nadeshiko.co/en/sentence/bn5FI2DSnwpo",
+          "audio": "https://cdn.nadeshiko.co/media/100077/3/18d3b26136.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100077/3/18d3b26136.webp"
+        },
+        {
+          "jp": "入場料(にゅうじょうりょう)500円(えん)で フード ドリンクがタダ",
+          "en": "The 500-yen entrance fee gets you free food and drink.",
+          "cn": "入场费500日元，餐饮免费。",
+          "media": "Assassination Classroom Second Season",
+          "ep": "EP10",
+          "at": "7:31",
+          "url": "https://nadeshiko.co/en/sentence/F5ssHxGOl0rr",
+          "audio": "https://cdn.nadeshiko.co/media/21170/10/bde0fb1f8f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21170/10/bde0fb1f8f.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この美術館は（　）が五百円で、学生は半額になる。",
+          "opts": [
+            "入場料",
+            "入場費",
+            "入場代"
+          ],
+          "ans": 0,
+          "exp": "服务・设施利用的收费多用「料」：入場料・授業料・手数料。費＝消耗成本，代＝按次支付的款项。"
+        }
+      ]
     },
     {
       "id": "hi",
@@ -1192,9 +1429,58 @@
         {
           "jp": "今月の交通費を申請しました。",
           "cn": "申请了这个月的交通费报销。"
+        },
+        {
+          "jp": "引っ越しを機に、家計簿をつけて食費や光熱費を見直すことにした。",
+          "cn": "趁着搬家的机会，我决定记账，重新审视伙食费和水电煤气费。"
+        },
+        {
+          "jp": "会社の経費削減の方針により、出張の交通費はすべて事前申請が必要となった。",
+          "cn": "由于公司削减经费的方针，出差的交通费全部需要事先申请。"
+        },
+        {
+          "jp": "留学には学費だけでなく、生活費や保険料まで含めると、相当な額がかかる。",
+          "cn": "留学不仅学费，连生活费、保险费都算上的话，花费相当可观。"
         }
       ],
-      "note": "生活消耗类多用費：光熱費（水电煤气）、食費。"
+      "note": "生活消耗类多用費：光熱費（水电煤气）、食費。",
+      "nadeshiko": [
+        {
+          "jp": "交通費(こうつうひ)と食事代(しょくじだい)も 入(はい)ってるみたいだし",
+          "en": "And it does include travel and meal.",
+          "cn": "好像交通费和餐费也包含在内。",
+          "media": "mono",
+          "ep": "EP4",
+          "at": "14:04",
+          "url": "https://nadeshiko.co/en/sentence/AR0A7auUjfE8",
+          "audio": "https://cdn.nadeshiko.co/media/176246/4/1ed131f7fc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/176246/4/1ed131f7fc.webp"
+        },
+        {
+          "jp": "いやぁ 食費(しょくひ)がまた浮(う)いちゃう ジャム作(つく)る",
+          "en": "You're saving me money on groceries again! I'll make jam!",
+          "cn": "哎呀，伙食费又省下来了，我做果酱吧。",
+          "media": "March comes in like a lion Season 2",
+          "ep": "EP13",
+          "at": "16:31",
+          "url": "https://nadeshiko.co/en/sentence/ax6JPVHnRd3d",
+          "audio": "https://cdn.nadeshiko.co/media/98478/13/5e9c45e5d0.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98478/13/5e9c45e5d0.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "今月は出張が多くて、（　）が予算を大幅に超えてしまった。",
+          "opts": [
+            "交通費",
+            "交通料",
+            "交通代"
+          ],
+          "ans": 0,
+          "exp": "消耗性开销用「費」：交通費・食費・光熱費。料＝服务费，代＝按次支付的款。"
+        }
+      ]
     },
     {
       "id": "dai2",
@@ -1209,9 +1495,58 @@
         {
           "jp": "毎月の電気代が高くなりました。",
           "cn": "每个月的电费变贵了。"
+        },
+        {
+          "jp": "電気代やガス代が値上がりしたせいで、一人暮らしの負担が重くなった。",
+          "cn": "因为电费、燃气费涨价，独自生活的负担变重了。"
+        },
+        {
+          "jp": "タクシー代を節約するために、終電を逃さないよう行動することにした。",
+          "cn": "为了省下打车费，我决定行动时注意别错过末班车。"
+        },
+        {
+          "jp": "スマートフォンの機種代を分割で払っているうちに、総額が思った以上に膨らんだ。",
+          "cn": "手机机身在分期付款的过程中，总额涨得超出预期。"
         }
       ],
-      "note": "水电电话等按月缴的账单习惯说代：ガス代、電話代。"
+      "note": "水电电话等按月缴的账单习惯说代：ガス代、電話代。",
+      "nadeshiko": [
+        {
+          "jp": "電気代(でんきだい)2倍(ばい)かー　エアコン1度(ど)下(さ)げよ",
+          "en": "The power bill doubled? I should ease up on the AC.",
+          "cn": "电费翻倍了呀……空调调低一度吧。",
+          "media": "Rent-a-Girlfriend",
+          "ep": "EP10",
+          "at": "19:06",
+          "url": "https://nadeshiko.co/en/sentence/wWmXC0eeoH__",
+          "audio": "https://cdn.nadeshiko.co/media/113813/10/b75229407d.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/113813/10/b75229407d.webp"
+        },
+        {
+          "jp": "タクシー代(だい)は あかねに あとで請求(せいきゅう)する",
+          "en": "I'll charge Akane for the taxi fare later.",
+          "cn": "打车费回头找茜报销。",
+          "media": "Oshi No Ko",
+          "ep": "EP7",
+          "at": "5:50",
+          "url": "https://nadeshiko.co/en/sentence/6ajPba4sDMEe",
+          "audio": "https://cdn.nadeshiko.co/media/150672/7/c0ec8b2bf7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/150672/7/c0ec8b2bf7.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "エアコンをつけっぱなしにしたら、先月の電気（　）が倍になった。",
+          "opts": [
+            "代",
+            "費",
+            "料"
+          ],
+          "ans": 0,
+          "exp": "水道光热等按月缴纳的账单多用「代」：電気代・ガス代・電話代。費偏开销类别，料偏服务费。"
+        }
+      ]
     },
     {
       "id": "chin",
@@ -1226,9 +1561,58 @@
         {
           "jp": "都内は家賃がとても高いです。",
           "cn": "东京市内房租非常贵。"
+        },
+        {
+          "jp": "都心の家賃が高騰するにつれて、郊外へ移り住む若者が増えてきた。",
+          "cn": "随着市中心房租高涨，搬到郊外居住的年轻人越来越多。"
+        },
+        {
+          "jp": "タクシーの運賃が値上げされたが、深夜の移動手段としては依然として便利だ。",
+          "cn": "出租车运价虽然涨了，但作为深夜的出行方式依然方便。"
+        },
+        {
+          "jp": "あの部屋は駅に近いわりに家賃が安いので、すぐに申し込むことにした。",
+          "cn": "那间房离车站近，房租却便宜，我当即决定申请。"
         }
       ],
-      "note": "借东西付的钱＝賃：貸し賃・借り賃・船賃。料・費・代・賃四兄弟按搭配记忆最有效。"
+      "note": "借东西付的钱＝賃：貸し賃・借り賃・船賃。料・費・代・賃四兄弟按搭配记忆最有效。",
+      "nadeshiko": [
+        {
+          "jp": "家賃(やちん)いくらだろう?",
+          "en": "I wonder how much the rent is.",
+          "cn": "房租大概多少钱呢？",
+          "media": "Toradora!",
+          "ep": "EP20",
+          "at": "17:39",
+          "url": "https://nadeshiko.co/en/sentence/CaVcdGli3zcJ",
+          "audio": "https://cdn.nadeshiko.co/media/4224/20/4f56e83ac7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4224/20/4f56e83ac7.webp"
+        },
+        {
+          "jp": "運賃(うんちん)200円(えん)だけどこのバスに両替機(りょうがえき)ないから",
+          "en": "The fare is 200 yen, but there's no change machine on this bus,",
+          "cn": "车费是200日元，但这辆公交车上没有换零钱的机器，",
+          "media": "ZatsuTabi -That's Journey-",
+          "ep": "EP2",
+          "at": "19:08",
+          "url": "https://nadeshiko.co/en/sentence/pGb2tDOaHWul",
+          "audio": "https://cdn.nadeshiko.co/media/165445/2/fd81e38125.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/165445/2/fd81e38125.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "駅から遠い分、（　）が安い部屋を選んだ。",
+          "opts": [
+            "家賃",
+            "家費",
+            "家代"
+          ],
+          "ans": 0,
+          "exp": "租借使用费用「賃」：家賃・運賃・乗車賃。費＝消耗成本，代＝按次支付的款。"
+        }
+      ]
     },
     {
       "id": "teki",
@@ -1868,6 +2252,14 @@
         {
           "jp": "こちら国際電話係りの者です。",
           "cn": "我是负责国际电话的接线员。"
+        },
+        {
+          "jp": "文化祭では、クラスごとに配膳係や会計係を決めて、役割を分担した。",
+          "cn": "校园文化节上，每个班都定下配餐员、会计等，分工负责。"
+        },
+        {
+          "jp": "彼女は、来場者の案内係を務めながら、会場の様子を細かく記録していた。",
+          "cn": "她一边担任来客引导员，一边细致地记录会场情况。"
         }
       ],
       "note": "係（かかり）接词后多浊化为がかり（受付係り＝うけつけがかり）。书面多简写成「〜係」，口语常带「〜係り」。指组织内专项负责的担当人，比「〜者」更具体（谁管哪件事分得清清楚楚）。",
@@ -1877,6 +2269,30 @@
           "q": "料理係は、料理を専門に作るレストランのコックさんのことだ。",
           "ans": false,
           "exp": "✗ 〜係は組織内の「担当」で、料理係＝那个集体里负责做饭的人。专业厨师是コック（さん）。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "じゃあ この子(こ)は?　私(わたくし)は記録(きろく)係(かかり)ですわ",
+          "en": "Well what about her? It's my job to record everything.",
+          "cn": "那么这个孩子呢？我是负责记录的。",
+          "media": "Cardcaptor Sakura",
+          "ep": "EP23",
+          "at": "11:54",
+          "url": "https://nadeshiko.co/en/sentence/aKZKWZpGhQK2",
+          "audio": "https://cdn.nadeshiko.co/media/232/23/acc53f80c6.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/232/23/acc53f80c6.webp"
+        },
+        {
+          "jp": "ご機嫌(きげん)よう 忘(わす)れられていた連絡(れんらく)係(かかり)です",
+          "en": "Good day. I'm the messenger you forgot all about.",
+          "cn": "您好，我是被你们忘掉的联络员。",
+          "media": "Secrets of the Silent Witch",
+          "ep": "EP7",
+          "at": "22:44",
+          "url": "https://nadeshiko.co/en/sentence/PkFwuD-8e-S1",
+          "audio": "https://cdn.nadeshiko.co/media/179966/7/e4aaa0f792.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179966/7/e4aaa0f792.webp"
         }
       ]
     },
