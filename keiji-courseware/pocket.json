@@ -390,9 +390,43 @@
         {
           "jp": "そのホテルは現在改装中です。",
           "cn": "那家酒店目前正在装修。"
+        },
+        {
+          "jp": "彼女は入院中で、私は週に1度彼女を見舞いに行く。",
+          "cn": "她正在住院，我每周去看她一次。",
+          "src": "moji",
+          "audio": "moji_audio/入院中_LApZSfSg81_e0_f003.mp3"
+        },
+        {
+          "jp": "その計画はまだ検討中です。",
+          "cn": "那个计划还在讨论中。"
         }
       ],
       "note": "读音为ちゅう：表示「正在进行」。与じゅう的「整个范围」是最小对立组。",
+      "nadeshiko": [
+        {
+          "jp": "会議中(かいぎちゅう)だぞ!",
+          "en": "We're in the middle of a meeting!",
+          "cn": "正在开会呢！",
+          "media": "Lycoris Recoil",
+          "ep": "EP11",
+          "at": "0:40",
+          "url": "https://nadeshiko.co/en/sentence/peqZeR66j63g",
+          "audio": "https://cdn.nadeshiko.co/media/143270/11/be46cbf2ab.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143270/11/be46cbf2ab.webp"
+        },
+        {
+          "jp": "おねえちゃん ここ まだ工事中(こうじちゅう)だよ",
+          "en": "Miss, this area is still under construction.",
+          "cn": "小姐姐，这里还在施工哦。",
+          "media": "Cells at Work!",
+          "ep": "EP8",
+          "at": "4:53",
+          "url": "https://nadeshiko.co/en/sentence/XtQVQvjIhpQA",
+          "audio": "https://cdn.nadeshiko.co/media/100977/8/9273aa3f37.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100977/8/9273aa3f37.webp"
+        }
+      ],
       "quizzes": [
         {
           "type": "choice",
@@ -404,6 +438,12 @@
           ],
           "ans": 0,
           "exp": "动作名词＋中（ちゅう）＝正处于该动作期间：出張中＝正在出差。"
+        },
+        {
+          "type": "judge",
+          "q": "「会議中」の「中」は「じゅう」と読み、「会議の間ずっと」という意味だ。",
+          "ans": false,
+          "exp": "✗ 动作名词＋中读ちゅう，表示「正在进行」：会議中＝正在开会。读じゅう的是「一日中」这类表示整个期间的说法。"
         }
       ]
     },
@@ -415,7 +455,7 @@
       "group": "time",
       "level": "N4",
       "emoji": "🌍",
-      "meaning": "整个范围或期间都～：一日中、世界中、今月中",
+      "meaning": "整个范围或期间都～：一日中、一年中、世界中",
       "examples": [
         {
           "jp": "日曜日は一日中雨でした。",
@@ -424,9 +464,56 @@
         {
           "jp": "彼女の名前は世界中で知られている。",
           "cn": "她的名字全世界都知道。"
+        },
+        {
+          "jp": "2019年に一年中翻訳の仕事をしていた。",
+          "cn": "2019年整年都在做翻译工作。",
+          "src": "moji",
+          "audio": "moji_audio/一年中_iQpnTU01du_e0_f003.mp3"
+        },
+        {
+          "jp": "祭りの日は、町中が賑わいます。",
+          "cn": "节日那天，整个城镇都很热闹。"
         }
       ],
-      "note": "读音为じゅう：时间词＋中＝「整整…期间」，场所词＋中＝「整个…范围」。"
+      "note": "读音为じゅう：时间词＋中＝「整整…期间」（一日中・一年中），场所词＋中＝「整个…范围」（世界中・町中）。注意「今月中」读ちゅう，属于「期限内」的用法。",
+      "nadeshiko": [
+        {
+          "jp": "うちの場合(ばあい) 一年中(いちねんじゅう) ここで浜(はま)茶屋(ちゃや)やるんだぜ",
+          "en": "You gotta understand, we keep this seaside cafe running all year round.",
+          "cn": "我们家这边啊，可是一年到头都在这儿开海边茶馆的。",
+          "media": "Urusei Yatsura (2022)",
+          "ep": "EP16",
+          "at": "4:58",
+          "url": "https://nadeshiko.co/en/sentence/7rs-Unyl0Nsr",
+          "audio": "https://cdn.nadeshiko.co/media/143277/16/bea854f014.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/143277/16/bea854f014.webp"
+        },
+        {
+          "jp": "世界中(せかいじゅう)から こんなに魔女(まじょ)が!",
+          "en": "Witches from all over the world!",
+          "cn": "从世界各地来了这么多魔女！",
+          "media": "Little Witch Academia (TV)",
+          "ep": "EP12",
+          "at": "4:57",
+          "url": "https://nadeshiko.co/en/sentence/wN91NXaTc-nH",
+          "audio": "https://cdn.nadeshiko.co/media/21858/12/3c0f48041b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21858/12/3c0f48041b.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "祭りの日は、町（　　）が賑わいます。",
+          "opts": [
+            "中（じゅう）",
+            "中（ちゅう）",
+            "中（なか）"
+          ],
+          "ans": 0,
+          "exp": "场所词＋中（じゅう）＝整个…范围：町中＝整个城镇。ちゅう用于「正在…中」或「期限内」（今月中）。"
+        }
+      ]
     },
     {
       "id": "buri",
