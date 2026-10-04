@@ -18,6 +18,7 @@
   "items": [
     {
       "id": "atama-sagaru",
+      "origin": "wago",
       "word": "頭が下がる",
       "read": "あたまがさがる",
       "part": "頭",
@@ -50,6 +51,7 @@
     },
     {
       "id": "atama-kakaeru",
+      "origin": "wago",
       "word": "頭を抱える",
       "read": "あたまをかかえる",
       "part": "頭",
@@ -82,6 +84,7 @@
     },
     {
       "id": "atama-kireru",
+      "origin": "wago",
       "word": "頭が切れる",
       "read": "あたまがきれる",
       "part": "頭",
@@ -114,6 +117,7 @@
     },
     {
       "id": "atama-aganai",
+      "origin": "wago",
       "word": "頭が上がらない",
       "read": "あたまがあがらない",
       "part": "頭",
@@ -146,6 +150,7 @@
     },
     {
       "id": "atama-nayamase",
+      "origin": "wago",
       "word": "頭を悩ませる",
       "read": "あたまをなやませる",
       "part": "頭",
@@ -178,6 +183,7 @@
     },
     {
       "id": "atama-ni-kuru",
+      "origin": "wago",
       "word": "頭にくる",
       "read": "あたまにくる",
       "part": "頭",
@@ -210,6 +216,7 @@
     },
     {
       "id": "kao-hiroi",
+      "origin": "wago",
       "word": "顔が広い",
       "read": "かおがひろい",
       "part": "顔",
@@ -242,6 +249,7 @@
     },
     {
       "id": "kao-dasu",
+      "origin": "wago",
       "word": "顔を出す",
       "read": "かおをだす",
       "part": "顔",
@@ -274,6 +282,7 @@
     },
     {
       "id": "kao-kiku",
+      "origin": "wago",
       "word": "顔が利く",
       "read": "かおがきく",
       "part": "顔",
@@ -306,6 +315,7 @@
     },
     {
       "id": "me-toosu",
+      "origin": "wago",
       "word": "目を通す",
       "read": "めをとおす",
       "part": "目",
@@ -338,6 +348,7 @@
     },
     {
       "id": "me-takai",
+      "origin": "wago",
       "word": "目が高い",
       "read": "めがたかい",
       "part": "目",
@@ -370,6 +381,7 @@
     },
     {
       "id": "me-ni-ukabu",
+      "origin": "wago",
       "word": "目に浮かぶ",
       "read": "めにうかぶ",
       "part": "目",
@@ -402,6 +414,7 @@
     },
     {
       "id": "me-tsuburu",
+      "origin": "wago",
       "word": "目をつぶる",
       "read": "めをつぶる",
       "part": "目",
@@ -434,6 +447,7 @@
     },
     {
       "id": "me-kara-uroko",
+      "origin": "wago",
       "word": "目から鱗",
       "read": "めからうろこ",
       "part": "目",
@@ -460,6 +474,7 @@
     },
     {
       "id": "me-hosomeru",
+      "origin": "wago",
       "word": "目を細める",
       "read": "めをほそめる",
       "part": "目",
@@ -486,6 +501,7 @@
     },
     {
       "id": "me-ni-amaru",
+      "origin": "wago",
       "word": "目に余る",
       "read": "めにあまる",
       "part": "目",
@@ -518,6 +534,7 @@
     },
     {
       "id": "me-hikaraseru",
+      "origin": "wago",
       "word": "目を光らせる",
       "read": "めをひからせる",
       "part": "目",
@@ -550,6 +567,7 @@
     },
     {
       "id": "me-mo-kurenai",
+      "origin": "wago",
       "word": "目もくれない",
       "read": "めもくれない",
       "part": "目",
@@ -582,6 +600,7 @@
     },
     {
       "id": "me-samasu",
+      "origin": "wago",
       "word": "目を覚ます",
       "read": "めをさます",
       "part": "目",
@@ -614,6 +633,7 @@
     },
     {
       "id": "mimi-itai",
+      "origin": "wago",
       "word": "耳が痛い",
       "read": "みみがいたい",
       "part": "耳",
@@ -646,6 +666,7 @@
     },
     {
       "id": "mimi-katamukeru",
+      "origin": "wago",
       "word": "耳を傾ける",
       "read": "みみをかたむける",
       "part": "耳",
@@ -678,6 +699,7 @@
     },
     {
       "id": "mimi-hayai",
+      "origin": "wago",
       "word": "耳が早い",
       "read": "みみがはやい",
       "part": "耳",
@@ -710,6 +732,7 @@
     },
     {
       "id": "mimi-fusagu",
+      "origin": "wago",
       "word": "耳をふさぐ",
       "read": "みみをふさぐ",
       "part": "耳",
@@ -742,6 +765,7 @@
     },
     {
       "id": "hana-takai",
+      "origin": "wago",
       "word": "鼻が高い",
       "read": "はながたかい",
       "part": "鼻",
@@ -774,6 +798,7 @@
     },
     {
       "id": "hana-ni-tsuku",
+      "origin": "wago",
       "word": "鼻につく",
       "read": "はなにつく",
       "part": "鼻",
@@ -806,6 +831,7 @@
     },
     {
       "id": "kuchi-katai",
+      "origin": "wago",
       "word": "口が堅い",
       "read": "くちがかたい",
       "part": "口",
@@ -838,6 +864,7 @@
     },
     {
       "id": "kuchi-karui",
+      "origin": "wago",
       "word": "口が軽い",
       "read": "くちがかるい",
       "part": "口",
@@ -870,6 +897,7 @@
     },
     {
       "id": "kuchi-dasu",
+      "origin": "wago",
       "word": "口を出す",
       "read": "くちをだす",
       "part": "口",
@@ -902,6 +930,7 @@
     },
     {
       "id": "kuchi-ni-au",
+      "origin": "wago",
       "word": "口に合う",
       "read": "くちにあう",
       "part": "口",
@@ -934,6 +963,7 @@
     },
     {
       "id": "kuchi-hasamu",
+      "origin": "wago",
       "word": "口を挟む",
       "read": "くちをはさむ",
       "part": "口",
@@ -966,6 +996,7 @@
     },
     {
       "id": "kubi-nagaku",
+      "origin": "wago",
       "word": "首を長くする",
       "read": "くびをながくする",
       "part": "首",
@@ -998,6 +1029,7 @@
     },
     {
       "id": "kubi-kashige",
+      "origin": "wago",
       "word": "首をかしげる",
       "read": "くびをかしげる",
       "part": "首",
@@ -1024,6 +1056,7 @@
     },
     {
       "id": "kata-otosu",
+      "origin": "wago",
       "word": "肩を落とす",
       "read": "かたをおとす",
       "part": "肩",
@@ -1050,6 +1083,7 @@
     },
     {
       "id": "kata-ni-ni",
+      "origin": "wago",
       "word": "肩の荷が下りる",
       "read": "かたのにがおりる",
       "part": "肩",
@@ -1082,6 +1116,7 @@
     },
     {
       "id": "kata-naraberu",
+      "origin": "wago",
       "word": "肩を並べる",
       "read": "かたをならべる",
       "part": "肩",
@@ -1114,6 +1149,7 @@
     },
     {
       "id": "kata-sukumeru",
+      "origin": "wago",
       "word": "肩をすくめる",
       "read": "かたをすくめる",
       "part": "肩",
@@ -1140,6 +1176,7 @@
     },
     {
       "id": "mune-haru",
+      "origin": "wago",
       "word": "胸を張る",
       "read": "むねをはる",
       "part": "胸",
@@ -1172,6 +1209,7 @@
     },
     {
       "id": "mune-itamu",
+      "origin": "wago",
       "word": "胸が痛む",
       "read": "むねがいたむ",
       "part": "胸",
@@ -1204,6 +1242,7 @@
     },
     {
       "id": "mune-kizamu",
+      "origin": "wago",
       "word": "胸に刻む",
       "read": "むねにきざむ",
       "part": "胸",
@@ -1236,6 +1275,7 @@
     },
     {
       "id": "mune-odoraseru",
+      "origin": "wago",
       "word": "胸を躍らせる",
       "read": "むねをおどらせる",
       "part": "胸",
@@ -1262,6 +1302,7 @@
     },
     {
       "id": "hara-tateru",
+      "origin": "wago",
       "word": "腹を立てる",
       "read": "はらをたてる",
       "part": "腹",
@@ -1294,6 +1335,7 @@
     },
     {
       "id": "hara-waru",
+      "origin": "wago",
       "word": "腹を割る",
       "read": "はらをわる",
       "part": "腹",
@@ -1326,6 +1368,7 @@
     },
     {
       "id": "koshi-sueru",
+      "origin": "wago",
       "word": "腰を据える",
       "read": "こしをすえる",
       "part": "腰",
@@ -1358,6 +1401,7 @@
     },
     {
       "id": "se-mukeru",
+      "origin": "wago",
       "word": "背を向ける",
       "read": "せをむける",
       "part": "背",
@@ -1390,6 +1434,7 @@
     },
     {
       "id": "te-yaku",
+      "origin": "wago",
       "word": "手を焼く",
       "read": "てをやく",
       "part": "手",
@@ -1422,6 +1467,7 @@
     },
     {
       "id": "te-kasu",
+      "origin": "wago",
       "word": "手を貸す",
       "read": "てをかす",
       "part": "手",
@@ -1454,6 +1500,7 @@
     },
     {
       "id": "te-aku",
+      "origin": "wago",
       "word": "手が空く",
       "read": "てがあく",
       "part": "手",
@@ -1486,6 +1533,7 @@
     },
     {
       "id": "te-ni-amaru",
+      "origin": "wago",
       "word": "手に余る",
       "read": "てにあまる",
       "part": "手",
@@ -1518,6 +1566,7 @@
     },
     {
       "id": "te-ni-oenai",
+      "origin": "wago",
       "word": "手に負えない",
       "read": "てにおえない",
       "part": "手",
@@ -1550,6 +1599,7 @@
     },
     {
       "id": "te-nuku",
+      "origin": "wago",
       "word": "手を抜く",
       "read": "てをぬく",
       "part": "手",
@@ -1582,6 +1632,7 @@
     },
     {
       "id": "ashi-hakobu",
+      "origin": "wago",
       "word": "足を運ぶ",
       "read": "あしをはこぶ",
       "part": "足",
@@ -1614,6 +1665,7 @@
     },
     {
       "id": "hone-ga-oreru",
+      "origin": "wago",
       "word": "骨が折れる",
       "read": "ほねがおれる",
       "part": "骨",
@@ -1646,6 +1698,7 @@
     },
     {
       "id": "hone-o-oru",
+      "origin": "wago",
       "word": "骨を折る",
       "read": "ほねをおる",
       "part": "骨",
@@ -1672,6 +1725,7 @@
     },
     {
       "id": "mi-ni-shimiru",
+      "origin": "wago",
       "word": "身に染みる",
       "read": "みにしみる",
       "part": "身",
@@ -1704,6 +1758,7 @@
     },
     {
       "id": "kimo-hiyasu",
+      "origin": "wago",
       "word": "肝を冷やす",
       "read": "きもをひやす",
       "part": "肝",
@@ -1736,6 +1791,7 @@
     },
     {
       "id": "ashimoto-sukuwareru",
+      "origin": "wago",
       "word": "足元をすくわれる",
       "read": "あしもとをすくわれる",
       "part": "足",
@@ -1768,6 +1824,7 @@
     },
     {
       "id": "ude-makuri",
+      "origin": "wago",
       "word": "腕まくり",
       "read": "うでまくり",
       "part": "腕",
@@ -1794,6 +1851,7 @@
     },
     {
       "id": "te-mo-ashi-mo-denai",
+      "origin": "wago",
       "word": "手も足も出ない",
       "read": "てもあしもでない",
       "part": "手",
@@ -1820,6 +1878,7 @@
     },
     {
       "id": "unadareru",
+      "origin": "wago",
       "word": "うなだれる",
       "read": "うなだれる",
       "group": "action",
@@ -1845,6 +1904,7 @@
     },
     {
       "id": "shitamuku",
+      "origin": "wago",
       "word": "下を向く",
       "read": "したをむく",
       "group": "action",
@@ -1876,6 +1936,7 @@
     },
     {
       "id": "utsumuku",
+      "origin": "wago",
       "word": "うつむく",
       "read": "うつむく",
       "group": "action",
@@ -1907,6 +1968,7 @@
     },
     {
       "id": "namidagumu",
+      "origin": "wago",
       "word": "涙ぐむ",
       "read": "なみだぐむ",
       "group": "action",
@@ -1938,6 +2000,7 @@
     },
     {
       "id": "aozameru",
+      "origin": "wago",
       "word": "青ざめる",
       "read": "あおざめる",
       "group": "action",
@@ -1963,6 +2026,7 @@
     },
     {
       "id": "akakunaru",
+      "origin": "wago",
       "word": "赤くなる",
       "read": "あかくなる",
       "group": "action",
@@ -1994,6 +2058,7 @@
     },
     {
       "id": "me-fuseru",
+      "origin": "wago",
       "word": "目を伏せる",
       "read": "めをふせる",
       "part": "目",
@@ -2026,6 +2091,7 @@
     },
     {
       "id": "kao-somukeru",
+      "origin": "wago",
       "word": "顔を背ける",
       "read": "かおをそむける",
       "part": "顔",
@@ -2058,6 +2124,7 @@
     },
     {
       "id": "mimi-sumasu",
+      "origin": "wago",
       "word": "耳を澄ます",
       "read": "みみをすます",
       "part": "耳",
@@ -2090,6 +2157,7 @@
     },
     {
       "id": "iki-nomu",
+      "origin": "wago",
       "word": "息をのむ",
       "read": "いきをのむ",
       "part": "息",
@@ -2122,6 +2190,7 @@
     },
     {
       "id": "mi-noridasu",
+      "origin": "wago",
       "word": "身を乗り出す",
       "read": "みをのりだす",
       "part": "身",
@@ -2154,6 +2223,7 @@
     },
     {
       "id": "me-kagayakaseru",
+      "origin": "wago",
       "word": "目を輝かせる",
       "read": "めをかがやかせる",
       "part": "目",
@@ -2186,6 +2256,7 @@
     },
     {
       "id": "ude-kumu",
+      "origin": "wago",
       "word": "腕を組む",
       "read": "うでをくむ",
       "part": "腕",
@@ -2212,6 +2283,7 @@
     },
     {
       "id": "karada-haru",
+      "origin": "wago",
       "word": "体を張る",
       "read": "からだをはる",
       "part": "体",
@@ -2244,6 +2316,7 @@
     },
     {
       "id": "namida-nagasu",
+      "origin": "wago",
       "word": "涙を流す",
       "read": "なみだをながす",
       "group": "action",
@@ -2275,6 +2348,7 @@
     },
     {
       "id": "ase-kaku",
+      "origin": "wago",
       "word": "汗をかく",
       "read": "あせをかく",
       "group": "action",
@@ -2306,6 +2380,7 @@
     },
     {
       "id": "te-ageru",
+      "origin": "wago",
       "word": "手を挙げる",
       "read": "てをあげる",
       "part": "手",
@@ -2338,6 +2413,7 @@
     },
     {
       "id": "me-awaseru",
+      "origin": "wago",
       "word": "目を合わせる",
       "read": "めをあわせる",
       "part": "目",
@@ -2370,6 +2446,7 @@
     },
     {
       "id": "kuchi-akeru",
+      "origin": "wago",
       "word": "口を開ける",
       "read": "くちをあける",
       "part": "口",
@@ -2402,6 +2479,7 @@
     },
     {
       "id": "unazuku",
+      "origin": "wago",
       "word": "うなずく",
       "read": "うなずく",
       "group": "action",
@@ -2433,6 +2511,7 @@
     },
     {
       "id": "hohoemu",
+      "origin": "wago",
       "word": "微笑む",
       "read": "ほほえむ",
       "group": "action",
@@ -2464,6 +2543,7 @@
     },
     {
       "id": "utsubuseninaru",
+      "origin": "wago",
       "word": "うつ伏せになる",
       "read": "うつぶせになる",
       "group": "action",
@@ -2489,6 +2569,7 @@
     },
     {
       "id": "otetsuage",
+      "origin": "wago",
       "word": "お手上げ",
       "read": "おてあげ",
       "part": "手",
@@ -2538,6 +2619,7 @@
     },
     {
       "id": "tewake",
+      "origin": "wago",
       "word": "手分け",
       "read": "てわけ",
       "part": "手",
@@ -2587,6 +2669,7 @@
     },
     {
       "id": "teitai",
+      "origin": "wago",
       "word": "手痛い",
       "read": "ていたい",
       "part": "手",
@@ -2636,6 +2719,7 @@
     },
     {
       "id": "ashidematoi",
+      "origin": "wago",
       "word": "足手まとい",
       "read": "あしでまとい",
       "part": "足",
@@ -2685,6 +2769,7 @@
     },
     {
       "id": "ashidome",
+      "origin": "wago",
       "word": "足止め",
       "read": "あしどめ",
       "part": "足",
@@ -2734,6 +2819,7 @@
     },
     {
       "id": "tetate",
+      "origin": "wago",
       "word": "手立て",
       "read": "てだて",
       "part": "手",
@@ -2783,6 +2869,7 @@
     },
     {
       "id": "tesaki",
+      "origin": "wago",
       "word": "手先",
       "read": "てさき",
       "part": "手",
@@ -2832,6 +2919,7 @@
     },
     {
       "id": "tekiva",
+      "origin": "wago",
       "word": "手際",
       "read": "てぎわ",
       "part": "手",
@@ -2881,6 +2969,7 @@
     },
     {
       "id": "temoto",
+      "origin": "wago",
       "word": "手元",
       "read": "てもと",
       "part": "手",
@@ -2929,6 +3018,7 @@
     },
     {
       "id": "shuwan",
+      "origin": "kango",
       "word": "手腕",
       "read": "しゅわん",
       "part": "腕",
@@ -2978,6 +3068,7 @@
     },
     {
       "id": "te-ni-ireru",
+      "origin": "wago",
       "word": "手に入れる",
       "read": "てにいれる",
       "part": "手",
@@ -3027,6 +3118,7 @@
     },
     {
       "id": "te-ni-suru",
+      "origin": "wago",
       "word": "手にする",
       "read": "てにする",
       "part": "手",
@@ -3076,6 +3168,7 @@
     },
     {
       "id": "honeori",
+      "origin": "wago",
       "word": "骨折り",
       "read": "ほねおり",
       "part": "骨",
@@ -3124,6 +3217,7 @@
     },
     {
       "id": "hitode",
+      "origin": "wago",
       "word": "人手",
       "read": "ひとで",
       "part": "手",
@@ -3173,6 +3267,7 @@
     },
     {
       "id": "udemae",
+      "origin": "wago",
       "word": "腕前",
       "read": "うでまえ",
       "part": "腕",
@@ -3222,6 +3317,7 @@
     },
     {
       "id": "urahara",
+      "origin": "wago",
       "word": "裏腹",
       "read": "うらはら",
       "part": "腹",
@@ -3271,6 +3367,7 @@
     },
     {
       "id": "kokoroatari",
+      "origin": "wago",
       "word": "心当たり",
       "read": "こころあたり",
       "part": "心",
@@ -3320,6 +3417,7 @@
     },
     {
       "id": "kokorogamae",
+      "origin": "wago",
       "word": "心構え",
       "read": "こころがまえ",
       "part": "心",
@@ -3369,6 +3467,7 @@
     },
     {
       "id": "kokorozukai",
+      "origin": "wago",
       "word": "心遣い",
       "read": "こころづかい",
       "part": "心",
@@ -3418,6 +3517,7 @@
     },
     {
       "id": "ikinuki",
+      "origin": "wago",
       "word": "息抜き",
       "read": "いきぬき",
       "part": "息",
@@ -3466,6 +3566,7 @@
     },
     {
       "id": "hitoiki",
+      "origin": "wago",
       "word": "一息",
       "read": "ひといき",
       "part": "息",
@@ -3514,6 +3615,7 @@
     },
     {
       "id": "oyogoshi",
+      "origin": "wago",
       "word": "および腰",
       "read": "およびごし",
       "part": "腰",
@@ -3551,6 +3653,7 @@
     },
     {
       "id": "me-ga-saeru",
+      "origin": "wago",
       "word": "目がさえる",
       "read": "めがさえる",
       "part": "目",
@@ -3600,6 +3703,7 @@
     },
     {
       "id": "urame",
+      "origin": "wago",
       "word": "裏目",
       "read": "うらめ",
       "part": "目",
@@ -3648,6 +3752,7 @@
     },
     {
       "id": "ome-ni-kakaru",
+      "origin": "wago",
       "word": "お目にかかる",
       "read": "おめにかかる",
       "part": "目",
@@ -3697,6 +3802,7 @@
     },
     {
       "id": "kaina-kao",
+      "origin": "mixed",
       "word": "怪訝な顔",
       "read": "けげんなかお",
       "part": "顔",
@@ -3735,6 +3841,7 @@
     },
     {
       "id": "atama-ni-ukabu",
+      "origin": "wago",
       "word": "頭に浮かぶ",
       "read": "あたまにうかぶ",
       "part": "頭",
@@ -3784,6 +3891,7 @@
     },
     {
       "id": "heikou",
+      "origin": "kango",
       "word": "閉口",
       "read": "へいこう",
       "part": "口",
@@ -3822,6 +3930,7 @@
     },
     {
       "id": "me-wo-sorasu",
+      "origin": "wago",
       "word": "目をそらす",
       "read": "めをそらす",
       "part": "目",
@@ -3871,6 +3980,7 @@
     },
     {
       "id": "koe-wo-kakeru",
+      "origin": "wago",
       "word": "声をかける",
       "read": "こえをかける",
       "part": "声",
@@ -3920,6 +4030,7 @@
     },
     {
       "id": "mi-wo-tsutsumu",
+      "origin": "wago",
       "word": "身を包む",
       "read": "みをつつむ",
       "part": "身",
@@ -3968,6 +4079,7 @@
     },
     {
       "id": "shigamitsuku",
+      "origin": "wago",
       "word": "しがみつく",
       "read": "しがみつく",
       "group": "action",
@@ -4016,6 +4128,7 @@
     },
     {
       "id": "kao-ga-ukabu",
+      "origin": "wago",
       "word": "顔が浮かぶ",
       "read": "かおがうかぶ",
       "part": "顔",

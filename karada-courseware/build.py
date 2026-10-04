@@ -609,6 +609,19 @@ margin-left:6px;vertical-align:1px}
 .src-moji{background:var(--okbg);color:var(--ok)}
 .src-nade{background:#ede7f6;color:#5e35b1}
 .src-jlpt{background:var(--ngbg);color:var(--ng)}
+/* 語種（origin）：和語 / 漢語 / 混種 */
+.org-wago{background:var(--okbg);color:var(--ok)}
+.org-kango{background:#f8f0fc;color:#9c36b5}
+.org-mixed{background:#fff8e1;color:#b8860b}
+.orgfilter{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.orgfilter button{border:2px solid var(--line);background:#fff;border-radius:99px;padding:6px 14px;
+font-size:13px;font-weight:700;color:var(--sub);cursor:pointer}
+.orgfilter button.on{border-color:var(--acc);color:var(--acc);background:var(--acc2)}
+.org-mini{display:inline-block;border-radius:99px;padding:0 7px;font-size:10px;font-weight:700;
+vertical-align:1px;margin-left:4px}
+.orgsum{background:#f7f8fc;border-radius:12px;padding:10px 13px;font-size:12.5px;color:var(--sub);
+line-height:1.8;margin-top:10px}
+.orgsum b{color:var(--ink)}
 /* JLPT exam cards */
 .exam-card{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:12px;
 box-shadow:0 2px 10px rgba(30,40,90,.06);border-left:4px solid var(--ng)}
@@ -670,6 +683,9 @@ const SENTS=__SENTS__;
 const EXAMS=__EXAMS__;
 const CORPUS=__CORPUS__;
 const BANKS=__BANKS__;
+const ORIGINS={wago:["和語","#188a52"],kango:["漢語","#9c36b5"],mixed:["混種","#b8860b"]};
+const originOf=n=>n.origin||"wago";
+const originLabel=n=>ORIGINS[originOf(n)][0];
 let QS=__QS__;
 const $=s=>document.querySelector(s);
 let curAudio=null,curBtn=null;
@@ -747,6 +763,9 @@ function goDetail(iid){goTab('detail');setTimeout(()=>{const el=document.getElem
 
 /* ---------- list ---------- */
 function shortMean(m){return m.split(/[：:；;，,（(]/)[0];}
+let listFilter="all";
+function originCount(k){return k==="all"?ITEMS.length:ITEMS.filter(n=>originOf(n)===k).length;}
+function setListFilter(k){listFilter=k;renderList();window.scrollTo(0,0);}
 function renderList(){
   let h=`<div class="card intro"><h2>这是什么课？🫀</h2>
   <p>日语把情绪、评价、态度都挂在身体部位上：<b>頭が下がる</b>（敬佩）、<b>顔が広い</b>（人脉广）、
@@ -760,15 +779,23 @@ function renderList(){
     <div><b>③ 部位填空</b><br>训练场会出「（　）が下がる」这样的题——部位与动词的固定搭配才是记忆的核心。</div>
     <div><b>④ 真题对照</b><br>📝 真題 Tab 收录 JLPT N1 身体相关原题；词条页也直接挂出「考过哪几题」。</div>
     <div><b>⑤ 与 Nadeshiko 原声对照</b><br>例句、台词场景卡、TTS、真題四种输入交叉，把「搭配」练成条件反射。</div>
-  </div></div>`;
+    <div><b>⑥ 语种徽标（和／漢／混）</b><br>身体惯用句几乎全是大和言葉——本课 ${ITEMS.length} 条里和語 ${originCount("wago")}、
+      漢語 ${originCount("kango")}、混種 ${originCount("mixed")}。用下面的筛选切成「和語だけ」看一次，语感会变。</div>
+  </div>
+  <div class="orgsum">🗾 <b>語種の見分け方</b>：读训＝和語（目安 めやす・手際 てぎわ・骨折り ほねおり），
+  读音＝漢語（手腕 しゅわん・手芸 しゅげい・目撃 もくげき）。字形会骗人，读音不会。
+  <a class="jump" href="../meta-guide/#body-layers" target="_blank">→ メタ認知ガイド「身体語彙の二重構造」</a></div>
+  </div>`;
+  h+=`<div class="orgfilter">${[["all","全部"],["wago","和語"],["kango","漢語"],["mixed","混種"]].map(([k,l])=>
+    `<button class="${listFilter===k?'on':''}" onclick="setListFilter('${k}')">${l} · ${originCount(k)}</button>`).join("")}</div>`;
   h+=GROUPS.map(g=>{
-    const members=ITEMS.filter(n=>n.group===g.id);
+    const members=ITEMS.filter(n=>n.group===g.id&&(listFilter==="all"||originOf(n)===listFilter));
     if(!members.length)return "";
     return `<div class="grp"><div class="grp-h" style="background:${g.color}"><h3>${g.name}</h3><span>${members.length} 条</span></div>
     <div class="mini-wrap">${members.map(n=>`
       <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
         <div class="em">${n.emoji||"📌"}</div>
-        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
+        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small><span class="org-mini org-${originOf(n)}">${originLabel(n)}</span></div>
         <div class="im">${shortMean(n.meaning)}</div></button>`).join("")}</div></div>`;
   }).join("");
   $("#main").innerHTML=h;
@@ -785,13 +812,20 @@ function renderDetail(){
       const iid=n.id;
       const typeChip=n.type?`<span class="chip pfx" title="種類">${n.type}</span>`:"";
       const partChip=n.part?`<span class="chip sfx" title="体の部位">${n.part}</span>`:"";
+      const org=originOf(n);
+      const orgChip=`<span class="chip org-${org}" title="語種（読みで判定）">${originLabel(n)}</span>`;
+      const orgNote=org==="kango"
+        ? `<br>🗾 <b>語種</b>　漢語（音読）——身体語彙の抽象層。主流の和語慣用句と対照的。`
+        : org==="mixed"
+        ? `<br>🗾 <b>語種</b>　漢語＋和語（混種）——「怪訝」は漢語ナ形容詞、「顔」は和語。`
+        : "";
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
         <h2>${n.emoji||"🫀"} ${n.word}<span class="jl">${n.level}</span></h2>
-        <div class="meta">${typeChip}${partChip}
+        <div class="meta">${typeChip}${partChip}${orgChip}
           <code>${n.read}</code>
           ${AUDIO[iid]?`<button class="btn mini-btn" title="听读音" onclick="play('${iid}',this)">▶</button>`:""}
         </div>
-        <div class="meanbox">📌 <b>意味</b>　${n.meaning}${n.literal?`<br>🗿 <b>字面</b>　${n.literal}`:""}${n.pattern?`<br>🧩 <b>典型句</b>　${n.pattern}`:""}</div>
+        <div class="meanbox">📌 <b>意味</b>　${n.meaning}${n.literal?`<br>🗿 <b>字面</b>　${n.literal}`:""}${n.pattern?`<br>🧩 <b>典型句</b>　${n.pattern}`:""}${orgNote}</div>
         ${(n.examples||[]).map((_,i)=>rowHTML(`${iid}-e${i}`)).join("")}
         ${(n.nadeshiko&&n.nadeshiko.length)?`<h3 class="sec">🎬 原声台词</h3>`:""}
         ${(n.nadeshiko||[]).map((sc,i)=>nadeHTML(sc,iid,i)).join("")}
