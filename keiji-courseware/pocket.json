@@ -252,6 +252,10 @@
         {
           "jp": "うちの猫きゅんが膝の上で寝てる。かわいすぎる。",
           "cn": "我家的猫酱正睡在膝盖上，可爱爆了。"
+        },
+        {
+          "jp": "中学生の妹は、好きな先輩のことを「けんきゅん」と呼んで、友達と盛り上がっている。",
+          "cn": "上初中的妹妹把喜欢的学长称作「小健酱」，和朋友们聊得热火朝天。"
         }
       ],
       "note": "动漫偶像圈・网络文化高频：把名字加 きゅん 表示「心動・可愛い」，由 くん 萌化而来（くん→きゅん）；词源是拟声词 きゅん（胸がきゅんとなる＝怦然心动）。只用于私下对推し・恋人・宠物撒娇，正式场合禁。",
@@ -2027,9 +2031,54 @@
         {
           "jp": "彼は借金まみれの生活を送っている。",
           "cn": "他过着负债累累的生活。"
+        },
+        {
+          "jp": "一日中作業していたので、作業服は油とほこりまみれになっていた。",
+          "cn": "因为干了一整天活，工作服上沾满了油污和灰尘。"
+        },
+        {
+          "jp": "彼は借金まみれの状態から、十年かけて再起を果たした。",
+          "cn": "他从负债累累的境地，花了十年东山再起。"
         }
       ],
-      "note": "只接「糊在身上」的东西：血・汗・泥・ほこり，抽象的借金也可。近义〜だらけ适用面更广：間違いだらけ ✓ 間違いまみれ ✗。"
+      "note": "只接「糊在身上」的东西：血・汗・泥・ほこり，抽象的借金也可。近义〜だらけ适用面更广：間違いだらけ ✓ 間違いまみれ ✗。",
+      "nadeshiko": [
+        {
+          "jp": "借金(しゃっきん)まみれで やぶれかぶれに",
+          "en": "Drowning in debt and desperate.",
+          "cn": "债台高筑，自暴自弃。",
+          "media": "ODDTAXI",
+          "ep": "EP8",
+          "at": "1:09",
+          "url": "https://nadeshiko.co/en/sentence/BacFPuPDFknC",
+          "audio": "https://cdn.nadeshiko.co/media/128547/8/ba40e3d649.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128547/8/ba40e3d649.webp"
+        },
+        {
+          "jp": "あら あなたそんなに 泥(どろ)まみれになっちゃって",
+          "en": "Oh, dear. You're covered in so much mud.",
+          "cn": "哎呀，你弄得浑身是泥。",
+          "media": "Fate/strange Fake",
+          "ep": "EP7",
+          "at": "8:03",
+          "url": "https://nadeshiko.co/en/sentence/5eXpDP9OdiqM",
+          "audio": "https://cdn.nadeshiko.co/media/166617/7/e95de4fe42.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166617/7/e95de4fe42.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "汗（　）になって試合を戦い抜いた。",
+          "opts": [
+            "まみれ",
+            "だらけ",
+            "ずくめ"
+          ],
+          "ans": 0,
+          "exp": "汗・血・泥等「糊在身上」的东西用まみれ；だらけ多表杂乱脏污（間違いだらけ），ずくめ＝清一色。"
+        }
+      ]
     },
     {
       "id": "darake",
@@ -2282,9 +2331,50 @@
         {
           "jp": "彼女は理论派で、データなしに结论を出さない。",
           "cn": "她是理论派，没有数据不会下结论。"
+        },
+        {
+          "jp": "彼は党内で改革派と目されながらも、選挙では保守派の支持も失わないよう巧みに立ち回った。",
+          "cn": "他虽然被视为党内的改革派，却在选举中巧妙周旋，不失去保守派的支持。"
         }
       ],
-      "note": "派（は）表「流派、派别」：改革派・保守派・行動派・安定派等。常配「A派 vs B派」的对立结构。也用于审美/喜好分野：リアル派 vs ファンタジー派。"
+      "note": "派（は）表「流派、派别」：改革派・保守派・行動派・安定派等。常配「A派 vs B派」的对立结构。也用于审美/喜好分野：リアル派 vs ファンタジー派。",
+      "nadeshiko": [
+        {
+          "jp": "伯爵(はくしゃく)は保守派(ほしゅは)の領袖(りょうしゅう)。",
+          "en": "The count is a conservative leader.",
+          "cn": "伯爵是保守派的领袖。",
+          "media": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+          "ep": "EP3",
+          "at": "11:51",
+          "url": "https://nadeshiko.co/en/sentence/MogB9oYjypFP",
+          "audio": "https://cdn.nadeshiko.co/media/153629/3/c5d5213bfc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153629/3/c5d5213bfc.webp"
+        },
+        {
+          "jp": "教会(きょうかい)改革派(かいかくは)に流通(りゅうつう)させる構(かま)えだ",
+          "en": "we will use the Reformation to distribute it.",
+          "cn": "打算通过教会改革派来流通。",
+          "media": "Orb: On the Movements of the Earth",
+          "ep": "EP18",
+          "at": "22:10",
+          "url": "https://nadeshiko.co/en/sentence/TCjTkXydBtV1",
+          "audio": "https://cdn.nadeshiko.co/media/151514/18/c6b78e12ca.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/151514/18/c6b78e12ca.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼は（　）で、データより経験を重視する。",
+          "opts": [
+            "経験派",
+            "経験家",
+            "経験者"
+          ],
+          "ans": 0,
+          "exp": "〜派＝持某种主张／风格的一群人：経験派＝重视经验的一派。家指专业造诣者，者指有此经验的人。"
+        }
+      ]
     },
     {
       "id": "zoku",
@@ -2319,9 +2409,50 @@
         {
           "jp": "彼女は毎日コンビニで饭を買う「コンビニ族」だ。",
           "cn": "她每天都在便利店买饭，是「便利店族」。"
+        },
+        {
+          "jp": "近年は、スマートフォンなしでは生活できない「スマホ依存族」が社会問題視されている。",
+          "cn": "近年来，离开手机就无法生活的「手机依赖族」被视为社会问题。"
         }
       ],
-      "note": "族（ぞく）表「具有共同特征的一类人」：ギャル族・ネット族・ワンルーム族等。近年流行语中频繁出现新族名，多带自嘲或社会观察语感。"
+      "note": "族（ぞく）表「具有共同特征的一类人」：ギャル族・ネット族・ワンルーム族等。近年流行语中频繁出现新族名，多带自嘲或社会观察语感。",
+      "nadeshiko": [
+        {
+          "jp": "ただの暴走族(ぼうそうぞく)かと思(おも)われますが",
+          "en": "They seem to be an ordinary biker gang, sir.",
+          "cn": "看起来只是普通的暴走族。",
+          "media": "Akira",
+          "ep": "EP1",
+          "at": "15:30",
+          "url": "https://nadeshiko.co/en/sentence/2ZYa2FwKHX1L",
+          "audio": "https://cdn.nadeshiko.co/media/47/1/eaee1dd6dc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/47/1/eaee1dd6dc.webp"
+        },
+        {
+          "jp": "力(ちから)ある大狼(おおがみ)族(ぞく)と 知恵(ちえ)を持(も)つ妖狐族(ようこぞく)",
+          "en": "The powerful clan of the Great Wolves and the wise clan of the Spirit Foxes...",
+          "cn": "拥有力量的大狼族，与拥有智慧的妖狐族。",
+          "media": "The Eminence in Shadow Season 2",
+          "ep": "EP6",
+          "at": "18:45",
+          "url": "https://nadeshiko.co/en/sentence/hm3JnZn8q2kl",
+          "audio": "https://cdn.nadeshiko.co/media/161964/6/8ad321dc98.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161964/6/8ad321dc98.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "休日は家にこもりがちな若者を、俗に「インドア（　）」と呼ぶことがある。",
+          "opts": [
+            "族",
+            "派",
+            "系"
+          ],
+          "ans": 0,
+          "exp": "〜族＝具有共同特征／生活方式的一类人；派＝主张・流派，系＝类型・体系。"
+        }
+      ]
     },
     {
       "id": "ryuu",
@@ -2356,9 +2487,50 @@
         {
           "jp": "彼女は三行流の生活を実践している。",
           "cn": "她践行着「三行极简」的生活方式。"
+        },
+        {
+          "jp": "彼は独学で身につけた自分流のギター奏法を、後輩たちに惜しみなく教えている。",
+          "cn": "他把自学掌握的自成一派的吉他弹法，毫不吝惜地教给后辈们。"
         }
       ],
-      "note": "流（りゅう）表「风格、流派」：自分流・伝統流・古流・大衆流等。常见于武道/艺术领域（古流・新流），也活用于日常生活描述个人做法（自分流）。"
+      "note": "流（りゅう）表「风格、流派」：自分流・伝統流・古流・大衆流等。常见于武道/艺术领域（古流・新流），也活用于日常生活描述个人做法（自分流）。",
+      "nadeshiko": [
+        {
+          "jp": "司波(しば)が長(た)けている古流(こりゅう)の武術(ぶじゅつ)には　肉体(にくたい)の強度(きょうど)を高(たか)める技(わざ)もあると聞(き)く",
+          "en": "I've heard that the old school martial art Shiba is skilled in has a technique for strengthening the body.",
+          "cn": "听说司波擅长的古流武术中，也有提高肉体强度的技法。",
+          "media": "The Irregular at Magic High School",
+          "ep": "EP16",
+          "at": "14:41",
+          "url": "https://nadeshiko.co/en/sentence/Zz1mGURc0XVi",
+          "audio": "https://cdn.nadeshiko.co/media/20458/16/fd835cf40a.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20458/16/fd835cf40a.webp"
+        },
+        {
+          "jp": "でも これ我流(がりゅう)でしょ。",
+          "en": "But this is your own invention, isn't it?",
+          "cn": "但这可是你自己独创的吧。",
+          "media": "Frieren: Beyond Journey’s End",
+          "ep": "EP20",
+          "at": "9:54",
+          "url": "https://nadeshiko.co/en/sentence/3FY2PYB2KMrQ",
+          "audio": "https://cdn.nadeshiko.co/media/154587/20/9e529d16f4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154587/20/9e529d16f4.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼の泳ぎ方は我（　）で、誰にも教わっていない。",
+          "opts": [
+            "流",
+            "派",
+            "系"
+          ],
+          "ans": 0,
+          "exp": "〜流＝风格・流派・做法：我流＝自己独创的做法。派＝派别（人群），系＝类型・体系。"
+        }
+      ]
     },
     {
       "id": "sugi",
@@ -2393,9 +2565,50 @@
         {
           "jp": "彼は遊び過ぎて、試験に落ちてしまった。",
           "cn": "他玩过头，考试挂了。"
+        },
+        {
+          "jp": "彼は若い頃から飲み過ぎが原因で何度も体を壊し、ついに医者から酒を止められた。",
+          "cn": "他年轻时因喝酒过量多次搞垮身体，最终被医生勒令戒酒。"
         }
       ],
-      "note": "构成本质：ます形去ます＋過ぎ＝「过度～」。动词：食べ過ぎ・飲み過ぎ・働き過ぎ；い-形容词：暑過ぎ・強過ぎ・大きい過ぎ。书面语可用「〜過ぎる」（動詞形）。"
+      "note": "构成本质：ます形去ます＋過ぎ＝「过度～」。动词：食べ過ぎ・飲み過ぎ・働き過ぎ；い-形容词：暑過ぎ・強過ぎ・大きい過ぎ。书面语可用「〜過ぎる」（動詞形）。",
+      "nadeshiko": [
+        {
+          "jp": "うう おなか いっぱーい。食(た)べ過(す)ぎたー。",
+          "en": "Oh, I'm so full. I think I ate too much.",
+          "cn": "呜，肚子好饱——吃太多了。",
+          "media": "Bakuman.",
+          "ep": "EP20",
+          "at": "0:03",
+          "url": "https://nadeshiko.co/en/sentence/XUavzKqHafoP",
+          "audio": "https://cdn.nadeshiko.co/media/7674/20/8b3a5f7a01.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/7674/20/8b3a5f7a01.webp"
+        },
+        {
+          "jp": "まったく あいつは飲(の)み過(す)ぎだ",
+          "en": "What a menace! Of course he overdid it,",
+          "cn": "真是的，那家伙喝太多了。",
+          "media": "My Happy Marriage",
+          "ep": "EP5",
+          "at": "8:25",
+          "url": "https://nadeshiko.co/en/sentence/sCldlQdoZ1rN",
+          "audio": "https://cdn.nadeshiko.co/media/147103/5/cc04e54d27.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/147103/5/cc04e54d27.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "連日の（　）で、彼はすっかり太ってしまった。",
+          "opts": [
+            "食べ過ぎ",
+            "食べすぎる",
+            "食べ過ぎた"
+          ],
+          "ans": 0,
+          "exp": "ます形去ます＋過ぎ＝过度～：食べ過ぎ・飲み過ぎ。此处作名词接「で」。"
+        }
+      ]
     },
     {
       "id": "chirasu",
@@ -2565,6 +2778,14 @@
         {
           "jp": "上品ぶった話し方が鼻につく。",
           "cn": "装得一本正经的说话方式令人讨厌。"
+        },
+        {
+          "jp": "彼は知識が乏しいくせに、何でも知っているぶって話に割り込んでくる。",
+          "cn": "他明明没什么知识，却爱装作什么都懂地插话。"
+        },
+        {
+          "jp": "部長の前ではいかにも真面目ぶっているが、陰では誰よりも手を抜いている。",
+          "cn": "在部长面前他装得一本正经，背地里却比谁都偷懒。"
         }
       ],
       "note": "接名词・形容动词词干（学者ぶる・偉ぶる・上品ぶる・いい子ぶる・一人前ぶる）。「ぶる」的前提是「明明不是」：真学者不说学者ぶる。常配「～ぶって」「～ぶった」使用，带做作、卖弄的否定语感。",
@@ -2574,6 +2795,30 @@
           "q": "貧乏なのに上品ぶるのはみっともない。",
           "ans": true,
           "exp": "✓ 明明没钱却装优雅，正是ぶる的典型用法。ぶる＝假装、充场面。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "前世(ぜんせい)の記憶(きおく)で 大人(おとな)ぶってただけのガキだって。",
+          "en": "just a brat using old memories to act grown-up.",
+          "cn": "不过是个靠前世记忆装大人的小鬼罢了。",
+          "media": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+          "ep": "EP12",
+          "at": "21:44",
+          "url": "https://nadeshiko.co/en/sentence/yulWolETwvls",
+          "audio": "https://cdn.nadeshiko.co/media/166873/12/04ac545584.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166873/12/04ac545584.webp"
+        },
+        {
+          "jp": "今更(いまさら) 兄貴(あにき)ぶっても...》",
+          "en": "Don't try to act like a big brother now...",
+          "cn": "事到如今再摆哥哥架子也……",
+          "media": "Grand Blue Dreaming Season 3",
+          "ep": "EP3",
+          "at": "20:16",
+          "url": "https://nadeshiko.co/en/sentence/sFZhx2yvLqhZ",
+          "audio": "https://cdn.nadeshiko.co/media/199111/3/24c6b13b51.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/199111/3/24c6b13b51.webp"
         }
       ]
     },
@@ -2598,6 +2843,14 @@
         {
           "jp": "彼女はミステリー系の小説が大好きだ。",
           "cn": "她超爱推理悬疑类的小说。"
+        },
+        {
+          "jp": "私はもともと理系だったが、大学で文学に出会ってから、すっかり文系の道に進んでしまった。",
+          "cn": "我原本是理科生，但大学时接触到文学后，就完全走上了文科的道路。"
+        },
+        {
+          "jp": "あの店は、和風系でありながらモダンな雰囲気も漂う、独特の内装で人気を集めている。",
+          "cn": "那家店虽是和风系，却飘着现代气息，以独特的装修聚集人气。"
         }
       ],
       "note": "接尾读けい，作「分类标签」用：文系・理系（升学的文理分科）／お笑い系・ミステリー系（题材类型）／革新系（派别）。比〜派更偏「题材・属性归类」，比〜流更口语。",
@@ -2607,6 +2860,30 @@
           "q": "理系とは、理科系のことで、理工系の学問を専攻する人を指す。",
           "ans": true,
           "exp": "✓ 理系＝自然科学・工学系；与之相对的是文系（人文・社会科学系）。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "真琴(まこと) 理系(りけい)か文系(ぶんけい)か決(き)めた?",
+          "en": "Makoto, did you decide between sciences or humanities?",
+          "cn": "真琴，你决定选理科还是文科了吗？",
+          "media": "The Girl Who Leapt Through Time",
+          "ep": "EP1",
+          "at": "25:24",
+          "url": "https://nadeshiko.co/en/sentence/9UBv2Zs-HCMQ",
+          "audio": "https://cdn.nadeshiko.co/media/2236/1/5e6906bd54.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/2236/1/5e6906bd54.webp"
+        },
+        {
+          "jp": "だって 文系(ぶんけい)眼鏡(がんきょう)野郎(やろう) 嫌(きら)いだもん",
+          "en": "Well, I can't stand the bookish four-eyes type.",
+          "cn": "因为我讨厌那种文科眼镜男嘛。",
+          "media": "Your lie in April",
+          "ep": "EP16",
+          "at": "12:54",
+          "url": "https://nadeshiko.co/en/sentence/cAVNLr3GNBhp",
+          "audio": "https://cdn.nadeshiko.co/media/20665/16/e5df1b1da2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20665/16/e5df1b1da2.webp"
         }
       ]
     },
