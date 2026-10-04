@@ -33,9 +33,11 @@ RATE = "-6%"
 SEED = 20260929          # 固定随机种子：干扰项抽样可复现，重复构建 diff 干净
 MIN_MP3 = 300            # 小于该字节数视为合成失败
 BANK_META = [
-    ["recog",   "📘 働き認識"],
-    ["fill",    "✍️ 型填空"],
+    ["listen2", "🎧 聴解・意味理解"],
+    ["listen3", "🎧 聴解・書き取り"],
     ["listen",  "🎧 聴解判別"],
+    ["fill",    "✍️ 型填空"],
+    ["recog",   "📘 働き認識"],
     ["custom",  "⭐ 自作題"],
 ]
 
@@ -354,6 +356,11 @@ def build_questions(groups, items, audio):
     dup_words = {}
     for it in items:
         dup_words[it["word"]] = dup_words.get(it["word"], 0) + 1
+    sent_pool = []
+    for it in items:
+        exs = it.get("examples") or []
+        if exs and exs[0].get("jp") and exs[0].get("cn"):
+            sent_pool.append({"id": it["id"], "jp": exs[0]["jp"], "cn": exs[0]["cn"]})
 
     def disp(it):
         return f'{it["word"]}（{it["read"]}）' if dup_words[it["word"]] > 1 else it["word"]
@@ -401,18 +408,20 @@ def build_questions(groups, items, audio):
             exp=f'{it["word"]}（{it.get("base","")}）＝{it["meaning"]}'
                 + (f"<br>💡 {note}" if note else ""))
 
-        # ✍️ 型填空：把夹在中间的那个自动词て形找回来
-        ex, blanked = blank_ex(it)
-        if ex:
-            opts = [disp(it)] + others(it, "word")
-            rng.shuffle(opts)
-            add("fill", f"{iid}:fill", type="choice",
-                q=f'型填空：{blanked}<br>'
-                  f'<span class="hint">（　）に入るのは、宾语と他動詞のあいだに挟まれた自動詞て形。'
-                  f'「を」は後ろの他動詞のもの。</span>',
-                opts=opts, ans=opts.index(disp(it)),
-                exp=f'元の文：{ex["jp"]}<br>{ex.get("cn", "")}'
-                    + f'<br>{it["word"]}＝{it["meaning"]}')
+        # ✍️ 型填空：全例句出题（强化文法）
+        for ei, ex in enumerate(it.get("examples") or []):
+            k = key_of(it)
+            if k and k in ex.get("jp", ""):
+                blanked = ex["jp"].replace(k, "（　）", 1)
+                opts = [disp(it)] + others(it, "word")
+                rng.shuffle(opts)
+                add("fill", f"{iid}:fill-{ei}", type="choice",
+                    q=f'型填空：{blanked}<br>'
+                      f'<span class="hint">（　）に入るのは、宾语と他動詞のあいだに挟まれた自動詞て形。'
+                      f'「を」は後ろの他動詞のもの。</span>',
+                    opts=opts, ans=opts.index(disp(it)),
+                    exp=f'元の文：{ex["jp"]}<br>{ex.get("cn", "")}'
+                        + f'<br>{it["word"]}＝{it["meaning"]}')
 
         # 🎧 聴解判別：听例句，判断是哪个て形
         exs = it.get("examples") or []
@@ -422,6 +431,30 @@ def build_questions(groups, items, audio):
                 opts=[disp(it)] + others(it, "word"), ans=0,
                 exp=f'原句：{exs[0]["jp"]}<br>{exs[0].get("cn", "")}'
                     + f'<br>{it["word"]}＝{it["meaning"]}')
+
+        # 🎧 聴解・意味理解／書き取り（音声→意味・原文）
+        ex0 = (exs or [{}])[0]
+        if f"{iid}-e0" in audio and ex0.get("cn"):
+            cn_cands, jp_cands = [], []
+            for s in sent_pool:
+                if s["id"] == iid:
+                    continue
+                if s["cn"] != ex0["cn"] and s["cn"] not in cn_cands:
+                    cn_cands.append(s["cn"])
+                if s["jp"] != ex0["jp"] and s["jp"] not in jp_cands:
+                    jp_cands.append(s["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(cn_cands) >= 3:
+                add("listen2", f"{iid}:listen2", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[ex0["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{iid}:listen3", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[ex0["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
 
         # ⭐ 自作题原样收录
         for n, cq in enumerate(it.get("quizzes") or []):
