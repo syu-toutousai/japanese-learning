@@ -376,8 +376,9 @@ def gen_nade_media(items):
 
 # ────────────────────────────────────────────── auto quizzes
 
-BANKS = [["recog", "📘 意味認識"], ["kanji", "🈶 漢字読み"], ["suffix", "🔤 語尾判別"],
-         ["fill", "✍️ 例文填空"], ["listen", "🎧 聴解判別"]]
+BANKS = [["listen2", "🎧 聴解・意味理解"], ["listen3", "🎧 聴解・書き取り"],
+         ["listen", "🎧 語尾聞き分け"], ["fill", "✍️ 例文填空"],
+         ["recog", "📘 意味認識"], ["kanji", "🈶 漢字読み"], ["suffix", "🔤 語尾判別"]]
 SUFFIX_OPTS = ["〜やか", "〜らか", "〜か（その他）", "〜しい"]
 SUFFIX_IDX = {"yaka": 0, "raka": 1, "ka": 2, "shi": 3}
 
@@ -389,6 +390,11 @@ def build_questions(items, audio):
         for k in it.get("kanji") or []:
             if k.get("c") and k.get("read"):
                 kanji_pool.append((k["c"], k["read"]))
+    sent_pool = []
+    for it in items:
+        exs = it.get("examples") or []
+        if exs and exs[0].get("jp") and exs[0].get("cn"):
+            sent_pool.append({"id": it["id"], "jp": exs[0]["jp"], "cn": exs[0]["cn"]})
 
     qs = []
 
@@ -403,6 +409,7 @@ def build_questions(items, audio):
 
     for it in items:
         iid = it["id"]
+        ex0 = (it.get("examples") or [{}])[0]
 
         # 📘 意味認識
         add("recog", f"{iid}:recog", type="choice",
@@ -431,16 +438,16 @@ def build_questions(items, audio):
             exp=f'{it["word"]} は「{SUFFIX_OPTS[SUFFIX_IDX.get(it["group"],2)]}」型（'
                 f'{it.get("read","")}）')
 
-        # ✍️ 例文填空
+        # ✍️ 例文填空（全例句出题，强化文法）
         form = it.get("form") or it["word"]
-        ex0 = it["examples"][0]
-        if form in ex0["jp"]:
-            blanked = ex0["jp"].replace(form, "（　）", 1)
-            add("fill", f"{iid}:fill", type="choice",
-                q=f'{blanked}<br><span class="hint">（　）に入る語は？　{ex0["cn"]}</span>',
-                opts=[it["word"]] + others(iid, "word"), ans=0,
-                exp=f'完整句：{ex0["jp"]}<br>{ex0["cn"]}<br>'
-                    f'「{it["word"]}」＝{it["mean"]}')
+        for i, ex in enumerate(it.get("examples") or []):
+            if form and form in ex["jp"]:
+                blanked = ex["jp"].replace(form, "（　）", 1)
+                add("fill", f"{iid}:fill-{i}", type="choice",
+                    q=f'{blanked}<br><span class="hint">（　）に入る語は？　{ex["cn"]}</span>',
+                    opts=[it["word"]] + others(iid, "word"), ans=0,
+                    exp=f'完整句：{ex["jp"]}<br>{ex["cn"]}<br>'
+                        f'「{it["word"]}」＝{it["mean"]}')
 
         # 🎧 聴解判別
         if f"{iid}-e0" in audio:
@@ -449,6 +456,29 @@ def build_questions(items, audio):
                 q="🎧 听音频：句子里用的是哪个词？",
                 opts=[it["word"]] + others(iid, "word"), ans=0,
                 exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
+
+        # 🎧 聴解・意味理解／書き取り（音声→意味・原文）
+        if f"{iid}-e0" in audio and ex0.get("cn"):
+            cn_cands, jp_cands = [], []
+            for s in sent_pool:
+                if s["id"] == iid:
+                    continue
+                if s["cn"] != ex0["cn"] and s["cn"] not in cn_cands:
+                    cn_cands.append(s["cn"])
+                if s["jp"] != ex0["jp"] and s["jp"] not in jp_cands:
+                    jp_cands.append(s["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(cn_cands) >= 3:
+                add("listen2", f"{iid}:listen2", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[ex0["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{iid}:listen3", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[ex0["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
 
     return qs
 
