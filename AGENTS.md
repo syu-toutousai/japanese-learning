@@ -30,7 +30,7 @@
 | `karada-courseware/` | からだの慣用句・体の部位ポケット（慣用句＋身体動作） | `karada.json` |
 | `kakure-kanji-courseware/` | 隠れ漢字ポケット・假名背后的本源汉字（7 分类 45 词） | `kakure-kanji.json` |
 | `renyo-courseware/` | 連用形の化身・動詞が接尾語になるとき（源動詞→連用形→接尾語化，5 分类 22 词） | `renyo.json` |
-| `meta-guide/` | 日本語の二重構造・メタ認知ガイド（源流六分类＋判定四问，非课件・无构建） | 手写 HTML |
+| `meta-guide/` | 日本語の二重構造・メタ認知ガイド（源流六分类＋判定四问＋挿入テスト，非课件・无构建） | 手写 HTML |
 
 范式演进：`ni-courseware/` 确立了**数据外置 JSON → pykakasi 振假名 → TTS 音声 →
 Nadeshiko 原声 → 题库 → 单文件 HTML** 的完整管道；`mienai`/`kurikaeshi`/`yakaraka`/
