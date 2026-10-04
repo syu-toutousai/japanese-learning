@@ -294,6 +294,20 @@ def build_questions(items, exams, audio):
             ans=e["answer_index"] - 1, exp=exp,
             meta=dict(year=e["year"], month=e["month"], no=e["number"], section=tag))
 
+    # 🎧 聴解・真題：ソース音声を聞いて空欄補充（音→文法の運用力）
+    for e in exams:
+        if e["type"] != "choice" or not e.get("options") or not e.get("answer_index"):
+            continue
+        aid = "ex-" + e["id"]
+        if aid not in audio:
+            continue
+        add("listen_exam", e["id"] + ":listen", type="listen", aid=aid,
+            q=f'🎧 听音频：空欄に入る語はどれ？<br><span class="hint">'
+              f'{e["year"]}-{e["month"]:02d} {e["section"]} Q{e["number"]}</span>',
+            opts=e["options"], ans=e["answer_index"] - 1,
+            exp=f'原句：{fill_blank(e["stem"], e["answer_text"])}<br>正解：{e["answer_text"]}'
+                + (f'<br>呼応・搭配：{e["pattern"]}' if e.get("pattern") else ''))
+
     def distract(it, field, n=3):
         own = it[field]
         cand = [x[field] for x in items if x["id"] != it["id"] and x[field] != own]
@@ -833,6 +847,7 @@ def main():
     print(f"[3/4] generating quiz banks...")
     qs = build_questions(items, exams, audio)
     banks_meta = [[k, l] for k, l in meta.get("quizBanks", [
+        ["listen_exam", "🎧 聴解真題（音声→空欄）"],
         ["exam", "🎯 真题填空"], ["recog", "📘 意味認識"], ["engine", "🔧 呼応拆解"],
         ["listen", "🎧 聴解判别"], ["judge", "⭕ 判断正誤"]])]
     from collections import Counter

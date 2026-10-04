@@ -15,6 +15,10 @@
   "voiceMale": "ja-JP-KeitaNeural",
   "quizBanks": [
    [
+    "listen_exam",
+    "🎧 聴解真題（音声→空欄）"
+   ],
+   [
     "exam",
     "🎯 真题填空"
    ],
