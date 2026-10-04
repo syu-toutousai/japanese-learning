@@ -29,10 +29,12 @@ RATE = "-6%"
 SEED = 20260828          # 固定随机种子：干扰项抽样可复现，重复构建 diff 干净
 MIN_MP3 = 300            # 小于该字节数视为合成失败
 BANK_META = [
-    ["recog",  "📘 詞義認識"],
-    ["fill",   "✍️ 対立填空"],
+    ["listen2", "🎧 聴解・意味理解"],
+    ["listen3", "🎧 聴解・書き取り"],
     ["listen", "🎧 聴解判別"],
     ["spatial", "🧭 空間判斷"],
+    ["fill",   "✍️ 対立填空"],
+    ["recog",  "📘 詞義認識"],
     ["custom", "⭐ 自作題"],
 ]
 
@@ -250,6 +252,11 @@ def build_questions(groups, items, special, audio):
     dup_words = {}
     for it in items:
         dup_words[it["word"]] = dup_words.get(it["word"], 0) + 1
+    sent_pool = []
+    for it in items:
+        exs = it.get("examples") or []
+        if exs and exs[0].get("jp") and exs[0].get("cn"):
+            sent_pool.append({"id": it["id"], "jp": exs[0]["jp"], "cn": exs[0]["cn"]})
 
     def disp(it):
         return f'{it["word"]}（{it["read"]}）' if dup_words[it["word"]] > 1 else it["word"]
@@ -283,14 +290,13 @@ def build_questions(groups, items, special, audio):
             exp=f'{it["word"]}（{it["read"]}）＝{it["meaning"]}'
                 + (f"<br>🧠 {note}" if note else ""))
 
-        # ✍️ 対立填空：把例句里的方位词挖掉选回去
+        # ✍️ 対立填空：把例句里的方位词挖掉选回去（全例句出题）
         for i, ex in enumerate(it.get("examples") or []):
             blanked = ex["jp"].replace(it["word"], "（　）", 1)
             add("fill", f"{iid}:fill-{i}", type="choice",
                 q=f'{blanked}<br><span class="hint">（　）里填回哪个方位词？</span>',
                 opts=[disp(it)] + distractors(it, "word"), ans=0,
                 exp=f'完整句子：{ex["jp"]}<br>{ex["cn"]}')
-            break
 
         # 🎧 聴解判別
         exs = it.get("examples") or []
@@ -300,6 +306,30 @@ def build_questions(groups, items, special, audio):
                 opts=[disp(it)] + distractors(it, "word"), ans=0,
                 exp=f'原句：{exs[0]["jp"]}<br>{exs[0]["cn"]}'
                     + f'<br>{disp(it)}＝{it["meaning"]}')
+
+        # 🎧 聴解・意味理解／書き取り（音声→意味・原文）
+        ex0 = (exs or [{}])[0]
+        if f"{iid}-e0" in audio and ex0.get("cn"):
+            cn_cands, jp_cands = [], []
+            for s in sent_pool:
+                if s["id"] == iid:
+                    continue
+                if s["cn"] != ex0["cn"] and s["cn"] not in cn_cands:
+                    cn_cands.append(s["cn"])
+                if s["jp"] != ex0["jp"] and s["jp"] not in jp_cands:
+                    jp_cands.append(s["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(cn_cands) >= 3:
+                add("listen2", f"{iid}:listen2", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[ex0["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{iid}:listen3", type="listen", aid=f"{iid}-e0",
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[ex0["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{ex0["jp"]}<br>{ex0["cn"]}')
 
         # 🧭 空間判斷（方位词专属脑内旋转/罗盘定位题）
         if it.get("dir") and it["dir"] in COMPASS_ANGLES and it["kind"] == "compass":
