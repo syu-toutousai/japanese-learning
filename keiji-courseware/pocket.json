@@ -59,6 +59,14 @@
         {
           "jp": "リーさんは日本語の先生です。",
           "cn": "李老师是日语老师。"
+        },
+        {
+          "jp": "さっき田中さんから電話があったので、折り返し連絡しておいた。",
+          "cn": "刚才田中先生来过电话，我已经回电联系过了。"
+        },
+        {
+          "jp": "隣の席の佐藤さんは、困っている人を見ると放っておけない性格だ。",
+          "cn": "邻座的佐藤先生是个看到别人有困难就坐不住的人。"
         }
       ],
       "note": "不能加在自己或自己一方的人身上：✗私さん → 私は。",
@@ -68,6 +76,30 @@
           "q": "私は王さんです。",
           "ans": false,
           "exp": "✗ さん不能用于自己：应说「私は王です」。「あなた／田中さん」才加さん。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "これ 杉山(すぎやま)さんに伝(つた)えてください",
+          "en": "pass this message to Ms. Sugiyama for me?",
+          "cn": "请把这个转告杉山女士。",
+          "media": "Extremely Inappropriate!",
+          "ep": "EP9",
+          "at": "23:23",
+          "url": "https://nadeshiko.co/en/sentence/vpqERxWkF_mC",
+          "audio": "https://cdn.nadeshiko.co/media/mv/241795/9/724fe3ddff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/mv/241795/9/724fe3ddff.webp"
+        },
+        {
+          "jp": "全部(ぜんぶ) ヤチヨさんのおかげです",
+          "en": "and I couldn't have done it without Yachiyo.",
+          "cn": "全都多亏了八千代女士。",
+          "media": "Apocalypse Hotel",
+          "ep": "EP9",
+          "at": "19:50",
+          "url": "https://nadeshiko.co/en/sentence/rt57Qz3pmlTz",
+          "audio": "https://cdn.nadeshiko.co/media/180675/9/48495d9609.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/180675/9/48495d9609.webp"
         }
       ]
     },
@@ -88,9 +120,49 @@
         {
           "jp": "おばあちゃんの作る料理が一番おいしい。",
           "cn": "奶奶做的饭最好吃。"
+        },
+        {
+          "jp": "小学生の頃から仲のいい友達のことは、大人になった今でも思わずちゃん付けで呼んでしまう。",
+          "cn": "从小学就关系很好的朋友，如今长大成人了，还是会不由自主地以「ちゃん」称呼。"
+        },
+        {
+          "jp": "祖母は、孫たちが「おばあちゃん」と甘えるたびに、目を細めて喜ぶ。",
+          "cn": "每当孙子孙女喊着「奶奶」撒娇时，祖母总是眯起眼睛高兴得不得了。"
         }
       ],
-      "note": "对长辈、上司用ちゃん会显得轻浮，职场慎用。"
+      "note": "对长辈、上司用ちゃん会显得轻浮，职场慎用。",
+      "nadeshiko": [
+        {
+          "jp": "お姉(ねえ)ちゃん お姉(ねえ)ちゃんったら!",
+          "en": "Sis! Come on, Sis!",
+          "cn": "姐姐！姐姐你倒是听我说呀！",
+          "media": "Assassination Classroom Second Season",
+          "ep": "EP14",
+          "at": "10:35",
+          "url": "https://nadeshiko.co/en/sentence/8f3yFeaZaJQ9",
+          "audio": "https://cdn.nadeshiko.co/media/21170/14/0cdf5cb555.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21170/14/0cdf5cb555.webp"
+        },
+        {
+          "jp": "あゆちゃんって呼(よ)んでいい?",
+          "en": "Can I call you Ayu-chan?",
+          "cn": "可以叫你阿优酱吗？",
+          "media": "Kanon (2006)",
+          "ep": "EP11",
+          "at": "11:46",
+          "url": "https://nadeshiko.co/en/sentence/lLVjT8oZcGJw",
+          "audio": "https://cdn.nadeshiko.co/media/1530/11/7633b18924.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1530/11/7633b18924.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「佐藤ちゃん」は、初対面の取引先の部長に使っても失礼にならない。",
+          "ans": false,
+          "exp": "✗ ちゃん是亲昵称呼，对上司或初次见面的人要用「様／さん」。"
+        }
+      ]
     },
     {
       "id": "kun",
@@ -109,9 +181,54 @@
         {
           "jp": "隣の健太くんと野球をします。",
           "cn": "和隔壁的健太君打棒球。"
+        },
+        {
+          "jp": "新入社員の鈴木くんは、入社してまだ三ヶ月なのに、先輩顔で後輩に指示を出している。",
+          "cn": "新员工铃木君入职才三个月，却摆出前辈的样子对后辈发号施令。"
+        },
+        {
+          "jp": "彼のことを「佐藤くん」と名字で呼ぶのは、親しみと敬意の両方を表したいからだ。",
+          "cn": "用姓氏「佐藤君」称呼他，是想同时表达亲近与敬意。"
         }
       ],
-      "note": "近年也有公司用来称呼女性下属，但传统上以男性为主。"
+      "note": "近年也有公司用来称呼女性下属，但传统上以男性为主。",
+      "nadeshiko": [
+        {
+          "jp": "あかねくんに対(たい)して なれなれしい!",
+          "en": "You are behaving too familiarly with Akane.",
+          "cn": "你对茜君也太随便了吧！",
+          "media": "Ranma1/2 (2024)",
+          "ep": "EP2",
+          "at": "7:35",
+          "url": "https://nadeshiko.co/en/sentence/ijh1SXvuXIAz",
+          "audio": "https://cdn.nadeshiko.co/media/178533/2/29bf7d6874.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/178533/2/29bf7d6874.webp"
+        },
+        {
+          "jp": "田中(たなか)! 田中(たなか)くん!",
+          "en": "Tanaka! Tanaka-kun!",
+          "cn": "田中！田中君！",
+          "media": "ODDTAXI",
+          "ep": "EP4",
+          "at": "14:28",
+          "url": "https://nadeshiko.co/en/sentence/88TIAVpop83Y",
+          "audio": "https://cdn.nadeshiko.co/media/128547/4/9aa37937d8.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/128547/4/9aa37937d8.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "山田（　）、ちょっと来てくれ。",
+          "opts": [
+            "くん",
+            "ちゃん",
+            "様"
+          ],
+          "ans": 0,
+          "exp": "くん用于同辈或晚辈男性；ちゃん过于亲昵，様过于郑重，都不适合日常呼唤男同事。"
+        }
+      ]
     },
     {
       "id": "kyun",
@@ -188,9 +305,54 @@
         {
           "jp": "山田様からお手紙が届いております。",
           "cn": "收到了山田先生的来信。（书信）"
+        },
+        {
+          "jp": "表彰式では、来賓席の皆様を前にして、彼は緊張のあまり声が震えていた。",
+          "cn": "颁奖典礼上，面对来宾席的各位，他紧张得声音都在发抖。"
+        },
+        {
+          "jp": "創業者の田中様には、長年にわたり会社を支えてくださったことに対し、心より感謝申し上げます。",
+          "cn": "对创始人田中先生多年支撑公司，致以衷心的感谢。"
         }
       ],
-      "note": "信封收件人一律写「〇〇様」；店员喊「お客様」就是它。"
+      "note": "信封收件人一律写「〇〇様」；店员喊「お客様」就是它。",
+      "nadeshiko": [
+        {
+          "jp": "あっ お客様(きゃくさま) お客様(きゃくさま) 忘(わす)れ物(もの)はございませんか?",
+          "en": "Ladies and gentlemen, are you sure you haven't forgotten anything?",
+          "cn": "啊，各位客人，没有落下什么东西吧？",
+          "media": "Apocalypse Hotel",
+          "ep": "EP5",
+          "at": "5:48",
+          "url": "https://nadeshiko.co/en/sentence/S1tzlPBSKT_K",
+          "audio": "https://cdn.nadeshiko.co/media/180675/5/b0d6292a02.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/180675/5/b0d6292a02.webp"
+        },
+        {
+          "jp": "神様(かみさま) 神様(かみさま)! 幸運(こううん)の女神(めがみ)エリス様(さま)!",
+          "en": "Oh god, or gods! Goddess of luck, Eris!",
+          "cn": "神明大人，神明大人！是幸运女神艾莉丝大人！",
+          "media": "KONOSUBA -An Explosion on This Wonderful World!",
+          "ep": "EP9",
+          "at": "17:57",
+          "url": "https://nadeshiko.co/en/sentence/_obmm6GXq3E9",
+          "audio": "https://cdn.nadeshiko.co/media/150075/9/77644b341f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/150075/9/77644b341f.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "お客（　）、お荷物のお預かりはこちらでございます。",
+          "opts": [
+            "様",
+            "さん",
+            "くん"
+          ],
+          "ans": 0,
+          "exp": "商业场合对顾客用「様」最郑重；さん略随意，くん不可用于顾客。"
+        }
+      ]
     },
     {
       "id": "tachi",
@@ -209,9 +371,54 @@
         {
           "jp": "子供たちは公園で遊んでいます。",
           "cn": "孩子们正在公园玩。"
+        },
+        {
+          "jp": "編集者たちは徹夜で原稿を読み直し、締め切りに間に合わせた。",
+          "cn": "编辑们通宵重读稿件，赶上了截稿日期。"
+        },
+        {
+          "jp": "私たちが互いに助け合わなければ、この計画は成功しないだろう。",
+          "cn": "如果我们不互相帮助，这个计划恐怕不会成功。"
         }
       ],
-      "note": "もの・これ等事物一般不加たち（玩具拟人语境除外）。"
+      "note": "もの・これ等事物一般不加たち（玩具拟人语境除外）。",
+      "nadeshiko": [
+        {
+          "jp": "私(わたし)たちも私(わたし)たちの仕事(しごと)を果(は)たそう",
+          "en": "Now, let's complete our own task.",
+          "cn": "我们也去完成我们自己的工作吧。",
+          "media": "Cells at Work! CODE BLACK",
+          "ep": "EP3",
+          "at": "20:32",
+          "url": "https://nadeshiko.co/en/sentence/T6gsBeH0zTUs",
+          "audio": "https://cdn.nadeshiko.co/media/117533/3/7fe2e4c249.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/117533/3/7fe2e4c249.webp"
+        },
+        {
+          "jp": "ヤバッ! 子供(こども)たち 楽(たの)しそう",
+          "en": "Holy crap. Those kids are having so much fun.",
+          "cn": "糟了！孩子们看起来玩得好开心。",
+          "media": "Rent-a-Girlfriend Season 2",
+          "ep": "EP11",
+          "at": "11:57",
+          "url": "https://nadeshiko.co/en/sentence/DYfKxi4tTqFX",
+          "audio": "https://cdn.nadeshiko.co/media/124410/11/f72184647e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/124410/11/f72184647e.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "子供（　）が公園で遊んでいる。",
+          "opts": [
+            "たち",
+            "さん",
+            "様"
+          ],
+          "ans": 0,
+          "exp": "たち接人称词或人名词构成复数＝～们；さん／様是敬称，不能表复数。"
+        }
+      ]
     },
     {
       "id": "kata",
@@ -226,9 +433,58 @@
         {
           "jp": "先生方がお見えになりました。",
           "cn": "老师们到了。"
+        },
+        {
+          "jp": "恩師をはじめとする先生方は、今でも私の人生の指針であり続けている。",
+          "cn": "以恩师为首的各位老师，至今仍是我人生的指南针。"
+        },
+        {
+          "jp": "ご出席の皆様方には、心より御礼申し上げます。",
+          "cn": "谨向出席的各位致以衷心感谢。"
+        },
+        {
+          "jp": "その道の専門家の方々が集まり、今後の対策について話し合った。",
+          "cn": "各方专家齐聚一堂，就今后的对策进行了商讨。"
         }
       ],
-      "note": "只能接在人相关的词后：✗本方。学生方→学生们的敬称。"
+      "note": "只能接在人相关的词后：✗本方。学生方→学生们的敬称。",
+      "nadeshiko": [
+        {
+          "jp": "あなた方(がた)なら どうしますか? 先生方(せんせいがた)",
+          "en": "How would you go about it, teachers?",
+          "cn": "要是各位的话会怎么做呢，老师们？",
+          "media": "Assassination Classroom",
+          "ep": "EP6",
+          "at": "3:17",
+          "url": "https://nadeshiko.co/en/sentence/zVdLkFC4QLyG",
+          "audio": "https://cdn.nadeshiko.co/media/20755/6/adb131ba7f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20755/6/adb131ba7f.webp"
+        },
+        {
+          "jp": "できる方々(かたがた)は 既(すで)に いらっしゃいます",
+          "en": "Some people have already mastered it.",
+          "cn": "已经有能办到的人了。",
+          "media": "Demon Slayer: Kimetsu no Yaiba",
+          "ep": "EP24",
+          "at": "12:39",
+          "url": "https://nadeshiko.co/en/sentence/EV2xdyez7JNa",
+          "audio": "https://cdn.nadeshiko.co/media/101922/24/bc82e972b2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/101922/24/bc82e972b2.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "先生（　）のお考えを伺いたいと存じます。",
+          "opts": [
+            "方",
+            "たち",
+            "ら"
+          ],
+          "ans": 0,
+          "exp": "方（がた）是たち的敬语版；对老师等长辈要用「先生方」。たち／ら偏随意，不宜对上级长辈。"
+        }
+      ]
     },
     {
       "id": "ra",
@@ -247,6 +503,14 @@
         {
           "jp": "子供らは外で元気に遊んでいる。",
           "cn": "孩子们在外面玩得正欢。（比子供たち更随意）"
+        },
+        {
+          "jp": "経営者らは、景気の動向を見極めながら、慎重に投資先を選んでいる。",
+          "cn": "经营者们一边看清经济走势，一边慎重选择投资方向。"
+        },
+        {
+          "jp": "出演者らは、開演直前まで台本を手放そうとしなかった。",
+          "cn": "演员们在开演前一刻还舍不得放下剧本。"
         }
       ],
       "note": "只用于人（拟人化的动物也可）。带随意甚至轻慢的语感，✗先生ら——对上级长辈要用敬称。",
@@ -256,6 +520,30 @@
           "q": "部長ら、お疲れ様でした。",
           "ans": false,
           "exp": "✗ ら是随意说法，不能对上级用：说「部長の皆さん」「〇〇部の皆様」。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "彼(かれ)らがミツゴシを潰(つぶ)し 僕(ぼく)が彼(かれ)らを潰(つぶ)す",
+          "en": "They will crush Mitsugoshi, and I will crush them.",
+          "cn": "他们会击溃三越商会，而我会击溃他们。",
+          "media": "The Eminence in Shadow Season 2",
+          "ep": "EP4",
+          "at": "8:50",
+          "url": "https://nadeshiko.co/en/sentence/PO2YI7rwY6ev",
+          "audio": "https://cdn.nadeshiko.co/media/161964/4/181ce9458b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/161964/4/181ce9458b.webp"
+        },
+        {
+          "jp": "僕(ぼく)らも頑張(がんば)ろう...!",
+          "en": "Let's do our best too.",
+          "cn": "我们也加油吧……！",
+          "media": "Delicious in Dungeon",
+          "ep": "EP2",
+          "at": "8:08",
+          "url": "https://nadeshiko.co/en/sentence/YD5yTn92yhj9",
+          "audio": "https://cdn.nadeshiko.co/media/153518/2/a40c94b74b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/153518/2/a40c94b74b.webp"
         }
       ]
     },
