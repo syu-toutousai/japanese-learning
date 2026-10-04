@@ -8,7 +8,7 @@ from pathlib import Path
 AUDIO_DIR = Path(__file__).parent / "audio"
 if not AUDIO_DIR.exists():
     AUDIO_DIR = Path("/tmp/opencode/shidai/audio")
-OUT = Path.home() / "scratch/shidai-courseware/index.html"
+OUT = Path(__file__).parent / "index.html"
 
 SENTS = {
     "198961275": {"jp": "次第", "cn": "次第（词条发音）"},
@@ -122,6 +122,32 @@ QUESTIONS2 = [
     {"type": "choice", "q": "「彼は金次第なら何でもする人だ。」中「金次第」的语感：", "opts": ["中性描述理财能力强", "含批判语气：只要有钱什么都干", "表示擅长攒钱"], "ans": 1,
      "exp": "惯用「金次第」＝一切靠金钱决定，多含批判、讽刺语感。"},
 ]
+
+
+# ---------------------------------------------------------------- 自動生成：SENTS 全音频から聴解・意味理解／書き取り
+import random as _rng_mod
+_rng = _rng_mod.Random(20261004)
+_sent_items = [(sid, s["jp"], s["cn"]) for sid, s in SENTS.items()
+               if s.get("jp") and s.get("cn")]
+for sid, jp, cn in _sent_items:
+    cn_pool, jp_pool = [], []
+    for _, j, c in _sent_items:
+        if c != cn and c not in cn_pool:
+            cn_pool.append(c)
+        if j != jp and j not in jp_pool:
+            jp_pool.append(j)
+    _rng.shuffle(cn_pool)
+    _rng.shuffle(jp_pool)
+    if len(cn_pool) >= 3:
+        QUESTIONS2.append({"type": "listen", "aid": sid,
+                           "q": "🎧 听音频：这句话的意思最接近哪一项？",
+                           "opts": [cn] + cn_pool[:3], "ans": 0,
+                           "exp": f'原句：{jp}<br>{cn}'})
+    if len(jp_pool) >= 3:
+        QUESTIONS2.append({"type": "listen", "aid": sid,
+                           "q": "🎧 听音频：说的是哪一句？",
+                           "opts": [jp] + jp_pool[:3], "ans": 0,
+                           "exp": f'原句：{jp}<br>{cn}'})
 
 
 def audio_map():
@@ -277,11 +303,11 @@ function showBankPicker(){
     <div style="font-size:19px;font-weight:700;margin-bottom:6px">选择题库</div>
     <div class="hint" style="margin-bottom:18px">全部随机打乱 · 即时判分讲解</div>
     <button class="opt" style="margin:0 auto 10px;max-width:340px"
-      onclick="pickBank('basic')">📘 基礎 · 15問　四种用法全覆盖</button>
+      onclick="pickBank('basic')">📘 基礎 · __NQ_BASIC__ 問　四种用法全覆盖</button>
     <button class="opt" style="margin:0 auto 10px;max-width:340px"
-      onclick="pickBank('adv')">🔥 挑戦 · 10問　进阶易混辨析</button>
+      onclick="pickBank('adv')">🔥 挑戦 · __NQ_ADV__ 問　进阶易混辨析</button>
     <button class="opt" style="margin:0 auto;max-width:340px"
-      onclick="pickBank('mix')">🎲 混合 · 25問　全量随机</button>
+      onclick="pickBank('mix')">🎲 混合 · __NQ_MIX__ 問　全量随机</button>
   </div>`;
 }
 function pickBank(m){ if(m==="mix"){QBANKS.mix=QUESTIONS.concat(QBANKS.adv);} else if(!QBANKS[m]) return; mode=m==="mix"?"mix":m; startQuiz(); }
@@ -375,6 +401,9 @@ html = (TEMPLATE
         .replace("__SENTS__", json.dumps(SENTS, ensure_ascii=False))
         .replace("__PATTERNS__", json.dumps(PATTERNS, ensure_ascii=False))
         .replace("__QUESTIONS2__", json.dumps(QUESTIONS2, ensure_ascii=False))
-        .replace("__QUESTIONS__", json.dumps(QUESTIONS, ensure_ascii=False)))
+        .replace("__QUESTIONS__", json.dumps(QUESTIONS, ensure_ascii=False))
+        .replace("__NQ_BASIC__", str(len(QUESTIONS)))
+        .replace("__NQ_ADV__", str(len(QUESTIONS2)))
+        .replace("__NQ_MIX__", str(len(QUESTIONS) + len(QUESTIONS2))))
 OUT.write_text(html, encoding="utf-8")
 print(f"wrote {OUT} ({OUT.stat().st_size//1024} KB)")

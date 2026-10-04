@@ -488,6 +488,31 @@ QD = [
 
 BANKS = {"basic": ("📘 基礎認識", QA), "cmp": ("⚖️ 対比辨析", QB), "listen": ("🎧 聴解", QC), "prod": ("✍️ 运用填空", QD)}
 
+# ---------------------------------------------------------------- 自動生成：SENTS 全音频から聴解・意味理解／書き取り
+import random as _rng_mod
+_rng = _rng_mod.Random(20261004)
+_sent_items = [(sid, s["jp"], s["cn"]) for sid, s in SENTS.items()
+               if s.get("jp") and s.get("cn")]
+for sid, jp, cn in _sent_items:
+    cn_pool, jp_pool = [], []
+    for _, j, c in _sent_items:
+        if c != cn and c not in cn_pool:
+            cn_pool.append(c)
+        if j != jp and j not in jp_pool:
+            jp_pool.append(j)
+    _rng.shuffle(cn_pool)
+    _rng.shuffle(jp_pool)
+    if len(cn_pool) >= 3:
+        QC.append({"type": "listen", "aid": sid,
+                   "q": "🎧 听音频：这句话的意思最接近哪一项？",
+                   "opts": [cn] + cn_pool[:3], "ans": 0,
+                   "exp": f'原句：{jp}<br>{cn}'})
+    if len(jp_pool) >= 3:
+        QC.append({"type": "listen", "aid": sid,
+                   "q": "🎧 听音频：说的是哪一句？",
+                   "opts": [jp] + jp_pool[:3], "ans": 0,
+                   "exp": f'原句：{jp}<br>{cn}'})
+
 # ---------------------------------------------------------------- nadeshiko real-scene clips （きり）
 SCENES_DIR = ROOT / "scenes"
 # 14 个形式名词的番剧/日剧原声例句（含きり）：音频与画面取自 Nadeshiko 语料，
