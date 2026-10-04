@@ -1745,9 +1745,54 @@
         {
           "jp": "皮製のバッグはビニール製のよりはるかに丈夫だ。",
           "cn": "皮包比塑料包结实得多。"
+        },
+        {
+          "jp": "この家具はすべて職人が手作りした木製で、値段もそれなりに高い。",
+          "cn": "这些家具全是工匠手工制作的木制品，价格也相应不菲。"
+        },
+        {
+          "jp": "外装はプラスチック製だが、内部の部品はほとんど日本製だという。",
+          "cn": "据说外壳虽是塑料制，内部零件却大多是日本制造。"
         }
       ],
-      "note": "材料用〜製：木製・革製；产地也用〜製：日本製・中国製。「日本の製品」里的製品是另一个词。"
+      "note": "材料用〜製：木製・革製；产地也用〜製：日本製・中国製。「日本の製品」里的製品是另一个词。",
+      "nadeshiko": [
+        {
+          "jp": "変(へん)だなあ 日本製(にほんせい)だし買(か)ったばかりなのに",
+          "en": "How strange... It's a Japanese model, and I just got it...",
+          "cn": "真奇怪啊，明明是日本制、而且才刚买的。",
+          "media": "JoJo's Bizarre Adventure: Stardust Crusaders",
+          "ep": "EP30",
+          "at": "7:31",
+          "url": "https://nadeshiko.co/en/sentence/hQ5eCV6zrk5U",
+          "audio": "https://cdn.nadeshiko.co/media/20474/30/806c4928d7.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20474/30/806c4928d7.webp"
+        },
+        {
+          "jp": "こいつは木製(もくせい)のようだが　もしシリコン素材(そざい)のようなフィギュアでも 動(うご)かせるのなら...",
+          "en": "This one is wooden, but if we can animate silicone figures or something,",
+          "cn": "这家伙好像是木制的——不过如果连硅胶材质的模型也能动起来的话……",
+          "media": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+          "ep": "EP1",
+          "at": "14:32",
+          "url": "https://nadeshiko.co/en/sentence/3--8Lu73qvTa",
+          "audio": "https://cdn.nadeshiko.co/media/166873/1/5e20f11c86.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166873/1/5e20f11c86.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この椅子は（　）で、軽くて丈夫だ。",
+          "opts": [
+            "木製",
+            "木造",
+            "木材"
+          ],
+          "ans": 0,
+          "exp": "材料用「製」：木製・皮製・陶器製。木造＝木结构（建筑），木材＝木材本身。"
+        }
+      ]
     },
     {
       "id": "mamire",
@@ -1787,6 +1832,14 @@
         {
           "jp": "この作文は間違いだらけだ。",
           "cn": "这篇作文错误连篇。"
+        },
+        {
+          "jp": "十年ぶりに開けた蔵の中は、ほこりだらけで足の踏み場もなかった。",
+          "cn": "时隔十年打开的仓库里满是灰尘，连落脚的地方都没有。"
+        },
+        {
+          "jp": "彼の報告書は数字だらけで、かえって要点が分かりにくくなっている。",
+          "cn": "他的报告书净是数字，反而让人抓不住重点。"
         }
       ],
       "note": "贬义为主：泥・血・ほこり・間違い・借金。三兄弟辨析：だらけ＝杂乱脏污／まみれ＝糊在身上／ずくめ＝清一色（多褒义）。",
@@ -1801,6 +1854,30 @@
           ],
           "ans": 0,
           "exp": "脏乱的消极场面用だらけ：ほこりだらけ＝满是灰尘。褒义才轮到ずくめ。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "うわっ 専門用語(せんもんようご)だらけだ。",
+          "en": "Ugh, this is full of jargon.",
+          "cn": "呜哇，全是专业术语。",
+          "media": "The Many Sides of Voice Actor Radio",
+          "ep": "EP8",
+          "at": "9:01",
+          "url": "https://nadeshiko.co/en/sentence/Ci56fTdz5b47",
+          "audio": "https://cdn.nadeshiko.co/media/159039/8/e3cd054ab3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/159039/8/e3cd054ab3.webp"
+        },
+        {
+          "jp": "す... すげえ 傷(きず)だらけだぜ",
+          "en": "Awesome. He's covered with scars!",
+          "cn": "好、好厉害，遍体鳞伤啊。",
+          "media": "Yu Yu Hakusho: Ghostfiles",
+          "ep": "EP86",
+          "at": "3:09",
+          "url": "https://nadeshiko.co/en/sentence/rKE17xd4Ar7L",
+          "audio": "https://cdn.nadeshiko.co/media/392/86/545b1589d0.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/392/86/545b1589d0.webp"
         }
       ]
     },
@@ -1821,9 +1898,54 @@
         {
           "jp": "彼はいつも黒ずくめの服装をしている。",
           "cn": "他总是一身黑的打扮。"
+        },
+        {
+          "jp": "今年は昇進や結婚など、おめでたいことずくめの一年だった。",
+          "cn": "今年升职又结婚，是喜事连连的一年。"
+        },
+        {
+          "jp": "彼女は贅沢ずくめの生活に慣れてしまい、庶民の感覚を失った。",
+          "cn": "她习惯了奢侈铺张的生活，失去了普通人的感觉。"
         }
       ],
-      "note": "惯用组合要整体记：いいことずくめ・ごちそうずくめ・黒ずくめ・規則ずくめ。自由造句范围比だらけ窄。"
+      "note": "惯用组合要整体记：いいことずくめ・ごちそうずくめ・黒ずくめ・規則ずくめ。自由造句范围比だらけ窄。",
+      "nadeshiko": [
+        {
+          "jp": "いいことずくめだね",
+          "en": "Everybody wins.",
+          "cn": "全是好事呢。",
+          "media": "【OSHI NO KO】Season 3",
+          "ep": "EP8",
+          "at": "2:51",
+          "url": "https://nadeshiko.co/en/sentence/JAdh1o-Mbmnv",
+          "audio": "https://cdn.nadeshiko.co/media/182587/8/4244ff65f9.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/182587/8/4244ff65f9.webp"
+        },
+        {
+          "jp": "よくわからない　黒(くろ)ずくめの連中(れんちゅう)さ。",
+          "en": "These weird guys in black robes...",
+          "cn": "是些莫名其妙的、一身黑衣的家伙。",
+          "media": "Clevatess",
+          "ep": "EP5",
+          "at": "14:54",
+          "url": "https://nadeshiko.co/en/sentence/MzMkrJdQx1wR",
+          "audio": "https://cdn.nadeshiko.co/media/178869/5/1c6a1c1784.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/178869/5/1c6a1c1784.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "彼女は赤（　）のドレスを身にまとって現れた。",
+          "opts": [
+            "ずくめ",
+            "だらけ",
+            "まみれ"
+          ],
+          "ans": 0,
+          "exp": "ずくめ＝清一色（颜色・好事等，偏中性／褒义）；だらけ・まみれ带杂乱脏污的贬义。"
+        }
+      ]
     },
     {
       "id": "gariya",
@@ -2317,9 +2439,54 @@
         {
           "jp": "残りの水はわずかです。",
           "cn": "剩下的水只有一丁点了。"
+        },
+        {
+          "jp": "彼はわずか三年で、その分野の第一人者として認められるようになった。",
+          "cn": "他仅用三年就被公认为该领域的第一人。"
+        },
+        {
+          "jp": "会社の売上は前年よりわずかながら増加に転じた。",
+          "cn": "公司销售额虽增幅微小，但已转为增长。"
         }
       ],
-      "note": "「わずか＋数量」＝才、只有：「わずか＋な＋名词」＝少得可怜的一点。也可单用为副词／形容动词（値段はわずかだ），带“少得可怜”的修辞语感。"
+      "note": "「わずか＋数量」＝才、只有：「わずか＋な＋名词」＝少得可怜的一点。也可单用为副词／形容动词（値段はわずかだ），带“少得可怜”的修辞语感。",
+      "nadeshiko": [
+        {
+          "jp": "わずかな失敗(しっぱい)も許(ゆる)されない",
+          "en": "The smallest mistakes aren't forgiven.",
+          "cn": "连一丝微小的失误都不被允许。",
+          "media": "Dragon Pilot: Hisone & Masotan",
+          "ep": "EP6",
+          "at": "14:38",
+          "url": "https://nadeshiko.co/en/sentence/ABiZiDxwDhLg",
+          "audio": "https://cdn.nadeshiko.co/media/100673/6/3352fcbec2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/100673/6/3352fcbec2.webp"
+        },
+        {
+          "jp": "《ほんのわずかな 大切(たいせつ)な前進(ぜんしん)》",
+          "en": "This is the smallest, most important step forward.",
+          "cn": "这是微不足道却又珍贵的一步前进。",
+          "media": "The Dangers in My Heart Season 2",
+          "ep": "EP7",
+          "at": "22:51",
+          "url": "https://nadeshiko.co/en/sentence/_6q2pdzdgLie",
+          "audio": "https://cdn.nadeshiko.co/media/166216/7/fd010e6683.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166216/7/fd010e6683.webp"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "駅まで（　）五分しかかからない。",
+          "opts": [
+            "わずか",
+            "かすか",
+            "ささやか"
+          ],
+          "ans": 0,
+          "exp": "わずか＋数量＝仅仅、才：わずか五分。かすか＝微弱（声音・迹象），ささやか＝微薄（多修饰贡献・礼物）。"
+        }
+      ]
     },
     {
       "id": "nashi",
@@ -2342,6 +2509,14 @@
         {
           "jp": "予告なしに会議が中止になった。",
           "cn": "会议毫无预告地取消了。"
+        },
+        {
+          "jp": "事前の相談なしに、彼は勝手に計画を変更してしまった。",
+          "cn": "事先没商量，他就擅自把计划改掉了。"
+        },
+        {
+          "jp": "この料理は砂糖なしではとても食べられないほど苦い。",
+          "cn": "这道菜苦得要是没有糖根本吃不下去。"
         }
       ],
       "note": "接名词构成「没有…」：砂糖なし・休みなし・文句なし。延伸出「〜なしに（没有…就）」「〜なしでは〜ない（没有…就不能）」「〜なしのN」。与表「满是…」的 だらけ・まみれ・ずくめ 正好是「有无」两端。",
@@ -2356,6 +2531,30 @@
           ],
           "ans": 0,
           "exp": "文句なし＝无可挑剔、没得说。まみれ是「沾满」，がち是「动不动就」，都不合。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "そなたの案内(あんない)なしでは たどり着(つ)けんな",
+          "en": "It would be impossible to get there without you as a guide.",
+          "cn": "没有你带路的话，根本到不了。",
+          "media": "T・P BON",
+          "ep": "EP3",
+          "at": "18:22",
+          "url": "https://nadeshiko.co/en/sentence/e9TFo0PMKPEN",
+          "audio": "https://cdn.nadeshiko.co/media/169930/3/e7e6343aec.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/169930/3/e7e6343aec.webp"
+        },
+        {
+          "jp": "文句(もんく)なしの立派(りっぱ)なお子(こ)さんです",
+          "en": "He's a fine, respectable young man.",
+          "cn": "真是个无可挑剔的好孩子。",
+          "media": "Assassination Classroom Second Season",
+          "ep": "EP25",
+          "at": "4:47",
+          "url": "https://nadeshiko.co/en/sentence/qQjugKVfdD5w",
+          "audio": "https://cdn.nadeshiko.co/media/21170/25/3393382d3e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/21170/25/3393382d3e.webp"
         }
       ]
     },
@@ -2380,6 +2579,14 @@
         {
           "jp": "冗談は抜きにして本題に入ろう。",
           "cn": "别开玩笑了，进入正题吧。"
+        },
+        {
+          "jp": "前置きは抜きにして、結論から申し上げます。",
+          "cn": "就不客套开场白了，我直接说结论。"
+        },
+        {
+          "jp": "彼は忙しいらしく、飲み会は彼抜きで行われた。",
+          "cn": "他似乎很忙，酒会就没等他办了。"
         }
       ],
       "note": "接名词表示「去掉／不算～」：朝食抜き・お世辞抜き・前置き抜き。常配「〜抜きで（省去…而）」「〜抜きにして（撇开…）」「〜抜きにする（略过…）」。与 〜なし 之别：なし＝客观的「没有」；抜き＝把本该有的东西特意拿掉，更强调「省略・排除」的主观动作。",
@@ -2394,6 +2601,30 @@
           ],
           "ans": 0,
           "exp": "前置き抜きで＝省去开场白。まみれ是「沾满」，がち是「动不动就」，都不合。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "まあまあ 固(かた)いこと抜(ぬ)きでさ",
+          "en": "Anyway, don't be so uptight.",
+          "cn": "好了好了，别那么一本正经的。",
+          "media": "【OSHI NO KO】Season 3",
+          "ep": "EP5",
+          "at": "8:32",
+          "url": "https://nadeshiko.co/en/sentence/j9eJ_L27ZnvW",
+          "audio": "https://cdn.nadeshiko.co/media/182587/5/c0a287a4ad.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/182587/5/c0a287a4ad.webp"
+        },
+        {
+          "jp": "もちろん超能力(ちょうのうりょく)は抜(ぬ)きにしてだよ",
+          "en": "I'm talking about you without psychic abilities.",
+          "cn": "当然是把超能力排除在外说的哦。",
+          "media": "The Disastrous Life of Saiki K.: Reawakened",
+          "ep": "EP6",
+          "at": "11:34",
+          "url": "https://nadeshiko.co/en/sentence/6-SNNB0Sj_ff",
+          "audio": "https://cdn.nadeshiko.co/media/112625/6/f5ae822dec.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/112625/6/f5ae822dec.webp"
         }
       ]
     },
