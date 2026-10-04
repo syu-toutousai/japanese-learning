@@ -503,6 +503,31 @@ def build_questions(items, audio):
                     opts=[it["jp"]] + others[:3], ans=0,
                     exp=f'原句：{it["jp"]}<br>{it.get("cn","")}')
 
+        # 🎧 聴解・意味理解／書き取り（音声→意味・原文）
+        if f"{iid}-f-norm" in audio and it.get("cn"):
+            cn_cands, jp_cands = [], []
+            for x in items:
+                if x["id"] == iid:
+                    continue
+                if x.get("cn") and x["cn"] != it["cn"] and x["cn"] not in cn_cands:
+                    cn_cands.append(x["cn"])
+                if x.get("jp") and x["jp"] != it["jp"] and x["jp"] not in jp_cands:
+                    jp_cands.append(x["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(cn_cands) >= 3:
+                add("listen2", f"{iid}:listen2", type="listen",
+                    aid=f"{iid}-f-norm", aidM=f"{iid}-m-norm",
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[it["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{it["jp"]}<br>{it["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{iid}:listen3", type="listen",
+                    aid=f"{iid}-f-norm", aidM=f"{iid}-m-norm",
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[it["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{it["jp"]}<br>{it["cn"]}')
+
     return qs
 
 
@@ -1068,7 +1093,8 @@ def main():
 
     print("[3/4] generating quiz banks...")
     qs = build_questions(items, audio)
-    banks_meta = [["listen", "🎧 聴解判别"], ["fill", "✍️ 語彙填空"],
+    banks_meta = [["listen2", "🎧 聴解・意味理解"], ["listen3", "🎧 聴解・書き取り"],
+                  ["listen", "🎧 聴解判别"], ["fill", "✍️ 語彙填空"],
                   ["recog", "📘 語彙認識"]]
     counts = {k: sum(1 for q in qs if q["bank"] == k) for k in dict.fromkeys(q["bank"] for q in qs)}
     for k, label in banks_meta:

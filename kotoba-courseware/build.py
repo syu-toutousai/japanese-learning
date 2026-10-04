@@ -39,9 +39,11 @@ RATE = "-4%"
 SEED = 20260829          # 固定随机种子：干扰项抽样可复现
 MIN_MP3 = 300            # 小于该字节数视为合成失败
 BANK_META = [
+    ["listen2",  "🎧 聴解・意味理解"],
+    ["listen3",  "🎧 聴解・書き取り"],
+    ["listen",   "🎧 聴解判別"],
     ["recog",    "📘 詞義認識"],
     ["generate", "✍️ 産出填空"],
-    ["listen",   "🎧 聴解判別"],
     ["discrim",  "🧩 辨析判別"],
     ["custom",   "⭐ 自作題"],
 ]
@@ -366,6 +368,13 @@ def reading_pool(w):
 
 def build_questions(words, audio):
     rng = random.Random(SEED)
+    sent_pool = []
+    for w in words:
+        for i, se in enumerate(w.get("senses") or []):
+            for k, ex in enumerate(se.get("examples") or []):
+                aid = f'{w["id"]}:s{i+1}' + ("abc"[k] if k else "")
+                if aid in audio and ex.get("jp") and ex.get("cn"):
+                    sent_pool.append({"aid": aid, "jp": ex["jp"], "cn": ex["cn"]})
     qs = []
 
     def add(bank, ref, **kw):
@@ -401,21 +410,35 @@ def build_questions(words, audio):
                 ansTxt=[w["word"]],
                 exp=f'{w["read"]} 的汉字写法：<b>{w["word"]}</b>。')
 
-        # 🎧 自動：听解（优先用该词 MOJi 原声例句）
-        for i, s in enumerate(sens):
-            for k, ex in enumerate(s.get("examples") or []):
-                aid = f"{wid}:s{i+1}" + ("abc"[k] if k else "")
-                if aid in audio:
-                    add("listen", f"{wid}:auto-listen-{i+1}{k}", type="listen", aid=aid,
-                        q="🎧 听音频，选出你听到的句子。",
-                        opts=[ex["jp"],
-                              ex["jp"][::-1][:len(ex["jp"])],
-                              ex["jp"][:len(ex["jp"])//2]+"..."],
-                        ans=0,
-                        exp=f'原句：{ex["jp"]}<br>{ex.get("cn","")}')
-                    break
-            break
-            break
+        # 🎧 自動：聴解三層（该词 MOJi 原声例句 → 判別・意味理解・書き取り）
+        my_sents = [x for x in sent_pool if x["aid"].startswith(wid + ":")]
+        if my_sents:
+            first = my_sents[0]
+            cn_cands, jp_cands = [], []
+            for x in sent_pool:
+                if x["aid"] == first["aid"]:
+                    continue
+                if x["cn"] != first["cn"] and x["cn"] not in cn_cands:
+                    cn_cands.append(x["cn"])
+                if x["jp"] != first["jp"] and x["jp"] not in jp_cands:
+                    jp_cands.append(x["jp"])
+            rng.shuffle(cn_cands)
+            rng.shuffle(jp_cands)
+            if len(jp_cands) >= 3:
+                add("listen", f"{wid}:auto-listen0", type="listen", aid=first["aid"],
+                    q="🎧 听音频：播放的是哪一句？",
+                    opts=[first["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{first["jp"]}<br>{first["cn"]}')
+            if len(cn_cands) >= 3:
+                add("listen2", f"{wid}:auto-listen2", type="listen", aid=first["aid"],
+                    q="🎧 听音频：这句话的意思最接近哪一项？",
+                    opts=[first["cn"]] + cn_cands[:3], ans=0,
+                    exp=f'原句：{first["jp"]}<br>{first["cn"]}')
+            if len(jp_cands) >= 3:
+                add("listen3", f"{wid}:auto-listen3", type="listen", aid=first["aid"],
+                    q="🎧 听音频：说的是哪一句？",
+                    opts=[first["jp"]] + jp_cands[:3], ans=0,
+                    exp=f'原句：{first["jp"]}<br>{first["cn"]}')
 
         # ⭐ 自作題
         for n, cq in enumerate(w.get("quizzes") or []):
