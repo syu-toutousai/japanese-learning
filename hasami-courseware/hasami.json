@@ -3,9 +3,9 @@
     "title": "はさまれた自動詞",
     "titleCn": "夹在中间的自动词",
     "jp": "宾语を ＋ V自て ＋ V他",
-    "tags": ["N3", "N2", "文法體系", "テ形", "付帯状況", "宾语と他動詞"],
+    "tags": ["N3", "N2", "文法體系", "連用形＋接続助詞て", "付帯状況", "宾语と他動詞"],
     "voiceFemale": "ja-JP-NanamiNeural",
-    "note": "往 items 里加一条自动词て形，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
+    "note": "往 items 里加一条自动词連用形＋接続助詞「て」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
   },
   "groups": [
     { "id": "shisei", "name": "姿勢・体勢", "color": "#0e7490", "emoji": "🧍", "note": "坐着・站着・躺着・趴躺着——用身体的构架去做事。" },
@@ -205,7 +205,7 @@
           "audio": "https://cdn.nadeshiko.co/media/210/42/6f7c96025b.mp3",
           "thumb": "https://cdn.nadeshiko.co/media/210/42/6f7c96025b.webp" }
       ],
-      "note": "口语里更常见「座って＋他動詞」直接相连；本型把宾语提前、て形夹在中间，焦点落在「以坐着的状态」上。"
+      "note": "口语里更常见「座って＋他動詞」直接相连；本型把宾语提前、連用形＋接続助詞「て」夹在中间，焦点落在「以坐着的状态」上。"
     },
     {
       "id": "tatte",
@@ -462,7 +462,7 @@
           "audio": "https://cdn.nadeshiko.co/media/141911/11/3bc93d0f6d.mp3",
           "thumb": "https://cdn.nadeshiko.co/media/141911/11/3bc93d0f6d.webp" }
       ],
-      "note": "「急いで＋他動詞」＝匆忙做某事；「急いで」本身已是て形，可直接叠在宾语后。"
+      "note": "「急いで＋他動詞」＝匆忙做某事；「急いで」本身已是連用形＋接続助詞「て」，可直接叠在宾语后。"
     },
     {
       "id": "awatete",

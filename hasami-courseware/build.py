@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Build the self-contained 「はさまれた自動詞」courseware HTML.
 
-「〔名詞〕を ＋ 自動詞のて形 ＋ 他動詞」：宾语在句子前半登场，中间夹一个自动词的
-て形（座って・下を向いて・うなだれて…）表示「以什么状态/方式」，句末才是真正支配
-这个宾语的他動詞（聞く・見る・読む…）。「を」属于最后的他動詞，不属て形。
+「〔名詞〕を ＋ 自動詞の連用形＋接続助詞「て」 ＋ 他動詞」：宾语在句子前半登场，中间夹一个自动词的連用形＋接続助詞「て」（座って・下を向いて・うなだれて…）表示「以什么状态/方式」，句末才是真正支配
+这个宾语的他動詞（聞く・見る・読む…）。「を」属于最后的他動詞，不属連用形＋接続助詞「て」。
 随时丢进 hasami.json，跑一次 build.py，卡片、发音、题库自动重新长出来。
 
 音频：edge-tts 日语神经网络语音（ja-JP-Nanami），按文本哈希缓存到 audio/；
@@ -381,7 +380,7 @@ def build_questions(groups, items, audio):
         return out
 
     def key_of(it):
-        # 挖空用核心：自动词て形整块挖掉（下を向いて → （　））
+        # 挖空用核心：自动词「連用形＋接続助詞『て』」整块挖掉（下を向いて → （　））
         return it["word"]
 
     def blank_ex(it):
@@ -401,7 +400,7 @@ def build_questions(groups, items, audio):
         iid = it["id"]
         note = it.get("note", "")
 
-        # 📘 働き認識：这个自动词て形在句里做什么
+        # 📘 働き認識：这个自动词「連用形＋接続助詞『て』」在句里做什么
         add("recog", f"{iid}:recog", type="choice",
             q=f"「〜を ＋ {disp(it)} ＋ 他動詞」——{disp(it)} 在这里做什么？",
             opts=[it["meaning"]] + others(it, "meaning"), ans=0,
@@ -417,17 +416,17 @@ def build_questions(groups, items, audio):
                 rng.shuffle(opts)
                 add("fill", f"{iid}:fill-{ei}", type="choice",
                     q=f'型填空：{blanked}<br>'
-                      f'<span class="hint">（　）に入るのは、宾语と他動詞のあいだに挟まれた自動詞て形。'
+                      f'<span class="hint">（　）に入るのは、宾语と他動詞のあいだに挟まれた自動詞の連用形＋接続助詞「て」。'
                       f'「を」は後ろの他動詞のもの。</span>',
                     opts=opts, ans=opts.index(disp(it)),
                     exp=f'元の文：{ex["jp"]}<br>{ex.get("cn", "")}'
                         + f'<br>{it["word"]}＝{it["meaning"]}')
 
-        # 🎧 聴解判別：听例句，判断是哪个て形
+        # 🎧 聴解判別：听例句，判断是哪个「連用形＋接続助詞『て』」
         exs = it.get("examples") or []
         if exs and f"{iid}-e0" in audio:
             add("listen", f"{iid}:listen", type="listen", aid=f"{iid}-e0",
-                q="🎧 听音频：句子里夹着的自动詞て形是下面哪一个？",
+                q="🎧 听音频：句子里夹着的自動詞連用形＋接続助詞「て」是下面哪一个？",
                 opts=[disp(it)] + others(it, "word"), ans=0,
                 exp=f'原句：{exs[0]["jp"]}<br>{exs[0].get("cn", "")}'
                     + f'<br>{it["word"]}＝{it["meaning"]}')
@@ -582,7 +581,7 @@ font-size:15.5px;line-height:2}
 <body>
 <header><div class="wrap">
 <h1>はさまれた自動詞</h1>
-<div class="kana">はさまれたじどうし ／ 〔名詞〕を ＋ 自動詞て形 ＋ 他動詞 —— 宾语先登场，状态夹中间，真正的他動詞在句末收束 🥪</div>
+<div class="kana">はさまれたじどうし ／ 〔名詞〕を ＋ 自動詞連用形＋接続助詞「て」 ＋ 他動詞 —— 宾语先登场，状态夹中间，真正的他動詞在句末收束 🥪</div>
 <div class="tags">__TAGS__</div>
 </div></header>
 
@@ -652,15 +651,15 @@ function goDetail(iid){goTab('detail');setTimeout(()=>{const el=document.getElem
 function shortMean(m){return m.split(/[：:；;，,（(]/)[0];}
 function renderList(){
   let h=`<div class="card intro"><h2>这是什么课？🥪</h2>
-  <p>宾语先登场：<b>父の話を</b>——然后中间夹一个自动词て形 <b>下を向いて</b>——最后才是真正支配这个宾语的他動詞
+  <p>宾语先登场：<b>父の話を</b>——然后中间夹一个自动词连用形＋接続助詞「て」 <b>下を向いて</b>——最后才是真正支配这个宾语的他動詞
   <b>聞いていた</b>。很多学习者看到「を」后面紧跟一个自动词会慌：其实「を」一直属于句末的他動詞，
-  中间的て形只是<code class="inline">付帯状況</code>（以什么姿势/心情/节奏做那件事）。
+  中间的<code class="inline">連用形＋接続助詞「て」</code>只是付帯状況（以什么姿势/心情/节奏做那件事）。
   新句型丢进 <code class="inline">hasami.json</code> 照着加一条，跑
   <code class="inline">python3 build.py</code>——卡片、发音、题库自动重新长出来。</p>
   <div class="steps">
     <div><b>① 公式：〔名詞〕を ＋ V自て ＋ V他</b><br>を＝句末他動詞的宾语（話を…聞く）；中间的 V自て只负责描述状态。</div>
     <div><b>② 被夹住的自动词</b><br>座って・立って・下を向いて・うなだれて・急いで・黙って…姿势、表情、心情、节奏都能夹。</div>
-    <div><b>③ 与 〜ながら 的区别</b><br>ながら＝两个动作同时进行；本型的て形更像「穿着这个状态」去做事，静态色彩更强。</div>
+    <div><b>③ 与 〜ながら 的区别</b><br>ながら＝两个动作同时进行；本型的「連用形＋接続助詞『て』」更像「穿着这个状态」去做事，静态色彩更强。</div>
     <div><b>④ 拆句练习</b><br>先把「を＋他動詞」配成一对，再看中间夹了什么——语序是日语给你的免费提示。</div>
   </div></div>`;
   h+=GROUPS.map(g=>{
@@ -686,7 +685,7 @@ function renderDetail(){
     members.forEach(n=>{
       const iid=n.id;
       const tagChip=n.tag?`<span class="chip pfx" title="型・分類">${n.tag}</span>`:"";
-      const baseChip=n.base?`<span class="chip pfx" title="辞書形">辞書形：${n.base}</span>`:"";
+      const baseChip=n.base?`<span class="chip pfx" title="終止形">終止形：${n.base}</span>`:"";
       const formChip=`<span class="chip sfx" title="公式">〔名詞〕を ＋ V自て ＋ V他</span>`;
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
         <h2>${n.emoji||"🥪"} ${n.word}<span class="jl">${n.level}</span></h2>

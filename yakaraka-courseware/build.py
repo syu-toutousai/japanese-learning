@@ -616,7 +616,7 @@ border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
 <body>
 <header><div class="wrap">
 <h1>〜やか・らか 形容動詞図鑑</h1>
-<div class="kana">「生きた状態」と「澄んだ状態」——接尾辞でつながるナ形容詞の一族</div>
+<div class="kana">「生きた状態」と「澄んだ状態」——接尾辞でつながる形容動詞の一族</div>
 <div class="tags">__TAGS__</div>
 </div></header>
 
@@ -692,7 +692,7 @@ function groupOf(iid){const it=ITEMS.find(x=>x.id===iid);return it?GROUPS.find(g
 /* ---------- map ---------- */
 function renderMap(){
   let h=`<div class="card intro"><h2>一つの接尾辞、二つの気配——それが「〜やか／〜らか」</h2>
-  <p>和語のナ形容詞には、語幹末に <b>〜やか</b>（賑やか・爽やか）・<b>〜らか</b>（明らか・清らか）を
+  <p>和語の形容動詞には、語幹末に <b>〜やか</b>（賑やか・爽やか）・<b>〜らか</b>（明らか・清らか）を
   持つ一群があります。どちらも「状態・様態」を作る接尾辞的要素で、活用はごく普通の形容動詞
   （〜な＋名詞／〜に＋動詞／〜だ）。<b>やか＝にぎわい・華やぎ・柔らかな動き</b>、
   <b>らか＝澄み・明るさ・平らかさ</b>、と覚えると語感が掴めます。</p>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the self-contained 「反復強調の「に」」courseware HTML.
 
-「Vます形＋に＋同動詞」：待ちに待った・考えに考えた・泣きに泣いた・痩せに痩せた——
+「動詞の連用形＋に＋同動詞」：待ちに待った・考えに考えた・泣きに泣いた・痩せに痩せた——
 同じ動詞を二度、〈に〉で貼り合わせ、繰り返し（何度も）と極まり（徹底的に）を同時に
 言う。中間の〈に〉は時間でも場所でもなく「同じ語を重ねる軸」＝超級放大器。
 随时丢进 kurikaeshi.json，跑一次 build.py，卡片、发音、题库自动重新长出来。
@@ -478,7 +478,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>反復強調の「に」 ・ Vます形＋に＋同動詞</title>
+<title>反復強調の「に」 ・ 動詞の連用形＋に＋同動詞</title>
 <style>
 :root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
 --acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;
@@ -585,7 +585,7 @@ font-size:15.5px;line-height:2}
 <body>
 <header><div class="wrap">
 <h1>反復強調の「に」</h1>
-<div class="kana">はんぷくきょうちょうのに ／ Vます形＋に＋同動詞 —— 同じ動詞を二度、〈に〉で貼り合わせ、繰り返しと極まりを一度に言う 🔁</div>
+<div class="kana">はんぷくきょうちょうのに ／ 動詞の連用形＋に＋同動詞 —— 同じ動詞を二度、〈に〉で貼り合わせ、繰り返しと極まりを一度に言う 🔁</div>
 <div class="tags">__TAGS__</div>
 </div></header>
 
@@ -661,7 +661,7 @@ function renderList(){
   新句式丢进 <code class="inline">kurikaeshi.json</code> 照着加一条，跑
   <code class="inline">python3 build.py</code>——卡片、发音、题库自动重新长出来。</p>
   <div class="steps">
-    <div><b>① 公式：Vます形 ＋ に ＋ 同（動詞）</b><br>前半必是<u>連用形</u>（待ち・考え・泣き），后半照常活用（待った／待って／待ってる）。</div>
+    <div><b>① 公式：動詞の連用形 ＋ に ＋ 同（動詞）</b><br>前半必是<u>連用形</u>（待ち・考え・泣き），后半照常活用（待った／待って／待ってる）。</div>
     <div><b>② 意味：繰り返し＋極まり</b><br>泣きに泣いた＝泣いて、泣いて、泣き尽くした——回数与程度一次到顶。</div>
     <div><b>③ 使える動詞：重ねて積み上がるもの</b><br>変化・感情・反復できる動作（痩せる・揺れる・飲む）。一度きりの移動・無意図（行きに行った✗）は重ねられない。</div>
     <div><b>④「に」の正体：超級放大器</b><br>添加の〈に〉が、双胞胎の動詞を見つけた瞬間「無限増幅」モードに入る。</div>

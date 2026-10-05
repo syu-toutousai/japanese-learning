@@ -817,7 +817,7 @@ function renderDetail(){
       const orgNote=org==="kango"
         ? `<br>🗾 <b>語種</b>　漢語（音読）——身体語彙の抽象層。主流の和語慣用句と対照的。`
         : org==="mixed"
-        ? `<br>🗾 <b>語種</b>　漢語＋和語（混種）——「怪訝」は漢語ナ形容詞、「顔」は和語。`
+        ? `<br>🗾 <b>語種</b>　漢語＋和語（混種）——「怪訝」は漢語の形容動詞、「顔」は和語。`
         : "";
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
         <h2>${n.emoji||"🫀"} ${n.word}<span class="jl">${n.level}</span></h2>
