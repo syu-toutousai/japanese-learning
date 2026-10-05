@@ -39,6 +39,11 @@
       "id": "state",
       "name": "状態・素材",
       "color": "#364fc7"
+    },
+    {
+      "id": "negation",
+      "name": "否定の接頭語",
+      "color": "#c92a2a"
     }
   ],
   "items": [
@@ -3619,6 +3624,338 @@
           ],
           "ans": 0,
           "exp": "「〜あたり（当たり）」源自动词当たる的连用形，表分配基准＝每～；「辺り」表附近。读音相同，汉字不同。"
+        }
+      ]
+    },
+    {
+      "id": "gara",
+      "type": "suffix",
+      "word": "〜柄",
+      "read": "がら",
+      "group": "derive",
+      "level": "N1",
+      "emoji": "🧵",
+      "meaning": "名词＋柄（がら）＝该事物的性质・身份・相互关系：仕事柄（因工作性质）、土地柄（风土）、人柄（人品）、間柄（交情）",
+      "examples": [
+        {
+          "jp": "仕事柄、夜遅くまで起きていることが多い。",
+          "cn": "因为工作性质，经常熬夜到很晚。"
+        },
+        {
+          "jp": "この辺りは土地柄、人がとても親切だ。",
+          "cn": "这一带的风土人情使然，人们非常热情。"
+        },
+        {
+          "jp": "彼の人柄は社内でも高く評価されている。",
+          "cn": "他的人品在公司里评价也很高。"
+        },
+        {
+          "jp": "二人は十年も付き合っている間柄だ。",
+          "cn": "两人是交往了十年的关系。"
+        },
+        {
+          "jp": "元気ですよ。仕事柄、不規則な生活になりがちですけど。",
+          "cn": "挺好的。虽说因为工作性质，生活容易变得不规律。"
+        }
+      ],
+      "note": "接尾語「〜柄（がら）」接名词后，把具体事物抽象为「性质・身份・关系」：仕事柄＝因工作性质；土地柄＝当地风土；人柄＝人品；間柄＝关系。例文「仕事柄、不規則な生活になりがち」正好串起 柄（接尾語）・不（接頭語）・がち（接尾語）三个词缀。",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「仕事柄」的意思是「工作的把柄」。",
+          "ans": false,
+          "exp": "✗ 「柄（がら）」是接尾語，接名词后表示性质/身份/关系：「仕事柄」＝因为工作性质。表示「把柄」的是「柄（え／つか）」。"
+        },
+        {
+          "type": "choice",
+          "q": "「この辺りは（　）柄、人がおおらかだ。」に入るのは？",
+          "opts": [
+            "土地",
+            "仕事",
+            "人",
+            "間"
+          ],
+          "ans": 0,
+          "exp": "土地柄＝当地的风土人情。柄接在「土地」后，表示该地方的性质。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ノートパソコンは...仕事柄(しごとがら) いつも持(も)ち歩(ある)いている",
+          "en": "I do have my laptop with me. It's the one I use for work.",
+          "cn": "笔记本电脑……因为工作关系，我总是随身带着。",
+          "media": "Death Note",
+          "ep": "EP5",
+          "at": "8:10",
+          "url": "https://nadeshiko.co/en/sentence/d3cP27T7adt_",
+          "audio": "https://cdn.nadeshiko.co/media/1535/5/9e570a6bcf.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1535/5/9e570a6bcf.webp"
+        },
+        {
+          "jp": "お人柄(ひとがら)も すばらしい",
+          "en": "and has a wonderful personality, to boot!",
+          "cn": "人品也非常好。",
+          "media": "My Dress-Up Darling Season 2",
+          "ep": "EP4",
+          "at": "7:50",
+          "url": "https://nadeshiko.co/en/sentence/8En1_rScDhl1",
+          "audio": "https://cdn.nadeshiko.co/media/154768/4/213308e318.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/154768/4/213308e318.webp"
+        },
+        {
+          "jp": "妹(いもうと)同然(どうぜん)の間柄(あいだがら)の、従姉妹(いとこ)です",
+          "en": "Well... A cousin who's LIKE a younger sister, really.",
+          "cn": "是像亲妹妹一样关系的表姐妹。",
+          "media": "Suzume",
+          "ep": "EP1",
+          "at": "1:01:18",
+          "url": "https://nadeshiko.co/en/sentence/gO7WoKSk031Z",
+          "audio": "https://cdn.nadeshiko.co/media/142770/1/12784b44f2.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/142770/1/12784b44f2.webp"
+        }
+      ]
+    },
+    {
+      "id": "fu",
+      "type": "prefix",
+      "word": "不〜",
+      "read": "ふ",
+      "group": "negation",
+      "level": "N3",
+      "emoji": "🚫",
+      "meaning": "不〜＝缺乏某种性质、不具备某状态：不規則・不自然・不十分・不真面目",
+      "examples": [
+        {
+          "jp": "生活が不規則になりがちだ。",
+          "cn": "生活容易变得不规律。"
+        },
+        {
+          "jp": "彼の態度はどこか不自然だった。",
+          "cn": "他的态度总觉得有点不自然。"
+        },
+        {
+          "jp": "説明が不十分で、よく理解できなかった。",
+          "cn": "说明不充分，没能很好理解。"
+        },
+        {
+          "jp": "授業中に居眠りをするとは、不真面目だ。",
+          "cn": "上课打瞌睡，太不认真了。"
+        }
+      ],
+      "note": "接頭語「不〜」接在汉字词前表否定（缺乏某种性质），多读「ふ」，也有「ぶ」（不器用・不景気）。与「無〜（完全没有）」「非〜（不属于该范畴）」「未〜（尚未）」分工不同，见同组各条。",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「不規則」中的「不」表示「尚未完成」。",
+          "ans": false,
+          "exp": "✗ 「不」表示缺乏某种性质/状态（不規則＝没有规律）；「尚未」是「未〜」（未完成）。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "歩幅(ほはば)が不規則(ふきそく)だ。",
+          "en": "Their strides are irregular.",
+          "cn": "步幅不规律。",
+          "media": "Naruto",
+          "ep": "EP70",
+          "at": "13:00",
+          "url": "https://nadeshiko.co/en/sentence/Ac3ihV4d0Cqx",
+          "audio": "https://cdn.nadeshiko.co/media/20/70/d04026f1fe.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/20/70/d04026f1fe.webp"
+        },
+        {
+          "jp": "あれって すんごく不自然(ふしぜん)じゃない?",
+          "en": "Don't you think that's really unnatural?",
+          "cn": "那个，不觉得非常不自然吗？",
+          "media": "The Melancholy of Haruhi Suzumiya (2009)",
+          "ep": "EP20",
+          "at": "12:34",
+          "url": "https://nadeshiko.co/en/sentence/XwyE93VS7_gC",
+          "audio": "https://cdn.nadeshiko.co/media/4382/20/f02522357f.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/4382/20/f02522357f.webp"
+        }
+      ]
+    },
+    {
+      "id": "mu",
+      "type": "prefix",
+      "word": "無〜",
+      "read": "む",
+      "group": "negation",
+      "level": "N3",
+      "emoji": "⚪",
+      "meaning": "無〜＝完全没有、不存在：無意味・無関心・無神経・無料",
+      "examples": [
+        {
+          "jp": "彼は政治に無関心だ。",
+          "cn": "他对政治漠不关心。"
+        },
+        {
+          "jp": "そんな無意味な議論はやめよう。",
+          "cn": "别再做那种毫无意义的争论了。"
+        },
+        {
+          "jp": "無神経なことを言って、相手を傷つけた。",
+          "cn": "说了没神经的话，伤害了对方。"
+        },
+        {
+          "jp": "入場は無料だ。",
+          "cn": "入场免费。"
+        }
+      ],
+      "note": "接頭語「無〜」表示「完全没有」（無意味・無関心・無神経・無料），也有「ぶ」的读法（無事）。与「不〜（缺乏性质）」「非〜（不属于范畴）」「未〜（尚未）」区分：無＝数量/存在为零。",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「無意味」和「不意味」两种写法都正确。",
+          "ans": false,
+          "exp": "✗ 只有「無意味」。「不」不与「意味」组合成常用否定词；「無」表示完全没有。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "\\\"愛(あい)の反対(はんたい)は無関心(むかんしん)\\\"ですよね?",
+          "en": "was \\\"the opposite of love is indifference,\\\" right?",
+          "cn": "“爱的反义词是漠不关心”，对吧？",
+          "media": "JUJUTSU KAISEN",
+          "ep": "EP10",
+          "at": "5:10",
+          "url": "https://nadeshiko.co/en/sentence/Z6APmvUTwtaZ",
+          "audio": "https://cdn.nadeshiko.co/media/113415/10/0bdfa586b4.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/113415/10/0bdfa586b4.webp"
+        },
+        {
+          "jp": "なぜ そんな無意味(むいみ)なことを...",
+          "en": "Why would you do that?",
+          "cn": "为什么要做那种毫无意义的事……",
+          "media": "The Disastrous Life of Saiki K. Season 2",
+          "ep": "EP23",
+          "at": "18:37",
+          "url": "https://nadeshiko.co/en/sentence/r210VMsN4bir",
+          "audio": "https://cdn.nadeshiko.co/media/98034/23/0d275aced3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/98034/23/0d275aced3.webp"
+        }
+      ]
+    },
+    {
+      "id": "hi2",
+      "type": "prefix",
+      "word": "非〜",
+      "read": "ひ",
+      "group": "negation",
+      "level": "N2",
+      "emoji": "🚷",
+      "meaning": "非〜＝不属于、违背某范畴：非常識・非科学的・非公開・非現実的",
+      "examples": [
+        {
+          "jp": "非常識な行動は周りに迷惑をかける。",
+          "cn": "不合常理的行为会给周围人添麻烦。"
+        },
+        {
+          "jp": "その説明は非科学的だ。",
+          "cn": "那个说明是不科学的。"
+        },
+        {
+          "jp": "この資料は非公開だ。",
+          "cn": "这份资料不公开。"
+        },
+        {
+          "jp": "非現実的な計画は実行できない。",
+          "cn": "不现实的计划无法实行。"
+        }
+      ],
+      "note": "接頭語「非〜」表示「不属于该范畴、违背该标准」（非常識・非科学的・非公開・非現実的）。与「不〜（缺乏性质）」「無〜（完全没有）」「未〜（尚未）」对比：非＝划到范畴之外。",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「非公開」的「非」表示「完全没有公开」。",
+          "ans": false,
+          "exp": "✗ 「非」表示不属于公开的范畴＝不对外公开；「完全没有」是「無」。「不公開」不是常用说法。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "なんて非常識(ひじょうしき)な魔法(まほう)ですの?",
+          "en": "Your magic is absolutely absurd...",
+          "cn": "多么不合常理的魔法啊！",
+          "media": "I'm in Love with the Villainess",
+          "ep": "EP8",
+          "at": "21:43",
+          "url": "https://nadeshiko.co/en/sentence/Z3csvxpm1SKo",
+          "audio": "https://cdn.nadeshiko.co/media/158704/8/09fcc34248.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/158704/8/09fcc34248.webp"
+        },
+        {
+          "jp": "えっ! 非現実的(ひげんじつてき)じゃん",
+          "en": "Okay, now that is unrealistic!",
+          "cn": "诶！也太不现实了吧。",
+          "media": "Keep Your Hands Off Eizouken!",
+          "ep": "EP5",
+          "at": "5:29",
+          "url": "https://nadeshiko.co/en/sentence/3EAT6XP2dQqb",
+          "audio": "https://cdn.nadeshiko.co/media/109298/5/690fc9b09b.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/109298/5/690fc9b09b.webp"
+        }
+      ]
+    },
+    {
+      "id": "mi",
+      "type": "prefix",
+      "word": "未〜",
+      "read": "み",
+      "group": "negation",
+      "level": "N2",
+      "emoji": "⏳",
+      "meaning": "未〜＝尚未（做完/达到）：未完成・未経験・未使用・未定",
+      "examples": [
+        {
+          "jp": "この小説はまだ未完成だ。",
+          "cn": "这部小说还没完成。"
+        },
+        {
+          "jp": "未経験の仕事に挑戦する。",
+          "cn": "挑战没有经验的工作。"
+        },
+        {
+          "jp": "未使用の切符を返した。",
+          "cn": "把未使用的车票退了。"
+        },
+        {
+          "jp": "出発時間は未定だ。",
+          "cn": "出发时间未定。"
+        }
+      ],
+      "note": "接頭語「未〜」表示时间上「尚未」（未完成・未経験・未使用・未定）。与「不〜」不同：未＝还没有发生/达到，不＝性质上不具备。",
+      "quizzes": [
+        {
+          "type": "judge",
+          "q": "「未完成」和「不完成」都可以说。",
+          "ans": false,
+          "exp": "✗ 常用「未完成」。「未」表示尚未完成；「不」不接「完成」构成该词（不＋完成 非常用）。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "ルーデウス。まだ未完成(みかんせい)だが",
+          "en": "Rudeus.",
+          "cn": "鲁迪乌斯。虽然还没完成。",
+          "media": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+          "ep": "EP7",
+          "at": "8:45",
+          "url": "https://nadeshiko.co/en/sentence/-K9Sj_Iah6M6",
+          "audio": "https://cdn.nadeshiko.co/media/166873/7/1ea3cf4fd3.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/166873/7/1ea3cf4fd3.webp"
+        },
+        {
+          "jp": "演技(えんぎ)未経験(みけいけん)の子(こ)が多(おお)いみたいね",
+          "en": "Seems many of the show's actors have no prior experience.",
+          "cn": "好像有很多没有演戏经验的孩子。",
+          "media": "Oshi No Ko",
+          "ep": "EP3",
+          "at": "11:39",
+          "url": "https://nadeshiko.co/en/sentence/kRoGnzrEBgQP",
+          "audio": "https://cdn.nadeshiko.co/media/150672/3/b469e737af.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/150672/3/b469e737af.webp"
         }
       ]
     }
