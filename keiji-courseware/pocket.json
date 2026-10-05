@@ -44,6 +44,11 @@
       "id": "negation",
       "name": "否定の接頭語",
       "color": "#c92a2a"
+    },
+    {
+      "id": "vague",
+      "name": "例示・婉曲",
+      "color": "#0e9f6e"
     }
   ],
   "items": [
@@ -3564,7 +3569,7 @@
     {
       "id": "atari",
       "type": "suffix",
-      "word": "〜あたり",
+      "word": "〜あたり（当たり）",
       "read": "あたり",
       "group": "order",
       "level": "N3",
@@ -3612,7 +3617,7 @@
           "thumb": "https://cdn.nadeshiko.co/media/176246/4/62a72dd1f5.webp"
         }
       ],
-      "note": "源自「当たる」（分配、摊到）的连用形「当たり」，接数量词/单位名词后表 per＝每～。注意同音「辺り」＝附近（駅の辺り），汉字与意思都不同。",
+      "note": "源自「当たる」（分配、摊到）的连用形「当たり」，接数量词/单位名词后表 per＝每～。注意同音「辺り」＝附近（駅の辺り），汉字与意思都不同。 例示・婉曲（＝など）の用法は「〜あたり（辺り）」の項を参照。",
       "quizzes": [
         {
           "type": "choice",
@@ -3956,6 +3961,89 @@
           "url": "https://nadeshiko.co/en/sentence/kRoGnzrEBgQP",
           "audio": "https://cdn.nadeshiko.co/media/150672/3/b469e737af.mp3",
           "thumb": "https://cdn.nadeshiko.co/media/150672/3/b469e737af.webp"
+        }
+      ]
+    },
+    {
+      "id": "atari2",
+      "type": "suffix",
+      "word": "〜あたり（辺り）",
+      "read": "あたり",
+      "group": "vague",
+      "level": "N3",
+      "emoji": "🌫️",
+      "meaning": "〜之类、〜什么的（举一例、委婉暗示同类）；〜前后、大致〜（把时刻・程度说含糊）",
+      "examples": [
+        {
+          "jp": "お茶あたりいかがですか。",
+          "cn": "来点茶什么的怎么样？"
+        },
+        {
+          "jp": "山田君あたりに頼んでみよう。",
+          "cn": "要不就拜托山田君那类人试试。"
+        },
+        {
+          "jp": "来週あたり、また連絡します。",
+          "cn": "下周前后再联系你。"
+        },
+        {
+          "jp": "予算は千円あたりで考えています。",
+          "cn": "预算按一千日元左右在考虑。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "クリスマス プレゼントあたり?",
+          "en": "Maybe a Christmas present?",
+          "cn": "大概是圣诞礼物之类的？",
+          "media": "The Angel Next Door Spoils Me Rotten2",
+          "ep": "EP11",
+          "at": "0:36",
+          "url": "https://nadeshiko.co/en/sentence/4D8PCFQdyVU2",
+          "audio": "https://cdn.nadeshiko.co/media/170019/11/951729629e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170019/11/951729629e.webp"
+        },
+        {
+          "jp": "プログラマーあたりが怪(あや)しいな",
+          "en": "The programmers would be fishy.",
+          "cn": "大概是程序员那类人可疑吧。",
+          "media": "Cowboy Bebop",
+          "ep": "EP14",
+          "at": "7:11",
+          "url": "https://nadeshiko.co/en/sentence/lr6QmTqGB4yw",
+          "audio": "https://cdn.nadeshiko.co/media/1/14/0cecf4ebff.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/1/14/0cecf4ebff.webp"
+        }
+      ],
+      "note": "名詞の下に付き、代表例を一つ挙げて他を暗示する（＝など）。「来週あたり」「千円あたり」のように時刻・程度をぼかす使い方もある。表分配の「〜当たり」（1人あたり千円）とは同音別語で、こちらは漢字で書くなら「辺り」。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「住宅の庭の木あたり」の「あたり」の意味は？",
+          "opts": [
+            "树木之类的（举一例、委婉暗示同类）",
+            "每棵树（分配基准）",
+            "树木附近（场所）"
+          ],
+          "ans": 0,
+          "exp": "接尾語的「あたり（辺り）」：举出一个代表例，暗示同类还有别的＝など。分配基准是「〜当たり」（1人あたり）。"
+        },
+        {
+          "type": "judge",
+          "q": "「1人あたり千円」和「山田君あたりに頼む」中的「あたり」意思相同。",
+          "ans": false,
+          "exp": "前者是「〜当たり」＝每～的分配基准；后者是「〜辺り」＝…之类的例示・婉曲。同音但不同词。"
+        },
+        {
+          "type": "choice",
+          "q": "「来週あたり、また会いましょう。」中的「あたり」在做什么？",
+          "opts": [
+            "把时间说得含糊（〜前后）",
+            "表示「每周」",
+            "表示「附近」"
+          ],
+          "ans": 0,
+          "exp": "「あたり」也用来把时刻・程度说含糊：来週あたり＝下周前后。"
         }
       ]
     }
