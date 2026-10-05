@@ -4046,6 +4046,152 @@
           "exp": "「あたり」也用来把时刻・程度说含糊：来週あたり＝下周前后。"
         }
       ]
+    },
+    {
+      "id": "moto",
+      "type": "prefix",
+      "word": "元〜（もと）",
+      "read": "もと",
+      "group": "time",
+      "level": "N3",
+      "emoji": "↩️",
+      "meaning": "前～、原～（曾经是、现已不是该身份・地位）",
+      "examples": [
+        {
+          "jp": "元会長の山田さんに相談してみた。",
+          "cn": "找前会长山田先生商量了一下。"
+        },
+        {
+          "jp": "彼女は元プロのテニス選手です。",
+          "cn": "她是前职业网球选手。"
+        },
+        {
+          "jp": "元彼から急に連絡が来た。",
+          "cn": "前男友突然联系了我。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "元彼(もとかれ)から連絡(れんらく)が!",
+          "en": "I got a call from my ex!",
+          "cn": "前男友来联系了！",
+          "media": "Blue Box",
+          "ep": "EP19",
+          "at": "21:12",
+          "url": "https://nadeshiko.co/en/sentence/2mJWw2IEVd2o",
+          "audio": "https://cdn.nadeshiko.co/media/170942/19/134dcc0645.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/170942/19/134dcc0645.webp"
+        },
+        {
+          "jp": "フフーン 元(もと)カノ...",
+          "en": "His ex!",
+          "cn": "哼～前女友嘛……",
+          "media": "Rent-a-Girlfriend Season 2",
+          "ep": "EP7",
+          "at": "12:28",
+          "url": "https://nadeshiko.co/en/sentence/-kphLMoNh2Di",
+          "audio": "https://cdn.nadeshiko.co/media/124410/7/823b004848.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/124410/7/823b004848.webp"
+        }
+      ],
+      "note": "読みは「もと」。「前〜」の意味で、今はその地位・身分にないことを表す（元大臣・元プロ・元彼）。「元金（本金）」「元手」のように「もとのもの」の意味もある。話し言葉では元カレ・元カノ。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「元会長」の意味はどれ？",
+          "opts": [
+            "前会长（现在不是会长）",
+            "现任会长",
+            "名誉会长（挂名）"
+          ],
+          "ans": 0,
+          "exp": "「元〜」＝前～：曾经担任，现在已不在该位置。名誉会長は別の語。"
+        },
+        {
+          "type": "choice",
+          "q": "「元金（もとがね）」の「元」の意味は？",
+          "opts": [
+            "原来的、本来的（本金）",
+            "前任的",
+            "最初的年的"
+          ],
+          "ans": 0,
+          "exp": "「元金」＝本金，是「もとのお金」。与表前～的「元会長」同一个「元（もと）」。"
+        }
+      ]
+    },
+    {
+      "id": "chou",
+      "type": "prefix",
+      "word": "超〜（ちょう）",
+      "read": "ちょう",
+      "group": "derive",
+      "level": "N2",
+      "emoji": "🚀",
+      "meaning": "超～、超级～；超出～（程度・范围极端化；口语＝すごく）",
+      "examples": [
+        {
+          "jp": "このビルは超高層で、最上階は展望台になっている。",
+          "cn": "这栋楼是超高层，顶层是展望台。"
+        },
+        {
+          "jp": "会場は超満員だった。",
+          "cn": "会场爆满。"
+        },
+        {
+          "jp": "このケーキ、超おいしい！",
+          "cn": "这蛋糕超好吃！"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "うわっ 超(ちょう)かわいい。んっ!?",
+          "en": "Whoa, she's hot!",
+          "cn": "哇，超可爱。嗯！？",
+          "media": "Rent-a-Girlfriend Season 4",
+          "ep": "EP1",
+          "at": "17:39",
+          "url": "https://nadeshiko.co/en/sentence/PMwaHd-EaSxC",
+          "audio": "https://cdn.nadeshiko.co/media/179344/1/637b2027fc.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/179344/1/637b2027fc.webp"
+        },
+        {
+          "jp": "分(わ)かる! あれ 超(ちょう)おいしい...",
+          "en": "I know! That's my favorite!",
+          "cn": "懂！那个超好吃的……",
+          "media": "Mieruko-chan",
+          "ep": "EP2",
+          "at": "14:01",
+          "url": "https://nadeshiko.co/en/sentence/B-G_kojQ42KD",
+          "audio": "https://cdn.nadeshiko.co/media/131083/2/cc86b853d1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/131083/2/cc86b853d1.webp"
+        }
+      ],
+      "note": "音読みの接頭語。①「超える」由来で、程度・範囲を越えている意（超満員・超高層・超音速・超大国）。② 若者言葉では形容詞にも付いて「すごく」の意（超おいしい・超かわいい）。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "「超満員」の意味は？",
+          "opts": [
+            "大大超过定员、爆满",
+            "刚好满员",
+            "稍微有点空"
+          ],
+          "ans": 0,
+          "exp": "超＋満員：超过满员的状态＝爆满。并不是「刚好」。"
+        },
+        {
+          "type": "choice",
+          "q": "「超おいしい」の「超」の働きは？",
+          "opts": [
+            "口语用法：＝とても（超级好吃）",
+            "表示超越国境",
+            "表示拥有超能力"
+          ],
+          "ans": 0,
+          "exp": "口语里「超」＝すごく，可接形容词。「超能力」是另一个名词用法。"
+        }
+      ]
     }
   ]
 }

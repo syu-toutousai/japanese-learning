@@ -287,7 +287,7 @@ def build_questions(groups, items, audio):
 
         # ✍️ 運用填空：例句挖掉词缀选回去
         for i, ex in enumerate(it.get("examples") or []):
-            core = it["word"].replace("〜", "").replace("～", "")
+            core = re.sub(r"（[^）]*）", "", it["word"]).replace("〜", "").replace("～", "")
             if core and core in ex["jp"]:
                 blanked = ex["jp"].replace(core, "（　）", 1)
                 add("fill", f"{iid}:fill-{i}", type="choice",
