@@ -27,7 +27,7 @@
 | `sentences-courseware/` | 例文跟读训练 2×2×2（慢中常×2+留白，双声双源，🎵 歌で復習） | `sentences.md` + `sentences.json` |
 | `yakaraka-courseware/` | 〜やか・らか 形容動詞构词群図鑑（含同根〜しい） | `yakaraka.json` |
 | `hasami-courseware/` | はさまれた自動詞・を＋V自て＋V他（付帯状況） | `hasami.json` |
-| `karada-courseware/` | からだの慣用句・体の部位ポケット（慣用句＋身体動作＋JLPT N1 真题コーパス） | `karada.json` + `jlpt.json`（`fetch_jlpt.py` 从 `jlpt-n1-question-bank` 抽取） |
+| `karada-courseware/` | からだの慣用句・体の部位ポケット（慣用句＋身体動作＋JLPT N1 真题コーパス） | `karada.json` + `jlpt.json`（`fetch_jlpt.py` 从 `jlpt-question-bank/n1/` 抽取） |
 | `kakure-kanji-courseware/` | 隠れ漢字ポケット・假名背后的本源汉字（7 分类 45 词） | `kakure-kanji.json` |
 | `renyo-courseware/` | 連用形の化身・動詞が接尾語になるとき（源動詞→連用形→接尾語化，5 分类 22 词） | `renyo.json` |
 | `meta-guide/` | 日本語の二重構造・メタ認知ガイド（源流六分类＋判定四问＋挿入テスト＋身体語彙の和漢二層＋視点と主観性，非课件・无构建） | 手写 HTML |

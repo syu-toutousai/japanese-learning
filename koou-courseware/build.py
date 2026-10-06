@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the self-contained 「呼応・搭配」 courseware HTML.
 
-数据源：koou.json（由 extract_bank.py 从 jlpt-n1-question-bank 抽取）。
+数据源：koou.json（由 extract_bank.py 从 jlpt-question-bank/n1 抽取）。
 用法：往 koou.json 里加/改数据 → 运行本脚本 → index.html 自动长出卡片、
 发音、真题与题库。
 

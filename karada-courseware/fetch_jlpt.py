@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extract the JLPT N1 past-exam corpus for the からだの慣用句 courseware.
 
-Reads : /home/naruto/scratch/jlpt-n1-question-bank/past-exams/<y>/<m>/<sec>/*.json
+Reads : /home/naruto/scratch/jlpt-question-bank/n1/past-exams/<y>/<m>/<sec>/*.json
 Writes: <this dir>/jlpt.json
 
 Two layers:
@@ -19,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-BANK = Path("/home/naruto/scratch/jlpt-n1-question-bank/past-exams")
+BANK = Path("/home/naruto/scratch/jlpt-question-bank/n1/past-exams")
 HERE = Path(__file__).parent
 OUT = HERE / "jlpt.json"
 
@@ -203,7 +203,8 @@ def main():
             ans_idx = int(raw_ans) - 1
         answer_text = options[ans_idx] if ans_idx is not None else raw_ans
         notes = clean(d.get("notes") or "")
-        notes = re.sub(r"^\[[^\]]+\]\s*", "", notes).strip()
+        notes = re.sub(r"\[[^\]]+\]", "", notes)   # 去掉 [tryni-api]・[auto-proofread …] 等标注
+        notes = re.sub(r"\s+", " ", notes).strip()
         answer_sentence = ""
         if d.get("type") == "usage":
             answer_sentence = ANSWER_SENTENCE.get(qid, "")
@@ -247,7 +248,7 @@ def main():
     payload = dict(
         meta=dict(
             title="からだの JLPT N1 過去問コーパス",
-            source="JLPT N1 2010-07 ～ 2025-07（jlpt-n1-question-bank 収録分）",
+            source="JLPT N1 2010-07 ～ 2025-07（jlpt-question-bank n1/ 収録分）",
             note="JLPT 官方不公开真题；题目来自考生回忆/学习站点整理，仅作个人学习之非商业性引用。",
             exams=len(exams), sents=len(sents),
         ),

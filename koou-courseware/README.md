@@ -40,30 +40,30 @@ python3 -m http.server 8642
 ## 重新构建
 
 ```bash
-# 1) 从姊妹仓库 jlpt-n1-question-bank 重新抽取真題 → koou.json
-python3 extract_bank.py        # 需先存在 /home/naruto/scratch/jlpt-n1-question-bank
+# 1) 从合并题库 jlpt-question-bank 的 n1/ 子树重新抽取真題 → koou.json
+python3 extract_bank.py        # 需先存在 /home/naruto/scratch/jlpt-question-bank/n1
 # 2) 构建单文件课件（TTS 内容寻址缓存，句子变了自动重录）
 python3 build.py
 ```
 
 `extract_bank.py` 做三件事：
-1. 读取 `jlpt-n1-question-bank/past-exams/<年>/<月>/grammar/*.json`；
+1. 读取 `jlpt-question-bank/n1/past-exams/<年>/<月>/grammar/*.json`；
 2. 用 `CATALOG` 里的匹配规则（正解文字 / 題干触发词）把每题挂到对应呼応パターン；
 3. 解析该仓库 `analysis/<session>-grammar-choice.md` / `-composition.md` 里的 Nadeshiko 台词，
    连同真題一起写进 `koou.json`。
 
 ## 扩充（增长闭环）
 
-- **加真題**：在 `jlpt-n1-question-bank` 录入新场次 → 跑 `extract_bank.py` → `build.py`，
+- **加真題**：在 `jlpt-question-bank/n1/` 录入新场次 → 跑 `extract_bank.py` → `build.py`，
   真題・題庫・発音が自動で長える。
 - **加/改パターン**：在 `extract_bank.py` 的 `CATALOG`（精细パターン）或 `EXTRA`（`_P(...)` 简写）里
   追加一条，指定 `ans`（正解文字）与 `stems`（題干触发词）→ 重新抽取即可。
 - **校対**：`koou.json` 的每个 `exams[].verified` 记录题库校対状态；答案键来自
-  `jlpt-n1-question-bank/refs/<session>_keys.json` 等（见该仓库 `guides/source-log.md`）。
+  `jlpt-question-bank/n1/refs/<session>_keys.json` 等（见该子树 `guides/source-log.md`）。
 
 ## 来源
 
-- **真題題干・選択肢・正解・出典**：姊妹仓库 `jlpt-n1-question-bank`（JLPT 官方不公开真题，
+- **真題題干・選択肢・正解・出典**：合并题库 `jlpt-question-bank`（原 `jlpt-n1-question-bank` 并入其 `n1/` 子树；JLPT 官方不公开真题，
   内容来自考生回忆/学习站点整理，著作权归原权利人，此处仅作个人复习之非商业性引用）。
 - **Nadeshiko 原声台词/缩略图**：来自 [nadeshiko.co](https://nadeshiko.co) 语料库，仅作个人学习之非商业性引用。
 - **発音音频**：edge-tts（Microsoft Azure 神经语音 ja-JP-NanamiNeural）合成，按文本哈希缓存。

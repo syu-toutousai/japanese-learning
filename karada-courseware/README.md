@@ -49,8 +49,8 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/karada-course
 
 ## 📝 JLPT 真題コーパス（jlpt.json）
 
-`fetch_jlpt.py` 从姊妹仓库 `jlpt-n1-question-bank`（JLPT N1 2010-07〜2025-07，
-2746 題）中**穷尽抽取**与身体相关的语料，写入 `jlpt.json`：
+`fetch_jlpt.py` 从合并题库 `jlpt-question-bank` 的 `n1/` 子树（原 `jlpt-n1-question-bank`，
+JLPT N1 2010-07〜2025-07，2746 題）中**穷尽抽取**与身体相关的语料，写入 `jlpt.json`：
 
 - **exams（52 問）**：被考到的身体惯用句/身体部位的语彙题（漢字読み・文脈規定・
   言い換え・使い方）与文法题（文法選択・並べ替え）——原題・选项・正解・出典（年度・月・
@@ -65,7 +65,7 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/karada-course
 3. **📝 真題（原題）题库**：51 問原题直接进训练场（选项构建期固定种子打乱）。
 
 ```bash
-python3 fetch_jlpt.py   # 题库更新后重抽（需要 jlpt-n1-question-bank 在固定路径）
+python3 fetch_jlpt.py   # 题库更新后重抽（需要 jlpt-question-bank/n1 在固定路径）
 python3 build.py        # 消费 jlpt.json 重建课件
 ```
 
@@ -141,14 +141,14 @@ python3 build.py
 
 重复构建全走缓存；某条 TTS/Nadeshiko 失败只跳过该条，课件照常生成。
 依赖：`edge-tts`、`pykakasi`（Nadeshiko/缩略图下载只用标准库 `urllib`）。
-`fetch_jlpt.py` 需要 `/home/naruto/scratch/jlpt-n1-question-bank/past-exams/` 存在；
+`fetch_jlpt.py` 需要 `/home/naruto/scratch/jlpt-question-bank/n1/past-exams/` 存在；
 build.py 只消费已提交的 `jlpt.json`，不依赖题库仓库。
 
 ## 来源与版权
 
 - 词条释义经 **moji-dict 技能**（`moji` CLI）查证取自 **MOJi辞書**（mojidict.com），
   例句与中文翻译为自写整理；
-- **真題题干、选项、正解、出典**取自姊妹仓库 `jlpt-n1-question-bank` 收录的 JLPT N1 過去問
+- **真題题干、选项、正解、出典**取自合并题库 `jlpt-question-bank`（`n1/` 子树）收录的 JLPT N1 過去問
   （2010-07〜2025-07）；JLPT 官方不公开真题，这些内容来自考生回忆/学习站点整理，
   **著作权归原权利人所有**，此处仅作个人复习之非商业性引用；
 - Nadeshiko 台词/原声/缩略图来自 **Nadeshiko**（nadeshiko.co），

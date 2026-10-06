@@ -2,7 +2,7 @@
 """Extract JLPT N1 文法 questions from the question-bank and build koou.json
 for the 呼応・搭配 courseware.
 
-Reads:  /home/naruto/scratch/jlpt-n1-question-bank/past-exams/<y>/<m>/grammar/*.json
+Reads:  /home/naruto/scratch/jlpt-question-bank/n1/past-exams/<y>/<m>/grammar/*.json
 Writes: <this dir>/koou.json
 
 The courseware theme is 呼応・搭配 (correlative / collocation patterns).
@@ -18,7 +18,7 @@ import os
 import unicodedata
 from pathlib import Path
 
-BANK = Path("/home/naruto/scratch/jlpt-n1-question-bank")
+BANK = Path("/home/naruto/scratch/jlpt-question-bank/n1")
 HERE = Path(__file__).parent
 OUT = HERE / "koou.json"
 
@@ -848,7 +848,8 @@ def main():
         title="呼応・搭配 完全体系", titleCn="JLPT N1 真题呼応・搭配総覧（2010-07 ～ 2025-07）",
         jp="こおう", tags=["N1", "文法", "呼応", "搭配", "過去問", "2010-2025"],
         voiceFemale="ja-JP-NanamiNeural", voiceMale="ja-JP-KeitaNeural",
-        quizBanks=[["exam", "🎯 真题填空"], ["recog", "📘 意味認識"],
+        quizBanks=[["listen_exam", "🎧 聴解真題（音声→空欄）"],
+                   ["exam", "🎯 真题填空"], ["recog", "📘 意味認識"],
                    ["engine", "🔧 呼応拆解"], ["listen", "🎧 聴解判別"],
                    ["judge", "⭕ 判断正誤"]],
     )
