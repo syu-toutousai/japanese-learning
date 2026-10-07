@@ -62,7 +62,8 @@ build.py 更轻（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），�
   OUT = ROOT / "index.html"
   ```
 - 数据优先外置 JSON（不要硬编码在 build.py 里，便于 `git diff` 与增补）。
-- 根目录 `index.html`（课件集索引页）要为每个新课件加一张卡片；`README.md` 目录表加一行。
+- 根目录 `index.html`（课件集索引页）要为每个新课件加一张卡片；并在顶部快速索引 `.quicknav` 加一枚主题 chip
+  （`<a href="#c-<name>">`，卡片加 `id="c-<name>"`，主题用该卡片的 `--c` 色）；`README.md` 目录表加一行。
 
 ---
 

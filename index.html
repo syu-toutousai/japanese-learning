@@ -29,9 +29,20 @@ display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
 border-radius:99px;padding:3px 11px;font-size:11.5px;margin:0 5px 6px 0;font-weight:600}
 .go{display:block;text-align:center;background:var(--c);color:#fff;border-radius:12px;
 padding:11px 0;font-size:15px;font-weight:700;margin-top:6px}
+.quicknav{position:sticky;top:0;z-index:20;background:rgba(245,247,251,.94);
+-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);
+border-radius:16px;padding:12px 14px 6px;margin-bottom:18px;box-shadow:0 4px 18px rgba(30,40,90,.08)}
+.quicknav .qh{font-size:12.5px;color:var(--sub);font-weight:700;margin-bottom:8px}
+.quicknav .qs{display:flex;flex-wrap:wrap}
+.quicknav a{display:inline-block;background:#fff;border:1.5px solid var(--line);color:var(--ink);
+border-radius:99px;padding:3px 10px;font-size:11.5px;font-weight:600;margin:0 6px 6px 0;
+text-decoration:none;transition:.15s;white-space:nowrap}
+.quicknav a:hover{border-color:var(--c);color:var(--c);transform:translateY(-1px)}
+.course{scroll-margin-top:150px}
+html{scroll-behavior:smooth}
 footer{text-align:center;font-size:12px;color:var(--sub);padding:18px;line-height:1.8}
 footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
-@media (max-width:700px){.grid{grid-template-columns:1fr}}
+@media (max-width:700px){.grid{grid-template-columns:1fr}.quicknav{position:static}.course{scroll-margin-top:12px}}
 </style>
 </head>
 <body>
@@ -42,8 +53,31 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
 </header>
 
 <main>
+  <nav class="quicknav" aria-label="快速索引">
+    <div class="qh">📖 快速索引 · 各课件の主題からひと目で探す（点击跳转）</div>
+    <div class="qs">
+      <a href="#c-keishiku" style="--c:#7a4ff7">📦 形式名詞14杰</a>
+      <a href="#c-shidai" style="--c:#e8590c">🎏 次第</a>
+      <a href="#c-mienai" style="--c:#0f766e">◌ 見えない助詞</a>
+      <a href="#c-kurikaeshi" style="--c:#c2410c">🔁 反復強調の「に」</a>
+      <a href="#c-keiji" style="--c:#0ca678">👝 接頭・接尾詞</a>
+      <a href="#c-kenrui" style="--c:#7048e8">🃏 兼類詞（な）</a>
+      <a href="#c-houi" style="--c:#1971c2">🧭 方位</a>
+      <a href="#c-kotoba" style="--c:#0f7a5f">🍂 新詞の記憶</a>
+      <a href="#c-ni" style="--c:#2c3e8f">⚡ 「に」三本柱</a>
+      <a href="#c-koou" style="--c:#1f3a6e">⚡ 呼応・搭配 N1</a>
+      <a href="#c-sentences" style="--c:#0f766e">🎧 例文跟読</a>
+      <a href="#c-yakaraka" style="--c:#e67e22">🌿 〜やか・らか</a>
+      <a href="#c-hasami" style="--c:#0e7490">🥪 はさまれた自動詞</a>
+      <a href="#c-karada" style="--c:#9f1239">🫀 からだの慣用句</a>
+      <a href="#c-kakure" style="--c:#b8860b">🈶 隠れ漢字</a>
+      <a href="#c-renyo" style="--c:#0b7285">⛓️ 連用形の化身</a>
+      <a href="#c-meta" style="--c:#312e81">🧭 メタ認知ガイド</a>
+      <a href="https://syu-toutousai.github.io/wago-atlas/" target="_blank" rel="noopener" style="--c:#115e59">🌊 和語アトラス ↗</a>
+    </div>
+  </nav>
   <div class="grid">
-    <a class="course" href="keishiku-courseware/" style="--c:#7a4ff7">
+    <a class="course" id="c-keishiku" href="keishiku-courseware/" style="--c:#7a4ff7">
       <div class="em">📦</div>
       <h2>形式名詞・十四杰完全图鉴</h2>
       <div class="jp">けいしきめいし ／ 14個の「空心名词」</div>
@@ -54,7 +88,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="shidai-courseware/" style="--c:#e8590c">
+    <a class="course" id="c-shidai" href="shidai-courseware/" style="--c:#e8590c">
       <div class="em">🎏</div>
       <h2>「次第」完全掌握</h2>
       <div class="jp">しだい ／ ひとつの形・四つの用法</div>
@@ -64,7 +98,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="mienai-courseware/" style="--c:#0f766e">
+    <a class="course" id="c-mienai" href="mienai-courseware/" style="--c:#0f766e">
       <div class="em">◌</div>
       <h2>見えない助詞 ・ 句法の省略と中止形</h2>
       <div class="jp">みえないじょし ／ 助词不见了，语法还在</div>
@@ -77,7 +111,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="kurikaeshi-courseware/" style="--c:#c2410c">
+    <a class="course" id="c-kurikaeshi" href="kurikaeshi-courseware/" style="--c:#c2410c">
       <div class="em">🔁</div>
       <h2>反復強調の「に」 ・ 動詞の連用形＋に＋同動詞</h2>
       <div class="jp">はんぷくきょうちょうのに ／ 同じ動詞を二度、〈に〉で貼り合わせて意味を極める</div>
@@ -90,7 +124,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="keiji-courseware/" style="--c:#0ca678">
+    <a class="course" id="c-keiji" href="keiji-courseware/" style="--c:#0ca678">
       <div class="em">👝</div>
       <h2>接頭・接尾詞 ・ 口袋図鑑</h2>
       <div class="jp">せっとうご・せつびご ／ いつでも足せる語彙ポケット</div>
@@ -101,7 +135,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="kenrui-courseware/" style="--c:#7048e8">
+    <a class="course" id="c-kenrui" href="kenrui-courseware/" style="--c:#7048e8">
       <div class="em">🃏</div>
       <h2>兼類詞・両刀ポケット</h2>
       <div class="jp">けんるいし ／ 動詞が「な」を着るとき</div>
@@ -112,7 +146,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="houi-courseware/" style="--c:#1971c2">
+    <a class="course" id="c-houi" href="houi-courseware/" style="--c:#1971c2">
       <div class="em">🧭</div>
       <h2>方角・方位 ・ 认知罗盘</h2>
       <div class="jp">ほうがく・ほうい ／ 东南西北・左右上下 と 派生語</div>
@@ -123,7 +157,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="kotoba-courseware/" style="--c:#0f7a5f">
+    <a class="course" id="c-kotoba" href="kotoba-courseware/" style="--c:#0f7a5f">
       <div class="em">🍂</div>
       <h2>言葉・新詞 ・ 記憶の種</h2>
       <div class="jp">ことば・しんし ／ 新碰上的一個詞，走一條人腦記得住的路</div>
@@ -135,7 +169,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="ni-courseware/" style="--c:#2c3e8f">
+    <a class="course" id="c-ni" href="ni-courseware/" style="--c:#2c3e8f">
       <div class="em">⚡</div>
       <h2>「に」完全体系 · 三本柱</h2>
       <div class="jp">だんてい・かくじょし・じょうたいせつぞく ／ にの全用法を貫く統一建築図</div>
@@ -148,7 +182,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="koou-courseware/" style="--c:#1f3a6e">
+    <a class="course" id="c-koou" href="koou-courseware/" style="--c:#1f3a6e">
       <div class="em">⚡</div>
       <h2>呼応・搭配 完全体系</h2>
       <div class="jp">こおう ／ JLPT N1 過去問の呼応・助詞搭配を一望</div>
@@ -161,7 +195,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="sentences-courseware/" style="--c:#0f766e">
+    <a class="course" id="c-sentences" href="sentences-courseware/" style="--c:#0f766e">
       <div class="em">🎧</div>
       <h2>例文 ・ 跟読トレーナー</h2>
       <div class="jp">れいぶん ／ 2×2×2 —— 慢・中・常、二度ずつ＋跟読の余白</div>
@@ -175,7 +209,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="yakaraka-courseware/" style="--c:#e67e22">
+    <a class="course" id="c-yakaraka" href="yakaraka-courseware/" style="--c:#e67e22">
       <div class="em">🌿</div>
       <h2>〜やか・らか 形容動詞図鑑</h2>
       <div class="jp">やか・らか けいようどうし ずかん ／ 接尾辞でつながる形容動詞の一族</div>
@@ -189,7 +223,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="hasami-courseware/" style="--c:#0e7490">
+    <a class="course" id="c-hasami" href="hasami-courseware/" style="--c:#0e7490">
       <div class="em">🥪</div>
       <h2>はさまれた自動詞 ・ を＋V自て＋V他</h2>
       <div class="jp">はさまれたじどうし ／ 宾语先登场、状态夹中间、他動詞在句末收束</div>
@@ -202,7 +236,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="karada-courseware/" style="--c:#9f1239">
+    <a class="course" id="c-karada" href="karada-courseware/" style="--c:#9f1239">
       <div class="em">🫀</div>
       <h2>からだの慣用句 ・ 体の部位ポケット</h2>
       <div class="jp">からだのかんようく ／ 頭・顔・目・耳・口・首・肩・胸・腹・手・足…が動くと、意味も動く。JLPT N1 真題コーパス付き</div>
@@ -218,7 +252,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="kakure-kanji-courseware/" style="--c:#b8860b">
+    <a class="course" id="c-kakure" href="kakure-kanji-courseware/" style="--c:#b8860b">
       <div class="em">🈶</div>
       <h2>隠れ漢字 ・ ポケット</h2>
       <div class="jp">かくれかんじ ／ 仮名の裏に漢字あり</div>
@@ -232,7 +266,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="renyo-courseware/" style="--c:#0b7285">
+    <a class="course" id="c-renyo" href="renyo-courseware/" style="--c:#0b7285">
       <div class="em">⛓️</div>
       <h2>連用形の化身 ・ 動詞が接尾語になるとき</h2>
       <div class="jp">れんようけい ／ 動詞が接尾語になるとき</div>
@@ -246,7 +280,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
       <div class="go">打开课件 →</div>
     </a>
 
-    <a class="course" href="meta-guide/" style="--c:#312e81">
+    <a class="course" id="c-meta" href="meta-guide/" style="--c:#312e81">
       <div class="em">🧭</div>
       <h2>日本語の二重構造 ・ メタ認知ガイド</h2>
       <div class="jp">にじゅうこうぞう ／ ことばの地層を読む</div>
