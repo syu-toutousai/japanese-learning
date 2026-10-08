@@ -52,7 +52,8 @@ def load_data():
             errors.append(f"meta 缺少 {key}")
     if not isinstance(meta.get("seed"), int):
         errors.append("meta.seed 必须是整数")
-    asset_names = {p.name for p in ASSETS.glob("*.png")}
+    asset_names = {p.name for p in ASSETS.iterdir()
+                   if p.suffix.lower() in (".png", ".jpg", ".jpeg")}
     for section in ("letters", "signs", "senses", "timeline", "trivia", "audio", "quizzes"):
         if not isinstance(data.get(section), list) or not data[section]:
             errors.append(f"缺少非空列表 {section}")
@@ -150,10 +151,12 @@ def gen_audio(data):
 # ---------------------------------------------------------------- assets
 
 def load_assets():
+    mimes = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
     img = {}
-    for p in sorted(ASSETS.glob("*.png")):
-        mime = "image/png"
-        img[p.name] = f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
+    for p in sorted(ASSETS.iterdir()):
+        if p.suffix.lower() not in mimes:
+            continue
+        img[p.name] = f"data:{mimes[p.suffix.lower()]};base64," + base64.b64encode(p.read_bytes()).decode()
     return img
 
 
@@ -420,7 +423,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
 </head>
 <body>
 <header>
-  <div class="noren"><img data-img="sign_kisoba.png" alt="幾楚者の暖簾"></div>
+  <div class="noren"><img data-img="sign_kisoba.jpg" alt="幾楚者の暖簾"></div>
   <h1>変体仮名店招帖</h1>
   <div class="jp">へんたいがな ・ てんしょうちょう</div>
   <p class="sub">__SUBTITLE__</p>
@@ -475,7 +478,7 @@ footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
 </main>
 <footer>
   <div>変体仮名店招帖 · 个人学习课件（单文件离线可用）</div>
-  <div>招牌插画为自制模拟图，毛笔字体 = Yuji Syuku（SIL OFL）；史实出处见各卡片链接与 README。</div>
+  <div>图片素材：実拍照片（Wikimedia Commons／tenki.jp／朝日新聞ことばマガジン／fv1.jp 等）＋真实変体仮名字形（Unicode／Wikimedia），出处与许可见各卡片及 README。</div>
   <div>数据随手改：<code>hentaigana.json</code> → <code>python3 build.py</code> → 重建本页</div>
 </footer>
 <script>
