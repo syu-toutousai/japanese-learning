@@ -1,0 +1,963 @@
+{
+ "meta": {
+  "title": "ほど の構図",
+  "titleCn": "「ほど」完全构图",
+  "jp": "ほど のこうず ／ 副助詞がつくる連用・連体の切り替え",
+  "tags": [
+   "N2",
+   "N3",
+   "N4",
+   "副助詞",
+   "程度",
+   "比較",
+   "連用修飾語",
+   "連体修飾語",
+   "学校文法",
+   "概数"
+  ],
+  "voiceFemale": "ja-JP-NanamiNeural",
+  "note": "往 items 里丢一条「ほど」句式，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
+ },
+ "groups": [
+  {
+   "id": "degree",
+   "name": "程度・比喩（連用修飾）",
+   "color": "#e8590c",
+   "emoji": "🔥",
+   "note": "〜ほど＋用言——度合いを誇張して言う。後ろの用言を修飾する連用修飾語になる。"
+  },
+  {
+   "id": "superlative",
+   "name": "最高級・比較",
+   "color": "#d33f49",
+   "emoji": "🏆",
+   "note": "〜ほど…ない——「これ以上ない」の最高級と、「〜と同じくらい…ない」の比較否定。"
+  },
+  {
+   "id": "rentai",
+   "name": "連体修飾（〜ほどの）",
+   "color": "#1971c2",
+   "emoji": "🔗",
+   "note": "〜ほどの＋体言——「の」を伴って名詞を修飾する連体修飾語。"
+  },
+  {
+   "id": "hirei",
+   "name": "比例・呼応",
+   "color": "#0ca678",
+   "emoji": "📈",
+   "note": "〜ば〜ほど／〜するほど——一方の変化に比例してもう一方が変わる。"
+  },
+  {
+   "id": "gente",
+   "name": "否定・限度",
+   "color": "#9c36b5",
+   "emoji": "🚧",
+   "note": "〜ほどではない／〜にもほどがある——程度の否定と「限度を超えている」。"
+  },
+  {
+   "id": "gaisu",
+   "name": "概数",
+   "color": "#0b7285",
+   "emoji": "🔢",
+   "note": "数量＋ほど——おおよその量や時を表す。"
+  },
+  {
+   "id": "bumpo",
+   "name": "語法・品詞",
+   "color": "#6d28d9",
+   "emoji": "🧭",
+   "note": "副助詞「ほど」の正体、連用／連体の切り替え、〜くらいとの違い。"
+  }
+ ],
+ "items": [
+  {
+   "id": "hodo-yougen",
+   "group": "degree",
+   "level": "N3",
+   "emoji": "🔥",
+   "word": "〜ほど＋用言",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "体言・連体形＋ほど",
+   "meaning": "到…程度；…得（夸张程度）",
+   "engine": "ほど（副助詞）が程度を表し、直後の用言（動詞・形容詞）を修飾する → 連用修飾語。「死ぬほど」のような極端な例えで程度を誇張する。",
+   "examples": [
+    {
+     "jp": "死ぬほど疲れた。",
+     "cn": "累得要死。"
+    },
+    {
+     "jp": "足が痛くなるほど歩いた。",
+     "cn": "走到脚都疼了。"
+    },
+    {
+     "jp": "忙しくて顔も上げられないほどだ。",
+     "cn": "忙得连头都抬不起来。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "死(し)ぬほど かわいい!",
+     "en": "So cute I could die!",
+     "media": "The Dangers in My Heart Season 2",
+     "ep": "EP7",
+     "at": "22:28",
+     "url": "https://nadeshiko.co/en/sentence/Jnn-tYjvVHBn",
+     "audio": "https://cdn.nadeshiko.co/media/166216/7/d111b79fea.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/166216/7/d111b79fea.webp",
+     "cn": "可爱得要命！"
+    },
+    {
+     "jp": "その声(こえ)は ぞっとするほど優(やさ)しかったけど",
+     "en": "Despite the warmth in his voice, his words gave me the chills.",
+     "media": "Sound! Euphonium 2",
+     "ep": "EP6",
+     "at": "16:32",
+     "url": "https://nadeshiko.co/en/sentence/Uml1gfyi_n4G",
+     "audio": "https://cdn.nadeshiko.co/media/21460/6/cf10100030.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21460/6/cf10100030.webp",
+     "cn": "那声音温柔得让人发毛。"
+    }
+   ],
+   "note": "比喩で程度を極端化する。同じ「くらい」も可能だが、ほどは書き言葉寄りで強調が強い。",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-tai",
+   "group": "degree",
+   "level": "N2",
+   "emoji": "😢",
+   "word": "〜たいほどだ",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "連体形＋ほど（＋だ）",
+   "meaning": "想…的程度；…得不得了",
+   "engine": "願望・感情の程度を誇張する。文末を「〜ほどだ」で受けることも多い。",
+   "examples": [
+    {
+     "jp": "泣きたいほど悔しかった。",
+     "cn": "后悔得想哭。"
+    },
+    {
+     "jp": "嬉しくて飛び上がるほどだった。",
+     "cn": "高兴得差点跳起来。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "俺(おれ) ナズナちゃんが 泣(な)くほど嫌(いや)なことさせたくないよ。",
+     "en": "I wouldn't want you to do anything that would make you cry.",
+     "media": "Call of the Night Season 2",
+     "ep": "EP10",
+     "at": "20:17",
+     "url": "https://nadeshiko.co/en/sentence/OBeiju6tZxvw",
+     "audio": "https://cdn.nadeshiko.co/media/175914/10/beda000f3f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/175914/10/beda000f3f.webp",
+     "cn": "我不想让娜兹娜做让她哭得那么难受的事。"
+    },
+    {
+     "jp": "もし 泣(な)くほど つらいんだったら 何(なに)か助(たす)けてやりてぇけど",
+     "en": "If she were in pain and wanted to cry, I would've liked to help her out,",
+     "media": "Rent-a-Girlfriend Season 3",
+     "ep": "EP10",
+     "at": "3:42",
+     "url": "https://nadeshiko.co/en/sentence/izZ6z5oQjV8K",
+     "audio": "https://cdn.nadeshiko.co/media/154745/10/30946194e8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154745/10/30946194e8.webp",
+     "cn": "如果她难受得哭出来，我真想帮帮她。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-nai",
+   "group": "degree",
+   "level": "N2",
+   "emoji": "😖",
+   "word": "〜ないほど",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "ない形の連体形＋ほど",
+   "meaning": "到了不能…的程度",
+   "engine": "打消の連体形＋ほどで、程度の高さを裏から強調する（言えないほど＝言えないくらいひどく）。",
+   "examples": [
+    {
+     "jp": "今更ウソなんて言えないほど広まっている。",
+     "cn": "事到如今已经传得没法说是谎话了。"
+    },
+    {
+     "jp": "息ができないほど笑った。",
+     "cn": "笑得喘不过气。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "今更(いまさら) ウソなんて 言(い)えないほど広(ひろ)まってるぞ　またニコの魔法(まほう)だな",
+     "en": "It's already spread far too wide to tell people it was a lie. Did you cast a spell, Nico?",
+     "media": "WITCH WATCH",
+     "ep": "EP18",
+     "at": "15:15",
+     "url": "https://nadeshiko.co/en/sentence/MBgQOjifXiYH",
+     "audio": "https://cdn.nadeshiko.co/media/180367/18/b9ac29a495.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/180367/18/b9ac29a495.webp",
+     "cn": "事到如今，已经传开得没法说那是谎言了。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-ni",
+   "group": "degree",
+   "level": "N1",
+   "emoji": "✨",
+   "word": "〜ほどに",
+   "read": "ほどに",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "連体形＋ほどに",
+   "meaning": "…地（文语性的程度强调）；越来越…",
+   "engine": "「ほど」＋格助詞「に」で程度を副詞的に強調する。文章語的で、歌詞や文学にも多い。",
+   "examples": [
+    {
+     "jp": "目が覚めるほどに鮮やかな朝だった。",
+     "cn": "那是鲜明得让人惊醒的早晨。"
+    },
+    {
+     "jp": "涙が出るほどに笑った。",
+     "cn": "笑得眼泪都出来了。"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-saikou",
+   "group": "superlative",
+   "level": "N2",
+   "emoji": "🏆",
+   "word": "〜ほど…ない（最高級）",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "体言＋ほど＋…ない",
+   "meaning": "没有比…更…的（最高级）",
+   "engine": "「このときほど強く感じたことはない」——「このとき」を基準に、それ以上の例がない＝最高級。ほどは「強く」を修飾する連用修飾語。",
+   "examples": [
+    {
+     "jp": "自分の無知をこのときほど強く感じたことはない。",
+     "cn": "没有比这时候更强烈地感到自己的无知。",
+     "audio": "audio/hodo-saikou-e0.mp3"
+    },
+    {
+     "jp": "今年は去年ほど暑くない。",
+     "cn": "今年没有去年那么热。（比较否定）"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "\\「でも これまでの人生(じんせい)で\\「　\\「君(きみ)ほど誰(だれ)かを 身近(みじか)に感(かん)じたことはないんだ!\\「",
+     "en": "\\\"but I've never been so close to anyone in my whole entire life.\\\"",
+     "media": "My Undead Yokai Girlfriend",
+     "ep": "EP1",
+     "at": "8:54",
+     "url": "https://nadeshiko.co/en/sentence/uI1a4OoEIPXl",
+     "audio": "https://cdn.nadeshiko.co/media/mv/248395/1/fcd0069e06.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/248395/1/fcd0069e06.webp",
+     "cn": "我从没觉得和谁像你这样亲近过！"
+    }
+   ],
+   "note": "同じ「〜ほど…ない」でも、①「このときほど…ない」＝最高級、②「去年ほど…ない」＝比較否定。文脈で判断する。この课件の核心例句。",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「このときほど強く感じたことはない」の意味は？",
+     "opts": [
+      "没有比这时候更强烈的了（最高级）",
+      "这时候的感受比较弱",
+      "大约这个时候感受到",
+      "只有这时候才感受得到"
+     ],
+     "ans": 0,
+     "exp": "「このとき」を基準に「それ以上はない」→最高級。ほどは「強く」を修飾。"
+    }
+   ]
+  },
+  {
+   "id": "hodo-hito",
+   "group": "superlative",
+   "level": "N3",
+   "emoji": "👑",
+   "word": "〜ほど…はいない",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "体言＋ほど＋…はない",
+   "meaning": "没有比…更…的（名词的最高级）",
+   "engine": "名詞を例示して最高級を作る。述部は「いない／ない」。",
+   "examples": [
+    {
+     "jp": "彼ほど優しい人はいない。",
+     "cn": "没有比他更温柔的人。"
+    },
+    {
+     "jp": "この町ほど住みやすい所はない。",
+     "cn": "没有比这个城市更适合居住的地方。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "けど お前(まえ)のパパほど 強(つよ)くて優(やさ)しい男(おとこ)は見(み)たことがねえ",
+     "en": "But I've never seen a man as strong and kind as your dad before!",
+     "media": "ONE PIECE",
+     "ep": "EP50",
+     "at": "19:43",
+     "url": "https://nadeshiko.co/en/sentence/LJwhOuSnKFb5",
+     "audio": "https://cdn.nadeshiko.co/media/21/50/bc21f204b7.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21/50/bc21f204b7.webp",
+     "cn": "我从没见过像你爸爸那样既坚强又温柔的男人！"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-omotta",
+   "group": "superlative",
+   "level": "N4",
+   "emoji": "🤔",
+   "word": "思ったほど…ない",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "思う／言う＋連用形＋た＋ほど＋…ない",
+   "meaning": "没有想象（说的）那么…",
+   "engine": "予想・伝聞を基準にした比較否定。「思ったほど」「言うほど」の形で日常会話に頻出。",
+   "examples": [
+    {
+     "jp": "思ったほど難しくなかった。",
+     "cn": "没有想象的那么难。"
+    },
+    {
+     "jp": "言うほど簡単ではない。",
+     "cn": "不像说的那么简单。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "筋(すじ)繊維(せんい)の損傷(そんしょう)も 思(おも)ったほどではなかった",
+     "en": "and the muscle fiber damage isn't as bad as we feared.",
+     "media": "SPY x FAMILY Season 3",
+     "ep": "EP13",
+     "at": "15:20",
+     "url": "https://nadeshiko.co/en/sentence/GT7Gc6IjVFmB",
+     "audio": "https://cdn.nadeshiko.co/media/177937/13/0d4efa33d4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/177937/13/0d4efa33d4.webp",
+     "cn": "肌肉纤维的损伤也没担心的那么严重。"
+    },
+    {
+     "jp": "なってみれば 思(おも)ったほど 寂(さび)しいとは感(かん)じない。",
+     "en": "and it's not as lonely as you'd think.",
+     "media": "Rascal Does Not Dream of Bunny Girl Senpai",
+     "ep": "EP4",
+     "at": "21:55",
+     "url": "https://nadeshiko.co/en/sentence/g8QPXx1YSYsT",
+     "audio": "https://cdn.nadeshiko.co/media/101291/4/677eb7e137.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101291/4/677eb7e137.webp",
+     "cn": "真到了那一步，倒不觉得像想象的那么寂寞。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-demonai",
+   "group": "superlative",
+   "level": "N3",
+   "emoji": "🤷",
+   "word": "〜ほどでもない",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "体言＋ほどでもない",
+   "meaning": "还没到…的程度；并不那么…",
+   "engine": "程度を控えめに否定する。会話の定番「それほどでもない」＝「没那么厉害」。",
+   "examples": [
+    {
+     "jp": "わざわざ行くほどでもない。",
+     "cn": "不值得特意去一趟。"
+    },
+    {
+     "jp": "高級ホテルに泊まるほどでもない。",
+     "cn": "还没到住高级酒店的程度。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "いやあ それほどでもないですね",
+     "en": "Well, I wouldn't say I'm that fast.",
+     "media": "Assassination Classroom",
+     "ep": "EP4",
+     "at": "5:15",
+     "url": "https://nadeshiko.co/en/sentence/8Azc5HzO5zCU",
+     "audio": "https://cdn.nadeshiko.co/media/20755/4/0c068a8574.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20755/4/0c068a8574.webp",
+     "cn": "哎呀，也没你说得那么厉害啦。"
+    },
+    {
+     "jp": "それほどでもないけど",
+     "en": "It's not that big a deal.",
+     "media": "Frieren: Beyond Journey’s End",
+     "ep": "EP11",
+     "at": "6:57",
+     "url": "https://nadeshiko.co/en/sentence/LAm0DgANu-hO",
+     "audio": "https://cdn.nadeshiko.co/media/154587/11/d4bcd6ef6c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154587/11/d4bcd6ef6c.webp",
+     "cn": "也没那么夸张啦。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-no",
+   "group": "rentai",
+   "level": "N2",
+   "emoji": "🔗",
+   "word": "〜ほどの＋体言",
+   "read": "ほどの",
+   "mod": "連体修飾語（体言修飾）",
+   "connect": "体言・連体形＋ほどの＋名詞",
+   "meaning": "到…程度的…（修饰名词）",
+   "engine": "「の」を伴うと後ろの名詞を修飾する連体修飾語に切り替わる——ここが「〜ほど」と「〜ほどの」の分かれ目。",
+   "examples": [
+    {
+     "jp": "このときほどの衝撃はなかった。",
+     "cn": "没有比那时更大的冲击。"
+    },
+    {
+     "jp": "満月を三日月に変えるほどのパワー。",
+     "cn": "足以把满月变成月牙的力量。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "石畳(いしだたみ)をひっくり返(かえ)すほどのことを しておいて　何(なん)の騒(さわ)ぎも起(お)こしていないとは 言(い)えまい",
+     "en": "You did something that turned the paving upside down and you claim you did not make a racket?",
+     "media": "Ascendance of a Bookworm Part 2",
+     "ep": "EP5",
+     "at": "20:34",
+     "url": "https://nadeshiko.co/en/sentence/B_zlk85wiIQS",
+     "audio": "https://cdn.nadeshiko.co/media/113693/5/dd4624244f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/113693/5/dd4624244f.webp",
+     "cn": "你做了把石板地都掀翻的事，怎么可能什么动静都没引起。"
+    },
+    {
+     "jp": "満月(まんげつ)を三日月(みかづき)に 変(か)えるほどのパワーを持(も)つ超(ちょう)生物(せいぶつ)だ",
+     "en": "He's a superbeing with enough power to reduce the full moon to a crescent.",
+     "media": "Assassination Classroom",
+     "ep": "EP1",
+     "at": "7:41",
+     "url": "https://nadeshiko.co/en/sentence/NR8_5pG8qc-r",
+     "audio": "https://cdn.nadeshiko.co/media/20755/1/e65e54839f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20755/1/e65e54839f.webp",
+     "cn": "那是拥有足以把满月变成月牙之力的超生物。"
+    }
+   ],
+   "note": "同じ「このとき」でも、後ろが用言なら「ほど」（連用修飾）、体言なら「ほどの」（連体修飾）。",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「このときほどの衝撃」の「このときほどの」が作る修飾語は？",
+     "opts": [
+      "連体修飾語（「衝撃」を修飾）",
+      "連用修飾語（用言を修飾）",
+      "主語",
+      "独立語"
+     ],
+     "ans": 0,
+     "exp": "「の」を伴い、後ろの体言「衝撃」を修飾しているので連体修飾語。"
+    }
+   ]
+  },
+  {
+   "id": "hodo-no-koto",
+   "group": "rentai",
+   "level": "N3",
+   "emoji": "📄",
+   "word": "〜ほどのことではない",
+   "read": "ほどの",
+   "mod": "連体修飾語（体言修飾）",
+   "connect": "連体形＋ほどのことではない",
+   "meaning": "没到…的地步；不值得…",
+   "engine": "形式名詞「こと」を修飾し、全体で「その程度に及ばない」と評価する。",
+   "examples": [
+    {
+     "jp": "心配するほどのことではない。",
+     "cn": "用不着担心。"
+    },
+    {
+     "jp": "わざわざ報告するほどのことでもない。",
+     "cn": "也不值得特意汇报。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "聞(き)くほどのことでもあるまい。",
+     "en": "Do you even have to ask?",
+     "media": "Frieren: Beyond Journey’s End",
+     "ep": "EP21",
+     "at": "2:54",
+     "url": "https://nadeshiko.co/en/sentence/rj76GHriKf4U",
+     "audio": "https://cdn.nadeshiko.co/media/154587/21/2ae5b6b146.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154587/21/2ae5b6b146.webp",
+     "cn": "用不着问吧。"
+    },
+    {
+     "jp": "うぅ...いや 泣(な)くほどのことじゃ ないでしょ。",
+     "en": "Uh, you don't have to cry about it.",
+     "media": "Rent-a-Girlfriend Season 4",
+     "ep": "EP6",
+     "at": "15:47",
+     "url": "https://nadeshiko.co/en/sentence/dUNCykcJ-Or4",
+     "audio": "https://cdn.nadeshiko.co/media/179344/6/8dddc25bfe.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/179344/6/8dddc25bfe.webp",
+     "cn": "哎呀，没什么好哭的吧。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-no-fear",
+   "group": "rentai",
+   "level": "N2",
+   "emoji": "😱",
+   "word": "〜ほどの＋名詞（甚だしさ）",
+   "read": "ほどの",
+   "mod": "連体修飾語（体言修飾）",
+   "connect": "連体形＋ほどの＋名詞",
+   "meaning": "…得不得了的…（强调程度的连体修饰）",
+   "engine": "前件の程度が甚だしいことを、後ろの名詞の属性として提示する。",
+   "examples": [
+    {
+     "jp": "声も出ないほどの恐怖を感じた。",
+     "cn": "感到了发不出声的恐惧。"
+    },
+    {
+     "jp": "誰もが振り返るほどの美人だ。",
+     "cn": "是个人人回头的美人。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "この海(うみ)の上(うえ)で食料(しょくりょう)や水(みず)を失(うしな)うことが どれほどの恐怖(きょうふ)か",
+     "en": "How scary it is to lose food and water on the ocean...",
+     "media": "ONE PIECE",
+     "ep": "EP21",
+     "at": "10:19",
+     "url": "https://nadeshiko.co/en/sentence/LOHLFPE2ihpN",
+     "audio": "https://cdn.nadeshiko.co/media/21/21/0097203666.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21/21/0097203666.webp",
+     "cn": "在这片大海上失去食物和水，是何等程度的恐惧啊。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "ba-hodo",
+   "group": "hirei",
+   "level": "N3",
+   "emoji": "📈",
+   "word": "〜ば〜ほど",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "仮定形＋ば＋連体形＋ほど",
+   "meaning": "越…越…",
+   "engine": "同じ動詞を繰り返し、変化の比例関係を表す。後件は「ますます…」と呼応する。",
+   "examples": [
+    {
+     "jp": "読めば読むほどおもしろい。",
+     "cn": "越读越有意思。",
+     "audio": "audio/ba-hodo-e0.mp3"
+    },
+    {
+     "jp": "考えれば考えるほどわからなくなる。",
+     "cn": "越想越不明白。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "いや 見(み)れば見(み)るほどそっくりだ",
+     "en": "The more I look at you, the more obvious the resemblance is.",
+     "media": "Hanasaku Iroha ~Blossoms for Tomorrow~",
+     "ep": "EP1",
+     "at": "12:31",
+     "url": "https://nadeshiko.co/en/sentence/E0zg7_OnELU-",
+     "audio": "https://cdn.nadeshiko.co/media/9289/1/15b897a8fe.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/9289/1/15b897a8fe.webp",
+     "cn": "哎呀，越看越像。"
+    },
+    {
+     "jp": "はぁ...見(み)れば見(み)るほど 申(もう)し訳(わけ)なさが募(つの)るぜ。",
+     "en": "The more I see of her acting, the worse I feel.",
+     "media": "Rent-a-Girlfriend Season 3",
+     "ep": "EP5",
+     "at": "9:14",
+     "url": "https://nadeshiko.co/en/sentence/L1HNxvG235Yq",
+     "audio": "https://cdn.nadeshiko.co/media/154745/5/b524fa04c5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154745/5/b524fa04c5.webp",
+     "cn": "唉，越看越觉得抱歉。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-hirei",
+   "group": "hirei",
+   "level": "N3",
+   "emoji": "🌱",
+   "word": "〜するほど（比例）",
+   "read": "ほど",
+   "mod": "連用修飾語（用言修飾）",
+   "connect": "連体形＋ほど",
+   "meaning": "随着…越来越…",
+   "engine": "「〜ば〜ほど」の簡略形。日常では「練習するほど上手になる」のように動詞＋ほどで比例を表す。",
+   "examples": [
+    {
+     "jp": "練習するほど上手になる。",
+     "cn": "越练习越熟练。"
+    },
+    {
+     "jp": "年を取るほど時間が早く過ぎる。",
+     "cn": "年纪越大时间过得越快。"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "ni-mo-hodo",
+   "group": "gente",
+   "level": "N2",
+   "emoji": "🚧",
+   "word": "〜にもほどがある",
+   "read": "ほど",
+   "mod": "文末表現（述部）",
+   "connect": "体言＋にもほどがある",
+   "meaning": "…也该有个限度；太过分了",
+   "engine": "「限度」という語義そのままに、程度の超過を非難する定型。冗談・遅刻・無茶などと共に。",
+   "examples": [
+    {
+     "jp": "冗談にもほどがある。",
+     "cn": "开玩笑也该有个限度。"
+    },
+    {
+     "jp": "遅刻にもほどがある。",
+     "cn": "迟到也得有个谱。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "まったく むちゃにもほどがある",
+     "en": "Good grief! You're too reckless!",
+     "media": "My Hero Academia",
+     "ep": "EP2",
+     "at": "18:19",
+     "url": "https://nadeshiko.co/en/sentence/cvLQ_PbBxgec",
+     "audio": "https://cdn.nadeshiko.co/media/21459/2/6bad8d1a4d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21459/2/6bad8d1a4d.webp",
+     "cn": "真是的，胡来也该有个限度。"
+    },
+    {
+     "jp": "不躾(ぶしつけ)にもほどがあるだろうが",
+     "en": "That's a little more than \\\"brash,\\\" you know.",
+     "media": "The Angel Next Door Spoils Me Rotten",
+     "ep": "EP11",
+     "at": "12:58",
+     "url": "https://nadeshiko.co/en/sentence/tdnBUB8sf95R",
+     "audio": "https://cdn.nadeshiko.co/media/143338/11/9ea9d163bd.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143338/11/9ea9d163bd.webp",
+     "cn": "无礼也该有个限度吧。"
+    }
+   ],
+   "note": "",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「冗談にもほどがある」の意味は？",
+     "opts": [
+      "玩笑也该有个限度（太不像话）",
+      "玩笑很有意思",
+      "请开个玩笑",
+      "讨厌开玩笑"
+     ],
+     "ans": 0,
+     "exp": "程度の超過を非難する定型。「冗談にも程がある」とも書く。"
+    }
+   ]
+  },
+  {
+   "id": "to-iu-hodo",
+   "group": "gente",
+   "level": "N2",
+   "emoji": "❌",
+   "word": "〜というほどではない",
+   "read": "ほど",
+   "mod": "文末表現（述部）",
+   "connect": "体言＋というほどではない",
+   "meaning": "说不上…；并没有到…的程度",
+   "engine": "「という」で名詞化して「ほどではない」——控えめな否定評価。",
+   "examples": [
+    {
+     "jp": "病気というほどではない。",
+     "cn": "说不上是病。"
+    },
+    {
+     "jp": "苦戦というほどではない。",
+     "cn": "算不上苦战。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "苦戦(くせん)というほどではない",
+     "en": "Nothing tough about them.",
+     "media": "One-Punch Man",
+     "ep": "EP11",
+     "at": "8:41",
+     "url": "https://nadeshiko.co/en/sentence/e859ZPyNrvnU",
+     "audio": "https://cdn.nadeshiko.co/media/21087/11/822da10eb8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21087/11/822da10eb8.webp",
+     "cn": "算不上什么苦战。"
+    }
+   ],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-gaisu",
+   "group": "gaisu",
+   "level": "N4",
+   "emoji": "🔢",
+   "word": "数量＋ほど",
+   "read": "ほど",
+   "mod": "連用修飾語（数量・時）",
+   "connect": "数量詞＋ほど",
+   "meaning": "大约…；…左右",
+   "engine": "概数を表す副助詞用法。数量詞に付いて、おおよその量や時間を示す。",
+   "examples": [
+    {
+     "jp": "りんごを2キロほど買う。",
+     "cn": "买大概两公斤的苹果。",
+     "audio": "audio/hodo-gaisu-e0.mp3"
+    },
+    {
+     "jp": "三日ほど休んだ。",
+     "cn": "休息了三天左右。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "3人(さんにん)がかりで 10日(にち)ほどかかります",
+     "en": "With the three of us, it will take about ten days.",
+     "media": "Yu Yu Hakusho: Ghostfiles",
+     "ep": "EP91",
+     "at": "6:46",
+     "url": "https://nadeshiko.co/en/sentence/QjItw8RBYaQA",
+     "audio": "https://cdn.nadeshiko.co/media/392/91/d1fbe03b45.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/392/91/d1fbe03b45.webp",
+     "cn": "我们三个人一起干的话，大概要花十天。"
+    }
+   ],
+   "note": "",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「三日ほど休んだ」の「ほど」の意味は？",
+     "opts": [
+      "大约（概数）",
+      "最高级（没有比这更…）",
+      "程度夸张",
+      "限度・分寸"
+     ],
+     "ans": 0,
+     "exp": "数量詞＋ほど＝概数「大约」。"
+    }
+   ]
+  },
+  {
+   "id": "hodo-suryo",
+   "group": "gaisu",
+   "level": "N3",
+   "emoji": "🧮",
+   "word": "〜ほどの＋数量＋名詞",
+   "read": "ほどの",
+   "mod": "連体修飾語（体言修飾）",
+   "connect": "数量詞＋ほどの＋名詞",
+   "meaning": "大约…的（数量修饰名词）",
+   "engine": "概数の「ほど」に「の」が付き、後ろの名詞を修飾する。",
+   "examples": [
+    {
+     "jp": "千人ほどの観客が集まった。",
+     "cn": "聚集了大约一千名观众。"
+    },
+    {
+     "jp": "十分ほどの遅れが出た。",
+     "cn": "出现了十分钟左右的延迟。"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "",
+   "quizzes": []
+  },
+  {
+   "id": "hodo-hinshi",
+   "group": "bumpo",
+   "level": "N3",
+   "emoji": "🧭",
+   "word": "ほど＝副助詞",
+   "read": "ほど",
+   "mod": "品詞・接続",
+   "connect": "体言・活用語の連体形＋ほど",
+   "meaning": "「ほど」是副助词（不是形式名词，也不是副词）",
+   "engine": "学校文法（橋本進吉体系）では「ほど」は副助詞。体言や連体形に付き、程度・概数・比較の意味を添えて、全体を連用修飾語にする。漢語「程」は名詞（程度・限度）としても使う。",
+   "examples": [
+    {
+     "jp": "この時ほど悔しいことはない。",
+     "cn": "没有比这时候更不甘心的了。"
+    },
+    {
+     "jp": "この時ほどの悔しさはない。",
+     "cn": "没有比这时候更大的不甘。"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "「ほど」は名詞ではなく副助詞なので、形式名詞（こと・もの）とは別カテゴリ。「〜ほどの」の「の」は格助詞で、連体修飾を作る。",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "学校文法で「ほど」の品詞は？",
+     "opts": [
+      "副助詞",
+      "形式名詞",
+      "程度副詞",
+      "格助詞"
+     ],
+     "ans": 0,
+     "exp": "「ほど」は副助詞。体言・連体形に付いて程度・概数・比較を添える。"
+    },
+    {
+     "type": "choice",
+     "q": "「ほど」が付くのは次のどれ？",
+     "opts": [
+      "体言や活用語の連体形",
+      "終止形だけ",
+      "未然形だけ",
+      "命令形だけ"
+     ],
+     "ans": 0,
+     "exp": "「三日ほど」（体言）「読むほど」（連体形）のように付く。"
+    }
+   ]
+  },
+  {
+   "id": "hodo-kurai",
+   "group": "bumpo",
+   "level": "N3",
+   "emoji": "⚖️",
+   "word": "〜ほど ⇄ 〜くらい",
+   "read": "ほど・くらい",
+   "mod": "対比",
+   "connect": "どちらも副助詞",
+   "meaning": "ほど（书面・强调）⇄ くらい（口语・最低限度）",
+   "engine": "程度・概数の両方で言い換え可能。ほどは程度の強調と書き言葉、くらいは口語的で「少なくとも」のニュアンスも持つ。「〜ほど…ない ⇄ 〜くらい…ない」もほぼ互換。",
+   "examples": [
+    {
+     "jp": "10日ほどかかる。",
+     "cn": "需要十天左右。（书面语）"
+    },
+    {
+     "jp": "三日ぐらい経った。",
+     "cn": "过了三天左右。（口语）"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "あれから 3日(みっか)ぐらい経(た)ったけど",
+     "en": "It's been about three days. -Yeah.",
+     "media": "Terrace House: Tokyo 2019-2020",
+     "ep": "EP24",
+     "at": "39:34",
+     "url": "https://nadeshiko.co/en/sentence/UYxwXlTfVSPl",
+     "audio": "https://cdn.nadeshiko.co/media/mv/88850/24/8eaf396827.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/88850/24/8eaf396827.webp",
+     "cn": "那之后大概过了三天。"
+    },
+    {
+     "jp": "あれから3日(みっか)... くらいかな",
+     "en": "About three days since you got stabbed, I think?",
+     "media": "Chainsaw Man",
+     "ep": "EP7",
+     "at": "8:49",
+     "url": "https://nadeshiko.co/en/sentence/tsp90W1fFaLC",
+     "audio": "https://cdn.nadeshiko.co/media/127230/7/e846a7430a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/127230/7/e846a7430a.webp",
+     "cn": "那之后……大概三天吧。"
+    }
+   ],
+   "note": "「死ぬほど」＝夸张的程度；「死ぬくらい」意思相近但口语化。考试言い换え多视为可互换，但文体差仍在。",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "口语中把「10日ほど」换个说法，最自然的是？",
+     "opts": [
+      "10日ぐらい",
+      "10日しか",
+      "10日こそ",
+      "10日まで"
+     ],
+     "ans": 0,
+     "exp": "概数のほど ⇄ ぐらい/くらい。口语多用くらい。"
+    }
+   ]
+  },
+  {
+   "id": "hodo-shushoku",
+   "group": "bumpo",
+   "level": "N3",
+   "emoji": "🔀",
+   "word": "〜ほど／〜ほどの 切替",
+   "read": "ほど・ほどの",
+   "mod": "両用（後続で決まる）",
+   "connect": "＋用言 → 連用修飾／＋の＋体言 → 連体修飾",
+   "meaning": "后接用言则连用修饰，后接体言则连体修饰",
+   "engine": "副助詞「ほど」は後続語の品詞で作る修飾語が切り替わる：「このときほど強く」→連用修飾語（「強く」を修飾）／「このときほどの衝撃」→連体修飾語（「衝撃」を修飾）。",
+   "examples": [
+    {
+     "jp": "彼ほどよく働く人はいない。",
+     "cn": "没有比他更勤劳的人。（ほど＋用言）"
+    },
+    {
+     "jp": "彼ほどの働き手はいない。",
+     "cn": "没有像他那样的好劳力。（ほどの＋体言）"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "同じ内容でも、後続が用言か体言かで「ほど／ほどの」が決まり、作る修飾語も連用／連体に切り替わる。",
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「このときほど強く感じた」の「このときほど」の文法的働きは？",
+     "opts": [
+      "連用修飾語（「強く」を修飾）",
+      "連体修飾語（名詞を修飾）",
+      "主語",
+      "述語"
+     ],
+     "ans": 0,
+     "exp": "後ろが用言「強く」なので連用修飾語。「このときほどの衝撃」なら連体修飾語。"
+    }
+   ]
+  }
+ ]
+}

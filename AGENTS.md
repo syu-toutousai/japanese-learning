@@ -31,6 +31,7 @@
 | `kakure-kanji-courseware/` | 隠れ漢字ポケット・假名背后的本源汉字（7 分类 45 词） | `kakure-kanji.json` |
 | `renyo-courseware/` | 連用形の化身・動詞が接尾語になるとき（源動詞→連用形→接尾語化，5 分类 22 词） | `renyo.json` |
 | `zuru-courseware/` | ずる⇄じるの系譜・漢語動詞の二つの着こなし（する→連濁ずる→上一段じる，4 分类 48 语＋活用対照 Tab） | `zuru.json` |
+| `hodo-courseware/` | ほど の構図・副助詞がつくる連用・連体（程度/最高級/連体/比例/限度/概数/品詞，7 分类 20 句式） | `hodo.json` |
 | `hentaigana-courseware/` | 変体仮名店招帖・老铺招牌解谜（图文解说型：7 块招牌＋23 字母卡＋时间线＋豆知识，图片为实拍照片＋Unicode 変体仮名字形，出典见其 README；无 Nadeshiko） | `hentaigana.json` |
 | `meta-guide/` | 日本語の二重構造・メタ認知ガイド（源流六分类＋判定四问＋挿入テスト＋身体語彙の和漢二層＋時間とアスペクト＋相の統一モデル＋視点と主観性，非课件・无构建） | 手写 HTML |
 
@@ -38,7 +39,8 @@
 Nadeshiko 原声 → 题库 → 单文件 HTML** 的完整管道；`mienai`/`kurikaeshi`/`yakaraka`/
 `hasami`/`karada`/`kakure-kanji`/`renyo` 等口袋型课件沿用同一管道，但比 `ni` 少一层 Tab、
 build.py 更轻（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），新口袋课件可直接抄它们。
-`zuru-courseware/` 在此基础上加了第四页签「⚖️ 対照」（活用対照表・語感・する固守組）。
+`zuru-courseware/` 在此基础上加了第四页签「⚖️ 対照」（活用対照表・語感・する固守組）＋第五页签「📊 頻度」（BCCWJ＋wordfreq 三源频度标注）。
+`hodo-courseware/` 走 ni 式「一个助词做全体系」路线，四页签（体系/詳細/品詞・対照/クイズ），核心是「後続語の品詞で連用/連体修飾が切り替わる」。
 
 ---
 
