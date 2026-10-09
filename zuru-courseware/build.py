@@ -599,6 +599,21 @@ box-shadow:0 1px 6px rgba(30,40,90,.08);transition:.15s}
 .mini .nm{font-weight:800;font-size:15.5px;margin:4px 0 2px}
 .mini .im{font-size:11.5px;color:var(--sub);line-height:1.55}
 .mini .kn{font-size:11.5px;color:#6d28d9;font-weight:700;margin-bottom:2px}
+.mini .tier{margin-left:4px}
+/* frequency */
+.tier{display:inline-block;min-width:16px;border-radius:7px;padding:1px 5px;font-size:10.5px;
+font-weight:800;color:#fff;text-align:center;vertical-align:1px}
+.t-S{background:#dc2626}.t-A{background:#e8590c}.t-B{background:#b8860b}
+.t-C{background:#0b7285}.t-D{background:#6b7280}
+.freqbox{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:10px 13px;
+margin:10px 0;font-size:13px;line-height:1.8}
+.freqbox .flab{font-weight:800;color:#334155}
+.freqrow{display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;margin-top:5px}
+.freqrow b{min-width:96px}
+.stars{letter-spacing:1px;color:#f59e0b;font-size:13px}
+.stars .dim{color:#cbd5e1}
+.fr-rank{font-weight:800;color:#5b21b6;min-width:30px;display:inline-block}
+.legend{font-size:12.5px;line-height:1.9;color:var(--sub)}
 /* detail cards */
 .noun{scroll-margin-top:70px;border-left:5px solid var(--g,#6d28d9)}
 .noun h2{font-size:19px}
@@ -736,6 +751,11 @@ function nadeHTML(sc,iid,idx){
     </div></div>`;
 }
 /* 活用対照 mini table */
+function stars(n){
+  if(n===null||n===undefined||n<=0)return '<span class="dim">—</span>';
+  n=Math.round(n);
+  return '★'.repeat(n)+`<span class="dim">${'☆'.repeat(Math.max(0,5-n))}</span>`;
+}
 function conjTable(n){
   const z=n.zuru.slice(0,-2), j=n.jiru.slice(0,-2);
   return `<table class="conj">
@@ -749,7 +769,7 @@ function conjTable(n){
 }
 
 /* ---------- tabs ---------- */
-const TABS=[["list","🗺️ 分類"],["detail","📖 詳細"],["contrast","⚖️ 対照"],["quiz","🎯 クイズ"]];
+const TABS=[["list","🗺️ 分類"],["detail","📖 詳細"],["contrast","⚖️ 対照"],["freq","📊 頻度"],["quiz","🎯 クイズ"]];
 let tab="list";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -772,7 +792,8 @@ function renderList(){
     <div><b>STEP 3 上一段化で「じる」</b><br>論じる・信じるに。規則的な上一段活用として現代口語の主役に。</div>
   </div>
   <p style="margin-top:10px;font-size:12.5px;color:var(--sub)">※「愛する・発する・達する」のように「する」のままの語も多い——
-  「ずる組」は歴史的に固定された語彙の集合で、撥音・長音はあくまで相性の良い条件です。</p>
+  「ずる組」は歴史的に固定された語彙の集合で、撥音・長音はあくまで相性の良い条件です。<br>
+  ※カードの <b>S〜D</b> バッジは現代日本語での使用頻度（📊 頻度タブに三源データと総合ランキング）。</p>
   </div>`;
   h+=GROUPS.map(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
@@ -782,7 +803,7 @@ function renderList(){
     <div class="mini-wrap">${members.map(n=>`
       <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
         <div class="em">${n.emoji||"📌"}</div>
-        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
+        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small>${n.tier?`<span class="tier t-${n.tier}">${n.tier}</span>`:""}</div>
         <div class="kn">${n.base}</div>
         <div class="im">${shortMean(n.meaning)}</div></button>`).join("")}</div></div>`;
   }).join("");
@@ -806,6 +827,15 @@ function renderDetail(){
           ${AUDIO[iid+'-j']?`<button class="btn mini-btn" title="じる形" onclick="play('${iid}-j',this)">▶</button><code>じる形</code>`:""}
         </div>
         <div class="meanbox">📌 <b>意思</b>　${n.meaning}</div>
+        ${n.fz?`<div class="freqbox">📊 <span class="flab">現代頻度</span>
+          <span class="tier t-${n.tier}">${n.tier}</span>　${n.freqNote}
+          <div class="freqrow"><b>ずる形 ${n.zuru}</b>
+            <span>📖書き ${stars(n.fz.w)}</span><span>🗣話し ${stars(n.fz.s)}</span>
+            <span>総合 <b style="color:#6d28d9">${n.fz.o.toFixed(1)}</b>★</span></div>
+          <div class="freqrow"><b>じる形 ${n.jiru}</b>
+            <span>📖書き ${stars(n.fj.w)}</span><span>🗣話し ${stars(n.fj.s)}</span>
+            <span>総合 <b style="color:#6d28d9">${n.fj.o.toFixed(1)}</b>★</span></div>
+        </div>`:""}
         <div class="origin">🌀 <b>系譜</b>　${n.chain}</div>
         ${conjTable(n)}
         <h3 class="sec">📝 例句</h3>
@@ -882,6 +912,37 @@ function renderContrast(){
       ・<b>高ずる／高じる</b>には同系の<b>昂ずる／昂じる</b>（感情が昂じる）がある。<br>
       ・同じ「じる」でも<b>準じる・殉じる・順じる</b>は字も意味も別の語。</div>
     </div>`;
+}
+
+/* ---------- frequency ---------- */
+function renderFreq(){
+  const sorted=ITEMS.slice().sort((a,b)=>b.freq-a.freq);
+  let h=`<div class="card intro"><h2>📊 現代日本語での使用頻度</h2>
+  <p>ずる形・じる形それぞれの頻度を三つのデータ源から推定し、S〜D の段階に分けました
+  （<b>S＝最頻出</b>、D＝古雅・まれ）。下のリストはペアの総合スコア順です。</p>
+  <div class="legend">
+    ・<b>📖 書き言葉</b>＝BCCWJ 長単位語彙表（出版書籍・図書館書籍・新聞・雑誌・法律・Yahoo!知恵袋/ブログ等、
+      約8,170万語の均衡書き言葉コーパス）の pmw を★5段階に換算<br>
+    ・<b>🗣 話し言葉</b>＝wordfreq（OpenSubtitles 字幕＋Wikipedia 百科ベース）の zipf を★5段階に換算<br>
+    ・<b>総合</b>＝話し6：書き4 の合成（BCCWJ 未収録は話し×0.85）／リスト順位＝max＋0.35×min<br>
+    ・Nadeshiko 台詞命中数と JLPT 語彙タグで手動補正（存じる・免じる・動じる・混じる 等）<br>
+    ※「—」はそのデータ源に記録がない（＝ごく少ない）ことを表す。
+  </div></div>`;
+  h+=sorted.map((n,i)=>`
+   <div class="card" style="padding:13px 16px;cursor:pointer" onclick="goDetail('${n.id}')">
+     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+       <span class="fr-rank">#${i+1}</span>
+       <span class="tier t-${n.tier}">${n.tier}</span>
+       <b style="font-size:15.5px">${n.word}</b>
+       <span class="hint">${shortMean(n.meaning)}</span>
+       <span style="margin-left:auto;font-size:12px;color:var(--sub)">総合 <b style="color:#6d28d9">${n.freq.toFixed(1)}</b></span>
+     </div>
+     <div class="freqrow" style="margin-top:6px">
+       <span style="min-width:190px">ずる形　📖 ${stars(n.fz.w)}　🗣 ${stars(n.fz.s)}</span>
+       <span>じる形　📖 ${stars(n.fj.w)}　🗣 ${stars(n.fj.s)}</span>
+     </div>
+   </div>`).join("");
+  $("#main").innerHTML=h;
 }
 
 /* ---------- quiz ---------- */
@@ -988,6 +1049,7 @@ function render(){
   if(tab==="list")renderList();
   else if(tab==="detail")renderDetail();
   else if(tab==="contrast")renderContrast();
+  else if(tab==="freq")renderFreq();
   else renderQuizTab();
 }
 renderNav();render();
