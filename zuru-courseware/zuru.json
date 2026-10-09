@@ -1,0 +1,2377 @@
+{
+ "meta": {
+  "title": "ずる⇄じるの系譜",
+  "titleCn": "ずる・じる二重動詞系譜",
+  "jp": "ずる と じる ／ 漢語動詞の二つの着こなし",
+  "tags": [
+   "N1",
+   "N2",
+   "N3",
+   "動詞",
+   "サ行変格活用",
+   "上一段活用",
+   "連濁",
+   "文法史",
+   "書き言葉",
+   "話し言葉"
+  ],
+  "voiceFemale": "ja-JP-NanamiNeural",
+  "note": "往 items 里丢一条「漢語＋する → ずる → じる」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。"
+ },
+ "groups": [
+  {
+   "id": "hatsuon",
+   "name": "撥音「ん」連濁系",
+   "color": "#e8590c",
+   "emoji": "🔊",
+   "note": "語幹の末尾が撥音（ん）。「ん＋す」のすが濁って「ず」になる、ずる組の主戦場。"
+  },
+  {
+   "id": "chouon",
+   "name": "長音「う」系",
+   "color": "#1971c2",
+   "emoji": "🌀",
+   "note": "語幹の末尾が長音（う）。母音に続く「す」も濁音化して「ず」になる。"
+  },
+  {
+   "id": "diph",
+   "name": "二重母音「い」系",
+   "color": "#0b7285",
+   "emoji": "🎐",
+   "note": "語幹の末尾が「い」。命ずる・詠ずる・映ずる の少数精鋭。"
+  },
+  {
+   "id": "wago",
+   "name": "和語＋ん＋ずる",
+   "color": "#9c36b5",
+   "emoji": "🌿",
+   "note": "形容詞・和語に撥音「ん」を挿入して作る型——重んずる・軽んずる・甘んずる。"
+  }
+ ],
+ "items": [
+  {
+   "id": "ron",
+   "group": "hatsuon",
+   "level": "N2",
+   "emoji": "🗣️",
+   "word": "論ずる／論じる",
+   "zuru": "論ずる",
+   "jiru": "論じる",
+   "readZuru": "ろんずる",
+   "readJiru": "ろんじる",
+   "base": "論（ろん）",
+   "meaning": "论述；讨论；互相争论",
+   "chain": "論（ろん）＋する → 撥音「ん」に引かれてスが連濁 → 論ずる（サ行変格）→ 上一段化 → 論じる",
+   "register": "両形現役／ずるは書面・演説調",
+   "note": "『論ずる』は論文・评论的格调；『論じる』在会话里也能用。",
+   "examples": [
+    {
+     "jp": "事の是非を論じる。",
+     "cn": "争论事情的是非。",
+     "src": "moji",
+     "audio": "audio/ron-e0.mp3"
+    },
+    {
+     "jp": "現実を無視して論じるのは無意味だ。",
+     "cn": "无视现实争论是没有意义的。",
+     "src": "moji",
+     "audio": "audio/ron-e1.mp3"
+    },
+    {
+     "jp": "その計画の是非は、後の会議で論じられた。",
+     "cn": "那个计划的利弊在之后的会议上被讨论了。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "カオスの前(まえ)の空白(くうはく)をこそ論(ろん)じるべきなのだ",
+     "en": "we should rather be discussing the vacuum that forms before the chaos.",
+     "media": "Koyomimonogatari",
+     "ep": "EP5",
+     "at": "8:38",
+     "url": "https://nadeshiko.co/en/sentence/sbYFlav-76v1",
+     "audio": "https://cdn.nadeshiko.co/media/21520/5/06eed04852.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21520/5/06eed04852.webp",
+     "cn": "正该讨论的，是混沌之前的那片空白。"
+    },
+    {
+     "jp": "一度(いちど)は論(ろん)じられたものの　結局(けっきょく) ペンディングになっていた 旅行(りょこう)問題(もんだい)",
+     "en": "The topic of a trip was discussed once but ended up getting put off.",
+     "media": "Kaguya-sama: Love is War",
+     "ep": "EP10",
+     "at": "16:14",
+     "url": "https://nadeshiko.co/en/sentence/slExtGMWkH7-",
+     "audio": "https://cdn.nadeshiko.co/media/101921/10/0835ee3675.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101921/10/0835ee3675.webp",
+     "cn": "旅行的事虽然讨论过一次，最后却还是搁置了。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/ron-j.mp3"
+  },
+  {
+   "id": "shin",
+   "group": "hatsuon",
+   "level": "N3",
+   "emoji": "🙏",
+   "word": "信ずる／信じる",
+   "zuru": "信ずる",
+   "jiru": "信じる",
+   "readZuru": "しんずる",
+   "readJiru": "しんじる",
+   "base": "信（しん）",
+   "meaning": "相信；信赖；信仰",
+   "chain": "信（しん）＋する → ん＋すの連濁 → 信ずる → 上一段化 → 信じる",
+   "register": "じる＝日常の主役／ずる＝格言・演説",
+   "note": "格言『信ずる者は救われる』のように、ずる形は今も演説・引用で現役。",
+   "examples": [
+    {
+     "jp": "新興宗教を信じる。",
+     "cn": "信仰新兴宗教。",
+     "src": "moji",
+     "audio": "audio/shin-e0.mp3"
+    },
+    {
+     "jp": "信じる信じないは君の勝手だ。",
+     "cn": "信不信由你。",
+     "src": "moji",
+     "audio": "audio/shin-e1.mp3"
+    },
+    {
+     "jp": "どんなに苦しくても、自分を信じて進もう。",
+     "cn": "无论多么艰难，都要相信自己走下去。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "貴殿(きでん)の話(はなし) 信(しん)ずるに足(た)る証(あか)しはあるか?",
+     "en": "What reliable proof do you have to support your claim?",
+     "media": "Vinland Saga",
+     "ep": "EP13",
+     "at": "14:55",
+     "url": "https://nadeshiko.co/en/sentence/umYyq39mws6j",
+     "audio": "https://cdn.nadeshiko.co/media/101348/13/89dd990eb8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101348/13/89dd990eb8.webp",
+     "cn": "你说的话，可有足以采信的证据？"
+    },
+    {
+     "jp": "それは 己(おの)が信(しん)ずるに足(た)るものを　まだ知(し)らないだけだろう。",
+     "en": "That is likely because you have yet to discover what is worth believing in.",
+     "media": "Fate/strange Fake",
+     "ep": "EP8",
+     "at": "8:33",
+     "url": "https://nadeshiko.co/en/sentence/zULVpuwJHt8h",
+     "audio": "https://cdn.nadeshiko.co/media/166617/8/36e71fbb25.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/166617/8/36e71fbb25.webp",
+     "cn": "那大概只是你还没找到值得自己相信的东西吧。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/shin-j.mp3"
+  },
+  {
+   "id": "kan",
+   "group": "hatsuon",
+   "level": "N3",
+   "emoji": "💗",
+   "word": "感ずる／感じる",
+   "zuru": "感ずる",
+   "jiru": "感じる",
+   "readZuru": "かんずる",
+   "readJiru": "かんじる",
+   "base": "感（かん）",
+   "meaning": "感觉；感到；觉得",
+   "chain": "感（かん）＋する → ん＋すの連濁 → 感ずる → 上一段化 → 感じる",
+   "register": "日常はほぼ「じる」一択",
+   "note": "『感ずる』は書き言葉・詩的表現に残るが、日常は『感じる』が圧倒的。",
+   "examples": [
+    {
+     "jp": "痛みを感じる。",
+     "cn": "感到疼。",
+     "src": "moji",
+     "audio": "audio/kan-e0.mp3"
+    },
+    {
+     "jp": "自分の無知をこのときほど強く感じたことはない。",
+     "cn": "没有比这时候再强烈地感到自己的无知。",
+     "src": "moji",
+     "audio": "audio/kan-e1.mp3"
+    },
+    {
+     "jp": "この部屋は前より広く感じる。",
+     "cn": "这个房间感觉比以前宽敞。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "どこにいても感(かん)じるものは感(かん)じるさ",
+     "en": "He'll feel it no matter where I am.",
+     "media": "Run with the Wind",
+     "ep": "EP14",
+     "at": "18:15",
+     "url": "https://nadeshiko.co/en/sentence/w4Omev1F-8zz",
+     "audio": "https://cdn.nadeshiko.co/media/101903/14/29348cc9ac.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101903/14/29348cc9ac.webp",
+     "cn": "无论在哪里，能感觉到的东西就是能感觉到。"
+    },
+    {
+     "jp": "同(おな)じように感(かん)ずるなど 虫(むし)ずが走(はし)る",
+     "en": "and feeling the same way is revolting!",
+     "media": "Re:ZERO -Starting Life in Another World- Season 3",
+     "ep": "EP11",
+     "at": "17:56",
+     "url": "https://nadeshiko.co/en/sentence/SYBVRMxAFS8A",
+     "audio": "https://cdn.nadeshiko.co/media/163134/11/e7cd537ab4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/163134/11/e7cd537ab4.webp",
+     "cn": "竟然说感同身受，真让人毛骨悚然。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/kan-j.mp3"
+  },
+  {
+   "id": "en",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🎭",
+   "word": "演ずる／演じる",
+   "zuru": "演ずる",
+   "jiru": "演じる",
+   "readZuru": "えんずる",
+   "readJiru": "えんじる",
+   "base": "演（えん）",
+   "meaning": "表演，扮演；发挥（作用）",
+   "chain": "演（えん）＋する → ん＋すの連濁 → 演ずる → 上一段化 → 演じる",
+   "register": "じる＝日常／ずる＝舞台調",
+   "note": "『役割を演じる』は比喩でも常用。ずる形は芝居がかった調子。",
+   "examples": [
+    {
+     "jp": "劇で主役を演じる。",
+     "cn": "在剧中扮演主角。",
+     "src": "moji",
+     "audio": "audio/en-e0.mp3"
+    },
+    {
+     "jp": "外交の場で重大な役割を演じた。",
+     "cn": "在外交场合承担重要职责。",
+     "src": "moji",
+     "audio": "audio/en-e1.mp3"
+    },
+    {
+     "jp": "彼は生涯、一教師としての役割を演じ続けた。",
+     "cn": "他一生都在扮演一名教师的角色。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "演(えん)じることは ウソに含(ふく)まれる?",
+     "en": "Does acting count as lying?",
+     "media": "【OSHI NO KO】Season 3",
+     "ep": "EP10",
+     "at": "2:03",
+     "url": "https://nadeshiko.co/en/sentence/v9TDiRDaCFSM",
+     "audio": "https://cdn.nadeshiko.co/media/182587/10/9ddf7a304d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/182587/10/9ddf7a304d.webp",
+     "cn": "所谓表演，也算谎言的一部分吗？"
+    },
+    {
+     "jp": "しぶしぶ 悪人(あくにん)を演(えん)じてるっていうの?",
+     "en": "Are you saying you're reluctantly playing the villain role?",
+     "media": "Lycoris Recoil",
+     "ep": "EP13",
+     "at": "5:51",
+     "url": "https://nadeshiko.co/en/sentence/oy_ifiSrCLFE",
+     "audio": "https://cdn.nadeshiko.co/media/143270/13/8ed71c83e3.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143270/13/8ed71c83e3.webp",
+     "cn": "你说你是勉为其难地在演恶人？"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/en-j.mp3"
+  },
+  {
+   "id": "an",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "😟",
+   "word": "案ずる／案じる",
+   "zuru": "案ずる",
+   "jiru": "案じる",
+   "readZuru": "あんずる",
+   "readJiru": "あんじる",
+   "base": "案（あん）",
+   "meaning": "担心，挂念；思索，想（计策）",
+   "chain": "案（あん）＋する → ん＋すの連濁 → 案ずる → 上一段化 → 案じる",
+   "register": "じるが普通／ずるは古風",
+   "note": "N1 語彙。『案じる』が標準で、『案ずる』は文語調。",
+   "examples": [
+    {
+     "jp": "妻のからだを案じる。",
+     "cn": "挂念妻子的身体。",
+     "src": "moji",
+     "audio": "audio/an-e0.mp3"
+    },
+    {
+     "jp": "一計を案じる。",
+     "cn": "心生一计。",
+     "src": "moji",
+     "audio": "audio/an-e1.mp3"
+    },
+    {
+     "jp": "親は遠くに住む子の身を案じるものだ。",
+     "cn": "父母总是挂念远方的孩子。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "アッハハハハ ま 案(あん)ずるな",
+     "en": "Well, don't worry about it.",
+     "media": "March comes in like a lion",
+     "ep": "EP8",
+     "at": "6:15",
+     "url": "https://nadeshiko.co/en/sentence/PLseX6iFo2Oq",
+     "audio": "https://cdn.nadeshiko.co/media/21366/8/045d895206.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21366/8/045d895206.webp",
+     "cn": "好了，别担心。"
+    },
+    {
+     "jp": "グラトニーのことは案(あん)ずるな",
+     "en": "Don't worry about Gluttony.",
+     "media": "Fullmetal Alchemist: Brotherhood",
+     "ep": "EP48",
+     "at": "4:45",
+     "url": "https://nadeshiko.co/en/sentence/ZofEyUIn6piV",
+     "audio": "https://cdn.nadeshiko.co/media/5114/48/def460f42d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/5114/48/def460f42d.webp",
+     "cn": "格拉特尼的事你不用担心。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/an-j.mp3"
+  },
+  {
+   "id": "an_press",
+   "group": "hatsuon",
+   "level": "古雅",
+   "emoji": "🖋️",
+   "word": "按ずる／按じる",
+   "zuru": "按ずる",
+   "jiru": "按じる",
+   "readZuru": "あんずる",
+   "readJiru": "あんじる",
+   "base": "按（あん）",
+   "meaning": "推量，揣度；思量（对方的内心）",
+   "chain": "按（あん）＋する → ん＋すの連濁 → 按ずる → 上一段化 → 按じる",
+   "register": "古雅・文章語",
+   "note": "",
+   "examples": [
+    {
+     "jp": "胸の内を按ずるに、結果はおのずと明らかだ。",
+     "cn": "揣度他的内心，结果自然明了。"
+    },
+    {
+     "jp": "古の人は相手の真意を按じながら言葉を選んだ。",
+     "cn": "古人一边揣度对方真意，一边斟酌措辞。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/an_press-j.mp3"
+  },
+  {
+   "id": "kin",
+   "group": "hatsuon",
+   "level": "N2",
+   "emoji": "⛔",
+   "word": "禁ずる／禁じる",
+   "zuru": "禁ずる",
+   "jiru": "禁じる",
+   "readZuru": "きんずる",
+   "readJiru": "きんじる",
+   "base": "禁（きん）",
+   "meaning": "禁止；抑制（感情）",
+   "chain": "禁（きん）＋する → ん＋すの連濁 → 禁ずる → 上一段化 → 禁じる",
+   "register": "両形現役／ずるは掲示・演説調",
+   "note": "『禁じ得ない』は惯用。命令『禁ずる』は掲示・宣言调。",
+   "examples": [
+    {
+     "jp": "喫煙を禁じる。",
+     "cn": "禁止吸烟。",
+     "src": "moji",
+     "audio": "audio/kin-e0.mp3"
+    },
+    {
+     "jp": "ここで写真を撮ることを禁じる。",
+     "cn": "禁止在此拍照。"
+    },
+    {
+     "jp": "その光景に笑いを禁じ得なかった。",
+     "cn": "那情景让人忍俊不禁。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "私語(しご)は禁(きん)ずる!　ロール・ザ・ヴァイス!",
+     "en": "No talking! Now, roll the vice!",
+     "media": "WITCH WATCH",
+     "ep": "EP17",
+     "at": "5:23",
+     "url": "https://nadeshiko.co/en/sentence/F-SzbA8p6xDs",
+     "audio": "https://cdn.nadeshiko.co/media/180367/17/1d1cf2a310.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/180367/17/1d1cf2a310.webp",
+     "cn": "禁止交头接耳！"
+    },
+    {
+     "jp": "今日(きょう)1日(ついたち)の外出(がいしゅつ)を禁(きん)ずる",
+     "en": "You are forbidden from leaving the estate at all today.",
+     "media": "Urusei Yatsura (2022)",
+     "ep": "EP14",
+     "at": "11:32",
+     "url": "https://nadeshiko.co/en/sentence/QkU9go-qosf_",
+     "audio": "https://cdn.nadeshiko.co/media/143277/14/a37a291068.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143277/14/a37a291068.webp",
+     "cn": "今天一整天禁止外出。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/kin-j.mp3"
+  },
+  {
+   "id": "jun",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "📏",
+   "word": "準ずる／準じる",
+   "zuru": "準ずる",
+   "jiru": "準じる",
+   "readZuru": "じゅんずる",
+   "readJiru": "じゅんじる",
+   "base": "準（じゅん）",
+   "meaning": "按照，依照；比照（同等处理）",
+   "chain": "準（じゅん）＋する → ん＋すの連濁 → 準ずる → 上一段化 → 準じる",
+   "register": "商务・法务文书常用",
+   "note": "『〜に準じる／準ずる』＝按照…、比照…。ビジネス文書の定番。",
+   "examples": [
+    {
+     "jp": "先例に準じる。",
+     "cn": "依照先例。",
+     "src": "moji",
+     "audio": "audio/jun-e0.mp3"
+    },
+    {
+     "jp": "給与は社員に準じる。",
+     "cn": "给予与公司职员相同的工资。",
+     "src": "moji",
+     "audio": "audio/jun-e1.mp3"
+    },
+    {
+     "jp": "規則に準じて処理する。",
+     "cn": "依照规则处理。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "それに準(じゅん)ずるものなら作(つく)れます",
+     "en": "I could make something like that.",
+     "media": "The Apothecary Diaries",
+     "ep": "EP2",
+     "at": "13:45",
+     "url": "https://nadeshiko.co/en/sentence/JMaNJIvvoM5A",
+     "audio": "https://cdn.nadeshiko.co/media/161645/2/c4cde2677a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/161645/2/c4cde2677a.webp",
+     "cn": "与之相准的东西，我做得出来。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/jun-j.mp3"
+  },
+  {
+   "id": "jun_order",
+   "group": "hatsuon",
+   "level": "古雅",
+   "emoji": "🧎",
+   "word": "順ずる／順じる",
+   "zuru": "順ずる",
+   "jiru": "順じる",
+   "readZuru": "じゅんずる",
+   "readJiru": "じゅんじる",
+   "base": "順（じゅん）",
+   "meaning": "顺从，遵从（古语）",
+   "chain": "順（じゅん）＋する → ん＋すの連濁 → 順ずる → 上一段化 → 順じる",
+   "register": "古語・雅語",
+   "note": "現代語では『従う』が普通。『順じる』は古典・時代小説に残る。",
+   "examples": [
+    {
+     "jp": "万事が夫に順じる。",
+     "cn": "万事顺从丈夫。（《浮世风吕》）"
+    },
+    {
+     "jp": "親の教えに順じて生きる。",
+     "cn": "遵从父母的教诲而活。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/jun_order-j.mp3"
+  },
+  {
+   "id": "jun_sacrifice",
+   "group": "hatsuon",
+   "level": "文章",
+   "emoji": "⚰️",
+   "word": "殉ずる／殉じる",
+   "zuru": "殉ずる",
+   "jiru": "殉じる",
+   "readZuru": "じゅんずる",
+   "readJiru": "じゅんじる",
+   "base": "殉（じゅん）",
+   "meaning": "为…而牺牲；追随（殉死）",
+   "chain": "殉（じゅん）＋する → ん＋すの連濁 → 殉ずる → 上一段化 → 殉じる",
+   "register": "文章・报道・文学语",
+   "note": "『殉じる／殉ずる』は新聞・文学の書き言葉。",
+   "examples": [
+    {
+     "jp": "彼は祖国に殉じた。",
+     "cn": "他为祖国殉身。"
+    },
+    {
+     "jp": "理想に殉ずる覚悟はあるか。",
+     "cn": "你有为理想殉身的觉悟吗？"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/jun_sacrifice-j.mp3"
+  },
+  {
+   "id": "zon",
+   "group": "hatsuon",
+   "level": "N3",
+   "emoji": "🎩",
+   "word": "存ずる／存じる",
+   "zuru": "存ずる",
+   "jiru": "存じる",
+   "readZuru": "ぞんずる",
+   "readJiru": "ぞんじる",
+   "base": "存（ぞん）",
+   "meaning": "「思う・知る」的谦让语：想，认为；知道",
+   "chain": "存（ぞん）＋する → ん＋すの連濁 → 存ずる → 上一段化 → 存じる",
+   "register": "敬语（谦让）／日常用じる",
+   "note": "『存じます』『存じております』の形でビジネス会話にも。ずる形は時代劇調。",
+   "examples": [
+    {
+     "jp": "こちらの方がよいと存じます。",
+     "cn": "我认为还是这个好。",
+     "src": "moji",
+     "audio": "audio/zon-e0.mp3"
+    },
+    {
+     "jp": "よく存じております。",
+     "cn": "我很清楚。",
+     "src": "moji",
+     "audio": "audio/zon-e1.mp3"
+    },
+    {
+     "jp": "その件は私も存じております。",
+     "cn": "那件事我也知道。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "存(ぞん)じません! -あっ!",
+     "en": "I do not know!",
+     "media": "Spice and Wolf: MERCHANT MEETS THE WISE WOLF",
+     "ep": "EP20",
+     "at": "13:51",
+     "url": "https://nadeshiko.co/en/sentence/iwvi3t-0OTGH",
+     "audio": "https://cdn.nadeshiko.co/media/145728/20/131a65f4b4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/145728/20/131a65f4b4.webp",
+     "cn": "我不知道！"
+    },
+    {
+     "jp": "かなわぬことかと存(ぞん)じます",
+     "en": "I expect she won't.",
+     "media": "Jin (Final)",
+     "ep": "EP1",
+     "at": "18:02",
+     "url": "https://nadeshiko.co/en/sentence/j4QbqLR-kc9I",
+     "audio": "https://cdn.nadeshiko.co/media/mv/46198_2/1/e2c241de8e.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/46198_2/1/e2c241de8e.webp",
+     "cn": "我想恐怕是难以如愿了。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/zon-j.mp3"
+  },
+  {
+   "id": "dan",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "⚖️",
+   "word": "断ずる／断じる",
+   "zuru": "断ずる",
+   "jiru": "断じる",
+   "readZuru": "だんずる",
+   "readJiru": "だんじる",
+   "base": "断（だん）",
+   "meaning": "断定，判断；判决",
+   "chain": "断（だん）＋する → ん＋すの連濁 → 断ずる → 上一段化 → 断じる",
+   "register": "両形現役／ずるは硬い",
+   "note": "副詞『断じて』（断じて許さない）もこの動詞から。",
+   "examples": [
+    {
+     "jp": "罪を断じるに私見を交えず。",
+     "cn": "不带个人意见地判决罪行。",
+     "src": "moji",
+     "audio": "audio/dan-e0.mp3"
+    },
+    {
+     "jp": "偽物と断じる。",
+     "cn": "判断为赝品。",
+     "src": "moji",
+     "audio": "audio/dan-e1.mp3"
+    },
+    {
+     "jp": "彼はそれを偽物と断じた。",
+     "cn": "他断定那是假货。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "断(だん)じて そんなことは!",
+     "en": "Nothing in the least!",
+     "media": "Grand Blue Dreaming Season 2",
+     "ep": "EP10",
+     "at": "14:45",
+     "url": "https://nadeshiko.co/en/sentence/b75JRLmym1EI",
+     "audio": "https://cdn.nadeshiko.co/media/182309/10/2b7848338a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/182309/10/2b7848338a.webp",
+     "cn": "绝对没有那种事！"
+    },
+    {
+     "jp": "直接(ちょくせつ) お会(あ)いしたことがないので　確実(かくじつ)に断(だん)ずることはできませんが",
+     "en": "I've never actually met her before so I can't be sure,",
+     "media": "Bakemonogatari",
+     "ep": "EP13",
+     "at": "3:32",
+     "url": "https://nadeshiko.co/en/sentence/LSNgrPM7M3UF",
+     "audio": "https://cdn.nadeshiko.co/media/5081/13/2156cd27f0.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/5081/13/2156cd27f0.webp",
+     "cn": "虽然无法确凿地断定……"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/dan-j.mp3"
+  },
+  {
+   "id": "nin",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🏛️",
+   "word": "任ずる／任じる",
+   "zuru": "任ずる",
+   "jiru": "任じる",
+   "readZuru": "にんずる",
+   "readJiru": "にんじる",
+   "base": "任（にん）",
+   "meaning": "任命；担当（重任）",
+   "chain": "任（にん）＋する → ん＋すの連濁 → 任ずる → 上一段化 → 任じる",
+   "register": "文章語・硬い表現",
+   "note": "『任ずる』は『任命する』の文章語。日常会話ではほぼ使わない。",
+   "examples": [
+    {
+     "jp": "新しい部長に彼を任じた。",
+     "cn": "任命他为新部长。"
+    },
+    {
+     "jp": "国を任ずる重責を担う。",
+     "cn": "肩负治国重任。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "重荷(おもに)だったでしょうか? 騎士(きし)に任(にん)じたこと",
+     "en": "Has being a knight become a burden for you?",
+     "media": "Code Geass: Lelouch of the Rebellion",
+     "ep": "EP20",
+     "at": "3:38",
+     "url": "https://nadeshiko.co/en/sentence/epfehnRw-HaG",
+     "audio": "https://cdn.nadeshiko.co/media/1575/20/0652e7220b.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/1575/20/0652e7220b.webp",
+     "cn": "让你当骑士，是不是成了你的重负？"
+    },
+    {
+     "jp": "クヌートには包囲(ほうい)軍(ぐん)の将(しょう)を任(にん)ずる",
+     "en": "Appoint the siege regiment to Canute.",
+     "media": "Vinland Saga",
+     "ep": "EP9",
+     "at": "19:17",
+     "url": "https://nadeshiko.co/en/sentence/8YtzTRTRC4j-",
+     "audio": "https://cdn.nadeshiko.co/media/101348/9/128419936d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101348/9/128419936d.webp",
+     "cn": "任命克努特为包围军之将。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/nin-j.mp3"
+  },
+  {
+   "id": "gen",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "📉",
+   "word": "減ずる／減じる",
+   "zuru": "減ずる",
+   "jiru": "減じる",
+   "readZuru": "げんずる",
+   "readJiru": "げんじる",
+   "base": "減（げん）",
+   "meaning": "减少；减轻；削减",
+   "chain": "減（げん）＋する → ん＋すの連濁 → 減ずる → 上一段化 → 減じる",
+   "register": "書き言葉／日常は「減る・減らす」",
+   "note": "小説・報道の書き言葉。日常は『減る／減らす／削る』。",
+   "examples": [
+    {
+     "jp": "月々の手取りが減じた。",
+     "cn": "每月到手收入减少了。"
+    },
+    {
+     "jp": "無駄な経費を減ずる。",
+     "cn": "削减不必要的经费。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "蓋(ふた)を開(あ)けたそばから 最大(さいだい)の魅力(みりょく)が減(げん)じていく料理(りょうり)を",
+     "en": "Would you serve a dish that loses its most appealing aroma",
+     "media": "Fermat Kitchen",
+     "ep": "EP8",
+     "at": "3:00",
+     "url": "https://nadeshiko.co/en/sentence/MWdnns5IGnzL",
+     "audio": "https://cdn.nadeshiko.co/media/186003/8/6d0b82f672.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/186003/8/6d0b82f672.webp",
+     "cn": "那道一端上来就不断流失最大魅力的菜。"
+    },
+    {
+     "jp": "刑(けい)一等(いっとう)を減(げん)じるとも 命令(めいれい)されている",
+     "en": "if you provide us information on the other fugitives.",
+     "media": "The Irregular at Magic High School: Visitor Arc",
+     "ep": "EP2",
+     "at": "6:34",
+     "url": "https://nadeshiko.co/en/sentence/_8DNBpPecmii",
+     "audio": "https://cdn.nadeshiko.co/media/112300/2/cd58aad91e.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/112300/2/cd58aad91e.webp",
+     "cn": "上面命令说可以减刑一等。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/gen-j.mp3"
+  },
+  {
+   "id": "gen_manifest",
+   "group": "hatsuon",
+   "level": "文章",
+   "emoji": "✨",
+   "word": "現ずる／現じる",
+   "zuru": "現ずる",
+   "jiru": "現じる",
+   "readZuru": "げんずる",
+   "readJiru": "げんじる",
+   "base": "現（げん）",
+   "meaning": "出现，显现（奇迹、姿态等）",
+   "chain": "現（げん）＋する → ん＋すの連濁 → 現ずる → 上一段化 → 現じる",
+   "register": "文章語・雅語",
+   "note": "『現れる』の文章語。奇跡・光明・姿などに使う。",
+   "examples": [
+    {
+     "jp": "苦難の末、ついに光明が現じた。",
+     "cn": "历经苦难，光明终于显现。"
+    },
+    {
+     "jp": "神の力が現ずる。",
+     "cn": "神力显现。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/gen_manifest-j.mp3"
+  },
+  {
+   "id": "ken",
+   "group": "hatsuon",
+   "level": "文章",
+   "emoji": "🎁",
+   "word": "献ずる／献じる",
+   "zuru": "献ずる",
+   "jiru": "献じる",
+   "readZuru": "けんずる",
+   "readJiru": "けんじる",
+   "base": "献（けん）",
+   "meaning": "献上，呈献；奉献",
+   "chain": "献（けん）＋する → ん＋すの連濁 → 献ずる → 上一段化 → 献じる",
+   "register": "文章・祭典・文学语",
+   "note": "『捧げる』の雅語。式典・祝辞などで使う。",
+   "examples": [
+    {
+     "jp": "作品を国家的な祭典に献じた。",
+     "cn": "把作品献给了国家庆典。"
+    },
+    {
+     "jp": "神前に玉串を献ずる。",
+     "cn": "在神前献上玉串。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/ken-j.mp3"
+  },
+  {
+   "id": "son",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "💥",
+   "word": "損ずる／損じる",
+   "zuru": "損ずる",
+   "jiru": "損じる",
+   "readZuru": "そんずる",
+   "readJiru": "そんじる",
+   "base": "損（そん）",
+   "meaning": "损坏；损害；失误（し損じる）",
+   "chain": "損（そん）＋する → ん＋すの連濁 → 損ずる → 上一段化 → 損じる",
+   "register": "复合词「〜し損じる」日常也用",
+   "note": "『し損じる』『書き損じる』『見損じる』の複合語なら日常でも現役。",
+   "examples": [
+    {
+     "jp": "利益を損じる。",
+     "cn": "损失利益。",
+     "src": "moji",
+     "audio": "audio/son-e0.mp3"
+    },
+    {
+     "jp": "大切な書類を損じた。",
+     "cn": "损坏了重要文件。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "中華(ちゅうか)忍法(にんぽう) 極意(ごくい)その1 \\「急(せ)いては事(こと)をし損(そん)じる\\「",
+     "en": "Rule #1 of Mandarin Ninja! Haste makes waste!",
+     "media": "Ranma ½",
+     "ep": "EP50",
+     "at": "8:37",
+     "url": "https://nadeshiko.co/en/sentence/h_gvSJrXPBuj",
+     "audio": "https://cdn.nadeshiko.co/media/210/50/9164c674ac.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/210/50/9164c674ac.webp",
+     "cn": "急则败事（欲速则不达）。"
+    },
+    {
+     "jp": "ちぇっ 仕(し)損(そん)じた",
+     "en": "Foiled!",
+     "media": "Ranma ½",
+     "ep": "EP45",
+     "at": "6:23",
+     "url": "https://nadeshiko.co/en/sentence/42uvJflgWtVO",
+     "audio": "https://cdn.nadeshiko.co/media/210/45/f8b46ef9cd.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/210/45/f8b46ef9cd.webp",
+     "cn": "啧，搞砸了。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/son-j.mp3"
+  },
+  {
+   "id": "nen",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🕯️",
+   "word": "念ずる／念じる",
+   "zuru": "念ずる",
+   "jiru": "念じる",
+   "readZuru": "ねんずる",
+   "readJiru": "ねんじる",
+   "base": "念（ねん）",
+   "meaning": "祈祷；念诵；心中祈愿",
+   "chain": "念（ねん）＋する → ん＋すの連濁 → 念ずる → 上一段化 → 念じる",
+   "register": "じる普通／ずるは文語調",
+   "note": "念仏・祈願の語。『念ずる』は文語調で、小説の地の文に残る。",
+   "examples": [
+    {
+     "jp": "経文を念じる。",
+     "cn": "默诵经文。",
+     "src": "moji",
+     "audio": "audio/nen-e0.mp3"
+    },
+    {
+     "jp": "無事を念じる。",
+     "cn": "祝愿平安。",
+     "src": "moji",
+     "audio": "audio/nen-e1.mp3"
+    },
+    {
+     "jp": "無事を念じて手を合わせた。",
+     "cn": "合掌祈愿平安。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "やれるかどうか念(ねん)じてみる",
+     "en": "I'll try deliberating on her, to see if I can do it.",
+     "media": "Yu Yu Hakusho: Ghostfiles",
+     "ep": "EP24",
+     "at": "18:48",
+     "url": "https://nadeshiko.co/en/sentence/02UmNKpSYuzC",
+     "audio": "https://cdn.nadeshiko.co/media/392/24/35cfa4a678.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/392/24/35cfa4a678.webp",
+     "cn": "我试着祈念一下能不能做到。"
+    },
+    {
+     "jp": "ボケ! 思(おも)いじゃ　念(ねん)ずること 心(こころ)を一(ひと)つにすること　集中力(しゅうちゅうりょく)じゃ",
+     "en": "Bonehead! Your thoughts! Yearning! Making your heart as one! Concentration!",
+     "media": "Yu Yu Hakusho: Ghostfiles",
+     "ep": "EP21",
+     "at": "1:43",
+     "url": "https://nadeshiko.co/en/sentence/FvHplMVc0-FP",
+     "audio": "https://cdn.nadeshiko.co/media/392/21/d4f278828f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/392/21/d4f278828f.webp",
+     "cn": "是意念！是祈念！是心念合一！是集中力！"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/nen-j.mp3"
+  },
+  {
+   "id": "hen",
+   "group": "hatsuon",
+   "level": "文章",
+   "emoji": "🦋",
+   "word": "変ずる／変じる",
+   "zuru": "変ずる",
+   "jiru": "変じる",
+   "readZuru": "へんずる",
+   "readJiru": "へんじる",
+   "base": "変（へん）",
+   "meaning": "变化，改变（姿态、表情等）",
+   "chain": "変（へん）＋する → ん＋すの連濁 → 変ずる → 上一段化 → 変じる",
+   "register": "文章語",
+   "note": "『変わる』の文章語。現代の会話ではまず使わない。",
+   "examples": [
+    {
+     "jp": "悪天候が変じて晴天となった。",
+     "cn": "恶劣天气转晴。"
+    },
+    {
+     "jp": "彼の表情が一瞬で変じた。",
+     "cn": "他的表情一瞬间变了。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "それも全(すべ)ては この姿(すがた)に変(へん)じるためだ",
+     "en": "It was all so that I could take this form.",
+     "media": "DEMON LORD 2099",
+     "ep": "EP7",
+     "at": "12:59",
+     "url": "https://nadeshiko.co/en/sentence/IErwsb4J11Zz",
+     "audio": "https://cdn.nadeshiko.co/media/163135/7/2cb999ec06.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/163135/7/2cb999ec06.webp",
+     "cn": "这一切都是为了变成这副姿态。"
+    },
+    {
+     "jp": "そこな投影(とうえい)像(ぞう)が 変(へん)じただろう",
+     "en": "and then those projections changed.",
+     "media": "DEMON LORD 2099",
+     "ep": "EP1",
+     "at": "12:48",
+     "url": "https://nadeshiko.co/en/sentence/0OGPiluVh_rl",
+     "audio": "https://cdn.nadeshiko.co/media/163135/1/73ccc83f45.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/163135/1/73ccc83f45.webp",
+     "cn": "那些投影应该已经发生了变化。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/hen-j.mp3"
+  },
+  {
+   "id": "ben",
+   "group": "hatsuon",
+   "level": "古雅",
+   "emoji": "📜",
+   "word": "弁ずる／弁じる",
+   "zuru": "弁ずる",
+   "jiru": "弁じる",
+   "readZuru": "べんずる",
+   "readJiru": "べんじる",
+   "base": "弁（べん）",
+   "meaning": "辨别；处理，办理；辩说",
+   "chain": "弁（べん）＋する → ん＋すの連濁 → 弁ずる → 上一段化 → 弁じる",
+   "register": "古雅・文章语",
+   "note": "『万事を弁ずる』＝把一切处理妥当。『弁じる』は円滑的处理与辩说。",
+   "examples": [
+    {
+     "jp": "彼女は万事を弁じる。",
+     "cn": "她处事周全。"
+    },
+    {
+     "jp": "限られた予算をうまく弁じる。",
+     "cn": "巧妙周转有限的预算。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/ben-j.mp3"
+  },
+  {
+   "id": "men",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🕊️",
+   "word": "免ずる／免じる",
+   "zuru": "免ずる",
+   "jiru": "免じる",
+   "readZuru": "めんずる",
+   "readJiru": "めんじる",
+   "base": "免（めん）",
+   "meaning": "免除，免去；（看在…份上）宽恕",
+   "chain": "免（めん）＋する → ん＋すの連濁 → 免ずる → 上一段化 → 免じる",
+   "register": "「〜に免じて」日常也用",
+   "note": "『〜に免じて』＝看在…的份上。这是 closest to 日常的用法。",
+   "examples": [
+    {
+     "jp": "官を免じる。",
+     "cn": "免职。",
+     "src": "moji",
+     "audio": "audio/men-e0.mp3"
+    },
+    {
+     "jp": "いままでの手がらに免じて，こんどの失敗は許してやる。",
+     "cn": "鉴于他过去的功绩，这次失败就饶他一次。",
+     "src": "moji",
+     "audio": "audio/men-e1.mp3"
+    },
+    {
+     "jp": "経験の浅さに免じて、今回は不問に付した。",
+     "cn": "念在经验尚浅，这次不予追究。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "この爽(さわ)やかフェースに免(めん)じてな。",
+     "en": "Out of consideration for this pleasant face.",
+     "media": "Naruto",
+     "ep": "EP22",
+     "at": "17:57",
+     "url": "https://nadeshiko.co/en/sentence/HCIXMo8lgVGD",
+     "audio": "https://cdn.nadeshiko.co/media/20/22/4b62e4c071.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20/22/4b62e4c071.webp",
+     "cn": "看在这张清爽的脸的份上。"
+    },
+    {
+     "jp": "では あなたの 底抜(そこぬ)けの愚(おろ)かさに免(めん)じて",
+     "en": "Then out of respect for your bottomless stupidity,",
+     "media": "Tower of God",
+     "ep": "EP13",
+     "at": "4:10",
+     "url": "https://nadeshiko.co/en/sentence/PQcal4aULliC",
+     "audio": "https://cdn.nadeshiko.co/media/115230/13/4d007a2016.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/115230/13/4d007a2016.webp",
+     "cn": "那就看在你蠢得无可救药的份上。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/men-j.mp3"
+  },
+  {
+   "id": "san_visit",
+   "group": "hatsuon",
+   "level": "敬語",
+   "emoji": "🏃",
+   "word": "参ずる／参じる",
+   "zuru": "参ずる",
+   "jiru": "参じる",
+   "readZuru": "さんずる",
+   "readJiru": "さんじる",
+   "base": "参（さん）",
+   "meaning": "前往，来（「参る」的文章语）",
+   "chain": "参（さん）＋する → ん＋すの連濁 → 参ずる → 上一段化 → 参じる",
+   "register": "敬语・时代剧调",
+   "note": "『参る』の上一段化した文章語・武家言葉风。会話では『参ります』。",
+   "examples": [
+    {
+     "jp": "遠方より参じました。",
+     "cn": "我从远方而来。"
+    },
+    {
+     "jp": "式典に参じる。",
+     "cn": "参加典礼。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "アテナイより 参(さん)じました 今年(ことし)の捧(ささ)げ物(もの)",
+     "en": "Here is this year's tribute from Athens,",
+     "media": "T・P BON",
+     "ep": "EP7",
+     "at": "8:18",
+     "url": "https://nadeshiko.co/en/sentence/RqazLpFNPFaC",
+     "audio": "https://cdn.nadeshiko.co/media/169930/7/3274f14cbf.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/169930/7/3274f14cbf.webp",
+     "cn": "我从雅典前来，献上今年的贡品。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/san_visit-j.mp3"
+  },
+  {
+   "id": "san_scatter",
+   "group": "hatsuon",
+   "level": "古雅",
+   "emoji": "🍃",
+   "word": "散ずる／散じる",
+   "zuru": "散ずる",
+   "jiru": "散じる",
+   "readZuru": "さんずる",
+   "readJiru": "さんじる",
+   "base": "散（さん）",
+   "meaning": "消散；散落；散会（军队、群众）",
+   "chain": "散（さん）＋する → ん＋すの連濁 → 散ずる → 上一段化 → 散じる",
+   "register": "古雅・文章语",
+   "note": "『散る／散らす』の文章語。軍隊・群衆が散る場面に。",
+   "examples": [
+    {
+     "jp": "霧は風とともに散じた。",
+     "cn": "雾随风散去。"
+    },
+    {
+     "jp": "会は夕刻に散じた。",
+     "cn": "聚会在傍晚散了。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "結果(けっか)が分(わ)かっているなら もう散(さん)じてしまっても　そんなこと鷲官(わしかん)長(なが)に聞(き)かれたら",
+     "en": "If the result is so clear, they can just disband- Shh! If the captain of the Eagle Eyes heard that...",
+     "media": "Though I Am an Inept Villainess",
+     "ep": "EP1",
+     "at": "2:11",
+     "url": "https://nadeshiko.co/en/sentence/5hHR14zXBNcV",
+     "audio": "https://cdn.nadeshiko.co/media/188139/1/72cf33e648.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/188139/1/72cf33e648.webp",
+     "cn": "既然结果已经明了，就此散伙也无妨——"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/san_scatter-j.mp3"
+  },
+  {
+   "id": "dan_talk",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🗨️",
+   "word": "談ずる／談じる",
+   "zuru": "談ずる",
+   "jiru": "談じる",
+   "readZuru": "だんずる",
+   "readJiru": "だんじる",
+   "base": "談（だん）",
+   "meaning": "谈；商量；谈判",
+   "chain": "談（だん）＋する → ん＋すの連濁 → 談ずる → 上一段化 → 談じる",
+   "register": "文章語",
+   "note": "『談じる』は硬い書き言葉。日常は『話し合う・相談する・交渉する』。",
+   "examples": [
+    {
+     "jp": "ひとつ社長に談じてみよう。",
+     "cn": "跟经理商量一下吧。",
+     "src": "moji",
+     "audio": "audio/dan_talk-e0.mp3"
+    },
+    {
+     "jp": "政治を談じる。",
+     "cn": "谈政治。",
+     "src": "moji",
+     "audio": "audio/dan_talk-e1.mp3"
+    },
+    {
+     "jp": "両国は国境問題を談じた。",
+     "cn": "两国就边境问题进行了谈判。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/dan_talk-j.mp3"
+  },
+  {
+   "id": "han_judge",
+   "group": "hatsuon",
+   "level": "N1",
+   "emoji": "🔍",
+   "word": "判ずる／判じる",
+   "zuru": "判ずる",
+   "jiru": "判じる",
+   "readZuru": "はんずる",
+   "readJiru": "はんじる",
+   "base": "判（はん）",
+   "meaning": "判断；辨认；解读（暗号、文意等）",
+   "chain": "判（はん）＋する → ん＋すの連濁 → 判ずる → 上一段化 → 判じる",
+   "register": "文章語",
+   "note": "『判じる』＝判断する・読み解く。なぞ解き・暗号解読にも使う。",
+   "examples": [
+    {
+     "jp": "文脈から語の意味を判じる。",
+     "cn": "从上下文判断词义。"
+    },
+    {
+     "jp": "古い暗号を判じる。",
+     "cn": "解读古老暗号。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "お前(まえ)の貧弱(ひんじゃく)な経験則(けいけんそく)で 物事(ものごと)を判(はん)じるな",
+     "en": "Don't use your utter lack of experience to decide anything.",
+     "media": "SPY x FAMILY Season 3",
+     "ep": "EP4",
+     "at": "4:35",
+     "url": "https://nadeshiko.co/en/sentence/URsK9gJmUZyN",
+     "audio": "https://cdn.nadeshiko.co/media/177937/4/ae8b0dff25.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/177937/4/ae8b0dff25.webp",
+     "cn": "别用你那贫弱的经验法则来判断事物。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/han_judge-j.mp3"
+  },
+  {
+   "id": "ben_convenient",
+   "group": "hatsuon",
+   "level": "文章",
+   "emoji": "🔧",
+   "word": "便ずる／便じる",
+   "zuru": "便ずる",
+   "jiru": "便じる",
+   "readZuru": "べんずる",
+   "readJiru": "べんじる",
+   "base": "便（べん）",
+   "meaning": "顶用，中用；（工具等）方便好用",
+   "chain": "便（べん）＋する → ん＋すの連濁 → 便ずる → 上一段化 → 便じる",
+   "register": "文章語／惯用「用を便じる」",
+   "note": "『用を便じる』＝顶用。否定形『用が便じない』（不中用）は古い言い回し。",
+   "examples": [
+    {
+     "jp": "用を便じる",
+     "cn": "中用;顶用.",
+     "src": "moji",
+     "audio": "audio/ben_convenient-e0.mp3"
+    },
+    {
+     "jp": "君では用が便じない",
+     "cn": "你干这个不中用.",
+     "src": "moji",
+     "audio": "audio/ben_convenient-e1.mp3"
+    },
+    {
+     "jp": "この道具は実に用を便じる。",
+     "cn": "这工具很顶用。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/ben_convenient-j.mp3"
+  },
+  {
+   "id": "kon",
+   "group": "hatsuon",
+   "level": "稀",
+   "emoji": "🧪",
+   "word": "混ずる／混じる",
+   "zuru": "混ずる",
+   "jiru": "混じる",
+   "readZuru": "こんずる",
+   "readJiru": "こんじる",
+   "base": "混（こん）",
+   "meaning": "混合，掺杂（こんじる；日常读まじる）",
+   "chain": "混（こん）＋する → ん＋すの連濁 → 混ずる → 上一段化 → 混じる（こんじる）",
+   "register": "文章語・稀",
+   "note": "注意：日常的『混じる』读まじる（五段活用），是另一个词。漢語の『こんじる』は文章語。",
+   "examples": [
+    {
+     "jp": "不純物が混ずる。",
+     "cn": "混入杂质。",
+     "src": "moji",
+     "audio": "audio/kon-e0.mp3"
+    },
+    {
+     "jp": "善と悪が混ずる。",
+     "cn": "善恶相混。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "zuruAudio": "audio/kon-z.mp3"
+  },
+  {
+   "id": "tsu",
+   "group": "chouon",
+   "level": "N3",
+   "emoji": "🔗",
+   "word": "通ずる／通じる",
+   "zuru": "通ずる",
+   "jiru": "通じる",
+   "readZuru": "つうずる",
+   "readJiru": "つうじる",
+   "base": "通（つう）",
+   "meaning": "通；通往；相通；通晓；被理解",
+   "chain": "通（つう）＋する → 長音「う」のあとのスが濁音化 → 通ずる（サ行変格）→ 上一段化 → 通じる",
+   "register": "じる＝日常の多義語／ずる＝書き言葉",
+   "note": "『通じる』は多義語（通・懂・通晓・私通）。ずる形は格調高い書き言葉。",
+   "examples": [
+    {
+     "jp": "君は、英語で自分の意志を通じることができますか。",
+     "cn": "你能用英语告知（他人）自己的想法吗？",
+     "src": "moji",
+     "audio": "audio/tsu-e0.mp3"
+    },
+    {
+     "jp": "海岸に通じる道。",
+     "cn": "通到海岸的道路。",
+     "src": "moji",
+     "audio": "audio/tsu-e1.mp3"
+    },
+    {
+     "jp": "この道は駅前の大通りに通じる。",
+     "cn": "这条路通向站前大道。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "まるで赤子(あかご)の目(め)の薄青(うすあお)さにも通(つう)ずる清(きよ)らかさ",
+     "en": "How pure it is, like how pale a baby's eyes can be.",
+     "media": "Though I Am an Inept Villainess",
+     "ep": "EP4",
+     "at": "15:46",
+     "url": "https://nadeshiko.co/en/sentence/EM2bOSafAzWF",
+     "audio": "https://cdn.nadeshiko.co/media/188139/4/723cbe8fd1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/188139/4/723cbe8fd1.webp",
+     "cn": "那清澈通透，仿佛婴儿眼底的淡蓝。"
+    },
+    {
+     "jp": "飲(の)み会(かい) 覚(おぼ)えたての大学生(だいがくせい)に通(つう)ずる ウザさがありますね",
+     "en": "She's got that pain-in-the-ass quality that college students have when they'd just learned something new.",
+     "media": "BOCCHI THE ROCK!",
+     "ep": "EP8",
+     "at": "2:16",
+     "url": "https://nadeshiko.co/en/sentence/BtUragrtlQPu",
+     "audio": "https://cdn.nadeshiko.co/media/130003/8/7511d864dd.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/130003/8/7511d864dd.webp",
+     "cn": "有种刚学会点东西的大学生那种烦人劲儿呢。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/tsu-j.mp3"
+  },
+  {
+   "id": "ou",
+   "group": "chouon",
+   "level": "N2",
+   "emoji": "🤝",
+   "word": "応ずる／応じる",
+   "zuru": "応ずる",
+   "jiru": "応じる",
+   "readZuru": "おうずる",
+   "readJiru": "おうじる",
+   "base": "応（おう）",
+   "meaning": "响应，答应；按照…（相应变化）",
+   "chain": "応（おう）＋する → 長音「う」のあとのスが濁音化 → 応ずる → 上一段化 → 応じる",
+   "register": "じる＝商务常用／ずる＝書面",
+   "note": "『〜に応じて／応じた』はビジネス必須。応ずるは書面・演説調。",
+   "examples": [
+    {
+     "jp": "収入に応じた生活",
+     "cn": "按照收入安排生活。",
+     "src": "moji",
+     "audio": "audio/ou-e0.mp3"
+    },
+    {
+     "jp": "募集に応じる",
+     "cn": "应募。",
+     "src": "moji",
+     "audio": "audio/ou-e1.mp3"
+    },
+    {
+     "jp": "どんな要求にも応ずるつもりはない。",
+     "cn": "并非什么要求都会答应。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "再三(さいさん)の呼(よ)び出(だ)しにも応(おう)じぬとは",
+     "en": "I summoned you and you ignored me.",
+     "media": "BANANA FISH",
+     "ep": "EP17",
+     "at": "13:36",
+     "url": "https://nadeshiko.co/en/sentence/87F12M-joHVp",
+     "audio": "https://cdn.nadeshiko.co/media/100388/17/d42f12dbc4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/100388/17/d42f12dbc4.webp",
+     "cn": "再三传唤你，竟敢不应召。"
+    },
+    {
+     "jp": "取(と)り引(ひ)きに応(おう)じるかどうか...",
+     "en": "Will they accept?",
+     "media": "Spice and Wolf: MERCHANT MEETS THE WISE WOLF",
+     "ep": "EP5",
+     "at": "5:08",
+     "url": "https://nadeshiko.co/en/sentence/er8me4ZK7amT",
+     "audio": "https://cdn.nadeshiko.co/media/145728/5/e1fa5ae2fb.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/145728/5/e1fa5ae2fb.webp",
+     "cn": "他们会不会答应这笔交易呢……"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/ou-j.mp3"
+  },
+  {
+   "id": "shou",
+   "group": "chouon",
+   "level": "N2",
+   "emoji": "🌱",
+   "word": "生ずる／生じる",
+   "zuru": "生ずる",
+   "jiru": "生じる",
+   "readZuru": "しょうずる",
+   "readJiru": "しょうじる",
+   "base": "生（しょう）",
+   "meaning": "产生，发生；生长（问题、效果、疑念等）",
+   "chain": "生（しょう）＋する → 長音「う」のあとのスが濁音化 → 生ずる → 上一段化 → 生じる",
+   "register": "じる＝日常・抽象的发生／ずる＝報道・論文調",
+   "note": "问题・效果・疑念など抽象的な発生に使う。ずる形はニュース原稿の定番。",
+   "examples": [
+    {
+     "jp": "効力を生じる。",
+     "cn": "生效。",
+     "src": "moji",
+     "audio": "audio/shou-e0.mp3"
+    },
+    {
+     "jp": "疑念が生じる。",
+     "cn": "产生疑念。",
+     "src": "moji",
+     "audio": "audio/shou-e1.mp3"
+    },
+    {
+     "jp": "この薬は副作用を生ずるおそれがある。",
+     "cn": "这药有产生副作用的可能。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ところが トラブルが生(しょう)じてね",
+     "en": "But there was a problem.",
+     "media": "PLUTO",
+     "ep": "EP4",
+     "at": "38:03",
+     "url": "https://nadeshiko.co/en/sentence/KSM_ObQ7edYc",
+     "audio": "https://cdn.nadeshiko.co/media/99088/4/34c312ab12.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/99088/4/34c312ab12.webp",
+     "cn": "可是，后来出了点麻烦。"
+    },
+    {
+     "jp": "タイムパラドックスが生(しょう)じると...",
+     "en": "When a time paradox occurs...",
+     "media": "Extremely Inappropriate!",
+     "ep": "EP4",
+     "at": "0:41",
+     "url": "https://nadeshiko.co/en/sentence/c7nes6jdt_WW",
+     "audio": "https://cdn.nadeshiko.co/media/mv/241795/4/08117315fc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/241795/4/08117315fc.webp",
+     "cn": "一旦产生时间悖论……"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/shou-j.mp3"
+  },
+  {
+   "id": "kou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🛠️",
+   "word": "講ずる／講じる",
+   "zuru": "講ずる",
+   "jiru": "講じる",
+   "readZuru": "こうずる",
+   "readJiru": "こうじる",
+   "base": "講（こう）",
+   "meaning": "讲授；谋求，采取（措施）；讲和",
+   "chain": "講（こう）＋する → 長音「う」のあとのスが濁音化 → 講ずる → 上一段化 → 講じる",
+   "register": "じる＝新闻高频／ずる＝硬い",
+   "note": "『対策を講じる』はニュースの定番。講ずるはさらに硬い。",
+   "examples": [
+    {
+     "jp": "対策を講じる",
+     "cn": "谋求对策",
+     "src": "moji",
+     "audio": "audio/kou-e0.mp3"
+    },
+    {
+     "jp": "論語を講じる",
+     "cn": "讲《论语》。",
+     "src": "moji",
+     "audio": "audio/kou-e1.mp3"
+    },
+    {
+     "jp": "政府は物価対策を講じた。",
+     "cn": "政府采取了物价对策。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "早速(さっそく) 対策(たいさく)を講(こう)じたわけか",
+     "en": "He came up with a plan of counterattack in no time flat.",
+     "media": "Hajime no Ippo: The Fighting!",
+     "ep": "EP12",
+     "at": "9:34",
+     "url": "https://nadeshiko.co/en/sentence/g0Pup1KRr5Vf",
+     "audio": "https://cdn.nadeshiko.co/media/263/12/9c0b7d1e33.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/263/12/9c0b7d1e33.webp",
+     "cn": "原来已经迅速采取了对策啊。"
+    },
+    {
+     "jp": "我々(われわれ)も しっかり 対策(たいさく)を講(こう)じていかないとですね",
+     "en": "We have to take proper measures too.",
+     "media": "My Happy Marriage Season 2",
+     "ep": "EP9",
+     "at": "5:11",
+     "url": "https://nadeshiko.co/en/sentence/6j9QF6CGB6vW",
+     "audio": "https://cdn.nadeshiko.co/media/169441/9/33db7aaabb.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/169441/9/33db7aaabb.webp",
+     "cn": "我们也得好好采取对策才行呢。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/kou-j.mp3"
+  },
+  {
+   "id": "tou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🗳️",
+   "word": "投ずる／投じる",
+   "zuru": "投ずる",
+   "jiru": "投じる",
+   "readZuru": "とうずる",
+   "readJiru": "とうじる",
+   "base": "投（とう）",
+   "meaning": "投入；投掷；投资；投（票、狱）",
+   "chain": "投（とう）＋する → 長音「う」のあとのスが濁音化 → 投ずる → 上一段化 → 投じる",
+   "register": "じる＝新聞常见／ずる＝文語調",
+   "note": "資金・票・石・一石を投じる。『投ずる』はより文語的。",
+   "examples": [
+    {
+     "jp": "石を遠く投じて。",
+     "cn": "把石头扔老远。",
+     "src": "moji",
+     "audio": "audio/tou-e0.mp3"
+    },
+    {
+     "jp": "彼は巨額の資金を新事業に投じた。",
+     "cn": "他把巨额资金投入新事业。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "投(とう)じる一石(いっせき)は 水(みず)の震(ふる)えでしかなく",
+     "en": "the stone I cast is merely a ripple in the water",
+     "media": "My Happy Marriage Season 2",
+     "ep": "EP8",
+     "at": "12:33",
+     "url": "https://nadeshiko.co/en/sentence/T3qy6TFip0CN",
+     "audio": "https://cdn.nadeshiko.co/media/169441/8/7b8119a4d8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/169441/8/7b8119a4d8.webp",
+     "cn": "我投出的那一石，不过是水面的微颤。"
+    },
+    {
+     "jp": "都民(とみん)の税金(ぜいきん)が 投(とう)じられてるんですよ!",
+     "en": "The residents' tax money was funding it!",
+     "media": "Lycoris Recoil",
+     "ep": "EP13",
+     "at": "12:17",
+     "url": "https://nadeshiko.co/en/sentence/CU_EHfMXJaki",
+     "audio": "https://cdn.nadeshiko.co/media/143270/13/d3d8ff9573.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143270/13/d3d8ff9573.webp",
+     "cn": "那可是投入了都民税金啊！"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/tou-j.mp3"
+  },
+  {
+   "id": "hou",
+   "group": "chouon",
+   "level": "N2",
+   "emoji": "📰",
+   "word": "報ずる／報じる",
+   "zuru": "報ずる",
+   "jiru": "報じる",
+   "readZuru": "ほうずる",
+   "readJiru": "ほうじる",
+   "base": "報（ほう）",
+   "meaning": "报道；报时；报（恩、仇）",
+   "chain": "報（ほう）＋する → 長音「う」のあとのスが濁音化 → 報ずる → 上一段化 → 報じる",
+   "register": "じる＝新闻标准／ずる＝硬質な書き言葉",
+   "note": "報道の動詞。『報ずる』は演説・漢文調で、恩讐に報いる意味でも使う。",
+   "examples": [
+    {
+     "jp": "公会堂の鐘が時刻を報じている。",
+     "cn": "礼堂的时钟在报时。",
+     "src": "moji",
+     "audio": "audio/hou-e0.mp3"
+    },
+    {
+     "jp": "事故の模様は各紙が一斉に報じた。",
+     "cn": "各报同时报道了事故情况。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "2人(ふたり)でマンションに入(はい)った その事実(じじつ)だけを報(ほう)じている",
+     "en": "We're only reporting the fact that they went into an apartment together.",
+     "media": "【OSHI NO KO】Season 3",
+     "ep": "EP7",
+     "at": "9:14",
+     "url": "https://nadeshiko.co/en/sentence/63QUyrvRYNNF",
+     "audio": "https://cdn.nadeshiko.co/media/182587/7/6eed82c989.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/182587/7/6eed82c989.webp",
+     "cn": "我们只报道了两人一同进入公寓这一事实。"
+    },
+    {
+     "jp": "僕(ぼく)らの顔(かお)と名前(なまえ)が報(ほう)じられる前(まえ)に 止(と)められたのは幸(さいわ)いだったが",
+     "en": "into dropping the story before our names were revealed.",
+     "media": "The Disastrous Life of Saiki K. Season 2",
+     "ep": "EP7",
+     "at": "11:47",
+     "url": "https://nadeshiko.co/en/sentence/TbXZGwGdcWIs",
+     "audio": "https://cdn.nadeshiko.co/media/98034/7/7f05cabac5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/98034/7/7f05cabac5.webp",
+     "cn": "幸好在我们的长相和名字被报道出来之前被拦下了。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/hou-j.mp3"
+  },
+  {
+   "id": "chou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🎼",
+   "word": "長ずる／長じる",
+   "zuru": "長ずる",
+   "jiru": "長じる",
+   "readZuru": "ちょうずる",
+   "readJiru": "ちょうじる",
+   "base": "長（ちょう）",
+   "meaning": "擅长，长于；长大，成长",
+   "chain": "長（ちょう）＋する → 長音「う」のあとのスが濁音化 → 長ずる → 上一段化 → 長じる",
+   "register": "文章語",
+   "note": "『〜に長じる』＝擅长。『長じて』＝长大后，是文章的常套表现。",
+   "examples": [
+    {
+     "jp": "彼は数学に長じている。",
+     "cn": "他擅长数学。"
+    },
+    {
+     "jp": "長じてから故郷を離れた。",
+     "cn": "长大后离开了故乡。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "僕(ぼく)以上(いじょう)にこのゲームに 長(ちょう)じている人間(にんげん)はほかにいないよ",
+     "en": "that there is no other human that excels at this game more than I.",
+     "media": "Blood Blockade Battlefront",
+     "ep": "EP3",
+     "at": "11:18",
+     "url": "https://nadeshiko.co/en/sentence/SJOP_hW3rWdF",
+     "audio": "https://cdn.nadeshiko.co/media/20727/3/f93874ea6a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20727/3/f93874ea6a.webp",
+     "cn": "没有人比我更擅长这个游戏。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/chou-j.mp3"
+  },
+  {
+   "id": "jou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🎲",
+   "word": "乗ずる／乗じる",
+   "zuru": "乗ずる",
+   "jiru": "乗じる",
+   "readZuru": "じょうずる",
+   "readJiru": "じょうじる",
+   "base": "乗（じょう）",
+   "meaning": "乘（车、势）；利用，抓住（机会）",
+   "chain": "乗（じょう）＋する → 長音「う」のあとのスが濁音化 → 乗ずる → 上一段化 → 乗じる",
+   "register": "じる＝常用／ずる＝書き言葉",
+   "note": "『〜に乗じて』＝趁…。『乗ずる』は書き言葉・漢文調。",
+   "examples": [
+    {
+     "jp": "弱みに乗じる。",
+     "cn": "利用别人的弱点。",
+     "src": "moji",
+     "audio": "audio/jou-e0.mp3"
+    },
+    {
+     "jp": "夜陰に乗じる。",
+     "cn": "趁着天黑。",
+     "src": "moji",
+     "audio": "audio/jou-e1.mp3"
+    },
+    {
+     "jp": "敵の隙に乗じて攻め込んだ。",
+     "cn": "趁敌人空隙攻了进去。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "今朝(けさ)の混乱(こんらん)に乗(じょう)じたんだろ ん?",
+     "en": "He took advantage of the morning bustle.",
+     "media": "My Hero Academia",
+     "ep": "EP1",
+     "at": "9:38",
+     "url": "https://nadeshiko.co/en/sentence/yktgNsJAGGLK",
+     "audio": "https://cdn.nadeshiko.co/media/21459/1/3e79170f1f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21459/1/3e79170f1f.webp",
+     "cn": "是趁今天早上的混乱混进来的吧。"
+    },
+    {
+     "jp": "その混乱(こんらん)に乗(じょう)じて ここから離(はな)れましょう",
+     "en": "We'll take advantage of the chaos to get away from here.",
+     "media": "I May Be a Guild Receptionist, but I’ll Solo Any Boss to Clock Out on Time",
+     "ep": "EP7",
+     "at": "11:48",
+     "url": "https://nadeshiko.co/en/sentence/s3zbffeMTuHz",
+     "audio": "https://cdn.nadeshiko.co/media/167143/7/de9ce22539.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/167143/7/de9ce22539.webp",
+     "cn": "趁这阵混乱，我们离开这里吧。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/jou-j.mp3"
+  },
+  {
+   "id": "dou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🗿",
+   "word": "動ずる／動じる",
+   "zuru": "動ずる",
+   "jiru": "動じる",
+   "readZuru": "どうずる",
+   "readJiru": "どうじる",
+   "base": "動（どう）",
+   "meaning": "动摇；惊慌；介意（多用于否定）",
+   "chain": "動（どう）＋する → 長音「う」のあとのスが濁音化 → 動ずる → 上一段化 → 動じる",
+   "register": "じる＝「動じない」常用／ずる＝時代劇調",
+   "note": "『動じない』（镇定自若）は日常でも使う。『動ずるな』は時代剧的命令调。",
+   "examples": [
+    {
+     "jp": "物に動じない。",
+     "cn": "不为物动。",
+     "src": "moji",
+     "audio": "audio/dou-e0.mp3"
+    },
+    {
+     "jp": "何事にも動じない人になりたい。",
+     "cn": "想成为遇事不惊的人。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "動(どう)じないのね あんた",
+     "en": "Nothing fazes you, does it?",
+     "media": "The Eminence in Shadow",
+     "ep": "EP16",
+     "at": "4:31",
+     "url": "https://nadeshiko.co/en/sentence/BisnRh-eepWe",
+     "audio": "https://cdn.nadeshiko.co/media/130298/16/608295d1f5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/130298/16/608295d1f5.webp",
+     "cn": "你还真是不为所动呢。"
+    },
+    {
+     "jp": "動(どう)ずるな ポーズだけだ",
+     "en": "Don't get excited. It's only a pose.",
+     "media": "Hajime no Ippo: The Fighting!",
+     "ep": "EP49",
+     "at": "4:14",
+     "url": "https://nadeshiko.co/en/sentence/ZsN38tIfXLJZ",
+     "audio": "https://cdn.nadeshiko.co/media/263/49/fdfd41dee9.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/263/49/fdfd41dee9.webp",
+     "cn": "别慌，不过是摆个姿势罢了。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/dou-j.mp3"
+  },
+  {
+   "id": "kou_high",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🔥",
+   "word": "高ずる／高じる",
+   "zuru": "高ずる",
+   "jiru": "高じる",
+   "readZuru": "こうずる",
+   "readJiru": "こうじる",
+   "base": "高（こう）",
+   "meaning": "加剧，加重；（兴趣等）越发强烈",
+   "chain": "高（こう）＋する → 長音「う」のあとのスが濁音化 → 高ずる → 上一段化 → 高じる（昂ずる／昂じる も同系）",
+   "register": "じる＝常用／ずる＝文語調",
+   "note": "『趣味が高じて』は高频表达。同系に『昂ずる／昂じる』（感情が昂じる）がある。",
+   "examples": [
+    {
+     "jp": "病状が高じる。",
+     "cn": "病情加重了。",
+     "src": "moji",
+     "audio": "audio/kou_high-e0.mp3"
+    },
+    {
+     "jp": "趣味が高じてついに店を開いた。",
+     "cn": "兴趣越来越浓，最后开了店。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "えっ 趣味(しゅみ)が高(こう)じたばっかりに やっちゃったって感(かん)じでーす",
+     "en": "it coincided with his hobby, so he just went for it!",
+     "media": "The Melancholy of Haruhi Suzumiya (2009)",
+     "ep": "EP21",
+     "at": "15:47",
+     "url": "https://nadeshiko.co/en/sentence/NbRRT4_s4kSo",
+     "audio": "https://cdn.nadeshiko.co/media/4382/21/85bea83a44.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/4382/21/85bea83a44.webp",
+     "cn": "就是因为爱好过了头才干出这种事～"
+    },
+    {
+     "jp": "アイドル好(す)きが高(こう)じてやってる 半分(はんぶん)趣味(しゅみ)みたいな人(ひと)も多(おお)いのよ",
+     "en": "but there are lots of people who lean into their love of idols and do it as something of a hobby.",
+     "media": "Oshi No Ko",
+     "ep": "EP2",
+     "at": "12:40",
+     "url": "https://nadeshiko.co/en/sentence/Irm0_NSkOw-u",
+     "audio": "https://cdn.nadeshiko.co/media/150672/2/79edd72855.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/150672/2/79edd72855.webp",
+     "cn": "因为太喜欢偶像而干这一行、半是当兴趣的人也不少哦。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/kou_high-j.mp3"
+  },
+  {
+   "id": "fuu",
+   "group": "chouon",
+   "level": "N2",
+   "emoji": "🔒",
+   "word": "封ずる／封じる",
+   "zuru": "封ずる",
+   "jiru": "封じる",
+   "readZuru": "ふうずる",
+   "readJiru": "ふうじる",
+   "base": "封（ふう）",
+   "meaning": "封，封上；封锁；封印（力量、记忆）",
+   "chain": "封（ふう）＋する → 長音「う」のあとのスが濁音化 → 封ずる → 上一段化 → 封じる",
+   "register": "じる＝常用／ずる＝時代劇調",
+   "note": "封筒・封印の語源。『封ずる／封じる』は力・記憶・出口を封じる場面に。",
+   "examples": [
+    {
+     "jp": "空港を封じる。",
+     "cn": "封锁机场。",
+     "src": "moji",
+     "audio": "audio/fuu-e0.mp3"
+    },
+    {
+     "jp": "その記憶は心の奥に封じた。",
+     "cn": "把那段记忆封存在心底。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "\\「鬼(おに)の力(ちから)を封(ふう)ずる 特別(とくべつ)あつらえのリボンである\\「",
+     "en": "\\\"It will block out her Oni powers.\\\" \\\"I made this ribbon especially for you.\\\"",
+     "media": "Urusei Yatsura (2022)",
+     "ep": "EP2",
+     "at": "12:55",
+     "url": "https://nadeshiko.co/en/sentence/31BFPY_1z1g-",
+     "audio": "https://cdn.nadeshiko.co/media/143277/2/1e824230b8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143277/2/1e824230b8.webp",
+     "cn": "这是封印鬼之力的特制缎带。"
+    },
+    {
+     "jp": "お前(まえ)の異能(いのう)を 封(ふう)じたのかを...",
+     "en": "and why your supernatural abilities were sealed away till now.",
+     "media": "My Happy Marriage",
+     "ep": "EP10",
+     "at": "23:43",
+     "url": "https://nadeshiko.co/en/sentence/dGupFSC6NEBx",
+     "audio": "https://cdn.nadeshiko.co/media/147103/10/5fceab5199.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/147103/10/5fceab5199.webp",
+     "cn": "为何你的异能会被封印。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/fuu-j.mp3"
+  },
+  {
+   "id": "kyou",
+   "group": "chouon",
+   "level": "N1",
+   "emoji": "🃏",
+   "word": "興ずる／興じる",
+   "zuru": "興ずる",
+   "jiru": "興じる",
+   "readZuru": "きょうずる",
+   "readJiru": "きょうじる",
+   "base": "興（きょう）",
+   "meaning": "兴致勃勃地做；沉醉于（游戏、玩乐）",
+   "chain": "興（きょう）＋する → 長音「う」のあとのスが濁音化 → 興ずる → 上一段化 → 興じる",
+   "register": "じる＝常用／ずる＝雅語",
+   "note": "『〜に興じる』は新聞・小説でよく見る雅語。会話では『夢中になる』。",
+   "examples": [
+    {
+     "jp": "トランプに興じる。",
+     "cn": "对扑克牌很有兴趣。",
+     "src": "moji",
+     "audio": "audio/kyou-e0.mp3"
+    },
+    {
+     "jp": "子供たちはゲームに興じている。",
+     "cn": "孩子们正玩得起劲。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "だから一人遊(ひとりあそ)びに 興(きょう)じているのか",
+     "en": "That's why she's so enthralled with single-player games...",
+     "media": "Hi Score Girl",
+     "ep": "EP2",
+     "at": "8:10",
+     "url": "https://nadeshiko.co/en/sentence/AqoSbR95t1xk",
+     "audio": "https://cdn.nadeshiko.co/media/20574/2/de24a04187.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20574/2/de24a04187.webp",
+     "cn": "所以才会一个人玩得那么起劲啊。"
+    },
+    {
+     "jp": "また 玉打(たまう)ち遊(あそ)びにでも 興(きょう)じましょうぞ",
+     "en": "and maybe we can play that ball game again.",
+     "media": "Vinland Saga Season 2",
+     "ep": "EP10",
+     "at": "17:14",
+     "url": "https://nadeshiko.co/en/sentence/DJeVa8Z6YSsL",
+     "audio": "https://cdn.nadeshiko.co/media/136430/10/dff3efdaa8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/136430/10/dff3efdaa8.webp",
+     "cn": "不如再来玩一场打球游戏吧。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/kyou-j.mp3"
+  },
+  {
+   "id": "mei",
+   "group": "diph",
+   "level": "N2",
+   "emoji": "📜",
+   "word": "命ずる／命じる",
+   "zuru": "命ずる",
+   "jiru": "命じる",
+   "readZuru": "めいずる",
+   "readJiru": "めいじる",
+   "base": "命（めい）",
+   "meaning": "命令；任命",
+   "chain": "命（めい）＋する → 二重母音「い」のあとのスが濁音化 → 命ずる → 上一段化 → 命じる",
+   "register": "じる＝日常／ずる＝仰々しい",
+   "note": "命令と任命の両方を担う。『命ずる』は儀式・ファンタジーの詔勅调。",
+   "examples": [
+    {
+     "jp": "部下に命じて、やらせる。",
+     "cn": "命令部下去做。",
+     "src": "moji",
+     "audio": "audio/mei-e0.mp3"
+    },
+    {
+     "jp": "係長に命じる。",
+     "cn": "任命为股长。",
+     "src": "moji",
+     "audio": "audio/mei-e1.mp3"
+    },
+    {
+     "jp": "国王は彼に城の守備を命じた。",
+     "cn": "国王命令他守城。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "力(ちから)の根源(こんげん)たる 我(わ)が命(めい)ずる",
+     "en": "As source of thy power, I order thee.",
+     "media": "The Rising of the Shield Hero",
+     "ep": "EP25",
+     "at": "8:25",
+     "url": "https://nadeshiko.co/en/sentence/TRMwt_0eaLAI",
+     "audio": "https://cdn.nadeshiko.co/media/99263/25/3868a17b89.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/99263/25/3868a17b89.webp",
+     "cn": "作为力量之源，我命你——"
+    },
+    {
+     "jp": "飼育(しいく)部(ぶ) 海獣(かいじゅう)担当(たんとう)を命(めい)ずる",
+     "en": "You are assigned as attendant in the Aquatic Animals division.",
+     "media": "The aquatope on white sand",
+     "ep": "EP14",
+     "at": "2:34",
+     "url": "https://nadeshiko.co/en/sentence/8Xch16OPGSfx",
+     "audio": "https://cdn.nadeshiko.co/media/128545/14/03f89eec39.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/128545/14/03f89eec39.webp",
+     "cn": "任命你为饲养部海兽饲养员。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/mei-j.mp3"
+  },
+  {
+   "id": "ei_poem",
+   "group": "diph",
+   "level": "文章",
+   "emoji": "🌸",
+   "word": "詠ずる／詠じる",
+   "zuru": "詠ずる",
+   "jiru": "詠じる",
+   "readZuru": "えいずる",
+   "readJiru": "えいじる",
+   "base": "詠（えい）",
+   "meaning": "吟咏，作诗（诗歌）",
+   "chain": "詠（えい）＋する → 二重母音「い」のあとのスが濁音化 → 詠ずる → 上一段化 → 詠じる",
+   "register": "文章語・雅語",
+   "note": "『詠む』の文章語。和歌・漢詩の世界の語。",
+   "examples": [
+    {
+     "jp": "春の花を詠じる。",
+     "cn": "吟咏春花。"
+    },
+    {
+     "jp": "古人は月を詠じた。",
+     "cn": "古人吟咏月亮。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/ei_poem-j.mp3"
+  },
+  {
+   "id": "ei_reflect",
+   "group": "diph",
+   "level": "文章",
+   "emoji": "🪞",
+   "word": "映ずる／映じる",
+   "zuru": "映ずる",
+   "jiru": "映じる",
+   "readZuru": "えいずる",
+   "readJiru": "えいじる",
+   "base": "映（えい）",
+   "meaning": "映照，映出（光影、姿态）",
+   "chain": "映（えい）＋する → 二重母音「い」のあとのスが濁音化 → 映ずる → 上一段化 → 映じる",
+   "register": "文章語",
+   "note": "『映る』の文章語。光・影・姿が何かに映る意。",
+   "examples": [
+    {
+     "jp": "湖面に山の姿が映じた。",
+     "cn": "湖面映出山影。"
+    },
+    {
+     "jp": "瞳に炎が映じる。",
+     "cn": "眼中映出火焰。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/ei_reflect-j.mp3"
+  },
+  {
+   "id": "omoni",
+   "group": "wago",
+   "level": "N1",
+   "emoji": "⚖️",
+   "word": "重んずる／重んじる",
+   "zuru": "重んずる",
+   "jiru": "重んじる",
+   "readZuru": "おもんずる",
+   "readJiru": "おもんじる",
+   "base": "重（おも）し",
+   "meaning": "重视，注重；尊重，器重",
+   "chain": "和語「重し」＋撥音挿入「ん」＋する → 重んずる → 上一段化 → 重んじる",
+   "register": "両形現役／ずるは硬い",
+   "note": "『重んじる』が現代の標準。『重んずる』も新聞・小説で現役。",
+   "examples": [
+    {
+     "jp": "各国それぞれの習慣を重んじる。",
+     "cn": "尊重各国的习惯。",
+     "src": "moji",
+     "audio": "audio/omoni-e0.mp3"
+    },
+    {
+     "jp": "証拠を重んじる。",
+     "cn": "重证据。",
+     "src": "moji",
+     "audio": "audio/omoni-e1.mp3"
+    },
+    {
+     "jp": "彼は伝統を重んずる人だ。",
+     "cn": "他是个重视传统的人。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ドワーフは伝統(でんとう)を重(おも)んじる",
+     "en": "Dwarves value tradition.",
+     "media": "Frieren: Beyond Journey’s End",
+     "ep": "EP4",
+     "at": "10:50",
+     "url": "https://nadeshiko.co/en/sentence/0Hgt2HgmjRcl",
+     "audio": "https://cdn.nadeshiko.co/media/154587/4/1f6d536f66.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154587/4/1f6d536f66.webp",
+     "cn": "矮人重视传统。"
+    },
+    {
+     "jp": "カルマ君(くん)は 過程(かてい)を重(おも)んずる戦闘(せんとう)暗殺者(あんさつしゃ)です",
+     "en": "Karma-kun is a combat assassin who values the process.",
+     "media": "Assassination Classroom Second Season",
+     "ep": "EP18",
+     "at": "11:40",
+     "url": "https://nadeshiko.co/en/sentence/VNMR87XMDM0f",
+     "audio": "https://cdn.nadeshiko.co/media/21170/18/59c0fba400.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21170/18/59c0fba400.webp",
+     "cn": "他是个重视过程的战斗暗杀者。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/omoni-j.mp3"
+  },
+  {
+   "id": "karon",
+   "group": "wago",
+   "level": "N1",
+   "emoji": "🪶",
+   "word": "軽んずる／軽んじる",
+   "zuru": "軽んずる",
+   "jiru": "軽んじる",
+   "readZuru": "かろんずる",
+   "readJiru": "かろんじる",
+   "base": "軽（かろ）し",
+   "meaning": "轻视，蔑视",
+   "chain": "和語「軽し」＋撥音挿入「ん」＋する → 軽んずる → 上一段化 → 軽んじる",
+   "register": "じる＝常用／ずる＝硬い",
+   "note": "『軽んじる』が普通。重んずるの対義語。ずる形は演説・文章調。",
+   "examples": [
+    {
+     "jp": "敵を軽んじる。",
+     "cn": "轻敌。",
+     "src": "moji",
+     "audio": "audio/karon-e0.mp3"
+    },
+    {
+     "jp": "相手を軽んじる態度は感心しない。",
+     "cn": "轻视对方的态度不可取。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "おごってはいけない 軽(かろ)んじてはいけない",
+     "en": "You must never grow arrogant, or careless.",
+     "media": "Solo Leveling",
+     "ep": "EP1",
+     "at": "17:19",
+     "url": "https://nadeshiko.co/en/sentence/yjHcqhtJl9O_",
+     "audio": "https://cdn.nadeshiko.co/media/151807/1/74dd11a6b3.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/151807/1/74dd11a6b3.webp",
+     "cn": "不可骄纵，不可轻视。"
+    },
+    {
+     "jp": "たしかに世論(よろん)を軽(かろ)んずれば",
+     "en": "Yes, if we ignore public opinion,",
+     "media": "Saga of Tanya the Evil Season 2",
+     "ep": "EP7",
+     "at": "19:22",
+     "url": "https://nadeshiko.co/en/sentence/QvRvE6WNM1qy",
+     "audio": "https://cdn.nadeshiko.co/media/135865/7/66fbaaa332.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/135865/7/66fbaaa332.webp",
+     "cn": "若轻视舆论的话……"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/karon-j.mp3"
+  },
+  {
+   "id": "uton",
+   "group": "wago",
+   "level": "N1",
+   "emoji": "🌫️",
+   "word": "疎んずる／疎んじる",
+   "zuru": "疎んずる",
+   "jiru": "疎んじる",
+   "readZuru": "うとんずる",
+   "readJiru": "うとんじる",
+   "base": "疎（うと）し",
+   "meaning": "疏远；冷待；厌弃",
+   "chain": "和語「疎し」＋撥音挿入「ん」＋する → 疎んずる → 上一段化 → 疎んじる",
+   "register": "文章語",
+   "note": "『疎む』の上一段化した形。現代語では『疎まれる』の方が普通。",
+   "examples": [
+    {
+     "jp": "彼は周囲から疎んじられている。",
+     "cn": "他被周围人疏远。"
+    },
+    {
+     "jp": "異端を疎んずる風潮。",
+     "cn": "排斥异端的风气。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/uton-j.mp3"
+  },
+  {
+   "id": "gaen",
+   "group": "wago",
+   "level": "文章",
+   "emoji": "🙇",
+   "word": "肯んずる／肯んじる",
+   "zuru": "肯んずる",
+   "jiru": "肯んじる",
+   "readZuru": "がえんずる",
+   "readJiru": "がえんじる",
+   "base": "肯（がえ）ん",
+   "meaning": "同意，答应，肯（多用于否定）",
+   "chain": "古語「肯ぬ」＋撥音挿入「ん」＋する → 肯んずる → 上一段化 → 肯んじる",
+   "register": "文章語・硬い",
+   "note": "『肯んじない』＝不答应，几乎只以否定形出现。",
+   "examples": [
+    {
+     "jp": "彼は容易には肯んじないだろう。",
+     "cn": "他大概不会轻易答应。"
+    },
+    {
+     "jp": "そんな条件は肯んじられない。",
+     "cn": "那种条件无法接受。"
+    }
+   ],
+   "nadeshiko": [],
+   "quizzes": [],
+   "jiruAudio": "audio/gaen-j.mp3"
+  },
+  {
+   "id": "aman",
+   "group": "wago",
+   "level": "N1",
+   "emoji": "🛐",
+   "word": "甘んずる／甘んじる",
+   "zuru": "甘んずる",
+   "jiru": "甘んじる",
+   "readZuru": "あまんずる",
+   "readJiru": "あまんじる",
+   "base": "甘（あま）し",
+   "meaning": "甘愿，甘心；满足于；忍受",
+   "chain": "和語「甘し」＋撥音挿入「ん」＋する → 甘んずる → 上一段化 → 甘んじる",
+   "register": "じる＝常用／ずる＝文章語",
+   "note": "『甘んじて』の副詞的用法が最も多い。ずる形は文章語。",
+   "examples": [
+    {
+     "jp": "自分の境遇に甘んじる。",
+     "cn": "满足于自己的境遇。",
+     "src": "moji",
+     "audio": "audio/aman-e0.mp3"
+    },
+    {
+     "jp": "屈辱に甘んじる。",
+     "cn": "忍受耻辱。",
+     "src": "moji",
+     "audio": "audio/aman-e1.mp3"
+    },
+    {
+     "jp": "甘んじて批判を受け入れる。",
+     "cn": "甘愿接受批评。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "罵倒(ばとう)も甘(あま)んじて受(う)けよう",
+     "en": "I've resigned myself to accepting your rage.",
+     "media": "Re:ZERO -Starting Life in Another World- Season 2",
+     "ep": "EP12",
+     "at": "13:11",
+     "url": "https://nadeshiko.co/en/sentence/-aVOyNYCSOYi",
+     "audio": "https://cdn.nadeshiko.co/media/108632/12/624abcab3b.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/108632/12/624abcab3b.webp",
+     "cn": "辱骂我也甘愿承受。"
+    },
+    {
+     "jp": "甘(あま)んじて 卑劣漢(ひれつかん)にすらなろう。",
+     "en": "I will gladly become a coward as well.",
+     "media": "Saga of Tanya the Evil Season 2",
+     "ep": "EP12",
+     "at": "11:40",
+     "url": "https://nadeshiko.co/en/sentence/90L4TKsTM4It",
+     "audio": "https://cdn.nadeshiko.co/media/135865/12/dedc0a4f89.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/135865/12/dedc0a4f89.webp",
+     "cn": "我甘愿做个卑鄙之徒。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/aman-j.mp3"
+  },
+  {
+   "id": "an_yasu2",
+   "group": "wago",
+   "level": "文章",
+   "emoji": "🕊️",
+   "word": "安んずる／安んじる",
+   "zuru": "安んずる",
+   "jiru": "安んじる",
+   "readZuru": "やすんずる",
+   "readJiru": "やすんじる",
+   "base": "安（やす）し",
+   "meaning": "安心，放心；安于（现状）；使…安心",
+   "chain": "和語「安し」＋撥音挿入「ん」＋する → 安んずる → 上一段化 → 安んじる",
+   "register": "文章語・漢文訓読調",
+   "note": "漢文訓読の名残。会話では『安心する』『満足する』。",
+   "examples": [
+    {
+     "jp": "人心を安んずる",
+     "cn": "使人安心; 安定人心.",
+     "src": "moji",
+     "audio": "audio/an_yasu2-e0.mp3"
+    },
+    {
+     "jp": "安んじて君に任せよう",
+     "cn": "放心地委托给你了.",
+     "src": "moji",
+     "audio": "audio/an_yasu2-e1.mp3"
+    },
+    {
+     "jp": "今の地位に安んじる。",
+     "cn": "安于现在的地位。"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "さらば 友(とも)よ 愛(いと)しき平和(へいわ)に安(やす)んじる事(こと)なくー　ただ風前(ふうぜん)の灯(ともしび)と",
+     "en": "Farewell friend and loved one, may you not rest in peace but instead as the candle in the wind,",
+     "media": "DAN DA DAN Season 2",
+     "ep": "EP5",
+     "at": "1:02",
+     "url": "https://nadeshiko.co/en/sentence/6kTJWswU-0we",
+     "audio": "https://cdn.nadeshiko.co/media/185660/5/5535269971.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/185660/5/5535269971.webp",
+     "cn": "愿你不得安眠于所爱的和平之中。"
+    }
+   ],
+   "quizzes": [],
+   "jiruAudio": "audio/an_yasu2-j.mp3",
+   "zuruAudio": "audio/an_yasu2-z.mp3"
+  }
+ ]
+}
