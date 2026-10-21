@@ -8,6 +8,7 @@
 |---|---|
 | [`AGENTS.md`](./AGENTS.md) | 📕 课件制作守则：如何新建/增补课件的规则、约定与坑（数据格式 → TTS → 振假名 → Nadeshiko → 题库 → 模板注入） |
 | [`index.html`](./index.html) | 🏠 课件集索引页：二十套课件＋メタ認知ガイド（本地 serve 后即为主页） |
+| [`lite.html`](./lite.html) | ⚡ Lite 版索引：把重课件的 base64 音声外部化（初回 HTML 0.06–3MB、音声はクリック時取得、Nadeshiko は CDN 直リンク）。完全オフライン版は各课件の `index.html`；生成器は `tools/make_lite.py` |
 | [`keishiku-courseware/`](./keishiku-courseware/) | 形式名词・十四杰完全图鉴：14 词按功能分 5 组 + 核心意象 + 最小对立句対比 + 四层题库 169 問（🎧 聴解 124：意味理解57/書き取り57）与错题本，57 段 TTS 发音 + 14 词×47 段番剧/日剧原声（含画面缩略图），单文件 HTML 离线可用 |
 | [`shidai-courseware/`](./shidai-courseware/) | 「次第」完全掌握：四种用法讲解 + 例句原声 + クイズ双题库 61 問（基礎15問 / 挑戦46問、うち🎧聴解39問），单文件 HTML 离线可用 |
 | [`keiji-courseware/`](./keiji-courseware/) | 接头接尾词・口袋图鉴：词条存 `pocket.json` 随手增删，重建即自动生成卡片、TTS 发音与三层题库（詞義認識 / 運用填空 / 聴解判別）＋错题本，61 词（接頭語 11・接尾語 50，含否定接頭語 不〜/無〜/非〜/未〜、接尾語 〜柄・〜つき）+ MOJi 原生音声 + Nadeshiko 原声场景卡，单文件 HTML 离线可用；另有 `web-lite.html`（约 350KB、音声外部化） |
@@ -87,6 +88,24 @@
   查证取自 **MOJi辞書**（mojidict.com）；自写例句发音由本地 edge-tts（ja-JP-Nanami）合成；
   24 段 Nadeshiko 台词/原声/缩略图来自 **Nadeshiko**（nadeshiko.co），仅作个人语言学习之非商业性引用。
 - 如有版权方面的问题需要调整或删除相关内容，请提 issue 联系，我会及时处理。
+
+## Lite 版（弱回線・スマホ向け）
+
+`index.html` は全音声を base64 で埋め込むため、重い课件は 20–34MB になります。回線が細い
+場合は [`lite.html`](./lite.html) から軽量版を開いてください。音声・画像は必要なときだけ取得し、
+Nadeshiko 原声/サムネイルは CDN 直リンクです。
+
+各课件の `index.html` を作ったあと、生成器を実行します:
+
+```bash
+python3 tools/make_lite.py            # 2MB 以上の课件を一括処理
+python3 tools/make_lite.py --all      # 全课件（data URI があるもの）
+python3 tools/make_lite.py karada-courseware koou-courseware
+```
+
+`web-lite.html` は `audio/`・`moji_audio/`・`scenes/` などの既存資産を SHA-256 で再利用し、
+Nadeshiko は CDN URL に戻すため、原則として追加の音声ファイルは作りません。
+`index.html` の単ファイル離線性はそのまま残ります。
 
 ## 工具链
 

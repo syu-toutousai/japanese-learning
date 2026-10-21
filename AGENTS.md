@@ -65,6 +65,10 @@ build.py 更轻（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），�
 - `web-lite.html` 可选：弱回線・GitHub Pages 用，把 `AUDIO`/`NADE_AUDIO` 从 data URI
   换成 `audio/*.mp3` 与 Nadeshiko CDN 的 URL，初回 HTML 只留数据与相对路径；
   `index.html` 的单文件离线性仍须保留。
+- 通用生成器 `python3 tools/make_lite.py`：扫描 `index.html` 里的 base64 data URI；
+  `audio/`・`moji_audio/`・`scenes/`・`assets/` 等已提交资产按 SHA-256 复用，
+  Nadeshiko 音声/缩略图按 `ITEMS[].nadeshiko` 的 CDN URL 还原，其余写入
+  `web-lite-assets/`。根 `lite.html` 为 Lite 版索引，由同一脚本生成。
 - `ROOT = Path(__file__).parent`，一切路径相对此解析：
   ```python
   ROOT = Path(__file__).parent
@@ -279,7 +283,9 @@ SEED   = <固定日期，如 20260909>  # 保证题目可复现
 2. 按 §3 管道跑通：加词条 → `python3 build.py` → 校验 `index.html` 出现新卡/新音/新题。
 3. 校对振假名（§7）、错读例句、Nadeshiko 规范用法。
 4. 根 `index.html` 加卡片、`README.md` 加一行。
-5. `git add <name>-courseware/ index.html README.md && git commit && git push`。
+5. 重い课件（index.html ≥2MB）は `python3 tools/make_lite.py <name>-courseware` で
+   `web-lite.html` も生成し、根 `lite.html` を更新。
+6. `git add <name>-courseware/ index.html lite.html README.md tools/ && git commit && git push`。
 
 ## 11. 工具 / 技能
 

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>変体仮名店招帖 ・ 変体仮名店招帖</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;--gold:#b8860b;
+--ai:#24356b;--ai2:#3a4f96;--paper:#f7f4ec}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);line-height:1.7}
+header{background:linear-gradient(160deg,#1c2a52,#24356b 55%,#3a4f96);color:#fff;padding:26px 18px 70px;text-align:center}
+header .noren{max-width:760px;margin:0 auto 18px;border-radius:14px;overflow:hidden;
+box-shadow:0 18px 44px rgba(8,14,40,.45);border:1px solid rgba(255,255,255,.18)}
+header .noren img{display:block;width:100%}
+header h1{font-size:30px;letter-spacing:6px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+header .jp{font-size:13px;opacity:.85;letter-spacing:3px;margin-top:4px}
+header p.sub{margin-top:10px;font-size:14.5px;opacity:.95}
+header .tags span{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);
+border-radius:99px;padding:3px 12px;font-size:12px;margin:12px 4px 0}
+main{max-width:1000px;margin:-46px auto 0;padding:0 16px 60px}
+.card{background:var(--card);border-radius:18px;box-shadow:0 6px 24px rgba(30,40,90,.10)}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.92);border:1px solid var(--line);
+border-radius:16px;padding:8px;margin-bottom:18px;position:sticky;top:8px;z-index:30;
+-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+nav.tabs button{flex:1;min-width:130px;border:0;background:transparent;border-radius:12px;padding:11px 8px;
+font-size:14.5px;font-weight:700;color:var(--sub);cursor:pointer;transition:.15s;font-family:inherit}
+nav.tabs button.on{background:var(--ai);color:#fff;box-shadow:0 6px 16px rgba(36,53,107,.35)}
+section.tab{display:none}
+section.tab.on{display:block}
+h2.sec{font-size:19px;margin:26px 4px 12px;letter-spacing:1px}
+h2.sec small{font-size:12.5px;color:var(--sub);font-weight:400;margin-left:8px;letter-spacing:0}
+.btn{border:0;border-radius:10px;background:var(--ai);color:#fff;padding:7px 14px;font-size:13.5px;
+font-weight:700;cursor:pointer;font-family:inherit;transition:.15s}
+.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.btn.play{background:#fff;color:var(--ai);border:1.5px solid var(--ai)}
+.btn.playing{background:var(--gold);border-color:var(--gold);color:#fff;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.04)}}
+.sigcard{overflow:hidden;margin-bottom:22px}
+.sigimg{background:#182348}
+.sigimg img{display:block;width:100%}
+.sigbody{padding:20px 22px 18px}
+.sigbody h3{font-size:18.5px;letter-spacing:1px}
+.sigmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 6px}
+.chip{display:inline-block;background:var(--ai);color:#fff;border-radius:8px;padding:1px 10px;
+font-size:15px;font-weight:700;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.rd{font-size:20px;font-weight:800;color:var(--ai);font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.mean{color:var(--sub);font-size:14px}
+.story{margin:10px 0 4px;font-size:14.5px}
+.story b{color:var(--ai)}
+.story br{line-height:2.1}
+.ldetail{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 4px}
+.lcard{background:var(--paper);border:1px solid #e8e2d2;border-radius:14px;padding:10px;text-align:center}
+.lcard img{width:88px;border-radius:10px;display:block;margin:0 auto 8px}
+.lcard.wide img{width:72px}
+.lcard .lk b{font-size:26px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;color:var(--ai);vertical-align:-2px}
+.lcard .lk .kana{font-size:17px;font-weight:800;color:var(--gold);margin-left:8px}
+.lcard p{font-size:12.5px;color:var(--sub);text-align:left;margin-top:6px;line-height:1.65}
+.lcard .kind{display:inline-block;font-size:11px;border-radius:99px;padding:1px 9px;margin-top:4px;font-weight:700}
+.kind.var{background:#eee7ff;color:#6b46c1}
+.kind.std{background:var(--okbg);color:var(--ok)}
+.extra{margin:14px 0}
+.extra img{width:100%;max-width:560px;border-radius:12px;display:block;margin:0 auto}
+.extra figcaption{text-align:center;font-size:12.5px;color:var(--sub);margin-top:8px}
+.sources{margin-top:12px;font-size:12px;color:var(--sub);line-height:2}
+.sources a{color:var(--acc);text-decoration:none;background:var(--acc2);border-radius:99px;padding:2px 10px;margin:0 4px}
+.intro{font-size:15px;padding:22px 24px}
+.intro .hook{font-size:17px;font-weight:800;color:var(--ai);font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+background:var(--paper);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;white-space:pre-line;line-height:2}
+.intro p{margin:14px 0 0;white-space:pre-line}
+.intro .note{margin-top:14px;background:var(--okbg);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#155e3a}
+.narbtns{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.sense{background:var(--card);border-radius:14px;padding:16px 18px;margin-bottom:12px;
+box-shadow:0 4px 16px rgba(30,40,90,.07);border-left:5px solid var(--ai2)}
+.sense h4{font-size:15.5px;margin-bottom:6px;color:var(--ai)}
+.sense p{font-size:13.5px;color:var(--sub)}
+.letters{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.tlgrid{position:relative;margin-left:10px;border-left:3px solid #d9dcec;padding-left:20px}
+.tl{position:relative;margin-bottom:16px}
+.tl::before{content:"";position:absolute;left:-29px;top:7px;width:13px;height:13px;border-radius:50%;
+background:var(--ai);border:3px solid #fff;box-shadow:0 0 0 2px #d9dcec}
+.tl .era{display:inline-block;background:var(--ai);color:#fff;border-radius:8px;padding:1px 10px;
+font-size:12.5px;font-weight:700;margin-bottom:4px}
+.tl p{font-size:13.5px;color:var(--sub)}
+.trivia{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.triv{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 4px 16px rgba(30,40,90,.07)}
+.triv h4{font-size:15px;margin-bottom:6px}
+.triv p{font-size:13.5px;color:var(--sub)}
+.qwrap{padding:20px 22px}
+.modes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.modes .btn{background:#fff;color:var(--ai);border:1.5px solid var(--ai)}
+.modes .btn.on{background:var(--ai);color:#fff}
+.modes .btn.warn{color:var(--ng);border-color:var(--ng)}
+.q{font-size:15.5px;font-weight:700;margin-bottom:12px}
+.qimg{max-width:460px;width:100%;border-radius:12px;display:block;margin:0 0 14px;box-shadow:0 6px 18px rgba(20,30,80,.18)}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:12px;
+padding:11px 14px;margin-bottom:9px;font-size:14.5px;cursor:pointer;transition:.15s;font-family:inherit}
+.opt:hover{border-color:var(--acc);background:var(--acc2)}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok);font-weight:700}
+.opt.ng{background:var(--ngbg);border-color:var(--ng);color:var(--ng)}
+.opt:disabled{cursor:default}
+.exp{background:var(--paper);border-radius:12px;padding:12px 14px;font-size:13.5px;margin:6px 0 12px}
+.exp b{color:var(--ai)}
+.bar{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+.barinfo{font-size:13.5px;color:var(--sub);flex:1}
+.fin{text-align:center;padding:14px 4px 4px;font-size:16px;font-weight:800;color:var(--ai)}
+.hint{font-size:12.5px;color:var(--sub);font-weight:400}
+footer{text-align:center;font-size:12px;color:var(--sub);padding:22px;line-height:2}
+footer code{background:#eceff7;border-radius:6px;padding:1px 7px}
+@media (max-width:700px){nav.tabs button{min-width:unset;flex:1 1 40%;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="noren"><img data-img="sign_kisoba.jpg" alt="幾楚者の暖簾"></div>
+  <h1>変体仮名店招帖</h1>
+  <div class="jp">へんたいがな ・ てんしょうちょう</div>
+  <p class="sub">暖簾上的「鬼画符」，其实是假名——老铺招牌解谜</p>
+  <div class="tags"><span>きそば＝幾楚者</span><span>字母 23 枚</span><span>看板 7 块</span><span>クイズ 51 問</span></div>
+</header>
+<main>
+  <nav class="tabs" id="tabs">
+    <button data-tab="signs" class="on">🏮 看板帖</button>
+    <button data-tab="shikumi">🗺️ しくみ</button>
+    <button data-tab="monogatari">📜 ものがたり</button>
+    <button data-tab="quiz">🎯 クイズ</button>
+  </nav>
+
+  <section class="tab on" id="tab-signs">
+    <h2 class="sec">🏮 看板帖 <small>老铺暖簾逐个解码 · 点 ▶ 听读音</small></h2>
+    <article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_kisoba.jpg" alt="幾楚者 ── 蕎麦屋の暖簾"></div>
+  <div class="sigbody">
+    <h3>🍜 幾楚者 ── 蕎麦屋の暖簾</h3>
+    <div class="sigmeta"><span class="chip">幾</span><span class="chip">楚</span><span class="chip">者</span>
+      <span class="rd">きそば</span>
+      <span class="mean">＝ 现做荞麦面</span>
+      <button class="btn play" data-aid="kisoba">▶ きそば</button><button class="btn play" data-aid="namakisoba">▶ なまきそば（生そば）</button>
+    </div>
+    <div class="story">首页那张暖簾的高清版就是它：实拍、深蓝布上「御膳」＋三个大字「幾楚者」。<br>· <b>幾</b>＝き。注意！草书版的幾收笔奔放，第一眼容易看成「生」——这就是无数人在暖簾前站住的瞬间。<br>· <b>楚</b>＝そ。现行「そ」出自曽，楚是它的经典分身。<br>· <b>者</b>＝は的语头体。右下补浊点，读ば。<br>三个字连起来是 <b>きそば</b>＝现打荞麦面；再加上「御膳」，就是「套餐＋现打荞麦」的老铺配置。（写真＝筆者撮影）</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_ki.png" alt="幾"><div class="lk"><b>幾</b><span class="kana">き</span></div><p>きの本字。草书写法近似「生」，是本课第一陷阱。</p></div><div class="lcard"><img data-img="letter_so.png" alt="楚"><div class="lk"><b>楚</b><span class="kana">そ</span></div><p>そ的变体假名。与曽・所各分一职。</p></div><div class="lcard"><img data-img="letter_ba.png" alt="者"><div class="lk"><b>者</b><span class="kana">は→ば</span></div><p>は的语头体；加浊点即ば。</p></div></div>
+    <figure class="extra"><img data-img="cmp_ki_sei.png" alt=""><figcaption>左：实拍暖簾上的「幾」，看起来像「生」；右：智永『真草千字文』的草书「幾」——草书的收笔让老铺的文字游戏成立。</figcaption></figure>
+    <div class="sources">参考：<a class="src" href="https://www.kuboi.co.jp/archives/8311/" target="_blank" rel="noopener">久保井インキ社員ブログ「幾楚者？」</a><a class="src" href="https://okurukotoba.tokyo/archives/6312" target="_blank" rel="noopener">おくる言葉「そばを漢字で書くと？」</a><a class="src" href="https://ja.wikipedia.org/wiki/変体仮名" target="_blank" rel="noopener">Wikipedia「変体仮名」（きそばの例）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_soba.jpg" alt="楚者゛ ── そばののれん（通用款）"></div>
+  <div class="sigbody">
+    <h3>🥢 楚者゛ ── そばののれん（通用款）</h3>
+    <div class="sigmeta"><span class="chip">楚</span><span class="chip">者゛</span>
+      <span class="rd">そば</span>
+      <span class="mean">＝ 荞麦面</span>
+      <button class="btn play" data-aid="soba">▶ そば</button>
+    </div>
+    <div class="story">不是所有店都写「幾楚者」。只卖面、不强调「现做」的老铺，帘子上就两个字：<b>楚者゛</b>＝<b>そば</b>——图为老铺「巴屋」（登録商標）的实拍暖簾。<br>· 楚＝そ；者＋浊点＝ば。<br>· 顺带一提：暖簾店至今还在卖这个设计（のれん屋的图鉴里，「生そば」的说明用的就是幾楚者三字拆解）。传统工艺以这种方式活到了电商时代。</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_so.png" alt="楚"><div class="lk"><b>楚</b><span class="kana">そ</span></div><p>そ。</p></div><div class="lcard"><img data-img="letter_ba.png" alt="者゛"><div class="lk"><b>者゛</b><span class="kana">ば</span></div><p>は＋浊点＝ば。</p></div></div>
+    
+    <div class="sources">参考：<a class="src" href="https://fv1.jp/wp-content/uploads/2011/08/巴屋総本店.jpg" target="_blank" rel="noopener">巴屋総本店ののれん（fv1.jp 記事写真, 2011）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_shiruko.png" alt="志る古 ── 甘味処ののれん"></div>
+  <div class="sigbody">
+    <h3>🍵 志る古 ── 甘味処ののれん</h3>
+    <div class="sigmeta"><span class="chip">志</span><span class="chip">る</span><span class="chip">古</span>
+      <span class="rd">しるこ</span>
+      <span class="mean">＝ 红豆年糕汤（しるこ）</span>
+      <button class="btn play" data-aid="shiruko">▶ しるこ</button>
+    </div>
+    <div class="story">変体仮名混排的绝佳标本：<b>志る古</b>＝<b>しるこ</b>。<br>· <b>志</b>＝し（语头体，字源志的草书）<br>· <b>る</b>＝……就是普通的「る」！<br>· <b>古</b>＝こ<br>当年的人写字，变体假名和现行假名是<b>自由混用</b>的——不像换字体，更像今天你在一句话里混用字母和 emoji。（图：以真实字形复原的暖簾——志＝Unicode変体仮名、古＝同、る＝普通のる）</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_shi.png" alt="志"><div class="lk"><b>志</b><span class="kana">し</span></div><p>语头专用的「し」。</p></div><div class="lcard"><img data-img="letter_ko.png" alt="古"><div class="lk"><b>古</b><span class="kana">こ</span></div><p>「こ」的变体。</p></div></div>
+    
+    <div class="sources">参考：<a class="src" href="https://ja.wikipedia.org/wiki/変体仮名" target="_blank" rel="noopener">Wikipedia「変体仮名」（しるこ＝志る古の例）</a><a class="src" href="https://commons.wikimedia.org/wiki/File:Hiragana_SI_01.svg" target="_blank" rel="noopener">字形：Hiragana SI/KO 01.svg（Wikimedia Commons, CC0）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_akayoroshi.jpg" alt="あ可よろし ── 花札の文字"></div>
+  <div class="sigbody">
+    <h3>🃏 あ可よろし ── 花札の文字</h3>
+    <div class="sigmeta"><span class="chip">可</span>
+      <span class="rd">あかよろし</span>
+      <span class="mean">＝ 「红色好！」——花札上的吉语</span>
+      <button class="btn play" data-aid="akayoroshi">▶ あかよろし</button>
+    </div>
+    <div class="story">不是店招，但值得看，因为它出现在人人都摸过的纸上：<b>花札</b>。<br>花札牌面上那行字，读作「あかよろし」——「红色（赤）好」。<br>· <b>可</b>＝か。「加」是现行体，用在语中语尾的就是「可」。<br>「よろし」＝「よろしい」的古典形。一句话就透出花札的江户气质。（图：江戸後期の手描き花札・作者不詳・パブリックドメイン）</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_ka.png" alt="可"><div class="lk"><b>可</b><span class="kana">か</span></div><p>花札「あかよろし」的か，写在牌面上。</p></div></div>
+    <figure class="extra"><img data-img="sign_akayoroshi_edo2.jpg" alt=""><figcaption>江戸中期の手描き花札（三池カルタ歴史博物館蔵、パブリックドメイン）。</figcaption></figure>
+    <div class="sources">参考：<a class="src" href="https://ja.wikipedia.org/wiki/変体仮名" target="_blank" rel="noopener">Wikipedia「変体仮名」（あかよろし＝花札の例）</a><a class="src" href="https://commons.wikimedia.org/wiki/File:Hand-painted_hanafuda_-_late_Edo_period.jpg" target="_blank" rel="noopener">写真：Hand-painted hanafuda（Wikimedia Commons, PD）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_sunaba.jpg" alt="す奈場 ── 蕎麦御三家「砂場」"></div>
+  <div class="sigbody">
+    <h3>🏖️ す奈場 ── 蕎麦御三家「砂場」</h3>
+    <div class="sigmeta"><span class="chip">す</span><span class="chip">奈</span><span class="chip">バ</span>
+      <span class="rd">すなば</span>
+      <span class="mean">＝ 砂場系のそば（すなば）</span>
+      <button class="btn play" data-aid="sunaba">▶ すなば</button>
+    </div>
+    <div class="story">そば御三家といえば藪・更科・<b>砂場（すなば）</b>。<br>大坂・新町の名店「砂場いづみや」の暖簾には、江戸時代から<b>す奈場</b>と染め抜かれていた（寛政10年・1798刊『摂津名所図会』にその図がある）。<br>· <b>奈</b>＝な（奈の草書体）<br>· <b>バ</b>＝盤をくずしたハ＋浊点<br>荞麦面猪口にも「す奈バ」と書いたものがあり、江戸の粋は器にも残っている。<br>照片＝砂場系の老舗「南千住砂場」（東京都荒川区）。</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_na2.png" alt="奈"><div class="lk"><b>奈</b><span class="kana">な</span></div><p>奈の草書体をそのまま仮名に——す奈場の「奈」。</p></div><div class="lcard"><img data-img="letter_ha3.png" alt="バ"><div class="lk"><b>バ</b><span class="kana">ば</span></div><p>は行の変体仮名「盤」のハに浊点。す奈バの「バ」。</p></div></div>
+    <figure class="extra"><img data-img="sunaba_settsu.jpg" alt=""><figcaption>『摂津名所図会』（1798）の大坂・新町「砂場いづみや」——暖簾には「す奈場」と染め抜かれていた。</figcaption></figure>
+    <div class="sources">参考：<a class="src" href="https://www.eonet.ne.jp/~sobakiri/sakuin/jiten-su.html" target="_blank" rel="noopener">そば用語辞典「す奈バ」</a><a class="src" href="https://www.eonet.ne.jp/~sobakiri/1-1.html" target="_blank" rel="noopener">江戸そばの源流「のれん御三家」</a><a class="src" href="https://commons.wikimedia.org/wiki/File:Minami_senju_Sunaba_IMG_8496r_20151113.jpg" target="_blank" rel="noopener">写真：Minami senju Sunaba（Wikimedia Commons, CC BY-SA 4.0, Ogiyoshisan）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_dango.png" alt="団古 ── だんご屋の看板"></div>
+  <div class="sigbody">
+    <h3>🍡 団古 ── だんご屋の看板</h3>
+    <div class="sigmeta"><span class="chip">団</span><span class="chip">古</span>
+      <span class="rd">だんご</span>
+      <span class="mean">＝ 団子（だんご）</span>
+      <button class="btn play" data-aid="dango">▶ だんご</button>
+    </div>
+    <div class="story">街歩きで今も見かける看板文字の定番：<b>団古</b>＝<b>だんご</b>。<br>· <b>団</b>＝だん（借字・当て字）<br>· <b>古</b>＝こ（浊点で ご）。「志る古＝しるこ」と同じ<b>「〜古＝〜こ」</b>の型。<br>江戸の商人は、子ではなく古をあてる洒落で看板をしつらえた。（図：実在の変体仮名「古」の字形と筆致で再構成）</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_dan.png" alt="団"><div class="lk"><b>団</b><span class="kana">だん</span></div><p>借字（当て字）。だんごの「だん」。看板では文字の一部として堂々と書かれる。</p></div><div class="lcard"><img data-img="letter_ko.png" alt="古"><div class="lk"><b>古</b><span class="kana">こ→ご</span></div><p>古の草書体＝変体仮名の「こ」。浊って「ご」——団古で だんご。</p></div></div>
+    
+    <div class="sources">参考：<a class="src" href="https://tenki.jp/suppl/hiroyuki_koga/2018/03/21/27954.html" target="_blank" rel="noopener">tenki.jp「街歩きの途中で見かける不思議な謎の文字──変体仮名って？」（団古の実例）</a></div>
+  </div>
+</article>
+<article class="sigcard card">
+  <div class="sigimg"><img data-img="sign_unagi.jpg" alt="宇奈岐 ── うなぎ屋ののれん"></div>
+  <div class="sigbody">
+    <h3>🐟 宇奈岐 ── うなぎ屋ののれん</h3>
+    <div class="sigmeta"><span class="chip">宇</span><span class="chip">奈</span><span class="chip">岐</span>
+      <span class="rd">うなぎ</span>
+      <span class="mean">＝ 鰻（うなぎ）</span>
+      <button class="btn play" data-aid="unagi">▶ うなぎ</button>
+    </div>
+    <div class="story">うなぎを<b>宇奈岐</b>と書くのは古くからの借字（当て字）。今も「宇奈岐屋」（東京・笹塚）のような店名が現役だ。<br>· <b>宇</b>＝う——「う」の本字<br>· <b>奈</b>＝な<br>· <b>岐</b>＝き（浊って ぎ）<br>写真は藍の暖簾に「う奈ぎ」と染め抜いた鰻屋（tenki.jp 記事より）。「ふ」に見える字が「な」の変体仮名「奈」——うなぎの看板は文字の落とし穴の宝庫である。</div>
+    <div class="ldetail"><div class="lcard"><img data-img="letter_u2.png" alt="宇"><div class="lk"><b>宇</b><span class="kana">う</span></div><p>「う」の本字。宇奈岐の「宇」。</p></div><div class="lcard"><img data-img="letter_na2.png" alt="奈"><div class="lk"><b>奈</b><span class="kana">な</span></div><p>奈の草書体。のれんでは「ふ」や「余」に見えることも。</p></div></div>
+    
+    <div class="sources">参考：<a class="src" href="https://tenki.jp/suppl/hiroyuki_koga/2018/03/21/27954.html" target="_blank" rel="noopener">写真：鰻屋ののれん「う奈ぎ」（tenki.jp 記事）</a></div>
+  </div>
+</article>
+  </section>
+
+  <section class="tab" id="tab-shikumi">
+    <h2 class="sec">🗺️ しくみ <small>変体仮名是什么、怎么用</small></h2>
+    <div class="intro card">
+      <div class="hook">深蓝色的暖簾上，三个大字龙飞凤舞：幾・楚・者。
+路人：「这……念什么？」
+老板：「きそば。」
+路人：「？？？」</div>
+      <p>这不是书法乱写，而是一种正经的旧式假名——変体仮名（へんたいがな）。
+在1900年以前，日语的一个音可以有好多「分身」：同样是「は」，可以写成 波、者、八……看板上挑一款气质合适的用。后来学校统一了字体，这些没被选上的「分身」退居二线，只剩老铺的暖簾、书法和商标还在用。
+本课件专门收集「変体仮名店招」，从一块蕎麦屋暖簾开始，一路解码到花札和字典。</p>
+      <div class="note">💡 放心，变体假名（変体仮名）不是「变态假名」（変態仮名）——虽然老铺确实靠它显得又古又高级。</div>
+      <div class="narbtns"><button class="btn play" data-aid="nar1">▶ ▶ 昔の仮名の話</button><button class="btn play" data-aid="nar2">▶ ▶ 江戸の暖簾の話</button></div>
+    </div>
+    <h2 class="sec">🧭 使い分けの四原則 <small>当年怎么挑字形</small></h2>
+    <div class="sense"><h4>① 看位置：语头・语中・语尾</h4><p>同一个音，位置不同字体不同。最经典的就是「は」三兄弟：语头用「者」、语中语尾用「波」、当助词用「八」。写文章时按位置自动切换，是当年的基本功。</p></div>
+<div class="sense"><h4>② 看搭配：特定词固定写法</h4><p>某些词约定俗成写特定的字，比如「今日」写作「けふ」时，那个「け」用介的草书；某些词还有专属字形。跟现在的「熟字训」有点像——整体记。</p></div>
+<div class="sense"><h4>③ 看音价：清音・浊音・促音・拗音</h4><p>「ち」用知、「ぢ」用地；促音「っ」和拗音「ゅ」也有专门分身。近代以前很少用浊点，换字比加点更优雅。</p></div>
+<div class="sense"><h4>④ 看心情：同音连续时换字</h4><p>一句话里同样的字挨在一起不好看？换一版。功能性之外，版面美观本身就是目的——这就是「女手」的审美传统。</p></div>
+    <h2 class="sec">🔤 字母表 <small>招牌上常见字体的「本体」——点图不响，但值得端详</small></h2>
+    <div class="letters"><div class="lcard wide">
+  <img data-img="letter_ki.png" alt="幾">
+  <div class="lk"><b>幾</b><span class="kana">き</span></div>
+  <span class="kind var">変体（きの本字）</span>
+  <p>「き」的现行字体本来就出自幾的草书。草书奔放时，看起来神似「生」——暖簾第一陷阱。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_so.png" alt="楚">
+  <div class="lk"><b>楚</b><span class="kana">そ</span></div>
+  <span class="kind var">変体</span>
+  <p>「そ」的现行字体出自曽，楚是另一款常用分身。蕎麦屋暖簾的「楚」就是它。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ba.png" alt="者">
+  <div class="lk"><b>者</b><span class="kana">は</span></div>
+  <span class="kind var">変体（語頭用）</span>
+  <p>语头写「者」、语中语尾写「波」、助词写「八」。者加浊点＝ば，这就是「きそば」的「ば」。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ha.png" alt="八">
+  <div class="lk"><b>八</b><span class="kana">は</span></div>
+  <span class="kind var">変体（助詞用）</span>
+  <p>专管助词「は」的分身，出镜率极高。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_shi.png" alt="志">
+  <div class="lk"><b>志</b><span class="kana">し</span></div>
+  <span class="kind var">変体（語頭用）</span>
+  <p>「し」的语头字体。辞书『言海』的「し」开头词条，用的就是它。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_shi2.png" alt="之">
+  <div class="lk"><b>之</b><span class="kana">し</span></div>
+  <span class="kind var">変体（語中語尾用）</span>
+  <p>同一个「し」，换个位置换个字，这就是当年的审美。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ko.png" alt="古">
+  <div class="lk"><b>古</b><span class="kana">こ</span></div>
+  <span class="kind var">変体</span>
+  <p>「しるこ」写作「志る古」——志＋る＋古，三个字三种来历。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ka.png" alt="可">
+  <div class="lk"><b>可</b><span class="kana">か</span></div>
+  <span class="kind var">変体</span>
+  <p>花札上的名句「あ可よろし」的「か」。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ke.png" alt="介">
+  <div class="lk"><b>介</b><span class="kana">け</span></div>
+  <span class="kind var">変体</span>
+  <p>「今日」在古文书里写作「けふ」时，那个「け」用的就是介的草书——固定词配固定字体。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_tsu.png" alt="徒">
+  <div class="lk"><b>徒</b><span class="kana">つ</span></div>
+  <span class="kind var">変体</span>
+  <p>「つ」除了川，还有徒、都等分身。促音「っ」也有专门的字。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ji.png" alt="地">
+  <div class="lk"><b>地</b><span class="kana">ぢ</span></div>
+  <span class="kind var">変体（濁音用）</span>
+  <p>「ち」是知、「ぢ」是地——连浊音都能靠换字来区分。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_yu.png" alt="由">
+  <div class="lk"><b>由</b><span class="kana">ゆ</span></div>
+  <span class="kind var">変体（拗音用）</span>
+  <p>拗音「ゅ」也常写由。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_so2.png" alt="曽">
+  <div class="lk"><b>曽</b><span class="kana">そ</span></div>
+  <span class="kind std">現行（その本字）</span>
+  <p>「そ」的现行字体出自曽。对比楚，气质完全不同。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_so3.png" alt="所">
+  <div class="lk"><b>所</b><span class="kana">そ</span></div>
+  <span class="kind var">変体</span>
+  <p>「そ」的另一分身，所の草书。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ha2.png" alt="波">
+  <div class="lk"><b>波</b><span class="kana">は</span></div>
+  <span class="kind std">現行（はの本字）</span>
+  <p>「は」的现行字体出自波，当年多用于语中语尾。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ha3.png" alt="盤">
+  <div class="lk"><b>盤</b><span class="kana">は</span></div>
+  <span class="kind var">変体</span>
+  <p>「は」的另一分身。す奈場的「バ」＝盤をくずしたハ＋浊点——连荞麦面猪口上都写它。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ka2.png" alt="加">
+  <div class="lk"><b>加</b><span class="kana">か</span></div>
+  <span class="kind std">現行（かの本字）</span>
+  <p>「か」的现行字体出自加，与可变体分工：语头用加，语中语尾用可。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_ko2.png" alt="己">
+  <div class="lk"><b>己</b><span class="kana">こ</span></div>
+  <span class="kind std">現行（この本字）</span>
+  <p>「こ」的现行字体出自己。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_chi.png" alt="知">
+  <div class="lk"><b>知</b><span class="kana">ち</span></div>
+  <span class="kind std">現行（ちの本字）</span>
+  <p>「ち」的现行字体出自知。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_tsu2.png" alt="川">
+  <div class="lk"><b>川</b><span class="kana">つ</span></div>
+  <span class="kind std">現行（つの本字）</span>
+  <p>「つ」的现行字体出自川。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_a.png" alt="安">
+  <div class="lk"><b>安</b><span class="kana">あ</span></div>
+  <span class="kind std">現行（あの本字）</span>
+  <p>「あ」的现行字体出自安——现行假名们，其实都是当年的「获胜分身」。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_na.png" alt="奈">
+  <div class="lk"><b>奈</b><span class="kana">な</span></div>
+  <span class="kind std">現行（なの本字）</span>
+  <p>「な」的现行字体出自奈——宇奈岐・す奈場的「奈」。</p>
+</div>
+<div class="lcard wide">
+  <img data-img="letter_u.png" alt="宇">
+  <div class="lk"><b>宇</b><span class="kana">う</span></div>
+  <span class="kind std">現行（うの本字）</span>
+  <p>「う」的现行字体出自宇——宇奈岐（うなぎ）的「宇」。</p>
+</div></div>
+  </section>
+
+  <section class="tab" id="tab-monogatari">
+    <h2 class="sec">📜 ものがたり <small>从平安女手到电脑Unicode</small></h2>
+    <div class="tlgrid"><div class="tl"><span class="era">平安</span><p>万叶假名的草书一路简化，平假名诞生。从一开始就是一个音配好几个字形，宫廷女性用它写日记和物语，所以也叫「女手」。</p></div>
+<div class="tl"><span class="era">12世纪</span><p>平假名的异体字体系基本定型。镰仓以后，无论谁写，都拿平安朝的字形当范本。</p></div>
+<div class="tl"><span class="era">1884（明治17）</span><p>文部省教科书『読方入門』里，只教一种字体的假名只有8个字——剩下的都在「多字形」状态。</p></div>
+<div class="tl"><span class="era">1900（明治33）</span><p>小学校令施行规则改正：小学教的假名字体被「选一」。没被选上的兄弟姐妹，从此统称「変体仮名」。</p></div>
+<div class="tl"><span class="era">1908（明治41）</span><p>文部省训令第10号，26个字体的变体假名短暂复活。</p></div>
+<div class="tl"><span class="era">1922（大正11）</span><p>复活组再次全灭。学校里的变体假名正式退场。</p></div>
+<div class="tl"><span class="era">战前</span><p>学校不教了，大人的日记、书信、印刷活字里还在用。夏目漱石的自笔原稿里就有大量变体假名。</p></div>
+<div class="tl"><span class="era">1948（昭和23）</span><p>户藉法施行，变体假名不能再用于户籍人名。加上报纸杂志统一字体，使用场景进一步收缩。</p></div>
+<div class="tl"><span class="era">现在</span><p>退守到几个特别「古味」的战场：蕎麦屋的暖簾、书法、商标、地名、人名。角萬这样以「幾楚者」闻名的老铺，曾是东京一景。</p></div>
+<div class="tl"><span class="era">2017</span><p>Unicode 10.0 收录变体假名285字，加上既有合并的1字，共286字可在电脑上原样打出。</p></div></div>
+    <h2 class="sec">🎲 まめ知識 <small>拿去吓朋友一跳的小知识</small></h2>
+    <div class="trivia"><div class="triv"><h4>😂 不叫「变态假名」</h4><p>中文圈常把「変体仮名」戏称「变态假名」，日语博客甚至专门写文章澄清：変体＝异体，不是変態。不过看板前一脸懵的样子，确实挺「変態」的。</p></div>
+<div class="triv"><h4>📖 辞书『言海』的倔强</h4><p>1891年刊行的日本近代词典『言海』，收录「し」开头的词条时，用的就是「志」的草书体（而不是现行的「し」）。词典正文里至今留着这一手旧字体。</p></div>
+<div class="triv"><h4>✒️ 文豪们的日常</h4><p>夏目漱石的自笔原稿里有大量变体假名；川端康成1969年的原稿里还冒出一个变体假名的「な」——对那一代人来说，这就是「认真写字」的默认设置。</p></div>
+<div class="triv"><h4>👪 有人拿它当名字</h4><p>1948年户籍法施行前，人名可以用变体假名。所以今天仍有健在的人，名字里带着别人打不出来的假名——行政系统至今要为这168个字保留位置（住民基本台帳収録変体仮名）。</p></div>
+<div class="triv"><h4>💻 电脑里也能写了</h4><p>2017年 Unicode 10.0 一次收录285字変体仮名（加上原先合并的1字，共286字）。把它复制到聊天软件里，对面多半会显示成豆腐块——给老铺保密效果一流。</p></div>
+<div class="triv"><h4>🏮 为什么是暖簾？</h4><p>蕎麦屋爱用变体假名，一是字体本身古雅，二是「読めたら通」的身份感。老铺的暖簾＝招牌＝信誉，用统一字体反而没有「百年」的味道。Wikipedia的说法：変体仮名现在主要残留在蕎麦屋等老铺的看板・店名，以及书法和商标里。</p></div>
+<div class="triv"><h4>🏯 角萬的「幾楚者」</h4><p>东京台东区竜泉曾有一家老铺蕎麦屋「角萬」，以暖簾上的「幾楚者」闻名，无数人专门跑去拍照考据；遗憾数年前已停业。像这样把「きそば」写成三个汉字的老铺，暖簾本身就是文化遗产。</p></div>
+<div class="triv"><h4>🔀 混搭才是常态</h4><p>不要以为古人都写变体假名——当年变体、现行随机混排。「志る古」这种志（变体）＋る（现行）＋古（变体）的组合毫无违和。统一，是1900年以后才被发明的概念。</p></div></div>
+    <h2 class="sec">🎵 いろは <small>拍子木一响，江户登场</small></h2>
+    <div class="card" style="padding:16px 20px"><button class="btn play" data-aid="iroha">▶ ▶ いろは歌（开头）</button> <span class="hint">いろは歌的开头——旧时代的「ABC」。ゐ・ゑ・を这些旧假名也唱在这里面。</span></div>
+  </section>
+
+  <section class="tab" id="tab-quiz">
+    <h2 class="sec">🎯 クイズ <small>错了会自动进错题本（localStorage）</small></h2>
+    <div class="card qwrap">
+      <div class="modes" id="modes"></div>
+      <div id="qbox"></div>
+      <div class="bar"><span class="barinfo" id="barinfo"></span>
+        <button class="btn" id="next" disabled>つぎへ</button>
+        <span class="barinfo" id="score" style="flex:0 0 auto"></span></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div>変体仮名店招帖 · 个人学习课件（单文件离线可用）</div>
+  <div>图片素材：実拍照片（Wikimedia Commons／tenki.jp／朝日新聞ことばマガジン／fv1.jp 等）＋真实変体仮名字形（Unicode／Wikimedia），出处与许可见各卡片及 README。</div>
+  <div>数据随手改：<code>hentaigana.json</code> → <code>python3 build.py</code> → 重建本页</div>
+</footer>
+<script>
+const AUDIO = {"kisoba": "audio/kisoba-ad34f254db.mp3", "namakisoba": "audio/namakisoba-e93c9b3022.mp3", "soba": "audio/soba-aea7b47073.mp3", "shiruko": "audio/shiruko-41f5ac0498.mp3", "akayoroshi": "audio/akayoroshi-39da288274.mp3", "hentaigana": "audio/hentaigana-2446930095.mp3", "iroha": "audio/iroha-3dc53a9bf5.mp3", "nar1": "audio/nar1-149d10adc1.mp3", "nar2": "audio/nar2-2c0b6cff3e.mp3", "sunaba": "audio/sunaba-b88190b9b4.mp3", "dango": "audio/dango-011e004b70.mp3", "unagi": "audio/unagi-e7313f4f19.mp3"};
+const QUIZ = [{"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_kisoba.jpg", "opts": ["きそば", "ところてん", "うどん", "すし"], "ans": 0, "exp": "幾楚者 ── 蕎麦屋の暖簾＝きそば（现做荞麦面）<br>幾＝き、楚＝そ、者＝は→ば", "bank": "sign", "ref": "kisoba:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_soba.jpg", "opts": ["そば", "あかよろし", "しるこ", "うなぎ"], "ans": 0, "exp": "楚者゛ ── そばののれん（通用款）＝そば（荞麦面）<br>楚＝そ、者゛＝ば", "bank": "sign", "ref": "soba:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_shiruko.png", "opts": ["しるこ", "うどん", "ところてん", "だんご"], "ans": 0, "exp": "志る古 ── 甘味処ののれん＝しるこ（红豆年糕汤（しるこ））<br>志＝し、古＝こ", "bank": "sign", "ref": "shiruko:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_akayoroshi.jpg", "opts": ["あかよろし", "しるこ", "きそば", "そば"], "ans": 0, "exp": "あ可よろし ── 花札の文字＝あかよろし（「红色好！」——花札上的吉语）<br>可＝か", "bank": "sign", "ref": "akayoroshi:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_sunaba.jpg", "opts": ["すなば", "そば", "だんご", "すし"], "ans": 0, "exp": "す奈場 ── 蕎麦御三家「砂場」＝すなば（砂場系のそば（すなば））<br>奈＝な、バ＝ば", "bank": "sign", "ref": "sunaba:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_dango.png", "opts": ["だんご", "あかよろし", "そば", "うどん"], "ans": 0, "exp": "団古 ── だんご屋の看板＝だんご（団子（だんご））<br>団＝だん、古＝こ→ご", "bank": "sign", "ref": "dango:sign"}, {"type": "choice", "q": "这块暖簾读什么？<br><span class=\"hint\">猜不出就点开「しくみ」补课。<\/span>", "qimg": "sign_unagi.jpg", "opts": ["うなぎ", "しるこ", "ところてん", "すし"], "ans": 0, "exp": "宇奈岐 ── うなぎ屋ののれん＝うなぎ（鰻（うなぎ））<br>宇＝う、奈＝な", "bank": "sign", "ref": "unagi:sign"}, {"type": "choice", "q": "字母「幾」对应哪个音？", "qimg": "letter_ki.png", "opts": ["き", "は", "か", "し"], "ans": 0, "exp": "幾＝き（変体（きの本字））<br>💡 「き」的现行字体本来就出自幾的草书。草书奔放时，看起来神似「生」——暖簾第一陷阱。", "bank": "letter", "ref": "幾:letter"}, {"type": "choice", "q": "字母「楚」对应哪个音？", "qimg": "letter_so.png", "opts": ["そ", "き", "ち", "け"], "ans": 0, "exp": "楚＝そ（変体）<br>💡 「そ」的现行字体出自曽，楚是另一款常用分身。蕎麦屋暖簾的「楚」就是它。", "bank": "letter", "ref": "楚:letter"}, {"type": "choice", "q": "字母「者」对应哪个音？", "qimg": "letter_ba.png", "opts": ["は", "ち", "し", "ぢ"], "ans": 0, "exp": "者＝は（変体（語頭用））<br>💡 语头写「者」、语中语尾写「波」、助词写「八」。者加浊点＝ば，这就是「きそば」的「ば」。", "bank": "letter", "ref": "者:letter"}, {"type": "choice", "q": "字母「八」对应哪个音？", "qimg": "letter_ha.png", "opts": ["は", "つ", "し", "う"], "ans": 0, "exp": "八＝は（変体（助詞用））<br>💡 专管助词「は」的分身，出镜率极高。", "bank": "letter", "ref": "八:letter"}, {"type": "choice", "q": "字母「志」对应哪个音？", "qimg": "letter_shi.png", "opts": ["し", "そ", "つ", "ゆ"], "ans": 0, "exp": "志＝し（変体（語頭用））<br>💡 「し」的语头字体。辞书『言海』的「し」开头词条，用的就是它。", "bank": "letter", "ref": "志:letter"}, {"type": "choice", "q": "字母「之」对应哪个音？", "qimg": "letter_shi2.png", "opts": ["し", "つ", "ぢ", "あ"], "ans": 0, "exp": "之＝し（変体（語中語尾用））<br>💡 同一个「し」，换个位置换个字，这就是当年的审美。", "bank": "letter", "ref": "之:letter"}, {"type": "choice", "q": "字母「古」对应哪个音？", "qimg": "letter_ko.png", "opts": ["こ", "ゆ", "つ", "け"], "ans": 0, "exp": "古＝こ（変体）<br>💡 「しるこ」写作「志る古」——志＋る＋古，三个字三种来历。", "bank": "letter", "ref": "古:letter"}, {"type": "choice", "q": "字母「可」对应哪个音？", "qimg": "letter_ka.png", "opts": ["か", "そ", "ち", "け"], "ans": 0, "exp": "可＝か（変体）<br>💡 花札上的名句「あ可よろし」的「か」。", "bank": "letter", "ref": "可:letter"}, {"type": "choice", "q": "字母「介」对应哪个音？", "qimg": "letter_ke.png", "opts": ["け", "し", "ぢ", "ち"], "ans": 0, "exp": "介＝け（変体）<br>💡 「今日」在古文书里写作「けふ」时，那个「け」用的就是介的草书——固定词配固定字体。", "bank": "letter", "ref": "介:letter"}, {"type": "choice", "q": "字母「徒」对应哪个音？", "qimg": "letter_tsu.png", "opts": ["つ", "は", "う", "か"], "ans": 0, "exp": "徒＝つ（変体）<br>💡 「つ」除了川，还有徒、都等分身。促音「っ」也有专门的字。", "bank": "letter", "ref": "徒:letter"}, {"type": "choice", "q": "字母「地」对应哪个音？", "qimg": "letter_ji.png", "opts": ["ぢ", "こ", "あ", "け"], "ans": 0, "exp": "地＝ぢ（変体（濁音用））<br>💡 「ち」是知、「ぢ」是地——连浊音都能靠换字来区分。", "bank": "letter", "ref": "地:letter"}, {"type": "choice", "q": "字母「由」对应哪个音？", "qimg": "letter_yu.png", "opts": ["ゆ", "は", "こ", "け"], "ans": 0, "exp": "由＝ゆ（変体（拗音用））<br>💡 拗音「ゅ」也常写由。", "bank": "letter", "ref": "由:letter"}, {"type": "choice", "q": "字母「曽」对应哪个音？", "qimg": "letter_so2.png", "opts": ["そ", "あ", "か", "こ"], "ans": 0, "exp": "曽＝そ（現行（その本字））<br>💡 「そ」的现行字体出自曽。对比楚，气质完全不同。", "bank": "letter", "ref": "曽:letter"}, {"type": "choice", "q": "字母「所」对应哪个音？", "qimg": "letter_so3.png", "opts": ["そ", "ぢ", "な", "こ"], "ans": 0, "exp": "所＝そ（変体）<br>💡 「そ」的另一分身，所の草书。", "bank": "letter", "ref": "所:letter"}, {"type": "choice", "q": "字母「波」对应哪个音？", "qimg": "letter_ha2.png", "opts": ["は", "あ", "ぢ", "し"], "ans": 0, "exp": "波＝は（現行（はの本字））<br>💡 「は」的现行字体出自波，当年多用于语中语尾。", "bank": "letter", "ref": "波:letter"}, {"type": "choice", "q": "字母「盤」对应哪个音？", "qimg": "letter_ha3.png", "opts": ["は", "な", "ゆ", "う"], "ans": 0, "exp": "盤＝は（変体）<br>💡 「は」的另一分身。す奈場的「バ」＝盤をくずしたハ＋浊点——连荞麦面猪口上都写它。", "bank": "letter", "ref": "盤:letter"}, {"type": "choice", "q": "字母「加」对应哪个音？", "qimg": "letter_ka2.png", "opts": ["か", "な", "つ", "ち"], "ans": 0, "exp": "加＝か（現行（かの本字））<br>💡 「か」的现行字体出自加，与可变体分工：语头用加，语中语尾用可。", "bank": "letter", "ref": "加:letter"}, {"type": "choice", "q": "字母「己」对应哪个音？", "qimg": "letter_ko2.png", "opts": ["こ", "ゆ", "つ", "け"], "ans": 0, "exp": "己＝こ（現行（この本字））<br>💡 「こ」的现行字体出自己。", "bank": "letter", "ref": "己:letter"}, {"type": "choice", "q": "字母「知」对应哪个音？", "qimg": "letter_chi.png", "opts": ["ち", "か", "ゆ", "ぢ"], "ans": 0, "exp": "知＝ち（現行（ちの本字））<br>💡 「ち」的现行字体出自知。", "bank": "letter", "ref": "知:letter"}, {"type": "choice", "q": "字母「川」对应哪个音？", "qimg": "letter_tsu2.png", "opts": ["つ", "は", "こ", "ち"], "ans": 0, "exp": "川＝つ（現行（つの本字））<br>💡 「つ」的现行字体出自川。", "bank": "letter", "ref": "川:letter"}, {"type": "choice", "q": "字母「安」对应哪个音？", "qimg": "letter_a.png", "opts": ["あ", "は", "ぢ", "け"], "ans": 0, "exp": "安＝あ（現行（あの本字））<br>💡 「あ」的现行字体出自安——现行假名们，其实都是当年的「获胜分身」。", "bank": "letter", "ref": "安:letter"}, {"type": "choice", "q": "字母「奈」对应哪个音？", "qimg": "letter_na.png", "opts": ["な", "ぢ", "う", "き"], "ans": 0, "exp": "奈＝な（現行（なの本字））<br>💡 「な」的现行字体出自奈——宇奈岐・す奈場的「奈」。", "bank": "letter", "ref": "奈:letter"}, {"type": "choice", "q": "字母「宇」对应哪个音？", "qimg": "letter_u.png", "opts": ["う", "ぢ", "き", "は"], "ans": 0, "exp": "宇＝う（現行（うの本字））<br>💡 「う」的现行字体出自宇——宇奈岐（うなぎ）的「宇」。", "bank": "letter", "ref": "宇:letter"}, {"type": "choice", "q": "暖簾の「幾楚者」は（　）と読みます。", "opts": ["きそば", "うどん", "あかよろし", "しるこ"], "ans": 0, "exp": "幾＝き、楚＝そ、者゛＝ば。合起来是 きそば＝生そば。", "bank": "fill", "ref": "custom:0"}, {"type": "choice", "q": "暖簾の「楚者゛」は（　）と読みます。", "opts": ["そば", "すし", "そら", "うどん"], "ans": 0, "exp": "楚＝そ、者゛＝ば。", "bank": "fill", "ref": "custom:1"}, {"type": "choice", "q": "甘味処の暖簾「志る古」は（　）と読みます。", "opts": ["しるこ", "おしるこ", "しらこ", "ところてん"], "ans": 0, "exp": "志＝し、古＝こ。中间那个る……就是普通的る。", "bank": "fill", "ref": "custom:2"}, {"type": "judge", "q": "「変体仮名」的意思是「变态假名」。", "opts": null, "ans": false, "exp": "変体＝异体。指的是平假名里没被1900年字体统一规则选上的旧字体。", "bank": "judge", "ref": "custom:3"}, {"type": "judge", "q": "1900年的小学校令施行規則让假名字体统一，落选的字形从此被称为「変体仮名」。", "opts": null, "ans": true, "exp": "正解。1900年（明治33年）是变体假名历史的转折点。", "bank": "judge", "ref": "custom:4"}, {"type": "judge", "q": "変体仮名的文章里，変体仮名和现行假名可以混着用。", "opts": null, "ans": true, "exp": "正解。「志る古」＝志（変体）＋る（现行）＋古（変体），毫无违和。", "bank": "judge", "ref": "custom:5"}, {"type": "judge", "q": "「は」的变体假名「者」主要用在词尾。", "opts": null, "ans": false, "exp": "「者」主要用在语头。语中语尾用「波」，助词用「八」。", "bank": "judge", "ref": "custom:6"}, {"type": "judge", "q": "暖簾「幾楚者」的第一个字，草书体看起来很像「生」。", "opts": null, "ans": true, "exp": "正解。所以很多人第一眼读成「生そば」——其实字形是「幾」的草书，意思倒确实和「生そば」一致。", "bank": "judge", "ref": "custom:7"}, {"type": "choice", "q": "暖簾の「す奈場」は（　）と読みます。", "opts": ["すなば", "きそば", "だんご", "うなぎ"], "ans": 0, "exp": "奈＝な、バ＝盤のハ＋浊点。大坂「砂場」の暖簾の表記。", "bank": "fill", "ref": "custom:8"}, {"type": "choice", "q": "看板の「団古」は（　）と読みます。", "opts": ["だんご", "おもち", "ところてん", "すなば"], "ans": 0, "exp": "古＝こ（浊って ご）。志る古＝しるこ と同じ型。", "bank": "fill", "ref": "custom:9"}, {"type": "choice", "q": "のれんの「宇奈岐」は（　）と読みます。", "opts": ["うなぎ", "あなご", "うどん", "すなば"], "ans": 0, "exp": "宇＝う、奈＝な、岐＝き（浊って ぎ）。鰻の借字。", "bank": "fill", "ref": "custom:10"}, {"type": "judge", "q": "看板の「古」は「こ」と読ませることがある（志る古・団古）。", "opts": null, "ans": true, "exp": "古の草書体は変体仮名の「こ」。", "bank": "judge", "ref": "custom:11"}, {"type": "judge", "q": "蕎麦の御三家は「藪・更科・砂場」。", "opts": null, "ans": true, "exp": "江戸そばののれん御三家。す奈場＝砂場の暖簾の表記。", "bank": "judge", "ref": "custom:12"}, {"type": "listen", "aid": "hentaigana", "q": "🎧 听到的这个词，指的是什么？", "opts": ["平假名的旧字体群", "一种荞麦面", "书法展的名字", "江户时代的敬语"], "ans": 0, "exp": "変体仮名＝平假名里未被1900年字体统一选上的旧字体（异体假名）。", "bank": "listen", "ref": "concept:listen"}, {"type": "listen", "aid": "kisoba", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["幾楚者", "楚者゛", "志る古", "あ可よろし"], "ans": 0, "exp": "幾楚者＝きそば（现做荞麦面）", "bank": "listen", "ref": "kisoba:listen"}, {"type": "listen", "aid": "soba", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["楚者゛", "幾楚者", "志る古", "あ可よろし"], "ans": 0, "exp": "楚者゛＝そば（荞麦面）", "bank": "listen", "ref": "soba:listen"}, {"type": "listen", "aid": "shiruko", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["志る古", "幾楚者", "楚者゛", "あ可よろし"], "ans": 0, "exp": "志る古＝しるこ（红豆年糕汤（しるこ））", "bank": "listen", "ref": "shiruko:listen"}, {"type": "listen", "aid": "akayoroshi", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["あ可よろし", "幾楚者", "楚者゛", "志る古"], "ans": 0, "exp": "あ可よろし＝あかよろし（「红色好！」——花札上的吉语）", "bank": "listen", "ref": "akayoroshi:listen"}, {"type": "listen", "aid": "sunaba", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["す奈場", "幾楚者", "楚者゛", "志る古"], "ans": 0, "exp": "す奈場＝すなば（砂場系のそば（すなば））", "bank": "listen", "ref": "sunaba:listen"}, {"type": "listen", "aid": "dango", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["団古", "幾楚者", "楚者゛", "志る古"], "ans": 0, "exp": "団古＝だんご（団子（だんご））", "bank": "listen", "ref": "dango:listen"}, {"type": "listen", "aid": "unagi", "q": "🎧 听发音，选出对应的暖簾文字。", "opts": ["宇奈岐", "幾楚者", "楚者゛", "志る古"], "ans": 0, "exp": "宇奈岐＝うなぎ（鰻（うなぎ））", "bank": "listen", "ref": "unagi:listen"}];
+const IMG = {"cmp_ki_sei.png": "assets/cmp_ki_sei.png", "letter_a.png": "assets/letter_a.png", "letter_ba.png": "assets/letter_ba.png", "letter_chi.png": "assets/letter_chi.png", "letter_dan.png": "assets/letter_dan.png", "letter_ha.png": "assets/letter_ha.png", "letter_ha2.png": "assets/letter_ha2.png", "letter_ha3.png": "assets/letter_ha3.png", "letter_ji.png": "assets/letter_ji.png", "letter_ka.png": "assets/letter_ka.png", "letter_ka2.png": "assets/letter_ka2.png", "letter_ke.png": "assets/letter_ke.png", "letter_ki.png": "assets/letter_ki.png", "letter_ko.png": "assets/letter_ko.png", "letter_ko2.png": "assets/letter_ko2.png", "letter_na.png": "assets/letter_na.png", "letter_na2.png": "assets/letter_na2.png", "letter_shi.png": "assets/letter_shi.png", "letter_shi2.png": "assets/letter_shi2.png", "letter_so.png": "assets/letter_so.png", "letter_so2.png": "assets/letter_so2.png", "letter_so3.png": "assets/letter_so3.png", "letter_tsu.png": "assets/letter_tsu.png", "letter_tsu2.png": "assets/letter_tsu2.png", "letter_u.png": "assets/letter_u.png", "letter_u2.png": "assets/letter_u2.png", "letter_yu.png": "assets/letter_yu.png", "sign_akayoroshi.jpg": "assets/sign_akayoroshi.jpg", "sign_akayoroshi_edo2.jpg": "assets/sign_akayoroshi_edo2.jpg", "sign_dango.png": "assets/sign_dango.png", "sign_kisoba.jpg": "assets/sign_kisoba.jpg", "sign_shiruko.png": "assets/sign_shiruko.png", "sign_soba.jpg": "assets/sign_soba.jpg", "sign_sunaba.jpg": "assets/sign_sunaba.jpg", "sign_unagi.jpg": "assets/sign_unagi.jpg", "sunaba_settsu.jpg": "assets/sunaba_settsu.jpg"};
+const BANKS = [["sign", "🏮 看板クイズ"], ["letter", "🔤 字母クイズ"], ["fill", "✍️ 穴埋め"], ["judge", "🤔 常識クイズ"], ["listen", "🎧 聴解クイズ"]];
+const $ = s => document.querySelector(s);
+
+document.querySelectorAll('img[data-img]').forEach(im => { if (IMG[im.dataset.img]) im.src = IMG[im.dataset.img]; });
+
+document.querySelectorAll('#tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('section.tab').forEach(s => s.classList.toggle('on', s.id === 'tab-' + b.dataset.tab));
+}));
+
+let cur = null;
+function stopAudio() {
+  document.querySelectorAll('audio').forEach(a => a.pause());
+  document.querySelectorAll('.playing').forEach(x => x.classList.remove('playing'));
+  cur = null;
+}
+document.querySelectorAll('[data-aid]').forEach(btn => btn.addEventListener('click', () => {
+  const aid = btn.dataset.aid;
+  if (cur && cur.aid === aid) { stopAudio(); return; }
+  stopAudio();
+  if (!AUDIO[aid]) return;
+  const a = new Audio(AUDIO[aid]);
+  cur = { aid, a };
+  btn.classList.add('playing');
+  a.addEventListener('ended', stopAudio);
+  a.play();
+}));
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function wrongSet() {
+  try { return new Set(JSON.parse(localStorage.getItem('hentaigana-wrong') || '[]')); }
+  catch (e) { return new Set(); }
+}
+function saveWrong(s) { localStorage.setItem('hentaigana-wrong', JSON.stringify([...s])); }
+
+let order = [], qi = 0, correct = 0, answered = false, mode = 'mix';
+
+function poolSize(bank) {
+  if (bank === 'mix') return QUIZ.length;
+  if (bank === 'wrong') return wrongSet().size;
+  return QUIZ.filter(q => q.bank === bank).length;
+}
+function counts(bank) { return QUIZ.filter(q => q.bank === bank).length; }
+
+function renderModes() {
+  const el = $('#modes');
+  el.innerHTML = '';
+  BANKS.forEach(([bank, label]) => {
+    const b = document.createElement('button');
+    b.className = 'btn' + (mode === bank ? ' on' : '');
+    b.textContent = label + ' (' + counts(bank) + ')';
+    b.addEventListener('click', () => start(bank));
+    el.appendChild(b);
+  });
+  [['mix', '🌀 混合'], ['wrong', '📕 错题 (' + wrongSet().size + ')']].forEach(([bank, label]) => {
+    const b = document.createElement('button');
+    b.className = 'btn' + (mode === bank ? ' on' : '');
+    b.textContent = label;
+    b.addEventListener('click', () => start(bank));
+    el.appendChild(b);
+  });
+  const clear = document.createElement('button');
+  clear.className = 'btn warn';
+  clear.textContent = '🗑 清空错题本';
+  clear.addEventListener('click', () => { saveWrong(new Set()); renderModes(); });
+  el.appendChild(clear);
+}
+
+function start(bank) {
+  mode = bank;
+  let idxs;
+  if (bank === 'mix') idxs = QUIZ.map((_, i) => i);
+  else if (bank === 'wrong') idxs = [...wrongSet()];
+  else idxs = QUIZ.map((_, i) => i).filter(i => QUIZ[i].bank === bank);
+  order = shuffle(idxs);
+  qi = 0; correct = 0;
+  renderModes();
+  if (!order.length) {
+    $('#qbox').innerHTML = '<div class="fin">这个池子还是空的——先去做几题，错题会自己攒进来。</div>';
+    $('#barinfo').textContent = '';
+    $('#next').disabled = true;
+    return;
+  }
+  renderQ();
+}
+
+function renderQ() {
+  answered = false;
+  const q = QUIZ[order[qi]];
+  const box = $('#qbox');
+  let html = '';
+  if (q.qimg && IMG[q.qimg]) html += '<img class="qimg" src="' + IMG[q.qimg] + '" alt="">';
+  html += '<div class="q">' + q.q + '</div>';
+  if (q.type === 'listen') {
+    if (AUDIO[q.aid]) html += '<div style="margin-bottom:12px"><button class="btn play" data-aid="' + q.aid + '">▶ もう一度闻く</button></div>';
+    else html += '<div class="hint" style="margin-bottom:12px">（音频未生成，请读拼音想）</div>';
+  }
+  box.innerHTML = html + '<div id="opts"></div><div id="exp"></div>';
+
+  const optsEl = $('#opts');
+  let opts;
+  if (q.type === 'judge') {
+    opts = [{ t: '⭕ 正しい（真的）', ok: q.ans === true }, { t: '❌ 間違い（假的）', ok: q.ans === false }];
+  } else {
+    opts = shuffle(q.opts.map((t, i) => ({ t, ok: i === q.ans })));
+  }
+  opts.forEach(o => {
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.textContent = o.t;
+    b.dataset.ok = o.ok ? '1' : '0';
+    b.addEventListener('click', () => answer(b, o.ok, q));
+    optsEl.appendChild(b);
+  });
+  $('#barinfo').textContent = '第 ' + (qi + 1) + ' / ' + order.length + ' 問';
+  $('#score').textContent = '✅ ' + correct;
+  $('#next').disabled = true;
+  $('#next').textContent = qi + 1 === order.length ? '集計' : 'つぎへ';
+
+  box.querySelectorAll('[data-aid]').forEach(btn => btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const aid = btn.dataset.aid;
+    if (cur && cur.aid === aid) { stopAudio(); return; }
+    stopAudio();
+    if (!AUDIO[aid]) return;
+    const a = new Audio(AUDIO[aid]);
+    cur = { aid, a };
+    btn.classList.add('playing');
+    a.addEventListener('ended', stopAudio);
+    a.play();
+  }));
+}
+
+function answer(btn, ok, q) {
+  if (answered) return;
+  answered = true;
+  btn.parentNode.querySelectorAll('.opt').forEach(b => {
+    b.disabled = true;
+    const isRight = (q.type === 'judge')
+      ? (b.textContent.startsWith('⭕') === (q.ans === true))
+      : b.dataset.ok === '1';
+    if (isRight) b.classList.add('ok');
+    else if (b === btn) b.classList.add('ng');
+  });
+  if (ok) correct++;
+  const i = order[qi];
+  const ws = wrongSet();
+  if (ok) ws.delete(i); else ws.add(i);
+  saveWrong(ws);
+  $('#exp').innerHTML = '<div class="exp">' + (ok ? '✅ 正解！' : '❌ 答错了，已记入错题本。') + (q.exp || '') + '</div>';
+  $('#score').textContent = '✅ ' + correct;
+  $('#next').disabled = false;
+}
+
+$('#next').addEventListener('click', () => {
+  if (qi + 1 >= order.length) {
+    const total = order.length;
+    $('#qbox').innerHTML = '<div class="fin">' + (correct === total ? '🏆 全問正解！' : '结果：✅ ' + correct + ' / ' + total + (correct / total >= 0.8 ? ' ——老铺のれん、任你读。' : ' ——错题已进错题本，再来一轮。')) + '</div>';
+    $('#barinfo').textContent = '';
+    $('#next').disabled = true;
+    $('#next').textContent = 'つぎへ';
+    renderModes();
+    return;
+  }
+  qi++;
+  renderQ();
+});
+
+renderModes();
+start('mix');
+</script>
+</body>
+</html>

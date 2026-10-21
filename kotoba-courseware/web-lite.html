@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>言葉・新詞 記憶の種</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;
+--gold:#b8860b;--warm:#e8590c;--teal:#0ca678}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);padding-bottom:90px}
+header{background:linear-gradient(135deg,#0f7a5f,#12a37f);color:#fff;padding:26px 20px 20px}
+header h1{font-size:25px} header .kana{opacity:.92;font-size:14px;margin-top:6px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);
+border-radius:99px;padding:2px 10px;font-size:12px;margin:10px 6px 0 0}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{display:flex;gap:8px;margin:-18px 0 16px;position:relative;z-index:2;flex-wrap:wrap}
+nav button{flex:1;min-width:96px;border:none;border-radius:12px;padding:12px 2px;font-size:14px;cursor:pointer;
+background:var(--card);box-shadow:0 2px 10px rgba(30,40,90,.08);color:var(--sub);font-weight:600}
+nav button.on{background:var(--ink);color:#fff}
+nav .wordtab{background:var(--card);border-radius:12px;padding:8px 14px;text-align:center;
+cursor:pointer;font-weight:700;color:var(--sub);box-shadow:0 2px 10px rgba(30,40,90,.08);
+font-size:15px;display:flex;flex-direction:column;line-height:1.2}
+nav .wordtab small{font-size:11px;font-weight:600;color:var(--sub);opacity:.85}
+nav .wordtab.on{background:linear-gradient(135deg,#0f7a5f,#12a37f);color:#fff}
+nav .wordtab.on small{color:#d8f5ea}
+.card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;
+box-shadow:0 2px 10px rgba(30,40,90,.06)}
+.jp{font-size:16.5px;line-height:1.7;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.cn{font-size:13.5px;color:var(--sub);margin-top:3px;line-height:1.75}
+.read{font-size:14px;color:var(--sub)}
+.row{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:none}
+.btn{flex:none;width:34px;height:34px;border-radius:50%;border:none;background:var(--acc2);
+color:var(--acc);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.btn.playing{animation:pulse 1s infinite}
+.btn.big{width:46px;height:46px;font-size:20px}
+@keyframes pulse{50%{transform:scale(1.18);background:var(--acc);color:#fff}}
+.pill{display:inline-block;border-radius:99px;background:#f1f3f8;color:var(--ink);
+padding:3px 12px;font-size:13px;font-weight:700;margin:2px 6px 2px 0}
+.pill.gold{background:#fff4d6;color:var(--gold)}
+.pill.teal{background:#e6fbf3;color:var(--teal)}
+.pill.warm{background:#fff0e6;color:var(--warm)}
+/* hero */
+.hero{background:linear-gradient(135deg,#f0fbf7,#fff);border:2px solid #b8ecd9}
+.hero .bigword{font-size:46px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700;
+letter-spacing:4px;color:#0f7a5f}
+.hero .mega{margin:6px 0}
+.hero .meet{margin-top:12px;font-size:12.5px;color:var(--sub);
+border-top:1px dashed var(--line);padding-top:10px}
+/* scene */
+.scene{background:linear-gradient(135deg,#fff7e6,#fff)}
+.scene .place{font-size:13px;color:var(--gold);font-weight:700;margin-bottom:8px}
+.scene .ctx{font-size:15px}
+.scene .bigline{font-size:24px;margin:10px 0 4px;color:#7a4f00;letter-spacing:1px}
+.scene .take{background:#fff4d6;border-radius:12px;padding:10px 13px;font-size:13.5px;
+line-height:1.8;color:#6b4a00;margin-top:10px}
+/* core & sense */
+.corebox{background:linear-gradient(135deg,#eef1ff,#f6f2ff);border-left:5px solid var(--acc)}
+.corebox h4{font-size:16.5px;margin-bottom:8px;color:#33418f}
+.kv{font-size:14.5px;line-height:1.9}
+.split{background:#fff;border-radius:12px;padding:10px 13px;margin-top:10px;font-size:14px;line-height:1.8}
+.en{font-size:12.5px;color:var(--sub);font-style:italic;margin-top:8px;line-height:1.7}
+.img{font-size:13.5px;color:#7a4ff7;margin-top:8px;line-height:1.7}
+h3.sec{font-size:15px;color:var(--sub);margin:18px 0 8px;font-weight:700}
+.star{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:12px 0}
+.star .corecell{grid-column:1/-1;background:linear-gradient(135deg,#33418f,#7a4ff7);color:#fff;
+border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.75;text-align:center}
+.star .corecell small{display:block;opacity:.9;font-size:12px;margin-top:4px}
+.star .cell{background:#f8faff;border:2px solid #dfe6fb;border-radius:14px;padding:12px;
+cursor:pointer;text-align:center;transition:.15s}
+.star .cell:hover{border-color:var(--acc);transform:translateY(-2px)}
+.star .cell .em{font-size:22px}
+.star .cell b{font-size:14.5px;display:block;margin:6px 0 3px}
+.star .cell small{font-size:11.5px;color:var(--sub);line-height:1.5}
+.sensecard{border-left:5px solid var(--teal)}
+.sensecard h2{font-size:18px}
+.sensecard h2 .num{color:var(--sub);font-weight:600;font-size:13px;margin-right:6px}
+.senselabel{font-size:14px;color:var(--teal);font-weight:700;margin:4px 0 8px}
+.defbox{background:#eef9f4;border-radius:12px;padding:10px 13px;font-size:14.5px;line-height:1.8;margin:6px 0}
+.colloc{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.colloc span{background:#e6fbf3;color:#0b7285;border-radius:99px;padding:4px 12px;font-size:12.5px;font-weight:600}
+.etymo{background:#eef1ff;border-left:5px solid #7a4ff7}
+.etymo .key{background:#fff;border-radius:10px;padding:9px 12px;margin-top:10px;font-size:13.5px;line-height:1.7;color:#3b2f88}
+.anchor{font-size:14px;color:var(--gold);background:#fffdf5;border-radius:12px;
+padding:12px 14px;line-height:1.85;border:2px dashed var(--gold)}
+/* contrast */
+.contrast{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.ccard{background:#fff;border-radius:14px;padding:13px 14px;border:2px solid var(--line);box-shadow:0 1px 6px rgba(30,40,90,.06)}
+.ccard.warming{border-color:var(--ng);background:#fff5f5}
+.ccard h4{font-size:15px;color:#0b7285;margin-bottom:4px}
+.ccard h4 .g{color:var(--sub);font-size:12px;font-weight:600}
+.ccard p{font-size:13.5px;line-height:1.75;color:var(--ink)}
+.ccard .rw{margin-top:8px}
+/* nadeshiko real-film clips */
+.clip{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid var(--line);
+border-radius:14px;padding:12px;box-shadow:0 1px 6px rgba(30,40,90,.06)}
+.clip+.clip{margin-top:12px}
+.clip .shot{flex:none;width:128px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--line);
+background:#eef0f5}
+.clip .cjp{font-size:16px;line-height:1.65;font-weight:600}
+.clip .cen{font-size:13px;color:var(--sub);font-style:italic;margin-top:4px;line-height:1.6}
+.clip .ccn{font-size:13px;color:var(--sub);margin-top:4px;line-height:1.7}
+.clip .clabel{margin-top:6px}
+.clip .clabel span{display:inline-block;border-radius:99px;padding:3px 10px;font-size:11.5px;font-weight:700;
+margin:2px 5px 2px 0}
+.clip .clabel .mep{background:#eef1ff;color:#33418f}
+.clip .clabel .sense{background:#e6fbf3;color:#0b7285}
+.clip .clabel .tim{background:#fff4d6;color:#7a4f00}
+/* quiz */
+.q{font-size:16.5px;line-height:1.75;margin-bottom:14px}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:8px 0;font-size:15.5px;
+border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer;line-height:1.5}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--ng);background:var(--ngbg)}
+.opt:disabled{cursor:default;opacity:.92}
+.exp{margin-top:10px;padding:11px 13px;border-radius:10px;font-size:14px;line-height:1.65}
+.exp.ok{background:var(--okbg);color:var(--ok)} .exp.ng{background:var(--ngbg);color:var(--ng)}
+.judgebtns{display:flex;gap:12px;flex-wrap:wrap}
+.judgebtns .opt{flex:1;min-width:120px;text-align:center;font-size:18px}
+.typeq input{width:100%;max-width:320px;padding:12px 14px;font-size:17px;border:2px solid var(--line);
+border-radius:12px;margin:6px 0;text-align:center}
+.typeq input:focus{outline:none;border-color:var(--acc)}
+.typeq .chk{display:inline-block;background:var(--acc);color:#fff;border:none;border-radius:10px;
+padding:11px 24px;font-size:15px;cursor:pointer}
+.bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+box-shadow:0 -2px 12px rgba(30,40,90,.09);padding:10px 16px;z-index:5}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.score{font-weight:700;color:var(--acc)} .next{border:none;background:var(--acc);color:#fff;
+border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
+.next[disabled]{opacity:.35;cursor:default}
+.fin{text-align:center;padding:30px 10px}
+.fin .big{font-size:44px;font-weight:800;color:var(--acc)}
+.hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
+code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em}
+/* spacing */
+.tl{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.tl .day{flex:1;min-width:100px;background:#fff;border:2px solid var(--line);border-radius:14px;
+padding:10px;text-align:center;position:relative}
+.tl .day.done{border-color:var(--ok);background:var(--okbg)}
+.tl .day.now{border-color:var(--warm);box-shadow:0 0 0 3px #ffe3d1}
+.tl .day.day-lock{border-color:#eef0f5;color:#b6bccd}
+.tl .day b{font-size:15px}
+.tl .day .off{font-size:11px;color:var(--sub)}
+.tl .day button{border:none;background:var(--ok);color:#fff;border-radius:8px;padding:5px 10px;
+font-size:12px;margin-top:8px;cursor:pointer}
+.tl .day.day-lock button{display:none}
+.due{background:#fff7e6;border:2px solid var(--gold)}
+.due .bigoff{font-size:18px;color:var(--warm);font-weight:800}
+.due h4{margin:6px 0}
+.due .taskc{line-height:1.8;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>言葉・新詞 記憶の種</h1>
+<div class="kana">新碰到的词，走一条人脑记得住的路——初见 👉 语义网络 👉 辨析 👉 提取 👉 间隔复习</div>
+<div class="tags"><span>4 個新詞</span><span>初遇情景</span><span>15 段番剧原声</span><span>0 MOJi 原声</span><span>间隔复习</span></div>
+</div></header>
+
+<nav class="wrap" id="nav"></nav>
+<main class="wrap" id="main"></main>
+
+<div class="bar"><div class="wrap">
+<span class="hint" id="barinfo">离线可用 · 点🔊听发音 · 新词先「遇见」再「长根」，靠提取与间隔才能长住</span>
+<button class="next" id="next" onclick="nextQ()" style="display:none">次の問題 →</button>
+<span class="score" id="score"></span>
+</div></div>
+
+<script>
+const AUDIO={"fuzei:w": "audio-moji/風情_1989100769_w_f003.mp3", "fuzei:enc0": "audio/fuzei:enc0-e8bfe94a24.mp3", "fuzei:enc1": "audio/fuzei:enc1-23c8f8a98c.mp3", "fuzei:enc2": "audio/fuzei:enc2-7f6a89ba83.mp3", "fuzei:s1": "audio-moji/風情_86977_e1_f003.mp3", "fuzei:s1b": "audio-moji/風情_86979_e6_f003.mp3", "fuzei:s1c": "audio-moji/風情_86978_e4_f003.mp3", "fuzei:s2": "audio-moji/風情_86980_e0_f003.mp3", "fuzei:s2b": "audio/fuzei:s2b-b10e54528b.mp3", "fuzei:s3": "audio-moji/風情_86981_e2_f003.mp3", "fuzei:s4": "audio-moji/風情_86975_e3_f003.mp3", "fuzei:s4b": "audio-moji/風情_86976_e5_f003.mp3", "fuzei:s4c": "audio/fuzei:s4c-de9f2201e1.mp3", "fuzei:c0": "audio/fuzei:c0-eb49481dc8.mp3", "fuzei:c1": "audio/fuzei:c1-949f5d6d37.mp3", "fuzei:c2": "audio/fuzei:c2-46d2454987.mp3", "fuzei:c3": "audio/fuzei:c3-8791044572.mp3", "fuzei:c4": "audio/fuzei:c4-cb62fb5e16.mp3", "aku:w": "audio-moji/開く_198938426_w_f003.mp3", "aku:enc0": "audio/aku:enc0-9d6a1990e2.mp3", "aku:enc1": "audio/aku:enc1-fa14bb99ae.mp3", "aku:enc2": "audio/aku:enc2-e12d53431c.mp3", "aku:s1": "audio-moji/開く_28898_e0_f003.mp3", "aku:s1b": "audio/aku:s1b-7d1b7a7b40.mp3", "aku:s2": "audio-moji/開く_28899_e3_f003.mp3", "aku:s2b": "audio/aku:s2b-db73cd21c7.mp3", "aku:s3": "audio-moji/開く_28900_e1_f003.mp3", "aku:s4": "audio-moji/開く_28901_e4_f003.mp3", "aku:c0": "audio/aku:c0-e50a022d92.mp3", "aku:c1": "audio/aku:c1-c16720feb1.mp3", "aku:c2": "audio/aku:c2-1fbef85f24.mp3", "aku:c3": "audio/aku:c3-489319c7e3.mp3", "hashagu:w": "audio/hashagu:w-504cfd8008.mp3", "hashagu:enc0": "audio/hashagu:enc0-92e4f9ee0b.mp3", "hashagu:enc2": "audio/hashagu:enc2-da25807888.mp3", "hashagu:s1": "audio/hashagu:s1-9a820ace3c.mp3", "hashagu:s1b": "audio/hashagu:s1b-07d8e4e8ea.mp3", "hashagu:s2": "audio/hashagu:s2-c58f629db7.mp3", "hashagu:c0": "audio/hashagu:c0-d51e3a56c1.mp3", "hashagu:c1": "audio/hashagu:c1-10ce2cde1c.mp3", "hashagu:c2": "audio/hashagu:c2-5655a1f040.mp3", "hashagu:c3": "audio/hashagu:c3-7e82713c08.mp3", "takumashi:w": "audio-moji/逞しい_R4yT2UJA1A_w_f003.mp3", "takumashi:enc0": "audio/takumashi:enc0-43f8801204.mp3", "takumashi:enc2": "audio/takumashi:enc2-6097c71515.mp3", "takumashi:s1": "audio-moji/逞しい_hv0peErrLn_e0_f003.mp3", "takumashi:s1b": "audio-moji/逞しい_JnuMbnX8CL_e3_f003.mp3", "takumashi:s1c": "audio-moji/逞しい_8Iv4cCmR78_e4_f003.mp3", "takumashi:s2": "audio-moji/逞しい_h8DKDAo99D_e1_f003.mp3", "takumashi:s3": "audio-moji/逞しい_YPYnlErFUW_e2_f003.mp3", "takumashi:c0": "audio/takumashi:c0-aaadfd0b90.mp3", "takumashi:c1": "audio/takumashi:c1-c22f1a0ef9.mp3", "takumashi:c2": "audio/takumashi:c2-87905ad8c1.mp3", "takumashi:c3": "audio/takumashi:c3-6f659ed9dd.mp3", "fuzei:nade0": "scenes/l-WpuQPM_58s.mp3", "fuzei:nade1": "scenes/GXSPDdxkoo8t.mp3", "fuzei:nade2": "scenes/TxaH4XVUr3cP.mp3", "fuzei:nade3": "scenes/p4f1S3MdF53R.mp3", "fuzei:nade4": "scenes/yPTUz7SbyTR7.mp3", "fuzei:nade5": "scenes/JbTRaJ89-Qhq.mp3", "aku:nade0": "scenes/Eu5RoXZt8MPF.mp3", "aku:nade1": "scenes/6nuJXm_IbfOM.mp3", "hashagu:nade0": "scenes/X3-mKNzR5dXc.mp3", "hashagu:nade1": "scenes/5JA-nA1-Doe4.mp3", "hashagu:nade2": "scenes/oSa59yhnqGTZ.mp3", "takumashi:nade0": "scenes/rPB1D2qoa7hG.mp3", "takumashi:nade1": "scenes/hQuw8ayOw3EN.mp3", "takumashi:nade2": "scenes/XF76e24RG1o4.mp3", "takumashi:nade3": "scenes/PDUSMhBeIHj0.mp3"};
+const META={"title": "言葉・新詞 記憶の種", "titleCn": "新词收集器", "jp": "ことば・しんし きおくのたね —— 新碰到的一个词，走一条人脑记得住的路", "tags": ["新词·词汇", "多義語", "间隔复习", "音声つき"], "voiceFemale": "ja-JP-NanamiNeural", "voiceMale": "ja-JP-KeitaNeural"};
+const WORDS=[{"id": "fuzei", "word": "風情", "read": "ふぜい", "accent": "①", "altRead": "ふうじょう（古典・音读）", "emoji": "🍂", "level": "N2・多義語", "firstSeen": "2026-08-29", "encounter": {"scene": "初遇场景：春日路边，一棵开着花的桜", "line": "風情がないな。", "context": "「ああ… 桜 咲いてる。」／「まあ 春だから。」", "cn": "“啊…樱花开着呢。”／“嗯，毕竟是春天嘛。”——对着这句干巴巴的实话，旁边换来一句吐槽：<b>「你也太不解风情了。」<\/b>", "take": "这儿的<b>風情がない<\/b>＝缺品味、煞风景。樱花开了、春天来了，本该有“心一动”的感慨与浪漫——他却只会平平淡淡回一句“因为春天”。<br><b>记住这个画面，就记住了風情：它正是“景把情捎给你”时，你心里动的那一下。<\/b>"}, "core": {"title": "走进心头的那股「气」", "def": "某个场所・情景・人<b>自带的一股气质<\/b>，让看见的人心头一动——心被环境带动的滋味。", "split": "<b>風<\/b>＝风吹过的风土・氛围　<b>情<\/b>＝心的动。<br>景物把那股情“捎”到你面前。读法<b>ふ＋せい 连浊成 ふぜい<\/b>，嘴顺、意厚。", "en": "a tasteful atmosphere that a scene / a place / a person naturally carries — the 「charge」 in the air your heart picks up", "image": "一阵风把樱花瓣和香气带过来，你心里“嗡”地动了一下——那股气，就是風情。🌬️🌸"}, "senses": [{"n": 1, "label": "情趣・雅趣（本义）", "emoji": "🌸", "def": "景物・场合本身带有的风雅气质，令人心头一动、说不出地好。", "colloc": "風情がある／ない　風情を添える　風情を感じる・楽しむ・味わう　風情のある○○", "examples": [{"jp": "この庭は風情がある。", "cn": "这个庭院很雅致。", "moji": "s1"}, {"jp": "小雨が風情を添える。", "cn": "微雨增添情趣。", "moji": "s1b"}, {"jp": "風情のあるながめ。", "cn": "幽雅的风致。", "moji": "s1c"}]}, {"n": 2, "label": "模样・样子（书面）", "emoji": "👀", "def": "只停在“看起来那样”的层面：显出的样子、情态。文学・书面语。", "colloc": "〜な風情／悲しげな風情／今にも〜しそうな風情", "examples": [{"jp": "悲しげな風情。", "cn": "悲伤的样子。", "moji": "s2"}, {"jp": "今にも泣き出しそうな風情だった。", "cn": "一副快要哭出来的样子。", "moji": null}]}, {"n": 3, "label": "款待（古典・谦辞）", "emoji": "🍵", "def": "古雅的謙辞：拿不出手的一点招待。说自己待客寒酸时用。", "colloc": "なんの風情もありませんが…", "examples": [{"jp": "なんの風情もありませんが、召し上がってください。", "cn": "没什么好招待的，请慢用。", "moji": "s3"}]}, {"n": 4, "label": "接尾・……之流（贬 / 自谦）", "emoji": "🥴", "def": "接在人・身分词后：说别人＝“区区一个～”（轻蔑）；说自己＝“我这样的”（自谦）。＝只有那点样子的货色。", "colloc": "学生風情／芸人風情／商人風情　私風情／僕風情", "examples": [{"jp": "学生風情にはぜいたくだ。", "cn": "一个学生说来，过于奢侈了。", "moji": "s4"}, {"jp": "商人風情。", "cn": "一个做买卖的下作样子。", "moji": "s4b"}, {"jp": "私風情の者にできることではない。", "cn": "这种事轮不到我这样的小人物。", "moji": null}]}], "etymology": {"title": "语源：从「人的表情」长成「美意識」", "text": "汉文原义是「人的面庞・风貌」。传入日本后，在古诗里渐渐带上“風雅之趣”的意味——从“看见的样子”，深化为“看得心动”的美意识。鎌倉期随筆《方丈記》里已用。<br>读法同样走着这条长路：音读<b>ふうじょう<\/b> 与训读融合的 <b>ふぜい<\/b> 长期并行，泡沫退去，现代以 <b>ふぜい<\/b> 为准。", "key": "记住一句话：風情＝把「模样」升华成「雅趣」——看见的样，升华为心动的美。"}, "contrast": [{"word": "趣　おもむき", "d": "“有看头、值得品”的特质，词面更宽（还表示“意図・趣旨”）。", "ex": "趣のある陶器", "cn": "有韵味的陶器"}, {"word": "情緒　じょうちょ", "d": "“心被带动、情感流淌”那股劲儿，语感更浓、更情绪化。", "ex": "情緒豊かな町並み", "cn": "情感浓郁的街景"}, {"word": "風流　ふうりゅう", "d": "人为营造的雅致、风雅之举（文人趣味）。", "ex": "風流な趣味", "cn": "风雅的爱好"}, {"word": "風味　ふうみ", "d": "食物的风味，转指“做事的味道・特色”。", "ex": "素朴な風味", "cn": "质朴的风味"}, {"word": "殺風景　さっぷうけい", "d": "〈対義〉没有風情、光秃秃、缺味道。", "ex": "殺風景な部屋", "cn": "空荡荡的房子"}], "javaKnife": "風情＝<b>景里自带的“气”<\/b>（先有它，你才心动）　·　情緒＝<b>你心里被带起的“气”<\/b>（心动了）<br>風流＝<b>人为作出来的雅<\/b>　·　趣＝<b>更宽的“值得品”<\/b>　·　風味＝<b>吃出来的味<\/b>", "anchor": "🌬️ 一阵风把樱花的香与色捎到面前，心里一动——这股“气”，就是<b>風情<\/b>。连浊记法：ふ＋せい → ふぜい，嘴顺意厚。", "nadeshiko": [{"sid": "l-WpuQPM_58s", "sense": 1, "media": "安達としまむら / Adachi and Shimamura", "ep": 2, "at": "6:26", "jp": "しまむらには風情が足りないかも", "en": "I think you lack elegance, Shimamura.", "cn": "（对しまうむ说）你这个人，缺点風情、缺点雅致。"}, {"sid": "GXSPDdxkoo8t", "sense": 1, "media": "安達としまむら / Adachi and Shimamura", "ep": 2, "at": "6:29", "jp": "風情…うーん 風情ねえ", "en": "Elegance… Hm… Elegance, eh?", "cn": "在嘴里咂摸“風情”这俩字——这个词值不值得，自己先品一品。"}, {"sid": "TxaH4XVUr3cP", "sense": 4, "media": "氷剣の魔術師が世界を統べる / The Iceblade Sorcerer Shall Rule the World", "ep": 1, "at": "4:08", "jp": "オ…オーディナリー風情が!", "en": "You worthless ordinary!", "cn": "接尾用法：オーディナリー＋風情＝“区区一个普通货色”——正眼都不瞧你。"}, {"sid": "p4f1S3MdF53R", "sense": 4, "media": "ギルドの受付嬢ですが残業は嫌なのでボスをソロ討伐しようとします / I May Be a Guild Receptionist…", "ep": 4, "at": "19:11", "jp": "おのれ 人間風情が…", "en": "You lowly human…", "cn": "人间＋風情＝“区区人类”——异种族的居高临下，接尾贬义的信手拈来。"}, {"sid": "yPTUz7SbyTR7", "sense": 4, "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim", "ep": 6, "at": "7:49", "jp": "勘違いしないでよね 平民風情が!", "en": "Get rid of that misconception right now, commoner.", "cn": "平民＋風情＝“区区平民”──贵族小姐的自负。接尾贬义的教科书例句。"}, {"sid": "JbTRaJ89-Qhq", "sense": 4, "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim", "ep": 7, "at": "13:43", "jp": "割り込むんじゃないわよ! 平民風情が!", "en": "Stay out of this, commoner!", "cn": "同一角色的第二连击：平民風情が——贬起人来一套又一套。"}], "quizzes": [{"bank": "recog", "type": "choice", "q": "「風情」现在的标准读法是？", "opts": ["ふぜい", "ふうじょう", "ふうみ", "きみょう"], "ans": 0, "exp": "现代标准读<b>ふぜい<\/b>（ふ＋せい 连浊）。ふうじょう 是古典音读。"}, {"bank": "recog", "type": "choice", "q": "「悲しげな風情。」の「風情」の意味は？", "opts": ["雅致・情趣", "悲伤的样子", "款待", "风景风貌"], "ans": 1, "exp": "义项②「样子・情态」：悲伤的神色。"}, {"bank": "recog", "type": "listen", "aid": "fuzei:w", "q": "🎧 听単語读音，选出对应的词。", "opts": ["風情　ふぜい", "風味　ふうみ", "風流　ふうりゅう", "風景　ふうけい"], "ans": 0, "exp": "ふぜい＝風情。"}, {"bank": "discrim", "type": "choice", "q": "同样形容“氛围”，<b>专注于“心被带动、情绪在流淌”那股劲儿<\/b>的是哪个？", "opts": ["情緒　じょうちょ", "風情　ふぜい", "風味　ふうみ"], "ans": 0, "exp": "情緒 轴心在“感情动”。"}, {"bank": "discrim", "type": "choice", "q": "「風情がない」的近义（対義）说法是？", "opts": ["殺風景", "情緒豊か", "風流", "風情満載"], "ans": 0, "exp": "殺風景＝缺風情、空落落。"}, {"bank": "discrim", "type": "judge", "q": "“风雅是<b>人刻意营造<\/b>出来的趣味。”这个说法指的更像是「風流」，而不是「風情」。", "ans": true, "exp": "✓ 風流＝人为的风雅之举；風情＝自然散发的气质。"}, {"bank": "discrim", "type": "choice", "q": "听到有人说“この小路は風情がある。”，可以换成哪句仍不失原味？", "opts": ["この小路は趣がある。", "この小路は殺風景だ。", "この小路は風味がする。"], "ans": 0, "exp": "趣（おもむき）＝心被吸引的韵味，与風情近义可换。"}, {"bank": "custom", "type": "choice", "q": "回顾初遇场景：“ああ…桜 咲いてる。”→“まあ 春だから。”→「風情がないな。」<br>说话人对这句“春だから”的潜台词是？", "opts": ["「这人真不解风情」", "「春天没意思」", "「今年樱花短缺」"], "ans": 0, "exp": "景在这里，心却不着过去——于是被吐槽“風情がない”。"}, {"bank": "custom", "type": "judge", "q": "「私風情には、そんな大役は務まりません。」——这是<u>自谦<\/u>。", "ans": true, "exp": "✓ 〜風情 用在自己身上＝谦辞。"}, {"bank": "custom", "type": "judge", "q": "对上司说「部長風情に分かるはずがない。」——这是尊敬的表达。", "ans": false, "exp": "✗ ～風情 用到别人身上是<b>轻蔑<\/b>。"}, {"bank": "custom", "type": "choice", "q": "「学生風情にはぜいたくだ。」の「学生風情」のニュアンスは？", "opts": ["区区一个学生（自示渺小）", "有学生风雅气质", "学生的审美很时髦"], "ans": 0, "exp": "接尾用法：＜人＞＋風情＝“只有那点样子的货色”。"}, {"bank": "custom", "type": "listen", "aid": "fuzei:s2", "q": "🎧 听例句：「悲しげな風情。」——这里的風情 指？", "opts": ["悲伤的样子（义项②）", "优雅的风致（义项①）", "待客的款待（义项③）"], "ans": 0, "exp": "悲しげ＝“看上去悲伤”的样子→ 義項②"}]}, {"id": "aku", "word": "開く", "read": "あく", "accent": "⓪", "altRead": "ひらく（他動詞・同形）", "emoji": "🕳️", "level": "N5・多義語", "firstSeen": "2026-09-01", "encounter": {"scene": "初遇场景：朋友之间的玩笑——「别买新的了，一直穿到穿出洞为止！」", "line": "穴あくまでパンツはくなよ。", "context": "「新しいの買えよ。」／「いや、穴あくまで履くよ。」", "cn": "「买条新的吧。」「不用，穿到<b>穿出洞<\/b>为止。」——パンツ开洞＝用到不能再用，一针见血的生活态度。", "take": "「穴が開く」的「あく」就是<b>開く<\/b>——东西上出现一个洞、裂口。穿裤子穿到磨破洞，这个「あく」的画面感极强：<b>布一点一点变薄，最后「啪」地一声破了个口<\/b>。<br>记住这个画面，就记住了 開く あく 的核心：「不再封闭，出现开口」。"}, "core": {"title": "封闭的东西裂出一道口", "def": "原本关着/完整的东西<b>出现开口、裂口、缝隙<\/b>——从「无」到「有」的那一刻。", "split": "<b>開<\/b>＝开门的「開」——把关着的东西打开<br><b>あく<\/b>＝自动词：不是人为打开，是它<b>自己<\/b>裂开、破开、张开。读音⓪：平坦、自然发生。", "en": "to open up, to form a gap — something that was closed or intact develops an opening (automatically, not by force)", "image": "一条裤子膝盖处越穿越薄，最后「啪」地磨出一个洞——那个「啪」的瞬间，就是穴が開く。🕳️👖"}, "senses": [{"n": 1, "label": "出现洞口、裂口（本义）", "emoji": "🕳️", "def": "完整的东西（衣物、皮肤、墙壁等）上出现洞或裂缝。被动地、自然地发生。", "colloc": "穴が開く　口が開く　亀裂が開く　胃に穴が開く", "examples": [{"jp": "穴あくまでパンツはくなよ。", "cn": "裤子一直穿到穿出洞为止。", "moji": null}, {"jp": "穴があいてるんだけど…", "cn": "（衣服上）有个洞……", "moji": null}]}, {"n": 2, "label": "门/窗/嘴等打开", "emoji": "🚪", "def": "门、窗、嘴等本来关着的东西张开、敞开。自动发生。", "colloc": "ドアが開く　目が開く　口が開く　幕が開く", "examples": [{"jp": "ドアが開く。", "cn": "门开了。", "moji": null}, {"jp": "開いた口がふさがらない。", "cn": "目瞪口呆（张开的嘴合不上）。", "moji": null}]}, {"n": 3, "label": "开业、开始营业", "emoji": "🏦", "def": "商店、银行等开始营业——「开门」迎客。", "colloc": "銀行が開く　店が開く　商業施設が開く", "examples": [{"jp": "銀行が開く。", "cn": "银行开门了。", "moji": null}]}, {"n": 4, "label": "开幕、开演", "emoji": "🎭", "def": "芝居（戏剧）的幕布拉开，演出开始。", "colloc": "幕が開く　会谈が開く　会議が開く", "examples": [{"jp": "幕が開く。", "cn": "开幕了。", "moji": null}]}], "etymology": {"title": "语源：「開」字本义＝开门，日语训读聚焦「自动裂开」", "text": "「開」是会意字：門＋双（两只手）＝用手开门。传入日本后，<b>ひらく<\/b>（他動詞）保留了「人为打开」的本义，而 <b>あく<\/b>（自動詞）专门用来表达「东西自己裂开、张开」——从门自动开，到衣服磨破洞，核心都是<b>非人为的「裂口」<\/b>。<br>声调⓪（平板型）：自然发生、不动声色——恰好对应「它自己就裂了」的语感。", "key": "记住：あく ＝ 自己裂开（自動）；ひらく ＝ 人为打开（他動）。"}, "contrast": [{"word": "開く　ひらく", "d": "他動詞＋自動詞的同形异读：ひらく 强调<b>人为打开<\/b>（开门、开会、开演）。", "ex": "ドアを開く", "cn": "开门（人为打开）"}, {"word": "空く　すく", "d": "表示<b>变得空旷、人少了<\/b>——「挤在一起的人散了」，不是「出现洞」。", "ex": "道が空く", "cn": "路上人少了"}, {"word": "破ける　やける", "d": "表示<b>撕裂、破损<\/b>——强调「破坏」的结果，あく 强调「出现开口」的过程。", "ex": "紙が破けた", "cn": "纸破了"}, {"word": "擴がる　ひろがる", "d": "表示<b>扩散、蔓延<\/b>——从一个点向四周铺开，不是「裂口」。", "ex": "花火が広がる", "cn": "烟花扩散"}], "javaKnife": "あく＝<b>自己裂开<\/b>（自動・无意志）　·　ひらく＝<b>人为打开<\/b>（他動）<br>空く＝<b>变空旷<\/b>　·　破ける＝<b>撕裂（强调破坏结果）<\/b>", "anchor": "🕳️ 一条裤子膝盖处越穿越薄，最后「啪」地磨出一个洞——那个<b>啪<\/b>的瞬间就是 あく。<br>あく ＝ 自己裂开（自動）；ひらく ＝ 人为打开（他動）。声调⓪：自然发生、不动声色。", "nadeshiko": [{"sid": "Eu5RoXZt8MPF", "sense": 1, "media": "コクリコ坂から / From Up on Poppy Hill", "ep": 1, "at": "3:46", "jp": "よく穴があくわね", "en": "More holes?", "cn": "（洗衣服时发现）又穿出洞了啊——母女间的家常感叹，穴があく 的日常语感。"}, {"sid": "6nuJXm_IbfOM", "sense": 1, "media": "あそびあそばせ / Asobi Asobase", "ep": 1, "at": "9:03", "jp": "机に穴あいてるんだけど…", "en": "There're holes on the desk.", "cn": "课桌上有个洞……——校园生活里的小破坏，穴があく 的「物体上出现洞」义。"}], "quizzes": [{"bank": "recog", "type": "choice", "q": "「穴あくまでパンツはくなよ」里的「あく」对应的汉字是？", "opts": ["開く", "空く", "明く", "挙く"], "ans": 0, "exp": "磨出洞 ＝ 開く（あく）＝出现开口/裂口。"}, {"bank": "recog", "type": "choice", "q": "「ドアが開く」的「開く」读作？", "opts": ["あく", "ひらく", "あける", "ひらける"], "ans": 0, "exp": "自動詞：ドア<b>が<\/b>開く → あく。ドア<b>を<\/b>開く → ひらく。"}, {"bank": "recog", "type": "judge", "q": "「開く（あく）」只能表示「出现洞」，不能表示「门打开」。", "ans": false, "exp": "✗ あく 既可表示「出现洞/裂缝」，也可表示「门/窗/嘴打开」。"}, {"bank": "discrim", "type": "choice", "q": "以下哪个词强调<b>人为地<\/b>打开？", "opts": ["開く　ひらく", "開く　あく", "空く　すく", "破ける　やける"], "ans": 0, "exp": "ひらく ＝ 他動詞（人为打开）；あく ＝ 自動詞（自己裂开）。"}, {"bank": "discrim", "type": "choice", "q": "「紙が____」——要表达「纸破了一个洞」，最合适的词是？", "opts": ["開いた", "空いた", "広がった", "割れた"], "ans": 0, "exp": "開いた（あいた）＝出现了一个开口/洞。"}, {"bank": "custom", "type": "judge", "q": "「穴あくまでパンツはくなよ」的意思是「把裤子一直穿到穿出洞为止」——暗示要勤俭、别轻易买新的。", "ans": true, "exp": "✓ 完全正确。"}, {"bank": "custom", "type": "choice", "q": "「銀行が開く」的「開く」属于哪个义项？", "opts": ["开业、开始营业", "出现洞口", "门打开", "开幕、开演"], "ans": 0, "exp": "銀行が開く ＝ 银行开门营业（义项③）。"}]}, {"id": "hashagu", "word": "はしゃぐ", "read": "はしゃぐ", "accent": "②⓪", "altRead": "燥ぐ（漢字表記）", "emoji": "🎉", "level": "N2", "firstSeen": "2026-09-01", "encounter": {"scene": "初遇场景：公园里，一群孩子追着跑、尖叫、笑个不停", "line": "子どものはしゃぐ声。", "context": "远远传来一阵阵笑声和喊叫声——孩子们在玩耍。", "cn": "孩子们<b>欢闹<\/b>的声音——不是「说话声」，不是「哭声」，是那种全身投入、得意忘形的<b>嬉闹声<\/b>。", "take": "「はしゃぐ」的核心画面：小孩跑啊叫啊，<b>完全沉浸在快乐里、忘了规矩<\/b>——那种亢奋、忘我、停不下来的状态。<br>记住这个画面：一群小孩在公园疯跑尖叫——那就是 はしゃぐ。"}, "core": {"title": "得意忘形地闹", "def": "情绪高涨、<b>得意忘形<\/b>地嬉闹喧哗——控制不住地兴奋。", "split": "<b>はしゃぐ<\/b>＝「燥ぐ」——注意汉字「燥」本义是「干燥、风干」，引申为「情绪像被风吹干了一样高涨」。<br>声调②⓪：②是强调型（はしゃ），⓪是轻快收尾（ぐ）——像小孩蹦一下再落地。", "en": "to frolic, to get carried away with excitement — kids running around squealing, unable to contain their glee", "image": "一群小孩在公园里追着跑、尖叫、笑得停不下来——那种完全忘我的亢奋，就是 はしゃぐ。🎉🏃"}, "senses": [{"n": 1, "label": "欢闹、嬉闹（本义）", "emoji": "🎉", "def": "調子にのって、うかれさわぐ——情绪高涨、得意忘形地闹。", "colloc": "はしゃぐな　はしゃぎすぎる　子供がはしゃぐ", "examples": [{"jp": "旅行を前に子供が燥ぐ。", "cn": "旅行前孩子们很喧闹。", "moji": null}, {"jp": "子どもたちのはしゃぐ声が、聞こえます。", "cn": "孩子们传来一阵欢快的声音。", "moji": null}]}, {"n": 2, "label": "风干、干燥（本义・书面）", "emoji": "🌬️", "def": "かわく、乾燥する——物体自然风干。这个义项现在很少用，但它是汉字「燥」的本义。", "colloc": "桶が燥ぐ　木材が燥ぐ", "examples": [{"jp": "桶が燥ぐ。", "cn": "桶干了。", "moji": null}]}], "etymology": {"title": "语源：从「风干」到「情绪高涨」——干燥→亢奋的跳跃", "text": "「燥」的本义是「干燥、风干」（かわく）。木桶放久了会变干收缩——那种「被风抽走水分、变得轻飘飘」的状态，被人用来形容<b>情绪被快乐「抽空」理智、变得飘飘然<\/b>的样子。<br>从「物体变干」到「人变得得意忘形」，跨度虽大，但核心都是<b>「失去原有的分量/沉稳」<\/b>。", "key": "记住：燥ぐ 本义是「风干」——木桶变干会「嘎吱」作响，像小孩兴奋时的尖叫。"}, "contrast": [{"word": "騒ぐ　さわぐ", "d": "更广义的「吵闹」，可以是愤怒、混乱、喧哗，不一定是开心的。", "ex": "子供が騒いでいる", "cn": "孩子们在吵闹（不一定是开心）"}, {"word": "悦ける　えける", "d": "书面/古语的「高兴」，语感更文雅，不带「闹」的动作感。", "ex": "悦びに泳ぐ", "cn": "沉浸在喜悦中（古风）"}, {"word": "わちゃわちゃする", "d": "口语化的「热闹、嬉闹」，语感更轻、更日常，常带「一群人」的画面。", "ex": "みんなでわちゃわちゃする", "cn": "大家一起嘻嘻哈哈"}, {"word": "浮かれる　うかれる", "d": "「飘起来、得意忘形」，更侧重心态上的「飘」，不强调「闹」的动作。", "ex": "調子に浮かれる", "cn": "得意忘形"}], "javaKnife": "はしゃぐ＝<b>亢奋地闹<\/b>（有动作、有声音）　·　騒ぐ＝<b>广义的吵<\/b>（不一定开心）<br>浮かれる＝<b>心态上飘<\/b>（不一定闹）　·　わちゃわちゃ＝<b>口语轻快版<\/b>", "anchor": "🎉 一群小孩在公园疯跑尖叫、完全忘我——那个<b>亢奋、停不下来<\/b>的画面就是 はしゃぐ。<br>汉字「燥」本义是「风干」，引申为「情绪被快乐抽空理智、飘飘然」。", "nadeshiko": [{"sid": "X3-mKNzR5dXc", "sense": 1, "media": "悪役令嬢 / I'm in Love with the Villainess", "ep": 1, "at": "21:39", "jp": "はしゃぐクレア様... かわいい", "en": "Miss Claire's all excited... That's so cute!", "cn": "（看着别人得意忘形地开心）那种抑制不住的快乐——はしゃぐ 的「調子に乗る」语感。"}, {"sid": "5JA-nA1-Doe4", "sense": 1, "media": "SPY×FAMILY Season 3", "ep": 6, "at": "16:30", "jp": "おーい あんまり はしゃぐな", "en": "Hey, settle down.", "cn": "（长辈提醒孩子别太疯）はしゃぐな＝别闹得太厉害——默认「你已经在闹了」。"}, {"sid": "oSa59yhnqGTZ", "sense": 1, "media": "ご注文はうさぎですか？ / Is the Order a Rabbit?", "ep": 3, "at": "2:36", "jp": "アハハッ! あんま はしゃぐな", "en": "Don't play around too much.", "cn": "（笑着提醒）はしゃぐな——同一种语感：你太嗨了，收着点。"}], "quizzes": [{"bank": "recog", "type": "choice", "q": "「はしゃぐ」的汉字写法是？", "opts": ["燥ぐ", "騒ぐ", "悦ぐ", "歓ぐ"], "ans": 0, "exp": "はしゃぐ ＝ 燥ぐ。騒ぐ（さわぐ）是另一个词。"}, {"bank": "recog", "type": "judge", "q": "「燥ぐ」的本义是「欢闹」。", "ans": false, "exp": "✗「燥」的本义是「干燥、风干」，「欢闹」是引申义。"}, {"bank": "recog", "type": "choice", "q": "「はしゃぐな」的语气是？", "opts": ["禁止/提醒（别闹了）", "鼓励（继续闹！）", "疑问（在闹吗？）"], "ans": 0, "exp": "はしゃぐな ＝ な（禁止形）＝别闹了/收着点。"}, {"bank": "discrim", "type": "choice", "q": "以下哪个词<b>不一定<\/b>是开心的「闹」？", "opts": ["騒ぐ　さわぐ", "はしゃぐ", "わちゃわちゃする"], "ans": 0, "exp": "騒ぐ 可以是愤怒、混乱的闹；はしゃぐ 和 わちゃわちゃ 一定带开心的语感。"}, {"bank": "discrim", "type": "choice", "q": "「調子に____」——要表达「得意忘形」，最接近 はしゃぐ 的词是？", "opts": ["浮かれる", "燥ぐ", "騒ぐ", "傭う"], "ans": 0, "exp": "浮かれる＝心态上「飘起来」，与はしゃぐ的「得意忘形」语感最近。"}, {"bank": "discrim", "type": "judge", "q": "「はしゃぐ」和「わちゃわちゃ」都带开心的语感，但「わちゃわちゃ」更口语、更轻快。", "ans": true, "exp": "✓ 正确。わちゃわちゃ 是日常口语，はしゃぐ 稍微正式一点。"}, {"bank": "custom", "type": "judge", "q": "「子どもたちのはしゃぐ声が聞こえます。」——这里的「はしゃぐ」是义项②「风干」。", "ans": false, "exp": "✗ 孩子的声音 → 欢闹声（义项①），不是「风干」。"}, {"bank": "custom", "type": "choice", "q": "SPY×FAMILY 里「おーい あんまり はしゃぐな」——说话人的语气是？", "opts": ["温柔提醒（别太疯了）", "严厉训斥（闭嘴！）", "开心鼓励（继续！）"], "ans": 0, "exp": "おーい（喂）+ はしゃぐな（别太闹）＝随口提醒，不是生气。"}]}, {"id": "takumashi", "word": "逞しい", "read": "たくましい", "accent": "④", "emoji": "💪", "level": "N1・N2・考研", "firstSeen": "2026-09-01", "encounter": {"scene": "初遇场景：看着某个坚强/壮实的人/动物，发出感叹", "line": "たくましいですね～。", "context": "（看到对方体格健壮、做事坚忍的样子）すごいなあ…", "cn": "“真是<b>健壮<\/b>啊～”「真是太健壮了」。这句台词里是对<b>顽强、壮实、充满生命力<\/b>的由衷赞叹。", "take": "「たくましい」的画面：<b>体格结实、肌肉隆起、风吹雨打也不倒<\/b>——那种从身体里透出来的强韧。<br>记住这个画面：农忙时农民晒得黝黑、扛起麻袋的胳膊——那就是 たくましい。"}, "core": {"title": "从身体里透出来的强韧", "def": "<b>健壮结实＋意志顽强<\/b>，满身是劲、充满生命力——身体和心都“抗造”。", "split": "<b>逞しい<\/b>＝「逞」字含“奔跑、伸展”之意——像是把身体极力舒展开、撑得满满的强壮感。<br>声调④（たくま奇丽）：词尾「しい」拖得长长的，正好形容“扩散开的壮实感”。", "en": "sturdy and iron-willed — a body (and spirit) built to take a beating, brimming with vigor", "image": "一个被太阳晒红、胳膊上青筋鼓起来的人，扛起麻袋稳稳地走——那股从里到外的“抗造”，就是 たくましい。💪🌞"}, "senses": [{"n": 1, "label": "健壮、强壮（本义・体）", "emoji": "💪", "def": "体格结实强壮——体つきががっしりしていて強そう。", "colloc": "逞しい体つき　逞しい腕　逞しい若者", "examples": [{"jp": "逞しい若者。", "cn": "健壮的小伙子。", "moji": "s1"}, {"jp": "逞しい力。", "cn": "强大的力量。", "moji": "s1b"}, {"jp": "ひとりの青年としてたくましく成長した。", "cn": "作为一个青年茁壮成长起来了。", "moji": "s1c"}]}, {"n": 2, "label": "旺盛、蓬勃、茁壮", "emoji": "🌱", "def": "充满活力、欣欣向荣——对志向、求知欲等抽象事物的“壮”。", "colloc": "逞しい向学心　逞しい夢　逞しい意欲", "examples": [{"jp": "逞しい向学心。", "cn": "旺盛的求知欲。", "moji": "s2"}]}, {"n": 3, "label": "顽强、刚毅、坚韧不拔", "emoji": "🛡️", "def": "意志坚强，无论遇到什么事都不灰心失望——精神的强韧。", "colloc": "たくましい精神力　たくましく生きる　逞しい人生", "examples": [{"jp": "たくましい精神力。", "cn": "坚强的精神。", "moji": "s3"}]}], "etymology": {"title": "语源：「逞」=奔跑舒展，引申为「撑得满满的壮实」", "text": "「逞」的本义是<b>奔跑、快行<\/b>（逞＝足＋昶，“昶”是日长、舒展）。由“尽力奔跑舒展”引申为“把气力全撑开”的<b>壮实、强悍<\/b>，再由“身体强”过渡到“<b>意志强<\/b>”。<br>声调④：たくま+しい，最后「しい」拉长，像是一口气把强壮感铺满整个句尾。", "key": "记住：逞＝奔跑舒展 → 气力全撑开 → 又壮又韧。"}, "contrast": [{"word": "<ruby>強<rt>つよ<\/rt><\/ruby>い", "d": "最宽泛的“强”——体、力、能力、意志都可用，不带“壮实/结实”的身体画面。", "ex": "体が強い", "cn": "身体强壮（中性）"}, {"word": "<ruby>屈強<rt>くっきょう<\/rt><\/ruby>", "d": "文语/书面的“魁梧健壮”，强调<b>肌肉发达、体格大<\/b>，偏外观。", "ex": "屈強な男", "cn": "体格魁梧的汉子"}, {"word": "<ruby>頑丈<rt>がんじょう<\/rt><\/ruby>", "d": "偏“结实耐用、不易坏”——身体的“耐用”，情绪上不如たくましい积极。", "ex": "頑丈な体", "cn": "结实的身体"}, {"word": "逞しさ　いだたき", "d": "名词形（逞しさ）＝“那股强韧劲儿”。", "ex": "逞しさを感じる", "cn": "感受到那股强韧"}], "javaKnife": "たくましい＝<b>又壮又韧<\/b>（体＋心都抗造）　・　強い＝<b>广义的强<\/b>（不带“壮”的画面）<br>屈強＝<b>魁梧的外观<\/b>　・　頑丈＝<b>结实耐用<\/b>", "anchor": "💪 被太阳晒红、青筋鼓起、扛麻袋稳走的人——那股从里到外的“抗造”就是 たくましい。<br>「逞」＝奔跑舒展 → 气力全撑开 → 又壮又韧。声调④，词尾「しい」延长得像铺开的强壮感。", "nadeshiko": [{"sid": "rPB1D2qoa7hG", "sense": 1, "media": "うる星やつら（2022）/ Urusei Yatsura", "ep": 23, "at": "2:14", "jp": "そして たくましい腕力!", "en": "And robust physical strength!", "cn": "义项①体格：又壮又有劲的臂力——「たくましい腕力」指身体的力量。"}, {"sid": "hQuw8ayOw3EN", "sense": 3, "media": "けいおん！/ K-ON!", "ep": 5, "at": "13:18", "jp": "りっちゃん たくましい子", "en": "You're so resolute, Ricchan!", "cn": "义项③精神：夸人<u>意志坚定、靠得住<\/u>——リッちゃん这种风风火火、扛得住事的性格。"}, {"sid": "XF76e24RG1o4", "sense": 3, "media": "斉木楠雄のΨ難 / The Disastrous Life of Saiki K.", "ep": 2, "at": "14:04", "jp": "たくましいわ パパ...", "en": "You're so strong.", "cn": "义项③精神：对爸爸坚韧/心大的感叹——たくましい 用在这种哭笑不得的人身上很常见。"}, {"sid": "PDUSMhBeIHj0", "sense": 3, "media": "デッドデッドデーモンズデデデデデストラクション / Dead Dead Demon's", "ep": 17, "at": "21:45", "jp": "ハハハッ... たくましいね あなたは", "en": "You're a bastion of courage.", "cn": "义项③精神：“你可真够坚强/豁达的”——笑里带佩服，たくましい 夸的是那股扛得住的劲儿。"}], "quizzes": [{"bank": "recog", "type": "choice", "q": "「たくましい」的汉字写法是？", "opts": ["逞しい", "剛い", "頑い", "猛しい"], "ans": 0, "exp": "たくましい ＝ 逞しい。"}, {"bank": "recog", "type": "choice", "q": "「たくましい精神力」的「たくましい」指？", "opts": ["顽强、坚韧（精神）", "健壮（体格）", "旺盛（志向）", "魁梧（外观）"], "ans": 0, "exp": "义项③：意志坚强、不灰心——精神层面。"}, {"bank": "recog", "type": "judge", "q": "「逞しい力」的たくましい 指“健壮强壮”。", "ans": true, "exp": "✓ 义项①体格：健壮强壮。"}, {"bank": "discrim", "type": "choice", "q": "同样夸人“强”，哪个词<b>一定带“壮实/结实”的身体画面<\/b>？", "opts": ["たくましい", "強い", "頑丈", "屈強"], "ans": 0, "exp": "たくましい＝又壮又韧，带身体画面；強い 是广义的强，頑丈偏结实耐用，屈強偏魁梧外观。"}, {"bank": "discrim", "type": "judge", "q": "「屈強」和「たくましい」都指健壮，但「屈強」更偏书面、强调魁梧的外观。", "ans": true, "exp": "✓ 屈強＝文语「魁梧健壮」，偏外观；たくましい 更日常、更常含“精神韧”的意味。"}, {"bank": "custom", "type": "choice", "q": "初遇场景「たくましいですね～。」里，那个「たくましい」主要是夸对方？", "opts": ["健壮顽强、满身是劲", "心情很好", "很瘦但健康", "跑得很快"], "ans": 0, "exp": "抽的是「真是太健壮了」——健壮顽强、充满生命力。"}, {"bank": "custom", "type": "judge", "q": "「たくましく生きる」这句里，たくましい 偏“意志顽强地生活”。", "ans": true, "exp": "✓ たくましく生きる＝坚韧不拔地活下去，精神层面的顽强。"}, {"bank": "custom", "type": "choice", "q": "K-ON! 里「りっちゃん たくましい子」夸的是？", "opts": ["意志坚定、靠得住", "身材高大", "跑步很快", "声音洪亮"], "ans": 0, "exp": "夸リッちゃん风风火火、扛得住事——义项③精神强韧。"}]}];
+const SENTS={"fuzei:enc0": {"jp": "「ああ… 桜 咲いてる。」", "cn": "“啊…樱花开着呢。”"}, "fuzei:enc1": {"jp": "「まあ 春だから。」", "cn": "“嗯，毕竟是春天嘛。”。"}, "fuzei:enc2": {"jp": "風情がないな。", "cn": "“你也太不解风情了。”"}, "fuzei:s1": {"jp": "この庭は風情がある。", "cn": "这个庭院很雅致。"}, "fuzei:s1b": {"jp": "小雨が風情を添える。", "cn": "微雨增添情趣。"}, "fuzei:s1c": {"jp": "風情のあるながめ。", "cn": "幽雅的风致。"}, "fuzei:s2": {"jp": "悲しげな風情。", "cn": "悲伤的样子。"}, "fuzei:s2b": {"jp": "今にも泣き出しそうな風情だった。", "cn": "一副快要哭出来的样子。"}, "fuzei:s3": {"jp": "なんの風情もありませんが、召し上がってください。", "cn": "没什么好招待的，请慢用。"}, "fuzei:s4": {"jp": "学生風情にはぜいたくだ。", "cn": "一个学生说来，过于奢侈了。"}, "fuzei:s4b": {"jp": "商人風情。", "cn": "一个做买卖的下作样子。"}, "fuzei:s4c": {"jp": "私風情の者にできることではない。", "cn": "这种事轮不到我这样的小人物。"}, "fuzei:c0": {"jp": "趣のある陶器", "cn": "有韵味的陶器"}, "fuzei:c1": {"jp": "情緒豊かな町並み", "cn": "情感浓郁的街景"}, "fuzei:c2": {"jp": "風流な趣味", "cn": "风雅的爱好"}, "fuzei:c3": {"jp": "素朴な風味", "cn": "质朴的风味"}, "fuzei:c4": {"jp": "殺風景な部屋", "cn": "空荡荡的房子"}, "aku:enc0": {"jp": "「新しいの買えよ。」", "cn": "「买条新的吧。」「不用，穿到<b>穿出洞<\/b>为止。」——パンツ开洞＝用到不能再用，一针见血的生活态度。"}, "aku:enc1": {"jp": "「いや、穴あくまで履くよ。」", "cn": "。"}, "aku:enc2": {"jp": "穴あくまでパンツはくなよ。", "cn": "“你也太不解风情了。”"}, "aku:s1": {"jp": "穴あくまでパンツはくなよ。", "cn": "裤子一直穿到穿出洞为止。"}, "aku:s1b": {"jp": "穴があいてるんだけど…", "cn": "（衣服上）有个洞……"}, "aku:s2": {"jp": "ドアが開く。", "cn": "门开了。"}, "aku:s2b": {"jp": "開いた口がふさがらない。", "cn": "目瞪口呆（张开的嘴合不上）。"}, "aku:s3": {"jp": "銀行が開く。", "cn": "银行开门了。"}, "aku:s4": {"jp": "幕が開く。", "cn": "开幕了。"}, "aku:c0": {"jp": "ドアを開く", "cn": "开门（人为打开）"}, "aku:c1": {"jp": "道が空く", "cn": "路上人少了"}, "aku:c2": {"jp": "紙が破けた", "cn": "纸破了"}, "aku:c3": {"jp": "花火が広がる", "cn": "烟花扩散"}, "hashagu:enc0": {"jp": "远远传来一阵阵笑声和喊叫声——孩子们在玩耍。", "cn": "孩子们<b>欢闹<\/b>的声音——不是「说话声」，不是「哭声」，是那种全身投入、得意忘形的<b>嬉闹声<\/b>。"}, "hashagu:enc2": {"jp": "子どものはしゃぐ声。", "cn": "“你也太不解风情了。”"}, "hashagu:s1": {"jp": "旅行を前に子供が燥ぐ。", "cn": "旅行前孩子们很喧闹。"}, "hashagu:s1b": {"jp": "子どもたちのはしゃぐ声が、聞こえます。", "cn": "孩子们传来一阵欢快的声音。"}, "hashagu:s2": {"jp": "桶が燥ぐ。", "cn": "桶干了。"}, "hashagu:c0": {"jp": "子供が騒いでいる", "cn": "孩子们在吵闹（不一定是开心）"}, "hashagu:c1": {"jp": "悦びに泳ぐ", "cn": "沉浸在喜悦中（古风）"}, "hashagu:c2": {"jp": "みんなでわちゃわちゃする", "cn": "大家一起嘻嘻哈哈"}, "hashagu:c3": {"jp": "調子に浮かれる", "cn": "得意忘形"}, "takumashi:enc0": {"jp": "（看到对方体格健壮、做事坚忍的样子）すごいなあ…", "cn": "“真是<b>健壮<\/b>啊～”「真是太健壮了」。这句台词里是对<b>顽强、壮实、充满生命力<\/b>的由衷赞叹。"}, "takumashi:enc2": {"jp": "たくましいですね～。", "cn": "“你也太不解风情了。”"}, "takumashi:s1": {"jp": "逞しい若者。", "cn": "健壮的小伙子。"}, "takumashi:s1b": {"jp": "逞しい力。", "cn": "强大的力量。"}, "takumashi:s1c": {"jp": "ひとりの青年としてたくましく成長した。", "cn": "作为一个青年茁壮成长起来了。"}, "takumashi:s2": {"jp": "逞しい向学心。", "cn": "旺盛的求知欲。"}, "takumashi:s3": {"jp": "たくましい精神力。", "cn": "坚强的精神。"}, "takumashi:c0": {"jp": "体が強い", "cn": "身体强壮（中性）"}, "takumashi:c1": {"jp": "屈強な男", "cn": "体格魁梧的汉子"}, "takumashi:c2": {"jp": "頑丈な体", "cn": "结实的身体"}, "takumashi:c3": {"jp": "逞しさを感じる", "cn": "感受到那股强韧"}};
+const CLIPS={"fuzei:nade0": {"sid": "l-WpuQPM_58s", "sense": 1, "media": "安達としまむら / Adachi and Shimamura", "ep": 2, "at": "6:26", "jp": "しまむらには風情が足りないかも", "en": "I think you lack elegance, Shimamura.", "cn": "（对しまうむ说）你这个人，缺点風情、缺点雅致。", "mp3": "scenes/l-WpuQPM_58s.mp3", "img": "scenes/l-WpuQPM_58s.webp"}, "fuzei:nade1": {"sid": "GXSPDdxkoo8t", "sense": 1, "media": "安達としまむら / Adachi and Shimamura", "ep": 2, "at": "6:29", "jp": "風情…うーん 風情ねえ", "en": "Elegance… Hm… Elegance, eh?", "cn": "在嘴里咂摸“風情”这俩字——这个词值不值得，自己先品一品。", "mp3": "scenes/GXSPDdxkoo8t.mp3", "img": "scenes/GXSPDdxkoo8t.webp"}, "fuzei:nade2": {"sid": "TxaH4XVUr3cP", "sense": 4, "media": "氷剣の魔術師が世界を統べる / The Iceblade Sorcerer Shall Rule the World", "ep": 1, "at": "4:08", "jp": "オ…オーディナリー風情が!", "en": "You worthless ordinary!", "cn": "接尾用法：オーディナリー＋風情＝“区区一个普通货色”——正眼都不瞧你。", "mp3": "scenes/TxaH4XVUr3cP.mp3", "img": "scenes/TxaH4XVUr3cP.webp"}, "fuzei:nade3": {"sid": "p4f1S3MdF53R", "sense": 4, "media": "ギルドの受付嬢ですが残業は嫌なのでボスをソロ討伐しようとします / I May Be a Guild Receptionist…", "ep": 4, "at": "19:11", "jp": "おのれ 人間風情が…", "en": "You lowly human…", "cn": "人间＋風情＝“区区人类”——异种族的居高临下，接尾贬义的信手拈来。", "mp3": "scenes/p4f1S3MdF53R.mp3", "img": "scenes/p4f1S3MdF53R.webp"}, "fuzei:nade4": {"sid": "yPTUz7SbyTR7", "sense": 4, "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim", "ep": 6, "at": "7:49", "jp": "勘違いしないでよね 平民風情が!", "en": "Get rid of that misconception right now, commoner.", "cn": "平民＋風情＝“区区平民”──贵族小姐的自负。接尾贬义的教科书例句。", "mp3": "scenes/yPTUz7SbyTR7.mp3", "img": "scenes/yPTUz7SbyTR7.webp"}, "fuzei:nade5": {"sid": "JbTRaJ89-Qhq", "sense": 4, "media": "乙女ゲー世界はモブに厳しい世界です / Trapped in a Dating Sim", "ep": 7, "at": "13:43", "jp": "割り込むんじゃないわよ! 平民風情が!", "en": "Stay out of this, commoner!", "cn": "同一角色的第二连击：平民風情が——贬起人来一套又一套。", "mp3": "scenes/JbTRaJ89-Qhq.mp3", "img": "scenes/JbTRaJ89-Qhq.webp"}, "aku:nade0": {"sid": "Eu5RoXZt8MPF", "sense": 1, "media": "コクリコ坂から / From Up on Poppy Hill", "ep": 1, "at": "3:46", "jp": "よく穴があくわね", "en": "More holes?", "cn": "（洗衣服时发现）又穿出洞了啊——母女间的家常感叹，穴があく 的日常语感。", "mp3": "scenes/Eu5RoXZt8MPF.mp3", "img": "scenes/Eu5RoXZt8MPF.webp"}, "aku:nade1": {"sid": "6nuJXm_IbfOM", "sense": 1, "media": "あそびあそばせ / Asobi Asobase", "ep": 1, "at": "9:03", "jp": "机に穴あいてるんだけど…", "en": "There're holes on the desk.", "cn": "课桌上有个洞……——校园生活里的小破坏，穴があく 的「物体上出现洞」义。", "mp3": "scenes/6nuJXm_IbfOM.mp3", "img": "scenes/6nuJXm_IbfOM.webp"}, "hashagu:nade0": {"sid": "X3-mKNzR5dXc", "sense": 1, "media": "悪役令嬢 / I'm in Love with the Villainess", "ep": 1, "at": "21:39", "jp": "はしゃぐクレア様... かわいい", "en": "Miss Claire's all excited... That's so cute!", "cn": "（看着别人得意忘形地开心）那种抑制不住的快乐——はしゃぐ 的「調子に乗る」语感。", "mp3": "scenes/X3-mKNzR5dXc.mp3", "img": "scenes/X3-mKNzR5dXc.webp"}, "hashagu:nade1": {"sid": "5JA-nA1-Doe4", "sense": 1, "media": "SPY×FAMILY Season 3", "ep": 6, "at": "16:30", "jp": "おーい あんまり はしゃぐな", "en": "Hey, settle down.", "cn": "（长辈提醒孩子别太疯）はしゃぐな＝别闹得太厉害——默认「你已经在闹了」。", "mp3": "scenes/5JA-nA1-Doe4.mp3", "img": "scenes/5JA-nA1-Doe4.webp"}, "hashagu:nade2": {"sid": "oSa59yhnqGTZ", "sense": 1, "media": "ご注文はうさぎですか？ / Is the Order a Rabbit?", "ep": 3, "at": "2:36", "jp": "アハハッ! あんま はしゃぐな", "en": "Don't play around too much.", "cn": "（笑着提醒）はしゃぐな——同一种语感：你太嗨了，收着点。", "mp3": "scenes/oSa59yhnqGTZ.mp3", "img": "scenes/oSa59yhnqGTZ.webp"}, "takumashi:nade0": {"sid": "rPB1D2qoa7hG", "sense": 1, "media": "うる星やつら（2022）/ Urusei Yatsura", "ep": 23, "at": "2:14", "jp": "そして たくましい腕力!", "en": "And robust physical strength!", "cn": "义项①体格：又壮又有劲的臂力——「たくましい腕力」指身体的力量。", "mp3": "scenes/rPB1D2qoa7hG.mp3", "img": "scenes/rPB1D2qoa7hG.webp"}, "takumashi:nade1": {"sid": "hQuw8ayOw3EN", "sense": 3, "media": "けいおん！/ K-ON!", "ep": 5, "at": "13:18", "jp": "りっちゃん たくましい子", "en": "You're so resolute, Ricchan!", "cn": "义项③精神：夸人<u>意志坚定、靠得住<\/u>——リッちゃん这种风风火火、扛得住事的性格。", "mp3": "scenes/hQuw8ayOw3EN.mp3", "img": "scenes/hQuw8ayOw3EN.webp"}, "takumashi:nade2": {"sid": "XF76e24RG1o4", "sense": 3, "media": "斉木楠雄のΨ難 / The Disastrous Life of Saiki K.", "ep": 2, "at": "14:04", "jp": "たくましいわ パパ...", "en": "You're so strong.", "cn": "义项③精神：对爸爸坚韧/心大的感叹——たくましい 用在这种哭笑不得的人身上很常见。", "mp3": "scenes/XF76e24RG1o4.mp3", "img": "scenes/XF76e24RG1o4.webp"}, "takumashi:nade3": {"sid": "PDUSMhBeIHj0", "sense": 3, "media": "デッドデッドデーモンズデデデデデストラクション / Dead Dead Demon's", "ep": 17, "at": "21:45", "jp": "ハハハッ... たくましいね あなたは", "en": "You're a bastion of courage.", "cn": "义项③精神：“你可真够坚强/豁达的”——笑里带佩服，たくましい 夸的是那股扛得住的劲儿。", "mp3": "scenes/PDUSMhBeIHj0.mp3", "img": "scenes/PDUSMhBeIHj0.webp"}};
+const BANKS=[["listen2", "🎧 聴解・意味理解"], ["listen3", "🎧 聴解・書き取り"], ["listen", "🎧 聴解判別"], ["recog", "📘 詞義認識"], ["generate", "✍️ 産出填空"], ["discrim", "🧩 辨析判別"], ["custom", "⭐ 自作題"]];
+const SCHED={"fuzei": [[0, "初習", "初见五件套：通读列表卡 → 点开发音（ふぜい） → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"], [1, "隔日闪回", "听到「ふぜい」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"], [3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"], [7, "产出练习", "用「風情」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"], [14, "教给别人", "把「風情」的意象与近义区分讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"], [30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"]], "aku": [[0, "初習", "初见五件套：通读列表卡 → 点开发音（あく） → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"], [1, "隔日闪回", "听到「あく」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"], [3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"], [7, "产出练习", "用「開く」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"], [14, "教给别人", "把「開く」的意象与近义区分讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"], [30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"]], "hashagu": [[0, "初習", "初见五件套：通读列表卡 → 点开发音（はしゃぐ） → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"], [1, "隔日闪回", "听到「はしゃぐ」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"], [3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"], [7, "产出练习", "用「はしゃぐ」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"], [14, "教给别人", "把「はしゃぐ」的意象与近义区分讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"], [30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"]], "takumashi": [[0, "初習", "初见五件套：通读列表卡 → 点开发音（たくましい） → 回放初遇场景×2 → 默念核心意象 → 过一遍语义网络。"], [1, "隔日闪回", "听到「たくましい」，脑子里弹出什么画面？做一轮【📘 詞義認識】。"], [3, "搭配加固", "不看卡默写搭配、造句一句。做一轮【🎧 聴解判別】。"], [7, "产出练习", "用「逞しい」自己造两句完整的日语句子写下来。做一轮【🧩 辨析判別】。"], [14, "教给别人", "把「逞しい」的意象与近义区分讲给谁听（或对着空气大声讲一遍）。做一轮【✍️ 産出填空】。"], [30, "锚定收尾", "混合交错全刷一轮 ＋ 清空错题本——这个新词正式入账。"]]};
+let QS=[{"type": "choice", "q": "「風情（ふぜい）」最基本的含义，最接近哪一项？", "opts": ["某个场所・情景・人<b>自带的一股气质<\/b>，让看见的人心头一动——心被环境带动的滋味。", "做事的方式、做派（＝やり方）", "食物的味道（＝ふうみ）", "怀念远方的情绪（＝なつかしさ）"], "ans": 0, "exp": "風情＝某个场所・情景・人<b>自带的一股气质<\/b>，让看见的人心头一动——心被环境带动的滋味。<br>🧠 🌬️ 一阵风把樱花的香与色捎到面前，心里一动——这股“气”，就是<b>風情<\/b>。连浊记法：ふ＋せい → ふぜい，嘴顺意厚。", "bank": "recog", "ref": "fuzei:auto-meaning"}, {"type": "type", "q": "「この庭は（　　　）がある。」<br><span class=\"hint\">（　　　）—— 请输入读音假名<\/span>", "ansTxt": ["ふぜい", "ふうじょう", "huzei", "fuzei", "huuziyou", "fuuziyou", "huujiyou"], "exp": "完整句子：この庭は風情がある。<br>这个庭院很雅致。<br>風情 读作<b>ふぜい<\/b>。", "bank": "generate", "ref": "fuzei:auto-kana"}, {"type": "type", "q": "假名：ふぜい → 请输入对应的<b>汉字写法<\/b>。", "ansTxt": ["風情"], "exp": "ふぜい 的汉字写法：<b>風情<\/b>。", "bank": "generate", "ref": "fuzei:auto-kanji"}, {"type": "listen", "aid": "fuzei:s1", "q": "🎧 听音频：播放的是哪一句？", "opts": ["この庭は風情がある。", "銀行が開く。", "桶が燥ぐ。", "ひとりの青年としてたくましく成長した。"], "ans": 0, "exp": "原句：この庭は風情がある。<br>这个庭院很雅致。", "bank": "listen", "ref": "fuzei:auto-listen0"}, {"type": "listen", "aid": "fuzei:s1", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["这个庭院很雅致。", "一副快要哭出来的样子。", "一个学生说来，过于奢侈了。", "旺盛的求知欲。"], "ans": 0, "exp": "原句：この庭は風情がある。<br>这个庭院很雅致。", "bank": "listen2", "ref": "fuzei:auto-listen2"}, {"type": "listen", "aid": "fuzei:s1", "q": "🎧 听音频：说的是哪一句？", "opts": ["この庭は風情がある。", "銀行が開く。", "桶が燥ぐ。", "ひとりの青年としてたくましく成長した。"], "ans": 0, "exp": "原句：この庭は風情がある。<br>这个庭院很雅致。", "bank": "listen3", "ref": "fuzei:auto-listen3"}, {"bank": "recog", "type": "choice", "q": "「風情」现在的标准读法是？", "opts": ["ふぜい", "ふうじょう", "ふうみ", "きみょう"], "ans": 0, "exp": "现代标准读<b>ふぜい<\/b>（ふ＋せい 连浊）。ふうじょう 是古典音读。", "ref": "fuzei:cu-0"}, {"bank": "recog", "type": "choice", "q": "「悲しげな風情。」の「風情」の意味は？", "opts": ["雅致・情趣", "悲伤的样子", "款待", "风景风貌"], "ans": 1, "exp": "义项②「样子・情态」：悲伤的神色。", "ref": "fuzei:cu-1"}, {"bank": "recog", "type": "listen", "aid": "fuzei:w", "q": "🎧 听単語读音，选出对应的词。", "opts": ["風情　ふぜい", "風味　ふうみ", "風流　ふうりゅう", "風景　ふうけい"], "ans": 0, "exp": "ふぜい＝風情。", "ref": "fuzei:cu-2"}, {"bank": "discrim", "type": "choice", "q": "同样形容“氛围”，<b>专注于“心被带动、情绪在流淌”那股劲儿<\/b>的是哪个？", "opts": ["情緒　じょうちょ", "風情　ふぜい", "風味　ふうみ"], "ans": 0, "exp": "情緒 轴心在“感情动”。", "ref": "fuzei:cu-3"}, {"bank": "discrim", "type": "choice", "q": "「風情がない」的近义（対義）说法是？", "opts": ["殺風景", "情緒豊か", "風流", "風情満載"], "ans": 0, "exp": "殺風景＝缺風情、空落落。", "ref": "fuzei:cu-4"}, {"bank": "discrim", "type": "judge", "q": "“风雅是<b>人刻意营造<\/b>出来的趣味。”这个说法指的更像是「風流」，而不是「風情」。", "ans": true, "exp": "✓ 風流＝人为的风雅之举；風情＝自然散发的气质。", "ref": "fuzei:cu-5"}, {"bank": "discrim", "type": "choice", "q": "听到有人说“この小路は風情がある。”，可以换成哪句仍不失原味？", "opts": ["この小路は趣がある。", "この小路は殺風景だ。", "この小路は風味がする。"], "ans": 0, "exp": "趣（おもむき）＝心被吸引的韵味，与風情近义可换。", "ref": "fuzei:cu-6"}, {"bank": "custom", "type": "choice", "q": "回顾初遇场景：“ああ…桜 咲いてる。”→“まあ 春だから。”→「風情がないな。」<br>说话人对这句“春だから”的潜台词是？", "opts": ["「这人真不解风情」", "「春天没意思」", "「今年樱花短缺」"], "ans": 0, "exp": "景在这里，心却不着过去——于是被吐槽“風情がない”。", "ref": "fuzei:cu-7"}, {"bank": "custom", "type": "judge", "q": "「私風情には、そんな大役は務まりません。」——这是<u>自谦<\/u>。", "ans": true, "exp": "✓ 〜風情 用在自己身上＝谦辞。", "ref": "fuzei:cu-8"}, {"bank": "custom", "type": "judge", "q": "对上司说「部長風情に分かるはずがない。」——这是尊敬的表达。", "ans": false, "exp": "✗ ～風情 用到别人身上是<b>轻蔑<\/b>。", "ref": "fuzei:cu-9"}, {"bank": "custom", "type": "choice", "q": "「学生風情にはぜいたくだ。」の「学生風情」のニュアンスは？", "opts": ["区区一个学生（自示渺小）", "有学生风雅气质", "学生的审美很时髦"], "ans": 0, "exp": "接尾用法：＜人＞＋風情＝“只有那点样子的货色”。", "ref": "fuzei:cu-10"}, {"bank": "custom", "type": "listen", "aid": "fuzei:s2", "q": "🎧 听例句：「悲しげな風情。」——这里的風情 指？", "opts": ["悲伤的样子（义项②）", "优雅的风致（义项①）", "待客的款待（义项③）"], "ans": 0, "exp": "悲しげ＝“看上去悲伤”的样子→ 義項②", "ref": "fuzei:cu-11"}, {"type": "choice", "q": "「開く（あく）」最基本的含义，最接近哪一项？", "opts": ["原本关着/完整的东西<b>出现开口、裂口、缝隙<\/b>——从「无」到「有」的那一刻。", "做事的方式、做派（＝やり方）", "食物的味道（＝ふうみ）", "怀念远方的情绪（＝なつかしさ）"], "ans": 0, "exp": "開く＝原本关着/完整的东西<b>出现开口、裂口、缝隙<\/b>——从「无」到「有」的那一刻。<br>🧠 🕳️ 一条裤子膝盖处越穿越薄，最后「啪」地磨出一个洞——那个<b>啪<\/b>的瞬间就是 あく。<br>あく ＝ 自己裂开（自動）；ひらく ＝ 人为打开（他動）。声调⓪：自然发生、不动声色。", "bank": "recog", "ref": "aku:auto-meaning"}, {"type": "type", "q": "「穴あくまでパンツはくなよ。」<br><span class=\"hint\">（　　　）—— 请输入读音假名<\/span>", "ansTxt": ["あく", "ひらく", "aku", "hiraku", "firaku"], "exp": "完整句子：穴あくまでパンツはくなよ。<br>裤子一直穿到穿出洞为止。<br>開く 读作<b>あく<\/b>。", "bank": "generate", "ref": "aku:auto-kana"}, {"type": "type", "q": "假名：あく → 请输入对应的<b>汉字写法<\/b>。", "ansTxt": ["開く"], "exp": "あく 的汉字写法：<b>開く<\/b>。", "bank": "generate", "ref": "aku:auto-kanji"}, {"type": "listen", "aid": "aku:s1", "q": "🎧 听音频：播放的是哪一句？", "opts": ["穴あくまでパンツはくなよ。", "幕が開く。", "逞しい向学心。", "なんの風情もありませんが、召し上がってください。"], "ans": 0, "exp": "原句：穴あくまでパンツはくなよ。<br>裤子一直穿到穿出洞为止。", "bank": "listen", "ref": "aku:auto-listen0"}, {"type": "listen", "aid": "aku:s1", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["裤子一直穿到穿出洞为止。", "目瞪口呆（张开的嘴合不上）。", "桶干了。", "没什么好招待的，请慢用。"], "ans": 0, "exp": "原句：穴あくまでパンツはくなよ。<br>裤子一直穿到穿出洞为止。", "bank": "listen2", "ref": "aku:auto-listen2"}, {"type": "listen", "aid": "aku:s1", "q": "🎧 听音频：说的是哪一句？", "opts": ["穴あくまでパンツはくなよ。", "幕が開く。", "逞しい向学心。", "なんの風情もありませんが、召し上がってください。"], "ans": 0, "exp": "原句：穴あくまでパンツはくなよ。<br>裤子一直穿到穿出洞为止。", "bank": "listen3", "ref": "aku:auto-listen3"}, {"bank": "recog", "type": "choice", "q": "「穴あくまでパンツはくなよ」里的「あく」对应的汉字是？", "opts": ["開く", "空く", "明く", "挙く"], "ans": 0, "exp": "磨出洞 ＝ 開く（あく）＝出现开口/裂口。", "ref": "aku:cu-0"}, {"bank": "recog", "type": "choice", "q": "「ドアが開く」的「開く」读作？", "opts": ["あく", "ひらく", "あける", "ひらける"], "ans": 0, "exp": "自動詞：ドア<b>が<\/b>開く → あく。ドア<b>を<\/b>開く → ひらく。", "ref": "aku:cu-1"}, {"bank": "recog", "type": "judge", "q": "「開く（あく）」只能表示「出现洞」，不能表示「门打开」。", "ans": false, "exp": "✗ あく 既可表示「出现洞/裂缝」，也可表示「门/窗/嘴打开」。", "ref": "aku:cu-2"}, {"bank": "discrim", "type": "choice", "q": "以下哪个词强调<b>人为地<\/b>打开？", "opts": ["開く　ひらく", "開く　あく", "空く　すく", "破ける　やける"], "ans": 0, "exp": "ひらく ＝ 他動詞（人为打开）；あく ＝ 自動詞（自己裂开）。", "ref": "aku:cu-3"}, {"bank": "discrim", "type": "choice", "q": "「紙が____」——要表达「纸破了一个洞」，最合适的词是？", "opts": ["開いた", "空いた", "広がった", "割れた"], "ans": 0, "exp": "開いた（あいた）＝出现了一个开口/洞。", "ref": "aku:cu-4"}, {"bank": "custom", "type": "judge", "q": "「穴あくまでパンツはくなよ」的意思是「把裤子一直穿到穿出洞为止」——暗示要勤俭、别轻易买新的。", "ans": true, "exp": "✓ 完全正确。", "ref": "aku:cu-5"}, {"bank": "custom", "type": "choice", "q": "「銀行が開く」的「開く」属于哪个义项？", "opts": ["开业、开始营业", "出现洞口", "门打开", "开幕、开演"], "ans": 0, "exp": "銀行が開く ＝ 银行开门营业（义项③）。", "ref": "aku:cu-6"}, {"type": "choice", "q": "「はしゃぐ（はしゃぐ）」最基本的含义，最接近哪一项？", "opts": ["情绪高涨、<b>得意忘形<\/b>地嬉闹喧哗——控制不住地兴奋。", "做事的方式、做派（＝やり方）", "食物的味道（＝ふうみ）", "怀念远方的情绪（＝なつかしさ）"], "ans": 0, "exp": "はしゃぐ＝情绪高涨、<b>得意忘形<\/b>地嬉闹喧哗——控制不住地兴奋。<br>🧠 🎉 一群小孩在公园疯跑尖叫、完全忘我——那个<b>亢奋、停不下来<\/b>的画面就是 はしゃぐ。<br>汉字「燥」本义是「风干」，引申为「情绪被快乐抽空理智、飘飘然」。", "bank": "recog", "ref": "hashagu:auto-meaning"}, {"type": "type", "q": "「旅行を前に子供が燥ぐ。」<br><span class=\"hint\">（　　　）—— 请输入读音假名<\/span>", "ansTxt": ["はしゃぐ", "燥ぐ", "hasiyagu", "hashiyagu", "燥gu"], "exp": "完整句子：旅行を前に子供が燥ぐ。<br>旅行前孩子们很喧闹。<br>はしゃぐ 读作<b>はしゃぐ<\/b>。", "bank": "generate", "ref": "hashagu:auto-kana"}, {"type": "type", "q": "假名：はしゃぐ → 请输入对应的<b>汉字写法<\/b>。", "ansTxt": ["はしゃぐ"], "exp": "はしゃぐ 的汉字写法：<b>はしゃぐ<\/b>。", "bank": "generate", "ref": "hashagu:auto-kanji"}, {"type": "listen", "aid": "hashagu:s1", "q": "🎧 听音频：播放的是哪一句？", "opts": ["旅行を前に子供が燥ぐ。", "学生風情にはぜいたくだ。", "逞しい力。", "幕が開く。"], "ans": 0, "exp": "原句：旅行を前に子供が燥ぐ。<br>旅行前孩子们很喧闹。", "bank": "listen", "ref": "hashagu:auto-listen0"}, {"type": "listen", "aid": "hashagu:s1", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["旅行前孩子们很喧闹。", "目瞪口呆（张开的嘴合不上）。", "幽雅的风致。", "门开了。"], "ans": 0, "exp": "原句：旅行を前に子供が燥ぐ。<br>旅行前孩子们很喧闹。", "bank": "listen2", "ref": "hashagu:auto-listen2"}, {"type": "listen", "aid": "hashagu:s1", "q": "🎧 听音频：说的是哪一句？", "opts": ["旅行を前に子供が燥ぐ。", "学生風情にはぜいたくだ。", "逞しい力。", "幕が開く。"], "ans": 0, "exp": "原句：旅行を前に子供が燥ぐ。<br>旅行前孩子们很喧闹。", "bank": "listen3", "ref": "hashagu:auto-listen3"}, {"bank": "recog", "type": "choice", "q": "「はしゃぐ」的汉字写法是？", "opts": ["燥ぐ", "騒ぐ", "悦ぐ", "歓ぐ"], "ans": 0, "exp": "はしゃぐ ＝ 燥ぐ。騒ぐ（さわぐ）是另一个词。", "ref": "hashagu:cu-0"}, {"bank": "recog", "type": "judge", "q": "「燥ぐ」的本义是「欢闹」。", "ans": false, "exp": "✗「燥」的本义是「干燥、风干」，「欢闹」是引申义。", "ref": "hashagu:cu-1"}, {"bank": "recog", "type": "choice", "q": "「はしゃぐな」的语气是？", "opts": ["禁止/提醒（别闹了）", "鼓励（继续闹！）", "疑问（在闹吗？）"], "ans": 0, "exp": "はしゃぐな ＝ な（禁止形）＝别闹了/收着点。", "ref": "hashagu:cu-2"}, {"bank": "discrim", "type": "choice", "q": "以下哪个词<b>不一定<\/b>是开心的「闹」？", "opts": ["騒ぐ　さわぐ", "はしゃぐ", "わちゃわちゃする"], "ans": 0, "exp": "騒ぐ 可以是愤怒、混乱的闹；はしゃぐ 和 わちゃわちゃ 一定带开心的语感。", "ref": "hashagu:cu-3"}, {"bank": "discrim", "type": "choice", "q": "「調子に____」——要表达「得意忘形」，最接近 はしゃぐ 的词是？", "opts": ["浮かれる", "燥ぐ", "騒ぐ", "傭う"], "ans": 0, "exp": "浮かれる＝心态上「飘起来」，与はしゃぐ的「得意忘形」语感最近。", "ref": "hashagu:cu-4"}, {"bank": "discrim", "type": "judge", "q": "「はしゃぐ」和「わちゃわちゃ」都带开心的语感，但「わちゃわちゃ」更口语、更轻快。", "ans": true, "exp": "✓ 正确。わちゃわちゃ 是日常口语，はしゃぐ 稍微正式一点。", "ref": "hashagu:cu-5"}, {"bank": "custom", "type": "judge", "q": "「子どもたちのはしゃぐ声が聞こえます。」——这里的「はしゃぐ」是义项②「风干」。", "ans": false, "exp": "✗ 孩子的声音 → 欢闹声（义项①），不是「风干」。", "ref": "hashagu:cu-6"}, {"bank": "custom", "type": "choice", "q": "SPY×FAMILY 里「おーい あんまり はしゃぐな」——说话人的语气是？", "opts": ["温柔提醒（别太疯了）", "严厉训斥（闭嘴！）", "开心鼓励（继续！）"], "ans": 0, "exp": "おーい（喂）+ はしゃぐな（别太闹）＝随口提醒，不是生气。", "ref": "hashagu:cu-7"}, {"type": "choice", "q": "「逞しい（たくましい）」最基本的含义，最接近哪一项？", "opts": ["<b>健壮结实＋意志顽强<\/b>，满身是劲、充满生命力——身体和心都“抗造”。", "做事的方式、做派（＝やり方）", "食物的味道（＝ふうみ）", "怀念远方的情绪（＝なつかしさ）"], "ans": 0, "exp": "逞しい＝<b>健壮结实＋意志顽强<\/b>，满身是劲、充满生命力——身体和心都“抗造”。<br>🧠 💪 被太阳晒红、青筋鼓起、扛麻袋稳走的人——那股从里到外的“抗造”就是 たくましい。<br>「逞」＝奔跑舒展 → 气力全撑开 → 又壮又韧。声调④，词尾「しい」延长得像铺开的强壮感。", "bank": "recog", "ref": "takumashi:auto-meaning"}, {"type": "type", "q": "「（　　　）若者。」<br><span class=\"hint\">（　　　）—— 请输入读音假名<\/span>", "ansTxt": ["たくましい", "takumasii", "takumashii"], "exp": "完整句子：逞しい若者。<br>健壮的小伙子。<br>逞しい 读作<b>たくましい<\/b>。", "bank": "generate", "ref": "takumashi:auto-kana"}, {"type": "type", "q": "假名：たくましい → 请输入对应的<b>汉字写法<\/b>。", "ansTxt": ["逞しい"], "exp": "たくましい 的汉字写法：<b>逞しい<\/b>。", "bank": "generate", "ref": "takumashi:auto-kanji"}, {"type": "listen", "aid": "takumashi:s1", "q": "🎧 听音频：播放的是哪一句？", "opts": ["逞しい若者。", "この庭は風情がある。", "逞しい力。", "学生風情にはぜいたくだ。"], "ans": 0, "exp": "原句：逞しい若者。<br>健壮的小伙子。", "bank": "listen", "ref": "takumashi:auto-listen0"}, {"type": "listen", "aid": "takumashi:s1", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["健壮的小伙子。", "微雨增添情趣。", "坚强的精神。", "悲伤的样子。"], "ans": 0, "exp": "原句：逞しい若者。<br>健壮的小伙子。", "bank": "listen2", "ref": "takumashi:auto-listen2"}, {"type": "listen", "aid": "takumashi:s1", "q": "🎧 听音频：说的是哪一句？", "opts": ["逞しい若者。", "この庭は風情がある。", "逞しい力。", "学生風情にはぜいたくだ。"], "ans": 0, "exp": "原句：逞しい若者。<br>健壮的小伙子。", "bank": "listen3", "ref": "takumashi:auto-listen3"}, {"bank": "recog", "type": "choice", "q": "「たくましい」的汉字写法是？", "opts": ["逞しい", "剛い", "頑い", "猛しい"], "ans": 0, "exp": "たくましい ＝ 逞しい。", "ref": "takumashi:cu-0"}, {"bank": "recog", "type": "choice", "q": "「たくましい精神力」的「たくましい」指？", "opts": ["顽强、坚韧（精神）", "健壮（体格）", "旺盛（志向）", "魁梧（外观）"], "ans": 0, "exp": "义项③：意志坚强、不灰心——精神层面。", "ref": "takumashi:cu-1"}, {"bank": "recog", "type": "judge", "q": "「逞しい力」的たくましい 指“健壮强壮”。", "ans": true, "exp": "✓ 义项①体格：健壮强壮。", "ref": "takumashi:cu-2"}, {"bank": "discrim", "type": "choice", "q": "同样夸人“强”，哪个词<b>一定带“壮实/结实”的身体画面<\/b>？", "opts": ["たくましい", "強い", "頑丈", "屈強"], "ans": 0, "exp": "たくましい＝又壮又韧，带身体画面；強い 是广义的强，頑丈偏结实耐用，屈強偏魁梧外观。", "ref": "takumashi:cu-3"}, {"bank": "discrim", "type": "judge", "q": "「屈強」和「たくましい」都指健壮，但「屈強」更偏书面、强调魁梧的外观。", "ans": true, "exp": "✓ 屈強＝文语「魁梧健壮」，偏外观；たくましい 更日常、更常含“精神韧”的意味。", "ref": "takumashi:cu-4"}, {"bank": "custom", "type": "choice", "q": "初遇场景「たくましいですね～。」里，那个「たくましい」主要是夸对方？", "opts": ["健壮顽强、满身是劲", "心情很好", "很瘦但健康", "跑得很快"], "ans": 0, "exp": "抽的是「真是太健壮了」——健壮顽强、充满生命力。", "ref": "takumashi:cu-5"}, {"bank": "custom", "type": "judge", "q": "「たくましく生きる」这句里，たくましい 偏“意志顽强地生活”。", "ans": true, "exp": "✓ たくましく生きる＝坚韧不拔地活下去，精神层面的顽强。", "ref": "takumashi:cu-6"}, {"bank": "custom", "type": "choice", "q": "K-ON! 里「りっちゃん たくましい子」夸的是？", "opts": ["意志坚定、靠得住", "身材高大", "跑步很快", "声音洪亮"], "ans": 0, "exp": "夸リッちゃん风风火火、扛得住事——义项③精神强韧。", "ref": "takumashi:cu-7"}];
+const $=s=>document.querySelector(s);
+let curAudio=null,curBtn=null;
+function play(id,btn){
+  const src=AUDIO[id];if(!src)return;
+  if(curAudio){curAudio.pause();curAudio.currentTime=0;}
+  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
+  curAudio=new Audio(src);curBtn=btn||null;
+  if(curBtn){curBtn.classList.add('playing');curAudio.onended=()=>curBtn.classList.remove('playing');}
+  curAudio.play();
+}
+function rowHTML(sid){
+  const s=SENTS[sid]; if(!s)return "";
+  const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
+  return `<div class="row">${b}<div><div class="jp">${s.jp}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+function pill(text,cls){return `<span class="pill ${cls||''}">${text}</span>`;}
+let W=WORDS[0];
+
+/* ---------- tabs ---------- */
+const TABS=[["enc","🧊 初见"],["nade","🎬 台词·画面"],["web","🌐 语义网络"],["cmp","🧂 辨析场"],["quiz","🎯 提取"],["spc","🔁 间隔"]];
+let tab="enc";
+function renderNav(){
+  let sel=WORDS.map(w=>`<button class="${w.id===W.id?'on':''}" onclick="selectWord('${w.id}')">${esc(w.word)}</button>`).join("");
+  $("#nav").innerHTML=`
+    <div style="flex:0 0 100%;display:flex;gap:8px;flex-wrap:wrap;background:transparent;box-shadow:none">
+      ${WORDS.map(w=>`<span class="wordtab ${w.id===W.id?'on':''}" onclick="selectWord('${w.id}')">${esc(w.word)}<small>${esc(w.read)}</small></span>`).join("")}
+    </div>
+    ${TABS.map(([k,l])=>`<button class="${k===tab?'on':''}" onclick="goTab('${k}')">${l}</button>`).join("")}`;
+}
+function selectWord(id){
+  W=WORDS.find(w=>w.id===id)||WORDS[0];
+  mode=null;pool=[];order=[];qi=0;correct=0;answered=false;
+  renderNav();render();window.scrollTo(0,0);
+}
+function goTab(k){tab=k;renderNav();render();window.scrollTo(0,0);}
+
+/* ---------- 初见 ---------- */
+function renderEnc(){
+  const e=W.encounter||{}, c=W.core||{};
+  const readB=AUDIO[W.id+':w']?`<button class="btn big" onclick="play('${W.id+':w'}',this)">🔊</button>`:"";
+  let h=`<div class="card hero">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div class="bigword">${W.emoji} ${esc(W.word)}</div>
+      <div>
+        <div class="mega">${pill(esc(W.read)+' '+esc(W.accent))}${pill(esc(W.level),'gold')}${W.altRead?pill('别读：'+esc(W.altRead),'warm'):''}</div>
+        ${readB}
+      </div>
+    </div>
+    <div class="meet">🆕 初次遇见 · ${esc(W.firstSeen)} ｜ 你正在追的素材里，听到这句话</div>
+  </div>`;
+  h+=`<div class="card scene">
+    <div class="place">初遇场景 —— ${esc(e.scene||"")}</div>
+    ${rowHTML(W.id+':enc0')}${rowHTML(W.id+':enc1')}
+    <div class="bigline">「${esc(e.line||"")}」</div>
+    ${AUDIO[W.id+':enc2']?`<button class="btn" onclick="play('${W.id+':enc2'}',this)">▶ 回放原句</button>`:""}
+    <div class="cn" style="margin-top:8px">${e.cn||""}</div>
+    <div class="take">🧠 ${e.take||""}</div>
+  </div>`;
+  h+=`<div class="card corebox">
+    <h4>核心意象 —— ${esc(c.title||"")}</h4>
+    <div class="kv">${c.def||""}</div>
+    <div class="split">🔤 ${c.split||""}</div>
+    <div class="img">🎨 ${c.image||""}</div>
+    ${c.en?`<div class="en">${esc('i.e. ')+esc(c.en)}</div>`:""}
+  </div>`;
+  $("#main").innerHTML=h;
+}
+
+/* ---------- 语义网络 ---------- */
+function renderWeb(){
+  let h=`<h3 class="sec">先把多义记成一棵「同根树」：所有意思都从核心意象长出来</h3>
+  <div class="star">
+    <div class="corecell">${esc(W.word)}＝${W.core?esc(W.core.def):""}<small>核心意象：一切义项的根</small></div>
+    ${(W.senses||[]).map(s=>`<div class="cell" onclick="goSense(${s.n})">
+      <div class="em">${s.emoji||"📌"}</div><b>${s.n}. ${esc(s.label)}</b>
+      <small>${esc(shortD(s.def))}</small></div>`).join("")}
+  </div>`;
+  (W.senses||[]).forEach(s=>{
+    h+=`<div class="card sensecard" id="sense-${s.n}" style="scroll-margin-top:70px">
+      <h2><span class="num">第${s.n}义</span> ${s.emoji||"📌"} ${esc(s.label)}</h2>
+      <div class="senselabel">${esc(s.emoji)} ${esc(s.label)} ｜ 搭配</div>
+      <div class="defbox">📌 <b>意思</b>　${s.def||""}</div>
+      ${s.colloc?`<div class="colloc">${s.colloc.split(/\s+/).filter(x=>x).map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}
+      ${(s.examples||[]).map((_,i)=>rowHTML(`${W.id}:s${s.n}`+("abc"[i]||""))).join("")}
+    </div>`;
+  });
+  const et=W.etymology||{};
+  h+=`<div class="card" style="background:#eef1ff;border-left:5px solid #7a4ff7">
+    <h3 class="sec" style="margin-top:0">📜 ${esc(et.title||"语源")}</h3>
+    <div class="kv" style="line-height:1.85">${et.text||""}</div>
+    <div class="key">🧠 ${et.key||""}</div>
+  </div>`;
+  h+=`<div class="anchor">🧠 记忆锚　${W.anchor||""}</div>`;
+  $("#main").innerHTML=h;
+}
+function shortD(d){return (d||"").replace(/<[^>]+>/g,"").split(/[，。]/)[0];}
+function goSense(n){goTab('web');setTimeout(()=>{const el=document.getElementById('sense-'+n);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},60);}
+
+/* ---------- 🎬 台词·画面（Nadeshiko 真实番剧原声） ---------- */
+function renderNade(){
+  const prefix=W.id+":nade";
+  const keys=Object.keys(CLIPS).filter(k=>k.startsWith(prefix)).sort();
+  if(!keys.length){$("#main").innerHTML=`<div class="card"><div class="hint">还没有纳进台词片段——往 kotoba.json 的 nadeshiko 里填，把音频和画面放进 scenes/。</div></div>`;return;}
+  let h=`<h3 class="sec">🎬 这句话出现在真实番剧哪一集，配的是哪一帧画面 —— 原声+原画，一次性钉进脑子里</h3>
+  <div class="hint">片段来自 Nadeshiko 语料库（有版权仅作学习）。点 ▶ 听原声，反复听——真实语速、真实语气。</div>`;
+  keys.forEach(k=>{
+    const c=CLIPS[k];
+    const sense=(W.senses||[]).find(s=>s.n===c.sense)||{};
+    h+=`<div class="clip">
+      <img class="shot" src="${c.img}" alt="scene">
+      <div style="flex:1;min-width:0">
+        <div class="cjp">${c.jp}</div>
+        <div class="cen">${esc(c.en)}</div>
+        <div class="ccn">${c.cn}</div>
+        <div class="clabel">
+          <span class="mep">📺 ${esc(c.media)}</span>
+          <span class="tim">EP${c.ep} · ${esc(c.at||"")}</span>
+          <span class="sense" onclick="goSense(${c.sense})">义项 ${c.sense} · ${esc(sense.label||"")}</span>
+        </div>
+        <button class="btn" style="margin-top:8px" onclick="play('${k}',this)">🔊 原声</button>
+      </div>
+    </div>`;
+  });
+  $("#main").innerHTML=h;
+}
+
+/* ---------- 辨析场 ---------- */
+function renderCmp(){
+  let h=`<h3 class="sec">近义词只靠「比较」才分得清 —— 一组一对照，记忆成对长</h3>
+  <div class="contrast">`;
+  (W.contrast||[]).forEach((c,i)=>{
+    const warm=c.d.indexOf("対義")>=0;
+    h+=`<div class="ccard ${warm?'warming':''}">
+      <h4>${c.word}${warm?' <span class="g">· 対義</span>':' <span class="g"></span>'}</h4>
+      <p>${esc(c.d)}</p>
+      ${c.ex?`<div class="rw">${rowHTML(`${W.id}:c${i}`)}</div>`:""}
+    </div>`;
+  });
+  h+=`</div>
+  <div class="card corebox" style="margin-top:14px">
+    <h4>一句话切分的刀</h4>
+    <div class="kv">${W.javaKnife||""}</div>
+  </div>
+  <div class="anchor" style="margin-top:14px">🧠 记忆锚　${W.anchor||""}</div>`;
+  $("#main").innerHTML=h;
+}
+
+/* ---------- 提取（クイズ） ---------- */
+const shuffle=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+function lsGet(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function lsKey(s){return `koto-${W.id}-${s}`;}
+function wrongBook(){return lsGet(lsKey("wrong"),{})}
+function addWrong(ref){const w=wrongBook();w[ref]=1;lsSet(lsKey("wrong"),w);}
+function delWrong(ref){const w=wrongBook();delete w[ref];lsSet(lsKey("wrong"),w);}
+function wrongCount(){return Object.keys(wrongBook()).length;}
+
+let mode=null,pool=[],order=[],qi=0,correct=0,answered=false;
+const wqs=()=>QS.filter(q=>q.ref.startsWith(W.id+":"));
+function countBank(key){return wqs().filter(q=>q.bank===key).length;}
+function renderQuiz(){
+  if(!mode){
+    showNext(false);$("#score").textContent="";
+    const rows=BANKS.filter(([k])=>countBank(k)>0).map(([k,label])=>
+      `<button class="opt" style="max-width:420px;margin:0 auto 10px" onclick="startQuiz('${k}')">${esc(label)} · ${countBank(k)}問<br><span style="font-size:12px;color:var(--sub)">${bankTip[k]||""}</span></button>`).join("");
+    const wc=wrongCount();
+    const wrongRow=wc?`<button class="opt" style="max-width:420px;margin:0 auto 10px;border-color:var(--gold)" onclick="startQuiz('wrong')">📕 错题重练 · ${wc}問<br><span style="font-size:12px;color:var(--gold)">做对即移出错题本</span></button>`:
+      `<div style="max-width:420px;margin:6px auto 10px;text-align:center"><span class="hint">错题本是空的——答错的题自动收进来 📕</span></div>`;
+    $("#main").innerHTML=`<div class="card" style="text-align:center;padding:28px 16px">
+      <div style="font-size:20px;font-weight:700;margin-bottom:6px">🎯 提取练习 —— 记得住，才算学会</div>
+      <div class="hint" style="margin-bottom:18px">按「认识 → 生成 → 听解 → 辨析 → 综合」五关层层加深 · 全随机打乱 · 错题自动入账</div>
+      ${rows}${wrongRow}
+      <button class="opt" style="max-width:420px;margin:0 auto 10px" onclick="startQuiz('mix')">🎲 混合交错 · 全量随机<br><span style="font-size:12px;color:var(--sub)">跨关卡交错练习，最强记忆留存</span></button>
+      ${wc?`<button class="opt" style="max-width:220px;margin:14px auto 0;font-size:13px;padding:8px" onclick="if(confirm('清空错题本？')){localStorage.removeItem(lsKey('wrong'));renderQuiz();}">🗑️ 清空错题本</button>`:""}
+    </div>`;
+    return;
+  }
+  startQuiz(mode);
+}
+const bankTip={recog:"认出词义与读音，先混个脸熟",generate:"自己把词「生成」出来，记忆最牢固",listen:"耳朵和字绑在一起",discrim:"近义辨析，一次分清",custom:"场景・文化・语感的综合题"};
+function startQuiz(m){
+  mode=m;
+  const qs=wqs();
+  if(m==="mix")pool=qs.slice();
+  else if(m==="wrong"){const w=wrongBook();pool=qs.filter(q=>w[q.ref]);}
+  else pool=qs.filter(q=>q.bank===m);
+  order=shuffle(pool.map((_,x)=>x));
+  qi=0;correct=0;answered=false;
+  renderQ();
+}
+function curQ(){return pool[order[qi]];}
+function renderQ(){
+  const q=curQ();updateScore();
+  let body="";
+  if(q.type==="listen"){
+    body=AUDIO[q.aid]?`<div style="text-align:center;margin:6px 0 14px">
+      <button class="btn" style="width:56px;height:56px;font-size:24px;margin:auto" onclick="play('${q.aid}',this)">🔊</button>
+      <div class="hint">可反复点击重听</div></div>`
+      :`<div class="hint" style="text-align:center;margin-bottom:10px">（这条发音还没生成）</div>`;
+  }
+  let optHTML="";
+  if(q.type==="type"){
+    body=body+`<div class="typeq">
+      <input id="typin" type="text" autocomplete="off" placeholder="输入答案（假名/汉字均可）">
+      <button class="chk" onclick="checkType()">✓ 提交</button>
+      <div class="hint">可以多试几次 · 回车同样可以提交</div></div>`;
+    setTimeout(()=>{const i=document.getElementById("typin");if(i){i.focus();i.onkeydown=e=>{if(e.key==="Enter")checkType();};}},60);
+  }else if(q.opts){
+    optHTML=shuffle(q.opts.map((t,i)=>({t,ok:i===q.ans})))
+      .map(o=>`<button class="opt" data-ok="${o.ok?1:0}" onclick="pick(this)">${o.t}</button>`).join("");
+  }else{
+    const truthy=q.ans===true;
+    optHTML=`<div class="judgebtns">
+      <button class="opt" data-ok="${truthy?1:0}" onclick="pick(this)">⭕ 正しい</button>
+      <button class="opt" data-ok="${truthy?0:1}" onclick="pick(this)">❌ 間違い</button></div>`;
+  }
+  showNext(false);
+  const label=mode==="mix"?"混合":mode==="wrong"?"错题本":(BANKS.find(([k])=>k===mode)||["",""])[1];
+  $("#main").innerHTML=`<div class="card">
+    <div class="hint">第 ${qi+1} 题 / 共 ${order.length} 题 · ${label}</div>
+    <div class="q">${q.q}</div>${body}${optHTML}
+    <div id="fb"></div></div>`;
+}
+const kanaHira=s=>s.replace(/[\u30a1-\u30f6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));
+const normZ=s=>s.replace(/[\uff21-\uff5a\uff01-\uff5e\uff10-\uff19]/g,c=>String.fromCharCode(c.charCodeAt(0)-0xfee0));
+const norm=s=>kanaHira(normZ((s||"").toLowerCase().replace(/[\sー－]/g,"")));
+function checkType(){
+  if(answered)return;answered=true;
+  const q=curQ();const i=document.getElementById("typin");
+  const ok=q.ansTxt.map(norm).includes(norm(i&&i.value));
+  if(ok)correct++;else addWrong(q.ref);
+  if(ok&&mode==="wrong")delWrong(q.ref);
+  $("#fb").innerHTML=`<div class="exp ${ok?'ok':'ng'}">${ok?"⭕ 正解！":"❌ 惜しい！正解：<b>"+esc(q.ansTxt.join(" / "))+"</b>"}<br>${q.exp||""}</div>`;
+  showNext(true);updateScore();
+  window.scrollTo(0,document.body.scrollHeight);
+}
+function showNext(v){const b=$("#next");b.style.display=v?"inline-block":"none";b.disabled=!v;}
+function pick(btn){
+  if(answered)return;answered=true;
+  const q=curQ();
+  const ok=btn.dataset.ok==="1";
+  if(ok)correct++;else addWrong(q.ref);
+  if(ok&&mode==="wrong")delWrong(q.ref);
+  document.querySelectorAll(".opt").forEach(b=>{b.disabled=true;if(b.dataset.ok==="1")b.classList.add("right");});
+  if(!ok)btn.classList.add("wrong");
+  $("#fb").innerHTML=`<div class="exp ${ok?'ok':'ng'}">${ok?"⭕ 正解！":"❌ 惜しい！"} ${q.exp||""}</div>`;
+  showNext(true);updateScore();
+  window.scrollTo(0,document.body.scrollHeight);
+}
+function nextQ(){
+  answered=false;qi++;
+  if(qi>=order.length)finish();else renderQ();
+}
+function finish(){
+  showNext(false);
+  const total=order.length,pct=Math.round(correct/total*100);
+  const msg=pct===100?"🏆 完璧！这个词已经长住脑里了！":pct>=70?"👍 かなりいい！错题趁热打铁":"🔁 回『语义网络』再扎根一轮，错题会自动收进错题本";
+  $("#main").innerHTML=`<div class="card fin">
+    <div class="big">${correct} / ${total}</div>
+    <div style="font-size:20px;margin:12px 0">${msg}</div>
+    <button class="next" style="display:inline-block;margin:4px" onclick="startQuiz('${mode}')">もう一度挑戦</button><br>
+    <button class="opt" style="max-width:280px;margin:14px auto 0" onclick="backToBanks()">别的关卡选一选</button></div>`;
+  $("#score").textContent="";$("#barinfo").textContent=`正确率 ${pct}%`;
+  window.scrollTo(0,0);
+}
+function backToBanks(){mode=null;render();}
+function updateScore(){$("#score").textContent=`✔ ${correct} / ${order.length}`;}
+
+/* ---------- 间隔复习 ---------- */
+function dstr(d){return d.toISOString().slice(0,10);}
+function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function anchorDate(){
+  let a=lsGet(lsKey("first"),null);
+  if(!a){a=W.firstSeen||dstr(new Date());if(a<dstr(new Date()))a=dstr(new Date());lsSet(lsKey("first"),a);}
+  return a;
+}
+function schedMap(){return lsGet(lsKey("sched"),{});}
+function todayOff(){
+  const a=new Date(anchorDate());const now=new Date();
+  return Math.max(0,Math.round((now-a)/864e5));
+}
+function renderSpc(){
+  const off=todayOff();const sm=schedMap();
+  const a=anchorDate();
+  const sch=SCHED[W.id]||SCHED[WORDS[0].id];
+  let tl=sch.map(([d,label,task])=>{
+    const done=!!sm[d];
+    const cls=done?"done":(off>=d?"now":"day-lock");
+    return `<div class="day ${cls}">
+      <b>${done?"✓":label}</b><div class="off">+${d} 天 · ${addDays(new Date(a),d).toISOString().slice(0,10)}</div>
+      <button onclick="markDay(${d},this)">${done?"重做":(off>=d?"完成 ✓":"未到期")}</button></div>`;
+  }).join("");
+  const cur=sch.filter(([d])=>off>=d);
+  const due=cur[cur.length-1];
+  const hasDue=due&&!sm[due[0]];
+  let h=`<h3 class="sec">间隔复习 —— 反遗忘曲线，不靠拼命先靠定时</h3>
+  <div class="card scene">
+    <div class="place">🕰 锚点：初见日 ${a} ｜ 距今 ${off} 天</div>
+    <div class="tl">${tl}</div>
+    <div class="hint">复习节奏：当天 → +1 → +3 → +7 → +14 → +30 天。次数不多，贵在“到点就到”。</div>
+  </div>`;
+  if(hasDue){
+    h+=`<div class="card due">
+      <div class="bigoff">📌 今天轮到：+${due[0]} 天（${due[1]}）</div>
+      <h4>这次做三件事</h4>
+      <div class="taskc">${due[2]}<br><br>完成后回来点上面的「完成 ✓」，进度存本机。</div>
+    </div>`;
+  }else{
+    h+=`<div class="card due"><div style="text-align:center;font-size:16px;font-weight:700">🎉 今日任务已清 — 到下一个 +${(sch.find(([d])=>off<d)||["∞"])[0]} 天再来</div></div>`;
+  }
+  h+=`<div class="card" style="text-align:center">
+    <div class="hint" style="text-align:center">间隔复习的底牌是「提取」：到点先凭记忆回想，想不出再看卡。</div>
+    <button class="opt" style="max-width:280px;margin:12px auto 0;font-size:13px;padding:8px" onclick="if(confirm('重置复习锚点到今天？')){localStorage.removeItem(lsKey('first'));lsSet(lsKey('sched'),{});renderSpc();}">🔄 重置复习计划</button>
+  </div>`;
+  $("#barinfo").textContent="间隔复习：定时提取，胜过集中死记";
+  $("#main").innerHTML=h;
+}
+function markDay(d,btn){
+  const sm=schedMap();sm[d]=!sm[d];lsSet(lsKey("sched"),sm);
+  renderSpc();
+}
+
+/* ---------- init ---------- */
+function render(){
+  if(tab!=="quiz")showNext(false);
+  if(tab==="enc")renderEnc();
+  else if(tab==="nade")renderNade();
+  else if(tab==="web")renderWeb();
+  else if(tab==="cmp")renderCmp();
+  else if(tab==="quiz")renderQuiz();
+  else renderSpc();
+}
+function showNext(v){const b=$("#next");b.style.display=v?"inline-block":"none";b.disabled=!v;}
+renderNav();render();
+</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ほど の構図 ・ 副助詞がつくる連用・連体</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;
+--gold:#b8860b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);padding-bottom:90px}
+header{background:linear-gradient(135deg,#7c2d12,#ea580c);color:#fff;padding:26px 20px 20px}
+header h1{font-size:25px} header .kana{opacity:.92;font-size:14px;margin-top:6px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);
+border-radius:99px;padding:2px 10px;font-size:12px;margin:10px 6px 0 0}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{display:flex;gap:8px;margin:-18px 0 16px;position:relative;z-index:2}
+nav button{flex:1;border:none;border-radius:12px;padding:12px 2px;font-size:14px;cursor:pointer;
+background:var(--card);box-shadow:0 2px 10px rgba(30,40,90,.08);color:var(--sub);font-weight:600}
+nav button.on{background:var(--ink);color:#fff}
+.card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;
+box-shadow:0 2px 10px rgba(30,40,90,.06)}
+.jp{font-size:16.5px;line-height:1.7;font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.cn{font-size:13.5px;color:var(--sub);margin-top:3px}
+.row{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:none}
+.btn{flex:none;width:34px;height:34px;border-radius:50%;border:none;background:var(--acc2);
+color:var(--acc);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.btn.playing{animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.18);background:var(--acc);color:#fff}}
+.intro{background:linear-gradient(135deg,#fff2e8,#fff8f2)}
+.intro h2{font-size:17px;margin-bottom:8px;color:#9a3412}
+.intro p{font-size:14px;line-height:1.75}
+.intro b{color:#c2410c}
+.steps{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.steps div{flex:1;min-width:180px;background:#fff;border-radius:12px;padding:10px 12px;font-size:12.5px;line-height:1.6;
+box-shadow:0 1px 6px rgba(30,40,90,.07)}
+.steps b{color:#c2410c}
+.grp{margin-bottom:16px}
+.grp-h{color:#fff;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;align-items:baseline}
+.grp-h h3{font-size:16.5px}.grp-h span{font-size:12px;opacity:.9}
+.grp-note{font-size:12px;color:var(--sub);margin:6px 2px 0;line-height:1.6}
+.mini-wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;padding:12px 0 2px}
+.mini{background:#fff;border-radius:14px;padding:12px 10px;cursor:pointer;text-align:left;border:2px solid transparent;
+box-shadow:0 1px 6px rgba(30,40,90,.08);transition:.15s}
+.mini:hover{transform:translateY(-2px);border-color:var(--g,#c2410c)}
+.mini .em{font-size:26px}
+.mini .nm{font-weight:800;font-size:15px;margin:4px 0 2px}
+.mini .im{font-size:11.5px;color:var(--sub);line-height:1.55}
+.mini .md{font-size:10.5px;font-weight:700;color:#c2410c;margin-bottom:2px}
+.noun{scroll-margin-top:70px;border-left:5px solid var(--g,#c2410c)}
+.noun h2{font-size:19px}
+.noun h2 .jl{float:right;font-size:11px;background:#f1f3f8;color:var(--sub);
+border-radius:99px;padding:2px 10px;font-weight:600}
+.meta{display:flex;align-items:center;gap:8px;margin:8px 0 2px;flex-wrap:wrap}
+.meta code{background:#f2f4fa;border:1px solid var(--line);color:var(--ink);
+border-radius:8px;padding:2px 9px;font-size:12px}
+.chip{display:inline-block;border-radius:99px;padding:2px 10px;font-size:11px;font-weight:700}
+.chip.mod{background:#fff1e8;color:#c2410c}
+.mini-btn{width:26px;height:26px;font-size:12px}
+.meanbox{background:var(--g-bg,#eef1ff);border-radius:12px;padding:10px 13px;font-size:14px;line-height:1.7;margin:10px 0}
+.origin{background:#fffaf0;border-left:4px solid var(--gold);border-radius:10px;padding:10px 13px;
+font-size:13.5px;line-height:1.7;margin:2px 0 10px}
+.note{font-size:13px;color:var(--gold);margin-top:10px;border-top:1px dashed var(--line);padding-top:9px;line-height:1.65}
+h3.sec{font-size:15px;color:var(--sub);margin:16px 0 8px;font-weight:600}
+/* contrast */
+.flow{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.flow .st{border-radius:12px;padding:10px 14px;font-size:13.5px;line-height:1.75;background:#fff;border-left:5px solid #c2410c}
+.flow .st b{color:#c2410c}
+table.cmp{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 9px;line-height:1.65}
+table.cmp th{background:#fff7f0;color:#9a3412}
+table.cmp td:first-child{white-space:nowrap;background:#fffdfa;font-weight:700;color:var(--sub)}
+.tagz{color:#b45309;font-weight:700}.tagj{color:#0f766e;font-weight:700}
+.warn{background:#fff7ed;border-left:4px solid #f59e0b;border-radius:10px;padding:10px 13px;font-size:13.5px;line-height:1.75;margin:8px 0}
+.good{background:#f0fdf4;border-left:4px solid #22c55e;border-radius:10px;padding:10px 13px;font-size:13.5px;line-height:1.75;margin:8px 0}
+.kaisetsu{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;font-size:15px;line-height:2.1;
+background:#fffdf8;border:1px dashed #f0c9a0;border-radius:10px;padding:12px 14px;margin:8px 0}
+.kaisetsu .lbl{font-size:11.5px;font-weight:700;color:#c2410c;background:#fff1e8;border-radius:6px;padding:1px 7px;margin-right:6px}
+/* quiz */
+.q{font-size:16.5px;line-height:1.75;margin-bottom:14px}
+.opt{display:block;width:100%;text-align:left;padding:12px 14px;margin:8px 0;font-size:15.5px;
+border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer;line-height:1.5}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--ng);background:var(--ngbg)}
+.opt:disabled{cursor:default;opacity:.92}
+.exp{margin-top:10px;padding:11px 13px;border-radius:10px;font-size:14px;line-height:1.65}
+.exp.ok{background:var(--okbg);color:var(--ok)} .exp.ng{background:var(--ngbg);color:var(--ng)}
+.judgebtns{display:flex;gap:12px}
+.judgebtns .opt{flex:1;text-align:center;font-size:18px}
+.bar{position:fixed;bottom:0;left:0;right:0;background:var(--card);
+box-shadow:0 -2px 12px rgba(30,40,90,.09);padding:10px 16px;z-index:5}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center}
+.score{font-weight:700;color:var(--acc)} .next{border:none;background:var(--acc);color:#fff;
+border-radius:10px;padding:10px 22px;font-size:15px;cursor:pointer}
+.next[disabled]{opacity:.35;cursor:default}
+.fin{text-align:center;padding:30px 10px}
+.fin .big{font-size:44px;font-weight:800;color:var(--acc)}
+.hint{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.6}
+code.inline{background:#eceff7;border-radius:6px;padding:1px 7px;font-size:.92em}
+.src{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;
+margin-left:6px;vertical-align:1px}
+.src-moji{background:var(--okbg);color:var(--ok)}
+.src-nade{background:#ede7f6;color:#5e35b1}
+.nade-card{background:#faf5ff;border:1px solid #e0d0f0;border-radius:12px;padding:12px;margin:10px 0}
+.nade-card .nade-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.nade-card .nade-media{font-weight:700;color:#5e35b1;font-size:13px}
+.nade-card .nade-ep{font-size:11.5px;color:var(--sub)}
+.nade-card .nade-jp{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
+font-size:15.5px;line-height:2}
+.nade-card .nade-jp ruby rt{font-size:.52em;color:var(--sub)}
+.nade-card .nade-en{font-size:12.5px;color:var(--sub);margin-top:3px;font-style:italic}
+.nade-card .nade-cn{font-size:13px;color:var(--ink);margin-top:2px}
+.nade-card .nade-row{display:flex;gap:10px;align-items:flex-start}
+.nade-card .nade-thumb{width:84px;height:52px;border-radius:8px;object-fit:cover;flex:none}
+.nade-card a{color:#5e35b1;font-size:11.5px;text-decoration:none}
+.nade-card a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>ほど の構図</h1>
+<div class="kana">ほど のこうず ／ 副助詞がつくる連用・連体の切り替え 🧭</div>
+<div class="tags"><span>20 句式</span><span>7 分類</span><span>42 音声 + 24 原声</span><span>hodo.json 随手加</span></div>
+</div></header>
+
+<nav class="wrap" id="nav"></nav>
+<main class="wrap" id="main"></main>
+
+<div class="bar"><div class="wrap">
+<span class="hint" id="barinfo">离线可用 · 点击🔊播放发音</span>
+<button class="next" id="next" onclick="nextQ()" style="display:none">次の問題 →</button>
+<span class="score" id="score"></span>
+</div></div>
+
+<script>
+const AUDIO={"hodo-word": "audio/hodo-word.mp3", "hodo-yougen-e0": "audio/hodo-yougen-e0-100723a3d6.mp3", "hodo-yougen-e1": "audio/hodo-yougen-e1-b4a5e5af6f.mp3", "hodo-yougen-e2": "audio/hodo-yougen-e2-a7e48533e5.mp3", "hodo-tai-e0": "audio/hodo-tai-e0-b2f669c8b6.mp3", "hodo-tai-e1": "audio/hodo-tai-e1-31be7cac22.mp3", "hodo-nai-e0": "audio/hodo-nai-e0-eb23785512.mp3", "hodo-nai-e1": "audio/hodo-nai-e1-cf03000f17.mp3", "hodo-ni-e0": "audio/hodo-ni-e0-41c36393c6.mp3", "hodo-ni-e1": "audio/hodo-ni-e1-b5a69e9e67.mp3", "hodo-saikou-e1": "audio/hodo-saikou-e1-2cffae0248.mp3", "hodo-hito-e0": "audio/hodo-hito-e0-d74d399e45.mp3", "hodo-hito-e1": "audio/hodo-hito-e1-6d5a164ee1.mp3", "hodo-omotta-e0": "audio/hodo-omotta-e0-47ba30ddd0.mp3", "hodo-omotta-e1": "audio/hodo-omotta-e1-edf8967337.mp3", "hodo-demonai-e0": "audio/hodo-demonai-e0-990d7dc25c.mp3", "hodo-demonai-e1": "audio/hodo-demonai-e1-5da48427fd.mp3", "hodo-no-e0": "audio/hodo-no-e0-d8b6ff0fa6.mp3", "hodo-no-e1": "audio/hodo-no-e1-bf5b705f30.mp3", "hodo-no-koto-e0": "audio/hodo-no-koto-e0-b78855867b.mp3", "hodo-no-koto-e1": "audio/hodo-no-koto-e1-73b2186d0a.mp3", "hodo-no-fear-e0": "audio/hodo-no-fear-e0-40a111d15a.mp3", "hodo-no-fear-e1": "audio/hodo-no-fear-e1-3be4ea1fbd.mp3", "ba-hodo-e1": "audio/ba-hodo-e1-501837e1c4.mp3", "hodo-hirei-e0": "audio/hodo-hirei-e0-59de4a36cd.mp3", "hodo-hirei-e1": "audio/hodo-hirei-e1-7f3c4747e8.mp3", "ni-mo-hodo-e0": "audio/ni-mo-hodo-e0-7c8873c909.mp3", "ni-mo-hodo-e1": "audio/ni-mo-hodo-e1-662f587167.mp3", "to-iu-hodo-e0": "audio/to-iu-hodo-e0-4fa314cdf9.mp3", "to-iu-hodo-e1": "audio/to-iu-hodo-e1-ac006dcb94.mp3", "hodo-gaisu-e1": "audio/hodo-gaisu-e1-c1fa0ed44d.mp3", "hodo-suryo-e0": "audio/hodo-suryo-e0-bb8b7a91fa.mp3", "hodo-suryo-e1": "audio/hodo-suryo-e1-74e69daf10.mp3", "hodo-hinshi-e0": "audio/hodo-hinshi-e0-9eecb872a8.mp3", "hodo-hinshi-e1": "audio/hodo-hinshi-e1-39e6cbb23b.mp3", "hodo-kurai-e0": "audio/hodo-kurai-e0-a1b1b61dc2.mp3", "hodo-kurai-e1": "audio/hodo-kurai-e1-081bf49c4e.mp3", "hodo-shushoku-e0": "audio/hodo-shushoku-e0-ff6fb9134f.mp3", "hodo-shushoku-e1": "audio/hodo-shushoku-e1-d38169df07.mp3", "hodo-saikou-e0": "audio/hodo-saikou-e0.mp3", "ba-hodo-e0": "audio/ba-hodo-e0.mp3", "hodo-gaisu-e0": "audio/hodo-gaisu-e0.mp3"};
+const NADE_AUDIO={"hodo-yougen-n0": "https://cdn.nadeshiko.co/media/166216/7/d111b79fea.mp3", "hodo-yougen-n1": "https://cdn.nadeshiko.co/media/21460/6/cf10100030.mp3", "hodo-tai-n0": "https://cdn.nadeshiko.co/media/175914/10/beda000f3f.mp3", "hodo-tai-n1": "https://cdn.nadeshiko.co/media/154745/10/30946194e8.mp3", "hodo-nai-n0": "https://cdn.nadeshiko.co/media/180367/18/b9ac29a495.mp3", "hodo-saikou-n0": "https://cdn.nadeshiko.co/media/mv/248395/1/fcd0069e06.mp3", "hodo-hito-n0": "https://cdn.nadeshiko.co/media/21/50/bc21f204b7.mp3", "hodo-omotta-n0": "https://cdn.nadeshiko.co/media/177937/13/0d4efa33d4.mp3", "hodo-omotta-n1": "https://cdn.nadeshiko.co/media/101291/4/677eb7e137.mp3", "hodo-demonai-n0": "https://cdn.nadeshiko.co/media/20755/4/0c068a8574.mp3", "hodo-demonai-n1": "https://cdn.nadeshiko.co/media/154587/11/d4bcd6ef6c.mp3", "hodo-no-n0": "https://cdn.nadeshiko.co/media/113693/5/dd4624244f.mp3", "hodo-no-n1": "https://cdn.nadeshiko.co/media/20755/1/e65e54839f.mp3", "hodo-no-koto-n0": "https://cdn.nadeshiko.co/media/154587/21/2ae5b6b146.mp3", "hodo-no-koto-n1": "https://cdn.nadeshiko.co/media/179344/6/8dddc25bfe.mp3", "hodo-no-fear-n0": "https://cdn.nadeshiko.co/media/21/21/0097203666.mp3", "ba-hodo-n0": "https://cdn.nadeshiko.co/media/9289/1/15b897a8fe.mp3", "ba-hodo-n1": "https://cdn.nadeshiko.co/media/154745/5/b524fa04c5.mp3", "ni-mo-hodo-n0": "https://cdn.nadeshiko.co/media/21459/2/6bad8d1a4d.mp3", "ni-mo-hodo-n1": "https://cdn.nadeshiko.co/media/143338/11/9ea9d163bd.mp3", "to-iu-hodo-n0": "https://cdn.nadeshiko.co/media/21087/11/822da10eb8.mp3", "hodo-gaisu-n0": "https://cdn.nadeshiko.co/media/392/91/d1fbe03b45.mp3", "hodo-kurai-n0": "https://cdn.nadeshiko.co/media/mv/88850/24/8eaf396827.mp3", "hodo-kurai-n1": "https://cdn.nadeshiko.co/media/127230/7/e846a7430a.mp3"};
+const GROUPS=[{"id": "degree", "name": "程度・比喩（連用修飾）", "color": "#e8590c", "emoji": "🔥", "note": "〜ほど＋用言——度合いを誇張して言う。後ろの用言を修飾する連用修飾語になる。"}, {"id": "superlative", "name": "最高級・比較", "color": "#d33f49", "emoji": "🏆", "note": "〜ほど…ない——「これ以上ない」の最高級と、「〜と同じくらい…ない」の比較否定。"}, {"id": "rentai", "name": "連体修飾（〜ほどの）", "color": "#1971c2", "emoji": "🔗", "note": "〜ほどの＋体言——「の」を伴って名詞を修飾する連体修飾語。"}, {"id": "hirei", "name": "比例・呼応", "color": "#0ca678", "emoji": "📈", "note": "〜ば〜ほど／〜するほど——一方の変化に比例してもう一方が変わる。"}, {"id": "gente", "name": "否定・限度", "color": "#9c36b5", "emoji": "🚧", "note": "〜ほどではない／〜にもほどがある——程度の否定と「限度を超えている」。"}, {"id": "gaisu", "name": "概数", "color": "#0b7285", "emoji": "🔢", "note": "数量＋ほど——おおよその量や時を表す。"}, {"id": "bumpo", "name": "語法・品詞", "color": "#6d28d9", "emoji": "🧭", "note": "副助詞「ほど」の正体、連用／連体の切り替え、〜くらいとの違い。"}];
+const ITEMS=[{"id": "hodo-yougen", "group": "degree", "level": "N3", "emoji": "🔥", "word": "〜ほど＋用言", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "体言・連体形＋ほど", "meaning": "到…程度；…得（夸张程度）", "engine": "ほど（副助詞）が程度を表し、直後の用言（動詞・形容詞）を修飾する → 連用修飾語。「死ぬほど」のような極端な例えで程度を誇張する。", "examples": [{"jp": "<ruby>死ぬ<rt>しぬ<\/rt><\/ruby>ほど<ruby>疲れ<rt>つかれ<\/rt><\/ruby>た。", "cn": "累得要死。"}, {"jp": "<ruby>足<rt>あし<\/rt><\/ruby>が<ruby>痛く<rt>いたく<\/rt><\/ruby>なるほど<ruby>歩い<rt>あるい<\/rt><\/ruby>た。", "cn": "走到脚都疼了。"}, {"jp": "<ruby>忙しく<rt>いそがしく<\/rt><\/ruby>て<ruby>顔<rt>かお<\/rt><\/ruby>も<ruby>上げ<rt>あげ<\/rt><\/ruby>られないほどだ。", "cn": "忙得连头都抬不起来。"}], "nadeshiko": [{"jp": "<ruby>死<rt>し<\/rt><\/ruby>ぬほど かわいい!", "en": "So cute I could die!", "media": "The Dangers in My Heart Season 2", "ep": "EP7", "at": "22:28", "url": "https://nadeshiko.co/en/sentence/Jnn-tYjvVHBn", "audio": "https://cdn.nadeshiko.co/media/166216/7/d111b79fea.mp3", "thumb": "https://cdn.nadeshiko.co/media/166216/7/d111b79fea.webp", "cn": "可爱得要命！"}, {"jp": "その<ruby>声<rt>こえ<\/rt><\/ruby>は ぞっとするほど<ruby>優<rt>やさ<\/rt><\/ruby>しかったけど", "en": "Despite the warmth in his voice, his words gave me the chills.", "media": "Sound! Euphonium 2", "ep": "EP6", "at": "16:32", "url": "https://nadeshiko.co/en/sentence/Uml1gfyi_n4G", "audio": "https://cdn.nadeshiko.co/media/21460/6/cf10100030.mp3", "thumb": "https://cdn.nadeshiko.co/media/21460/6/cf10100030.webp", "cn": "那声音温柔得让人发毛。"}], "note": "比喩で程度を極端化する。同じ「くらい」も可能だが、ほどは書き言葉寄りで強調が強い。", "quizzes": []}, {"id": "hodo-tai", "group": "degree", "level": "N2", "emoji": "😢", "word": "〜たいほどだ", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "連体形＋ほど（＋だ）", "meaning": "想…的程度；…得不得了", "engine": "願望・感情の程度を誇張する。文末を「〜ほどだ」で受けることも多い。", "examples": [{"jp": "<ruby>泣き<rt>なき<\/rt><\/ruby>たいほど<ruby>悔しか<rt>くやしか<\/rt><\/ruby>った。", "cn": "后悔得想哭。"}, {"jp": "<ruby>嬉しく<rt>うれしく<\/rt><\/ruby>て<ruby>飛び上がる<rt>とびあがる<\/rt><\/ruby>ほどだった。", "cn": "高兴得差点跳起来。"}], "nadeshiko": [{"jp": "<ruby>俺<rt>おれ<\/rt><\/ruby> ナズナちゃんが <ruby>泣<rt>な<\/rt><\/ruby>くほど<ruby>嫌<rt>いや<\/rt><\/ruby>なことさせたくないよ。", "en": "I wouldn't want you to do anything that would make you cry.", "media": "Call of the Night Season 2", "ep": "EP10", "at": "20:17", "url": "https://nadeshiko.co/en/sentence/OBeiju6tZxvw", "audio": "https://cdn.nadeshiko.co/media/175914/10/beda000f3f.mp3", "thumb": "https://cdn.nadeshiko.co/media/175914/10/beda000f3f.webp", "cn": "我不想让娜兹娜做让她哭得那么难受的事。"}, {"jp": "もし <ruby>泣<rt>な<\/rt><\/ruby>くほど つらいんだったら <ruby>何<rt>なに<\/rt><\/ruby>か<ruby>助<rt>たす<\/rt><\/ruby>けてやりてぇけど", "en": "If she were in pain and wanted to cry, I would've liked to help her out,", "media": "Rent-a-Girlfriend Season 3", "ep": "EP10", "at": "3:42", "url": "https://nadeshiko.co/en/sentence/izZ6z5oQjV8K", "audio": "https://cdn.nadeshiko.co/media/154745/10/30946194e8.mp3", "thumb": "https://cdn.nadeshiko.co/media/154745/10/30946194e8.webp", "cn": "如果她难受得哭出来，我真想帮帮她。"}], "note": "", "quizzes": []}, {"id": "hodo-nai", "group": "degree", "level": "N2", "emoji": "😖", "word": "〜ないほど", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "ない形の連体形＋ほど", "meaning": "到了不能…的程度", "engine": "打消の連体形＋ほどで、程度の高さを裏から強調する（言えないほど＝言えないくらいひどく）。", "examples": [{"jp": "<ruby>今更<rt>いまさら<\/rt><\/ruby>ウソなんて<ruby>言え<rt>いえ<\/rt><\/ruby>ないほど<ruby>広ま<rt>ひろま<\/rt><\/ruby>っている。", "cn": "事到如今已经传得没法说是谎话了。"}, {"jp": "<ruby>息<rt>いき<\/rt><\/ruby>ができないほど<ruby>笑っ<rt>わらっ<\/rt><\/ruby>た。", "cn": "笑得喘不过气。"}], "nadeshiko": [{"jp": "<ruby>今更<rt>いまさら<\/rt><\/ruby> ウソなんて <ruby>言<rt>い<\/rt><\/ruby>えないほど<ruby>広<rt>ひろ<\/rt><\/ruby>まってるぞ　またニコの<ruby>魔法<rt>まほう<\/rt><\/ruby>だな", "en": "It's already spread far too wide to tell people it was a lie. Did you cast a spell, Nico?", "media": "WITCH WATCH", "ep": "EP18", "at": "15:15", "url": "https://nadeshiko.co/en/sentence/MBgQOjifXiYH", "audio": "https://cdn.nadeshiko.co/media/180367/18/b9ac29a495.mp3", "thumb": "https://cdn.nadeshiko.co/media/180367/18/b9ac29a495.webp", "cn": "事到如今，已经传开得没法说那是谎言了。"}], "note": "", "quizzes": []}, {"id": "hodo-ni", "group": "degree", "level": "N1", "emoji": "✨", "word": "〜ほどに", "read": "ほどに", "mod": "連用修飾語（用言修飾）", "connect": "連体形＋ほどに", "meaning": "…地（文语性的程度强调）；越来越…", "engine": "「ほど」＋格助詞「に」で程度を副詞的に強調する。文章語的で、歌詞や文学にも多い。", "examples": [{"jp": "<ruby>目<rt>め<\/rt><\/ruby>が<ruby>覚め<rt>さめ<\/rt><\/ruby>るほどに<ruby>鮮やか<rt>あざやか<\/rt><\/ruby>な<ruby>朝<rt>あさ<\/rt><\/ruby>だった。", "cn": "那是鲜明得让人惊醒的早晨。"}, {"jp": "<ruby>涙<rt>なみだ<\/rt><\/ruby>が<ruby>出る<rt>でる<\/rt><\/ruby>ほどに<ruby>笑っ<rt>わらっ<\/rt><\/ruby>た。", "cn": "笑得眼泪都出来了。"}], "nadeshiko": [], "note": "", "quizzes": []}, {"id": "hodo-saikou", "group": "superlative", "level": "N2", "emoji": "🏆", "word": "〜ほど…ない（最高級）", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "体言＋ほど＋…ない", "meaning": "没有比…更…的（最高级）", "engine": "「このときほど強く感じたことはない」——「このとき」を基準に、それ以上の例がない＝最高級。ほどは「強く」を修飾する連用修飾語。", "examples": [{"jp": "<ruby>自分<rt>じぶん<\/rt><\/ruby>の<ruby>無知<rt>むち<\/rt><\/ruby>をこのときほど<ruby>強く<rt>つよく<\/rt><\/ruby><ruby>感じ<rt>かんじ<\/rt><\/ruby>たことはない。", "cn": "没有比这时候更强烈地感到自己的无知。", "audio": "audio/hodo-saikou-e0.mp3"}, {"jp": "<ruby>今年<rt>ことし<\/rt><\/ruby>は<ruby>去年<rt>きょねん<\/rt><\/ruby>ほど<ruby>暑く<rt>あつく<\/rt><\/ruby>ない。", "cn": "今年没有去年那么热。（比较否定）"}], "nadeshiko": [{"jp": "\\「でも これまでの<ruby>人生<rt>じんせい<\/rt><\/ruby>で\\「　\\「<ruby>君<rt>きみ<\/rt><\/ruby>ほど<ruby>誰<rt>だれ<\/rt><\/ruby>かを <ruby>身近<rt>みじか<\/rt><\/ruby>に<ruby>感<rt>かん<\/rt><\/ruby>じたことはないんだ!\\「", "en": "\\\"but I've never been so close to anyone in my whole entire life.\\\"", "media": "My Undead Yokai Girlfriend", "ep": "EP1", "at": "8:54", "url": "https://nadeshiko.co/en/sentence/uI1a4OoEIPXl", "audio": "https://cdn.nadeshiko.co/media/mv/248395/1/fcd0069e06.mp3", "thumb": "https://cdn.nadeshiko.co/media/mv/248395/1/fcd0069e06.webp", "cn": "我从没觉得和谁像你这样亲近过！"}], "note": "同じ「〜ほど…ない」でも、①「このときほど…ない」＝最高級、②「去年ほど…ない」＝比較否定。文脈で判断する。この课件の核心例句。", "quizzes": [{"type": "choice", "q": "「このときほど強く感じたことはない」の意味は？", "opts": ["没有比这时候更强烈的了（最高级）", "这时候的感受比较弱", "大约这个时候感受到", "只有这时候才感受得到"], "ans": 0, "exp": "「このとき」を基準に「それ以上はない」→最高級。ほどは「強く」を修飾。"}]}, {"id": "hodo-hito", "group": "superlative", "level": "N3", "emoji": "👑", "word": "〜ほど…はいない", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "体言＋ほど＋…はない", "meaning": "没有比…更…的（名词的最高级）", "engine": "名詞を例示して最高級を作る。述部は「いない／ない」。", "examples": [{"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>ど<ruby>優しい人はいない<rt>やさしいひとはいない<\/rt><\/ruby>。", "cn": "没有比他更温柔的人。"}, {"jp": "この<ruby>町<rt>まち<\/rt><\/ruby>ほど<ruby>住み<rt>すみ<\/rt><\/ruby>やすい<ruby>所<rt>ところ<\/rt><\/ruby>はない。", "cn": "没有比这个城市更适合居住的地方。"}], "nadeshiko": [{"jp": "けど お<ruby>前<rt>まえ<\/rt><\/ruby>のパパほど <ruby>強<rt>つよ<\/rt><\/ruby>くて<ruby>優<rt>やさ<\/rt><\/ruby>しい<ruby>男<rt>おとこ<\/rt><\/ruby>は<ruby>見<rt>み<\/rt><\/ruby>たことがねえ", "en": "But I've never seen a man as strong and kind as your dad before!", "media": "ONE PIECE", "ep": "EP50", "at": "19:43", "url": "https://nadeshiko.co/en/sentence/LJwhOuSnKFb5", "audio": "https://cdn.nadeshiko.co/media/21/50/bc21f204b7.mp3", "thumb": "https://cdn.nadeshiko.co/media/21/50/bc21f204b7.webp", "cn": "我从没见过像你爸爸那样既坚强又温柔的男人！"}], "note": "", "quizzes": []}, {"id": "hodo-omotta", "group": "superlative", "level": "N4", "emoji": "🤔", "word": "思ったほど…ない", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "思う／言う＋連用形＋た＋ほど＋…ない", "meaning": "没有想象（说的）那么…", "engine": "予想・伝聞を基準にした比較否定。「思ったほど」「言うほど」の形で日常会話に頻出。", "examples": [{"jp": "<ruby>思った<rt>おもった<\/rt><\/ruby>ほど<ruby>難しく<rt>むずかしく<\/rt><\/ruby>なかった。", "cn": "没有想象的那么难。"}, {"jp": "<ruby>言う<rt>いう<\/rt><\/ruby>ほど<ruby>簡単<rt>かんたん<\/rt><\/ruby>ではない。", "cn": "不像说的那么简单。"}], "nadeshiko": [{"jp": "<ruby>筋<rt>すじ<\/rt><\/ruby><ruby>繊維<rt>せんい<\/rt><\/ruby>の<ruby>損傷<rt>そんしょう<\/rt><\/ruby>も <ruby>思<rt>おも<\/rt><\/ruby>ったほどではなかった", "en": "and the muscle fiber damage isn't as bad as we feared.", "media": "SPY x FAMILY Season 3", "ep": "EP13", "at": "15:20", "url": "https://nadeshiko.co/en/sentence/GT7Gc6IjVFmB", "audio": "https://cdn.nadeshiko.co/media/177937/13/0d4efa33d4.mp3", "thumb": "https://cdn.nadeshiko.co/media/177937/13/0d4efa33d4.webp", "cn": "肌肉纤维的损伤也没担心的那么严重。"}, {"jp": "なってみれば <ruby>思<rt>おも<\/rt><\/ruby>ったほど <ruby>寂<rt>さび<\/rt><\/ruby>しいとは<ruby>感<rt>かん<\/rt><\/ruby>じない。", "en": "and it's not as lonely as you'd think.", "media": "Rascal Does Not Dream of Bunny Girl Senpai", "ep": "EP4", "at": "21:55", "url": "https://nadeshiko.co/en/sentence/g8QPXx1YSYsT", "audio": "https://cdn.nadeshiko.co/media/101291/4/677eb7e137.mp3", "thumb": "https://cdn.nadeshiko.co/media/101291/4/677eb7e137.webp", "cn": "真到了那一步，倒不觉得像想象的那么寂寞。"}], "note": "", "quizzes": []}, {"id": "hodo-demonai", "group": "superlative", "level": "N3", "emoji": "🤷", "word": "〜ほどでもない", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "体言＋ほどでもない", "meaning": "还没到…的程度；并不那么…", "engine": "程度を控えめに否定する。会話の定番「それほどでもない」＝「没那么厉害」。", "examples": [{"jp": "わざわざ<ruby>行く<rt>いく<\/rt><\/ruby>ほどでもない。", "cn": "不值得特意去一趟。"}, {"jp": "<ruby>高級ホテル<rt>こうきゅうホテル<\/rt><\/ruby>に<ruby>泊ま<rt>とま<\/rt><\/ruby>るほどでもない。", "cn": "还没到住高级酒店的程度。"}], "nadeshiko": [{"jp": "いやあ それほどでもないですね", "en": "Well, I wouldn't say I'm that fast.", "media": "Assassination Classroom", "ep": "EP4", "at": "5:15", "url": "https://nadeshiko.co/en/sentence/8Azc5HzO5zCU", "audio": "https://cdn.nadeshiko.co/media/20755/4/0c068a8574.mp3", "thumb": "https://cdn.nadeshiko.co/media/20755/4/0c068a8574.webp", "cn": "哎呀，也没你说得那么厉害啦。"}, {"jp": "それほどでもないけど", "en": "It's not that big a deal.", "media": "Frieren: Beyond Journey’s End", "ep": "EP11", "at": "6:57", "url": "https://nadeshiko.co/en/sentence/LAm0DgANu-hO", "audio": "https://cdn.nadeshiko.co/media/154587/11/d4bcd6ef6c.mp3", "thumb": "https://cdn.nadeshiko.co/media/154587/11/d4bcd6ef6c.webp", "cn": "也没那么夸张啦。"}], "note": "", "quizzes": []}, {"id": "hodo-no", "group": "rentai", "level": "N2", "emoji": "🔗", "word": "〜ほどの＋体言", "read": "ほどの", "mod": "連体修飾語（体言修飾）", "connect": "体言・連体形＋ほどの＋名詞", "meaning": "到…程度的…（修饰名词）", "engine": "「の」を伴うと後ろの名詞を修飾する連体修飾語に切り替わる——ここが「〜ほど」と「〜ほどの」の分かれ目。", "examples": [{"jp": "このときほどの<ruby>衝撃<rt>しょうげき<\/rt><\/ruby>はなかった。", "cn": "没有比那时更大的冲击。"}, {"jp": "<ruby>満月<rt>まんげつ<\/rt><\/ruby>を<ruby>三日月<rt>みかづき<\/rt><\/ruby>に<ruby>変え<rt>かえ<\/rt><\/ruby>るほどのパワー。", "cn": "足以把满月变成月牙的力量。"}], "nadeshiko": [{"jp": "<ruby>石畳<rt>いしだたみ<\/rt><\/ruby>をひっくり<ruby>返<rt>かえ<\/rt><\/ruby>すほどのことを しておいて　<ruby>何<rt>なん<\/rt><\/ruby>の<ruby>騒<rt>さわ<\/rt><\/ruby>ぎも<ruby>起<rt>お<\/rt><\/ruby>こしていないとは <ruby>言<rt>い<\/rt><\/ruby>えまい", "en": "You did something that turned the paving upside down and you claim you did not make a racket?", "media": "Ascendance of a Bookworm Part 2", "ep": "EP5", "at": "20:34", "url": "https://nadeshiko.co/en/sentence/B_zlk85wiIQS", "audio": "https://cdn.nadeshiko.co/media/113693/5/dd4624244f.mp3", "thumb": "https://cdn.nadeshiko.co/media/113693/5/dd4624244f.webp", "cn": "你做了把石板地都掀翻的事，怎么可能什么动静都没引起。"}, {"jp": "<ruby>満月<rt>まんげつ<\/rt><\/ruby>を<ruby>三日月<rt>みかづき<\/rt><\/ruby>に <ruby>変<rt>か<\/rt><\/ruby>えるほどのパワーを<ruby>持<rt>も<\/rt><\/ruby>つ<ruby>超<rt>ちょう<\/rt><\/ruby><ruby>生物<rt>せいぶつ<\/rt><\/ruby>だ", "en": "He's a superbeing with enough power to reduce the full moon to a crescent.", "media": "Assassination Classroom", "ep": "EP1", "at": "7:41", "url": "https://nadeshiko.co/en/sentence/NR8_5pG8qc-r", "audio": "https://cdn.nadeshiko.co/media/20755/1/e65e54839f.mp3", "thumb": "https://cdn.nadeshiko.co/media/20755/1/e65e54839f.webp", "cn": "那是拥有足以把满月变成月牙之力的超生物。"}], "note": "同じ「このとき」でも、後ろが用言なら「ほど」（連用修飾）、体言なら「ほどの」（連体修飾）。", "quizzes": [{"type": "choice", "q": "「このときほどの衝撃」の「このときほどの」が作る修飾語は？", "opts": ["連体修飾語（「衝撃」を修飾）", "連用修飾語（用言を修飾）", "主語", "独立語"], "ans": 0, "exp": "「の」を伴い、後ろの体言「衝撃」を修飾しているので連体修飾語。"}]}, {"id": "hodo-no-koto", "group": "rentai", "level": "N3", "emoji": "📄", "word": "〜ほどのことではない", "read": "ほどの", "mod": "連体修飾語（体言修飾）", "connect": "連体形＋ほどのことではない", "meaning": "没到…的地步；不值得…", "engine": "形式名詞「こと」を修飾し、全体で「その程度に及ばない」と評価する。", "examples": [{"jp": "<ruby>心配<rt>しんぱい<\/rt><\/ruby>するほどのことではない。", "cn": "用不着担心。"}, {"jp": "わざわざ<ruby>報告<rt>ほうこく<\/rt><\/ruby>するほどのことでもない。", "cn": "也不值得特意汇报。"}], "nadeshiko": [{"jp": "<ruby>聞<rt>き<\/rt><\/ruby>くほどのことでもあるまい。", "en": "Do you even have to ask?", "media": "Frieren: Beyond Journey’s End", "ep": "EP21", "at": "2:54", "url": "https://nadeshiko.co/en/sentence/rj76GHriKf4U", "audio": "https://cdn.nadeshiko.co/media/154587/21/2ae5b6b146.mp3", "thumb": "https://cdn.nadeshiko.co/media/154587/21/2ae5b6b146.webp", "cn": "用不着问吧。"}, {"jp": "うぅ...いや <ruby>泣<rt>な<\/rt><\/ruby>くほどのことじゃ ないでしょ。", "en": "Uh, you don't have to cry about it.", "media": "Rent-a-Girlfriend Season 4", "ep": "EP6", "at": "15:47", "url": "https://nadeshiko.co/en/sentence/dUNCykcJ-Or4", "audio": "https://cdn.nadeshiko.co/media/179344/6/8dddc25bfe.mp3", "thumb": "https://cdn.nadeshiko.co/media/179344/6/8dddc25bfe.webp", "cn": "哎呀，没什么好哭的吧。"}], "note": "", "quizzes": []}, {"id": "hodo-no-fear", "group": "rentai", "level": "N2", "emoji": "😱", "word": "〜ほどの＋名詞（甚だしさ）", "read": "ほどの", "mod": "連体修飾語（体言修飾）", "connect": "連体形＋ほどの＋名詞", "meaning": "…得不得了的…（强调程度的连体修饰）", "engine": "前件の程度が甚だしいことを、後ろの名詞の属性として提示する。", "examples": [{"jp": "<ruby>声<rt>こえ<\/rt><\/ruby>も<ruby>出な<rt>でな<\/rt><\/ruby>いほどの<ruby>恐怖<rt>きょうふ<\/rt><\/ruby>を<ruby>感じ<rt>かんじ<\/rt><\/ruby>た。", "cn": "感到了发不出声的恐惧。"}, {"jp": "<ruby>誰も<rt>だれも<\/rt><\/ruby>が<ruby>振り返る<rt>ふりかえる<\/rt><\/ruby>ほどの<ruby>美人<rt>びじん<\/rt><\/ruby>だ。", "cn": "是个人人回头的美人。"}], "nadeshiko": [{"jp": "この<ruby>海<rt>うみ<\/rt><\/ruby>の<ruby>上<rt>うえ<\/rt><\/ruby>で<ruby>食料<rt>しょくりょう<\/rt><\/ruby>や<ruby>水<rt>みず<\/rt><\/ruby>を<ruby>失<rt>うしな<\/rt><\/ruby>うことが どれほどの<ruby>恐怖<rt>きょうふ<\/rt><\/ruby>か", "en": "How scary it is to lose food and water on the ocean...", "media": "ONE PIECE", "ep": "EP21", "at": "10:19", "url": "https://nadeshiko.co/en/sentence/LOHLFPE2ihpN", "audio": "https://cdn.nadeshiko.co/media/21/21/0097203666.mp3", "thumb": "https://cdn.nadeshiko.co/media/21/21/0097203666.webp", "cn": "在这片大海上失去食物和水，是何等程度的恐惧啊。"}], "note": "", "quizzes": []}, {"id": "ba-hodo", "group": "hirei", "level": "N3", "emoji": "📈", "word": "〜ば〜ほど", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "仮定形＋ば＋連体形＋ほど", "meaning": "越…越…", "engine": "同じ動詞を繰り返し、変化の比例関係を表す。後件は「ますます…」と呼応する。", "examples": [{"jp": "<ruby>読め<rt>よめ<\/rt><\/ruby>ば<ruby>読む<rt>よむ<\/rt><\/ruby>ほどおもしろい。", "cn": "越读越有意思。", "audio": "audio/ba-hodo-e0.mp3"}, {"jp": "<ruby>考え<rt>かんがえ<\/rt><\/ruby>れば<ruby>考え<rt>かんがえ<\/rt><\/ruby>るほどわからなくなる。", "cn": "越想越不明白。"}], "nadeshiko": [{"jp": "いや <ruby>見<rt>み<\/rt><\/ruby>れば<ruby>見<rt>み<\/rt><\/ruby>るほどそっくりだ", "en": "The more I look at you, the more obvious the resemblance is.", "media": "Hanasaku Iroha ~Blossoms for Tomorrow~", "ep": "EP1", "at": "12:31", "url": "https://nadeshiko.co/en/sentence/E0zg7_OnELU-", "audio": "https://cdn.nadeshiko.co/media/9289/1/15b897a8fe.mp3", "thumb": "https://cdn.nadeshiko.co/media/9289/1/15b897a8fe.webp", "cn": "哎呀，越看越像。"}, {"jp": "はぁ...<ruby>見<rt>み<\/rt><\/ruby>れば<ruby>見<rt>み<\/rt><\/ruby>るほど <ruby>申<rt>もう<\/rt><\/ruby>し<ruby>訳<rt>わけ<\/rt><\/ruby>なさが<ruby>募<rt>つの<\/rt><\/ruby>るぜ。", "en": "The more I see of her acting, the worse I feel.", "media": "Rent-a-Girlfriend Season 3", "ep": "EP5", "at": "9:14", "url": "https://nadeshiko.co/en/sentence/L1HNxvG235Yq", "audio": "https://cdn.nadeshiko.co/media/154745/5/b524fa04c5.mp3", "thumb": "https://cdn.nadeshiko.co/media/154745/5/b524fa04c5.webp", "cn": "唉，越看越觉得抱歉。"}], "note": "", "quizzes": []}, {"id": "hodo-hirei", "group": "hirei", "level": "N3", "emoji": "🌱", "word": "〜するほど（比例）", "read": "ほど", "mod": "連用修飾語（用言修飾）", "connect": "連体形＋ほど", "meaning": "随着…越来越…", "engine": "「〜ば〜ほど」の簡略形。日常では「練習するほど上手になる」のように動詞＋ほどで比例を表す。", "examples": [{"jp": "<ruby>練習<rt>れんしゅう<\/rt><\/ruby>するほど<ruby>上手<rt>じょうず<\/rt><\/ruby>になる。", "cn": "越练习越熟练。"}, {"jp": "<ruby>年を取る<rt>としをとる<\/rt><\/ruby>ほど<ruby>時間<rt>じかん<\/rt><\/ruby>が<ruby>早く<rt>はやく<\/rt><\/ruby><ruby>過ぎ<rt>すぎ<\/rt><\/ruby>る。", "cn": "年纪越大时间过得越快。"}], "nadeshiko": [], "note": "", "quizzes": []}, {"id": "ni-mo-hodo", "group": "gente", "level": "N2", "emoji": "🚧", "word": "〜にもほどがある", "read": "ほど", "mod": "文末表現（述部）", "connect": "体言＋にもほどがある", "meaning": "…也该有个限度；太过分了", "engine": "「限度」という語義そのままに、程度の超過を非難する定型。冗談・遅刻・無茶などと共に。", "examples": [{"jp": "<ruby>冗談<rt>じょうだん<\/rt><\/ruby>にもほどがある。", "cn": "开玩笑也该有个限度。"}, {"jp": "<ruby>遅刻<rt>ちこく<\/rt><\/ruby>にもほどがある。", "cn": "迟到也得有个谱。"}], "nadeshiko": [{"jp": "まったく むちゃにもほどがある", "en": "Good grief! You're too reckless!", "media": "My Hero Academia", "ep": "EP2", "at": "18:19", "url": "https://nadeshiko.co/en/sentence/cvLQ_PbBxgec", "audio": "https://cdn.nadeshiko.co/media/21459/2/6bad8d1a4d.mp3", "thumb": "https://cdn.nadeshiko.co/media/21459/2/6bad8d1a4d.webp", "cn": "真是的，胡来也该有个限度。"}, {"jp": "<ruby>不躾<rt>ぶしつけ<\/rt><\/ruby>にもほどがあるだろうが", "en": "That's a little more than \\\"brash,\\\" you know.", "media": "The Angel Next Door Spoils Me Rotten", "ep": "EP11", "at": "12:58", "url": "https://nadeshiko.co/en/sentence/tdnBUB8sf95R", "audio": "https://cdn.nadeshiko.co/media/143338/11/9ea9d163bd.mp3", "thumb": "https://cdn.nadeshiko.co/media/143338/11/9ea9d163bd.webp", "cn": "无礼也该有个限度吧。"}], "note": "", "quizzes": [{"type": "choice", "q": "「冗談にもほどがある」の意味は？", "opts": ["玩笑也该有个限度（太不像话）", "玩笑很有意思", "请开个玩笑", "讨厌开玩笑"], "ans": 0, "exp": "程度の超過を非難する定型。「冗談にも程がある」とも書く。"}]}, {"id": "to-iu-hodo", "group": "gente", "level": "N2", "emoji": "❌", "word": "〜というほどではない", "read": "ほど", "mod": "文末表現（述部）", "connect": "体言＋というほどではない", "meaning": "说不上…；并没有到…的程度", "engine": "「という」で名詞化して「ほどではない」——控えめな否定評価。", "examples": [{"jp": "<ruby>病気<rt>びょうき<\/rt><\/ruby>というほどではない。", "cn": "说不上是病。"}, {"jp": "<ruby>苦戦<rt>くせん<\/rt><\/ruby>というほどではない。", "cn": "算不上苦战。"}], "nadeshiko": [{"jp": "<ruby>苦戦<rt>くせん<\/rt><\/ruby>というほどではない", "en": "Nothing tough about them.", "media": "One-Punch Man", "ep": "EP11", "at": "8:41", "url": "https://nadeshiko.co/en/sentence/e859ZPyNrvnU", "audio": "https://cdn.nadeshiko.co/media/21087/11/822da10eb8.mp3", "thumb": "https://cdn.nadeshiko.co/media/21087/11/822da10eb8.webp", "cn": "算不上什么苦战。"}], "note": "", "quizzes": []}, {"id": "hodo-gaisu", "group": "gaisu", "level": "N4", "emoji": "🔢", "word": "数量＋ほど", "read": "ほど", "mod": "連用修飾語（数量・時）", "connect": "数量詞＋ほど", "meaning": "大约…；…左右", "engine": "概数を表す副助詞用法。数量詞に付いて、おおよその量や時間を示す。", "examples": [{"jp": "りんごを2キロほど<ruby>買う<rt>かう<\/rt><\/ruby>。", "cn": "买大概两公斤的苹果。", "audio": "audio/hodo-gaisu-e0.mp3"}, {"jp": "<ruby>三日ほど<rt>みっかほど<\/rt><\/ruby><ruby>休ん<rt>やすん<\/rt><\/ruby>だ。", "cn": "休息了三天左右。"}], "nadeshiko": [{"jp": "3<ruby>人<rt>さんにん<\/rt><\/ruby>がかりで <ruby>10日<rt>とおか<\/rt><\/ruby>(にち)ほどかかります", "en": "With the three of us, it will take about ten days.", "media": "Yu Yu Hakusho: Ghostfiles", "ep": "EP91", "at": "6:46", "url": "https://nadeshiko.co/en/sentence/QjItw8RBYaQA", "audio": "https://cdn.nadeshiko.co/media/392/91/d1fbe03b45.mp3", "thumb": "https://cdn.nadeshiko.co/media/392/91/d1fbe03b45.webp", "cn": "我们三个人一起干的话，大概要花十天。"}], "note": "", "quizzes": [{"type": "choice", "q": "「三日ほど休んだ」の「ほど」の意味は？", "opts": ["大约（概数）", "最高级（没有比这更…）", "程度夸张", "限度・分寸"], "ans": 0, "exp": "数量詞＋ほど＝概数「大约」。"}]}, {"id": "hodo-suryo", "group": "gaisu", "level": "N3", "emoji": "🧮", "word": "〜ほどの＋数量＋名詞", "read": "ほどの", "mod": "連体修飾語（体言修飾）", "connect": "数量詞＋ほどの＋名詞", "meaning": "大约…的（数量修饰名词）", "engine": "概数の「ほど」に「の」が付き、後ろの名詞を修飾する。", "examples": [{"jp": "<ruby>千人<rt>せんにん<\/rt><\/ruby>ほどの<ruby>観客<rt>かんきゃく<\/rt><\/ruby>が<ruby>集ま<rt>あつま<\/rt><\/ruby>った。", "cn": "聚集了大约一千名观众。"}, {"jp": "<ruby>十分ほど<rt>じゅっぷんほど<\/rt><\/ruby>の<ruby>遅れ<rt>おくれ<\/rt><\/ruby>が<ruby>出た<rt>でた<\/rt><\/ruby>。", "cn": "出现了十分钟左右的延迟。"}], "nadeshiko": [], "note": "", "quizzes": []}, {"id": "hodo-hinshi", "group": "bumpo", "level": "N3", "emoji": "🧭", "word": "ほど＝副助詞", "read": "ほど", "mod": "品詞・接続", "connect": "体言・活用語の連体形＋ほど", "meaning": "「ほど」是副助词（不是形式名词，也不是副词）", "engine": "学校文法（橋本進吉体系）では「ほど」は副助詞。体言や連体形に付き、程度・概数・比較の意味を添えて、全体を連用修飾語にする。漢語「程」は名詞（程度・限度）としても使う。", "examples": [{"jp": "この<ruby>時<rt>とき<\/rt><\/ruby>ほど<ruby>悔しい<rt>くやしい<\/rt><\/ruby>ことはない。", "cn": "没有比这时候更不甘心的了。"}, {"jp": "この<ruby>時<rt>とき<\/rt><\/ruby>ほどの<ruby>悔しさ<rt>くやしさ<\/rt><\/ruby>はない。", "cn": "没有比这时候更大的不甘。"}], "nadeshiko": [], "note": "「ほど」は名詞ではなく副助詞なので、形式名詞（こと・もの）とは別カテゴリ。「〜ほどの」の「の」は格助詞で、連体修飾を作る。", "quizzes": [{"type": "choice", "q": "学校文法で「ほど」の品詞は？", "opts": ["副助詞", "形式名詞", "程度副詞", "格助詞"], "ans": 0, "exp": "「ほど」は副助詞。体言・連体形に付いて程度・概数・比較を添える。"}, {"type": "choice", "q": "「ほど」が付くのは次のどれ？", "opts": ["体言や活用語の連体形", "終止形だけ", "未然形だけ", "命令形だけ"], "ans": 0, "exp": "「三日ほど」（体言）「読むほど」（連体形）のように付く。"}]}, {"id": "hodo-kurai", "group": "bumpo", "level": "N3", "emoji": "⚖️", "word": "〜ほど ⇄ 〜くらい", "read": "ほど・くらい", "mod": "対比", "connect": "どちらも副助詞", "meaning": "ほど（书面・强调）⇄ くらい（口语・最低限度）", "engine": "程度・概数の両方で言い換え可能。ほどは程度の強調と書き言葉、くらいは口語的で「少なくとも」のニュアンスも持つ。「〜ほど…ない ⇄ 〜くらい…ない」もほぼ互換。", "examples": [{"jp": "<ruby>10日<rt>とおか<\/rt><\/ruby>ほどかかる。", "cn": "需要十天左右。（书面语）"}, {"jp": "<ruby>三日ぐらい<rt>みっかぐらい<\/rt><\/ruby><ruby>経った<rt>たった<\/rt><\/ruby>。", "cn": "过了三天左右。（口语）"}], "nadeshiko": [{"jp": "あれから 3<ruby>日<rt>みっか<\/rt><\/ruby>ぐらい<ruby>経<rt>た<\/rt><\/ruby>ったけど", "en": "It's been about three days. -Yeah.", "media": "Terrace House: Tokyo 2019-2020", "ep": "EP24", "at": "39:34", "url": "https://nadeshiko.co/en/sentence/UYxwXlTfVSPl", "audio": "https://cdn.nadeshiko.co/media/mv/88850/24/8eaf396827.mp3", "thumb": "https://cdn.nadeshiko.co/media/mv/88850/24/8eaf396827.webp", "cn": "那之后大概过了三天。"}, {"jp": "あれから3<ruby>日<rt>みっか<\/rt><\/ruby>... くらいかな", "en": "About three days since you got stabbed, I think?", "media": "Chainsaw Man", "ep": "EP7", "at": "8:49", "url": "https://nadeshiko.co/en/sentence/tsp90W1fFaLC", "audio": "https://cdn.nadeshiko.co/media/127230/7/e846a7430a.mp3", "thumb": "https://cdn.nadeshiko.co/media/127230/7/e846a7430a.webp", "cn": "那之后……大概三天吧。"}], "note": "「死ぬほど」＝夸张的程度；「死ぬくらい」意思相近但口语化。考试言い换え多视为可互换，但文体差仍在。", "quizzes": [{"type": "choice", "q": "口语中把「10日ほど」换个说法，最自然的是？", "opts": ["10日ぐらい", "10日しか", "10日こそ", "10日まで"], "ans": 0, "exp": "概数のほど ⇄ ぐらい/くらい。口语多用くらい。"}]}, {"id": "hodo-shushoku", "group": "bumpo", "level": "N3", "emoji": "🔀", "word": "〜ほど／〜ほどの 切替", "read": "ほど・ほどの", "mod": "両用（後続で決まる）", "connect": "＋用言 → 連用修飾／＋の＋体言 → 連体修飾", "meaning": "后接用言则连用修饰，后接体言则连体修饰", "engine": "副助詞「ほど」は後続語の品詞で作る修飾語が切り替わる：「このときほど強く」→連用修飾語（「強く」を修飾）／「このときほどの衝撃」→連体修飾語（「衝撃」を修飾）。", "examples": [{"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>どよく<ruby>働く人はいない<rt>はたらくひとはいない<\/rt><\/ruby>。", "cn": "没有比他更勤劳的人。（ほど＋用言）"}, {"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>どの<ruby>働き手<rt>はたらきて<\/rt><\/ruby>はいない。", "cn": "没有像他那样的好劳力。（ほどの＋体言）"}], "nadeshiko": [], "note": "同じ内容でも、後続が用言か体言かで「ほど／ほどの」が決まり、作る修飾語も連用／連体に切り替わる。", "quizzes": [{"type": "choice", "q": "「このときほど強く感じた」の「このときほど」の文法的働きは？", "opts": ["連用修飾語（「強く」を修飾）", "連体修飾語（名詞を修飾）", "主語", "述語"], "ans": 0, "exp": "後ろが用言「強く」なので連用修飾語。「このときほどの衝撃」なら連体修飾語。"}]}];
+const SENTS={"hodo-yougen-e0": {"jp": "<ruby>死ぬ<rt>しぬ<\/rt><\/ruby>ほど<ruby>疲れ<rt>つかれ<\/rt><\/ruby>た。", "cn": "累得要死。", "src": ""}, "hodo-yougen-e1": {"jp": "<ruby>足<rt>あし<\/rt><\/ruby>が<ruby>痛く<rt>いたく<\/rt><\/ruby>なるほど<ruby>歩い<rt>あるい<\/rt><\/ruby>た。", "cn": "走到脚都疼了。", "src": ""}, "hodo-yougen-e2": {"jp": "<ruby>忙しく<rt>いそがしく<\/rt><\/ruby>て<ruby>顔<rt>かお<\/rt><\/ruby>も<ruby>上げ<rt>あげ<\/rt><\/ruby>られないほどだ。", "cn": "忙得连头都抬不起来。", "src": ""}, "hodo-tai-e0": {"jp": "<ruby>泣き<rt>なき<\/rt><\/ruby>たいほど<ruby>悔しか<rt>くやしか<\/rt><\/ruby>った。", "cn": "后悔得想哭。", "src": ""}, "hodo-tai-e1": {"jp": "<ruby>嬉しく<rt>うれしく<\/rt><\/ruby>て<ruby>飛び上がる<rt>とびあがる<\/rt><\/ruby>ほどだった。", "cn": "高兴得差点跳起来。", "src": ""}, "hodo-nai-e0": {"jp": "<ruby>今更<rt>いまさら<\/rt><\/ruby>ウソなんて<ruby>言え<rt>いえ<\/rt><\/ruby>ないほど<ruby>広ま<rt>ひろま<\/rt><\/ruby>っている。", "cn": "事到如今已经传得没法说是谎话了。", "src": ""}, "hodo-nai-e1": {"jp": "<ruby>息<rt>いき<\/rt><\/ruby>ができないほど<ruby>笑っ<rt>わらっ<\/rt><\/ruby>た。", "cn": "笑得喘不过气。", "src": ""}, "hodo-ni-e0": {"jp": "<ruby>目<rt>め<\/rt><\/ruby>が<ruby>覚め<rt>さめ<\/rt><\/ruby>るほどに<ruby>鮮やか<rt>あざやか<\/rt><\/ruby>な<ruby>朝<rt>あさ<\/rt><\/ruby>だった。", "cn": "那是鲜明得让人惊醒的早晨。", "src": ""}, "hodo-ni-e1": {"jp": "<ruby>涙<rt>なみだ<\/rt><\/ruby>が<ruby>出る<rt>でる<\/rt><\/ruby>ほどに<ruby>笑っ<rt>わらっ<\/rt><\/ruby>た。", "cn": "笑得眼泪都出来了。", "src": ""}, "hodo-saikou-e0": {"jp": "<ruby>自分<rt>じぶん<\/rt><\/ruby>の<ruby>無知<rt>むち<\/rt><\/ruby>をこのときほど<ruby>強く<rt>つよく<\/rt><\/ruby><ruby>感じ<rt>かんじ<\/rt><\/ruby>たことはない。", "cn": "没有比这时候更强烈地感到自己的无知。", "src": ""}, "hodo-saikou-e1": {"jp": "<ruby>今年<rt>ことし<\/rt><\/ruby>は<ruby>去年<rt>きょねん<\/rt><\/ruby>ほど<ruby>暑く<rt>あつく<\/rt><\/ruby>ない。", "cn": "今年没有去年那么热。（比较否定）", "src": ""}, "hodo-hito-e0": {"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>ど<ruby>優しい人はいない<rt>やさしいひとはいない<\/rt><\/ruby>。", "cn": "没有比他更温柔的人。", "src": ""}, "hodo-hito-e1": {"jp": "この<ruby>町<rt>まち<\/rt><\/ruby>ほど<ruby>住み<rt>すみ<\/rt><\/ruby>やすい<ruby>所<rt>ところ<\/rt><\/ruby>はない。", "cn": "没有比这个城市更适合居住的地方。", "src": ""}, "hodo-omotta-e0": {"jp": "<ruby>思った<rt>おもった<\/rt><\/ruby>ほど<ruby>難しく<rt>むずかしく<\/rt><\/ruby>なかった。", "cn": "没有想象的那么难。", "src": ""}, "hodo-omotta-e1": {"jp": "<ruby>言う<rt>いう<\/rt><\/ruby>ほど<ruby>簡単<rt>かんたん<\/rt><\/ruby>ではない。", "cn": "不像说的那么简单。", "src": ""}, "hodo-demonai-e0": {"jp": "わざわざ<ruby>行く<rt>いく<\/rt><\/ruby>ほどでもない。", "cn": "不值得特意去一趟。", "src": ""}, "hodo-demonai-e1": {"jp": "<ruby>高級ホテル<rt>こうきゅうホテル<\/rt><\/ruby>に<ruby>泊ま<rt>とま<\/rt><\/ruby>るほどでもない。", "cn": "还没到住高级酒店的程度。", "src": ""}, "hodo-no-e0": {"jp": "このときほどの<ruby>衝撃<rt>しょうげき<\/rt><\/ruby>はなかった。", "cn": "没有比那时更大的冲击。", "src": ""}, "hodo-no-e1": {"jp": "<ruby>満月<rt>まんげつ<\/rt><\/ruby>を<ruby>三日月<rt>みかづき<\/rt><\/ruby>に<ruby>変え<rt>かえ<\/rt><\/ruby>るほどのパワー。", "cn": "足以把满月变成月牙的力量。", "src": ""}, "hodo-no-koto-e0": {"jp": "<ruby>心配<rt>しんぱい<\/rt><\/ruby>するほどのことではない。", "cn": "用不着担心。", "src": ""}, "hodo-no-koto-e1": {"jp": "わざわざ<ruby>報告<rt>ほうこく<\/rt><\/ruby>するほどのことでもない。", "cn": "也不值得特意汇报。", "src": ""}, "hodo-no-fear-e0": {"jp": "<ruby>声<rt>こえ<\/rt><\/ruby>も<ruby>出な<rt>でな<\/rt><\/ruby>いほどの<ruby>恐怖<rt>きょうふ<\/rt><\/ruby>を<ruby>感じ<rt>かんじ<\/rt><\/ruby>た。", "cn": "感到了发不出声的恐惧。", "src": ""}, "hodo-no-fear-e1": {"jp": "<ruby>誰も<rt>だれも<\/rt><\/ruby>が<ruby>振り返る<rt>ふりかえる<\/rt><\/ruby>ほどの<ruby>美人<rt>びじん<\/rt><\/ruby>だ。", "cn": "是个人人回头的美人。", "src": ""}, "ba-hodo-e0": {"jp": "<ruby>読め<rt>よめ<\/rt><\/ruby>ば<ruby>読む<rt>よむ<\/rt><\/ruby>ほどおもしろい。", "cn": "越读越有意思。", "src": ""}, "ba-hodo-e1": {"jp": "<ruby>考え<rt>かんがえ<\/rt><\/ruby>れば<ruby>考え<rt>かんがえ<\/rt><\/ruby>るほどわからなくなる。", "cn": "越想越不明白。", "src": ""}, "hodo-hirei-e0": {"jp": "<ruby>練習<rt>れんしゅう<\/rt><\/ruby>するほど<ruby>上手<rt>じょうず<\/rt><\/ruby>になる。", "cn": "越练习越熟练。", "src": ""}, "hodo-hirei-e1": {"jp": "<ruby>年を取る<rt>としをとる<\/rt><\/ruby>ほど<ruby>時間<rt>じかん<\/rt><\/ruby>が<ruby>早く<rt>はやく<\/rt><\/ruby><ruby>過ぎ<rt>すぎ<\/rt><\/ruby>る。", "cn": "年纪越大时间过得越快。", "src": ""}, "ni-mo-hodo-e0": {"jp": "<ruby>冗談<rt>じょうだん<\/rt><\/ruby>にもほどがある。", "cn": "开玩笑也该有个限度。", "src": ""}, "ni-mo-hodo-e1": {"jp": "<ruby>遅刻<rt>ちこく<\/rt><\/ruby>にもほどがある。", "cn": "迟到也得有个谱。", "src": ""}, "to-iu-hodo-e0": {"jp": "<ruby>病気<rt>びょうき<\/rt><\/ruby>というほどではない。", "cn": "说不上是病。", "src": ""}, "to-iu-hodo-e1": {"jp": "<ruby>苦戦<rt>くせん<\/rt><\/ruby>というほどではない。", "cn": "算不上苦战。", "src": ""}, "hodo-gaisu-e0": {"jp": "りんごを2キロほど<ruby>買う<rt>かう<\/rt><\/ruby>。", "cn": "买大概两公斤的苹果。", "src": ""}, "hodo-gaisu-e1": {"jp": "<ruby>三日ほど<rt>みっかほど<\/rt><\/ruby><ruby>休ん<rt>やすん<\/rt><\/ruby>だ。", "cn": "休息了三天左右。", "src": ""}, "hodo-suryo-e0": {"jp": "<ruby>千人<rt>せんにん<\/rt><\/ruby>ほどの<ruby>観客<rt>かんきゃく<\/rt><\/ruby>が<ruby>集ま<rt>あつま<\/rt><\/ruby>った。", "cn": "聚集了大约一千名观众。", "src": ""}, "hodo-suryo-e1": {"jp": "<ruby>十分ほど<rt>じゅっぷんほど<\/rt><\/ruby>の<ruby>遅れ<rt>おくれ<\/rt><\/ruby>が<ruby>出た<rt>でた<\/rt><\/ruby>。", "cn": "出现了十分钟左右的延迟。", "src": ""}, "hodo-hinshi-e0": {"jp": "この<ruby>時<rt>とき<\/rt><\/ruby>ほど<ruby>悔しい<rt>くやしい<\/rt><\/ruby>ことはない。", "cn": "没有比这时候更不甘心的了。", "src": ""}, "hodo-hinshi-e1": {"jp": "この<ruby>時<rt>とき<\/rt><\/ruby>ほどの<ruby>悔しさ<rt>くやしさ<\/rt><\/ruby>はない。", "cn": "没有比这时候更大的不甘。", "src": ""}, "hodo-kurai-e0": {"jp": "<ruby>10日<rt>とおか<\/rt><\/ruby>ほどかかる。", "cn": "需要十天左右。（书面语）", "src": ""}, "hodo-kurai-e1": {"jp": "<ruby>三日ぐらい<rt>みっかぐらい<\/rt><\/ruby><ruby>経った<rt>たった<\/rt><\/ruby>。", "cn": "过了三天左右。（口语）", "src": ""}, "hodo-shushoku-e0": {"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>どよく<ruby>働く人はいない<rt>はたらくひとはいない<\/rt><\/ruby>。", "cn": "没有比他更勤劳的人。（ほど＋用言）", "src": ""}, "hodo-shushoku-e1": {"jp": "<ruby>彼ほ<rt>かれほ<\/rt><\/ruby>どの<ruby>働き手<rt>はたらきて<\/rt><\/ruby>はいない。", "cn": "没有像他那样的好劳力。（ほどの＋体言）", "src": ""}};
+const BANKS=[["listen2", "🎧 聴解・意味理解"], ["listen3", "🎧 聴解・書き取り"], ["listen", "🎧 聴解判別"], ["fill", "✍️ 穴埋め（ほど／ほどの）"], ["mod", "🧩 修飾語判定"], ["custom", "⭐ 品詞・対比の自作題"]];
+let QS=[{"type": "listen", "aid": "hodo-hito-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["彼ほど優しい人はいない。", "声も出ないほどの恐怖を感じた。", "わざわざ行くほどでもない。", "病気というほどではない。"], "ans": 0, "exp": "原句：彼ほど優しい人はいない。<br>没有比他更温柔的人。", "bank": "listen3", "ref": "hodo-hito:listen3"}, {"type": "listen", "aid": "hodo-no-koto-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["用不着担心。", "没有比他更勤劳的人。（ほど＋用言）", "事到如今已经传得没法说是谎话了。", "那是鲜明得让人惊醒的早晨。"], "ans": 0, "exp": "原句：心配するほどのことではない。<br>用不着担心。", "bank": "listen2", "ref": "hodo-no-koto:listen2"}, {"type": "listen", "aid": "hodo-gaisu-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["数量＋ほど", "〜ほどの＋数量＋名詞", "〜ほど…ない（最高級）", "思ったほど…ない"], "ans": 0, "exp": "原句：りんごを2キロほど買う。<br>买大概两公斤的苹果。", "bank": "listen", "ref": "hodo-gaisu:listen"}, {"type": "listen", "aid": "hodo-no-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有比那时更大的冲击。", "需要十天左右。（书面语）", "那是鲜明得让人惊醒的早晨。", "累得要死。"], "ans": 0, "exp": "原句：このときほどの衝撃はなかった。<br>没有比那时更大的冲击。", "bank": "listen2", "ref": "hodo-no:listen2"}, {"type": "listen", "aid": "hodo-hirei-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜するほど（比例）", "〜ば〜ほど", "〜にもほどがある", "〜ほどでもない"], "ans": 0, "exp": "原句：練習するほど上手になる。<br>越练习越熟练。", "bank": "listen", "ref": "hodo-hirei:listen"}, {"type": "choice", "q": "「〜ほどの＋体言」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 1, "exp": "連体修飾語（体言修飾）。<br>接続：体言・連体形＋ほどの＋名詞<br>🧭 「の」を伴うと後ろの名詞を修飾する連体修飾語に切り替わる——ここが「〜ほど」と「〜ほどの」の分かれ目。", "bank": "mod", "ref": "hodo-no:mod"}, {"type": "choice", "q": "「このときほど強く感じた」の「このときほど」の文法的働きは？", "opts": ["連用修飾語（「強く」を修飾）", "連体修飾語（名詞を修飾）", "主語", "述語"], "ans": 0, "exp": "後ろが用言「強く」なので連用修飾語。「このときほどの衝撃」なら連体修飾語。", "bank": "custom", "ref": "hodo-shushoku:custom-0"}, {"type": "listen", "aid": "hodo-nai-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ないほど", "〜ほど＋用言", "〜ほどに", "〜たいほどだ"], "ans": 0, "exp": "原句：今更ウソなんて言えないほど広まっている。<br>事到如今已经传得没法说是谎话了。", "bank": "listen", "ref": "hodo-nai:listen"}, {"type": "listen", "aid": "hodo-hito-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほど…はいない", "〜ほどでもない", "思ったほど…ない", "〜ほど…ない（最高級）"], "ans": 0, "exp": "原句：彼ほど優しい人はいない。<br>没有比他更温柔的人。", "bank": "listen", "ref": "hodo-hito:listen"}, {"type": "choice", "q": "「〜ほどのことではない」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 1, "exp": "連体修飾語（体言修飾）。<br>接続：連体形＋ほどのことではない<br>🧭 形式名詞「こと」を修飾し、全体で「その程度に及ばない」と評価する。", "bank": "mod", "ref": "hodo-no-koto:mod"}, {"type": "listen", "aid": "hodo-shushoku-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有比他更勤劳的人。（ほど＋用言）", "没有想象的那么难。", "说不上是病。", "累得要死。"], "ans": 0, "exp": "原句：彼ほどよく働く人はいない。<br>没有比他更勤劳的人。（ほど＋用言）", "bank": "listen2", "ref": "hodo-shushoku:listen2"}, {"type": "choice", "q": "「〜ほどの＋数量＋名詞」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 1, "exp": "連体修飾語（体言修飾）。<br>接続：数量詞＋ほどの＋名詞<br>🧭 概数の「ほど」に「の」が付き、後ろの名詞を修飾する。", "bank": "mod", "ref": "hodo-suryo:mod"}, {"type": "choice", "q": "「〜ほどの＋名詞（甚だしさ）」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 1, "exp": "連体修飾語（体言修飾）。<br>接続：連体形＋ほどの＋名詞<br>🧭 前件の程度が甚だしいことを、後ろの名詞の属性として提示する。", "bank": "mod", "ref": "hodo-no-fear:mod"}, {"type": "listen", "aid": "hodo-saikou-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほど…ない（最高級）", "〜ほどでもない", "思ったほど…ない", "〜ほど…はいない"], "ans": 0, "exp": "原句：自分の無知をこのときほど強く感じたことはない。<br>没有比这时候更强烈地感到自己的无知。<br>💡 同じ「〜ほど…ない」でも、①「このときほど…ない」＝最高級、②「去年ほど…ない」＝比較否定。文脈で判断する。この课件の核心例句。", "bank": "listen", "ref": "hodo-saikou:listen"}, {"type": "listen", "aid": "hodo-demonai-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["不值得特意去一趟。", "事到如今已经传得没法说是谎话了。", "感到了发不出声的恐惧。", "需要十天左右。（书面语）"], "ans": 0, "exp": "原句：わざわざ行くほどでもない。<br>不值得特意去一趟。", "bank": "listen2", "ref": "hodo-demonai:listen2"}, {"type": "listen", "aid": "hodo-kurai-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["10日ほどかかる。", "練習するほど上手になる。", "目が覚めるほどに鮮やかな朝だった。", "彼ほど優しい人はいない。"], "ans": 0, "exp": "原句：10日ほどかかる。<br>需要十天左右。（书面语）", "bank": "listen3", "ref": "hodo-kurai:listen3"}, {"type": "choice", "q": "「冗談にもほどがある」の意味は？", "opts": ["玩笑也该有个限度（太不像话）", "玩笑很有意思", "请开个玩笑", "讨厌开玩笑"], "ans": 0, "exp": "程度の超過を非難する定型。「冗談にも程がある」とも書く。", "bank": "custom", "ref": "ni-mo-hodo:custom-0"}, {"type": "choice", "q": "このとき（　）衝撃はなかった。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：このときほどの衝撃はなかった。<br>没有比那时更大的冲击。（〜ほどの＋体言：到…程度的…（修饰名词））", "bank": "fill", "ref": "hodo-no:fill-0"}, {"type": "choice", "q": "「ほど」が付くのは次のどれ？", "opts": ["体言や活用語の連体形", "終止形だけ", "未然形だけ", "命令形だけ"], "ans": 0, "exp": "「三日ほど」（体言）「読むほど」（連体形）のように付く。", "bank": "custom", "ref": "hodo-hinshi:custom-1"}, {"type": "listen", "aid": "hodo-demonai-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどでもない", "〜ほど…はいない", "思ったほど…ない", "〜ほど…ない（最高級）"], "ans": 0, "exp": "原句：わざわざ行くほどでもない。<br>不值得特意去一趟。", "bank": "listen", "ref": "hodo-demonai:listen"}, {"type": "choice", "q": "苦戦という（　）ではない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：苦戦というほどではない。<br>算不上苦战。（〜というほどではない：说不上…；并没有到…的程度）", "bank": "fill", "ref": "to-iu-hodo:fill-1"}, {"type": "choice", "q": "読めば読む（　）おもしろい。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：読めば読むほどおもしろい。<br>越读越有意思。（〜ば〜ほど：越…越…）", "bank": "fill", "ref": "ba-hodo:fill-0"}, {"type": "listen", "aid": "ni-mo-hodo-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["冗談にもほどがある。", "彼ほど優しい人はいない。", "練習するほど上手になる。", "千人ほどの観客が集まった。"], "ans": 0, "exp": "原句：冗談にもほどがある。<br>开玩笑也该有个限度。", "bank": "listen3", "ref": "ni-mo-hodo:listen3"}, {"type": "listen", "aid": "hodo-hirei-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["練習するほど上手になる。", "思ったほど難しくなかった。", "目が覚めるほどに鮮やかな朝だった。", "自分の無知をこのときほど強く感じたことはない。"], "ans": 0, "exp": "原句：練習するほど上手になる。<br>越练习越熟练。", "bank": "listen3", "ref": "hodo-hirei:listen3"}, {"type": "listen", "aid": "ni-mo-hodo-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["开玩笑也该有个限度。", "那是鲜明得让人惊醒的早晨。", "买大概两公斤的苹果。", "累得要死。"], "ans": 0, "exp": "原句：冗談にもほどがある。<br>开玩笑也该有个限度。", "bank": "listen2", "ref": "ni-mo-hodo:listen2"}, {"type": "listen", "aid": "hodo-omotta-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["思ったほど難しくなかった。", "冗談にもほどがある。", "自分の無知をこのときほど強く感じたことはない。", "彼ほど優しい人はいない。"], "ans": 0, "exp": "原句：思ったほど難しくなかった。<br>没有想象的那么难。", "bank": "listen3", "ref": "hodo-omotta:listen3"}, {"type": "listen", "aid": "hodo-kurai-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほど ⇄ 〜くらい", "〜ほど／〜ほどの 切替", "ほど＝副助詞", "〜というほどではない"], "ans": 0, "exp": "原句：10日ほどかかる。<br>需要十天左右。（书面语）<br>💡 「死ぬほど」＝夸张的程度；「死ぬくらい」意思相近但口语化。考试言い换え多视为可互换，但文体差仍在。", "bank": "listen", "ref": "hodo-kurai:listen"}, {"type": "choice", "q": "涙が出る（　）笑った。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどに", "ほど", "ほどの", "ほどで"], "ans": 0, "exp": "完整句子：涙が出るほどに笑った。<br>笑得眼泪都出来了。（〜ほどに：…地（文语性的程度强调）；越来越…）", "bank": "fill", "ref": "hodo-ni:fill-1"}, {"type": "listen", "aid": "hodo-gaisu-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["买大概两公斤的苹果。", "没有想象的那么难。", "后悔得想哭。", "那是鲜明得让人惊醒的早晨。"], "ans": 0, "exp": "原句：りんごを2キロほど買う。<br>买大概两公斤的苹果。", "bank": "listen2", "ref": "hodo-gaisu:listen2"}, {"type": "choice", "q": "わざわざ報告する（　）ことでもない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：わざわざ報告するほどのことでもない。<br>也不值得特意汇报。（〜ほどのことではない：没到…的地步；不值得…）", "bank": "fill", "ref": "hodo-no-koto:fill-1"}, {"type": "listen", "aid": "hodo-ni-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどに", "〜ないほど", "〜たいほどだ", "〜ほど＋用言"], "ans": 0, "exp": "原句：目が覚めるほどに鮮やかな朝だった。<br>那是鲜明得让人惊醒的早晨。", "bank": "listen", "ref": "hodo-ni:listen"}, {"type": "listen", "aid": "hodo-no-koto-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["心配するほどのことではない。", "わざわざ行くほどでもない。", "千人ほどの観客が集まった。", "読めば読むほどおもしろい。"], "ans": 0, "exp": "原句：心配するほどのことではない。<br>用不着担心。", "bank": "listen3", "ref": "hodo-no-koto:listen3"}, {"type": "listen", "aid": "to-iu-hodo-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["说不上是病。", "事到如今已经传得没法说是谎话了。", "累得要死。", "没有比这时候更强烈地感到自己的无知。"], "ans": 0, "exp": "原句：病気というほどではない。<br>说不上是病。", "bank": "listen2", "ref": "to-iu-hodo:listen2"}, {"type": "choice", "q": "「〜ほどに」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：連体形＋ほどに<br>🧭 「ほど」＋格助詞「に」で程度を副詞的に強調する。文章語的で、歌詞や文学にも多い。", "bank": "mod", "ref": "hodo-ni:mod"}, {"type": "choice", "q": "誰もが振り返る（　）美人だ。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：誰もが振り返るほどの美人だ。<br>是个人人回头的美人。（〜ほどの＋名詞（甚だしさ）：…得不得了的…（强调程度的连体修饰））", "bank": "fill", "ref": "hodo-no-fear:fill-1"}, {"type": "listen", "aid": "hodo-shushoku-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほど／〜ほどの 切替", "ほど＝副助詞", "〜ほど ⇄ 〜くらい", "〜というほどではない"], "ans": 0, "exp": "原句：彼ほどよく働く人はいない。<br>没有比他更勤劳的人。（ほど＋用言）<br>💡 同じ内容でも、後続が用言か体言かで「ほど／ほどの」が決まり、作る修飾語も連用／連体に切り替わる。", "bank": "listen", "ref": "hodo-shushoku:listen"}, {"type": "choice", "q": "「〜ほどでもない」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：体言＋ほどでもない<br>🧭 程度を控えめに否定する。会話の定番「それほどでもない」＝「没那么厉害」。", "bank": "mod", "ref": "hodo-demonai:mod"}, {"type": "choice", "q": "「このときほど強く感じたことはない」の意味は？", "opts": ["没有比这时候更强烈的了（最高级）", "这时候的感受比较弱", "大约这个时候感受到", "只有这时候才感受得到"], "ans": 0, "exp": "「このとき」を基準に「それ以上はない」→最高級。ほどは「強く」を修飾。", "bank": "custom", "ref": "hodo-saikou:custom-0"}, {"type": "listen", "aid": "hodo-shushoku-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["彼ほどよく働く人はいない。", "この時ほど悔しいことはない。", "思ったほど難しくなかった。", "死ぬほど疲れた。"], "ans": 0, "exp": "原句：彼ほどよく働く人はいない。<br>没有比他更勤劳的人。（ほど＋用言）", "bank": "listen3", "ref": "hodo-shushoku:listen3"}, {"type": "listen", "aid": "hodo-tai-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜たいほどだ", "〜ほどに", "〜ないほど", "〜ほど＋用言"], "ans": 0, "exp": "原句：泣きたいほど悔しかった。<br>后悔得想哭。", "bank": "listen", "ref": "hodo-tai:listen"}, {"type": "listen", "aid": "hodo-omotta-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["思ったほど…ない", "〜ほど…ない（最高級）", "〜ほどでもない", "〜ほど…はいない"], "ans": 0, "exp": "原句：思ったほど難しくなかった。<br>没有想象的那么难。", "bank": "listen", "ref": "hodo-omotta:listen"}, {"type": "listen", "aid": "hodo-suryo-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["千人ほどの観客が集まった。", "自分の無知をこのときほど強く感じたことはない。", "彼ほどよく働く人はいない。", "今更ウソなんて言えないほど広まっている。"], "ans": 0, "exp": "原句：千人ほどの観客が集まった。<br>聚集了大约一千名观众。", "bank": "listen3", "ref": "hodo-suryo:listen3"}, {"type": "listen", "aid": "hodo-no-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどの＋体言", "〜ほどの＋名詞（甚だしさ）", "〜ほどのことではない", "〜ないほど"], "ans": 0, "exp": "原句：このときほどの衝撃はなかった。<br>没有比那时更大的冲击。<br>💡 同じ「このとき」でも、後ろが用言なら「ほど」（連用修飾）、体言なら「ほどの」（連体修飾）。", "bank": "listen", "ref": "hodo-no:listen"}, {"type": "listen", "aid": "hodo-yougen-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほど＋用言", "〜ないほど", "〜たいほどだ", "〜ほどに"], "ans": 0, "exp": "原句：死ぬほど疲れた。<br>累得要死。<br>💡 比喩で程度を極端化する。同じ「くらい」も可能だが、ほどは書き言葉寄りで強調が強い。", "bank": "listen", "ref": "hodo-yougen:listen"}, {"type": "listen", "aid": "hodo-tai-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["泣きたいほど悔しかった。", "この時ほど悔しいことはない。", "りんごを2キロほど買う。", "声も出ないほどの恐怖を感じた。"], "ans": 0, "exp": "原句：泣きたいほど悔しかった。<br>后悔得想哭。", "bank": "listen3", "ref": "hodo-tai:listen3"}, {"type": "listen", "aid": "hodo-hinshi-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["ほど＝副助詞", "〜ほど／〜ほどの 切替", "〜ほど ⇄ 〜くらい", "〜たいほどだ"], "ans": 0, "exp": "原句：この時ほど悔しいことはない。<br>没有比这时候更不甘心的了。<br>💡 「ほど」は名詞ではなく副助詞なので、形式名詞（こと・もの）とは別カテゴリ。「〜ほどの」の「の」は格助詞で、連体修飾を作る。", "bank": "listen", "ref": "hodo-hinshi:listen"}, {"type": "choice", "q": "声も出ない（　）恐怖を感じた。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：声も出ないほどの恐怖を感じた。<br>感到了发不出声的恐惧。（〜ほどの＋名詞（甚だしさ）：…得不得了的…（强调程度的连体修饰））", "bank": "fill", "ref": "hodo-no-fear:fill-0"}, {"type": "listen", "aid": "to-iu-hodo-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜というほどではない", "〜にもほどがある", "〜ほどの＋体言", "〜ほどの＋数量＋名詞"], "ans": 0, "exp": "原句：病気というほどではない。<br>说不上是病。", "bank": "listen", "ref": "to-iu-hodo:listen"}, {"type": "listen", "aid": "hodo-nai-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["事到如今已经传得没法说是谎话了。", "越读越有意思。", "聚集了大约一千名观众。", "没有比这时候更强烈地感到自己的无知。"], "ans": 0, "exp": "原句：今更ウソなんて言えないほど広まっている。<br>事到如今已经传得没法说是谎话了。", "bank": "listen2", "ref": "hodo-nai:listen2"}, {"type": "choice", "q": "「数量＋ほど」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（数量・時）。<br>接続：数量詞＋ほど<br>🧭 概数を表す副助詞用法。数量詞に付いて、おおよその量や時間を示す。", "bank": "mod", "ref": "hodo-gaisu:mod"}, {"type": "listen", "aid": "hodo-hinshi-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有比这时候更不甘心的了。", "没有想象的那么难。", "没有比那时更大的冲击。", "后悔得想哭。"], "ans": 0, "exp": "原句：この時ほど悔しいことはない。<br>没有比这时候更不甘心的了。", "bank": "listen2", "ref": "hodo-hinshi:listen2"}, {"type": "listen", "aid": "ba-hodo-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ば〜ほど", "〜するほど（比例）", "〜ほどのことではない", "〜ほどの＋数量＋名詞"], "ans": 0, "exp": "原句：読めば読むほどおもしろい。<br>越读越有意思。", "bank": "listen", "ref": "ba-hodo:listen"}, {"type": "listen", "aid": "hodo-no-fear-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["声も出ないほどの恐怖を感じた。", "目が覚めるほどに鮮やかな朝だった。", "わざわざ行くほどでもない。", "千人ほどの観客が集まった。"], "ans": 0, "exp": "原句：声も出ないほどの恐怖を感じた。<br>感到了发不出声的恐惧。", "bank": "listen3", "ref": "hodo-no-fear:listen3"}, {"type": "choice", "q": "「〜ほど…ない（最高級）」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：体言＋ほど＋…ない<br>🧭 「このときほど強く感じたことはない」——「このとき」を基準に、それ以上の例がない＝最高級。ほどは「強く」を修飾する連用修飾語。", "bank": "mod", "ref": "hodo-saikou:mod"}, {"type": "choice", "q": "満月を三日月に変える（　）パワー。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：満月を三日月に変えるほどのパワー。<br>足以把满月变成月牙的力量。（〜ほどの＋体言：到…程度的…（修饰名词））", "bank": "fill", "ref": "hodo-no:fill-1"}, {"type": "choice", "q": "「〜ないほど」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：ない形の連体形＋ほど<br>🧭 打消の連体形＋ほどで、程度の高さを裏から強調する（言えないほど＝言えないくらいひどく）。", "bank": "mod", "ref": "hodo-nai:mod"}, {"type": "listen", "aid": "hodo-suryo-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["聚集了大约一千名观众。", "事到如今已经传得没法说是谎话了。", "开玩笑也该有个限度。", "没有比这时候更强烈地感到自己的无知。"], "ans": 0, "exp": "原句：千人ほどの観客が集まった。<br>聚集了大约一千名观众。", "bank": "listen2", "ref": "hodo-suryo:listen2"}, {"type": "choice", "q": "口语中把「10日ほど」换个说法，最自然的是？", "opts": ["10日ぐらい", "10日しか", "10日こそ", "10日まで"], "ans": 0, "exp": "概数のほど ⇄ ぐらい/くらい。口语多用くらい。", "bank": "custom", "ref": "hodo-kurai:custom-0"}, {"type": "listen", "aid": "hodo-no-fear-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["感到了发不出声的恐惧。", "没有比他更温柔的人。", "越练习越熟练。", "需要十天左右。（书面语）"], "ans": 0, "exp": "原句：声も出ないほどの恐怖を感じた。<br>感到了发不出声的恐惧。", "bank": "listen2", "ref": "hodo-no-fear:listen2"}, {"type": "listen", "aid": "hodo-gaisu-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["りんごを2キロほど買う。", "わざわざ行くほどでもない。", "冗談にもほどがある。", "このときほどの衝撃はなかった。"], "ans": 0, "exp": "原句：りんごを2キロほど買う。<br>买大概两公斤的苹果。", "bank": "listen3", "ref": "hodo-gaisu:listen3"}, {"type": "listen", "aid": "hodo-nai-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["今更ウソなんて言えないほど広まっている。", "彼ほど優しい人はいない。", "目が覚めるほどに鮮やかな朝だった。", "泣きたいほど悔しかった。"], "ans": 0, "exp": "原句：今更ウソなんて言えないほど広まっている。<br>事到如今已经传得没法说是谎话了。", "bank": "listen3", "ref": "hodo-nai:listen3"}, {"type": "listen", "aid": "hodo-tai-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["后悔得想哭。", "感到了发不出声的恐惧。", "那是鲜明得让人惊醒的早晨。", "越练习越熟练。"], "ans": 0, "exp": "原句：泣きたいほど悔しかった。<br>后悔得想哭。", "bank": "listen2", "ref": "hodo-tai:listen2"}, {"type": "choice", "q": "「〜ば〜ほど」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：仮定形＋ば＋連体形＋ほど<br>🧭 同じ動詞を繰り返し、変化の比例関係を表す。後件は「ますます…」と呼応する。", "bank": "mod", "ref": "ba-hodo:mod"}, {"type": "listen", "aid": "to-iu-hodo-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["病気というほどではない。", "このときほどの衝撃はなかった。", "千人ほどの観客が集まった。", "この時ほど悔しいことはない。"], "ans": 0, "exp": "原句：病気というほどではない。<br>说不上是病。", "bank": "listen3", "ref": "to-iu-hodo:listen3"}, {"type": "listen", "aid": "hodo-ni-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["那是鲜明得让人惊醒的早晨。", "用不着担心。", "需要十天左右。（书面语）", "没有比那时更大的冲击。"], "ans": 0, "exp": "原句：目が覚めるほどに鮮やかな朝だった。<br>那是鲜明得让人惊醒的早晨。", "bank": "listen2", "ref": "hodo-ni:listen2"}, {"type": "choice", "q": "「〜たいほどだ」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：連体形＋ほど（＋だ）<br>🧭 願望・感情の程度を誇張する。文末を「〜ほどだ」で受けることも多い。", "bank": "mod", "ref": "hodo-tai:mod"}, {"type": "listen", "aid": "hodo-omotta-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有想象的那么难。", "那是鲜明得让人惊醒的早晨。", "越读越有意思。", "不值得特意去一趟。"], "ans": 0, "exp": "原句：思ったほど難しくなかった。<br>没有想象的那么难。", "bank": "listen2", "ref": "hodo-omotta:listen2"}, {"type": "choice", "q": "彼（　）よく働く人はいない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：彼ほどよく働く人はいない。<br>没有比他更勤劳的人。（ほど＋用言）（〜ほど／〜ほどの 切替：后接用言则连用修饰，后接体言则连体修饰）", "bank": "fill", "ref": "hodo-shushoku:fill-0"}, {"type": "choice", "q": "学校文法で「ほど」の品詞は？", "opts": ["副助詞", "形式名詞", "程度副詞", "格助詞"], "ans": 0, "exp": "「ほど」は副助詞。体言・連体形に付いて程度・概数・比較を添える。", "bank": "custom", "ref": "hodo-hinshi:custom-0"}, {"type": "listen", "aid": "hodo-saikou-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["自分の無知をこのときほど強く感じたことはない。", "読めば読むほどおもしろい。", "練習するほど上手になる。", "病気というほどではない。"], "ans": 0, "exp": "原句：自分の無知をこのときほど強く感じたことはない。<br>没有比这时候更强烈地感到自己的无知。", "bank": "listen3", "ref": "hodo-saikou:listen3"}, {"type": "choice", "q": "「思ったほど…ない」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：思う／言う＋連用形＋た＋ほど＋…ない<br>🧭 予想・伝聞を基準にした比較否定。「思ったほど」「言うほど」の形で日常会話に頻出。", "bank": "mod", "ref": "hodo-omotta:mod"}, {"type": "listen", "aid": "hodo-hito-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有比他更温柔的人。", "感到了发不出声的恐惧。", "聚集了大约一千名观众。", "不值得特意去一趟。"], "ans": 0, "exp": "原句：彼ほど優しい人はいない。<br>没有比他更温柔的人。", "bank": "listen2", "ref": "hodo-hito:listen2"}, {"type": "choice", "q": "「〜ほど…はいない」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：体言＋ほど＋…はない<br>🧭 名詞を例示して最高級を作る。述部は「いない／ない」。", "bank": "mod", "ref": "hodo-hito:mod"}, {"type": "choice", "q": "心配する（　）ことではない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：心配するほどのことではない。<br>用不着担心。（〜ほどのことではない：没到…的地步；不值得…）", "bank": "fill", "ref": "hodo-no-koto:fill-0"}, {"type": "listen", "aid": "hodo-suryo-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどの＋数量＋名詞", "数量＋ほど", "〜ないほど", "〜するほど（比例）"], "ans": 0, "exp": "原句：千人ほどの観客が集まった。<br>聚集了大约一千名观众。", "bank": "listen", "ref": "hodo-suryo:listen"}, {"type": "listen", "aid": "ba-hodo-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["越读越有意思。", "事到如今已经传得没法说是谎话了。", "那是鲜明得让人惊醒的早晨。", "感到了发不出声的恐惧。"], "ans": 0, "exp": "原句：読めば読むほどおもしろい。<br>越读越有意思。", "bank": "listen2", "ref": "ba-hodo:listen2"}, {"type": "choice", "q": "冗談にも（　）がある。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：冗談にもほどがある。<br>开玩笑也该有个限度。（〜にもほどがある：…也该有个限度；太过分了）", "bank": "fill", "ref": "ni-mo-hodo:fill-0"}, {"type": "listen", "aid": "hodo-no-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["このときほどの衝撃はなかった。", "千人ほどの観客が集まった。", "死ぬほど疲れた。", "今更ウソなんて言えないほど広まっている。"], "ans": 0, "exp": "原句：このときほどの衝撃はなかった。<br>没有比那时更大的冲击。", "bank": "listen3", "ref": "hodo-no:listen3"}, {"type": "choice", "q": "「〜するほど（比例）」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：連体形＋ほど<br>🧭 「〜ば〜ほど」の簡略形。日常では「練習するほど上手になる」のように動詞＋ほどで比例を表す。", "bank": "mod", "ref": "hodo-hirei:mod"}, {"type": "choice", "q": "目が覚める（　）鮮やかな朝だった。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどに", "ほど", "ほどの", "ほどで"], "ans": 0, "exp": "完整句子：目が覚めるほどに鮮やかな朝だった。<br>那是鲜明得让人惊醒的早晨。（〜ほどに：…地（文语性的程度强调）；越来越…）", "bank": "fill", "ref": "hodo-ni:fill-0"}, {"type": "listen", "aid": "hodo-yougen-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["死ぬほど疲れた。", "目が覚めるほどに鮮やかな朝だった。", "声も出ないほどの恐怖を感じた。", "この時ほど悔しいことはない。"], "ans": 0, "exp": "原句：死ぬほど疲れた。<br>累得要死。", "bank": "listen3", "ref": "hodo-yougen:listen3"}, {"type": "listen", "aid": "hodo-yougen-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["累得要死。", "没有比这时候更不甘心的了。", "没有想象的那么难。", "感到了发不出声的恐惧。"], "ans": 0, "exp": "原句：死ぬほど疲れた。<br>累得要死。", "bank": "listen2", "ref": "hodo-yougen:listen2"}, {"type": "choice", "q": "病気という（　）ではない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：病気というほどではない。<br>说不上是病。（〜というほどではない：说不上…；并没有到…的程度）", "bank": "fill", "ref": "to-iu-hodo:fill-0"}, {"type": "listen", "aid": "hodo-saikou-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["没有比这时候更强烈地感到自己的无知。", "事到如今已经传得没法说是谎话了。", "买大概两公斤的苹果。", "开玩笑也该有个限度。"], "ans": 0, "exp": "原句：自分の無知をこのときほど強く感じたことはない。<br>没有比这时候更强烈地感到自己的无知。", "bank": "listen2", "ref": "hodo-saikou:listen2"}, {"type": "listen", "aid": "hodo-no-fear-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどの＋名詞（甚だしさ）", "〜ほどの＋体言", "〜ほどのことではない", "〜ほど／〜ほどの 切替"], "ans": 0, "exp": "原句：声も出ないほどの恐怖を感じた。<br>感到了发不出声的恐惧。", "bank": "listen", "ref": "hodo-no-fear:listen"}, {"type": "listen", "aid": "ni-mo-hodo-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜にもほどがある", "〜というほどではない", "〜ほど…ない（最高級）", "〜ば〜ほど"], "ans": 0, "exp": "原句：冗談にもほどがある。<br>开玩笑也该有个限度。", "bank": "listen", "ref": "ni-mo-hodo:listen"}, {"type": "listen", "aid": "hodo-ni-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["目が覚めるほどに鮮やかな朝だった。", "読めば読むほどおもしろい。", "わざわざ行くほどでもない。", "今更ウソなんて言えないほど広まっている。"], "ans": 0, "exp": "原句：目が覚めるほどに鮮やかな朝だった。<br>那是鲜明得让人惊醒的早晨。", "bank": "listen3", "ref": "hodo-ni:listen3"}, {"type": "choice", "q": "「このときほどの衝撃」の「このときほどの」が作る修飾語は？", "opts": ["連体修飾語（「衝撃」を修飾）", "連用修飾語（用言を修飾）", "主語", "独立語"], "ans": 0, "exp": "「の」を伴い、後ろの体言「衝撃」を修飾しているので連体修飾語。", "bank": "custom", "ref": "hodo-no:custom-0"}, {"type": "listen", "aid": "hodo-hinshi-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["この時ほど悔しいことはない。", "練習するほど上手になる。", "思ったほど難しくなかった。", "死ぬほど疲れた。"], "ans": 0, "exp": "原句：この時ほど悔しいことはない。<br>没有比这时候更不甘心的了。", "bank": "listen3", "ref": "hodo-hinshi:listen3"}, {"type": "choice", "q": "「三日ほど休んだ」の「ほど」の意味は？", "opts": ["大约（概数）", "最高级（没有比这更…）", "程度夸张", "限度・分寸"], "ans": 0, "exp": "数量詞＋ほど＝概数「大约」。", "bank": "custom", "ref": "hodo-gaisu:custom-0"}, {"type": "choice", "q": "考えれば考える（　）わからなくなる。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：考えれば考えるほどわからなくなる。<br>越想越不明白。（〜ば〜ほど：越…越…）", "bank": "fill", "ref": "ba-hodo:fill-1"}, {"type": "listen", "aid": "hodo-no-koto-e0", "q": "🎧 听音频：句子里用了哪个「ほど」句式？", "opts": ["〜ほどのことではない", "〜ほどの＋体言", "〜ほどの＋名詞（甚だしさ）", "〜ほど…ない（最高級）"], "ans": 0, "exp": "原句：心配するほどのことではない。<br>用不着担心。", "bank": "listen", "ref": "hodo-no-koto:listen"}, {"type": "listen", "aid": "hodo-hirei-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["越练习越熟练。", "事到如今已经传得没法说是谎话了。", "买大概两公斤的苹果。", "累得要死。"], "ans": 0, "exp": "原句：練習するほど上手になる。<br>越练习越熟练。", "bank": "listen2", "ref": "hodo-hirei:listen2"}, {"type": "listen", "aid": "hodo-demonai-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["わざわざ行くほどでもない。", "練習するほど上手になる。", "彼ほど優しい人はいない。", "目が覚めるほどに鮮やかな朝だった。"], "ans": 0, "exp": "原句：わざわざ行くほどでもない。<br>不值得特意去一趟。", "bank": "listen3", "ref": "hodo-demonai:listen3"}, {"type": "listen", "aid": "hodo-kurai-e0", "q": "🎧 听音频：这句话的意思最接近哪一项？", "opts": ["需要十天左右。（书面语）", "说不上是病。", "越读越有意思。", "聚集了大约一千名观众。"], "ans": 0, "exp": "原句：10日ほどかかる。<br>需要十天左右。（书面语）", "bank": "listen2", "ref": "hodo-kurai:listen2"}, {"type": "choice", "q": "「〜ほど＋用言」の「ほど（の）」が作る修飾語は？", "opts": ["連用修飾語（用言を修飾）", "連体修飾語（体言を修飾）", "主語", "述語"], "ans": 0, "exp": "連用修飾語（用言修飾）。<br>接続：体言・連体形＋ほど<br>🧭 ほど（副助詞）が程度を表し、直後の用言（動詞・形容詞）を修飾する → 連用修飾語。「死ぬほど」のような極端な例えで程度を誇張する。", "bank": "mod", "ref": "hodo-yougen:mod"}, {"type": "listen", "aid": "ba-hodo-e0", "q": "🎧 听音频：说的是哪一句？", "opts": ["読めば読むほどおもしろい。", "自分の無知をこのときほど強く感じたことはない。", "病気というほどではない。", "10日ほどかかる。"], "ans": 0, "exp": "原句：読めば読むほどおもしろい。<br>越读越有意思。", "bank": "listen3", "ref": "ba-hodo:listen3"}, {"type": "choice", "q": "彼（　）働き手はいない。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほどの", "ほど", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：彼ほどの働き手はいない。<br>没有像他那样的好劳力。（ほどの＋体言）（〜ほど／〜ほどの 切替：后接用言则连用修饰，后接体言则连体修饰）", "bank": "fill", "ref": "hodo-shushoku:fill-1"}, {"type": "choice", "q": "遅刻にも（　）がある。<br><span class=\"hint\">（　）里填回哪个形式？<\/span>", "opts": ["ほど", "ほどの", "ほどに", "ほどで"], "ans": 0, "exp": "完整句子：遅刻にもほどがある。<br>迟到也得有个谱。（〜にもほどがある：…也该有个限度；太过分了）", "bank": "fill", "ref": "ni-mo-hodo:fill-1"}];
+const $=s=>document.querySelector(s);
+let curAudio=null,curBtn=null;
+function play(id,btn){
+  const src=AUDIO[id]||NADE_AUDIO[id];if(!src)return;
+  if(curAudio){curAudio.pause();curAudio.currentTime=0;}
+  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('playing'));
+  curAudio=new Audio(src);curBtn=btn||null;
+  if(curBtn){curBtn.classList.add('playing');curAudio.onended=()=>curBtn.classList.remove('playing');}
+  curAudio.play();
+}
+function rowHTML(sid){
+  const s=SENTS[sid];if(!s)return"";
+  const b=AUDIO[sid]?`<button class="btn" onclick="play('${sid}',this)">▶</button>`:"";
+  const chip=s.src==="moji"?`<span class="src src-moji">MOJi</span>`:"";
+  return `<div class="row">${b}<div><div class="jp">${s.jp}${chip}</div><div class="cn">${s.cn}</div></div></div>`;
+}
+function nadeHTML(sc,iid,idx){
+  const nid=`${iid}-n${idx}`;
+  const hasAudio=!!NADE_AUDIO[nid];
+  const playBtn=hasAudio?`<button class="btn" style="width:30px;height:30px;font-size:13px" onclick="play('${nid}',this)">▶</button>`:"";
+  return `<div class="nade-card">
+    <div class="nade-hdr"><span class="src src-nade">Nadeshiko</span>
+      ${playBtn}
+      <span class="nade-media">${sc.media}</span><span class="nade-ep">${sc.ep} @ ${sc.at}</span></div>
+    <div class="nade-row">
+      <img class="nade-thumb" src="${sc.thumb}" alt="" onerror="this.style.display='none'">
+      <div>
+        <div class="nade-jp">${sc.jp}</div>
+        <div class="nade-en">${sc.en}</div>
+        <div class="nade-cn">${sc.cn}</div>
+        <a href="${sc.url}" target="_blank">nadeshiko.co ↗</a>
+      </div>
+    </div></div>`;
+}
+const TABS=[["list","🗺️ 体系"],["detail","📖 詳細"],["contrast","⚖️ 品詞・対照"],["quiz","🎯 クイズ"]];
+let tab="list";
+function renderNav(){
+  $("#nav").innerHTML=TABS.map(([k,l])=>
+    `<button class="${k===tab?'on':''}" onclick="goTab('${k}')">${l}</button>`).join("");
+}
+function goTab(k){tab=k;renderNav();render();window.scrollTo(0,0);}
+function goDetail(iid){goTab('detail');setTimeout(()=>{const el=document.getElementById('n-'+iid);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},60);}
+
+function shortMean(m){return m.split(/[：:；;，,（(]/)[0];}
+function renderList(){
+  let h=`<div class="card intro"><h2>副助詞「ほど」と、修飾語の切り替え</h2>
+  <p>「ほど」は<b>副助詞</b>——体言や連体形に付いて程度・概数・比較の意味を添えます。
+  後ろが<b>用言</b>なら連用修飾語（<code class="inline">このときほど強く…</code>）、
+  後ろが<b>体言</b>なら「の」を伴って連体修飾語（<code class="inline">このときほどの衝撃</code>）に。
+  この切り替えを軸に、程度・最高級・比例・限度・概数の全用法を一望します。</p>
+  <div class="steps">
+    <div><b>① 品詞</b><br>ほど＝副助詞。体言・連体形に付く。形式名詞ではない。</div>
+    <div><b>② 修飾</b><br>＋用言→連用修飾語／＋の＋体言→連体修飾語。</div>
+    <div><b>③ 意味</b><br>程度（死ぬほど）・比較（〜ほど…ない）・概数（三日ほど）。</div>
+  </div></div>`;
+  h+=GROUPS.map(g=>{
+    const members=ITEMS.filter(n=>n.group===g.id);
+    if(!members.length)return "";
+    return `<div class="grp"><div class="grp-h" style="background:${g.color}"><h3>${g.emoji||""} ${g.name}</h3><span>${members.length} 型</span></div>
+    ${g.note?`<div class="grp-note">${g.note}</div>`:""}
+    <div class="mini-wrap">${members.map(n=>`
+      <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
+        <div class="em">${n.emoji||"📌"}</div>
+        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
+        <div class="md">${n.mod}</div>
+        <div class="im">${shortMean(n.meaning)}</div></button>`).join("")}</div></div>`;
+  }).join("");
+  $("#main").innerHTML=h;
+}
+function renderDetail(){
+  let h="";
+  GROUPS.forEach(g=>{
+    const members=ITEMS.filter(n=>n.group===g.id);
+    if(!members.length)return;
+    h+=`<h3 class="sec" style="border-left:4px solid ${g.color};padding-left:8px;color:${g.color}">${g.emoji||""} ${g.name}</h3>`;
+    members.forEach(n=>{
+      const iid=n.id;
+      h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
+        <h2>${n.emoji||"📌"} ${n.word}<span class="jl">${n.level}</span></h2>
+        <div class="meta"><span class="chip mod">${n.mod}</span>
+          <code>接続 ${n.connect}</code>
+          <button class="btn mini-btn" title="ほど の読み" onclick="play('hodo-word',this)">▶</button><code>ほど</code>
+        </div>
+        <div class="meanbox">📌 <b>意味</b>　${n.meaning}</div>
+        <div class="origin">🧭 <b>しくみ</b>　${n.engine}</div>
+        <h3 class="sec">📝 例句</h3>
+        ${(n.examples||[]).map((_,i)=>rowHTML(`${iid}-e${i}`)).join("")}
+        ${(n.nadeshiko&&n.nadeshiko.length)?`<h3 class="sec">🎬 原声台词</h3>`:""}
+        ${(n.nadeshiko||[]).map((sc,i)=>nadeHTML(sc,iid,i)).join("")}
+        ${n.note?`<div class="note">💡 ${n.note}</div>`:""}
+      </div>`;
+    });
+  });
+  $("#main").innerHTML=h;
+}
+function renderContrast(){
+  $("#main").innerHTML=`<div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">「ほど」の正体——副助詞</h2>
+    <p style="font-size:13.5px;line-height:1.8">学校文法（橋本進吉体系）では「ほど」は<b>副助詞</b>。
+    体言や活用語の連体形に付いて、程度・概数・比較の意味を添えます。
+    <b>形式名詞</b>（こと・もの・ところ）ではないので、単独で主語・目的語にはなれません。
+    （漢語「程」は「身の程」「程を越す」のように名詞としても使います。）</p>
+    <table class="cmp">
+      <tr><th>後ろに来る語</th><th>形</th><th>作る修飾語</th><th>例</th></tr>
+      <tr><td>用言（動詞・形容詞）</td><td class="tagz">〜ほど</td><td>連用修飾語（副詞的）</td>
+        <td>このとき<b>ほど</b>強く感じたことはない／死ぬ<b>ほど</b>疲れた</td></tr>
+      <tr><td>体言（名詞）</td><td class="tagj">〜ほどの</td><td>連体修飾語</td>
+        <td>このとき<b>ほどの</b>衝撃はなかった／声も出ない<b>ほどの</b>恐怖</td></tr>
+    </table>
+    <div class="kaisetsu"><span class="lbl">分解</span>
+      自分の無知を<b>このときほど</b>強く感じたことはない。<br>
+      ・主語：（私は）　・修飾語：<b>このときほど</b>（＝連用修飾語。「強く」を修飾）<br>
+      ・述語：感じたことはない　※「このときほどの衝撃」なら「このときほどの」が連体修飾語。</div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">「ほど」の三つの顔</h2>
+    <div class="flow">
+      <div class="st"><b>① 程度（〜ほど＋用言）</b><br>
+        死ぬほど疲れた／泣きたいほど悔しい。<b>連用修飾語</b>を作る。</div>
+      <div class="st"><b>② 比較・最高級（〜ほど…ない）</b><br>
+        このときほど強く感じたことはない（最高級）／去年ほど暑くない（比較否定）。
+        副詞的で<b>連用修飾語</b>。</div>
+      <div class="st"><b>③ 概数（数量＋ほど）</b><br>
+        三日ほど／10人ほど。おおよその量・時を表す。</div>
+    </div>
+    <div class="hint">このほか、<b>〜ば〜ほど</b>（比例の呼応）、<b>〜ほどのことではない</b>（連体＋評価）、
+    <b>〜にもほどがある</b>（限度の超過）などの定型がある。</div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">〜ほど ⇄ 〜くらい</h2>
+    <table class="cmp">
+      <tr><th></th><th>〜ほど</th><th>〜くらい／ぐらい</th></tr>
+      <tr><td>文体</td><td>書き言葉寄り・改まった</td><td>話し言葉・くだけた</td></tr>
+      <tr><td>程度</td><td>強調が強い（死ぬほど）</td><td>口語的（死ぬくらい）・最低限のニュアンス</td></tr>
+      <tr><td>概数</td><td>三日ほど（書面）</td><td>三日ぐらい（会話）</td></tr>
+      <tr><td>最高級</td><td>〜ほど…ない</td><td>〜くらい…ない（ほぼ互換）</td></tr>
+    </table>
+    <div class="warn">置き換えは概ね可能だが、<b>文体差</b>と「くらい＝少なくとも／軽視」の含みは残る。
+    試験の言い換え問題では互換と覚えてよい。</div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">〜ば〜ほど ⇄ 〜するほど</h2>
+    <div class="good"><b>〜ば〜ほど</b>：同じ動詞を仮定形＋ば＋連体形＋ほどで繰り返す——
+    「読めば読むほどおもしろい」。後件は「ますます…」と呼応。</div>
+    <div class="good"><b>〜するほど</b>：繰り返しを省いた簡略形——「練習するほど上手になる」。
+    日常ではこちらの方が軽い。</div>
+    <div class="hint">どちらも<b>比例</b>の表現。一方の変化に比例してもう一方が変わる。</div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">「ほど」と「形式名詞」の違い</h2>
+    <div class="warn"><b>形式名詞</b>（こと・もの・の・ところ…）は名詞の枠を保ち、主語・目的語・補語になれる
+    （〜ことが大切だ／〜ものを知らない）。</div>
+    <div class="good"><b>副助詞「ほど」</b>は付属語——単独では文の成分になれず、
+    付いた語と一緒に<b>連用修飾語</b>・<b>連体修飾語</b>を作る。</div>
+    <div class="hint">「〜ほどの」の「の」は格助詞（連体修飾を作る）。「こと」は形式名詞。
+    「ほど」自身は最後まで副助詞。</div>
+  </div>`;
+}
+
+const shuffle=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+function lsGet(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function wrongBook(){return lsGet("hodo-wrong",{})}
+function addWrong(ref){const w=wrongBook();w[ref]=1;lsSet("hodo-wrong",w);}
+function delWrong(ref){const w=wrongBook();delete w[ref];lsSet("hodo-wrong",w);}
+function wrongCount(){return Object.keys(wrongBook()).length;}
+
+let mode=null,pool=[],order=[],qi=0,correct=0,answered=false;
+function countBank(key){return QS.filter(q=>q.bank===key).length;}
+function renderQuizTab(){
+  if(!mode){
+    showNext(false);$("#score").textContent="";
+    const rows=BANKS.filter(([k])=>countBank(k)>0).map(([k,label])=>
+      `<button class="opt" style="max-width:400px;margin:0 auto 10px" onclick="startQuiz('${k}')">${label} · ${countBank(k)}問</button>`).join("");
+    const wc=wrongCount();
+    const wrongRow=wc?`<button class="opt" style="max-width:400px;margin:0 auto 10px;border-color:var(--gold)" onclick="startQuiz('wrong')">📕 错题重练 · ${wc}問<br><span style="font-size:12px;color:var(--gold)">做对即移出错题本</span></button>`:
+      `<div class="hint" style="margin-bottom:10px">错题本是空的——答错的题会自动收进来 📕</div>`;
+    $("#main").innerHTML=`<div class="card" style="text-align:center;padding:28px 16px">
+      <div style="font-size:19px;font-weight:700;margin-bottom:4px">选择训练关卡</div>
+      <div class="hint" style="margin-bottom:18px">题目由 hodo.json 自动生成 · 词条越多题库越大 · 全部随机打乱</div>
+      ${rows}${wrongRow}
+      <button class="opt" style="max-width:400px;margin:0 auto 10px" onclick="startQuiz('mix')">🎲 混合交错 · 全量随机<br><span style="font-size:12px;color:var(--sub)">跨句式交错练习，记忆更牢固</span></button>
+      ${wc?`<button class="opt" style="max-width:220px;margin:14px auto 0;font-size:13px;padding:8px" onclick="if(confirm('清空错题本？')){localStorage.removeItem('hodo-wrong');renderQuizTab();}">🗑️ 清空错题本</button>`:""}
+    </div>`;
+    return;
+  }
+  startQuiz(mode);
+}
+function startQuiz(m){
+  mode=m;
+  if(m==="mix")pool=QS.slice();
+  else if(m==="wrong"){const w=wrongBook();pool=QS.filter(q=>w[q.ref]);}
+  else pool=QS.filter(q=>q.bank===m);
+  order=shuffle(pool.map((_,x)=>x));
+  qi=0;correct=0;answered=false;
+  renderQ();
+}
+function curQ(){return pool[order[qi]];}
+function renderQ(){
+  const q=curQ();updateScore();
+  let body="";
+  if(q.type==="listen"){
+    body=AUDIO[q.aid]?`<div style="text-align:center;margin:6px 0 14px">
+      <button class="btn" style="width:56px;height:56px;font-size:24px;margin:auto" onclick="play('${q.aid}',this)">🔊</button>
+      <div class="hint">可反复点击重听</div></div>`
+      :`<div class="hint" style="text-align:center;margin-bottom:10px">（这条发音还没生成）</div>`;
+  }
+  let optHTML="";
+  if(q.opts){
+    optHTML=shuffle(q.opts.map((t,i)=>({t,ok:i===q.ans})))
+      .map(o=>`<button class="opt" data-ok="${o.ok?1:0}" onclick="pick(this)">${o.t}</button>`).join("");
+  }else{
+    const truthy=q.ans===true;
+    optHTML=`<div class="judgebtns">
+      <button class="opt" data-ok="${truthy?1:0}" onclick="pick(this)">⭕ 正しい</button>
+      <button class="opt" data-ok="${truthy?0:1}" onclick="pick(this)">❌ 間違い</button></div>`;
+  }
+  showNext(false);
+  const label=mode==="mix"?"混合":mode==="wrong"?"错题本":(BANKS.find(([k])=>k===mode)||["",""])[1];
+  $("#main").innerHTML=`<div class="card">
+    <div class="hint">第 ${qi+1} 题 / 共 ${order.length} 题 · ${label}</div>
+    <div class="q">${q.q}</div>${body}${optHTML}
+    <div id="fb"></div></div>`;
+}
+function showNext(v){const b=$("#next");b.style.display=v?"inline-block":"none";b.disabled=!v;}
+function pick(btn){
+  if(answered)return;answered=true;
+  const q=curQ();
+  const ok=btn.dataset.ok==="1";
+  if(ok)correct++;else addWrong(q.ref);
+  if(ok&&mode==="wrong")delWrong(q.ref);
+  document.querySelectorAll(".opt").forEach(b=>{b.disabled=true;if(b.dataset.ok==="1")b.classList.add("right");});
+  if(!ok)btn.classList.add("wrong");
+  $("#fb").innerHTML=`<div class="exp ${ok?'ok':'ng'}">${ok?"⭕ 正解！":"❌ 惜しい！"} ${q.exp||""}</div>`;
+  showNext(true);updateScore();
+  window.scrollTo(0,document.body.scrollHeight);
+}
+function nextQ(){
+  answered=false;qi++;
+  if(qi>=order.length)finish();else renderQ();
+}
+function finish(){
+  showNext(false);
+  const total=order.length,pct=Math.round(correct/total*100);
+  const msg=pct===100?"🏆 完璧！構図がすっかり見えた！":pct>=70?"👍 かなりいい！错题趁热打铁":"📖 詳細タブで復習してから再挑戦";
+  $("#main").innerHTML=`<div class="card fin">
+    <div class="big">${correct} / ${total}</div>
+    <div style="font-size:20px;margin:12px 0">${msg}</div>
+    <button class="next" style="display:inline-block;margin:4px" onclick="startQuiz('${mode}')">もう一度挑戦</button><br>
+    <button class="opt" style="max-width:280px;margin:14px auto 0" onclick="backToBanks()">别的关卡选一选</button></div>`;
+  $("#score").textContent="";$("#barinfo").textContent=`正确率 ${pct}%`;
+  window.scrollTo(0,0);
+}
+function backToBanks(){mode=null;render();}
+function updateScore(){$("#score").textContent=`✔ ${correct} / ${order.length}`;}
+
+function render(){
+  if(tab!=="quiz")showNext(false);
+  if(tab==="list")renderList();
+  else if(tab==="detail")renderDetail();
+  else if(tab==="contrast")renderContrast();
+  else renderQuizTab();
+}
+renderNav();render();
+</script>
+</body>
+</html>
