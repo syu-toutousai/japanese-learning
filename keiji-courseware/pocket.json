@@ -4192,6 +4192,97 @@
           "exp": "口语里「超」＝すごく，可接形容词。「超能力」是另一个名词用法。"
         }
       ]
+    },
+    {
+      "id": "tsuki",
+      "type": "suffix",
+      "word": "〜つき",
+      "read": "つき",
+      "group": "derive",
+      "level": "N2",
+      "emoji": "👀",
+      "meaning": "接在名词后：①表示神情・举止的样子（目つき・手つき・顔つき）；②表示附带・带有（条件つき・夕食つき）；③「数量＋につき」表示每～、按～分配（1人につき2枚まで）",
+      "examples": [
+        {
+          "jp": "彼は無口だが、目つきだけで感情が分かる。",
+          "cn": "他虽然沉默寡言，但只看眼神就能明白他的情绪。"
+        },
+        {
+          "jp": "祖母の手つきは、長年の台所仕事で磨かれただけあって、無駄がなかった。",
+          "cn": "祖母的手法不愧是长年厨房工作磨出来的，毫无多余动作。"
+        },
+        {
+          "jp": "赤ん坊は満足そうな顔つきで、すやすやと眠っている。",
+          "cn": "婴儿带着满足的神情，香甜地睡着。"
+        },
+        {
+          "jp": "父はようやく首を縦に振ったが、条件つきだった。",
+          "cn": "父亲终于点头同意了，但是附带条件。"
+        },
+        {
+          "jp": "その旅館は夕食つきで一泊一万円だ。",
+          "cn": "那家旅馆含晚餐，一晚一万日元。"
+        },
+        {
+          "jp": "入場券は1人につき2枚まで購入できる。",
+          "cn": "入场券每人最多可购买两张。"
+        }
+      ],
+      "nadeshiko": [
+        {
+          "jp": "顔(かお)つきが変(か)わったな",
+          "en": "Her expression has changed.",
+          "cn": "表情变了啊。",
+          "media": "DEMON LORD 2099",
+          "ep": "EP10",
+          "at": "3:16",
+          "url": "https://nadeshiko.co/en/sentence/ruZ7NTC5mdhM",
+          "audio": "https://cdn.nadeshiko.co/media/163135/10/02c5fb92e1.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/163135/10/02c5fb92e1.webp"
+        },
+        {
+          "jp": "おやじが やっと折(お)れたんだよ ただし条件(じょうけん)つきだけどね",
+          "en": "My dad finally gave in. On one condition.",
+          "cn": "老爸终于松口了，不过是有条件的。",
+          "media": "Whisper of the Heart",
+          "ep": "EP1",
+          "at": "1:05:08",
+          "url": "https://nadeshiko.co/en/sentence/C4fGJfr7bhtd",
+          "audio": "https://cdn.nadeshiko.co/media/585/1/53d2766bfb.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/585/1/53d2766bfb.webp"
+        },
+        {
+          "jp": "同志(どうし)1人(ひとり)につき 生徒(せいと)5人(ごにん)を解放(かいほう)してやる",
+          "en": "We will release five students for every comrade you release.",
+          "cn": "每释放一名同志，我就释放五名学生。",
+          "media": "SPY x FAMILY Season 3",
+          "ep": "EP7",
+          "at": "18:11",
+          "url": "https://nadeshiko.co/en/sentence/HiPgasS09G9N",
+          "audio": "https://cdn.nadeshiko.co/media/177937/7/374e47d89e.mp3",
+          "thumb": "https://cdn.nadeshiko.co/media/177937/7/374e47d89e.webp"
+        }
+      ],
+      "note": "源自动词「付く」的連用形「つき」的语法化。①様態：目つき・手つき・顔つき・口つき，聚焦身体部位流露出的神态・举止；②付帯：条件つき・夕食つき・おまけつき・保証つき，表示附加・附带；③割合：「1人につき」「1日につき」表示每～，此用法固定带「に」，与「〜あたり」近义（口语偶见「1人つき」，规范说法是「1人につき」）。辨析：〜ぶり强调动作・状态呈现出的样子（話しぶり・歩きぶり）；「傷つき」是「傷つく」的連用形，不是本接尾語；「言いつき」「歩きつき」「1歩つき」并非标准说法。",
+      "quizzes": [
+        {
+          "type": "choice",
+          "q": "この旅館は夕食（　）で一泊一万円だ。",
+          "opts": [
+            "つき",
+            "ぬき",
+            "がち"
+          ],
+          "ans": 0,
+          "exp": "夕食つき＝房费含晚餐。ぬき是「去掉、不含」，がち是「容易…」，都不合。"
+        },
+        {
+          "type": "judge",
+          "q": "「傷つき」の「つき」も、接尾語「〜つき」と同じ用法である。",
+          "ans": false,
+          "exp": "✗ 「傷つき」是动词「傷つく」的連用形（受伤），不是「名词＋つき」的接尾語。"
+        }
+      ]
     }
   ]
 }
