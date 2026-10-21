@@ -25,6 +25,7 @@ POCKET = ROOT / "pocket.json"
 AUDIO_DIR = ROOT / "audio"
 NADE_CACHE = ROOT / "nade_audio"
 OUT = ROOT / "index.html"
+LITE_OUT = ROOT / "web-lite.html"
 
 VOICE = "ja-JP-NanamiNeural"
 RATE = "-6%"
@@ -190,6 +191,38 @@ def mount_native_audio(audio, items):
             rel = ex.get("audio")
             if rel and (ROOT / rel).exists():
                 audio[f"{it['id']}-e{i}"] = "data:audio/mpeg;base64," + base64.b64encode((ROOT / rel).read_bytes()).decode()
+
+
+def build_lite_audio(items, audio, nade_audio):
+    """Build URL maps for web-lite.html: TTS/native audio from local files, Nadeshiko from CDN."""
+    lite = {}
+    lite_nade = {}
+    for it in items:
+        iid = it["id"]
+        if iid in audio:
+            rel = it.get("readAudio")
+            if rel and (ROOT / rel).exists():
+                lite[iid] = rel
+            else:
+                p = cache_path(iid, it["read"])
+                if p.exists():
+                    lite[iid] = p.relative_to(ROOT).as_posix()
+        for i, ex in enumerate(it.get("examples") or []):
+            lid = f"{iid}-e{i}"
+            if lid not in audio:
+                continue
+            rel = ex.get("audio")
+            if rel and (ROOT / rel).exists():
+                lite[lid] = rel
+            else:
+                p = cache_path(lid, ex["jp"])
+                if p.exists():
+                    lite[lid] = p.relative_to(ROOT).as_posix()
+        for i, sc in enumerate(it.get("nadeshiko") or []):
+            lid = f"{iid}-n{i}"
+            if lid in nade_audio and sc.get("audio"):
+                lite_nade[lid] = sc["audio"]
+    return lite, lite_nade
 
 
 # ---------------------------------------------------------------- nadeshiko audio & ruby
@@ -439,7 +472,7 @@ font-size:15.5px;line-height:2}
 <main class="wrap" id="main"></main>
 
 <div class="bar"><div class="wrap">
-<span class="hint" id="barinfo">离线可用 · 点击🔊播放发音</span>
+<span class="hint" id="barinfo">__HINT__</span>
 <button class="next" id="next" onclick="nextQ()" style="display:none">次の問題 →</button>
 <span class="score" id="score"></span>
 </div></div>
@@ -684,7 +717,8 @@ def main():
 
     tags = (f"<span>{len(items)} 词在袋</span><span>接頭 {n_pfx}・接尾 {n_sfx}</span>"
             f"<span>{len(audio)} 音声{' + ' + str(n_nade) + ' 原声' if n_nade else ''}</span>"
-            f"<span>pocket.json 随手加</span>")
+            f"<span>pocket.json 随手加</span>"
+            f"<span><a href=\"web-lite.html\" style=\"color:inherit\">⚡ Web Lite</a></span>")
     banks_meta = [[k, l] for k, l in BANK_META]
 
     print("[3/4] generating quiz banks...")
@@ -701,6 +735,7 @@ def main():
     print("[4/4] rendering template...")
     html = (TEMPLATE
             .replace("__TAGS__", tags)
+            .replace("__HINT__", "离线可用 · 点击🔊播放发音")
             .replace("__AUDIO__", j(audio))
             .replace("__NADE_AUDIO__", j(nade_audio))
             .replace("__GROUPS__", j(groups))
@@ -710,6 +745,24 @@ def main():
             .replace("__QS__", j(qs)))
     OUT.write_text(html, encoding="utf-8")
     print(f"[5/4] wrote {OUT} ({OUT.stat().st_size//1024} KB)")
+
+    lite_audio, lite_nade = build_lite_audio(items, audio, nade_audio)
+    lite_tags = (f"<span>{len(items)} 词在袋</span><span>接頭 {n_pfx}・接尾 {n_sfx}</span>"
+                 f"<span>{len(lite_audio)} 音声 + {len(lite_nade)} 原声（都度読込）</span>"
+                 f"<span>⚡ Web Lite</span>"
+                 f"<span><a href=\"index.html\" style=\"color:inherit\">オフライン版</a></span>")
+    lite_html = (TEMPLATE
+                 .replace("__TAGS__", lite_tags)
+                 .replace("__HINT__", "Web Lite：音声はクリック時に読込（通信あり）")
+                 .replace("__AUDIO__", j(lite_audio))
+                 .replace("__NADE_AUDIO__", j(lite_nade))
+                 .replace("__GROUPS__", j(groups))
+                 .replace("__ITEMS__", j(display))
+                 .replace("__SENTS__", j(sents))
+                 .replace("__BANKS__", j(banks_meta))
+                 .replace("__QS__", j(qs)))
+    LITE_OUT.write_text(lite_html, encoding="utf-8")
+    print(f"[6/4] wrote {LITE_OUT} ({LITE_OUT.stat().st_size//1024} KB)")
 
 
 if __name__ == "__main__":

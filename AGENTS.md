@@ -56,11 +56,15 @@ build.py 更轻（约 38KB，一覧/詳細/クイズ 三页签 + 4 题库），�
 ├── nade_audio/        # Nadeshiko CDN 下载缓存（.gitignore 忽略，可重新下载）
 ├── scenes/            # （可选）预下载的番剧截图/原声，keishiku/kotoba 用
 ├── index.html         # 生成的单文件课件（脚本产物，需提交）
+├── web-lite.html      # （可选）音声外部化の軽量版
 └── README.md          # 使用说明 + 增长闭环
 ```
 
 **硬性约定**
 - 构建入口必须是 `python3 build.py`，输出 `index.html`（脚本需保持可重复构建）。
+- `web-lite.html` 可选：弱回線・GitHub Pages 用，把 `AUDIO`/`NADE_AUDIO` 从 data URI
+  换成 `audio/*.mp3` 与 Nadeshiko CDN 的 URL，初回 HTML 只留数据与相对路径；
+  `index.html` 的单文件离线性仍须保留。
 - `ROOT = Path(__file__).parent`，一切路径相对此解析：
   ```python
   ROOT = Path(__file__).parent
