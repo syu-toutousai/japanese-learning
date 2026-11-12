@@ -1,0 +1,1949 @@
+{
+ "meta": {
+  "title": "動詞系形容詞 ・ 活用形が形容詞になるとき",
+  "titleCn": "动词系形容词・活用形凝固成形容词",
+  "jp": "どうしけいけいようし ／ 動詞の活用形が形容詞になるとき",
+  "tags": [
+   "N1",
+   "N2",
+   "N3",
+   "N4",
+   "形容詞",
+   "動詞派生",
+   "連体詞",
+   "連用形",
+   "た",
+   "ない",
+   "語源",
+   "読解"
+  ],
+  "voiceFemale": "ja-JP-NanamiNeural",
+  "note": "往 items 里丢一条「動詞派生形容詞」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。核心19語＋周辺11語。"
+ },
+ "groups": [
+  {
+   "id": "rentai",
+   "name": "連体詞化した〜た（核心）",
+   "color": "#7c3aed",
+   "emoji": "🧥",
+   "pathLabel": "連用形＋た（連体詞）",
+   "note": "動詞の連用形＋たが一語化し、辞書が連体詞として扱うグループ。形態は動詞の活用形のままだが、意味は元動詞から直接導けない。"
+  },
+  {
+   "id": "nai",
+   "name": "形容詞化した〜ない（核心）",
+   "color": "#0f766e",
+   "emoji": "🚪",
+   "pathLabel": "動詞＋〜ない（形容詞）",
+   "note": "動詞＋ないが一語の形容詞として辞書に載るグループ。否定の意味は残るが、全体の意味は慣用化している。"
+  },
+  {
+   "id": "kogo",
+   "name": "古語・形容詞（核心）",
+   "color": "#b45309",
+   "emoji": "🏺",
+   "pathLabel": "古語・形容詞",
+   "note": "古語の形容詞「有り難し」「愛でたし」や、動詞＋形容詞の複合が一語の形容詞になったグループ。"
+  },
+  {
+   "id": "idiom",
+   "name": "連語・俗語の連体詞的用法（周辺）",
+   "color": "#475569",
+   "emoji": "🪞",
+   "pathLabel": "連語・俗語",
+   "note": "辞書見出しは連語・感動詞・俗語の場合があるが、連体修飾で形容詞的に使うグループ。核心19語とは区別して収録。"
+  }
+ ],
+ "items": [
+  {
+   "id": "aratamatta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🎩",
+   "word": "改まった",
+   "read": "あらたまった",
+   "surface": "改まった",
+   "status": "確実",
+   "origin": "動詞「改まる」の連用形「改まっ」＋過去・完了の助動詞「た」の連体形。",
+   "originShort": "改まるの連用形＋た",
+   "physical": "改まる。改められて、新しい状態になる。",
+   "meaning": "正式的；庄重的；一本正经的",
+   "label": "正式／庄重",
+   "engine": "「改められた状態」が、改まった席・態度・挨拶など、形式ばった場面の形容詞として固定した。",
+   "examples": [
+    {
+     "jp": "改まった席では、言葉づかいに気をつけなさい。",
+     "cn": "在正式场合要注意措辞。",
+     "src": "self"
+    },
+    {
+     "jp": "彼は改まった顔で、結論を発表した。",
+     "cn": "他一脸严肃地公布了结论。",
+     "src": "self"
+    },
+    {
+     "jp": "改まった挨拶は苦手だ。",
+     "cn": "我不擅长正式的寒暄。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "「改まった」は形容詞のように使うが、形態は動詞「改まる」の連用形＋た。同じ形でも「席が改まった」は動詞文。",
+   "contrast": "改まった（形式ばった）／かしこまった（緊張して姿勢を正した）／フォーマル（外来語）。",
+   "pitfall": "Nadeshiko の「改まっちゃって」は動詞「改まる」のて形。形容詞「改まった」の用例は作例で補った。",
+   "judge": [
+    {
+     "q": "「改まった」は動詞「改まる」の連用形＋たに由来する。",
+     "ans": true,
+     "exp": "改まっ＋た。結果状態が名詞を修飾する。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「かしこまった」との違いに最も近いのは？",
+     "opts": [
+      "改まった＝形式ばった／かしこまった＝緊張して姿勢を正す",
+      "両者は完全に同義",
+      "改まった＝感情／かしこまった＝制度",
+      "改まった＝口語／かしこまった＝書き言葉"
+     ],
+     "ans": 0,
+     "exp": "改まったは「改められた状態」、かしこまったは「畏まって姿勢を正す」身体的な緊張。"
+    }
+   ],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 43,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "同形の動詞用法を含む参考値"
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：改められた → 正式な"
+  },
+  {
+   "id": "ochitsuita",
+   "group": "rentai",
+   "level": "N3",
+   "jlpt": "N3",
+   "emoji": "🍵",
+   "word": "落ち着いた",
+   "read": "おちついた",
+   "surface": "落ち着いた",
+   "status": "確実",
+   "origin": "動詞「落ち着く」の連用形「落ち着い」＋たの連体形。",
+   "originShort": "落ち着くの連用形＋た",
+   "physical": "落ち着く。揺れ動いていたものが、安定した場所に収まる。",
+   "meaning": "沉稳的；平静的；雅致的",
+   "label": "沉稳／雅致",
+   "engine": "「安定した状態」が、人柄・態度・色・雰囲気の形容詞になった。",
+   "examples": [
+    {
+     "jp": "この店は落ち着いた雰囲気で、長居したくなる。",
+     "cn": "这家店氛围沉稳，让人想久坐。",
+     "src": "self"
+    },
+    {
+     "jp": "彼女はいつも落ち着いた態度で話す。",
+     "cn": "她总是用沉稳的态度说话。",
+     "src": "self"
+    },
+    {
+     "jp": "落ち着いた色の服が好きだ。",
+     "cn": "我喜欢色调沉稳的衣服。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "落(お)ち着(つ)いた雰囲気(ふんいき)で 大人(おとな)っぽさ漂(ただよ)うワンピース",
+     "en": "Next, the sophisticated and composed sundress!",
+     "media": "Ruri Rocks",
+     "ep": "EP9",
+     "at": "8:37",
+     "url": "https://nadeshiko.co/en/sentence/d3VpLQSj9bFa",
+     "audio": "https://cdn.nadeshiko.co/media/180929/9/fa80c3f399.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/180929/9/fa80c3f399.webp",
+     "cn": "沉稳的氛围，透着成熟感的连衣裙。"
+    }
+   ],
+   "note": "「落ち着いた」は形容词用法と動詞用法の両方がある。「部屋が落ち着いた」は動詞文、「落ち着いた部屋」は形容詞的な連体修飾。",
+   "contrast": "落ち着いた（安定・沈静）／冷静な（判断の冷静さ）／穏やかな（穏やかさ）。",
+   "judge": [
+    {
+     "q": "「落ち着いた」は動詞「落ち着く」の連用形＋たに由来する。",
+     "ans": true,
+     "exp": "落ち着い＋た。結果状態が名詞を修飾する。"
+    }
+   ],
+   "quizzes": [],
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 1856,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "同形の動詞用法を含む参考値"
+   },
+   "dict": "連体詞",
+   "drift": "中",
+   "literal": "直訳：落ち着いた → 沉稳的"
+  },
+  {
+   "id": "sumashita",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "😐",
+   "word": "澄ました",
+   "read": "すました",
+   "surface": "澄ました",
+   "status": "確実",
+   "origin": "動詞「澄ます」の連用形「澄まし」＋たの連体形。",
+   "originShort": "澄ますの連用形＋た",
+   "physical": "澄ます。濁りを取る。心を静めて平然とする。",
+   "meaning": "若无其事的；一本正经的；装模作样的",
+   "label": "若无其事／装模作样",
+   "engine": "「濁りを取って平然とする」動作の結果が、澄ました顔・態度の形容詞になった。",
+   "examples": [
+    {
+     "jp": "彼は澄ました顔で、何も知らないふりをした。",
+     "cn": "他一脸若无其事，装作什么都不知道。",
+     "src": "self"
+    },
+    {
+     "jp": "澄ました態度を取られると、余計に腹が立つ。",
+     "cn": "被人摆出一副若无其事的样子，反而更让人生气。",
+     "src": "self"
+    },
+    {
+     "jp": "彼女は澄ました顔で席を立った。",
+     "cn": "她若无其事地起身离席。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "なんですか その澄(す)ました態度(たいど)は",
+     "en": "How does he stay so composed after that hug?",
+     "media": "I Cannot Reach You",
+     "ep": "EP3",
+     "at": "20:06",
+     "url": "https://nadeshiko.co/en/sentence/HRbihIAnpR7v",
+     "audio": "https://cdn.nadeshiko.co/media/mv/233452/3/1f0227e1c2.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/233452/3/1f0227e1c2.webp",
+     "cn": "你那一脸若无其事的表情是怎么回事？"
+    }
+   ],
+   "note": "「澄ました顔」は内心を見せない平静さ。「澄ました」は「澄ます」の連用形＋たで、動作の結果が表情に固定した。",
+   "contrast": "澄ました（平然・とぼけ）／平然とした（動じない）／何事もなかったような（状況の平静）。",
+   "judge": [
+    {
+     "q": "「澄ました」は動詞「澄ます」の連用形＋たに由来する。",
+     "ans": true,
+     "exp": "澄まし＋た。表情・態度の形容詞になった。"
+    }
+   ],
+   "quizzes": [],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 44,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：澄ました → 若无其事的"
+  },
+  {
+   "id": "kashikomatta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🙇",
+   "word": "かしこまった",
+   "read": "かしこまった",
+   "surface": "かしこまった",
+   "status": "確実",
+   "origin": "動詞「畏まる」の連用形「かしこまっ」＋たの連体形。",
+   "originShort": "畏まるの連用形＋た",
+   "physical": "畏まる。恐れつつしんで姿勢を正す。",
+   "meaning": "拘谨的；毕恭毕敬的；正式的",
+   "label": "拘谨／毕恭毕敬",
+   "engine": "姿勢を正す動作の結果が、かしこまった態度・席・挨拶の形容詞になった。",
+   "examples": [
+    {
+     "jp": "かしこまった態度で、上司の話を聞いた。",
+     "cn": "以拘谨的态度听了上司的话。",
+     "src": "self"
+    },
+    {
+     "jp": "かしこまった席では、冗談を言わないほうがいい。",
+     "cn": "在正式场合最好不要开玩笑。",
+     "src": "self"
+    },
+    {
+     "jp": "彼はかしこまって、正座した。",
+     "cn": "他毕恭毕敬地正坐。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "騎士(きし)なんて かしこまったふりしちゃいるが",
+     "en": "You're puttin' in this whole polite, proper knight act,",
+     "media": "Re:ZERO -Starting Life in Another World- Season 4",
+     "ep": "EP17",
+     "at": "13:31",
+     "url": "https://nadeshiko.co/en/sentence/qw1nF-fKudHt",
+     "audio": "https://cdn.nadeshiko.co/media/189046/17/fa85a3dcb9.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/189046/17/fa85a3dcb9.webp",
+     "cn": "虽说是骑士，却摆出一副毕恭毕敬的样子。"
+    }
+   ],
+   "note": "「かしこまった」は「畏まる」の連用形＋た。改まったより、緊張して姿勢を正す身体的ニュアンスが強い。",
+   "contrast": "かしこまった（緊張・姿勢）／改まった（形式・改め）／堅苦しい（窮屈）。",
+   "judge": [
+    {
+     "q": "「かしこまった」は動詞「畏まる」の連用形＋たに由来する。",
+     "ans": true,
+     "exp": "かしこまっ＋た。姿勢の結果が形容詞になった。"
+    }
+   ],
+   "quizzes": [],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 248,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：畏まった → 拘谨的"
+  },
+  {
+   "id": "kudaketa",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🛋️",
+   "word": "くだけた",
+   "read": "くだけた",
+   "surface": "くだけた",
+   "status": "確実",
+   "origin": "動詞「砕ける」の連用形「砕け」＋たの連体形。",
+   "originShort": "砕けるの連用形＋た",
+   "physical": "砕ける。固いものが崩れる。",
+   "meaning": "轻松的；不拘礼节的；口语的",
+   "label": "轻松／不拘礼节",
+   "engine": "固さが崩れた状態が、くだけた態度・表現・雰囲気の形容詞になった。",
+   "examples": [
+    {
+     "jp": "くだけた態度で、友達と話す。",
+     "cn": "以轻松的态度和朋友说话。",
+     "src": "self"
+    },
+    {
+     "jp": "この文章はくだけた表現が多い。",
+     "cn": "这篇文章口语化表达很多。",
+     "src": "self"
+    },
+    {
+     "jp": "くだけた雰囲気のパーティーだった。",
+     "cn": "那是一个氛围轻松的派对。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ジジイは若者(わかもの)に くだけた態度(たいど) 取(と)られるのをー　なぜか喜(よろこ)ぶ傾向(けいこう)にあるからー",
+     "en": "Old guys for some reason tend to enjoy it when young people have a casual attitude with them,",
+     "media": "Oshi No Ko",
+     "ep": "EP1",
+     "at": "48:44",
+     "url": "https://nadeshiko.co/en/sentence/aRKgdjlUgMsy",
+     "audio": "https://cdn.nadeshiko.co/media/150672/1/6ab028c6fe.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/150672/1/6ab028c6fe.webp",
+     "cn": "上了年纪的人，被年轻人用随和的态度对待，反而会高兴。"
+    }
+   ],
+   "note": "「くだけた」は「砕ける」の連用形＋た。物理的な「砕けた」と、態度・表現の「くだけた」を区別する。",
+   "contrast": "くだけた（固さが取れた）／カジュアルな（外来語）／ informal（英語）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 107,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：砕けた → 轻松的"
+  },
+  {
+   "id": "shareta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "👒",
+   "word": "しゃれた",
+   "read": "しゃれた",
+   "surface": "しゃれた",
+   "status": "確実",
+   "origin": "動詞「洒落る」の連用形「しゃれ」＋たの連体形。",
+   "originShort": "洒落るの連用形＋た",
+   "physical": "洒落る。身なりを飾る。気の利いたことを言う。",
+   "meaning": "时髦的；别致的；俏皮的",
+   "label": "时髦／别致",
+   "engine": "装い・言葉の洗練が、しゃれた服・名前・台詞の形容詞になった。",
+   "examples": [
+    {
+     "jp": "しゃれた店で食事をした。",
+     "cn": "在别致的店里吃了饭。",
+     "src": "self"
+    },
+    {
+     "jp": "彼はしゃれたことを言う。",
+     "cn": "他会说俏皮话。",
+     "src": "self"
+    },
+    {
+     "jp": "しゃれた名前のカフェを見つけた。",
+     "cn": "发现了一家名字很别致的咖啡馆。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "セイバーだぁ? ずいぶんと しゃれた名前(なまえ)じゃねぇか。",
+     "en": "Saber, you say? That's quite a classy name.",
+     "media": "Fate/strange Fake",
+     "ep": "EP2",
+     "at": "0:07",
+     "url": "https://nadeshiko.co/en/sentence/UEFbdklnOPpC",
+     "audio": "https://cdn.nadeshiko.co/media/166617/2/68142eb86f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/166617/2/68142eb86f.webp",
+     "cn": "Saber？这名字挺别致啊。"
+    }
+   ],
+   "note": "「しゃれた」は「洒落る」の連用形＋た。漢字「洒落」は当て字で、日常は平假名が多い。",
+   "contrast": "しゃれた（洗練・別致）／おしゃれな（装い）／粋な（江戸風）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 49,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：洒落た → 时髦的"
+  },
+  {
+   "id": "kotta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🍱",
+   "word": "凝った",
+   "read": "こった",
+   "surface": "凝った",
+   "status": "確実",
+   "origin": "動詞「凝る」の連用形「凝っ」＋たの連体形。",
+   "originShort": "凝るの連用形＋た",
+   "physical": "凝る。こだわる。凝結する。",
+   "meaning": "精致的；讲究的；煞费苦心的",
+   "label": "精致／讲究",
+   "engine": "細部へのこだわりが、凝った料理・細工・デザインの形容詞になった。",
+   "examples": [
+    {
+     "jp": "凝った料理が並んでいる。",
+     "cn": "摆着精致的菜肴。",
+     "src": "self"
+    },
+    {
+     "jp": "この細工は凝っている。",
+     "cn": "这个工艺很精致。",
+     "src": "self"
+    },
+    {
+     "jp": "凝ったデザインの招待状をもらった。",
+     "cn": "收到了一张设计讲究的请柬。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "もっと凝(こ)った登場(とうじょう)しないと!",
+     "en": "You need to make a more elaborate entrance.",
+     "media": "The Quintessential Quintuplets",
+     "ep": "EP10",
+     "at": "5:42",
+     "url": "https://nadeshiko.co/en/sentence/O6FrMtSSK_Sv",
+     "audio": "https://cdn.nadeshiko.co/media/103572/10/78995993e5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/103572/10/78995993e5.webp",
+     "cn": "得来个更讲究的登场才行！"
+    }
+   ],
+   "note": "「凝った」は「凝る」の連用形＋た。肩が凝った（物理）と凝った料理（評価）を区別する。",
+   "contrast": "凝った（手が込んだ）／精巧な（精密）／手の込んだ（手間）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 319,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：凝った → 精致的"
+  },
+  {
+   "id": "hinetta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🌀",
+   "word": "ひねった",
+   "read": "ひねった",
+   "surface": "ひねった",
+   "status": "確実",
+   "origin": "動詞「捻る」の連用形「捻っ」＋たの連体形。",
+   "originShort": "捻るの連用形＋た",
+   "physical": "捻る。指先でねじる。",
+   "meaning": "别出心裁的；古怪的；拐弯抹角的",
+   "label": "别出心裁／古怪",
+   "engine": "ねじる動作が、ひねった問題・表現・アイデアの形容詞になった。",
+   "examples": [
+    {
+     "jp": "ひねった問題で、学生が困った。",
+     "cn": "学生被别出心裁的题目难住了。",
+     "src": "self"
+    },
+    {
+     "jp": "彼はひねった表現を好む。",
+     "cn": "他喜欢拐弯抹角的表达。",
+     "src": "self"
+    },
+    {
+     "jp": "ひねったアイデアを出す。",
+     "cn": "提出别出心裁的点子。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "「ひねった」は「捻る」の連用形＋た。足をひねった（物理）とひねった問題（評価）を区別する。",
+   "contrast": "ひねった（ねじれた発想）／変わった（普通と違う）／奇抜な（奇抜）。",
+   "pitfall": "Nadeshiko の「ひねった」は足首をひねった（物理）が中心。形容詞用法は作例で補った。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 274,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "同形の動詞用法を含む参考値"
+   },
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：捻った → 别出心裁的"
+  },
+  {
+   "id": "akireta",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "😑",
+   "word": "呆れた",
+   "read": "あきれた",
+   "surface": "呆れた",
+   "status": "確実",
+   "origin": "動詞「呆れる」の連用形「呆れ」＋たの連体形。",
+   "originShort": "呆れるの連用形＋た",
+   "physical": "呆れる。あっけにとられる。",
+   "meaning": "令人无语的；惊呆的；受不了的",
+   "label": "无语／惊呆",
+   "engine": "「呆れる」→あきれ返る→呆れた顔・話。形態は動詞の活用形だが、辞書は連体詞として扱う。",
+   "examples": [
+    {
+     "jp": "呆れた顔でこちらを見た。",
+     "cn": "他一脸无语地看着我。",
+     "src": "self"
+    },
+    {
+     "jp": "呆れたことに、彼は何も言わなかった。",
+     "cn": "令人无语的是，他什么都没说。",
+     "src": "self"
+    },
+    {
+     "jp": "まったく呆れた話だ。",
+     "cn": "真是让人无语的事。",
+     "src": "self"
+    }
+   ],
+   "note": "「呆れた」は「呆れる」の連用形＋た。表記は「あきれた」とも書く。",
+   "contrast": "呆れた（あきれ返る）／驚いた（驚愕）／諦めた（放棄）。",
+   "pitfall": "",
+   "judge": [
+    {
+     "q": "「呆れた」は動詞「呆れる」の連用形＋たに由来する。",
+     "ans": true,
+     "exp": "呆れ＋た。辞書は連体詞として扱う。"
+    }
+   ],
+   "quizzes": [],
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：呆れた → 令人无语的",
+   "nadeshiko": [
+    {
+     "jp": "呆(あき)れたように言(い)う八奈見(やなみ)。",
+     "en": "Anna Yanami said with a sigh.",
+     "media": "Too Many Losing Heroines! 1",
+     "ep": "EP9",
+     "at": "58:25",
+     "url": "https://nadeshiko.co/en/sentence/1PNwpTWlrm2B",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B0CGJ583HH/9/7d1e8cb1c0.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B0CGJ583HH/9/7d1e8cb1c0.webp",
+     "cn": "八奈见一脸无语地说。"
+    }
+   ],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 219,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "tonda",
+   "group": "rentai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🎪",
+   "word": "とんだ",
+   "read": "とんだ",
+   "surface": "とんだ",
+   "status": "通説",
+   "origin": "動詞「飛ぶ」の連用形＋た（飛んだ）が連体詞化した語。",
+   "originShort": "飛ぶの連用形＋た",
+   "physical": "飛ぶ。空中を飛ぶ。",
+   "meaning": "意外的；糟糕的；岂有此理的",
+   "label": "意外／糟糕",
+   "engine": "「飛ぶ」→飛び離れる→とんだ（予想外・とんでもない）の連体詞。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "とんだ誤解を招いた。",
+     "cn": "招来了意外的误会。",
+     "src": "self"
+    },
+    {
+     "jp": "とんだ一日だった。",
+     "cn": "真是糟糕的一天。",
+     "src": "self"
+    },
+    {
+     "jp": "とんだピエロだ。",
+     "cn": "真是个糟糕的小丑。",
+     "src": "self"
+    }
+   ],
+   "note": "「とんだ」は「飛んだ」の連体詞化。ふつう平仮名で書く。",
+   "contrast": "とんだ（予想外・糟糕）／思いがけない（意外）／とんでもない（程度・否定）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「思いがけない」との違いに最も近いのは？",
+     "opts": [
+      "とんだ＝評価が悪い／思いがけない＝中立",
+      "両者は同義",
+      "とんだ＝良い意味だけ",
+      "思いがけない＝古語"
+     ],
+     "ans": 0,
+     "exp": "とんだは「糟糕的・岂有此理」の評価を含む。思いがけないは中立。"
+    }
+   ],
+   "dict": "連体詞",
+   "drift": "高",
+   "literal": "直訳：飛んだ → 意外的",
+   "nadeshiko": [
+    {
+     "jp": "まったく... とんだピエロだ",
+     "en": "Jeez. What a terrible clown.",
+     "media": "The Disastrous Life of Saiki K. Season 2",
+     "ep": "EP9",
+     "at": "17:37",
+     "url": "https://nadeshiko.co/en/sentence/3Uo4w9SZZjKZ",
+     "audio": "https://cdn.nadeshiko.co/media/98034/9/16704ca82f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/98034/9/16704ca82f.webp",
+     "cn": "真是个糟糕的小丑。"
+    }
+   ],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 152,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "kimatta",
+   "group": "rentai",
+   "level": "N3",
+   "jlpt": "N3",
+   "emoji": "📌",
+   "word": "決まった",
+   "read": "きまった",
+   "surface": "決まった",
+   "status": "確実",
+   "origin": "動詞「決まる」の連用形「決まっ」＋たの連体形。",
+   "originShort": "決まるの連用形＋た",
+   "physical": "決まる。決着がつく。位置や形が固定する。",
+   "meaning": "固定的；规定的；一定的",
+   "label": "固定／一定",
+   "engine": "「決着がついた状態」が、決まった時間・挨拶・答えの形容詞になった。",
+   "examples": [
+    {
+     "jp": "決まった時間に寝るようにしている。",
+     "cn": "我尽量在固定的时间睡觉。",
+     "src": "self"
+    },
+    {
+     "jp": "決まった挨拶だけして、すぐに帰った。",
+     "cn": "只说了例行的寒暄就马上回去了。",
+     "src": "self"
+    },
+    {
+     "jp": "彼の答はいつも決まっている。",
+     "cn": "他的回答总是一样。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "決(き)まった時間(じかん)に寝(ね)て 決(き)まった時間(じかん)に起(お)きて",
+     "en": "He goes to sleep and wakes up at the same time every day,",
+     "media": "WITCH WATCH",
+     "ep": "EP6",
+     "at": "4:32",
+     "url": "https://nadeshiko.co/en/sentence/M4GMQmyL4GEb",
+     "audio": "https://cdn.nadeshiko.co/media/180367/6/c15c078b26.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/180367/6/c15c078b26.webp",
+     "cn": "他在固定的时间睡觉，在固定的时间起床。"
+    }
+   ],
+   "note": "「決まった」は「決まる」の連用形＋た。動詞文の「日時が決まった」と、形容詞的な「決まった時間」を区別する。",
+   "contrast": "決まった（固定・例行）／一定の（漢語的）／定例の（行事）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 2402,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "連体詞",
+   "drift": "中",
+   "literal": "直訳：決まった → 固定的"
+  },
+  {
+   "id": "omoigakenai",
+   "group": "nai",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🎁",
+   "word": "思いがけない",
+   "read": "おもいがけない",
+   "surface": "思いがけない",
+   "status": "確実",
+   "origin": "動詞「思い掛ける」の未然形「思い掛け」＋打消の助動詞「ない」。",
+   "originShort": "思い掛けるの未然形＋ない",
+   "physical": "思い掛ける。思い当たる。＋ない（否定）。",
+   "meaning": "意想不到的；意外的",
+   "label": "意想不到／意外",
+   "engine": "予期しない状態が「思いがけない出会い・言葉」の形容詞に固定した。",
+   "examples": [
+    {
+     "jp": "思いがけない出会いがあった。",
+     "cn": "有了意想不到的相遇。",
+     "src": "self"
+    },
+    {
+     "jp": "思いがけない質問に困った。",
+     "cn": "被意想不到的问题难住了。",
+     "src": "self"
+    },
+    {
+     "jp": "思いがけないプレゼントをもらった。",
+     "cn": "收到了意想不到的礼物。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "それは 思(おも)いがけない言葉(ことば)でした",
+     "en": "Those words were shocking.",
+     "media": "Fruits Basket The Final Season",
+     "ep": "EP11",
+     "at": "14:31",
+     "url": "https://nadeshiko.co/en/sentence/aAiFIHpn1rDQ",
+     "audio": "https://cdn.nadeshiko.co/media/124194/11/0bf2744e42.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/124194/11/0bf2744e42.webp",
+     "cn": "那是一句意想不到的话。"
+    }
+   ],
+   "note": "「思いがけない」は「思い掛ける」＋ない。漢字では「思い掛けない」とも書く。",
+   "contrast": "思いがけない（予期しない）／意外な（漢語）／不意の（突然）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 15,
+    "wf": 3.12,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：思い掛けない → 意想不到的"
+  },
+  {
+   "id": "tamaranai",
+   "group": "nai",
+   "level": "N3",
+   "jlpt": "N3",
+   "emoji": "🌋",
+   "word": "たまらない",
+   "read": "たまらない",
+   "surface": "たまらない",
+   "status": "確実",
+   "origin": "動詞「堪る」の未然形「堪ら」＋打消の助動詞「ない」。",
+   "originShort": "堪るの未然形＋ない",
+   "physical": "堪る。こらえる。＋ない（否定）。",
+   "meaning": "受不了；…得不得了；无法忍受",
+   "label": "受不了／不得了",
+   "engine": "堪えられない感情が「暑くてたまらない」「嬉しくてたまらない」の形容詞に固定した。",
+   "examples": [
+    {
+     "jp": "暑くてたまらない。",
+     "cn": "热得受不了。",
+     "src": "self"
+    },
+    {
+     "jp": "嬉しくてたまらない。",
+     "cn": "高兴得不得了。",
+     "src": "self"
+    },
+    {
+     "jp": "この匂いがたまらない。",
+     "cn": "这味道让人受不了（喜爱）。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "きゅうくつでたまらない!",
+     "en": "\"They're all so constricting!\"",
+     "media": "Goodbye, Lara",
+     "ep": "EP1",
+     "at": "9:53",
+     "url": "https://nadeshiko.co/en/sentence/Jgp6ZusRGC4j",
+     "audio": "https://cdn.nadeshiko.co/media/177637/1/7f21ccadbc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/177637/1/7f21ccadbc.webp",
+     "cn": "憋屈得受不了！"
+    }
+   ],
+   "note": "「たまらない」は「堪る」＋ない。マイナス感情にもプラス感情にも使う。",
+   "contrast": "たまらない（堪えられない）／仕方ない（やむを得ない）／ならない（禁止・感嘆）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 836,
+    "wf": 3.98,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：堪らない → 受不了的"
+  },
+  {
+   "id": "kudaranai",
+   "group": "nai",
+   "level": "N3",
+   "jlpt": "N3",
+   "emoji": "🗑️",
+   "word": "くだらない",
+   "read": "くだらない",
+   "surface": "くだらない",
+   "status": "通説",
+   "origin": "動詞「下る」の未然形「下ら」＋打消の助動詞「ない」。",
+   "originShort": "下るの未然形＋ない",
+   "physical": "下る。下に降りる。",
+   "meaning": "无聊的；没价值的；微不足道的",
+   "label": "无聊／没价值",
+   "engine": "「下る」→下らない（取るに足りない）→形容詞。否定形が「価値がない」の評価に固定した。",
+   "examples": [
+    {
+     "jp": "くだらない話はやめよう。",
+     "cn": "别说无聊的话了。",
+     "src": "self"
+    },
+    {
+     "jp": "くだらないことで喧嘩した。",
+     "cn": "为了无聊的事吵架了。",
+     "src": "self"
+    },
+    {
+     "jp": "そんなのくだらない。",
+     "cn": "那种事很无聊。",
+     "src": "self"
+    }
+   ],
+   "note": "「くだらない」は「下る」＋ない。形態は動詞の否定形だが、辞書は形容詞として扱う。",
+   "contrast": "くだらない（無価値）／つまらない（退屈）／取るに足りない（漢語）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「つまらない」との違いに最も近いのは？",
+     "opts": [
+      "くだらない＝価値がない／つまらない＝退屈",
+      "両者は同義",
+      "くだらない＝おいしくない",
+      "つまらない＝下品"
+     ],
+     "ans": 0,
+     "exp": "くだらないは価値の否定、つまらないは退屈・物足りなさ。"
+    }
+   ],
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：下らない → 无聊的",
+   "nadeshiko": [
+    {
+     "jp": "「…………くだらない価値観(かちかん)ね」",
+     "en": "\"...What a ridiculous value system.\"",
+     "media": "My Youth Romantic Comedy Is Wrong, As I Expected 1",
+     "ep": "EP4",
+     "at": "17:13",
+     "url": "https://nadeshiko.co/en/sentence/Ld5MBKGuB3ka",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B07PPMBZHX/4/ce2d8e6557.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B07PPMBZHX/4/ce2d8e6557.webp",
+     "cn": "……真是无聊的价值观。"
+    }
+   ],
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 704,
+    "wf": 3.94,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "kokoromotonai",
+   "group": "nai",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🫥",
+   "word": "心許ない",
+   "read": "こころもとない",
+   "surface": "心許ない",
+   "status": "確実",
+   "origin": "名詞「心」＋動詞「許す」＋形容詞「ない」の複合。",
+   "originShort": "心＋許す＋ない",
+   "physical": "心を許す＋ない（心が許されない）。",
+   "meaning": "不放心的；不安的；靠不住的",
+   "label": "不放心／不安",
+   "engine": "「心許す」→心を許せる→心許ない（不安）の形容詞。意味は「心」と「許す」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "心許ない返事だ。",
+     "cn": "是不太可靠的答复。",
+     "src": "self"
+    },
+    {
+     "jp": "一人では心許ない。",
+     "cn": "一个人让人不放心。",
+     "src": "self"
+    },
+    {
+     "jp": "心許ない資金で始めた。",
+     "cn": "用不可靠的资金开始了。",
+     "src": "self"
+    }
+   ],
+   "note": "「心許ない」は「心」＋「許す」＋ない。書き言葉寄り。",
+   "contrast": "心許ない（不安）／頼りない（頼れない）／心細い（心もとない）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：心許ない → 不放心的",
+   "nadeshiko": [
+    {
+     "jp": "どうも心許(こころもと)ないな",
+     "en": "This is unsatisfying.",
+     "media": "Kanon (2006)",
+     "ep": "EP13",
+     "at": "9:01",
+     "url": "https://nadeshiko.co/en/sentence/FiLmkq0SMBqo",
+     "audio": "https://cdn.nadeshiko.co/media/1530/13/836e83cfd1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/1530/13/836e83cfd1.webp",
+     "cn": "总觉得不太放心啊。"
+    }
+   ],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 20,
+    "wf": 2.07,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "arigatai",
+   "group": "kogo",
+   "level": "N4",
+   "jlpt": "N4",
+   "emoji": "🙏",
+   "word": "ありがたい",
+   "read": "ありがたい",
+   "surface": "ありがたい",
+   "status": "確実",
+   "origin": "動詞「有り」＋形容詞「難し」。有ることが難しい→滅多にない→尊い→感謝。",
+   "originShort": "有り＋難し",
+   "physical": "有る＋難し（存在が難しい）。",
+   "meaning": "难得的；值得感激的；宝贵的",
+   "label": "难得／感激",
+   "engine": "「有り難し」の「滅多にない→尊い→感謝」の転義が形容詞に固定した。",
+   "examples": [
+    {
+     "jp": "ありがたいお言葉です。",
+     "cn": "谢谢您的宝贵话语。",
+     "src": "self"
+    },
+    {
+     "jp": "雨が降ってありがたい。",
+     "cn": "下雨真是太好了。",
+     "src": "self"
+    },
+    {
+     "jp": "ありがたいことに、間に合った。",
+     "cn": "幸运的是赶上了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ありがたい! -んー...",
+     "en": "Oh, thank god!",
+     "media": "Grand Blue Dreaming Season 3",
+     "ep": "EP5",
+     "at": "14:39",
+     "url": "https://nadeshiko.co/en/sentence/Z_GUnRT-eNpC",
+     "audio": "https://cdn.nadeshiko.co/media/199111/5/64ed2a0eb8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/199111/5/64ed2a0eb8.webp",
+     "cn": "太感谢了！"
+    }
+   ],
+   "note": "「ありがたい」は「有り難し」が語源。感謝の形容詞だが、形態は動詞「有り」＋形容詞「難し」。",
+   "contrast": "ありがたい（感謝）／めでたい（祝い）／貴重だ（希少）。",
+   "judge": [
+    {
+     "q": "「ありがたい」は動詞「有り」＋形容詞「難し」に由来する。",
+     "ans": true,
+     "exp": "有ることが難しい→珍しい→尊い→感謝。"
+    }
+   ],
+   "quizzes": [],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 558,
+    "wf": 4.46,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：有り難い → 值得感激的"
+  },
+  {
+   "id": "medetai",
+   "group": "kogo",
+   "level": "N3",
+   "jlpt": "N3",
+   "emoji": "🎉",
+   "word": "めでたい",
+   "read": "めでたい",
+   "surface": "めでたい",
+   "status": "通説",
+   "origin": "動詞「愛でる」＋形容詞化接尾辞「〜たし」（めでたし）に由来する、というのが通説。",
+   "originShort": "愛でる＋〜たし",
+   "physical": "愛でる。愛する。褒める。＋たし。",
+   "meaning": "可喜可贺的；吉利的；顺遂的",
+   "label": "可喜可贺／吉利",
+   "engine": "愛でる＋たしが「めでたい席・合格」の形容詞に固定した。",
+   "examples": [
+    {
+     "jp": "めでたい席で挨拶する。",
+     "cn": "在喜庆的场合致辞。",
+     "src": "self"
+    },
+    {
+     "jp": "めでたく合格した。",
+     "cn": "顺利合格了。",
+     "src": "self"
+    },
+    {
+     "jp": "めでたい話だ。",
+     "cn": "这是件喜事。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ナハハッ めでたい めでたい",
+     "en": "Congratulations! Congratulations!",
+     "media": "Ranma ½",
+     "ep": "EP39",
+     "at": "21:08",
+     "url": "https://nadeshiko.co/en/sentence/Y320gkZ_W-nJ",
+     "audio": "https://cdn.nadeshiko.co/media/210/39/67f1a7a44e.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/210/39/67f1a7a44e.webp",
+     "cn": "哈哈哈，可喜可贺，可喜可贺。"
+    }
+   ],
+   "note": "「めでたい」は「愛でる」＋たしが通説。「おめでたい」は「おめでたい人」のように、のんき・単純の皮肉にも使う。",
+   "contrast": "めでたい（祝い）／ありがたい（感謝）／喜ばしい（喜び）。",
+   "judge": [],
+   "quizzes": [],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 148,
+    "wf": 3.4,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：愛でたい → 可喜可贺的"
+  },
+  {
+   "id": "migurushii",
+   "group": "kogo",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🙈",
+   "word": "見苦しい",
+   "read": "みぐるしい",
+   "surface": "見苦しい",
+   "status": "確実",
+   "origin": "動詞「見る」の連用形「見」＋形容詞「苦しい」の複合。",
+   "originShort": "見るの連用形＋苦しい",
+   "physical": "見る。＋苦しい（見ていて辛い）。",
+   "meaning": "难看的；不体面的；丢脸的",
+   "label": "难看／不体面",
+   "engine": "見るのが苦しい状態が「見苦しい負け方・身なり」の形容詞に固定した。",
+   "examples": [
+    {
+     "jp": "見苦しい負け方だった。",
+     "cn": "那是一场难看的败仗。",
+     "src": "self"
+    },
+    {
+     "jp": "見苦しい身なりをしている。",
+     "cn": "他衣着寒碜。",
+     "src": "self"
+    },
+    {
+     "jp": "見苦しい言い訳をするな。",
+     "cn": "别找难看的借口。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "レフェリー 止(と)めろ 見苦(みぐる)しいぞ",
+     "en": "Ref, stop them!",
+     "media": "Hajime no Ippo: The Fighting!",
+     "ep": "EP41",
+     "at": "14:52",
+     "url": "https://nadeshiko.co/en/sentence/Uz885nzi87kg",
+     "audio": "https://cdn.nadeshiko.co/media/263/41/145581499d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/263/41/145581499d.webp",
+     "cn": "裁判，快停下，太难看了。"
+    }
+   ],
+   "note": "「見苦しい」は「見る」＋「苦しい」の複合。見にくい（見えにくい）とは別語。",
+   "contrast": "見苦しい（みっともない）／見にくい（見えにくい）／みっともない（口語）。",
+   "judge": [],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「見窄らしい」との違いに最も近いのは？",
+     "opts": [
+      "見苦しい＝みっともない／見窄らしい＝貧弱・寒酸",
+      "両者は同義",
+      "見苦しい＝見えにくい",
+      "見窄らしい＝見苦しいの丁寧形"
+     ],
+     "ans": 0,
+     "exp": "見苦しいは評価・体面、見窄らしいは見た目の貧弱さ。"
+    }
+   ],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 81,
+    "wf": 3.19,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   },
+   "dict": "形容詞",
+   "drift": "中",
+   "literal": "直訳：見苦しい → 难看的"
+  },
+  {
+   "id": "misuborashii",
+   "group": "kogo",
+   "level": "N2",
+   "jlpt": "N2",
+   "emoji": "🧥",
+   "word": "見窄らしい",
+   "read": "みすぼらしい",
+   "surface": "見窄らしい",
+   "status": "確実",
+   "origin": "動詞「見る」の連用形「見」＋形容詞「窄らし」の複合。",
+   "originShort": "見るの連用形＋窄らし",
+   "physical": "見る＋窄らし（見た目が狭苦しい）。",
+   "meaning": "衣衫褴褛的；寒酸的；破旧的",
+   "label": "寒酸／破旧",
+   "engine": "「見る」＋「窄らし」→見た目が貧弱→形容詞。意味は「見る」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "見窄らしい身なりをしている。",
+     "cn": "他衣着寒酸。",
+     "src": "self"
+    },
+    {
+     "jp": "見窄らしいアパートに住む。",
+     "cn": "住在寒酸的公寓里。",
+     "src": "self"
+    },
+    {
+     "jp": "見窄らしい格好で出かけた。",
+     "cn": "穿着寒酸地出门了。",
+     "src": "self"
+    }
+   ],
+   "note": "「見窄らしい」は「見る」＋「窄らし」。日常は「みすぼらしい」と平仮名で書くことが多い。",
+   "contrast": "見窄らしい（貧弱）／見苦しい（みっともない）／貧相だ（漢語）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "形容詞",
+   "drift": "高",
+   "literal": "直訳：見窄らしい → 寒酸的",
+   "nadeshiko": [
+    {
+     "jp": "こんな見窄(みすぼ)らしいアパートにお住(す)みとは",
+     "en": "but to think you were in this shabby little apartment...",
+     "media": "TONIKAWA: Over The Moon For You",
+     "ep": "EP4",
+     "at": "4:32",
+     "url": "https://nadeshiko.co/en/sentence/zhADyyp6nUR-",
+     "audio": "https://cdn.nadeshiko.co/media/116267/4/4b68ee53de.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/116267/4/4b68ee53de.webp",
+     "cn": "没想到你住在这么寒酸的公寓里。"
+    }
+   ],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 14,
+    "wf": 2.4,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "ikashita",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "😎",
+   "word": "いかした",
+   "read": "いかした",
+   "surface": "いかした",
+   "status": "通説",
+   "origin": "動詞「生かす（活かす）」の連用形＋たの連体形。",
+   "originShort": "生かすの連用形＋た",
+   "physical": "生かす。活かす。",
+   "meaning": "很酷的；帅气的；有型的",
+   "label": "很酷／帅气",
+   "engine": "「活かす」→粋なことをする→俗語の「いかした（cool）」。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "いかしたスカジャンだね。",
+     "cn": "这件刺绣夹克真酷。",
+     "src": "self"
+    },
+    {
+     "jp": "いかした曲をかけてくれ。",
+     "cn": "放点很酷的歌。",
+     "src": "self"
+    },
+    {
+     "jp": "いかした店を見つけた。",
+     "cn": "找到了一家很酷的店。",
+     "src": "self"
+    }
+   ],
+   "note": "「いかした」は「生かす」の連用形＋た。俗語で、辞書は連体詞として扱うことがある。",
+   "contrast": "いかした（cool）／しゃれた（stylish）／粋な（江戸風）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連体詞（俗）",
+   "drift": "高",
+   "literal": "直訳：生かした → 很酷的",
+   "nadeshiko": [
+    {
+     "jp": "えっと い...いかしたスカジャンっすね",
+     "en": "Uh, that's a nice embroidered jumper.",
+     "media": "Hanasaku Iroha ~Blossoms for Tomorrow~",
+     "ep": "EP18",
+     "at": "18:04",
+     "url": "https://nadeshiko.co/en/sentence/hAtr38NRlJjp",
+     "audio": "https://cdn.nadeshiko.co/media/9289/18/14a55d1707.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/9289/18/14a55d1707.webp",
+     "cn": "呃，这件刺绣夹克真酷。"
+    }
+   ],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 142,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "ikareta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🌀",
+   "word": "いかれた",
+   "read": "いかれた",
+   "surface": "いかれた",
+   "status": "通説",
+   "origin": "動詞「いかれる」（行く＋れる／逝かれる）の連用形＋たの連体形。",
+   "originShort": "いかれるの連用形＋た",
+   "physical": "いかれる。本来の調子を失う。",
+   "meaning": "脑子坏掉的；疯狂的；不正常的",
+   "label": "疯狂／不正常",
+   "engine": "「行く」の受身・可能の俗用から「正常でない」へ。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "いかれた奴だ。",
+     "cn": "那是个疯子。",
+     "src": "self"
+    },
+    {
+     "jp": "いかれた行動をとる。",
+     "cn": "采取疯狂的行动。",
+     "src": "self"
+    },
+    {
+     "jp": "この店はいかれた値段だ。",
+     "cn": "这家店的价格离谱。",
+     "src": "self"
+    }
+   ],
+   "note": "「いかれた」は俗語。辞書見出しは「いかれる」で、連体詞的に使う。",
+   "contrast": "いかれた（crazy）／狂った（狂乱）／異常な（漢語）。",
+   "pitfall": "Nadeshiko の「いかれた」は「行かれた」の同形が大半。形容詞用法は俗語で限られる。",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連体詞（俗）",
+   "drift": "高",
+   "literal": "直訳：いかれた → 疯狂的",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 41273,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "Nadeshiko の大半は「行かれた」「いかれた（行けた）」の同形；形容詞用法は限られる"
+   }
+  },
+  {
+   "id": "yarareta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "💥",
+   "word": "やられた",
+   "read": "やられた",
+   "surface": "やられた",
+   "status": "通説",
+   "origin": "動詞「やられる」（遣られる）の連用形＋たの連体形。",
+   "originShort": "やられるの連用形＋た",
+   "physical": "やられる。攻撃を受ける。",
+   "meaning": "被整了；中招了；佩服得五体投地",
+   "label": "中招／佩服",
+   "engine": "「やられる」→負わされる→「やられた（参った）」の間投詞的形容詞。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "やられた、完全に負けた。",
+     "cn": "中招了，彻底输了。",
+     "src": "self"
+    },
+    {
+     "jp": "やられた顔をしている。",
+     "cn": "他一脸中招的表情。",
+     "src": "self"
+    },
+    {
+     "jp": "あの手にはやられた。",
+     "cn": "被那一手整了。",
+     "src": "self"
+    }
+   ],
+   "note": "「やられた」は俗語・間投詞的。連体詞として「やられた顔」のように使う。",
+   "contrast": "やられた（やられた）／参った（降参）／一本取られた（一本取られた）。",
+   "pitfall": "Nadeshiko の「やられた」は受身・間投詞が大半。連体詞用法は俗語。",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連体詞（俗）",
+   "drift": "高",
+   "literal": "直訳：やられた → 中招的",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 35679,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "Nadeshiko の大半は受身「やられた」；形容詞・間投詞用法は一部"
+   }
+  },
+  {
+   "id": "zuninotta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🎈",
+   "word": "図に乗った",
+   "read": "ずにのった",
+   "surface": "図に乗った",
+   "status": "確実",
+   "origin": "動詞句「図に乗る」の連用形＋た。",
+   "originShort": "図に乗るの連用形＋た",
+   "physical": "図に乗る。調子に乗る。",
+   "meaning": "得意忘形的；蹬鼻子上脸的",
+   "label": "得意忘形",
+   "engine": "「図（はかりごと）に乗る」→調子に乗る→連体詞的。意味は「図」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "図に乗った態度を取るな。",
+     "cn": "别摆出得意忘形的态度。",
+     "src": "self"
+    },
+    {
+     "jp": "少し褒めたら図に乗った。",
+     "cn": "稍微夸了一下就得意忘形了。",
+     "src": "self"
+    },
+    {
+     "jp": "図に乗った発言だ。",
+     "cn": "那是蹬鼻子上脸的话。",
+     "src": "self"
+    }
+   ],
+   "note": "「図に乗った」は連語。辞書見出しは「図に乗る」で、連体詞的に使う。",
+   "contrast": "図に乗った（調子づく）／調子に乗った（同義）／天狗になった（うぬぼれ）。",
+   "pitfall": "Nadeshiko の「図に乗った」は動詞句の命令形が中心。連体詞用法は作例で補う。",
+   "judge": [],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「調子に乗った」との違いに最も近いのは？",
+     "opts": [
+      "ほぼ同義だが、図に乗ったは「図（はかりごと）」の比喩",
+      "図に乗った＝物理的に乗る",
+      "調子に乗った＝正式",
+      "両者は反義"
+     ],
+     "ans": 0,
+     "exp": "どちらも調子づく意味。図に乗ったは「図（はかりごと）に乗る」の比喩。"
+    }
+   ],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：図に乗った → 得意忘形的",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 3783,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「図に乗る」の動詞用法を含む"
+   }
+  },
+  {
+   "id": "maganuketa",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🫠",
+   "word": "間が抜けた",
+   "read": "まがぬけた",
+   "surface": "間が抜けた",
+   "status": "確実",
+   "origin": "動詞句「間が抜ける」の連用形＋た。",
+   "originShort": "間が抜けるの連用形＋た",
+   "physical": "間が抜ける。間延びする。",
+   "meaning": "傻乎乎的；缺根筋的；不合时宜的",
+   "label": "缺根筋／傻乎乎",
+   "engine": "「間（あいだ）が抜ける」→間延び→愚鈍・抜けている。意味は「間」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "間が抜けた返事をする。",
+     "cn": "给出傻乎乎的答复。",
+     "src": "self"
+    },
+    {
+     "jp": "間が抜けた顔をしている。",
+     "cn": "一脸缺根筋的表情。",
+     "src": "self"
+    },
+    {
+     "jp": "なんとも間が抜けた話だ。",
+     "cn": "真是件荒唐事。",
+     "src": "self"
+    }
+   ],
+   "note": "「間が抜けた」は連語。連体詞的に使う。",
+   "contrast": "間が抜けた（抜けている）／気が抜けた（気力喪失）／とんちんかんな（的外れ）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：間が抜けた → 缺根筋的",
+   "nadeshiko": [
+    {
+     "jp": "私(わたし)がユフィリア嬢(じょう)を抱(かか)えると、ユフィリア嬢(じょう)が間(ま)の抜(ぬ)けたような声(こえ)を出(だ)す。",
+     "en": "When I hold Miss Euphyllia, she lets out a clueless‑sounding voice.",
+     "media": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady, Vol. 1",
+     "ep": "EP2",
+     "at": "40:15",
+     "url": "https://nadeshiko.co/en/sentence/8rmonQvKrb5w",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B0CC5WC1PK/2/7c6fbbdea4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B0CC5WC1PK/2/7c6fbbdea4.webp",
+     "cn": "我一抱住她，她就发出缺根筋的声音。"
+    }
+   ],
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 30,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "kiganuketa",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🫧",
+   "word": "気が抜けた",
+   "read": "きがぬけた",
+   "surface": "気が抜けた",
+   "status": "確実",
+   "origin": "動詞句「気が抜ける」の連用形＋た。",
+   "originShort": "気が抜けるの連用形＋た",
+   "physical": "気が抜ける。気力が抜ける。",
+   "meaning": "泄了气的；没精打采的；松懈的",
+   "label": "泄气／松懈",
+   "engine": "「気」＋「抜ける」→気力喪失→形容詞的。意味は「気」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "気が抜けた顔をしている。",
+     "cn": "他一脸泄了气的表情。",
+     "src": "self"
+    },
+    {
+     "jp": "気が抜けた一日だった。",
+     "cn": "真是没精打采的一天。",
+     "src": "self"
+    },
+    {
+     "jp": "緊張が終わって気が抜けた。",
+     "cn": "紧张结束后一下子松懈了。",
+     "src": "self"
+    }
+   ],
+   "note": "「気が抜けた」は連語。連体詞的に使う。",
+   "contrast": "気が抜けた（気力喪失）／間が抜けた（抜けている）／気の抜けた（同義）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：気が抜けた → 泄了气的",
+   "nadeshiko": [
+    {
+     "jp": "大会(たいかい)が終(お)わって 気(き)が抜(ぬ)けたみたいですね",
+     "en": "She must be relaxed now that the marathon's over.",
+     "media": "Kanon (2006)",
+     "ep": "EP19",
+     "at": "16:58",
+     "url": "https://nadeshiko.co/en/sentence/jPMC5dyZxUZE",
+     "audio": "https://cdn.nadeshiko.co/media/1530/19/f16d9350fa.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/1530/19/f16d9350fa.webp",
+     "cn": "大赛结束后，他好像泄了气。"
+    }
+   ],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 1405,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「気が抜ける」の動詞用法を含む"
+   }
+  },
+  {
+   "id": "choushininotta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🎠",
+   "word": "調子に乗った",
+   "read": "ちょうしにのった",
+   "surface": "調子に乗った",
+   "status": "確実",
+   "origin": "動詞句「調子に乗る」の連用形＋た。",
+   "originShort": "調子に乗るの連用形＋た",
+   "physical": "調子に乗る。調子が良くなる。",
+   "meaning": "得意忘形的；来劲的；顺杆爬的",
+   "label": "得意忘形／来劲",
+   "engine": "「調子」＋「乗る」→調子づく→連体詞的。意味は「調子」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "調子に乗った言動は慎むべきだ。",
+     "cn": "得意忘形的言行应该收敛。",
+     "src": "self"
+    },
+    {
+     "jp": "調子に乗った彼は、つい言い過ぎた。",
+     "cn": "他来劲了，结果说过头了。",
+     "src": "self"
+    },
+    {
+     "jp": "調子に乗った結果、失敗した。",
+     "cn": "因为得意忘形而失败了。",
+     "src": "self"
+    }
+   ],
+   "note": "「調子に乗った」は連語。連体詞的に使う。",
+   "contrast": "調子に乗った（調子づく）／図に乗った（同義）／天狗になった（うぬぼれ）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：調子に乗った → 来劲的",
+   "nadeshiko": [
+    {
+     "jp": "調子(ちょうし)に乗(の)った言動(げんどう)も 慎(つつし)むべきですよ",
+     "en": "You should be mindful of your cheeky remarks and behavior.",
+     "media": "Fruits Basket Season 2",
+     "ep": "EP13",
+     "at": "8:46",
+     "url": "https://nadeshiko.co/en/sentence/JcH0l6Lk5wx3",
+     "audio": "https://cdn.nadeshiko.co/media/111762/13/46d5dd8b79.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/111762/13/46d5dd8b79.webp",
+     "cn": "得意忘形的言行还是应该收敛。"
+    }
+   ],
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 316,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  },
+  {
+   "id": "osoreitta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🙇",
+   "word": "恐れ入った",
+   "read": "おそれいった",
+   "surface": "恐れ入った",
+   "status": "確実",
+   "origin": "動詞「恐れ入る」の連用形＋た。",
+   "originShort": "恐れ入るの連用形＋た",
+   "physical": "恐れ入る。恐縮する。感服する。",
+   "meaning": "佩服；惶恐；服了",
+   "label": "佩服／惶恐",
+   "engine": "「恐れ」＋「入る」→恐縮・感服→間投詞的形容詞。意味は「恐れ」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "恐れ入ったよ、君には敵わない。",
+     "cn": "我服了，比不过你。",
+     "src": "self"
+    },
+    {
+     "jp": "まったく恐れ入った話だ。",
+     "cn": "真是令人佩服的事。",
+     "src": "self"
+    },
+    {
+     "jp": "恐れ入った様子で頭を下げた。",
+     "cn": "他一脸惶恐地低下了头。",
+     "src": "self"
+    }
+   ],
+   "note": "「恐れ入った」は連語・間投詞的。連体詞的に使う。",
+   "contrast": "恐れ入った（感服）／参った（降参）／脱帽した（脱帽）。",
+   "pitfall": "Nadeshiko の「恐れ入った」は間投詞が中心。連体詞用法は作例で補う。",
+   "judge": [],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「参った」との違いに最も近いのは？",
+     "opts": [
+      "恐れ入った＝感服・恐縮／参った＝降参・困った",
+      "両者は同義",
+      "恐れ入った＝物理",
+      "参った＝書き言葉"
+     ],
+     "ans": 0,
+     "exp": "恐れ入ったは感服・恐縮、参ったは降参・困ったが強い。"
+    }
+   ],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：恐れ入った → 佩服的",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 80,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "同形の動詞用法を含む参考値"
+   }
+  },
+  {
+   "id": "maitta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🏳️",
+   "word": "参った",
+   "read": "まいった",
+   "surface": "参った",
+   "status": "確実",
+   "origin": "動詞「参る」の連用形＋た。",
+   "originShort": "参るの連用形＋た",
+   "physical": "参る。参上する。降参する。",
+   "meaning": "服了；受不了；糟了",
+   "label": "服了／糟了",
+   "engine": "「参る」→参上→参った（降参・困った）の間投詞的形容詞。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "参ったな、財布を忘れた。",
+     "cn": "糟了，忘带钱包了。",
+     "src": "self"
+    },
+    {
+     "jp": "参った、完全に負けた。",
+     "cn": "服了，彻底输了。",
+     "src": "self"
+    },
+    {
+     "jp": "参った顔で戻ってきた。",
+     "cn": "他一脸服了的表情回来了。",
+     "src": "self"
+    }
+   ],
+   "note": "「参った」は間投詞的。連体詞的に使う。",
+   "contrast": "参った（降参）／恐れ入った（感服）／困った（困惑）。",
+   "pitfall": "Nadeshiko の「参った」は間投詞が中心。連体詞用法は作例で補う。",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連語（連体詞的）",
+   "drift": "高",
+   "literal": "直訳：参った → 服了的",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 960,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「参った」の間投詞用法を含む"
+   }
+  },
+  {
+   "id": "tamageta",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "😲",
+   "word": "たまげた",
+   "read": "たまげた",
+   "surface": "たまげた",
+   "status": "通説",
+   "origin": "動詞「魂消る（たまげる）」の連用形＋た。",
+   "originShort": "魂消るの連用形＋た",
+   "physical": "魂消る。魂が抜けるほど驚く。",
+   "meaning": "大吃一惊的；惊呆的",
+   "label": "惊呆",
+   "engine": "「魂」＋「消る」→驚愕→連体詞的。意味は「魂」から直接は導けない。",
+   "examples": [
+    {
+     "jp": "たまげた顔をしている。",
+     "cn": "他一脸惊呆的表情。",
+     "src": "self"
+    },
+    {
+     "jp": "たまげた話だ。",
+     "cn": "真是令人吃惊的事。",
+     "src": "self"
+    },
+    {
+     "jp": "その値段にはたまげた。",
+     "cn": "被那个价格惊呆了。",
+     "src": "self"
+    }
+   ],
+   "note": "「たまげた」は俗語・連体詞的。",
+   "contrast": "たまげた（驚愕）／驚いた（驚き）／仰天した（漢語）。",
+   "pitfall": "Nadeshiko の「たまげた」は間投詞が中心。連体詞用法は作例で補う。",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連体詞（俗）",
+   "drift": "高",
+   "literal": "直訳：魂消た → 惊呆的",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 27,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "同形の動詞用法を含む参考値"
+   }
+  },
+  {
+   "id": "buttonda",
+   "group": "idiom",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🚀",
+   "word": "ぶっ飛んだ",
+   "read": "ぶっとんだ",
+   "surface": "ぶっ飛んだ",
+   "status": "通説",
+   "origin": "動詞「ぶっ飛ぶ」の連用形＋た。",
+   "originShort": "ぶっ飛ぶの連用形＋た",
+   "physical": "ぶっ飛ぶ。勢いよく飛ぶ。",
+   "meaning": "离谱的；惊人的；出格的",
+   "label": "离谱／出格",
+   "engine": "「ぶっ飛ぶ」→常識を飛び越える→連体詞的。意味は元動詞から直接導けない。",
+   "examples": [
+    {
+     "jp": "ぶっ飛んだ発想だ。",
+     "cn": "那是离谱的想法。",
+     "src": "self"
+    },
+    {
+     "jp": "ぶっ飛んだ計画を立てる。",
+     "cn": "制定出格的计划。",
+     "src": "self"
+    },
+    {
+     "jp": "ぶっ飛んだ値段に驚いた。",
+     "cn": "被离谱的价格惊呆了。",
+     "src": "self"
+    }
+   ],
+   "note": "「ぶっ飛んだ」は俗語・連体詞的。",
+   "contrast": "ぶっ飛んだ（常識外れ）／とんだ（意外）／常識外れの（漢語）。",
+   "pitfall": "",
+   "judge": [],
+   "quizzes": [],
+   "dict": "連体詞（俗）",
+   "drift": "高",
+   "literal": "直訳：ぶっ飛んだ → 离谱的",
+   "nadeshiko": [
+    {
+     "jp": "そういう ぶっ飛(と)んだ発想(はっそう) 嫌(きら)いやないで",
+     "en": "I don't dislike those kinds of outrageous ideas.",
+     "media": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+     "ep": "EP3",
+     "at": "2:41",
+     "url": "https://nadeshiko.co/en/sentence/Ki56JDfWhA9z",
+     "audio": "https://cdn.nadeshiko.co/media/206914/3/1932cd9812.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/206914/3/1932cd9812.webp",
+     "cn": "我不讨厌那种离谱的想法。"
+    }
+   ],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 56,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
+  }
+ ]
+}
