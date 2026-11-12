@@ -115,6 +115,14 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/meta-guide/
 | [`keishiku-courseware/`](../keishiku-courseware/) | 形式名詞十四杰：表記文法化最大阵营「こと・もの・ところ・とおり…」的实战词表 |
 | [`karada-courseware/`](../karada-courseware/) | 身体語彙の和漢二層（113 条带和／漢／混语种徽标＋筛选）与 JLPT N1 真題コーパス |
 
+## 付録：Diachronic Transparency（历时透明性）
+
+- [日本語の历时透明性 — 総綱と実戦検証](./diachronic-transparency.md)
+  — AI Agent System Prompt 版の「音韵透明性＋形态透明性」総綱。音韵省力公式・用言派生法則のモジュール、
+  古語残存＋口语缩略＋动词系副詞を同時に含むテスト文の解剖。
+
+---
+
 ## 维护约定
 
 - 本目录**没有 build.py**：`index.html` 手写维护，改完即提交。
