@@ -174,7 +174,21 @@ python3 tools/make_lite.py fukushi-courseware
 
 ---
 
-## 8. 目录
+## 8. デプロイ確認（2026-11-12）
+
+コミット `52aefdc` を `main` に push。GitHub Pages のワークフロー `43144458512` は **52 秒で成功**し、deploy まで完了。
+
+- 公開ページ: <https://syu-toutousai.github.io/japanese-learning/>
+- トップに 🎞️「動詞系副詞 ・ 動作の残像を剥がす」カードが表示され、クリックで `/fukushi-courseware/` に遷移
+- 课件側: 45 カード・184 音声・41 Nadeshiko・306 問が読み込まれ、5 タブ・音声再生とも動作
+- `web-lite.html` も 200 で表示され、`lite.html` の索引にも掲載済み
+- コンソールの 404 は既存の `favicon.ico` のみで、课件の表示・再生には影響なし
+
+> 作業ツリーはクリーン（未追跡の `swipedrama-streamlink/` は今回のコミット対象外）。
+
+---
+
+## 9. 目录
 
 ```
 fukushi-courseware/
