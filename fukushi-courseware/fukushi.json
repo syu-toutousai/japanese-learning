@@ -105,6 +105,17 @@
      "url": "https://nadeshiko.co/en/sentence/njqDGBkCOJa6",
      "audio": "https://cdn.nadeshiko.co/media/132405/1/631afb9c43.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/132405/1/631afb9c43.webp"
+    },
+    {
+     "jp": "初(はじ)めての土地(とち) 初(はじ)めての冒険(ぼうけん)",
+     "en": "An unfamiliar land. His first adventure.",
+     "media": "Mushoku Tensei: Jobless Reincarnation Cour 2",
+     "ep": "EP6",
+     "at": "6:29",
+     "url": "https://nadeshiko.co/en/sentence/gKWw4v19Fzqv",
+     "audio": "https://cdn.nadeshiko.co/media/127720/6/322918828c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/127720/6/322918828c.webp",
+     "cn": "第一次踏上这片土地，第一次冒险。"
     }
    ],
    "note": "「初めて」は副詞だが「初めての＋名詞」の連体用法もある。漢字は「初」を使い、「始めて」は動詞「始める」のて形なので、原則として副詞にはしない。",
@@ -121,7 +132,16 @@
      "exp": "「初めて」は連用形＋ての化石。終止形ではない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N4",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 3271,
+    "wf": 5.27,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "aratamete",
@@ -171,6 +191,17 @@
      "url": "https://nadeshiko.co/en/sentence/0MzI-tMCojMP",
      "audio": "https://cdn.nadeshiko.co/media/21355/2/cf85c91885.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/21355/2/cf85c91885.webp"
+    },
+    {
+     "jp": "じゃあ 改(あらた)めて いらっしゃい",
+     "en": "Anyway, welcome.",
+     "media": "Adachi and Shimamura",
+     "ep": "EP12",
+     "at": "5:48",
+     "url": "https://nadeshiko.co/en/sentence/HxUzSa8kQo8d",
+     "audio": "https://cdn.nadeshiko.co/media/109287/12/a1864d7a65.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/109287/12/a1864d7a65.webp",
+     "cn": "那么，再次欢迎你。"
     }
    ],
    "note": "「改めて」は「もう一度」だけでなく「別の機会に改めて」の含みを持つ。ビジネスメールの「追ってご連絡」と近いが、改めては「同じ相手に再接触する」感じが強い。",
@@ -182,7 +213,16 @@
      "exp": "「改めておうかがいします」は「日を改めて」の含み。回数の再演だけではない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 540,
+    "wf": 4.49,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "tsuzuite",
@@ -227,12 +267,32 @@
      "url": "https://nadeshiko.co/en/sentence/ndo3CC9Eywwx",
      "audio": "https://cdn.nadeshiko.co/media/109731/8/35a267c600.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/109731/8/35a267c600.webp"
+    },
+    {
+     "jp": "続(つづ)いて 戸愚呂(とぐろ)チーム 入場(にゅうじょう)",
+     "en": "Continuing, the Toguro Team also comes forward!",
+     "media": "Yu Yu Hakusho: Ghostfiles",
+     "ep": "EP51",
+     "at": "2:07",
+     "url": "https://nadeshiko.co/en/sentence/h0PvEn5n6Npd",
+     "audio": "https://cdn.nadeshiko.co/media/392/51/db2c8fde2f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/392/51/db2c8fde2f.webp",
+     "cn": "接下来，户愚吕队入场。"
     }
    ],
    "note": "「続いて」は物理的な「続く」の画面が残るが、副詞としては「次に」の順序標識。会議・司会進行で頻出。",
    "contrast": "続いて（直後の順序）／次に（単純な順序）／引き続き（同じ状態の継続）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 1409,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "otte",
@@ -266,7 +326,30 @@
      "src": "self"
     }
    ],
-   "nadeshiko": [],
+   "nadeshiko": [
+    {
+     "jp": "詳細(しょうさい)は追(お)って連絡(れんらく)するよ",
+     "en": "I'll contact you with more details later.",
+     "media": "JUJUTSU KAISEN",
+     "ep": "EP7",
+     "at": "20:57",
+     "url": "https://nadeshiko.co/en/sentence/sUCgpxM2ALED",
+     "audio": "https://cdn.nadeshiko.co/media/113415/7/94873fbbd2.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/113415/7/94873fbbd2.webp",
+     "cn": "详情我之后再联系你。"
+    },
+    {
+     "jp": "追(お)って連絡(れんらく)します",
+     "en": "I'll be in touch later.",
+     "media": "The Melancholy of Haruhi Suzumiya (2009)",
+     "ep": "EP12",
+     "at": "7:13",
+     "url": "https://nadeshiko.co/en/sentence/9YZU-nbl9Gys",
+     "audio": "https://cdn.nadeshiko.co/media/4382/12/99f7b984f7.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/4382/12/99f7b984f7.webp",
+     "cn": "我之后再联系您。"
+    }
+   ],
    "note": "読みは「おって」。物理の「追って」と同形なので、後ろに「くる／いく／かける」などが来たら物理、後に「連絡・通知・発表」が来たら時間の副詞。",
    "contrast": "追って（後日・正式）／後日（日を改めて）／追ってから（物理的に後から）。",
    "pitfall": "Nadeshiko で「追って」を検索すると「追ってきた」「追ってこい」ばかり出る。これは動詞「追う」のて形で、副詞「追って（後日）」ではない。検索結果の後続語まで必ず見る。",
@@ -277,7 +360,16 @@
      "exp": "副詞の「追って」は時間の後続（後日）。物理の追跡は動詞「追う」のて形。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 3014,
+    "wf": 3.76,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "Nadeshiko の多くは物理の「追って」；副詞用法は少数"
+   }
   },
   {
    "id": "kanete",
@@ -322,6 +414,17 @@
      "url": "https://nadeshiko.co/en/sentence/BYIfV8D2CMe8",
      "audio": "https://cdn.nadeshiko.co/media/130298/5/aab1590a16.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/130298/5/aab1590a16.webp"
+    },
+    {
+     "jp": "かねてよりの計画(けいかく)... めどが立(た)ち申(もう)した",
+     "en": "regarding our old plan it seems our prospects have improved.",
+     "media": "Vinland Saga",
+     "ep": "EP20",
+     "at": "19:11",
+     "url": "https://nadeshiko.co/en/sentence/vjzUHY2u2kmv",
+     "audio": "https://cdn.nadeshiko.co/media/101348/20/ae639523c6.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101348/20/ae639523c6.webp",
+     "cn": "早先的计划……总算有了眉目。"
     }
    ],
    "note": "「かねて」は書き言葉。会話では「前から」「以前から」。同じ「兼ねる」から来た「かねがね」は「以前から何度も」で、意味が少し違う。",
@@ -347,7 +450,16 @@
      "ans": 0,
      "exp": "かねがね＝以前から繰り返し。かねては「以前から」の状態。"
     }
-   ]
+   ],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 15,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「兼ねて」を含む"
+   }
   },
   {
    "id": "awasete",
@@ -397,6 +509,17 @@
      "url": "https://nadeshiko.co/en/sentence/nmLhXA3gSDUY",
      "audio": "https://cdn.nadeshiko.co/media/mv/248395/8/d4e853fc0d.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/mv/248395/8/d4e853fc0d.webp"
+    },
+    {
+     "jp": "2人(ふたり)合(あ)わせて \\\"ファイヤーシスターズ\\\"!",
+     "en": "Together, we're the Fire Sisters!",
+     "media": "Bakemonogatari",
+     "ep": "EP10",
+     "at": "24:15",
+     "url": "https://nadeshiko.co/en/sentence/kS6hSQ2hGMVZ",
+     "audio": "https://cdn.nadeshiko.co/media/5081/10/ae728e0f53.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/5081/10/ae728e0f53.webp",
+     "cn": "两个人加起来，就是“火焰姐妹”！"
     }
    ],
    "note": "漢字の使い分け：合わせて＝合計・照合・タイミングを合わす。併せて＝同時に・付帯的に。公用文・新聞では「併せて」を「同時に」の意味で使うことが多い。",
@@ -421,7 +544,16 @@
      "ans": 0,
      "exp": "合算は「合わせて」。同時・付帯は「併せて」。"
     }
-   ]
+   ],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 1440,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「併せて」「合わせて」の合算"
+   }
   },
   {
    "id": "kiwamete",
@@ -466,12 +598,32 @@
      "url": "https://nadeshiko.co/en/sentence/dM83YpFIGuTG",
      "audio": "https://cdn.nadeshiko.co/media/177699/2/491a314c61.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/177699/2/491a314c61.webp"
+    },
+    {
+     "jp": "地震(じしん)? 極(きわ)めて珍(めずら)しい生命体(せいめいたい)だ。",
+     "en": "An earthquake? An exceedingly rare kind of lifeform.",
+     "media": "16bit Sensation: Another Layer",
+     "ep": "EP8",
+     "at": "20:27",
+     "url": "https://nadeshiko.co/en/sentence/FyeLOG2-NDHr",
+     "audio": "https://cdn.nadeshiko.co/media/159559/8/b830a42823.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/159559/8/b830a42823.webp",
+     "cn": "地震？这是极其罕见的生命体。"
     }
    ],
    "note": "会話では「とても」「すごく」で足りる。極めてはニュース・論説・謝罪文など、改まった文脈の硬い副詞。",
    "contrast": "極めて（硬い・最高度）／非常に（中立・書き言葉）／とても（口語）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 111,
+    "wf": 4.37,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "semete",
@@ -516,6 +668,17 @@
      "url": "https://nadeshiko.co/en/sentence/H0LzHMIqrj7c",
      "audio": "https://cdn.nadeshiko.co/media/166873/6/bcf5751d03.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/166873/6/bcf5751d03.webp"
+    },
+    {
+     "jp": "せめて... せめて これを!",
+     "en": "At least take this...",
+     "media": "Ranma ½",
+     "ep": "EP55",
+     "at": "4:33",
+     "url": "https://nadeshiko.co/en/sentence/d6eIrjbznqST",
+     "audio": "https://cdn.nadeshiko.co/media/210/55/67d4a15e61.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/210/55/67d4a15e61.webp",
+     "cn": "至少……至少把这个收下！"
     }
    ],
    "note": "後件は願望・依頼・仮定が多い。「少なくとも」より感情的で、「これだけでも」という諦めと願いが混ざる。",
@@ -527,7 +690,16 @@
      "exp": "「せめて〜してほしい」の型が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 813,
+    "wf": 4.27,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "mashite",
@@ -572,6 +744,17 @@
      "url": "https://nadeshiko.co/en/sentence/PtuVPdd_4ANs",
      "audio": "https://cdn.nadeshiko.co/media/101573/7/59f31cf5c8.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/101573/7/59f31cf5c8.webp"
+    },
+    {
+     "jp": "ましてや航空魚雷(こうくうぎょらい)など......",
+     "en": "Air-dropped torpedoes would be even more difficult...",
+     "media": "Saga of Tanya the Evil Season 2",
+     "ep": "EP8",
+     "at": "10:23",
+     "url": "https://nadeshiko.co/en/sentence/B4TeDNXOMbZ7",
+     "audio": "https://cdn.nadeshiko.co/media/135865/8/1909a299e4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/135865/8/1909a299e4.webp",
+     "cn": "更别说是航空鱼雷了……"
     }
    ],
    "note": "「ましてや」は強調形。後件は否定・困難・当然の推量が多い。「前件＜後件」の方向を間違えない。",
@@ -583,7 +766,16 @@
      "exp": "逆。前件でさえ大変なら、後件はなおさら大変、という累加。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 181,
+    "wf": 4.18,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「まして」「ましてや」の合算"
+   }
   },
   {
    "id": "kaette",
@@ -651,7 +843,16 @@
      "exp": "「薬を飲みすぎるとかえって害になる」が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 98,
+    "wf": 3.89,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "aete",
@@ -696,6 +897,17 @@
      "url": "https://nadeshiko.co/en/sentence/DJMF4og4yXQ5",
      "audio": "https://cdn.nadeshiko.co/media/20954/1/711d809b9d.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/20954/1/711d809b9d.webp"
+    },
+    {
+     "jp": "あえて　あえてこの姿(すがた)をお前(まえ)の前(まえ)に晒(さら)そう",
+     "en": "Behold... Behold, and I will show you the fruits of my labor.",
+     "media": "JoJo's Bizarre Adventure (TV)",
+     "ep": "EP9",
+     "at": "9:01",
+     "url": "https://nadeshiko.co/en/sentence/txzb1QNT5NYS",
+     "audio": "https://cdn.nadeshiko.co/media/14719/9/2595f2cdb1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/14719/9/2595f2cdb1.webp",
+     "cn": "我偏要用这副姿态出现在你面前。"
     }
    ],
    "note": "「あえて言うなら」は「無理に選ぶなら」の緩和句。強いてとの違い：あえて＝心理的抵抗を押す、強いて＝無理に強制する。",
@@ -720,7 +932,16 @@
      "ans": 0,
      "exp": "強いて＝無理に押し切る。あえては「承知のうえで」の含み。"
     }
-   ]
+   ],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 271,
+    "wf": 4.22,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "tsutomete",
@@ -754,12 +975,33 @@
      "src": "self"
     }
    ],
-   "nadeshiko": [],
+   "nadeshiko": [
+    {
+     "jp": "俺(おれ)は努(つと)めて明(あか)るくはははそうか、と笑(わら)い、そして割(わ)りと心(こころ)から落(お)ち込(こ)んだ。",
+     "en": "I forced a bright laugh, \"Alright then,\" and felt a genuine slump inside.",
+     "media": "Bottom-Tier Character Tomozaki, Vol. 1",
+     "ep": "EP8",
+     "at": "8:47",
+     "url": "https://nadeshiko.co/en/sentence/e6H8_7MRr2du",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B08GLT57JB/8/bf9c280532.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B08GLT57JB/8/bf9c280532.webp",
+     "cn": "我努力开朗地哈哈笑着说“是吗”，其实心里相当沮丧。"
+    }
+   ],
    "note": "書き言葉。会話では「できるだけ」「なるべく」。努めては「努力している」という意志が残る。",
    "contrast": "努めて（意志的・書き言葉）／できるだけ（口語）／極力（硬い・最小限に抑える）。",
    "pitfall": "Nadeshiko の「努めております」は動詞「努める」のて形（〜に努めている）で、副詞「努めて（できるだけ）」ではない。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 51,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「〜に努めて」の動詞用法を含む"
+   }
   },
   {
    "id": "susunde",
@@ -793,12 +1035,33 @@
      "src": "self"
     }
    ],
-   "nadeshiko": [],
+   "nadeshiko": [
+    {
+     "jp": "誰(だれ)もが嫌(いや)がる仕事(しごと)を進(すす)んでやると",
+     "en": "Kids usually hate doing it, but look at him go.",
+     "media": "Urusei Yatsura (2022)",
+     "ep": "EP22",
+     "at": "15:14",
+     "url": "https://nadeshiko.co/en/sentence/GjViYAzfXPT0",
+     "audio": "https://cdn.nadeshiko.co/media/143277/22/5ab5eb2b2c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/143277/22/5ab5eb2b2c.webp",
+     "cn": "别人都不愿做的工作，他主动去做的话……"
+    }
+   ],
    "note": "主体の自発性を評価する語。「積極的に」と近いが、進んでは「自分から前に出る」画面が残る。",
    "contrast": "進んで（自発・率先）／積極的に（態度の積極性）／自ら（手段を選ばず自分で）。",
    "pitfall": "Nadeshiko の「進んでください」は物理的な前進。副詞「進んで（自発）」ではない。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 1273,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "物理の「進んで」を含む"
+   }
   },
   {
    "id": "shiite",
@@ -843,12 +1106,32 @@
      "url": "https://nadeshiko.co/en/sentence/ckUqj8xpCJfS",
      "audio": "https://cdn.nadeshiko.co/media/182309/4/fcb07156ab.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/182309/4/fcb07156ab.webp"
+    },
+    {
+     "jp": "強(し)いて言(い)うなら......",
+     "en": "Well, I have to admit...",
+     "media": "Rich Girl Caretaker: I'm Secretly the Caregiver of the Most Popular Girl in This Rich Kid School",
+     "ep": "EP8",
+     "at": "15:44",
+     "url": "https://nadeshiko.co/en/sentence/3xjpcupox3IR",
+     "audio": "https://cdn.nadeshiko.co/media/201514/8/3adf57285f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/201514/8/3adf57285f.webp",
+     "cn": "硬要说的话……"
     }
    ],
    "note": "「強いて言えば」は「無理に一つ選ぶなら」の婉曲。あえてより強制の圧が強い。",
    "contrast": "強いて（強制）／あえて（心理的抵抗）／無理に（単純な強行）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 65,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "omoikitte",
@@ -893,6 +1176,17 @@
      "url": "https://nadeshiko.co/en/sentence/keulYQULyysQ",
      "audio": "https://cdn.nadeshiko.co/media/130003/1/f48743f110.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/130003/1/f48743f110.webp"
+    },
+    {
+     "jp": "思(おも)い切(き)って 飛(と)び込(こ)もうよ",
+     "en": "Let's pull out all the stops and dive right in!",
+     "media": "Your lie in April",
+     "ep": "EP5",
+     "at": "19:25",
+     "url": "https://nadeshiko.co/en/sentence/PmJEQkz1wYd0",
+     "audio": "https://cdn.nadeshiko.co/media/20665/5/ca75b5dc7c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20665/5/ca75b5dc7c.webp",
+     "cn": "索性跳进去吧！"
     }
    ],
    "note": "「思い切って」は「思い切る」のて形で、動作の勢いが残る。あえて・強いてと違い、迷いを捨てる心理的解放が中心。",
@@ -904,7 +1198,16 @@
      "exp": "「思い切って言う」「思い切って買う」が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 101,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "kesshite",
@@ -949,6 +1252,17 @@
      "url": "https://nadeshiko.co/en/sentence/qSGMoldWibyB",
      "audio": "https://cdn.nadeshiko.co/media/7674/18/03e40d0c7e.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/7674/18/03e40d0c7e.webp"
+    },
+    {
+     "jp": "決(けっ)して2人(ふたり) 離(はな)れぬよう　ヒイッ!　決(けっ)して2人(ふたり) 離(はな)れぬよう",
+     "en": "You must stay together.",
+     "media": "Assassination Classroom Second Season",
+     "ep": "EP1",
+     "at": "4:02",
+     "url": "https://nadeshiko.co/en/sentence/oPDdhqxSEzXX",
+     "audio": "https://cdn.nadeshiko.co/media/21170/1/c3f9fa6dd4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21170/1/c3f9fa6dd4.webp",
+     "cn": "决不能让两人分开。"
     }
    ],
    "note": "「決して…ない」は強い否定。肯定文では使わない（「決して行く」は誤り）。「絶対に」より改まった書き言葉寄り。",
@@ -960,7 +1274,16 @@
      "exp": "原則として否定と呼応する。「決して行く」は非文。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 738,
+    "wf": 4.55,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "hatashite",
@@ -1005,6 +1328,17 @@
      "url": "https://nadeshiko.co/en/sentence/MTdbfNm92BGc",
      "audio": "https://cdn.nadeshiko.co/media/176496/2/0d77e8909c.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/176496/2/0d77e8909c.webp"
+    },
+    {
+     "jp": "果(は)たして うまいかどうか...》",
+     "en": "Is it actually any good?",
+     "media": "CITY THE ANIMATION",
+     "ep": "EP4",
+     "at": "13:06",
+     "url": "https://nadeshiko.co/en/sentence/C348yOv2AFz3",
+     "audio": "https://cdn.nadeshiko.co/media/181841/4/0064fe06c8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/181841/4/0064fe06c8.webp",
+     "cn": "到底好不好吃呢……"
     }
    ],
    "note": "肯定文＝予想通り（やはりに近い）、疑問文＝疑念（本当に…か）。書き言葉寄り。",
@@ -1016,7 +1350,16 @@
      "exp": "「果たして本物だろうか」が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 244,
+    "wf": 4.02,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "shitagatte",
@@ -1061,6 +1404,17 @@
      "url": "https://nadeshiko.co/en/sentence/N0-Pajd3nlHM",
      "audio": "https://cdn.nadeshiko.co/media/108489/8/b351d5cb14.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/108489/8/b351d5cb14.webp"
+    },
+    {
+     "jp": "したがって 補欠(ほけつ)とは名(な)ばかり",
+     "en": "and so, he is the alternate in name only.",
+     "media": "Yu Yu Hakusho: Ghostfiles",
+     "ep": "EP30",
+     "at": "19:08",
+     "url": "https://nadeshiko.co/en/sentence/wGO-vgoL-aMg",
+     "audio": "https://cdn.nadeshiko.co/media/392/30/2441b9d307.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/392/30/2441b9d307.webp",
+     "cn": "因此，所谓替补也只是名义上的。"
     }
    ],
    "note": "接続詞・書き言葉。会話では「だから」「ですから」。漢字「従って」も使う。",
@@ -1073,7 +1427,16 @@
      "exp": "逆。したがっては書き言葉・論理的な帰結。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 550,
+    "wf": 3.91,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "hiitewa",
@@ -1118,6 +1481,17 @@
      "url": "https://nadeshiko.co/en/sentence/nqlrU_T6Ag6O",
      "audio": "https://cdn.nadeshiko.co/media/263/60/82666b85b3.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/263/60/82666b85b3.webp"
+    },
+    {
+     "jp": "こ... これも ひいては イマニティのため",
+     "en": "B-But this will benefit Imanity in the long term.",
+     "media": "No Game, No Life",
+     "ep": "EP7",
+     "at": "4:51",
+     "url": "https://nadeshiko.co/en/sentence/zZcUb2e8oi8N",
+     "audio": "https://cdn.nadeshiko.co/media/19815/7/a68bf688b0.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/19815/7/a68bf688b0.webp",
+     "cn": "这最终也是为了人类种（Immanity）。"
     }
    ],
    "note": "書き言葉。A、ひいてはB＝Aだけでなく、さらに広いBにも。後件はより大きな範囲・影響。",
@@ -1129,7 +1503,16 @@
      "exp": "「個人→社会」「アジア→世界」の階段が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 28,
+    "wf": 3.24,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "oshinabete",
@@ -1198,7 +1581,16 @@
      "ans": 0,
      "exp": "おしなべて＝全部を並べて一様。総じて・概しては「まとめると」の結論寄り。"
     }
-   ]
+   ],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 2,
+    "wf": 1.98,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "subete",
@@ -1248,6 +1640,17 @@
      "url": "https://nadeshiko.co/en/sentence/r83rA4fWSrYv",
      "audio": "https://cdn.nadeshiko.co/media/99088/8/5d7b2f87b2.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/99088/8/5d7b2f87b2.webp"
+    },
+    {
+     "jp": "俺(おれ)は全(すべ)てを従(したが)え 全(すべ)てを統(す)べる!",
+     "en": "I will conquer everything, and control everything!",
+     "media": "Kakegurui",
+     "ep": "EP11",
+     "at": "16:24",
+     "url": "https://nadeshiko.co/en/sentence/raaJUm4dVciR",
+     "audio": "https://cdn.nadeshiko.co/media/98314/11/294d9b6169.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/98314/11/294d9b6169.webp",
+     "cn": "我让一切臣服，统御一切！"
     }
    ],
    "note": "「全て」は動詞「統べる」の連用形＋てに由来するという通説がある。ただし現代語では名詞・副詞として完全に自立し、動詞の画面はほぼ消えている。",
@@ -1272,7 +1675,16 @@
      "ans": 0,
      "exp": "統ぶ・統べるの連用形＋て、というのが語源辞典の通説。"
     }
-   ]
+   ],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 4300,
+    "wf": 5.24,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「全て」「すべて」の合算"
+   }
   },
   {
    "id": "tsumari",
@@ -1317,6 +1729,17 @@
      "url": "https://nadeshiko.co/en/sentence/RHWahID17uv_",
      "audio": "https://cdn.nadeshiko.co/media/161645/2/a2b22e2369.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/161645/2/a2b22e2369.webp"
+    },
+    {
+     "jp": "あっ... つまり...",
+     "en": "Wait, are you saying...",
+     "media": "Pseudo Harem",
+     "ep": "EP3",
+     "at": "21:50",
+     "url": "https://nadeshiko.co/en/sentence/dhsmVD_9MRDT",
+     "audio": "https://cdn.nadeshiko.co/media/163623/3/70ac9675d2.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/163623/3/70ac9675d2.webp",
+     "cn": "啊……也就是说……"
     }
    ],
    "note": "「詰まり」の名詞用法（とどのつまり＝行き止まり）も残る。副詞・接続詞としては文頭に置き、前の話を受けて言い換える。",
@@ -1333,7 +1756,16 @@
      "exp": "漢語＋にではない。和語の動詞連用形の名詞化。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 2415,
+    "wf": 5.07,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "shikirini",
@@ -1378,12 +1810,32 @@
      "url": "https://nadeshiko.co/en/sentence/5_wnxlYzeYDj",
      "audio": "https://cdn.nadeshiko.co/media/9756/2/2c16ca523b.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/9756/2/2c16ca523b.webp"
+    },
+    {
+     "jp": "お嬢様(じょうさま)が眞人(まさと)さんのお顔(かお)が見(み)たいと　しきりにおっしゃってますよ",
+     "en": "The lady of the house keeps saying she wants to see you.",
+     "media": "The Boy and the Heron",
+     "ep": "EP1",
+     "at": "33:08",
+     "url": "https://nadeshiko.co/en/sentence/zEdg0UfMJjAs",
+     "audio": "https://cdn.nadeshiko.co/media/109979/1/9af81402fc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/109979/1/9af81402fc.webp",
+     "cn": "大小姐一直说想见真人先生。"
     }
    ],
    "note": "書き言葉寄り。会話では「何度も」「ずっと」。しきりに＋動詞で、反復の多さを強調する。",
    "contrast": "しきりに（反復の密度）／頻繁に（中立的・書き言葉）／何度も（口語）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 18,
+    "wf": 2.86,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "amari",
@@ -1428,6 +1880,17 @@
      "url": "https://nadeshiko.co/en/sentence/NfuOwUP-Lf-4",
      "audio": "https://cdn.nadeshiko.co/media/21355/3/4fba737c83.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/21355/3/4fba737c83.webp"
+    },
+    {
+     "jp": "あぁ... あまりにもつらい》",
+     "en": "That is so unbearably painful...",
+     "media": "Naruto",
+     "ep": "EP18",
+     "at": "18:40",
+     "url": "https://nadeshiko.co/en/sentence/LQy-T84biXnp",
+     "audio": "https://cdn.nadeshiko.co/media/20/18/acb7b0c37a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20/18/acb7b0c37a.webp",
+     "cn": "太痛苦了。"
     }
    ],
    "note": "「あまり＋否定」で「不太…」。「あまりにも」は程度の強調。「余り」の名詞用法（余りを貯金する）も残る。",
@@ -1452,7 +1915,16 @@
      "ans": 0,
      "exp": "あまり＋否定＝「それほど…ない」。"
     }
-   ]
+   ],
+   "jlpt": "N4",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 3254,
+    "wf": 5.11,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "ikioi",
@@ -1491,7 +1963,16 @@
    "contrast": "いきおい（勢いの帰結・副詞）／勢いで（名詞＋で）／必然的に（論理的な帰結）。",
    "pitfall": "Nadeshiko の「勢いで送信」は名詞「勢い」＋で。副詞「いきおい」ではない。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 417,
+    "wf": 4.47,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「いきおい」のみ；名詞「勢い」は別カウント"
+   }
   },
   {
    "id": "wariai",
@@ -1536,12 +2017,32 @@
      "url": "https://nadeshiko.co/en/sentence/U1Lkw8dkQow5",
      "audio": "https://cdn.nadeshiko.co/media/175914/12/1572a25ff5.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/175914/12/1572a25ff5.webp"
+    },
+    {
+     "jp": "弱気(よわき)になってる顔(かお)は 割合(わりあい)かわいかった",
+     "en": "...but her crestfallen face was surprisingly cute.",
+     "media": "The Melancholy of Haruhi Suzumiya (2009)",
+     "ep": "EP4",
+     "at": "2:14",
+     "url": "https://nadeshiko.co/en/sentence/s4dg0q39JSGM",
+     "audio": "https://cdn.nadeshiko.co/media/4382/4/e3d9338460.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/4382/4/e3d9338460.webp",
+     "cn": "她沮丧的脸意外地可爱。"
     }
    ],
    "note": "「割合に」「割合と」の形で副詞。名詞「割合」（男女の割合）とは別。話し言葉では「割に」が近い。",
    "contrast": "割合に（比較的・やや硬い）／割に（口語）／意外に（予想外）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 24,
+    "wf": 4.3,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「わりあい」のみ；名詞「割合」は別カウント"
+   }
   },
   {
    "id": "toriwake",
@@ -1586,6 +2087,17 @@
      "url": "https://nadeshiko.co/en/sentence/S4Rw3rxtj-GS",
      "audio": "https://cdn.nadeshiko.co/media/137822/19/07c6c10e9a.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/137822/19/07c6c10e9a.webp"
+    },
+    {
+     "jp": "セイバーはとりわけ強力(きょうりょく)なサーヴァントだ",
+     "en": "Saber is a particularly powerful Servant.",
+     "media": "Fate/Zero",
+     "ep": "EP6",
+     "at": "8:38",
+     "url": "https://nadeshiko.co/en/sentence/mRqevfBlKcbW",
+     "audio": "https://cdn.nadeshiko.co/media/10087/6/1a11a4cc43.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/10087/6/1a11a4cc43.webp",
+     "cn": "Saber 是格外强大的从者。"
     }
    ],
    "note": "「特に」より改まった書き言葉。後件は「他と比べて際立つ」内容。",
@@ -1597,7 +2109,16 @@
      "exp": "全体から取り分けて焦点化する動作が語源。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 20,
+    "wf": 3.74,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "kanegane",
@@ -1642,6 +2163,17 @@
      "url": "https://nadeshiko.co/en/sentence/cI_ZucqLysPw",
      "audio": "https://cdn.nadeshiko.co/media/21804/4/ae3fe33c87.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/21804/4/ae3fe33c87.webp"
+    },
+    {
+     "jp": "アリューシアから かねがね聞(き)いています",
+     "en": "I've heard so much about you from Allucia.",
+     "media": "From Old Country Bumpkin to Master Swordsman",
+     "ep": "EP10",
+     "at": "11:31",
+     "url": "https://nadeshiko.co/en/sentence/NcK9-P54LjfK",
+     "audio": "https://cdn.nadeshiko.co/media/179955/10/568e4f3c15.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/179955/10/568e4f3c15.webp",
+     "cn": "我从阿莉西娅那里早就听说了。"
     }
    ],
    "note": "「かねて」は「以前から」の状態、「かねがね」は「以前から何度も」の反復。あいさつ・手紙の丁寧句として使う。",
@@ -1653,7 +2185,16 @@
      "exp": "兼ね＋兼ね→かねがね。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 11,
+    "wf": 2.18,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "taezu",
@@ -1698,6 +2239,17 @@
      "url": "https://nadeshiko.co/en/sentence/m8PL-4S5BMFR",
      "audio": "https://cdn.nadeshiko.co/media/169930/10/19243f80ef.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/169930/10/19243f80ef.webp"
+    },
+    {
+     "jp": "しかし絶(た)えず批評(ひひょう) ダメ出(だ)し 注文(ちゅうもん)をつけられる",
+     "en": "Yet we are constantly criticized, rejected, and faced with demands.",
+     "media": "SHIROBAKO",
+     "ep": "EP16",
+     "at": "19:18",
+     "url": "https://nadeshiko.co/en/sentence/tcGxcGp4lU0r",
+     "audio": "https://cdn.nadeshiko.co/media/20812/16/9aae3fc9d2.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20812/16/9aae3fc9d2.webp",
+     "cn": "却不断被批评、被挑刺、被提要求。"
     }
    ],
    "note": "書き言葉。会話では「ずっと」「絶え間なく」。連用形＋ずの形が副詞として固定した例。",
@@ -1709,7 +2261,16 @@
      "exp": "絶え＋ず→たえず。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 88,
+    "wf": 3.47,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「たえず」「絶えず」の合算"
+   }
   },
   {
    "id": "shimijimi",
@@ -1754,12 +2315,32 @@
      "url": "https://nadeshiko.co/en/sentence/Y4VB0GTW5FBs",
      "audio": "https://cdn.nadeshiko.co/media/6045/1/137653d8cc.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/6045/1/137653d8cc.webp"
+    },
+    {
+     "jp": "しみじみと思(おも)う 偶然(ぐうぜん)だと信(しん)じたいと",
+     "en": "I deeply hope that... ...I can believe it was mere coincidence.",
+     "media": "The Melancholy of Haruhi Suzumiya (2009)",
+     "ep": "EP1",
+     "at": "2:24",
+     "url": "https://nadeshiko.co/en/sentence/ZawkFnw1K6gB",
+     "audio": "https://cdn.nadeshiko.co/media/4382/1/221f357965.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/4382/1/221f357965.webp",
+     "cn": "我深切地希望……愿意相信这只是偶然。"
     }
    ],
    "note": "「しみじみとする」「しみじみと＋動詞」の形が多い。つくづくと近いが、しみじみは感情の沁み込み、つくづくは認識の深さ。",
    "contrast": "しみじみ（感情の沁み込み）／つくづく（認識の深さ）／じんわり（身体感覚）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 13,
+    "wf": 3.43,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "tsukuzuku",
@@ -1804,12 +2385,32 @@
      "url": "https://nadeshiko.co/en/sentence/gkvZtFRB_-pF",
      "audio": "https://cdn.nadeshiko.co/media/150672/8/7f844d6054.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/150672/8/7f844d6054.webp"
+    },
+    {
+     "jp": "つくづく天才(てんさい)だよ アイツは...》",
+     "en": "He really is a genius.",
+     "media": "Clevatess",
+     "ep": "EP10",
+     "at": "10:08",
+     "url": "https://nadeshiko.co/en/sentence/4TL3rn9zLYVi",
+     "audio": "https://cdn.nadeshiko.co/media/178869/10/891426d93c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/178869/10/891426d93c.webp",
+     "cn": "那家伙真是个天才……"
     }
    ],
    "note": "「つくづく思う」「つくづく嫌になる」の型。しみじみより認識・判断寄り。",
    "contrast": "つくづく（認識・痛感）／しみじみ（感情・沁み込み）／よくよく（慎重・反復）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 72,
+    "wf": 3.46,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "masumasu",
@@ -1854,6 +2455,17 @@
      "url": "https://nadeshiko.co/en/sentence/bM27hpwKVoQL",
      "audio": "https://cdn.nadeshiko.co/media/18679/11/0f34a3d1ac.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/18679/11/0f34a3d1ac.webp"
+    },
+    {
+     "jp": "ま... ますます信(しん)じられん",
+     "en": "Th-That's even less believable!",
+     "media": "The Apothecary Diaries",
+     "ep": "EP7",
+     "at": "14:16",
+     "url": "https://nadeshiko.co/en/sentence/1yiQoIxIf8is",
+     "audio": "https://cdn.nadeshiko.co/media/161645/7/dc9d23cd6b.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/161645/7/dc9d23cd6b.webp",
+     "cn": "我越来越不敢相信了。"
     }
    ],
    "note": "漢字「益々」は当て字。話し言葉では「どんどん」「だんだん」も使うが、ますますは「程度の累加」に焦点。",
@@ -1865,7 +2477,16 @@
      "exp": "増し＋増し→ますます。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 233,
+    "wf": 4.16,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "ariarito",
@@ -1910,6 +2531,17 @@
      "url": "https://nadeshiko.co/en/sentence/VIXegguEJJIF",
      "audio": "https://cdn.nadeshiko.co/media/127720/9/e7e94ffbfe.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/127720/9/e7e94ffbfe.webp"
+    },
+    {
+     "jp": "こうした ほんの些細(ささい)な事(こと)までが ありありと思(おも)い出(だ)され",
+     "en": "So many little details, one after the other...",
+     "media": "Only Yesterday",
+     "ep": "EP1",
+     "at": "19:10",
+     "url": "https://nadeshiko.co/en/sentence/LZv_IOL0JtwM",
+     "audio": "https://cdn.nadeshiko.co/media/1029/1/f9d1dc01ee.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/1029/1/f9d1dc01ee.webp",
+     "cn": "连那些微不足道的小事都历历在目地浮现出来。"
     }
    ],
    "note": "「ありありと＋目に浮かぶ／分かる／想像できる」の型。漢字「有り有り」は普通書かない。",
@@ -1921,7 +2553,16 @@
      "exp": "有り＋有り＋と。記憶が「有る」ように感じる。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N1",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 20,
+    "wf": null,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "ikiikito",
@@ -1966,12 +2607,32 @@
      "url": "https://nadeshiko.co/en/sentence/f-mK6RDwj_8U",
      "audio": "https://cdn.nadeshiko.co/media/153554/2/e71db2cafb.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/153554/2/e71db2cafb.webp"
+    },
+    {
+     "jp": "表情(ひょうじょう)も生(い)き生(い)きとしている。",
+     "en": "Her expression is also lively.",
+     "media": "Rascal Does Not Dream of Bunny Girl Senpai",
+     "ep": "EP4",
+     "at": "28:54",
+     "url": "https://nadeshiko.co/en/sentence/0S30s7BFbBII",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B0841ZQDRR/4/2f3c1da6b1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B0841ZQDRR/4/2f3c1da6b1.webp",
+     "cn": "表情也显得生气勃勃。"
     }
    ],
    "note": "「生き生きとする」「生き生きと＋動詞」の両方。漢字「生き生き」は重ねた連用形で、動詞の画面が残る。",
    "contrast": "いきいきと（生命力）／生き生きした（連体）／活発に（行動の活発さ）。",
    "judge": [],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "D",
+    "stars": 1,
+    "nade": 48,
+    "wf": 3.35,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「いきいきと」「生き生き」の合算"
+   }
   },
   {
    "id": "osoraku",
@@ -2016,6 +2677,17 @@
      "url": "https://nadeshiko.co/en/sentence/SM2brcIFzMOJ",
      "audio": "https://cdn.nadeshiko.co/media/166873/10/ca78cefac9.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/166873/10/ca78cefac9.webp"
+    },
+    {
+     "jp": "おそらく 地下(ちか)でしょうね",
+     "en": "We're most likely underground.",
+     "media": "Re:ZERO -Starting Life in Another World- Season 4",
+     "ep": "EP3",
+     "at": "0:21",
+     "url": "https://nadeshiko.co/en/sentence/4HIzAlP-JDpR",
+     "audio": "https://cdn.nadeshiko.co/media/189046/3/55438bc0e5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/189046/3/55438bc0e5.webp",
+     "cn": "恐怕是在地下吧。"
     }
    ],
    "note": "ク語法は「恐る→恐らく」「願ふ→願わくは」のように、動詞を名詞化して副詞にする古い装置。おそらくはその生き残り。",
@@ -2027,7 +2699,16 @@
      "exp": "恐る＋く→恐らく→おそらく。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "A",
+    "stars": 4,
+    "nade": 1048,
+    "wf": 4.54,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「おそらく」「恐らく」の合算"
+   }
   },
   {
    "id": "iwaba",
@@ -2072,6 +2753,17 @@
      "url": "https://nadeshiko.co/en/sentence/rW1go2FzPrN9",
      "audio": "https://cdn.nadeshiko.co/media/20755/5/37e0940ebd.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/20755/5/37e0940ebd.webp"
+    },
+    {
+     "jp": "この『杖(つえ)』は言(い)わば拡声器(かくせいき)",
+     "en": "You can think of this wand as an amplifier.",
+     "media": "Clevatess Season 2",
+     "ep": "EP2",
+     "at": "5:39",
+     "url": "https://nadeshiko.co/en/sentence/8OC2JGeR70v9",
+     "audio": "https://cdn.nadeshiko.co/media/198946/2/7ea5e1f1bd.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/198946/2/7ea5e1f1bd.webp",
+     "cn": "这根“杖”可以说是扩音器。"
     }
    ],
    "note": "書き言葉寄り。会話では「いわば」のまま使うことも多い。後件は比喩・言い換え・要約。",
@@ -2083,7 +2775,16 @@
      "exp": "言は＋ば→言わば。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 146,
+    "wf": 3.65,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「言わば」「いわば」の合算"
+   }
   },
   {
    "id": "omowazu",
@@ -2128,6 +2829,17 @@
      "url": "https://nadeshiko.co/en/sentence/RjzCIubOw-s4",
      "audio": "https://cdn.nadeshiko.co/media/181444/13/91fe4656e6.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/181444/13/91fe4656e6.webp"
+    },
+    {
+     "jp": "思(おも)わず立(た)ち上(あ)がってしまう。",
+     "en": "I can't help but stand up.",
+     "media": "Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway 1",
+     "ep": "EP4",
+     "at": "6:34",
+     "url": "https://nadeshiko.co/en/sentence/Elz0LGIB_QDA",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B082H75Q4G/4/291412414c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B082H75Q4G/4/291412414c.webp",
+     "cn": "不由得站了起来。"
     }
    ],
    "note": "未然形＋ずの形。意志の否定が「無意識」に転じた。後件は身体反応・感情の漏出が多い。",
@@ -2139,7 +2851,16 @@
      "exp": "思は＋ず→思わず。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 34391,
+    "wf": 4.23,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "yahari",
@@ -2184,6 +2905,17 @@
      "url": "https://nadeshiko.co/en/sentence/UCkoXv4bivHh",
      "audio": "https://cdn.nadeshiko.co/media/185736/4/2c7b52e89f.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/185736/4/2c7b52e89f.webp"
+    },
+    {
+     "jp": "ああ やはりだ　やはりと言(い)わざるを得(え)ない",
+     "en": "Yeah, just as I expected. I must say that this was expected.",
+     "media": "My Teen Romantic Comedy SNAFU Climax!",
+     "ep": "EP12",
+     "at": "23:38",
+     "url": "https://nadeshiko.co/en/sentence/V0nJKEyQdo-I",
+     "audio": "https://cdn.nadeshiko.co/media/108489/12/bf0f70fdd4.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/108489/12/bf0f70fdd4.webp",
+     "cn": "是啊，果然如此。只能说果然如此。"
     }
    ],
    "note": "「矢張り」は当て字。動詞「張る」の連用形と考えるのは俗説。話し言葉の「やっぱり」はやはりの促音化。",
@@ -2195,7 +2927,16 @@
      "exp": "「矢張り」は当て字。語源は未詳で、動詞「張る」由来ではない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N4",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 9703,
+    "wf": 4.82,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「やっぱり」は別カウント"
+   }
   },
   {
    "id": "ainiku",
@@ -2229,7 +2970,30 @@
      "src": "self"
     }
    ],
-   "nadeshiko": [],
+   "nadeshiko": [
+    {
+     "jp": "いえ あいにくと...",
+     "en": "Unfortunately, no.",
+     "media": "PLUTO",
+     "ep": "EP7",
+     "at": "27:26",
+     "url": "https://nadeshiko.co/en/sentence/QONsZQPb44UJ",
+     "audio": "https://cdn.nadeshiko.co/media/99088/7/5ef645b7bc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/99088/7/5ef645b7bc.webp",
+     "cn": "不，不巧的是……"
+    },
+    {
+     "jp": "あいにく ピンポイントで狙(ねら)える",
+     "en": "Unfortunately for you, I can pinpoint.",
+     "media": "Fullmetal Alchemist: Brotherhood",
+     "ep": "EP53",
+     "at": "20:47",
+     "url": "https://nadeshiko.co/en/sentence/W06C9W8gmWkJ",
+     "audio": "https://cdn.nadeshiko.co/media/5114/53/dc5ebcf575.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/5114/53/dc5ebcf575.webp",
+     "cn": "不巧的是，我能精准狙击。"
+    }
+   ],
    "note": "「あいにく」は形容詞由来で、動詞連用形ではない。しかも語尾は「く」で、イ段・エ段ですらない。この一点で「動詞系副詞」の例外だと分かる。",
    "contrast": "あいにく（都合の悪さ）／残念ながら（評価の表明）／折悪しく（書き言葉）。",
    "judge": [
@@ -2239,7 +3003,16 @@
      "exp": "元形は「あやにく」で、「生」は当て字。「合い憎し」は俗説。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 155,
+    "wf": 3.37,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "sazo",
@@ -2284,6 +3057,17 @@
      "url": "https://nadeshiko.co/en/sentence/lNtcdcRwb9iZ",
      "audio": "https://cdn.nadeshiko.co/media/101922/22/8688b0460a.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/101922/22/8688b0460a.webp"
+    },
+    {
+     "jp": "さぞ 心強(こころづよ)かろう 日万凛(ひまり)",
+     "en": "You must be thrilled, Himari.",
+     "media": "Chained Soldier",
+     "ep": "EP10",
+     "at": "10:52",
+     "url": "https://nadeshiko.co/en/sentence/plSspNzLbE6h",
+     "audio": "https://cdn.nadeshiko.co/media/141821/10/1ecea1d841.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/141821/10/1ecea1d841.webp",
+     "cn": "想必你会觉得可靠吧，日万凛。"
     }
    ],
    "note": "「さぞ＋推量」の呼応が基本。「さぞかし」は強調形。動詞の画面がないので、動作剥がしの必要すらない。",
@@ -2295,7 +3079,16 @@
      "exp": "副詞「さ」＋係助詞「ぞ」。動詞は関与しない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 123,
+    "wf": 3.34,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "oono",
@@ -2340,6 +3133,17 @@
      "url": "https://nadeshiko.co/en/sentence/6vMvS8j87pIS",
      "audio": "https://cdn.nadeshiko.co/media/151514/20/c498850936.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/151514/20/c498850936.webp"
+    },
+    {
+     "jp": "おのおの調(しら)べてほしい",
+     "en": "Look it up yourselves.",
+     "media": "The Disastrous Life of Saiki K. Season 2",
+     "ep": "EP2",
+     "at": "9:49",
+     "url": "https://nadeshiko.co/en/sentence/ZJN46vmn4hY0",
+     "audio": "https://cdn.nadeshiko.co/media/98034/2/a8e8df3301.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/98034/2/a8e8df3301.webp",
+     "cn": "希望你们各自去查一下。"
     }
    ],
    "note": "名詞「おのおの」が副詞的に使われる例。漢字「各々」は重ね字。動詞連用形ではない。",
@@ -2351,7 +3155,16 @@
      "exp": "名詞「おの」の重ね。動詞は関与しない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 54,
+    "wf": 2.5,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「おのおの」「各々」の合算"
+   }
   },
   {
    "id": "genni",
@@ -2396,6 +3209,17 @@
      "url": "https://nadeshiko.co/en/sentence/2qWFHO5YoKHO",
      "audio": "https://cdn.nadeshiko.co/media/20665/12/76525f1151.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/20665/12/76525f1151.webp"
+    },
+    {
+     "jp": "現(げん)に今(いま) ラッキーなのは俺(おれ)!",
+     "en": "At this very moment, I'm the lucky one!",
+     "media": "Zom 100: Bucket List of the Dead",
+     "ep": "EP11",
+     "at": "16:48",
+     "url": "https://nadeshiko.co/en/sentence/28jdy785nqib",
+     "audio": "https://cdn.nadeshiko.co/media/159831/11/8033c4253c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/159831/11/8033c4253c.webp",
+     "cn": "现在实际上走运的是我！"
     }
    ],
    "note": "「現に」は漢語＋に。動詞「現れる」の連用形ではない。証拠を突きつける語感がある。",
@@ -2407,7 +3231,16 @@
      "exp": "漢語副詞。動詞「現れる」とは別。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 96,
+    "wf": 3.46,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "betsuni",
@@ -2452,6 +3285,17 @@
      "url": "https://nadeshiko.co/en/sentence/HaoMV5y-heJb",
      "audio": "https://cdn.nadeshiko.co/media/170942/12/bb23923101.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/170942/12/bb23923101.webp"
+    },
+    {
+     "jp": "別(べつ)に? \\\"別(べつ)に\\\"というのは?",
+     "en": "Not really? What do you mean by that?",
+     "media": "ATRI -My Dear Moments-",
+     "ep": "EP2",
+     "at": "9:33",
+     "url": "https://nadeshiko.co/en/sentence/FzW_akJL-eAU",
+     "audio": "https://cdn.nadeshiko.co/media/154963/2/7977f216ba.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/154963/2/7977f216ba.webp",
+     "cn": "“没什么”？你说的“没什么”是什么意思？"
     }
    ],
    "note": "「別に＋否定」で「特に…ない」。若者の会話では「別に」だけで否定の答えになる。漢語＋にで、動詞ではない。",
@@ -2463,7 +3307,16 @@
      "exp": "「別に行きたくない」が典型。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "S",
+    "stars": 5,
+    "nade": 5354,
+    "wf": 4.73,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "wazato",
@@ -2508,6 +3361,17 @@
      "url": "https://nadeshiko.co/en/sentence/jDVNePT1C3Hg",
      "audio": "https://cdn.nadeshiko.co/media/111762/2/9dbc2344c1.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/111762/2/9dbc2344c1.webp"
+    },
+    {
+     "jp": "わざとじゃない... わざとじゃないんだ...",
+     "en": "It was an accident. I didn't do it on purpose.",
+     "media": "Fruits Basket Season 2",
+     "ep": "EP3",
+     "at": "11:32",
+     "url": "https://nadeshiko.co/en/sentence/viaR6bGMfD60",
+     "audio": "https://cdn.nadeshiko.co/media/111762/3/b954952ba9.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/111762/3/b954952ba9.webp",
+     "cn": "不是故意的……我不是故意的。"
     }
    ],
    "note": "「わざと」は意図的な行為。わざわざは「手間をかけて」で、意味が違う。名詞「態」＋とで、動詞ではない。",
@@ -2532,7 +3396,16 @@
      "ans": 0,
      "exp": "わざと＝意図的。わざわざ＝手間をかけて。"
     }
-   ]
+   ],
+   "jlpt": "N3",
+   "freq": {
+    "tier": "B",
+    "stars": 3,
+    "nade": 484,
+    "wf": 4.11,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   },
   {
    "id": "chiratto",
@@ -2577,6 +3450,17 @@
      "url": "https://nadeshiko.co/en/sentence/_As2ztF5f7Vq",
      "audio": "https://cdn.nadeshiko.co/media/15689/3/b059c85ed6.mp3",
      "thumb": "https://cdn.nadeshiko.co/media/15689/3/b059c85ed6.webp"
+    },
+    {
+     "jp": "ちらっと麻衣(まい)を見(み)る。",
+     "en": "I glance briefly at Mai.",
+     "media": "Rascal Does Not Dream of Bunny Girl Senpai",
+     "ep": "EP4",
+     "at": "34:58",
+     "url": "https://nadeshiko.co/en/sentence/jrWKFqL57lAC",
+     "audio": "https://cdn.nadeshiko.co/media/ab/B0841ZQDRR/4/286ccb85cc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/ab/B0841ZQDRR/4/286ccb85cc.webp",
+     "cn": "瞥了麻衣一眼。"
     }
    ],
    "note": "「ちらっと見る」「ちらっと聞く」の型。擬態語＋とで、動詞の連用形ではない。",
@@ -2588,7 +3472,16 @@
      "exp": "擬態語「ちらり」＋と。動詞ではない。"
     }
    ],
-   "quizzes": []
+   "quizzes": [],
+   "jlpt": "N2",
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 67,
+    "wf": 3.29,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": ""
+   }
   }
  ]
 }

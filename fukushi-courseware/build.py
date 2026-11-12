@@ -694,6 +694,16 @@ border-radius:99px;padding:2px 10px;font-weight:600}
 border-radius:8px;padding:2px 9px;font-size:12px}
 .chip{display:inline-block;border-radius:99px;padding:2px 10px;font-size:11px;font-weight:700}
 .chip.path{background:#fff1f2;color:#be123c}
+.jlpt{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:700;
+background:#eef2ff;color:#3730a3;white-space:nowrap}
+.freq{display:inline-block;border-radius:99px;padding:1px 8px;font-size:10.5px;font-weight:800;
+background:#f1f5f9;color:#475569;white-space:nowrap}
+.freq-S{background:#fef3c7;color:#92400e}
+.freq-A{background:#dcfce7;color:#166534}
+.freq-B{background:#dbeafe;color:#1d4ed8}
+.freq-C{background:#f3e8ff;color:#6b21a8}
+.freq-D{background:#f1f5f9;color:#64748b}
+.mini .badges{display:flex;gap:4px;align-items:center;margin:4px 0 2px;flex-wrap:wrap}
 .status{display:inline-block;border-radius:99px;padding:2px 10px;font-size:11px;font-weight:700}
 .status.s0{background:#e9f7ef;color:#188a52}
 .status.s1{background:#fff7ed;color:#b45309}
@@ -832,7 +842,7 @@ function nadeHTML(sc,iid,idx){
       </div>
     </div></div>`;
 }
-const TABS=[["list","🗺️ 体系"],["etym","📜 語源"],["detail","📖 詳細"],["contrast","⚖️ 対照"],["quiz","🎯 クイズ"]];
+const TABS=[["list","🗺️ 体系"],["etym","📜 語源"],["detail","📖 詳細"],["contrast","⚖️ 対照"],["freq","📊 頻度"],["quiz","🎯 クイズ"]];
 let tab="list";
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>
@@ -878,7 +888,8 @@ function renderList(){
     <div class="mini-wrap">${members.map(n=>`
       <button class="mini" style="--g:${g.color}" onclick="goDetail('${n.id}')">
         <div class="em">${n.emoji||"📌"}</div>
-        <div class="nm">${n.word} <small style="color:${g.color};font-size:10.5px">${n.level}</small></div>
+        <div class="nm">${n.word}</div>
+        <div class="badges"><span class="jlpt">JLPT ${n.jlpt||n.level}</span><span class="freq f-${n.freq.tier}">📊 ${n.freq.tier}${n.freq.note?"*":""}</span></div>
         <div class="md">${g.pathLabel}</div>
         <div class="im">${shortMean(n.meaning)}</div></button>`).join("")}</div></div>`;
   }).join("");
@@ -957,6 +968,7 @@ function renderEtymology(){
 function renderDetail(){
   let h=`<div class="card" style="padding:11px 16px;font-size:12.5px;color:var(--sub)">
     <span class="src src-moji">MOJi</span> 辞書例句　<span class="src src-self">作例</span> 本课件作例　<span class="src src-nade">Nadeshiko</span> 真实台词
+    <span style="margin-left:10px"><span class="freq f-S">📊 S</span> 頻度（Nadeshiko hit）　<span class="jlpt">JLPT N1</span> 目安</span>
     <span style="margin-left:10px">· 点击 ▶ 播放；词头发音用平假名读音合成</span></div>`;
   GROUPS.forEach(g=>{
     const members=ITEMS.filter(n=>n.group===g.id);
@@ -965,11 +977,13 @@ function renderDetail(){
     members.forEach(n=>{
       const iid=n.id;
       h+=`<div class="card noun" id="n-${iid}" style="--g:${g.color};--g-bg:${g.color}14">
-        <h2>${n.emoji||"📌"} ${n.word}<span class="jl">${n.level}</span></h2>
+        <h2>${n.emoji||"📌"} ${n.word}<span class="jl">JLPT ${n.jlpt||n.level}</span></h2>
         <div class="meta"><span class="chip path">${g.pathLabel}</span>
           <span class="status ${statusClass(n.status)}">語源 ${n.status}</span>
+          <span class="freq f-${n.freq.tier}">📊 ${n.freq.tier} ${"★".repeat(n.freq.stars)}${n.freq.note?" *":""}</span>
           <button class="btn mini-btn" title="${n.read}" onclick="play('${iid}-w',this)">▶</button><code>${n.read}</code>
         </div>
+        <div class="note" style="margin-top:4px">📊 <b>頻度</b>　Nadeshiko ${n.freq.nade.toLocaleString()} hit${n.freq.wf!=null?` / wordfreq ${n.freq.wf}`:""}${n.freq.note?` · ${n.freq.note}`:""}</div>
         <div class="origin">🎞️ <b>動作の残像</b>　${n.origin}<br>
           <span style="color:var(--sub)">物理画面：${n.physical}</span></div>
         <div class="meanbox">📌 <b>抽象ラベル</b>　${n.meaning}</div>
@@ -987,12 +1001,37 @@ function renderDetail(){
   $("#main").innerHTML=h;
 }
 
+function renderFreq(){
+  const sorted=[...ITEMS].sort((a,b)=>(b.freq?.nade||0)-(a.freq?.nade||0));
+  const rows=sorted.map((n,i)=>{
+    const g=groupOf(n.group);
+    return `<tr><td>${i+1}</td><td><b>${n.word}</b></td><td>${n.jlpt||n.level}</td>
+      <td><span class="freq f-${n.freq.tier}">${n.freq.tier}${n.freq.note?"*":""} ${"★".repeat(n.freq.stars)}</span></td>
+      <td>${n.freq.nade.toLocaleString()}</td><td>${n.freq.wf!=null?n.freq.wf:"—"}</td>
+      <td>${g.emoji||""} ${g.pathLabel}</td></tr>`;
+  }).join("");
+  $("#main").innerHTML=`<div class="card">
+    <h2 style="font-size:17px;margin-bottom:6px">📊 頻度マップ — Nadeshiko 台詞ヒット順</h2>
+    <p style="font-size:13.5px;line-height:1.8">頻度は <b>Nadeshiko 全庫の表層一致ヒット数</b>。
+    同形の動詞用法（追って＝追跡、進んで＝物理前進、努めて＝従事、かねて＝兼務）を含むため、
+    副詞用法の頻度としては参考値。S≥2000 / A≥700 / B≥200 / C≥50 / D&lt;50。
+    <b>wordfreq</b> は見出し形が収録されている場合だけ zipf を表示（未収録は「—」）。</p>
+    <div class="hint" style="margin-bottom:8px">JLPT は目安：初めて N4・つまり N3・しきりに N1 など。頻度と JLPT は別物——N1 でも台詞でよく出る語、N3 でも書き言葉だけの語がある。</div>
+    <table class="cmp">
+      <tr><th>#</th><th>語</th><th>JLPT</th><th>頻度</th><th>Nadeshiko hit</th><th>wordfreq</th><th>分類</th></tr>
+      ${rows}
+    </table>
+    <div class="warn"><b>読み方：</b>S/A は「まず覚える」、B は「読解で見たら止まる」、C/D は「語源と例文で拾う」。<br><b>*</b> は同形動詞などを含む参考値（追って＝追跡、進んで＝物理前進、努めて＝従事、かねて＝兼務 など）。
+    頻度が低い語ほど、動作の残像を剥がす価値が高い。</div>
+  </div>`;
+}
+
 function renderContrast(){
   const all=GROUPS.map(g=>{
     const rows=ITEMS.filter(n=>n.group===g.id).map(n=>
-      `<tr><td>${n.word}</td><td>${n.originShort}</td><td>${n.label}</td><td>${n.status}</td></tr>`).join("");
+      `<tr><td>${n.word}</td><td>${n.jlpt||n.level}</td><td><span class="freq f-${n.freq.tier}">${n.freq.tier}</span></td><td>${n.originShort}</td><td>${n.label}</td><td>${n.status}</td></tr>`).join("");
     return `<h3 class="sec" style="color:${g.color}">${g.emoji} ${g.name}</h3>
-      <table class="cmp"><tr><th>語</th><th>原動詞・語源</th><th>抽象ラベル</th><th>語源信頼度</th></tr>${rows}</table>`;
+      <table class="cmp"><tr><th>語</th><th>JLPT</th><th>頻度</th><th>原動詞・語源</th><th>抽象ラベル</th><th>語源信頼度</th></tr>${rows}</table>`;
   }).join("");
   $("#main").innerHTML=`<div class="card">
     <h2 style="font-size:17px;margin-bottom:6px">⚖️ 類義・誤用の境界線</h2>
@@ -1135,6 +1174,7 @@ function render(){
   else if(tab==="etym")renderEtymology();
   else if(tab==="detail")renderDetail();
   else if(tab==="contrast")renderContrast();
+  else if(tab==="freq")renderFreq();
   else renderQuizTab();
 }
 renderNav();render();
@@ -1146,6 +1186,12 @@ renderNav();render();
 
 def main():
     groups, items = load_pocket()
+    for it in items:
+        it.setdefault("jlpt", it.get("level", "—"))
+        it.setdefault("freq", {
+            "tier": "—", "stars": 0, "nade": 0, "wf": None,
+            "basis": "未設定", "note": "未設定（Nadeshiko words で hit を取って tier を付ける）",
+        })
     n_nade = sum(len(it.get("nadeshiko", [])) for it in items)
 
     display = copy.deepcopy(items)
@@ -1170,6 +1216,8 @@ def main():
     tags = (f"<span>{len(items)} 語</span>"
             f"<span>{len(groups)} 分類</span>"
             f"<span>{len(audio)} 音声{' + ' + str(n_nade) + ' 原声' if n_nade else ''}</span>"
+            f"<span>頻度 S〜D</span>"
+            f"<span>JLPT N1–N4</span>"
             f"<span>fukushi.json 随手加</span>")
     banks_meta = [[k, l] for k, l in BANK_META]
 

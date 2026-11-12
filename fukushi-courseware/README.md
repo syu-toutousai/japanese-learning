@@ -4,7 +4,7 @@
 **動詞の活用形が、動作の画面を捨てて副詞になるまで**を 45 語で検品する単文件课件。
 
 - `fukushi.json` に一語追加 → `python3 build.py` → 卡片・发音・Nadeshiko 场景・题库自动生长。
-- 生成物：`index.html`（离线单文件，约 7.0 MB）＋ `web-lite.html`（315 KB，音声外部化）。
+- 生成物：`index.html`（离线单文件，约 9.8 MB）＋ `web-lite.html`（349 KB，音声外部化）。
 
 ---
 
@@ -15,7 +15,7 @@
 | 語 | 45（4 分類） |
 | 例句 | 139（MOJi 例句＋作例，全部 pykakasi 振假名） |
 | TTS | 184（45 词头＋139 例句，edge-tts `ja-JP-NanamiNeural`，rate -6%） |
-| Nadeshiko 原声 | 41 段（音频内嵌＋缩略图 CDN） |
+| Nadeshiko 原声 | 85 段（音频内嵌＋缩略图 CDN） |
 | 题库 | 306 問（7 层＋错题本） |
 
 分類：
@@ -27,15 +27,24 @@
 | 連用形＋に／と・ず・ク語法・未然形 | 7 | ありありと・しきりに・たえず・おそらく・言わば・思わず |
 | 動詞系に見える非動詞 | 8 | やはり・あいにく・さぞ・おのおの・現に・別に・わざと・ちらっと |
 
+### 頻度マーカーと JLPT
+
+- **JLPT**：全 45 語に `jlpt` フィールド（N1 16 / N2 16 / N3 10 / N4 3）。各カードに `JLPT N1` チップ。
+- **頻度**：Nadeshiko 全庫の表層一致ヒット数から **S/A/B/C/D**（S≥2000・A≥700・B≥200・C≥50・D<50）を付け、`📊 S ★★★★★` チップで表示。同形動詞（追って＝追跡、進んで＝物理前進、努めて＝従事、かねて＝兼務）を含むため参考値。
+- **wordfreq**：見出し形が収録されている語だけ zipf を併記（未収録は「—」）。📊 頻度タブで全 45 語を一覧。
+- 頻度と JLPT は別物——N1 でも台詞でよく出る語、N3 でも書き言葉だけの語がある。
+- 頻度チップの `*` は同形動詞などを含む参考値（追って＝追跡、進んで＝物理前進、努めて＝従事、かねて＝兼務 など）。各カードの注記と 📊 頻度タブの説明を参照。
+
 ---
 
-## 2. 五つの页签
+## 2. 六つの页签
 
 1. **🗺️ 体系** — 動作の残像を剥がす三歩（看位置・看外形・做減法）＋四つの出口＋研究メモ。
 2. **📜 語源** — 文法化の四段階（具体動作→連用形の名詞化→句法の固定→機能語）、四つの出口判定表、語源検品 12 語、**Nadeshiko 誤命中検品**、判定四問。
 3. **📖 詳細** — 各語の「動作の残像（原動詞＋物理画面）→抽象ラベル→文法化チェーン」、例句、Nadeshiko、辨析、誤命中メモ。
 4. **⚖️ 対照** — あえて/強いて/思い切って、合わせて/併せて、かねて/かねがね、つまり/すなわち、やはり/やっぱり、あまり/とても、現に/実際に、別に/特に、わざと/わざわざ、おしなべて/総じて/概して など 22 組＋全一覧。
-5. **🎯 クイズ** — 7 层题库＋错题本：
+5. **📊 頻度** — 全 45 語を Nadeshiko ヒット順に並べ、JLPT・S/A/B/C/D・★・wordfreq zipf を一覧。同形動詞を含む参考値である旨と、頻度の読み方（S/A はまず覚える、C/D は語源で拾う）を明記。
+6. **🎯 クイズ** — 7 层题库＋错题本：
    - 🧭 成り立ち判定 45
    - 🎞️ 原動詞・原義 45
    - 📌 意味選択 45
@@ -95,6 +104,9 @@ Nadeshiko は同形の動詞用法を大量に拾う。课件内に次の検品�
       "read": "つまり",
       "surface": "つまり",          // 穴埋めで挖掉的表层形
       "status": "確実",             // 確実 / 通説 / 諸説
+      "jlpt": "N3",                 // JLPT 目安（level と同値）
+      "freq": { "tier": "S", "stars": 5, "nade": 2415, "wf": 5.07,
+                "basis": "Nadeshiko 全庫 表層一致", "note": "" },
       "origin": "動詞「詰まる」の連用形「詰まり」が名詞化し…",
       "originShort": "詰まるの連用形の名詞化",
       "physical": "隙間なく詰まる。行き詰まる。",
@@ -142,13 +154,14 @@ python3 build.py
 3. `gen_nade_audio()`：Nadeshiko CDN 下载缓存到 `nade_audio/`（已 gitignore）。
 4. `build_questions()`：7 层题库，固定 `SEED=20261112`。
 5. `copy.deepcopy(items)` 后加 pykakasi 振假名，`TEMPLATE.replace` 注入，写 `index.html`。
+6. `jlpt`/`freq` は JSON に焼き込み済み。未設定の新語は `jlpt=level`・`freq.tier="—"` で自動補完される（build は wordfreq に依存しない）。
 
 軽量版：
 
 ```bash
 cd ..
 python3 tools/make_lite.py fukushi-courseware
-# index.html 7.0M -> web-lite.html 0.3M（reuse 184 / cdn 41）
+# index.html 9.7M -> web-lite.html 0.34M（reuse 184 / cdn 85）
 ```
 
 ---
@@ -156,9 +169,11 @@ python3 tools/make_lite.py fukushi-courseware
 ## 6. 工具与来源
 
 - **MOJi 辞書 CLI**：`moji <語> --once --json …` 采集释义与例句（例句标 `src: "moji"`）。
-- **Nadeshiko CLI**：`nadeshiko search <語> --once -n 8 --json …` 采集真实台词、幕/时间戳、CDN 音频与缩略图。只挑规范副词用法；同形动词误命中在课件内单列検品。
+- **Nadeshiko CLI**：`nadeshiko search <語> --once -n 8 --json …` 采集真实台词、幕/时间戳、CDN 音频与缩略图；`nadeshiko words <語…> --json …` 取全庫ヒット数用于頻度マーカー。只挑规范副词用法；同形动词误命中在课件内单列検品。
 - **edge-tts**：`ja-JP-NanamiNeural`，rate `-6%`，内容寻址缓存。
 - **pykakasi**：振假名；`_READING_OVERRIDES` 修正 `人→ひと`、`失って→しなって`、`今年→ことし`、`彼の→かれの`、`電話→でんわ`、`行方→ゆくえ` 等。
+- **Nadeshiko `words`**：`nadeshiko words <語…> --json …` で全庫ヒット数を取得し、S/A/B/C/D の頻度マーカーに使用（同形動詞を含む参考値）。
+- **wordfreq**：見出し形が収録されている場合のみ zipf を併記（未収録は `null`）。ビルドは wordfreq に依存しない（`freq` は JSON に焼き込み済み）。
 - 例句、释义、语源的最终校对以课件内 `status` 与 `origin` 字段为准；语源有争议的标 `諸説`，不把俗说当定论。
 
 ---
@@ -168,13 +183,16 @@ python3 tools/make_lite.py fukushi-courseware
 1. 在 `fukushi.json` 的 `items` 里加一条，`group` 必须存在于 `groups`。
 2. 确保 `surface` 出现在至少一条例句中；写 3-4 条例句（2 条 MOJi＋1-2 条作例）。
 3. Nadeshiko 可选；有则填 `jp/en/cn/media/ep/at/url/audio/thumb`。
-4. 语源不确定时用 `status: "諸説"`，并在 `note` 里写清「通説／俗説」。
-5. `python3 build.py`；检查 `index.html` 的新卡片、发音、题库。
-6. 重跑 `python3 tools/make_lite.py fukushi-courseware`；根 `index.html` 与 `README.md` 已收录本课件，无需再改（新增课件才需要）。
+4. `jlpt` 填 `level` 同值；`freq` 用 `nadeshiko words <語> --json` 取 hit 数，按 S≥2000/A≥700/B≥200/C≥50/D<50 定 tier，`wf` 可由 wordfreq 补（未収録は null）。未設定でも build は D/— で通る。
+5. 语源不确定时用 `status: "諸説"`，并在 `note` 里写清「通説／俗説」。
+6. `python3 build.py`；检查 `index.html` 的新卡片、发音、题库。
+7. 重跑 `python3 tools/make_lite.py fukushi-courseware`；根 `index.html` 与 `README.md` 已收录本课件，无需再改（新增课件才需要）。
 
 ---
 
-## 8. デプロイ確認（2026-11-12）
+## 8. デプロイ確認（2026-11-12・初回デプロイ時点）
+
+この節は初回デプロイ（Nadeshiko 41 段時点）の記録。Nadeshiko 85 段・頻度/JLPT 追加後の再デプロイは別途記録する。
 
 コミット `52aefdc` を `main` に push。GitHub Pages のワークフロー `43144458512` は **52 秒で成功**し、deploy まで完了。
 
