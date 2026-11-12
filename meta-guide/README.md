@@ -120,6 +120,9 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/meta-guide/
 - [日本語の历时透明性 — 総綱と実戦検証](./diachronic-transparency.md)
   — AI Agent System Prompt 版の「音韵透明性＋形态透明性」総綱。音韵省力公式・用言派生法則のモジュール、
   古語残存＋口语缩略＋动词系副詞を同時に含むテスト文の解剖。
+- [日本語の历时透明性 第二版 — 双螺旋语法分析](./double-helix.md)
+  — 詞法＝述語詞中心（Predicate-centric）／句法＝体言中心＋述語後置（Substantive-centric + Predicate-final）
+  の双螺旋完全体プロンプトと、社論級長難句の四維解剖。
 
 ---
 
