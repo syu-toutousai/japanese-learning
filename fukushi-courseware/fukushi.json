@@ -1,0 +1,2594 @@
+{
+ "meta": {
+  "title": "動詞系副詞 ・ 動作の残像を剥がす",
+  "titleCn": "动词系副词・剥掉动作的画面",
+  "jp": "どうしけいふくし ／ 動詞から生まれた副詞の正体",
+  "tags": [
+   "N1",
+   "N2",
+   "N3",
+   "N4",
+   "副詞",
+   "文法化",
+   "連用形",
+   "て形",
+   "語源",
+   "読解"
+  ],
+  "voiceFemale": "ja-JP-NanamiNeural",
+  "note": "往 items 里丢一条「動詞系副詞」，重建即自动长出卡片、TTS、Nadeshiko 场景与题库。語源欄は「確実／通説／諸説」の三段階で検品する。"
+ },
+ "groups": [
+  {
+   "id": "te",
+   "name": "連用形＋て（て形コース）",
+   "color": "#be123c",
+   "emoji": "🧵",
+   "note": "動詞の連用形に接続助詞「て」が付き、前件と後件の時間差・因果が薄れて、後件全体を修飾する副詞になったグループ。具体動作の画面が最も残りやすいが、句法はすでに副詞。",
+   "pathLabel": "連用形＋て",
+   "short": "て形"
+  },
+  {
+   "id": "renyo",
+   "name": "純連用形・連用形の名詞化",
+   "color": "#0f766e",
+   "emoji": "🪢",
+   "note": "連用形そのもの、または連用形の名詞化が副詞として固定したグループ。イ段・エ段で終わる形が多いが、これは「動詞系副詞」の十分条件ではない。語源は一語ずつ検品が必要。",
+   "pathLabel": "純連用形・名詞化",
+   "short": "純連用形"
+  },
+  {
+   "id": "joshi",
+   "name": "連用形＋に／と・ず・ク語法・未然形",
+   "color": "#b45309",
+   "emoji": "🔗",
+   "note": "連用形に助詞「に」「と」や打消「ず」が付いた形、動詞のク語法、未然形＋ば／ずなど、動詞の活用形が助詞・助動詞とセットで副詞化したグループ。学校文法の「連用形＋て」とは別の出口。",
+   "pathLabel": "連用形＋に／と・ず・ク語法",
+   "short": "助詞・ク語法"
+  },
+  {
+   "id": "hisei",
+   "name": "動詞系に見える非動詞（誤分類注意）",
+   "color": "#475569",
+   "emoji": "🪞",
+   "note": "形は副詞、音はイ段・エ段でも、語源は漢語・名詞・形容詞・擬態語。ここを「動詞系」に混ぜると語源の地図が壊れる。読解では副詞として扱ってよいが、語源問題では別扱い。",
+   "pathLabel": "動詞由来ではない",
+   "short": "非動詞"
+  }
+ ],
+ "items": [
+  {
+   "id": "hajimete",
+   "group": "te",
+   "level": "N4",
+   "emoji": "🌱",
+   "word": "初めて",
+   "read": "はじめて",
+   "surface": "初めて",
+   "status": "確実",
+   "origin": "動詞「始む（はじむ）／初む」の連用形「はじみ」＋接続助詞「て」。",
+   "originShort": "始む（はじむ）の連用形＋て",
+   "physical": "物事を始める。最初の一歩を踏み出す。",
+   "meaning": "初次；第一次；直到…才",
+   "label": "初次／直到…才",
+   "engine": "「始める」という動作の開始点が、経験の最初の一点に固定される。さらに「〜て初めて」で、前件が成立してはじめて後件が可能になる条件読みが生まれる。",
+   "examples": [
+    {
+     "jp": "初めてお目にかかります。",
+     "cn": "初次见面。",
+     "src": "moji"
+    },
+    {
+     "jp": "人は健康を失って初めてそのありがたみがわかる。",
+     "cn": "人失去健康之后，才懂得它的可贵。",
+     "src": "moji"
+    },
+    {
+     "jp": "その時初めて、彼の本当の意図に気づいた。",
+     "cn": "直到那时，我才意识到他真正的意图。",
+     "src": "self"
+    },
+    {
+     "jp": "初めての孫が生まれた。",
+     "cn": "第一个孙子出生了。",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "初めて... 初めて褒めてもらえた",
+     "en": "I've never had anyone say anything nice.",
+     "cn": "第一次……第一次被人夸奖。",
+     "media": "My Dress-Up Darling",
+     "ep": "EP1",
+     "at": "15:42",
+     "url": "https://nadeshiko.co/en/sentence/njqDGBkCOJa6",
+     "audio": "https://cdn.nadeshiko.co/media/132405/1/631afb9c43.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/132405/1/631afb9c43.webp"
+    }
+   ],
+   "note": "「初めて」は副詞だが「初めての＋名詞」の連体用法もある。漢字は「初」を使い、「始めて」は動詞「始める」のて形なので、原則として副詞にはしない。",
+   "contrast": "初めて（経験の最初）⇄ 始めて（動作の開始）。「初めての孫」は○、「始めての孫」は×。",
+   "judge": [
+    {
+     "q": "「初めて」は動詞「始む」の連用形＋てに由来する。",
+     "ans": true,
+     "exp": "「はじみ＋て」が一語化した。動作の開始点が「経験の最初」に転用された典型。"
+    },
+    {
+     "q": "「初めて」の「初」は、動詞「初める」の終止形である。",
+     "ans": false,
+     "exp": "「初めて」は連用形＋ての化石。終止形ではない。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "aratamete",
+   "group": "te",
+   "level": "N3",
+   "emoji": "🔁",
+   "word": "改めて",
+   "read": "あらためて",
+   "surface": "改めて",
+   "status": "確実",
+   "origin": "動詞「改む（あらたむ）」の連用形＋接続助詞「て」。現代語では「改める」。",
+   "originShort": "改む（あらたむ）の連用形＋て",
+   "physical": "改める。一度置いたものを、もう一度置き直す。",
+   "meaning": "重新；再次；改日；正式地",
+   "label": "重新／改日",
+   "engine": "対象を一度リセットして、もう一度設定し直す。ここから「もう一度」と「別の機会に」の二つの含みが出る。",
+   "examples": [
+    {
+     "jp": "改めておうかがいします。",
+     "cn": "我改日再来拜访。",
+     "src": "moji"
+    },
+    {
+     "jp": "改めて調査する。",
+     "cn": "重新调查。",
+     "src": "moji"
+    },
+    {
+     "jp": "それは分かりきったことで、改めて言うまでもない。",
+     "cn": "那是再清楚不过的事，没必要再说。",
+     "src": "moji"
+    },
+    {
+     "jp": "改めて連絡します。",
+     "cn": "我会再联系你。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "改めて ありがとう ラインハルト",
+     "en": "Well, thanks again, Reinhard.",
+     "cn": "再次谢谢你，莱因哈特。",
+     "media": "Re:ZERO -Starting Life in Another World-",
+     "ep": "EP2",
+     "at": "11:00",
+     "url": "https://nadeshiko.co/en/sentence/0MzI-tMCojMP",
+     "audio": "https://cdn.nadeshiko.co/media/21355/2/cf85c91885.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21355/2/cf85c91885.webp"
+    }
+   ],
+   "note": "「改めて」は「もう一度」だけでなく「別の機会に改めて」の含みを持つ。ビジネスメールの「追ってご連絡」と近いが、改めては「同じ相手に再接触する」感じが強い。",
+   "contrast": "改めて（改日・正式にやり直す）／再度（回数の再演）／もう一度（口語的）。",
+   "judge": [
+    {
+     "q": "「改めて」は「もう一度」だけでなく「別の機会に」の含みも持つ。",
+     "ans": true,
+     "exp": "「改めておうかがいします」は「日を改めて」の含み。回数の再演だけではない。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "tsuzuite",
+   "group": "te",
+   "level": "N3",
+   "emoji": "➡️",
+   "word": "続いて",
+   "read": "つづいて",
+   "surface": "続いて",
+   "status": "確実",
+   "origin": "動詞「続く」の連用形＋接続助詞「て」。",
+   "originShort": "続くの連用形＋て",
+   "physical": "途切れずに続く。前のもののすぐ後ろにつながる。",
+   "meaning": "紧接着；接下来；随后",
+   "label": "紧接着／接下来",
+   "engine": "前件の直後に後件を並べる「順序の接着剤」。物理的な連続から、司会・会議の「次に」へ。",
+   "examples": [
+    {
+     "jp": "彼も続いて辞職した。",
+     "cn": "他也跟着辞职了。",
+     "src": "moji"
+    },
+    {
+     "jp": "続いて、次の議題に移ります。",
+     "cn": "接下来进入下一个议题。",
+     "src": "self"
+    },
+    {
+     "jp": "続いて二人目の選手が登場した。",
+     "cn": "紧接着，第二位选手出场了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "続いて ユーフォニアム",
+     "en": "Next, euphoniums.",
+     "cn": "接下来是上低音号。",
+     "media": "Sound! Euphonium 3",
+     "ep": "EP8",
+     "at": "22:02",
+     "url": "https://nadeshiko.co/en/sentence/ndo3CC9Eywwx",
+     "audio": "https://cdn.nadeshiko.co/media/109731/8/35a267c600.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/109731/8/35a267c600.webp"
+    }
+   ],
+   "note": "「続いて」は物理的な「続く」の画面が残るが、副詞としては「次に」の順序標識。会議・司会進行で頻出。",
+   "contrast": "続いて（直後の順序）／次に（単純な順序）／引き続き（同じ状態の継続）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "otte",
+   "group": "te",
+   "level": "N2",
+   "emoji": "📮",
+   "word": "追って",
+   "read": "おって",
+   "surface": "追って",
+   "status": "確実",
+   "origin": "動詞「追う」の連用形＋接続助詞「て」。",
+   "originShort": "追うの連用形＋て",
+   "physical": "後を追う。時間的・空間的に後からついて行く。",
+   "meaning": "随后；日后；另行（正式）",
+   "label": "随后／日后",
+   "engine": "空間の追跡が時間の後続に転用され、ビジネス文書では「後日改めて」の意味に固定した。",
+   "examples": [
+    {
+     "jp": "詳細は追ってご通知申し上げます。",
+     "cn": "详情随后通知您。",
+     "src": "moji"
+    },
+    {
+     "jp": "追って担当者からご連絡いたします。",
+     "cn": "随后由负责人与您联系。",
+     "src": "self"
+    },
+    {
+     "jp": "結果は追って発表する。",
+     "cn": "结果日后公布。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "読みは「おって」。物理の「追って」と同形なので、後ろに「くる／いく／かける」などが来たら物理、後に「連絡・通知・発表」が来たら時間の副詞。",
+   "contrast": "追って（後日・正式）／後日（日を改めて）／追ってから（物理的に後から）。",
+   "pitfall": "Nadeshiko で「追って」を検索すると「追ってきた」「追ってこい」ばかり出る。これは動詞「追う」のて形で、副詞「追って（後日）」ではない。検索結果の後続語まで必ず見る。",
+   "judge": [
+    {
+     "q": "「追って」は物理的に後を追う意味の副詞である。",
+     "ans": false,
+     "exp": "副詞の「追って」は時間の後続（後日）。物理の追跡は動詞「追う」のて形。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "kanete",
+   "group": "te",
+   "level": "N1",
+   "emoji": "🕰️",
+   "word": "かねて",
+   "read": "かねて",
+   "surface": "かねて",
+   "status": "通説",
+   "origin": "動詞「兼ねる」の連用形＋接続助詞「て」。漢字「予て」は当て字。",
+   "originShort": "兼ねるの連用形＋て",
+   "physical": "二つを兼ねる。前もって備える。",
+   "meaning": "早就；先前；以前から",
+   "label": "早就／先前",
+   "engine": "「前もって兼ねる」という準備の動作が、「以前からずっと」の時間副詞に固定した。",
+   "examples": [
+    {
+     "jp": "かねてからの望みがかなった。",
+     "cn": "长久以来的愿望实现了。",
+     "src": "moji"
+    },
+    {
+     "jp": "かねてより心に決めていた。",
+     "cn": "早就下定了决心。",
+     "src": "moji"
+    },
+    {
+     "jp": "かねてお知らせしたとおり、会議は来週行います。",
+     "cn": "如先前通知，会议将于下周举行。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "では かねてよりの計画どおり",
+     "en": "Then we follow the plan?",
+     "cn": "那么，就按早先的计划进行。",
+     "media": "The Eminence in Shadow",
+     "ep": "EP5",
+     "at": "20:51",
+     "url": "https://nadeshiko.co/en/sentence/BYIfV8D2CMe8",
+     "audio": "https://cdn.nadeshiko.co/media/130298/5/aab1590a16.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/130298/5/aab1590a16.webp"
+    }
+   ],
+   "note": "「かねて」は書き言葉。会話では「前から」「以前から」。同じ「兼ねる」から来た「かねがね」は「以前から何度も」で、意味が少し違う。",
+   "contrast": "かねて（以前から一度／状態）／かねがね（以前から何度も／反復）／あらかじめ（前もって準備）。",
+   "pitfall": "Nadeshiko の「その護衛もかねてでしょ」は「兼ねて（兼ねる）」で、副詞「かねて（以前から）」ではない。同形の動詞用法に注意。",
+   "judge": [
+    {
+     "q": "「かねて」と「かねがね」は同じ語源で、意味も完全に同じ。",
+     "ans": false,
+     "exp": "どちらも「兼ねる」由来だが、かねて＝以前から、かねがね＝以前から何度も。反復の含みが違う。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「以前から何度も聞いている」に最も合うのは？",
+     "opts": [
+      "かねがね",
+      "かねて",
+      "あらかじめ",
+      "せめて"
+     ],
+     "ans": 0,
+     "exp": "かねがね＝以前から繰り返し。かねては「以前から」の状態。"
+    }
+   ]
+  },
+  {
+   "id": "awasete",
+   "group": "te",
+   "level": "N2",
+   "emoji": "➕",
+   "word": "併せて／合わせて",
+   "read": "あわせて",
+   "surface": "併せて",
+   "status": "確実",
+   "origin": "動詞「合わせる」の連用形＋接続助詞「て」。",
+   "originShort": "合わせるの連用形＋て",
+   "physical": "二つ以上を一つの場所に合わせる。",
+   "meaning": "合计；同时；一并",
+   "label": "合计／同时",
+   "engine": "二つの対象を重ねる動作が、数量の合算（合わせて）と機会の同時（併せて）に分岐した。",
+   "examples": [
+    {
+     "jp": "3校合わせて200人が参加した。",
+     "cn": "三所学校合计有两百人参加。",
+     "src": "self"
+    },
+    {
+     "jp": "併せて健康を祈る。",
+     "cn": "并祝健康。",
+     "src": "moji"
+    },
+    {
+     "jp": "新製品の発表と併せて、記念セールを開催します。",
+     "cn": "在发布新产品的同时，举办纪念促销。",
+     "src": "self"
+    },
+    {
+     "jp": "ご不明な点は併せてご連絡ください。",
+     "cn": "如有不明之处，请一并联系。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "併せて 現在 行方を追ってます",
+     "en": "and we are currently locating them.",
+     "cn": "同时也正在追查他们的下落。",
+     "media": "My Undead Yokai Girlfriend",
+     "ep": "EP8",
+     "at": "22:48",
+     "url": "https://nadeshiko.co/en/sentence/nmLhXA3gSDUY",
+     "audio": "https://cdn.nadeshiko.co/media/mv/248395/8/d4e853fc0d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/mv/248395/8/d4e853fc0d.webp"
+    }
+   ],
+   "note": "漢字の使い分け：合わせて＝合計・照合・タイミングを合わす。併せて＝同時に・付帯的に。公用文・新聞では「併せて」を「同時に」の意味で使うことが多い。",
+   "contrast": "合わせて（合算・照合）／併せて（同時・付帯）。「3校合わせて」は○、「3校併せて」はやや不自然。",
+   "judge": [
+    {
+     "q": "「合わせて」は合計、「併せて」は同時・付帯の意味で使い分けることがある。",
+     "ans": true,
+     "exp": "両者は同源だが、漢字表記で機能が分化している。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「3つのクラスを合計すると90人」に最も合う表記は？",
+     "opts": [
+      "合わせて",
+      "併せて",
+      "追って",
+      "極めて"
+     ],
+     "ans": 0,
+     "exp": "合算は「合わせて」。同時・付帯は「併せて」。"
+    }
+   ]
+  },
+  {
+   "id": "kiwamete",
+   "group": "te",
+   "level": "N1",
+   "emoji": "🔥",
+   "word": "極めて",
+   "read": "きわめて",
+   "surface": "極めて",
+   "status": "確実",
+   "origin": "動詞「極める」の連用形＋接続助詞「て」。",
+   "originShort": "極めるの連用形＋て",
+   "physical": "極限まで突き詰める。行き着くところまで行く。",
+   "meaning": "极其；极为（书面）",
+   "label": "极其／极为",
+   "engine": "到達点の極大が、程度の最高度に転用された。書き言葉・改まった評価に使う。",
+   "examples": [
+    {
+     "jp": "極めて重要な問題だ。",
+     "cn": "这是极其重要的问题。",
+     "src": "moji"
+    },
+    {
+     "jp": "その問題は極めて解決しにくい。",
+     "cn": "那个问题极难解决。",
+     "src": "moji"
+    },
+    {
+     "jp": "極めて遺憾に思います。",
+     "cn": "我感到极为遗憾。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "状況は極めてデリケートだ",
+     "en": "The situation is delicate in the extreme.",
+     "cn": "情况极其微妙。",
+     "media": "THE GHOST IN THE SHELL",
+     "ep": "EP2",
+     "at": "10:58",
+     "url": "https://nadeshiko.co/en/sentence/dM83YpFIGuTG",
+     "audio": "https://cdn.nadeshiko.co/media/177699/2/491a314c61.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/177699/2/491a314c61.webp"
+    }
+   ],
+   "note": "会話では「とても」「すごく」で足りる。極めてはニュース・論説・謝罪文など、改まった文脈の硬い副詞。",
+   "contrast": "極めて（硬い・最高度）／非常に（中立・書き言葉）／とても（口語）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "semete",
+   "group": "te",
+   "level": "N2",
+   "emoji": "🙏",
+   "word": "せめて",
+   "read": "せめて",
+   "surface": "せめて",
+   "status": "通説",
+   "origin": "動詞「責める」の連用形＋接続助詞「て」。",
+   "originShort": "責めるの連用形＋て",
+   "physical": "相手を責め立てる。強く迫る。",
+   "meaning": "至少；哪怕…也好",
+   "label": "至少／哪怕",
+   "engine": "不満足な状況で、譲れない最低線を押し出す。責めるような圧が、願望の最低限に転化した。",
+   "examples": [
+    {
+     "jp": "せめてこれだけはもらいたい。",
+     "cn": "至少想拿到这个。",
+     "src": "moji"
+    },
+    {
+     "jp": "せめて電話一本くれればよかったのに。",
+     "cn": "哪怕给我打个电话也好啊。",
+     "src": "moji"
+    },
+    {
+     "jp": "せめて一言、挨拶してほしかった。",
+     "cn": "至少想听到一句问候。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "なぁ せめて 何か教えてくれよ。",
+     "en": "Come on. At least... At least tell me something!",
+     "cn": "喂，至少告诉我点什么吧。",
+     "media": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+     "ep": "EP6",
+     "at": "15:54",
+     "url": "https://nadeshiko.co/en/sentence/H0LzHMIqrj7c",
+     "audio": "https://cdn.nadeshiko.co/media/166873/6/bcf5751d03.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/166873/6/bcf5751d03.webp"
+    }
+   ],
+   "note": "後件は願望・依頼・仮定が多い。「少なくとも」より感情的で、「これだけでも」という諦めと願いが混ざる。",
+   "contrast": "せめて（感情的・最低限の願望）／少なくとも（中立的な下限）／最低でも（数量の下限）。",
+   "judge": [
+    {
+     "q": "「せめて」は最低限の願望を表し、後件に依頼・願望が来やすい。",
+     "ans": true,
+     "exp": "「せめて〜してほしい」の型が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "mashite",
+   "group": "te",
+   "level": "N1",
+   "emoji": "📈",
+   "word": "まして",
+   "read": "まして",
+   "surface": "まして",
+   "status": "確実",
+   "origin": "動詞「増す」の連用形＋接続助詞「て」。",
+   "originShort": "増すの連用形＋て",
+   "physical": "増す。程度がさらに加わる。",
+   "meaning": "何况；更不用说",
+   "label": "何况／更不用说",
+   "engine": "前件でさえ成り立つのだから、後件はなおさらだ、という累加の推論。",
+   "examples": [
+    {
+     "jp": "大人でも大変なのだから、まして子どもには無理だ。",
+     "cn": "大人都觉得吃力，何况孩子。",
+     "src": "moji"
+    },
+    {
+     "jp": "これはまして困難だ。",
+     "cn": "这个就更困难了。",
+     "src": "moji"
+    },
+    {
+     "jp": "日本語でも難しい。まして中国語ならなおさらだ。",
+     "cn": "日语都难，中文就更不用说了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "まして 恋人なんて...",
+     "en": "Dating is out of the question.",
+     "cn": "更别说是恋人了……",
+     "media": "Bloom Into You",
+     "ep": "EP7",
+     "at": "7:27",
+     "url": "https://nadeshiko.co/en/sentence/PtuVPdd_4ANs",
+     "audio": "https://cdn.nadeshiko.co/media/101573/7/59f31cf5c8.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101573/7/59f31cf5c8.webp"
+    }
+   ],
+   "note": "「ましてや」は強調形。後件は否定・困難・当然の推量が多い。「前件＜後件」の方向を間違えない。",
+   "contrast": "まして（前件を受けて後件を強化）／なおさら（さらに程度が増す）／いわんや（漢文調）。",
+   "judge": [
+    {
+     "q": "「まして」は前件より後件の程度が低いことを表す。",
+     "ans": false,
+     "exp": "逆。前件でさえ大変なら、後件はなおさら大変、という累加。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "kaette",
+   "group": "te",
+   "level": "N2",
+   "emoji": "🔄",
+   "word": "かえって",
+   "read": "かえって",
+   "surface": "かえって",
+   "status": "確実",
+   "origin": "動詞「返る」の連用形＋接続助詞「て」。漢字「却って」は当て字。",
+   "originShort": "返るの連用形＋て",
+   "physical": "元の場所へ返る。向きが反転する。",
+   "meaning": "反而；反倒",
+   "label": "反而／反倒",
+   "engine": "期待・予想の方向を反転させる。前件の行為が、予想とは逆の結果を生む。",
+   "examples": [
+    {
+     "jp": "薬は飲みすぎるとかえって害になる。",
+     "cn": "药吃多了反而有害。",
+     "src": "moji"
+    },
+    {
+     "jp": "説明しすぎると、かえって混乱する。",
+     "cn": "解释太多反而会让人混乱。",
+     "src": "self"
+    },
+    {
+     "jp": "静かにしろと言われて、かえって声が大きくなった。",
+     "cn": "被要求安静，声音反而更大了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "かえって気になるだろ!",
+     "en": "That only makes me more curious.",
+     "cn": "反而更让人在意吧！",
+     "media": "Toradora!",
+     "ep": "EP20",
+     "at": "19:54",
+     "url": "https://nadeshiko.co/en/sentence/Upvgq8A2cxfe",
+     "audio": "https://cdn.nadeshiko.co/media/4224/20/90b124636f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/4224/20/90b124636f.webp"
+    },
+    {
+     "jp": "かえって迷惑だったらどうしよう...",
+     "en": "What if this just becomes a burden to her?",
+     "cn": "万一反倒给她添麻烦怎么办……",
+     "media": "March comes in like a lion",
+     "ep": "EP12",
+     "at": "18:03",
+     "url": "https://nadeshiko.co/en/sentence/bMkNbHE_fyVr",
+     "audio": "https://cdn.nadeshiko.co/media/21366/12/a3f0bc0473.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21366/12/a3f0bc0473.webp"
+    }
+   ],
+   "note": "物理の「帰って」と同音。漢字を補うと意味が明確になる。Nadeshiko でも「帰って」が混ざるので、後続語で見分ける。",
+   "contrast": "かえって（予想の反転）／逆に（方向の反対）／むしろ（比較したうえでの選択）。",
+   "pitfall": "Nadeshiko の「かえってこない？」は「帰ってこない？」（物理）。副詞「かえって」ではない。",
+   "judge": [
+    {
+     "q": "「かえって」は予想に反する結果を表す。",
+     "ans": true,
+     "exp": "「薬を飲みすぎるとかえって害になる」が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "aete",
+   "group": "te",
+   "level": "N1",
+   "emoji": "🗡️",
+   "word": "あえて",
+   "read": "あえて",
+   "surface": "あえて",
+   "status": "確実",
+   "origin": "動詞「敢ふ（あふ）」の連用形＋接続助詞「て」。現代語の「敢える」はほぼ死語。",
+   "originShort": "敢ふ（あふ）の連用形＋て",
+   "physical": "抵抗を押して実行する。障碍を承知で踏み込む。",
+   "meaning": "敢于；硬要；特意；（否定）并不…",
+   "label": "敢于／硬要",
+   "engine": "心理的・社会的な抵抗を承知で踏み込む。否定文では「別に…する必要はない」の緩和になる。",
+   "examples": [
+    {
+     "jp": "あえて危険を冒す。",
+     "cn": "敢于冒险。",
+     "src": "moji"
+    },
+    {
+     "jp": "あなたが話したくないことを、私はあえて聞こうとは思わない。",
+     "cn": "你不想说的事，我并不硬要打听。",
+     "src": "moji"
+    },
+    {
+     "jp": "あえて言うなら、彼の態度が問題だ。",
+     "cn": "硬要说的话，问题在于他的态度。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "あえて言うなら コスプレ?",
+     "en": "If I had to say, I'm in cosplay.",
+     "cn": "硬要说的话，算是cosplay？",
+     "media": "A Silent Voice",
+     "ep": "EP1",
+     "at": "1:27:52",
+     "url": "https://nadeshiko.co/en/sentence/DJMF4og4yXQ5",
+     "audio": "https://cdn.nadeshiko.co/media/20954/1/711d809b9d.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20954/1/711d809b9d.webp"
+    }
+   ],
+   "note": "「あえて言うなら」は「無理に選ぶなら」の緩和句。強いてとの違い：あえて＝心理的抵抗を押す、強いて＝無理に強制する。",
+   "contrast": "あえて（心理的抵抗）／強いて（強制・無理押し）／思い切って（迷いを断つ）。",
+   "judge": [
+    {
+     "q": "「あえて」と「強いて」は完全に同義で、置き換え可能。",
+     "ans": false,
+     "exp": "あえては心理的抵抗、強いては強制。ニュアンスが違う。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「嫌がる相手を無理に説得する」に最も合うのは？",
+     "opts": [
+      "強いて",
+      "あえて",
+      "思い切って",
+      "せめて"
+     ],
+     "ans": 0,
+     "exp": "強いて＝無理に押し切る。あえては「承知のうえで」の含み。"
+    }
+   ]
+  },
+  {
+   "id": "tsutomete",
+   "group": "te",
+   "level": "N1",
+   "emoji": "💪",
+   "word": "努めて",
+   "read": "つとめて",
+   "surface": "努めて",
+   "status": "確実",
+   "origin": "動詞「努める」の連用形＋接続助詞「て」。",
+   "originShort": "努めるの連用形＋て",
+   "physical": "力を尽くす。骨を折る。",
+   "meaning": "尽量；努力地",
+   "label": "尽量／努力地",
+   "engine": "努力の具体動作が、程度・態度の「できるだけ」に転用された。意志の残る副詞。",
+   "examples": [
+    {
+     "jp": "努めて借金を避ける。",
+     "cn": "尽量不借钱。",
+     "src": "moji"
+    },
+    {
+     "jp": "努めて冷静に振る舞った。",
+     "cn": "努力表现得冷静。",
+     "src": "self"
+    },
+    {
+     "jp": "彼は努めて笑顔を作った。",
+     "cn": "他努力挤出笑容。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "書き言葉。会話では「できるだけ」「なるべく」。努めては「努力している」という意志が残る。",
+   "contrast": "努めて（意志的・書き言葉）／できるだけ（口語）／極力（硬い・最小限に抑える）。",
+   "pitfall": "Nadeshiko の「努めております」は動詞「努める」のて形（〜に努めている）で、副詞「努めて（できるだけ）」ではない。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "susunde",
+   "group": "te",
+   "level": "N1",
+   "emoji": "🚶",
+   "word": "進んで",
+   "read": "すすんで",
+   "surface": "進んで",
+   "status": "確実",
+   "origin": "動詞「進む」の連用形＋接続助詞「て」。",
+   "originShort": "進むの連用形＋て",
+   "physical": "前に進む。進み出る。",
+   "meaning": "主动地；自愿地；积极地",
+   "label": "主动／自愿",
+   "engine": "空間の前進が、意思の前進（率先・自発）に転用された。",
+   "examples": [
+    {
+     "jp": "進んで意見を述べる。",
+     "cn": "主动发表意见。",
+     "src": "moji"
+    },
+    {
+     "jp": "自ら進んでやる。",
+     "cn": "自己主动去做。",
+     "src": "moji"
+    },
+    {
+     "jp": "進んで困難な仕事を引き受けた。",
+     "cn": "主动承担了困难的工作。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "主体の自発性を評価する語。「積極的に」と近いが、進んでは「自分から前に出る」画面が残る。",
+   "contrast": "進んで（自発・率先）／積極的に（態度の積極性）／自ら（手段を選ばず自分で）。",
+   "pitfall": "Nadeshiko の「進んでください」は物理的な前進。副詞「進んで（自発）」ではない。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "shiite",
+   "group": "te",
+   "level": "N1",
+   "emoji": "⛓️",
+   "word": "強いて",
+   "read": "しいて",
+   "surface": "強いて",
+   "status": "確実",
+   "origin": "動詞「強いる」の連用形＋接続助詞「て」。",
+   "originShort": "強いるの連用形＋て",
+   "physical": "無理にさせる。相手の抵抗を押し切る。",
+   "meaning": "硬要；强迫；非…不可",
+   "label": "硬要／强迫",
+   "engine": "相手の抵抗を無視してでも実行する。そこから「強いて言えば（無理に選ぶなら）」の婉曲用法も出る。",
+   "examples": [
+    {
+     "jp": "強いて頼む。",
+     "cn": "强求。",
+     "src": "moji"
+    },
+    {
+     "jp": "強いて言えば、この案が一番ましだ。",
+     "cn": "硬要说的话，这个方案最好。",
+     "src": "moji"
+    },
+    {
+     "jp": "強いて行けとは言わない。",
+     "cn": "并不是非叫你去不可。",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "んー 強いて言うなら...",
+     "en": "Hmm, if I had to pick one thing...",
+     "cn": "嗯——硬要说的话……",
+     "media": "Grand Blue Dreaming Season 2",
+     "ep": "EP4",
+     "at": "4:04",
+     "url": "https://nadeshiko.co/en/sentence/ckUqj8xpCJfS",
+     "audio": "https://cdn.nadeshiko.co/media/182309/4/fcb07156ab.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/182309/4/fcb07156ab.webp"
+    }
+   ],
+   "note": "「強いて言えば」は「無理に一つ選ぶなら」の婉曲。あえてより強制の圧が強い。",
+   "contrast": "強いて（強制）／あえて（心理的抵抗）／無理に（単純な強行）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "omoikitte",
+   "group": "te",
+   "level": "N2",
+   "emoji": "🎲",
+   "word": "思い切って",
+   "read": "おもいきって",
+   "surface": "思い切って",
+   "status": "確実",
+   "origin": "動詞「思い切る」（決心する・断ち切る）の連用形＋接続助詞「て」。",
+   "originShort": "思い切るの連用形＋て",
+   "physical": "思いを断ち切る。迷いを捨てる。",
+   "meaning": "索性；狠下心；大胆地",
+   "label": "索性／大胆地",
+   "engine": "迷いを断つ決断が、大胆な行動の副詞になった。後件は大きな決断・冒険が多い。",
+   "examples": [
+    {
+     "jp": "思い切って言う。",
+     "cn": "大胆地说出来。",
+     "src": "moji"
+    },
+    {
+     "jp": "思い切って1万円奮発しよう。",
+     "cn": "索性花一万日元吧。",
+     "src": "moji"
+    },
+    {
+     "jp": "思い切って髪を短く切った。",
+     "cn": "狠下心把头发剪短了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "うん 思い切って言っちゃおう!",
+     "en": "Okay, I'll come right out with it!",
+     "cn": "嗯，索性说出来吧！",
+     "media": "BOCCHI THE ROCK!",
+     "ep": "EP1",
+     "at": "9:47",
+     "url": "https://nadeshiko.co/en/sentence/keulYQULyysQ",
+     "audio": "https://cdn.nadeshiko.co/media/130003/1/f48743f110.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/130003/1/f48743f110.webp"
+    }
+   ],
+   "note": "「思い切って」は「思い切る」のて形で、動作の勢いが残る。あえて・強いてと違い、迷いを捨てる心理的解放が中心。",
+   "contrast": "思い切って（迷いを断つ）／あえて（抵抗を押す）／強いて（強制する）。",
+   "judge": [
+    {
+     "q": "「思い切って」は迷いを断ち切って大胆な行動をする様子。",
+     "ans": true,
+     "exp": "「思い切って言う」「思い切って買う」が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "kesshite",
+   "group": "te",
+   "level": "N3",
+   "emoji": "🚫",
+   "word": "決して",
+   "read": "けっして",
+   "surface": "決して",
+   "status": "確実",
+   "origin": "動詞「決する」の連用形＋接続助詞「て」。",
+   "originShort": "決するの連用形＋て",
+   "physical": "決める。決着をつける。",
+   "meaning": "绝不；决不（后接否定）",
+   "label": "绝不（否定呼应）",
+   "engine": "決意の固定が、否定の全面化に転用された。必ず否定と呼応する。",
+   "examples": [
+    {
+     "jp": "ご恩は決して忘れません。",
+     "cn": "我决不会忘记您的恩情。",
+     "src": "moji"
+    },
+    {
+     "jp": "決して悪いことはいたしません。",
+     "cn": "我决不做坏事。",
+     "src": "moji"
+    },
+    {
+     "jp": "値段は決して高くない。",
+     "cn": "价格绝不算贵。",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "決して あきらめない。",
+     "en": "I won't ever give up.",
+     "cn": "我决不放弃。",
+     "media": "Bakuman.",
+     "ep": "EP18",
+     "at": "13:14",
+     "url": "https://nadeshiko.co/en/sentence/qSGMoldWibyB",
+     "audio": "https://cdn.nadeshiko.co/media/7674/18/03e40d0c7e.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/7674/18/03e40d0c7e.webp"
+    }
+   ],
+   "note": "「決して…ない」は強い否定。肯定文では使わない（「決して行く」は誤り）。「絶対に」より改まった書き言葉寄り。",
+   "contrast": "決して（否定全面化・書き言葉）／絶対に（口語・肯定否定両可）／断じて（強い決意・漢文調）。",
+   "judge": [
+    {
+     "q": "「決して」は肯定文でも使える。",
+     "ans": false,
+     "exp": "原則として否定と呼応する。「決して行く」は非文。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "hatashite",
+   "group": "te",
+   "level": "N2",
+   "emoji": "🎯",
+   "word": "果たして",
+   "read": "はたして",
+   "surface": "果たして",
+   "status": "確実",
+   "origin": "動詞「果たす」の連用形＋接続助詞「て」。",
+   "originShort": "果たすの連用形＋て",
+   "physical": "果たす。成し遂げる。結果を出す。",
+   "meaning": "果然；果真；究竟（疑问）",
+   "label": "果然／究竟",
+   "engine": "結果の実現が「予想通り」に、疑問文では「本当に…か」の疑念に転用された。",
+   "examples": [
+    {
+     "jp": "果たして思ったとおりだった。",
+     "cn": "果然不出所料。",
+     "src": "moji"
+    },
+    {
+     "jp": "これは果たして本物だろうか。",
+     "cn": "这到底是真的吗？",
+     "src": "moji"
+    },
+    {
+     "jp": "果たしてまた会えるだろうか。",
+     "cn": "到底还能再见吗？",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "悪あがき? 果たしてそうだろうか",
+     "en": "A waste? You really think so?",
+     "cn": "垂死挣扎？真的是那样吗？",
+     "media": "Solo Leveling Season 2 -Arise from the Shadow-",
+     "ep": "EP2",
+     "at": "9:39",
+     "url": "https://nadeshiko.co/en/sentence/MTdbfNm92BGc",
+     "audio": "https://cdn.nadeshiko.co/media/176496/2/0d77e8909c.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/176496/2/0d77e8909c.webp"
+    }
+   ],
+   "note": "肯定文＝予想通り（やはりに近い）、疑問文＝疑念（本当に…か）。書き言葉寄り。",
+   "contrast": "果たして（予想通り／疑問の疑念）／やはり（予想通り）／本当に（素朴な確認）。",
+   "judge": [
+    {
+     "q": "「果たして」は疑問文で「本当に…か」の疑念を表すことができる。",
+     "ans": true,
+     "exp": "「果たして本物だろうか」が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "shitagatte",
+   "group": "te",
+   "level": "N2",
+   "emoji": "🧮",
+   "word": "したがって",
+   "read": "したがって",
+   "surface": "したがって",
+   "status": "確実",
+   "origin": "動詞「従う」の連用形＋接続助詞「て」。",
+   "originShort": "従うの連用形＋て",
+   "physical": "後に従う。あとについて行く。",
+   "meaning": "因此；从而（逻辑结论）",
+   "label": "因此／从而",
+   "engine": "前件の帰結として後件が従う、という論理の「だから」。",
+   "examples": [
+    {
+     "jp": "毎日遊んでばかりいる。したがって、学校の成績も悪い。",
+     "cn": "每天光顾着玩，因此成绩也不好。",
+     "src": "moji"
+    },
+    {
+     "jp": "そういうわけだから、したがって彼にも責任がある。",
+     "cn": "正因如此，他也有责任。",
+     "src": "moji"
+    },
+    {
+     "jp": "参加者は全員出席する。したがって、会場を変更する必要はない。",
+     "cn": "参加者全部出席，因此无需更改会场。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "したがって君には協力しかねる",
+     "en": "Therefore, we cannot cooperate with you.",
+     "cn": "因此，我无法协助你。",
+     "media": "My Teen Romantic Comedy SNAFU Climax!",
+     "ep": "EP8",
+     "at": "0:10",
+     "url": "https://nadeshiko.co/en/sentence/N0-Pajd3nlHM",
+     "audio": "https://cdn.nadeshiko.co/media/108489/8/b351d5cb14.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/108489/8/b351d5cb14.webp"
+    }
+   ],
+   "note": "接続詞・書き言葉。会話では「だから」「ですから」。漢字「従って」も使う。",
+   "contrast": "したがって（論理帰結・書き言葉）／だから（口語）／ゆえに（硬い・原因）。",
+   "pitfall": "Nadeshiko の「したがっていた」は動詞「従う」の過去進行（〜したがっていた）で、接続詞「したがって」ではない。",
+   "judge": [
+    {
+     "q": "「したがって」は話し言葉で「だから」よりくだけた表現だ。",
+     "ans": false,
+     "exp": "逆。したがっては書き言葉・論理的な帰結。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "hiitewa",
+   "group": "te",
+   "level": "N1",
+   "emoji": "🌊",
+   "word": "ひいては",
+   "read": "ひいては",
+   "surface": "ひいては",
+   "status": "確実",
+   "origin": "動詞「引く」の連用形＋接続助詞「て」＋係助詞「は」。",
+   "originShort": "引くの連用形＋て＋は",
+   "physical": "引き延ばす。波及させる。",
+   "meaning": "进而；乃至；最终关系到",
+   "label": "进而／乃至",
+   "engine": "小さい範囲から大きい範囲へ波及させる。A→B→C と階段を上がる。",
+   "examples": [
+    {
+     "jp": "アジアの平和、ひいては世界の平和に尽くしたい。",
+     "cn": "愿为亚洲和平乃至世界和平贡献力量。",
+     "src": "moji"
+    },
+    {
+     "jp": "個人の健康は、ひいては社会全体の活力につながる。",
+     "cn": "个人健康进而关系到整个社会的活力。",
+     "src": "self"
+    },
+    {
+     "jp": "一社の倒産が、ひいては業界全体の信用を揺るがした。",
+     "cn": "一家公司倒闭，进而动摇了整个行业的信用。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ひいては 日本ボクシングの向上につながる",
+     "en": "as well as the advancement of Japan's boxing.",
+     "cn": "进而关系到日本拳击水平的提升。",
+     "media": "Hajime no Ippo: The Fighting!",
+     "ep": "EP60",
+     "at": "16:10",
+     "url": "https://nadeshiko.co/en/sentence/nqlrU_T6Ag6O",
+     "audio": "https://cdn.nadeshiko.co/media/263/60/82666b85b3.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/263/60/82666b85b3.webp"
+    }
+   ],
+   "note": "書き言葉。A、ひいてはB＝Aだけでなく、さらに広いBにも。後件はより大きな範囲・影響。",
+   "contrast": "ひいては（波及の階段）／さらには（単純な追加）／果ては（極端な結末）。",
+   "judge": [
+    {
+     "q": "「ひいては」は小さい範囲から大きい範囲へ波及する関係を表す。",
+     "ans": true,
+     "exp": "「個人→社会」「アジア→世界」の階段が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "oshinabete",
+   "group": "te",
+   "level": "N1",
+   "emoji": "📊",
+   "word": "おしなべて",
+   "read": "おしなべて",
+   "surface": "おしなべて",
+   "status": "確実",
+   "origin": "動詞「押し並べる」の連用形＋接続助詞「て」。",
+   "originShort": "押し並べるの連用形＋て",
+   "physical": "全部を押し並べる。一列に並べて眺める。",
+   "meaning": "普遍地；总体来看；一律",
+   "label": "普遍地／总体来看",
+   "engine": "対象を一列に並べて全体を眺める動作が、「例外なく一様に」の評価に転用された。",
+   "examples": [
+    {
+     "jp": "今年の新入生はおしなべて礼儀正しい。",
+     "cn": "今年的新生总体上都很有礼貌。",
+     "src": "self"
+    },
+    {
+     "jp": "おしなべて言えば、この地域の水はきれいだ。",
+     "cn": "总体而言，这一带的水很干净。",
+     "src": "self"
+    },
+    {
+     "jp": "その年の作柄はおしなべて良好だった。",
+     "cn": "那一年的收成普遍良好。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "今いる僕らは所詮 皆 おしなべて「15世紀の人」だ",
+     "en": "they'll merely see us all as people from the fifteenth century.",
+     "cn": "我们这些人都一样，终究是“15世纪的人”。",
+     "media": "Orb: On the Movements of the Earth",
+     "ep": "EP23",
+     "at": "12:43",
+     "url": "https://nadeshiko.co/en/sentence/sdmhP8-n_ije",
+     "audio": "https://cdn.nadeshiko.co/media/151514/23/60d19510d1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/151514/23/60d19510d1.webp"
+    }
+   ],
+   "note": "書き言葉・硬い。会話では「全体に」「だいたい」。総じて＝結論寄り、概して＝傾向寄り、おしなべて＝例外なしの一様性。",
+   "contrast": "おしなべて（例外なく一様）／総じて（全体をまとめた結論）／概して（大体の傾向）。",
+   "judge": [
+    {
+     "q": "「おしなべて」は例外を認めず、全体を一様にまとめる。",
+     "ans": true,
+     "exp": "「押し並べる」の全体視が残る。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「例外なく一様に」の含みが最も強いのは？",
+     "opts": [
+      "おしなべて",
+      "総じて",
+      "概して",
+      "ひいては"
+     ],
+     "ans": 0,
+     "exp": "おしなべて＝全部を並べて一様。総じて・概しては「まとめると」の結論寄り。"
+    }
+   ]
+  },
+  {
+   "id": "subete",
+   "group": "te",
+   "level": "N3",
+   "emoji": "🌐",
+   "word": "全て",
+   "read": "すべて",
+   "surface": "すべて",
+   "status": "通説",
+   "origin": "動詞「統ぶ（すぶ）／統べる（すべる）」の連用形に接続助詞「て」が付いた語、というのが通説。",
+   "originShort": "統べるの連用形＋て",
+   "physical": "多くの物を一つにまとめる。統べる。",
+   "meaning": "全部；一切；所有",
+   "label": "全部／一切",
+   "engine": "「一つにまとめる」動作が、残さず全部の意味に固定した。名詞・副詞の両用法がある。",
+   "examples": [
+    {
+     "jp": "これですべてを失った。",
+     "cn": "就这样失去了一切。",
+     "src": "moji"
+    },
+    {
+     "jp": "すべては神の意志のまま。",
+     "cn": "一切遵从神的旨意。",
+     "src": "moji"
+    },
+    {
+     "jp": "すべての人に平等な機会を与えるべきだ。",
+     "cn": "应该给所有人平等的机会。",
+     "src": "self"
+    },
+    {
+     "jp": "すべてが終わった。",
+     "cn": "一切都结束了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "もうすぐ 全てが始まり 全てが終わる",
+     "en": "The end of everything shall begin soon.",
+     "cn": "很快，一切将开始，一切将结束。",
+     "media": "PLUTO",
+     "ep": "EP8",
+     "at": "30:13",
+     "url": "https://nadeshiko.co/en/sentence/r83rA4fWSrYv",
+     "audio": "https://cdn.nadeshiko.co/media/99088/8/5d7b2f87b2.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/99088/8/5d7b2f87b2.webp"
+    }
+   ],
+   "note": "「全て」は動詞「統べる」の連用形＋てに由来するという通説がある。ただし現代語では名詞・副詞として完全に自立し、動詞の画面はほぼ消えている。",
+   "contrast": "全て（書き言葉・全体）／全部（口語・数量）／一切（否定・全面）。",
+   "judge": [
+    {
+     "q": "「全て」は動詞「統べる」の連用形＋てに由来する、というのが通説だ。",
+     "ans": true,
+     "exp": "通説。統べる＝一つにまとめる、が「残さず全部」に転じた。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「全て」の語源として最も支持されているのは？",
+     "opts": [
+      "統べるの連用形＋て",
+      "漢語「全」＋て",
+      "動詞「全てる」の終止形",
+      "名詞「総」＋て"
+     ],
+     "ans": 0,
+     "exp": "統ぶ・統べるの連用形＋て、というのが語源辞典の通説。"
+    }
+   ]
+  },
+  {
+   "id": "tsumari",
+   "group": "renyo",
+   "level": "N3",
+   "emoji": "🧩",
+   "word": "つまり",
+   "read": "つまり",
+   "surface": "つまり",
+   "status": "確実",
+   "origin": "動詞「詰まる」の連用形「詰まり」が名詞化し、接続詞・副詞として固定した語。",
+   "originShort": "詰まるの連用形の名詞化",
+   "physical": "隙間なく詰まる。行き詰まる。",
+   "meaning": "也就是说；总之；归根结底",
+   "label": "也就是说／总之",
+   "engine": "話が行き詰まった先の一点が「結論」。そこから「言い換えると」「要するに」の機能語になった。",
+   "examples": [
+    {
+     "jp": "つまり、失敗だった。",
+     "cn": "总之，是失败了。",
+     "src": "moji"
+    },
+    {
+     "jp": "つまり君は、彼の話を信じていないということだ。",
+     "cn": "也就是说，你不相信他的话。",
+     "src": "self"
+    },
+    {
+     "jp": "つまり、最初からやり直すしかない。",
+     "cn": "总之，只能从头再来。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "作る... つまり...",
+     "en": "Make? You mean...",
+     "cn": "做……也就是说……",
+     "media": "The Apothecary Diaries",
+     "ep": "EP2",
+     "at": "13:31",
+     "url": "https://nadeshiko.co/en/sentence/RHWahID17uv_",
+     "audio": "https://cdn.nadeshiko.co/media/161645/2/a2b22e2369.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/161645/2/a2b22e2369.webp"
+    }
+   ],
+   "note": "「詰まり」の名詞用法（とどのつまり＝行き止まり）も残る。副詞・接続詞としては文頭に置き、前の話を受けて言い換える。",
+   "contrast": "つまり（会話・言い換え）／すなわち（定義・硬い）／要するに（まとめ）。",
+   "judge": [
+    {
+     "q": "「つまり」は動詞「詰まる」の連用形が名詞化した語だ。",
+     "ans": true,
+     "exp": "詰まり→つまり。行き詰まった結論の意味。"
+    },
+    {
+     "q": "「つまり」は漢語「詰」に「に」が付いた副詞だ。",
+     "ans": false,
+     "exp": "漢語＋にではない。和語の動詞連用形の名詞化。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "shikirini",
+   "group": "joshi",
+   "level": "N1",
+   "emoji": "🔔",
+   "word": "しきりに",
+   "read": "しきりに",
+   "surface": "しきりに",
+   "status": "通説",
+   "origin": "動詞「頻る（しきる）」の連用形＋「に」。形容動詞「頻りなり」の連用形でもある。",
+   "originShort": "頻る（しきる）の連用形＋に",
+   "physical": "同じことが何度も続いて起きる。",
+   "meaning": "频繁地；不断地；一个劲儿地",
+   "label": "频繁地／不断地",
+   "engine": "反復の密度が高い状態が、頻度副詞として固定した。",
+   "examples": [
+    {
+     "jp": "彼はしきりにうなずいた。",
+     "cn": "他频频点头。",
+     "src": "moji"
+    },
+    {
+     "jp": "しきりに時計を見る。",
+     "cn": "一个劲儿地看表。",
+     "src": "self"
+    },
+    {
+     "jp": "彼はしきりに何か言いたそうだった。",
+     "cn": "他好像一直想说些什么。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "しきりに目配せしてますけど",
+     "en": "You've been staring so intently into one another's eyes...",
+     "cn": "一直在使眼色呢。",
+     "media": "Puella Magi Madoka Magica",
+     "ep": "EP2",
+     "at": "7:43",
+     "url": "https://nadeshiko.co/en/sentence/5_wnxlYzeYDj",
+     "audio": "https://cdn.nadeshiko.co/media/9756/2/2c16ca523b.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/9756/2/2c16ca523b.webp"
+    }
+   ],
+   "note": "書き言葉寄り。会話では「何度も」「ずっと」。しきりに＋動詞で、反復の多さを強調する。",
+   "contrast": "しきりに（反復の密度）／頻繁に（中立的・書き言葉）／何度も（口語）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "amari",
+   "group": "renyo",
+   "level": "N4",
+   "emoji": "⚖️",
+   "word": "あまり",
+   "read": "あまり",
+   "surface": "あまり",
+   "status": "確実",
+   "origin": "動詞「余る」の連用形「余り」の名詞化・副詞化。",
+   "originShort": "余るの連用形の名詞化",
+   "physical": "余る。残る。度を越して余りが出る。",
+   "meaning": "太；过于；（否定）不太…",
+   "label": "太／不太",
+   "engine": "余剰が度を越すことから、程度の超過へ。否定と呼応すると「それほど…ない」の控えめな否定になる。",
+   "examples": [
+    {
+     "jp": "喜びのあまり、声を上げて泣いた。",
+     "cn": "因为太高兴，放声哭了出来。",
+     "src": "moji"
+    },
+    {
+     "jp": "あまり食べたくない。",
+     "cn": "不太想吃。",
+     "src": "moji"
+    },
+    {
+     "jp": "あまりにも静かで、かえって不安になった。",
+     "cn": "太安静了，反而让人不安。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "あまり目立ちすぎると...",
+     "en": "And if he's too conspicuous...",
+     "cn": "太显眼的话……",
+     "media": "Re:ZERO -Starting Life in Another World-",
+     "ep": "EP3",
+     "at": "18:44",
+     "url": "https://nadeshiko.co/en/sentence/NfuOwUP-Lf-4",
+     "audio": "https://cdn.nadeshiko.co/media/21355/3/4fba737c83.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21355/3/4fba737c83.webp"
+    }
+   ],
+   "note": "「あまり＋否定」で「不太…」。「あまりにも」は程度の強調。「余り」の名詞用法（余りを貯金する）も残る。",
+   "contrast": "あまり（控えめな否定・過剰）／とても（強い肯定）／あまりにも（程度の強調）。",
+   "judge": [
+    {
+     "q": "「あまり」は「余る」の連用形に由来し、程度の超過を表す。",
+     "ans": true,
+     "exp": "余剰→度を越す→程度副詞。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「あまり高くない」の「あまり」の働きは？",
+     "opts": [
+      "程度を控えめに否定する",
+      "程度を強く肯定する",
+      "比較の対象を示す",
+      "原因を表す"
+     ],
+     "ans": 0,
+     "exp": "あまり＋否定＝「それほど…ない」。"
+    }
+   ]
+  },
+  {
+   "id": "ikioi",
+   "group": "renyo",
+   "level": "N1",
+   "emoji": "🌪️",
+   "word": "いきおい",
+   "read": "いきおい",
+   "surface": "いきおい",
+   "status": "通説",
+   "origin": "動詞「勢う（いきおう）」の連用形から、というのが通説。名詞「勢い」と同形。",
+   "originShort": "勢う（いきおう）の連用形",
+   "physical": "勢いがつく。勢いに乗る。",
+   "meaning": "势必；自然而然；不由得",
+   "label": "势必／自然而然",
+   "engine": "勢いの帰結として、避けられない展開になる。名詞「勢い」の画面が残る副詞。",
+   "examples": [
+    {
+     "jp": "安いからといって、いきおい買いすぎてしまう。",
+     "cn": "因为便宜，不由得买多了。",
+     "src": "self"
+    },
+    {
+     "jp": "周りが騒がしいと、いきおい声も大きくなる。",
+     "cn": "周围一吵，声音自然也就大了。",
+     "src": "self"
+    },
+    {
+     "jp": "いきおい、口調も強くなった。",
+     "cn": "语气不由得也变强了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "書き言葉寄り。名詞「勢い」＋で（勢いで）とは別。副詞「いきおい」は「その勢いで／必然的に」の含み。",
+   "contrast": "いきおい（勢いの帰結・副詞）／勢いで（名詞＋で）／必然的に（論理的な帰結）。",
+   "pitfall": "Nadeshiko の「勢いで送信」は名詞「勢い」＋で。副詞「いきおい」ではない。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "wariai",
+   "group": "renyo",
+   "level": "N2",
+   "emoji": "📐",
+   "word": "割合",
+   "read": "わりあい",
+   "surface": "割合",
+   "status": "通説",
+   "origin": "動詞「割り合う」の名詞形「割合」。純粋な連用形ではなく、名詞からの副詞用法。",
+   "originShort": "割り合うの名詞形",
+   "physical": "割合に合わせる。比率を比べる。",
+   "meaning": "比较地；意外地；比例",
+   "label": "比较地／比例",
+   "engine": "比率を基準に物事を見ることから、「他のものと比べて」「割に」の評価副詞へ。",
+   "examples": [
+    {
+     "jp": "若い割合にしっかりしている。",
+     "cn": "虽然年轻，却相当稳重。",
+     "src": "moji"
+    },
+    {
+     "jp": "この子は割合と勉強する。",
+     "cn": "这个孩子比较用功。",
+     "src": "moji"
+    },
+    {
+     "jp": "今日は割合に暖かい。",
+     "cn": "今天比较暖和。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "俺は 割合 普通だし。",
+     "en": "but I'm relatively normal, I think.",
+     "cn": "我算是比较普通的吧。",
+     "media": "Call of the Night Season 2",
+     "ep": "EP12",
+     "at": "8:50",
+     "url": "https://nadeshiko.co/en/sentence/U1Lkw8dkQow5",
+     "audio": "https://cdn.nadeshiko.co/media/175914/12/1572a25ff5.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/175914/12/1572a25ff5.webp"
+    }
+   ],
+   "note": "「割合に」「割合と」の形で副詞。名詞「割合」（男女の割合）とは別。話し言葉では「割に」が近い。",
+   "contrast": "割合に（比較的・やや硬い）／割に（口語）／意外に（予想外）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "toriwake",
+   "group": "renyo",
+   "level": "N2",
+   "emoji": "🔍",
+   "word": "とりわけ",
+   "read": "とりわけ",
+   "surface": "とりわけ",
+   "status": "確実",
+   "origin": "動詞「取り分ける」の連用形「取り分け」。",
+   "originShort": "取り分けるの連用形",
+   "physical": "全体から取り分ける。別に選び出す。",
+   "meaning": "特别；尤其",
+   "label": "特别／尤其",
+   "engine": "全体から一つを取り分けて焦点を当てる。そこから「特に」の強調副詞へ。",
+   "examples": [
+    {
+     "jp": "今夏はとりわけ暑い。",
+     "cn": "今年夏天特别热。",
+     "src": "moji"
+    },
+    {
+     "jp": "参加者の中でも、とりわけ彼の意見は鋭かった。",
+     "cn": "在参加者中，他的意见尤其尖锐。",
+     "src": "self"
+    },
+    {
+     "jp": "彼はとりわけ音楽を愛していた。",
+     "cn": "他尤其热爱音乐。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "とりわけ ドリブルが大好きで",
+     "en": "He especially loved dribbling.",
+     "cn": "尤其喜欢盘带。",
+     "media": "BLUE LOCK",
+     "ep": "EP19",
+     "at": "13:34",
+     "url": "https://nadeshiko.co/en/sentence/S4Rw3rxtj-GS",
+     "audio": "https://cdn.nadeshiko.co/media/137822/19/07c6c10e9a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/137822/19/07c6c10e9a.webp"
+    }
+   ],
+   "note": "「特に」より改まった書き言葉。後件は「他と比べて際立つ」内容。",
+   "contrast": "とりわけ（際立ち・書き言葉）／特に（中立）／殊に（より硬い）。",
+   "judge": [
+    {
+     "q": "「とりわけ」は「取り分ける」の連用形に由来する。",
+     "ans": true,
+     "exp": "全体から取り分けて焦点化する動作が語源。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "kanegane",
+   "group": "renyo",
+   "level": "N1",
+   "emoji": "👂",
+   "word": "かねがね",
+   "read": "かねがね",
+   "surface": "かねがね",
+   "status": "確実",
+   "origin": "動詞「兼ねる」の連用形「兼ね」の重ね「兼ね兼ね」。",
+   "originShort": "兼ねるの連用形の重ね",
+   "physical": "兼ねる。前もって備える。",
+   "meaning": "早就；以前から何度も；久仰",
+   "label": "早就／久仰",
+   "engine": "「前もって」の反復が、「以前から何度も聞いている」という丁寧な前置きに固定した。",
+   "examples": [
+    {
+     "jp": "お名前はかねがね存じ上げております。",
+     "cn": "久仰大名。",
+     "src": "moji"
+    },
+    {
+     "jp": "うわさはかねがね聞いています。",
+     "cn": "您的传闻我早就听说了。",
+     "src": "moji"
+    },
+    {
+     "jp": "かねがね伺っておりました。",
+     "cn": "早就想请教了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "いやー うわさは かねがね聞いてますよー",
+     "en": "I've heard all sorts of rumors about you.",
+     "cn": "哎呀，你的传闻我早就听说了。",
+     "media": "The Disastrous Life of Saiki K.",
+     "ep": "EP4",
+     "at": "2:52",
+     "url": "https://nadeshiko.co/en/sentence/cI_ZucqLysPw",
+     "audio": "https://cdn.nadeshiko.co/media/21804/4/ae3fe33c87.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/21804/4/ae3fe33c87.webp"
+    }
+   ],
+   "note": "「かねて」は「以前から」の状態、「かねがね」は「以前から何度も」の反復。あいさつ・手紙の丁寧句として使う。",
+   "contrast": "かねがね（反復・丁寧な前置き）／かねて（以前から）／前々から（口語）。",
+   "judge": [
+    {
+     "q": "「かねがね」は「兼ねる」の連用形の重ねに由来する。",
+     "ans": true,
+     "exp": "兼ね＋兼ね→かねがね。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "taezu",
+   "group": "joshi",
+   "level": "N1",
+   "emoji": "♾️",
+   "word": "たえず",
+   "read": "たえず",
+   "surface": "たえず",
+   "status": "確実",
+   "origin": "動詞「絶える」の連用形＋打消の助動詞「ず」。",
+   "originShort": "絶えるの連用形＋ず",
+   "physical": "絶える。途切れる。",
+   "meaning": "不断地；经常；无休止地",
+   "label": "不断地／经常",
+   "engine": "「絶えない」という否定が、途切れない連続の副詞に固定した。",
+   "examples": [
+    {
+     "jp": "地球は絶えず自転している。",
+     "cn": "地球不停地自转。",
+     "src": "moji"
+    },
+    {
+     "jp": "彼は絶えず新しいアイデアを出している。",
+     "cn": "他不断提出新的想法。",
+     "src": "self"
+    },
+    {
+     "jp": "たえず変化する市場に対応する。",
+     "cn": "应对不断变化的市场。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "絶えず銃声が響き",
+     "en": "Gunshots were constant,",
+     "cn": "枪声不断响起。",
+     "media": "T・P BON",
+     "ep": "EP10",
+     "at": "5:35",
+     "url": "https://nadeshiko.co/en/sentence/m8PL-4S5BMFR",
+     "audio": "https://cdn.nadeshiko.co/media/169930/10/19243f80ef.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/169930/10/19243f80ef.webp"
+    }
+   ],
+   "note": "書き言葉。会話では「ずっと」「絶え間なく」。連用形＋ずの形が副詞として固定した例。",
+   "contrast": "たえず（途切れない連続）／常に（いつも）／絶え間なく（より具体的な連続）。",
+   "judge": [
+    {
+     "q": "「たえず」は「絶える」の連用形＋ずに由来する。",
+     "ans": true,
+     "exp": "絶え＋ず→たえず。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "shimijimi",
+   "group": "renyo",
+   "level": "N1",
+   "emoji": "🍵",
+   "word": "しみじみ",
+   "read": "しみじみ",
+   "surface": "しみじみ",
+   "status": "通説",
+   "origin": "動詞「染みる」の連用形「しみ」の重ね＋濁音化「しみじみ」。",
+   "originShort": "染みるの連用形の重ね",
+   "physical": "染み込む。芯まで浸透する。",
+   "meaning": "深切地；痛切地；感慨地",
+   "label": "深切地／感慨地",
+   "engine": "染み入る感覚が、感情の深さ・実感の強さに転用された。",
+   "examples": [
+    {
+     "jp": "しみじみと感じる。",
+     "cn": "深切地感受到。",
+     "src": "moji"
+    },
+    {
+     "jp": "外国語の必要をしみじみ感じる。",
+     "cn": "深感外语的必要。",
+     "src": "moji"
+    },
+    {
+     "jp": "しみじみとうまい。",
+     "cn": "真是好吃得让人感慨。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "しみじみ うれしいな",
+     "en": "I'm so happy.",
+     "cn": "真是由衷地高兴啊。",
+     "media": "Kimi ni Todoke: From Me to You",
+     "ep": "EP1",
+     "at": "6:18",
+     "url": "https://nadeshiko.co/en/sentence/Y4VB0GTW5FBs",
+     "audio": "https://cdn.nadeshiko.co/media/6045/1/137653d8cc.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/6045/1/137653d8cc.webp"
+    }
+   ],
+   "note": "「しみじみとする」「しみじみと＋動詞」の形が多い。つくづくと近いが、しみじみは感情の沁み込み、つくづくは認識の深さ。",
+   "contrast": "しみじみ（感情の沁み込み）／つくづく（認識の深さ）／じんわり（身体感覚）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "tsukuzuku",
+   "group": "renyo",
+   "level": "N1",
+   "emoji": "🪡",
+   "word": "つくづく",
+   "read": "つくづく",
+   "surface": "つくづく",
+   "status": "通説",
+   "origin": "動詞「突く」の連用形「つく」の重ね＋濁音化「つくづく」。",
+   "originShort": "突くの連用形の重ね",
+   "physical": "突く。何度も突き刺す。",
+   "meaning": "痛切地；深切地；仔细地",
+   "label": "痛切地／深切地",
+   "engine": "反復の突きが、認識の深さ・痛感に転用された。",
+   "examples": [
+    {
+     "jp": "つくづく嫌になる。",
+     "cn": "深感厌烦。",
+     "src": "moji"
+    },
+    {
+     "jp": "つくづく考える。",
+     "cn": "仔细思考。",
+     "src": "moji"
+    },
+    {
+     "jp": "最近、つくづく思う。",
+     "cn": "最近深切地感到。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "最近 つくづく思う",
+     "en": "Lately, I've become keenly aware...",
+     "cn": "最近我深切地感到。",
+     "media": "Oshi No Ko",
+     "ep": "EP8",
+     "at": "9:31",
+     "url": "https://nadeshiko.co/en/sentence/gkvZtFRB_-pF",
+     "audio": "https://cdn.nadeshiko.co/media/150672/8/7f844d6054.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/150672/8/7f844d6054.webp"
+    }
+   ],
+   "note": "「つくづく思う」「つくづく嫌になる」の型。しみじみより認識・判断寄り。",
+   "contrast": "つくづく（認識・痛感）／しみじみ（感情・沁み込み）／よくよく（慎重・反復）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "masumasu",
+   "group": "renyo",
+   "level": "N3",
+   "emoji": "📶",
+   "word": "ますます",
+   "read": "ますます",
+   "surface": "ますます",
+   "status": "確実",
+   "origin": "動詞「増す」の連用形「まし」の重ね（音変化でますます）。",
+   "originShort": "増すの連用形の重ね",
+   "physical": "増す。量・程度が加わる。",
+   "meaning": "越来越；更加",
+   "label": "越来越／更加",
+   "engine": "増加の反復が、程度の累加を表す副詞に固定した。",
+   "examples": [
+    {
+     "jp": "ますます勉強する。",
+     "cn": "更加用功。",
+     "src": "moji"
+    },
+    {
+     "jp": "雨はますます激しくなった。",
+     "cn": "雨越下越大。",
+     "src": "moji"
+    },
+    {
+     "jp": "彼の存在はますます大きくなった。",
+     "cn": "他的存在感越来越大。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "ますます ややこしくなるね",
+     "en": "Things are getting more complicated by the minute.",
+     "cn": "越来越复杂了呢。",
+     "media": "Kill la Kill",
+     "ep": "EP11",
+     "at": "20:46",
+     "url": "https://nadeshiko.co/en/sentence/bM27hpwKVoQL",
+     "audio": "https://cdn.nadeshiko.co/media/18679/11/0f34a3d1ac.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/18679/11/0f34a3d1ac.webp"
+    }
+   ],
+   "note": "漢字「益々」は当て字。話し言葉では「どんどん」「だんだん」も使うが、ますますは「程度の累加」に焦点。",
+   "contrast": "ますます（程度の累加）／いよいよ（局面の切迫）／だんだん（段階的変化）。",
+   "judge": [
+    {
+     "q": "「ますます」は「増す」の連用形の重ねに由来する。",
+     "ans": true,
+     "exp": "増し＋増し→ますます。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "ariarito",
+   "group": "joshi",
+   "level": "N1",
+   "emoji": "👁️",
+   "word": "ありありと",
+   "read": "ありありと",
+   "surface": "ありありと",
+   "status": "確実",
+   "origin": "動詞「有り」の重ね「有り有り」＋「と」。",
+   "originShort": "有りの重ね＋と",
+   "physical": "そこに有る。存在する。",
+   "meaning": "清清楚楚；历历在目；显然",
+   "label": "清清楚楚／历历在目",
+   "engine": "存在の反復が、眼前性の強調に転用された。記憶・光景が「今そこにある」ように感じる。",
+   "examples": [
+    {
+     "jp": "子供のころの思い出がありありと浮かんできた。",
+     "cn": "儿时的回忆历历在目。",
+     "src": "moji"
+    },
+    {
+     "jp": "その場面がありありと目に浮かぶ。",
+     "cn": "那个场面清清楚楚地浮现在眼前。",
+     "src": "self"
+    },
+    {
+     "jp": "彼の驚いた顔がありありと想像できる。",
+     "cn": "能清楚地想象出他吃惊的表情。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "その瞬間が ありありと分かる",
+     "en": "vividly capturing this one moment.",
+     "cn": "那一瞬间历历在目。",
+     "media": "Mushoku Tensei: Jobless Reincarnation Cour 2",
+     "ep": "EP9",
+     "at": "5:11",
+     "url": "https://nadeshiko.co/en/sentence/VIXegguEJJIF",
+     "audio": "https://cdn.nadeshiko.co/media/127720/9/e7e94ffbfe.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/127720/9/e7e94ffbfe.webp"
+    }
+   ],
+   "note": "「ありありと＋目に浮かぶ／分かる／想像できる」の型。漢字「有り有り」は普通書かない。",
+   "contrast": "ありありと（眼前性・記憶）／はっきりと（明瞭性）／まざまざと（再現性の強調）。",
+   "judge": [
+    {
+     "q": "「ありありと」は動詞「有り」の重ね＋とで、存在の明瞭さを表す。",
+     "ans": true,
+     "exp": "有り＋有り＋と。記憶が「有る」ように感じる。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "ikiikito",
+   "group": "joshi",
+   "level": "N2",
+   "emoji": "🌿",
+   "word": "いきいきと",
+   "read": "いきいきと",
+   "surface": "いきいきと",
+   "status": "確実",
+   "origin": "動詞「生きる」の連用形「生き」の重ね「生き生き」＋「と」。",
+   "originShort": "生きるの連用形の重ね＋と",
+   "physical": "生きる。生命が滿ちている。",
+   "meaning": "生动地；生气勃勃；栩栩如生",
+   "label": "生动地／生气勃勃",
+   "engine": "生命の反復が、生き生きした様態の副詞になった。人・表情・描写の三者に使う。",
+   "examples": [
+    {
+     "jp": "生き生きとした表情。",
+     "cn": "生动的表情。",
+     "src": "moji"
+    },
+    {
+     "jp": "子どもたちはいきいきと遊んでいる。",
+     "cn": "孩子们生气勃勃地玩耍。",
+     "src": "self"
+    },
+    {
+     "jp": "その絵は魚の動きをいきいきと描いている。",
+     "cn": "那幅画生动地描绘了鱼的动作。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "なんかふだんより 生き生きしてる?",
+     "en": "He seems different than usual...",
+     "cn": "总觉得比平时更有活力？",
+     "media": "Can a Boy-Girl Friendship Survive?",
+     "ep": "EP2",
+     "at": "13:43",
+     "url": "https://nadeshiko.co/en/sentence/f-mK6RDwj_8U",
+     "audio": "https://cdn.nadeshiko.co/media/153554/2/e71db2cafb.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/153554/2/e71db2cafb.webp"
+    }
+   ],
+   "note": "「生き生きとする」「生き生きと＋動詞」の両方。漢字「生き生き」は重ねた連用形で、動詞の画面が残る。",
+   "contrast": "いきいきと（生命力）／生き生きした（連体）／活発に（行動の活発さ）。",
+   "judge": [],
+   "quizzes": []
+  },
+  {
+   "id": "osoraku",
+   "group": "joshi",
+   "level": "N3",
+   "emoji": "🔮",
+   "word": "おそらく",
+   "read": "おそらく",
+   "surface": "おそらく",
+   "status": "確実",
+   "origin": "動詞「恐る」のク語法「恐らく」。ク語法は「〜く」で名詞化する古い活用。",
+   "originShort": "恐るのク語法",
+   "physical": "恐れる。おそれる。",
+   "meaning": "恐怕；大概；很可能",
+   "label": "恐怕／大概",
+   "engine": "「恐れる」の名詞化が、推量の副詞に固定した。後件は推量・判断が多い。",
+   "examples": [
+    {
+     "jp": "恐らく雨になるでしょう。",
+     "cn": "恐怕要下雨吧。",
+     "src": "moji"
+    },
+    {
+     "jp": "恐らく不可能だろう。",
+     "cn": "恐怕办不到吧。",
+     "src": "moji"
+    },
+    {
+     "jp": "それはおそらく間違いだ。",
+     "cn": "那大概是错的。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "あれは おそらく マナタイトヒュドラです。",
+     "en": "It's most likely a manatite hydra.",
+     "cn": "那恐怕是魔石九头蛇。",
+     "media": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+     "ep": "EP10",
+     "at": "8:27",
+     "url": "https://nadeshiko.co/en/sentence/SM2brcIFzMOJ",
+     "audio": "https://cdn.nadeshiko.co/media/166873/10/ca78cefac9.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/166873/10/ca78cefac9.webp"
+    }
+   ],
+   "note": "ク語法は「恐る→恐らく」「願ふ→願わくは」のように、動詞を名詞化して副詞にする古い装置。おそらくはその生き残り。",
+   "contrast": "おそらく（推量・書き言葉）／たぶん（口語）／きっと（確信寄り）。",
+   "judge": [
+    {
+     "q": "「おそらく」は動詞「恐る」のク語法に由来する。",
+     "ans": true,
+     "exp": "恐る＋く→恐らく→おそらく。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "iwaba",
+   "group": "joshi",
+   "level": "N2",
+   "emoji": "💬",
+   "word": "言わば",
+   "read": "いわば",
+   "surface": "言わば",
+   "status": "確実",
+   "origin": "動詞「言う」の未然形「言わ」＋接続助詞「ば」。",
+   "originShort": "言うの未然形＋ば",
+   "physical": "言う。言葉にする。",
+   "meaning": "可以说；说起来；譬如说",
+   "label": "可以说／说起来",
+   "engine": "「言うならば」の仮定が、比喩・言い換えの導入に固定した。",
+   "examples": [
+    {
+     "jp": "彼は言わば業界の救世主だ。",
+     "cn": "他可以说是行业的救世主。",
+     "src": "moji"
+    },
+    {
+     "jp": "言わば、人生の縮図だ。",
+     "cn": "可以说，这是人生的缩影。",
+     "src": "self"
+    },
+    {
+     "jp": "言わば「第二の故郷」だ。",
+     "cn": "可以说是“第二故乡”。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "言わば これは 大人社会の予習です",
+     "en": "This is preparation for the real world, so to speak.",
+     "cn": "可以说，这是成年人社会的预演。",
+     "media": "Assassination Classroom",
+     "ep": "EP5",
+     "at": "15:13",
+     "url": "https://nadeshiko.co/en/sentence/rW1go2FzPrN9",
+     "audio": "https://cdn.nadeshiko.co/media/20755/5/37e0940ebd.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20755/5/37e0940ebd.webp"
+    }
+   ],
+   "note": "書き言葉寄り。会話では「いわば」のまま使うことも多い。後件は比喩・言い換え・要約。",
+   "contrast": "言わば（比喩・言い換え）／つまり（結論・言い換え）／たとえば（例示）。",
+   "judge": [
+    {
+     "q": "「言わば」は「言う」の未然形＋ばで、比喩・言い換えを導く。",
+     "ans": true,
+     "exp": "言は＋ば→言わば。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "omowazu",
+   "group": "joshi",
+   "level": "N3",
+   "emoji": "😮",
+   "word": "思わず",
+   "read": "おもわず",
+   "surface": "思わず",
+   "status": "確実",
+   "origin": "動詞「思う」の未然形「思わ」＋打消の助動詞「ず」。",
+   "originShort": "思うの未然形＋ず",
+   "physical": "思う。意識する。",
+   "meaning": "不由得；禁不住；情不自禁地",
+   "label": "不由得／禁不住",
+   "engine": "「思わないうちに」＝意識しないうちに、が無意識の反応の副詞に固定した。",
+   "examples": [
+    {
+     "jp": "思わず涙が出た。",
+     "cn": "不由得流下眼泪。",
+     "src": "moji"
+    },
+    {
+     "jp": "思わず本音を漏らした。",
+     "cn": "不由得说出了真心话。",
+     "src": "moji"
+    },
+    {
+     "jp": "あまりにおかしくて思わず笑った。",
+     "cn": "太好笑了，忍不住笑了出来。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "思わず言葉がこぼれて...",
+     "en": "And then those words just slipped out of my mouth.",
+     "cn": "不由得脱口而出……",
+     "media": "The Fragrant Flower Blooms With Dignity",
+     "ep": "EP13",
+     "at": "6:50",
+     "url": "https://nadeshiko.co/en/sentence/RjzCIubOw-s4",
+     "audio": "https://cdn.nadeshiko.co/media/181444/13/91fe4656e6.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/181444/13/91fe4656e6.webp"
+    }
+   ],
+   "note": "未然形＋ずの形。意志の否定が「無意識」に転じた。後件は身体反応・感情の漏出が多い。",
+   "contrast": "思わず（無意識）／つい（うっかり）／自然と（自然発生）。",
+   "judge": [
+    {
+     "q": "「思わず」は「思う」の未然形＋ずで、無意識の反応を表す。",
+     "ans": true,
+     "exp": "思は＋ず→思わず。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "yahari",
+   "group": "hisei",
+   "level": "N4",
+   "emoji": "🪞",
+   "word": "やはり",
+   "read": "やはり",
+   "surface": "やはり",
+   "status": "諸説",
+   "origin": "語源未詳。漢字「矢張り」は当て字。有力説は「やわり（静かにそのまま）」からの音変化で、動詞「張る」由来ではない。",
+   "originShort": "語源未詳・当て字（動詞由来ではない）",
+   "physical": "動かさず、そのままにしておく。静かにじっとしている。",
+   "meaning": "果然；还是；毕竟；仍然",
+   "label": "果然／还是",
+   "engine": "「変化しない状態」が、「予想通り」「やっぱりそうか」の再確認に転用された。",
+   "examples": [
+    {
+     "jp": "君だろうと思ったら、やはりそうだった。",
+     "cn": "我就觉得是你，果然如此。",
+     "src": "moji"
+    },
+    {
+     "jp": "やはり母の料理が一番だ。",
+     "cn": "还是妈妈做的饭最好吃。",
+     "src": "moji"
+    },
+    {
+     "jp": "いくら努力しても、やはり才能には敵わない。",
+     "cn": "再怎么努力，终究敌不过天赋。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "やはり... やはり敵は...",
+     "en": "Just like I thought... When it comes to villains...",
+     "cn": "果然……果然敌人是……",
+     "media": "My Hero Academia: Vigilantes",
+     "ep": "EP4",
+     "at": "9:19",
+     "url": "https://nadeshiko.co/en/sentence/UCkoXv4bivHh",
+     "audio": "https://cdn.nadeshiko.co/media/185736/4/2c7b52e89f.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/185736/4/2c7b52e89f.webp"
+    }
+   ],
+   "note": "「矢張り」は当て字。動詞「張る」の連用形と考えるのは俗説。話し言葉の「やっぱり」はやはりの促音化。",
+   "contrast": "やはり（書き言葉寄り）／やっぱり（口語）／案の定（予想通りの結果）。",
+   "judge": [
+    {
+     "q": "「やはり」は動詞「張る」の連用形に由来する。",
+     "ans": false,
+     "exp": "「矢張り」は当て字。語源は未詳で、動詞「張る」由来ではない。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "ainiku",
+   "group": "hisei",
+   "level": "N2",
+   "emoji": "☔",
+   "word": "あいにく",
+   "read": "あいにく",
+   "surface": "あいにく",
+   "status": "諸説",
+   "origin": "形容詞「あやにく（生憎）」から。近世に「あいにく」へ音変化した。「生」は当て字。「合い憎し」は俗説。",
+   "originShort": "形容詞「あやにく」から（動詞由来ではない）",
+   "physical": "「憎らしい」と感じる。都合が悪い。",
+   "meaning": "不巧；偏偏；不凑巧",
+   "label": "不巧／偏偏",
+   "engine": "「期待に沿わない」評価が、場面の都合の悪さを表す副詞に固定した。",
+   "examples": [
+    {
+     "jp": "あいにくの雨で、試合は中止になった。",
+     "cn": "偏偏下雨，比赛取消了。",
+     "src": "self"
+    },
+    {
+     "jp": "あいにく彼は不在だった。",
+     "cn": "不巧他不在。",
+     "src": "self"
+    },
+    {
+     "jp": "あいにく手持ちが足りない。",
+     "cn": "不巧手头钱不够。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [],
+   "note": "「あいにく」は形容詞由来で、動詞連用形ではない。しかも語尾は「く」で、イ段・エ段ですらない。この一点で「動詞系副詞」の例外だと分かる。",
+   "contrast": "あいにく（都合の悪さ）／残念ながら（評価の表明）／折悪しく（書き言葉）。",
+   "judge": [
+    {
+     "q": "「あいにく」は動詞「合う」＋「憎し」に由来する。",
+     "ans": false,
+     "exp": "元形は「あやにく」で、「生」は当て字。「合い憎し」は俗説。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "sazo",
+   "group": "hisei",
+   "level": "N2",
+   "emoji": "💭",
+   "word": "さぞ",
+   "read": "さぞ",
+   "surface": "さぞ",
+   "status": "確実",
+   "origin": "副詞「さ」＋係助詞「ぞ」。動詞由来ではない。",
+   "originShort": "副詞「さ」＋係助詞「ぞ」",
+   "physical": "（動作の画面はない）",
+   "meaning": "想必；一定…吧",
+   "label": "想必／一定…吧",
+   "engine": "係助詞「ぞ」の強調が、推量の副詞に固定した。後件は推量・想像が多い。",
+   "examples": [
+    {
+     "jp": "さぞお困りのことでしょう。",
+     "cn": "想必您很为难吧。",
+     "src": "moji"
+    },
+    {
+     "jp": "さぞ楽しかったでしょう。",
+     "cn": "想必很开心吧。",
+     "src": "self"
+    },
+    {
+     "jp": "さぞ驚いたことだろう。",
+     "cn": "想必很吃惊吧。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "さぞ痛むだろう... 南無阿弥陀仏",
+     "en": "How painful it must've been... Praise to Amida Buddha.",
+     "cn": "想必很疼吧……南无阿弥陀佛。",
+     "media": "Demon Slayer: Kimetsu no Yaiba",
+     "ep": "EP22",
+     "at": "23:09",
+     "url": "https://nadeshiko.co/en/sentence/lNtcdcRwb9iZ",
+     "audio": "https://cdn.nadeshiko.co/media/101922/22/8688b0460a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/101922/22/8688b0460a.webp"
+    }
+   ],
+   "note": "「さぞ＋推量」の呼応が基本。「さぞかし」は強調形。動詞の画面がないので、動作剥がしの必要すらない。",
+   "contrast": "さぞ（推量・文語調）／きっと（確信）／おそらく（推量）。",
+   "judge": [
+    {
+     "q": "「さぞ」は動詞由来の副詞である。",
+     "ans": false,
+     "exp": "副詞「さ」＋係助詞「ぞ」。動詞は関与しない。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "oono",
+   "group": "hisei",
+   "level": "N2",
+   "emoji": "👥",
+   "word": "おのおの",
+   "read": "おのおの",
+   "surface": "おのおの",
+   "status": "確実",
+   "origin": "名詞「おの」の重ね「各々」。動詞由来ではない。",
+   "originShort": "名詞「おの」の重ね",
+   "physical": "（動作の画面はない）",
+   "meaning": "各自；各位；分别",
+   "label": "各自／分别",
+   "engine": "「それぞれのもの」という名詞が、副詞的に「各自で」の意味で使われる。",
+   "examples": [
+    {
+     "jp": "各々の道を行く。",
+     "cn": "各走各的路。",
+     "src": "moji"
+    },
+    {
+     "jp": "おのおのが意見を述べた。",
+     "cn": "各自发表了意见。",
+     "src": "self"
+    },
+    {
+     "jp": "各々の責任で判断してください。",
+     "cn": "请各自负责判断。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "おのおの 構えろ!",
+     "en": "Everyone, prepare to fire!",
+     "cn": "各自准备！",
+     "media": "Orb: On the Movements of the Earth",
+     "ep": "EP20",
+     "at": "18:16",
+     "url": "https://nadeshiko.co/en/sentence/6vMvS8j87pIS",
+     "audio": "https://cdn.nadeshiko.co/media/151514/20/c498850936.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/151514/20/c498850936.webp"
+    }
+   ],
+   "note": "名詞「おのおの」が副詞的に使われる例。漢字「各々」は重ね字。動詞連用形ではない。",
+   "contrast": "おのおの（改まった・名詞）／それぞれ（口語）／めいめい（やや古風）。",
+   "judge": [
+    {
+     "q": "「おのおの」は動詞「及ぶ」の連用形に由来する。",
+     "ans": false,
+     "exp": "名詞「おの」の重ね。動詞は関与しない。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "genni",
+   "group": "hisei",
+   "level": "N2",
+   "emoji": "👀",
+   "word": "現に",
+   "read": "げんに",
+   "surface": "現に",
+   "status": "確実",
+   "origin": "漢語「現」＋格助詞「に」。動詞連用形ではない。",
+   "originShort": "漢語「現」＋に",
+   "physical": "（動作の画面はない）",
+   "meaning": "实际上；眼下；亲眼",
+   "label": "实际上／眼下",
+   "engine": "「現（げん）」という漢語に「に」が付き、現実・眼前を示す副詞になった。",
+   "examples": [
+    {
+     "jp": "現に私の経験したことだ。",
+     "cn": "这是我实际经历过的事。",
+     "src": "moji"
+    },
+    {
+     "jp": "現にそう言ったじゃないか。",
+     "cn": "刚才不是那样说了吗？",
+     "src": "moji"
+    },
+    {
+     "jp": "現にこの目で見た。",
+     "cn": "我亲眼看到了。",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "現に そうじゃないですか!",
+     "en": "But isn't that a fact?",
+     "cn": "实际上不就是这样吗！",
+     "media": "Your lie in April",
+     "ep": "EP12",
+     "at": "20:09",
+     "url": "https://nadeshiko.co/en/sentence/2qWFHO5YoKHO",
+     "audio": "https://cdn.nadeshiko.co/media/20665/12/76525f1151.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/20665/12/76525f1151.webp"
+    }
+   ],
+   "note": "「現に」は漢語＋に。動詞「現れる」の連用形ではない。証拠を突きつける語感がある。",
+   "contrast": "現に（証拠・眼前）／実際に（実践・実態）／実に（強調）。",
+   "judge": [
+    {
+     "q": "「現に」は漢語「現」＋「に」で、動詞連用形ではない。",
+     "ans": true,
+     "exp": "漢語副詞。動詞「現れる」とは別。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "betsuni",
+   "group": "hisei",
+   "level": "N3",
+   "emoji": "➖",
+   "word": "別に",
+   "read": "べつに",
+   "surface": "別に",
+   "status": "確実",
+   "origin": "漢語「別」＋格助詞「に」。動詞連用形ではない。",
+   "originShort": "漢語「別」＋に",
+   "physical": "（動作の画面はない）",
+   "meaning": "另外；分开；（否定）并不特别…",
+   "label": "另外／并不特别",
+   "engine": "「別のものとして」が、否定と呼応して「取り立てるほどではない」の緩和になる。",
+   "examples": [
+    {
+     "jp": "別に行きたくはない。",
+     "cn": "并不怎么想去。",
+     "src": "moji"
+    },
+    {
+     "jp": "別に変わった話もない。",
+     "cn": "也没什么特别的事。",
+     "src": "moji"
+    },
+    {
+     "jp": "部屋代は9千円で、食費は別に払う。",
+     "cn": "房租九千日元，伙食费另付。",
+     "src": "moji"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "いや 別に...",
+     "en": "Nothing.",
+     "cn": "不，没什么……",
+     "media": "Blue Box",
+     "ep": "EP12",
+     "at": "13:53",
+     "url": "https://nadeshiko.co/en/sentence/HaoMV5y-heJb",
+     "audio": "https://cdn.nadeshiko.co/media/170942/12/bb23923101.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/170942/12/bb23923101.webp"
+    }
+   ],
+   "note": "「別に＋否定」で「特に…ない」。若者の会話では「別に」だけで否定の答えになる。漢語＋にで、動詞ではない。",
+   "contrast": "別に（否定の緩和）／特に（取り立て）／別々に（分離）。",
+   "judge": [
+    {
+     "q": "「別に」は否定と呼応して「特に…ない」の意味を表すことが多い。",
+     "ans": true,
+     "exp": "「別に行きたくない」が典型。"
+    }
+   ],
+   "quizzes": []
+  },
+  {
+   "id": "wazato",
+   "group": "hisei",
+   "level": "N3",
+   "emoji": "🎭",
+   "word": "わざと",
+   "read": "わざと",
+   "surface": "わざと",
+   "status": "確実",
+   "origin": "名詞「態（わざ）」＋格助詞「と」。動詞連用形ではない。",
+   "originShort": "名詞「態」＋と",
+   "physical": "（動作の画面はない）",
+   "meaning": "故意地；有意地",
+   "label": "故意地",
+   "engine": "「わざ（態）」＝わざわざした行為、に「と」が付いて、意図性の副詞になった。",
+   "examples": [
+    {
+     "jp": "わざと悪口を言う。",
+     "cn": "故意说坏话。",
+     "src": "moji"
+    },
+    {
+     "jp": "彼は電車の中でわざと私の足を踏んだ。",
+     "cn": "他在电车里故意踩了我的脚。",
+     "src": "moji"
+    },
+    {
+     "jp": "わざと負けた。",
+     "cn": "故意输了。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "わざとだ... こいつ ぜってえ わざとだ!",
+     "en": "It's on purpose! This guy's definitely doing this on purpose!",
+     "cn": "是故意的……这家伙绝对是故意的！",
+     "media": "Fruits Basket Season 2",
+     "ep": "EP2",
+     "at": "19:39",
+     "url": "https://nadeshiko.co/en/sentence/jDVNePT1C3Hg",
+     "audio": "https://cdn.nadeshiko.co/media/111762/2/9dbc2344c1.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/111762/2/9dbc2344c1.webp"
+    }
+   ],
+   "note": "「わざと」は意図的な行為。わざわざは「手間をかけて」で、意味が違う。名詞「態」＋とで、動詞ではない。",
+   "contrast": "わざと（意図的）／わざわざ（手間をかけて）／故意に（硬い・法律寄り）。",
+   "judge": [
+    {
+     "q": "「わざと」は動詞「態とする」の連用形に由来する。",
+     "ans": false,
+     "exp": "名詞「態（わざ）」＋と。動詞ではない。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「彼はわざと負けた」の「わざと」に最も近いのは？",
+     "opts": [
+      "意図的に",
+      "わざわざ時間をかけて",
+      "偶然に",
+      "仕方なく"
+     ],
+     "ans": 0,
+     "exp": "わざと＝意図的。わざわざ＝手間をかけて。"
+    }
+   ]
+  },
+  {
+   "id": "chiratto",
+   "group": "hisei",
+   "level": "N2",
+   "emoji": "👀",
+   "word": "ちらっと",
+   "read": "ちらっと",
+   "surface": "ちらっと",
+   "status": "確実",
+   "origin": "擬態語「ちらり」＋「と」。動詞連用形ではない。",
+   "originShort": "擬態語「ちらり」＋と",
+   "physical": "一瞬見える。ひらりと動く。",
+   "meaning": "一瞥；一闪；略微",
+   "label": "一瞥／略微",
+   "engine": "一瞬の視覚・動作を表す擬態語が、副詞として固定した。",
+   "examples": [
+    {
+     "jp": "彼女は私の方をちらっと見た。",
+     "cn": "她朝我这边瞥了一眼。",
+     "src": "moji"
+    },
+    {
+     "jp": "うわさをちらっと聞いた。",
+     "cn": "略微听到了传闻。",
+     "src": "moji"
+    },
+    {
+     "jp": "ちらっと姿が見えた。",
+     "cn": "一瞬间看到了身影。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "この間も ちらっと言ったけどさ",
+     "en": "I mentioned it in passing the other day,",
+     "cn": "之前也稍微提过一下。",
+     "media": "Nekomonogatari Black",
+     "ep": "EP3",
+     "at": "8:29",
+     "url": "https://nadeshiko.co/en/sentence/_As2ztF5f7Vq",
+     "audio": "https://cdn.nadeshiko.co/media/15689/3/b059c85ed6.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/15689/3/b059c85ed6.webp"
+    }
+   ],
+   "note": "「ちらっと見る」「ちらっと聞く」の型。擬態語＋とで、動詞の連用形ではない。",
+   "contrast": "ちらっと（一瞬・少量）／ちらりと（より文語的）／一瞥（漢語・硬い）。",
+   "judge": [
+    {
+     "q": "「ちらっと」は動詞「散る」の連用形に由来する。",
+     "ans": false,
+     "exp": "擬態語「ちらり」＋と。動詞ではない。"
+    }
+   ],
+   "quizzes": []
+  }
+ ]
+}
