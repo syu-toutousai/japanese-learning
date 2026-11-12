@@ -4,6 +4,7 @@
 > 位置づけ：`meta-guide/diachronic-transparency.md` の続編。前版の「历时透明性」に、
 > **詞法＝述語詞中心（Predicate-centric）／句法＝体言中心＋述語後置（Substantive-centric + Predicate-final）**
 > の双螺旋を追加した完全体プロンプトと、社論級長難句の四維解剖。
+> 続編：第三版「三元词汇层（和語 × 漢語 × 外来語）」→ [trinity-lexical-layers.md](./trinity-lexical-layers.md)
 
 ---
 

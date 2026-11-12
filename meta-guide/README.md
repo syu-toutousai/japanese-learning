@@ -123,6 +123,9 @@ python3 -m http.server 8642   # 然后访问 http://localhost:8642/meta-guide/
 - [日本語の历时透明性 第二版 — 双螺旋语法分析](./double-helix.md)
   — 詞法＝述語詞中心（Predicate-centric）／句法＝体言中心＋述語後置（Substantive-centric + Predicate-final）
   の双螺旋完全体プロンプトと、社論級長難句の四維解剖。
+- [日本語の历时透明性 第三版 — 三元词汇层](./trinity-lexical-layers.md)
+  — 和語（情感・语法CPU）／漢語（制度・抽象骨架）／外来語（現代插件・情感缓冲垫）の認知分工を加えた
+  五維解剖プロンプトと、現代日本职场句の全维度分析。
 
 ---
 
