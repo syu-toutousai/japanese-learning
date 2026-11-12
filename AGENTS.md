@@ -32,7 +32,7 @@
 | `renyo-courseware/` | 連用形の化身・動詞が接尾語になるとき（源動詞→連用形→接尾語化，5 分类 22 词） | `renyo.json` |
 | `zuru-courseware/` | ずる⇄じるの系譜・漢語動詞の二つの着こなし（する→連濁ずる→上一段じる，4 分类 48 语＋活用対照 Tab） | `zuru.json` |
 | `hodo-courseware/` | ほど の構図・副助詞がつくる連用・連体（程度/最高級/連体/比例/限度/概数/品詞，7 分类 20 句式） | `hodo.json` |
-| `fukushi-courseware/` | 動詞系副詞・動作の残像を剥がす（連用形＋て/純連用形/連用形＋に・と・ず・ク語法/非動詞の 4 分類 45 語＋語源検品＋Nadeshiko 誤命中検品＋頻度 S〜D/JLPT N1–N4 標記；Nadeshiko 85 段・7 层题库 306 問） | `fukushi.json` |
+| `fukushi-courseware/` | 動詞系副詞・動作の残像を剥がす（連用形＋て/純連用形/連用形＋に・と・ず・ク語法/非動詞の 4 分類 46 語＋語源検品＋Nadeshiko 誤命中検品＋頻度 S〜D/JLPT N1–N4 標記；Nadeshiko 87 段・7 层题库 315 問） | `fukushi.json` |
 | `keiyoushi-courseware/` | 動詞系形容詞・活用形が形容詞になるとき（核心19語＝連用形＋た11/動詞＋ない4/古語4＋周辺11語＝連語・俗語；辞書認定・意味の漂白・頻度 S〜D/JLPT 標記；Nadeshiko 22段・7層題庫190問） | `keiyoushi.json` |
 | `gamashii-courseware/` | 〜がましい 構え学・从构え到慈悲（構え＋〜しい→かまし→がましい の语法化；越界型/演出型＋らしい・っぽい 三方辨析；意識高い系与人设；商业的空间・信息压缩；智识与慈悲。**内容型・手写单文件**：无 build.py・无 JSON・无音声/题库） | 手写 HTML |
 | `hentaigana-courseware/` | 変体仮名店招帖・老铺招牌解谜（图文解说型：7 块招牌＋23 字母卡＋时间线＋豆知识，图片为实拍照片＋Unicode 変体仮名字形，出典见其 README；无 Nadeshiko） | `hentaigana.json` |

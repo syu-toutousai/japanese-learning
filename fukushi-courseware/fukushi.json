@@ -3482,6 +3482,101 @@
     "basis": "Nadeshiko 全庫 表層一致",
     "note": ""
    }
+  },
+  {
+   "id": "tsutsushinde",
+   "group": "te",
+   "level": "N1",
+   "jlpt": "N1",
+   "emoji": "🙇",
+   "word": "謹んで",
+   "read": "つつしんで",
+   "surface": "謹んで",
+   "status": "確実",
+   "origin": "動詞「謹む（つつしむ）／慎む」の連用形「謹み」＋接続助詞「て」。",
+   "originShort": "謹む（つつしむ）の連用形＋て",
+   "physical": "謹む。慎重にする。恐れつつしむ。",
+   "meaning": "恭敬地；谨；郑重地",
+   "label": "恭敬／郑重",
+   "engine": "「慎重にする」動作が、改まった場面の「謹んで〜申し上げます」という敬語副詞に固定した。",
+   "examples": [
+    {
+     "jp": "謹んで新年のお慶びを申し上げます。",
+     "cn": "谨贺新年。",
+     "src": "moji"
+    },
+    {
+     "jp": "謹んで哀悼の意を表します。",
+     "cn": "谨表哀悼之意。",
+     "src": "moji"
+    },
+    {
+     "jp": "謹んでお受けいたします。",
+     "cn": "我恭敬地接受。",
+     "src": "self"
+    }
+   ],
+   "nadeshiko": [
+    {
+     "jp": "謹んで 拝命いたします",
+     "en": "I humbly accept!",
+     "cn": "我恭敬地领命。",
+     "media": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+     "ep": "EP11",
+     "at": "14:17",
+     "url": "https://nadeshiko.co/en/sentence/hmN7ZfxLwCRn",
+     "audio": "https://cdn.nadeshiko.co/media/206914/11/8872862462.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/206914/11/8872862462.webp"
+    },
+    {
+     "jp": "謹んで お受けいたします",
+     "en": "I respectfully accept this gift.",
+     "cn": "我恭敬地接受。",
+     "media": "MARRIAGETOXIN",
+     "ep": "EP12",
+     "at": "18:08",
+     "url": "https://nadeshiko.co/en/sentence/6yYT-bIpCKfV",
+     "audio": "https://cdn.nadeshiko.co/media/199547/12/d5c1e2c05a.mp3",
+     "thumb": "https://cdn.nadeshiko.co/media/199547/12/d5c1e2c05a.webp"
+    }
+   ],
+   "note": "「謹んで」は「謹む」の連用形＋て。物理的な「慎む」の画面は薄れ、改まった場面の敬語副詞になった。会話では「恐れ入りますが」などで緩める。",
+   "contrast": "謹んで（敬語・書き言葉）／慎んで（慎重に）／恐縮ですが（口語の緩和）。",
+   "pitfall": "Nadeshiko の「慎しんでください」は動詞「慎む」のて形（慎重に）で、副詞「謹んで（恭敬地）」ではない。表記「謹んで」と「慎んで」の違いに注意。",
+   "judge": [
+    {
+     "q": "「謹んで」は動詞「謹む」の連用形＋てに由来する。",
+     "ans": true,
+     "exp": "謹み＋て。敬語副詞として固定した。"
+    },
+    {
+     "q": "「謹んで」は漢語「謹」＋「で」の副詞である。",
+     "ans": false,
+     "exp": "漢語＋でではない。和語の動詞連用形＋て。"
+    }
+   ],
+   "quizzes": [
+    {
+     "type": "choice",
+     "q": "「謹んで」と「慎んで」の違いに最も近いのは？",
+     "opts": [
+      "謹んで＝恭敬地／慎んで＝慎重に",
+      "両者は完全に同義",
+      "謹んで＝慎重に／慎んで＝恭敬地",
+      "謹んで＝口語／慎んで＝書き言葉"
+     ],
+     "ans": 0,
+     "exp": "謹んでは敬語の「恭敬地」、慎んでは「慎重に」。表記で機能が分かれる。"
+    }
+   ],
+   "freq": {
+    "tier": "C",
+    "stars": 2,
+    "nade": 87,
+    "wf": 2.61,
+    "basis": "Nadeshiko 全庫 表層一致",
+    "note": "「謹んで」と「慎んで」の表記差に注意"
+   }
   }
  ]
 }
