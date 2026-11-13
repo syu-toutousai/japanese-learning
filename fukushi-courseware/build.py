@@ -22,6 +22,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 POCKET = ROOT / "fukushi.json"
+sys.path.insert(0, str(ROOT.parent))
+from tools.tts_kana import sanitize_for_edge_tts
 AUDIO_DIR = ROOT / "audio"
 NADE_CACHE = ROOT / "nade_audio"
 OUT = ROOT / "index.html"
@@ -446,15 +448,21 @@ def gen_one(task):
 def gen_audio(items):
     AUDIO_DIR.mkdir(exist_ok=True)
     tasks = []
+    sanitized = 0
     for it in items:
         tasks.append((f"{it['id']}-w", it["read"]))
         for i, ex in enumerate(it.get("examples") or []):
-            tasks.append((f"{it['id']}-e{i}", ex["jp"]))
+            raw = ex["jp"]
+            tts_text = sanitize_for_edge_tts(raw)
+            if tts_text != raw:
+                sanitized += 1
+            tasks.append((f"{it['id']}-e{i}", tts_text))
     todo = [(lid, txt) for lid, txt in tasks
             if not (cache_path(lid, txt).exists()
                     and cache_path(lid, txt).stat().st_size > MIN_MP3)]
     print(f"[1/4] audio: {len(tasks)} clips total, {len(tasks)-len(todo)} cached, "
           f"{len(todo)} to synthesize...")
+    print(f"      tts kana: {sanitized} examples sanitized")
     with ThreadPoolExecutor(max_workers=5) as ex:
         results = dict(zip([t[0] for t in todo], ex.map(gen_one, todo)))
     failed = [lid for lid, ok in results.items() if not ok]

@@ -171,6 +171,7 @@ python3 tools/make_lite.py keiyoushi-courseware
 - **MOJi 辞書 CLI**：`moji <語> --once --json …` 采集释义与例句（例句标 `src: "moji"`）。
 - **Nadeshiko CLI**：`nadeshiko search <語> --once -n 8 --json …` 采集真实台词、幕/时间戳、CDN 音频与缩略图；`nadeshiko words <語…> --json …` 取全庫ヒット数用于頻度マーカー。
 - **edge-tts**：`ja-JP-NanamiNeural`，rate `-6%`，内容寻址缓存。
+- **TTS 读音防错**：`build.py` 调用 `tools/tts_kana.py` 的 `sanitize_for_edge_tts()`，把 `心許ない` 等高危词转平假名后再合成；ruby 只影响显示。详见根目录 `TTS_PRONUNCIATION.md`。
 - **pykakasi**：振假名；`_READING_OVERRIDES` 修正 `落ち着いた→おちついた`、`澄ました→すました`、`かしこまった→かしこまった`、`見窄らしい→みすぼらしい` 等。
 - 語源は「確実／通説／諸説」の三段階。意味の漂白は断定ではなく、辞書認定と用例に基づく分類。
 

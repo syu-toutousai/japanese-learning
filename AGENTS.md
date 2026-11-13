@@ -171,6 +171,15 @@ SEED   = <固定日期，如 20260909>  # 保证题目可复现
   课件照常生成。
 - 需要男声（对话/台词）时用 `ja-JP-KeitaNeural`，在 `meta` 里声明 `voiceMale`。
 
+### TTS 读音防错（必读）
+
+- **ruby 只影响显示，edge-tts 读的是素文。** ruby 正确 ≠ TTS 读对。
+- 构建前必须用 `tools/tts_kana.py` 的 `sanitize_for_edge_tts()` 处理例句，把高危汉字词转平假名。
+- 已确认：`心許ない` 会被读成「こころきょない」；替换为「こころもとない」后已用 ASR 验证。
+- `今日は`/`今年の`/`その年の`/`割合`/`大人でも`/`彼の`/`一人では` 实测正确，但仍防御性假名化。
+- 缓存键用替换后的文本；替换后旧 mp3 自动成为 stale 并被清理。
+- 完整词表、审计方法、维护规则见 `TTS_PRONUNCIATION.md`。
+
 ## 5. Nadeshiko 原声约定
 
 - 用本机 CLI 搜台词：`nadeshiko search "<关键词>" --once -n 5`。
@@ -280,6 +289,9 @@ SEED   = <固定日期，如 20260909>  # 保证题目可复现
    活用六形＝未然形・連用形・終止形・連体形・仮定形・命令形；助詞分类＝格助詞・接続助詞・
    副助詞・係助詞・終助詞・間投助詞；文の成分＝主語・述語・修飾語・接続語・独立語。
    **例外**：真題原文・Nadeshiko 台词・引用文献照原样引用，不改写（转写错字另按校对流程处理）。
+10. **ruby 正确 ≠ TTS 读对**：edge-tts 读素文，不读 `<ruby>`。高危汉字词必须先经
+    `tools/tts_kana.py` 转假名，否则会出现「心許ない→こころきょない」这类错误。
+    详见 `TTS_PRONUNCIATION.md`。
 
 ## 10. 新增课件的最小工作流
 
@@ -298,6 +310,7 @@ SEED   = <固定日期，如 20260909>  # 保证题目可复现
 - **moji-dict 技能**：`moji <词> --once` 查释义/例句/发音（MOJi辞書），用于例句采集。
 - **nadeshiko CLI**：`nadeshiko search <词> --once -n 5` 搜真实台词（含幕/ep/时间戳/原声）。
 - 构建脚本乙方（系统侧）：`pykakasi`（振假名）、`edge-tts`（微软神经语音 TTS）。
+- **TTS 读音防错**：`tools/tts_kana.py`（`sanitize_for_edge_tts()`）＋ `TTS_PRONUNCIATION.md`。
 
 > 遇到本守则未覆盖的场景：以 `ni-courseware/` 为事实标准（最新范式），先读它再动手。
 
