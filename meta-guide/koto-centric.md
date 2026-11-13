@@ -4,6 +4,7 @@
 > 位置づけ：`meta-guide/` の第四付録。前三付録（历时透明性・双螺旋・三元词汇层）に、
 > **コト本位（事本位）の生成規則**と**主客双方向の和語形容詞**を追加する。
 > 参照：`diachronic-transparency.md` / `double-helix.md` / `trinity-lexical-layers.md` / `TTS_PRONUNCIATION.md`
+> 続編：第五付録「可译性ルーティング — 混合類型のサブシステム照合」→ [translatability-routing.md](./translatability-routing.md)
 
 ---
 
